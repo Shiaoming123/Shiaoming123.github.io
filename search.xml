@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Hexo+GitHub个人博客搭建</title>
-    <url>//posts/hexo-github-blog-setup</url>
+    <url>//posts/hexo-github-blog-setup/</url>
     <content><![CDATA[<h1 id="Hexo-GitHub搭建个人博客"><a href="#Hexo-GitHub搭建个人博客" class="headerlink" title="Hexo+GitHub搭建个人博客"></a>Hexo+GitHub搭建个人博客</h1><p>摘要：本文以up主<a href="https://www.bilibili.com/video/BV1Yb411a7ty/?spm_id_from=333.788.recommend_more_video.0&vd_source=91e373e2cbd270e06a052e77397b7938">CodeSheep</a>从零开始搭建自己的个人博客 视频为框架，记录本人从零搭建个人博客的过程，重点表述搭建过程中遇到bug如何解决，以及补充视频没有的细节，文章以图文形式呈现。</p>
 <h2 id="第一章-博客环境搭建"><a href="#第一章-博客环境搭建" class="headerlink" title="第一章 博客环境搭建"></a>第一章 博客环境搭建</h2><p>搭建设备：联想ThinkBook14P、Win11</p>
 <ul>
