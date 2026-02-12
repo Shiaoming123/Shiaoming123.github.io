@@ -90,6 +90,27 @@
   </url>
   
   <url>
+    <loc>https://shiaoming123.github.io/tags/GitHub/</loc>
+    <lastmod>2026-02-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://shiaoming123.github.io/tags/Blog/</loc>
+    <lastmod>2026-02-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://shiaoming123.github.io/tags/%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2026-02-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://shiaoming123.github.io/tags/Obsidian/</loc>
     <lastmod>2026-02-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -98,13 +119,6 @@
   
   <url>
     <loc>https://shiaoming123.github.io/tags/%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2026-02-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://shiaoming123.github.io/tags/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2026-02-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -145,31 +159,17 @@
     <priority>0.2</priority>
   </url>
   
-  <url>
-    <loc>https://shiaoming123.github.io/tags/GitHub/</loc>
-    <lastmod>2026-02-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://shiaoming123.github.io/tags/Blog/</loc>
-    <lastmod>2026-02-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
 
   
   <url>
-    <loc>https://shiaoming123.github.io/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/</loc>
+    <loc>https://shiaoming123.github.io/categories/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2026-02-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://shiaoming123.github.io/categories/%E5%89%8D%E7%AB%AF/</loc>
+    <loc>https://shiaoming123.github.io/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2026-02-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
