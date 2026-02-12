@@ -1,323 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hexo+GitHub个人博客搭建</title>
-    <url>//posts/hexo-github-blog-setup/</url>
-    <content><![CDATA[<h1 id="Hexo-GitHub搭建个人博客"><a href="#Hexo-GitHub搭建个人博客" class="headerlink" title="Hexo+GitHub搭建个人博客"></a>Hexo+GitHub搭建个人博客</h1><p>摘要：本文以up主<a href="https://www.bilibili.com/video/BV1Yb411a7ty/?spm_id_from=333.788.recommend_more_video.0&vd_source=91e373e2cbd270e06a052e77397b7938">CodeSheep</a>从零开始搭建自己的个人博客 视频为框架，记录本人从零搭建个人博客的过程，重点表述搭建过程中遇到bug如何解决，以及补充视频没有的细节，文章以图文形式呈现。</p>
-<h2 id="第一章-博客环境搭建"><a href="#第一章-博客环境搭建" class="headerlink" title="第一章 博客环境搭建"></a>第一章 博客环境搭建</h2><p>搭建设备：联想ThinkBook14P、Win11</p>
-<ul>
-<li>1.1 安装Nodejs</li>
-<li>1.2 安装hexo博客框架</li>
-<li>1.3 使用hexo进行博客框架</li>
-</ul>
-<h3 id="1-1-Node-js安装"><a href="#1-1-Node-js安装" class="headerlink" title="1.1 Node.js安装"></a>1.1 Node.js安装</h3><p>进入<a href="https://www.nodejs.org/">https://www.nodejs.org</a>即可进行安装对应系统版本的node.js<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183248497.png"></p>
-<p>随后进入软件的下载界面：<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183248616.png"><br>一路点击next，到达安装路径时确保安装路径在自己想要安装的位置<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183248762.png"><br>自主选择是否安装时候自动安装对应的工具Tool<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183248963.png"><br>在PowerShell控制界面中查看npm的版本，后续创建网站需要用到该包<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183249168.png"></p>
-<hr>
-<h3 id="1-2-安装hexo博客框架"><a href="#1-2-安装hexo博客框架" class="headerlink" title="1.2 安装hexo博客框架"></a>1.2 安装hexo博客框架</h3><p>在刚才打开的powershell中输入<code>npm install -g cnpm --registry=http://registry.npm.taobao.org</code>来安装淘宝的cnpm镜像源，下载速度比较快</p>
-<blockquote>
-<p>但是如果自己有挂vpn或者已经有其他镜像源的话可以自行决定是否进行这一步</p>
-</blockquote>
-<p>下面时对应cnpm的版本信息<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183249362.png"></p>
-<p>接着使用<code>cnpm install -g hexo-cli</code>安装hexo框架<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183249526.png"></p>
-<p>可以使用<code>hexo -v</code>验证安装好的的hexo版本信息<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183249685.png"></p>
-<hr>
-<h3 id="1-3-使用hexo进行博客框架"><a href="#1-3-使用hexo进行博客框架" class="headerlink" title="1.3 使用hexo进行博客框架"></a>1.3 使用hexo进行博客框架</h3><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">pwd</span> <span class="comment">#查看当前目录</span></span><br><span class="line">mkdir blog <span class="comment">#创建blog文件夹</span></span><br></pre></td></tr></table></figure>
-
-<p>这里我将blog项目文件夹放在了 <code>E:\Self-Web\Sheep跟做</code>这个目录下，之后项目有任何问题，可以直接删除blog文件夹重来。<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183249821.png"></p>
-<p>最后在powershell中输入 <code>cd ./blog</code>进入我们的项目文件夹</p>
-<p>随后输入 <code>sudo hexo init</code>使用超级管理员身份生成一个初始化博客</p>
-<blockquote>
-<p>在win上应该直接输入 <code>hexo init</code>就可以了，会自动下载对应所需要的依赖文件<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183249921.png"></p>
-</blockquote>
-<p>此时可以看到文件夹中生成了一些我们创建个人博客所必须的项目文件。<br>使用 <code>ls</code>可以查看当前文件夹下的文件组成<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183250067.png"><br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183250197.png"></p>
-<p><strong>启动博客输入 <code>hexo s</code>即可启动本地博客服务</strong><br>此时的本地端口访问地址是：<a href="http://localhost:4000/">http://localhost:4000/</a><br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183250314.png"></p>
-<p>随后即可在默认浏览器中进入hexo的初始前端界面<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183250422.png"><br>平常就是使用 <code>hexo s</code>进行本地环境下的个人网页测试预览<br><strong>常用的hexo指令如下</strong></p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">hexo n  <span class="string">&quot;健康养生护理&quot;</span> <span class="comment"># 创建一篇名为“健康养生护理”的新博客</span></span><br><span class="line">hexo s <span class="comment"># 运行hexo本地服务</span></span><br><span class="line">hexo clean <span class="comment"># 清理本地端口页面</span></span><br><span class="line">hexo g <span class="comment"># 生成静态文件(每次创建完一篇新博客之后都需要在项目主文件夹blog路径下输入)</span></span><br><span class="line">hexo d <span class="comment"># 部署到远程站点</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183250811.png"></p>
-<p>之后输入 <code>hexo n &quot;xxx的第一篇博客文章&quot;</code>就可以创建你的第一篇博客了</p>
-<blockquote>
-<p>记住此时需要输入 <code>ctrl + c</code>结束我们的本地端口访问再输入对应指令创建博客<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183250558.png"></p>
-</blockquote>
-<p>在得到我们的第一篇博客后，可以进入我们的 <code>E:\Self-Web\Sheep跟做\blog\source\_posts\</code>路径下查看我们新创建好的博客文档<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183250687.png"></p>
-<p>在创建好第一篇博客文章之后，进行以下步骤完成第一次博客文章的前端页面更新：</p>
-<ol>
-<li>回到我们的blog主文件夹输入两次回退指令 <code>cd ../..</code></li>
-<li>首先输入 <code>hexo clean</code>清理本地端口页面和缓存<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183250952.png"></li>
-<li>随后输入 <code>hexo g</code>生成新博客的静态文件<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183251078.png"></li>
-<li>输入 <code>hexo s</code>本地启动我们的博客页面。</li>
-</ol>
-<p>此时再启动服务之后，刷新我们的本地博客页面，即可看到我们的博客首页已经更新了。<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183251235.png"></p>
-<h2 id="第二章-Github远程服务器搭建"><a href="#第二章-Github远程服务器搭建" class="headerlink" title="第二章 Github远程服务器搭建"></a>第二章 Github远程服务器搭建</h2><p>目的：方便以后直接通过github这个网址直接访问我们的博客<br>基本步骤如下：</p>
-<h3 id="2-1-登录Github创建项目仓库"><a href="#2-1-登录Github创建项目仓库" class="headerlink" title="2.1 登录Github创建项目仓库"></a><strong>2.1 登录Github创建项目仓库</strong></h3><p><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183251374.png"><br>创建完成之后会出现如下界面：</p>
-<blockquote>
-<p>其中项目命名是有对应格式要求的<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183251484.png"></p>
-</blockquote>
-<h3 id="2-2-安装git工具-这里我之前已经安装过了，这里就不演示了"><a href="#2-2-安装git工具-这里我之前已经安装过了，这里就不演示了" class="headerlink" title="2.2 安装git工具(这里我之前已经安装过了，这里就不演示了)"></a><strong>2.2 安装git工具(这里我之前已经安装过了，这里就不演示了)</strong></h3><h3 id="2-3-在blog目录下安装git部署插件"><a href="#2-3-在blog目录下安装git部署插件" class="headerlink" title="2.3 在blog目录下安装git部署插件"></a><strong>2.3 在blog目录下安装git部署插件</strong></h3><p>进入blog根目录终端输入命令行 <code>cnpm install --save hexo-deployer-git</code></p>
-<h3 id="2-4-打开blog文件夹下的-config-yml文件进行设置"><a href="#2-4-打开blog文件夹下的-config-yml文件进行设置" class="headerlink" title="2.4 打开blog文件夹下的 _config.yml文件进行设置"></a><strong>2.4 打开blog文件夹下的 <code>_config.yml</code>文件进行设置</strong></h3><p>在文件的最后需要对Deployment进行相应的设置<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183251715.png"><br>将该部分修改成如下：</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/one-command-deployment</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:Shiaoming123/Shiaoming123.github.io.git</span></span><br><span class="line">  <span class="comment">## 这里填的是SSH地址，如果你使用HTTPS地址，</span></span><br><span class="line">  <span class="comment">## 请将其改为：https://github.com/Shiaoming123/Shiaoming123.github.io.git</span></span><br><span class="line">  <span class="comment">## 最好选SSH地址，因为HTTPS地址需要每次都输入用户名和密码</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span></span><br><span class="line">  <span class="comment">## 在老版本的github中，默认分支是master</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>视频里填的是HTTPS地址，先说明一下如果填写那个地址以后每次部署到远端就需要输入密码登录一次，非常麻烦。<br>填写SSH地址为的是后面免密hexo d，需要将 Mac上ssh密钥添加到GitHub上，但绝对是一劳永逸的操作！</p>
-</blockquote>
-<h3 id="2-5-命令行中输入-hexo-d进行部署"><a href="#2-5-命令行中输入-hexo-d进行部署" class="headerlink" title="2.5 命令行中输入 hexo d进行部署"></a><strong>2.5 命令行中输入 <code>hexo d</code>进行部署</strong></h3><blockquote>
-<p>报错分析：<br>显示 <code>fatal: unable to auto-detect email address (got &#39;Wuling@DESKTOP-SKF1DTT.(none)&#39;)</code><br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183251841.png"><br>因为前面使用的是SSH地址，所以这里需要再加一步配置SSH连接密钥</p>
-</blockquote>
-<h4 id="2-5-1-Github的SSH密钥配置"><a href="#2-5-1-Github的SSH密钥配置" class="headerlink" title="2.5.1 Github的SSH密钥配置"></a><strong>2.5.1 Github的SSH密钥配置</strong></h4><p>SSH:SSH(Secure SHell):是一个提供数据通信安全、远程登录、远程指令执行等功能的安全网络协议，使用ssh往GitHub上push项目，不需要再次输入账号密码。</p>
-<ul>
-<li>设置git<br>运行下面命令行配置自己的name和email</li>
-</ul>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">git config <span class="literal">--list</span>   <span class="comment">#查看配置</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183251953.png"></p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">git config <span class="literal">--global</span> user.name <span class="string">&quot;你的用户名&quot;</span></span><br><span class="line">git config <span class="literal">--global</span> user.email <span class="string">&quot;你的邮箱&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183252061.png"></p>
-<ul>
-<li>Github SSH密钥配置</li>
-</ul>
-<blockquote>
-<ol>
-<li>检查是否存在SSH Key<br>输入 <code>cd /.ssh</code>和 <code>ls</code>查看SSH配置文件夹内的内容，若是存在 <code>id_rsa</code>和 <code>id_sra.pub</code>文件，说明已经有SSH key了，没有则创建新的<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183252187.png"></li>
-</ol>
-</blockquote>
-<blockquote>
-<ol start="2">
-<li>创建新的ssh key<br>输入下面的命令行</li>
-</ol>
-<blockquote>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">ssh<span class="literal">-keygen</span> <span class="literal">-t</span> rsa <span class="literal">-C</span><span class="string">&quot;你的邮箱&quot;</span> </span><br><span class="line"><span class="comment">#-t ：密钥的类型</span></span><br><span class="line"><span class="comment">#-C : 用于识别密钥的注释</span></span><br></pre></td></tr></table></figure>
-
-</blockquote>
-<p>会发现 .ssh 目录生成了两个文件：<code>id_rsa</code>和 <code>id_rsa.pub</code><br><code>id_rsa</code> 文件是私有密钥，<code>id_rsa.pub</code>是公开密钥<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183252318.png"></p>
-</blockquote>
-<blockquote>
-<ol start="3">
-<li>获取ssh key公钥内容<br>输入 <code>cat ./id_rsa.pub</code>获取 <code>id_rsa.pub</code>中的公钥内容<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183252485.png"></li>
-</ol>
-</blockquote>
-<blockquote>
-<ol start="4">
-<li>添加公钥到github<br>将前面获取到的公钥添加到github中<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183252625.png"><br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183252770.png"></li>
-</ol>
-</blockquote>
-<blockquote>
-<ol start="5">
-<li>验证是否设置成功<br>用私有密钥与GitHub进行认证和通信</li>
-</ol>
-<blockquote>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">ssh <span class="literal">-T</span> git@github.com</span><br></pre></td></tr></table></figure>
-
-</blockquote>
-<p>出现以下提示说明连接成功<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183252905.png"></p>
-</blockquote>
-<p>随后返回到我们的blog主文件夹路径下，输入 <code>hexo d</code>即可完成远端部署<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183253030.png"></p>
-<p>此时查看github仓库，即可发现对应文件都已装载进github对应项目仓库中<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183253159.png"></p>
-<p>此时输入我们的域名即可进入我们的博客界面<a href="http://shiaoming123.github.io/">http://shiaoming123.github.io</a>或者&lt;shiaoming123.github.io&gt;</p>
-<h2 id="第三章-更换blog页面主题"><a href="#第三章-更换blog页面主题" class="headerlink" title="第三章 更换blog页面主题"></a>第三章 更换blog页面主题</h2><p><strong><a href="https://github.com/litten/hexo-theme-yilia">yilia</a></strong><br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183253298.png"></p>
-<p><strong><a href="https://github.com/iissnan/hexo-theme-next">NexT</a></strong><br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183253485.png"></p>
-<p><strong><a href="https://github.com/jerryc127/hexo-theme-butterfly">butterfly</a></strong><br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183253937.png"></p>
-<h3 id="3-1-yilia主题更换"><a href="#3-1-yilia主题更换" class="headerlink" title="3.1 yilia主题更换"></a>3.1 yilia主题更换</h3><p><strong>1. 进入blog路径下，使用 <code>git clone</code>指令克隆对应项目到 <code>blog/themes/yilia</code>文件夹中，</strong></p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/litten/hexo<span class="literal">-theme-yilia</span>.git themes/yilia</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183253634.png"></p>
-<p><strong>2. 打开 <code>_config.yml</code>文件，修改 <code>theme</code>对应配置为 <code>yilia</code></strong></p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line"><span class="comment"># theme: landscape</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">yilia</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>3. 随后 <code>hexo clean</code>–&gt;<code>hexo g</code>–&gt;<code>hexo s</code></strong><br>此时可以看到我们的页面主题已经变成了 <code>yilia</code>主题样式<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183253780.png"></p>
-<p><strong>4. 输入 <code>hexo d</code>将编辑好的页面推到远端github服务器</strong></p>
-<blockquote>
-<p>进入界面有可能不会立马生效，可以尝试刷新一下即可正常显示</p>
-</blockquote>
-<h2 id="第四章-图床配置"><a href="#第四章-图床配置" class="headerlink" title="第四章 图床配置"></a>第四章 图床配置</h2><p>在使用中我们可以发现，blog中的图片链接使用的都是基于本地当前文件夹下的相对路径，想要在我们的远端服务器中显示图片，还需要将图片也使用图床等额外配置才可以实现正常的显示功能。这里我们使用Picgo作为我们的图床使用工具。</p>
-<h3 id="4-1-PicGo下载"><a href="#4-1-PicGo下载" class="headerlink" title="4.1 PicGo下载"></a>4.1 PicGo下载</h3><p>Picgo下载链接：<a href="https://github.com/Molunerfinn/PicGo/releases">https://github.com/Molunerfinn/PicGo/releases</a><br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183254078.png"></p>
-<p>下载完成之后，运行exe文件选择对应的下载路径即可完成安装。<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183254215.png"></p>
-<h3 id="4-2-创建Github图床存储仓库"><a href="#4-2-创建Github图床存储仓库" class="headerlink" title="4.2 创建Github图床存储仓库"></a>4.2 创建Github图床存储仓库</h3><p>在下载Picgo之后，我们还需要使用云服务器存储我们的图片文件，这里我们依旧使用github仓库作为我们图片的存储媒介。<br><strong>1.  创建一个新的github仓库，仓库命名随意，需要将权限设置为Public才可以正常使用，可以选择是否创建README.md文件</strong><br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183254342.png"></p>
-<p><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183254487.png"></p>
-<p><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183254645.png"></p>
-<p><strong>2. 将Picgo链接到github项目仓库</strong><br>打开Picgo左侧的“图床设置”中的“GitHub”，设置我们的图床配置文件<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183254805.png"><br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183254932.png"><br>按照我们前面图床仓库的相关信息填入对应框中，其中 <code>token</code>需要在github中获取<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183255090.png"></p>
-<p><strong>3. 获取token</strong><br>打开github的setting，在左侧的“开发者设置”中，创建一个新的 <code>token</code>，选择 <code>classic</code><br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183255230.png"><br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183255369.png"></p>
-<p>其中一些设置需要进行注意调整：<br><code>Note</code>：为该token创建一个识别名<br><code>Expiration</code>：设置该tokens的使用时长，若长期使用，可以设置为 <code>custom</code>来自己设置token过期时间，或者选择 <code>No expiration</code>无期限。<br>随后后面的 <code>repo</code>对应权限需要勾选<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183255541.png"></p>
-<p>随后创建token即可得到一串属于我们图床的token，复制粘贴到我们的PicGo的 <code>token</code>一栏中<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183255680.png"></p>
-<p>随后在我们的“图片上传”处选择我们的对应github配置即可进行我们的图床配置<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183255824.png"></p>
-]]></content>
-      <categories>
-        <category>前端</category>
-        <category>Blog</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>GitHub</tag>
-        <tag>Blog</tag>
-        <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>文章可见性控制演示</title>
-    <url>//posts/visibility-control-demo/</url>
-    <content><![CDATA[<div class="feature-banner">
-  <h2>🔒 文章可见性控制演示</h2>
-  <p>无需数据库！使用 Hexo 插件系统 + JavaScript 实现密码验证</p>
-</div>
-
-<h2 id="功能说明"><a href="#功能说明" class="headerlink" title="功能说明"></a>功能说明</h2><p>本篇文章演示了三种可见性状态：</p>
-<table>
-<thead>
-<tr>
-<th>状态</th>
-<th>说明</th>
-<th>适用场景</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>公开</strong></td>
-<td>所有人可见</td>
-<td>技术分享文章</td>
-</tr>
-<tr>
-<td><strong>私密</strong></td>
-<td>仅作者可见</td>
-<td>个人笔记、草稿</td>
-</tr>
-<tr>
-<td><strong>需密码</strong></td>
-<td>输入密码查看</td>
-<td>会员内容、付费教程</td>
-</tr>
-</tbody></table>
-<hr>
-<h2 id="📋-快速开始"><a href="#📋-快速开始" class="headerlink" title="📋 快速开始"></a>📋 快速开始</h2><h3 id="状态-1：公开文章（默认）"><a href="#状态-1：公开文章（默认）" class="headerlink" title="状态 1：公开文章（默认）"></a>状态 1：公开文章（默认）</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section">## 介绍</span></span><br><span class="line"></span><br><span class="line">这是一篇<span class="strong">**公开文章**</span>，所有人都可以看到。</span><br><span class="line"></span><br><span class="line">你可以：</span><br><span class="line"><span class="bullet">-</span> ✅ 在首页看到此文章</span><br><span class="line"><span class="bullet">-</span> ✅ 搜索到这篇文章</span><br><span class="line"><span class="bullet">-</span> ✅ 分享链接给他人</span><br><span class="line"><span class="bullet">-</span> ✅ 无需任何密码</span><br><span class="line"></span><br><span class="line">这是默认状态，无需任何配置。</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"><span class="section">## 代码示例</span></span><br><span class="line"></span><br><span class="line"><span class="section">```yaml</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line">title: 文章可见性控制演示</span><br><span class="line">date: 2026-02-12 19:30:00</span><br><span class="line">tags: [Hexo, 教程]</span><br><span class="line"><span class="section">visibility: public</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;tip-box&quot;</span>&gt;</span></span></span><br><span class="line">  💡 <span class="language-xml"><span class="tag">&lt;<span class="name">strong</span>&gt;</span></span>提示：<span class="language-xml"><span class="tag">&lt;/<span class="name">strong</span>&gt;</span></span>不填写 <span class="language-xml"><span class="tag">&lt;<span class="name">code</span>&gt;</span></span>visibility<span class="language-xml"><span class="tag">&lt;/<span class="name">code</span>&gt;</span></span> 字段时，默认为公开</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h3 id="状态-2：私密文章"><a href="#状态-2：私密文章" class="headerlink" title="状态 2：私密文章"></a>状态 2：私密文章</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section">## 私密文章</span></span><br><span class="line"></span><br><span class="line">这是一篇<span class="strong">**私密文章**</span>，只有我能看到。</span><br><span class="line"></span><br><span class="line"><span class="strong">**特点：**</span></span><br><span class="line"><span class="bullet">-</span> 🔒 只有作者可见</span><br><span class="line"><span class="bullet">-</span> 🚫 不在首页显示</span><br><span class="line"><span class="bullet">-</span> 🚫 不会出现在搜索结果中</span><br><span class="line"><span class="bullet">-</span> 🚫 不能被直接访问</span><br><span class="line"></span><br><span class="line"><span class="strong">**适用场景：**</span></span><br><span class="line"><span class="bullet">-</span> 个人日记</span><br><span class="line"><span class="bullet">-</span> 未完成的草稿</span><br><span class="line"><span class="bullet">-</span> 内部备忘录</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"><span class="section">## 代码示例</span></span><br><span class="line"></span><br><span class="line"><span class="section">```yaml</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line">title: 我的私密日记</span><br><span class="line">date: 2026-02-12 18:00:00</span><br><span class="line">tags: [日记, 私密]</span><br><span class="line"><span class="section">visibility: private</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;warning-box&quot;</span>&gt;</span></span></span><br><span class="line">  ⚠️ <span class="language-xml"><span class="tag">&lt;<span class="name">strong</span>&gt;</span></span>注意：<span class="language-xml"><span class="tag">&lt;/<span class="name">strong</span>&gt;</span></span>私密文章在本地预览时可以查看，但部署后会被完全隐藏</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"><span class="section">### 状态 3：需密码文章</span></span><br><span class="line"></span><br><span class="line"><span class="code">```markdown</span></span><br><span class="line"><span class="code">## 会员专属内容</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">这是一篇**需密码文章**，需要输入正确的密码才能查看。</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">**特点：**</span></span><br><span class="line"><span class="code">- 🔒 首页被遮罩，需要密码才能看到内容</span></span><br><span class="line"><span class="code">- 🛡️ 输入正确密码后显示完整文章</span></span><br><span class="line"><span class="code">- 📊 访问统计（需要密码的阅读次数）</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">**适用场景：**</span></span><br><span class="line"><span class="code">- 付费教程</span></span><br><span class="line"><span class="code">- 会员专属资源</span></span><br><span class="line"><span class="code">- 限定分享内容</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">---</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">## 代码示例</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">```</span>yaml</span><br><span class="line">---</span><br><span class="line">title: Vue3 高级教程会员</span><br><span class="line">date: 2026-02-12 20:00:00</span><br><span class="line">tags: [Vue, 教程, 会员]</span><br><span class="line">password: 123456</span><br><span class="line">passwordHint: 提示：会员专属内容，密码是 123456</span><br><span class="line"><span class="section">visibility: password</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;info-box&quot;</span>&gt;</span></span></span><br><span class="line">  ℹ️ <span class="language-xml"><span class="tag">&lt;<span class="name">strong</span>&gt;</span></span>信息：<span class="language-xml"><span class="tag">&lt;/<span class="name">strong</span>&gt;</span></span></span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;li&gt;&lt;code&gt;password: 你的密码&lt;/code&gt; - 密码验证字段&lt;/li&gt;</span></span><br><span class="line"><span class="code">    &lt;li&gt;&lt;code&gt;passwordHint: 提示信息&lt;/code&gt; - 自定义密码提示&lt;/li&gt;</span></span><br><span class="line"><span class="code">  &lt;/ul&gt;</span></span><br><span class="line"><span class="code">&lt;/div&gt;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="strong">**密码输入演示：**</span></span><br><span class="line"></span><br><span class="line">当访客打开这篇文章时：</span><br><span class="line"><span class="bullet">1.</span> 首页显示密码输入框</span><br><span class="line"><span class="bullet">2.</span> 输入错误密码会显示提示</span><br><span class="line"><span class="bullet">3.</span> 输入正确密码（123456）后显示完整内容</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"><span class="section">## 🔧 工作原理</span></span><br><span class="line"></span><br><span class="line"><span class="section">### 实现原理</span></span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;guide-step&quot;</span>&gt;</span></span></span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">strong</span>&gt;</span></span>步骤 1：Hexo 过滤器<span class="language-xml"><span class="tag">&lt;/<span class="name">strong</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">文章渲染前，Hexo 会调用 <span class="language-xml"><span class="tag">&lt;<span class="name">code</span>&gt;</span></span>before<span class="emphasis">_post_</span>render<span class="language-xml"><span class="tag">&lt;/<span class="name">code</span>&gt;</span></span> 过滤器检查 <span class="language-xml"><span class="tag">&lt;<span class="name">code</span>&gt;</span></span>visibility<span class="language-xml"><span class="tag">&lt;/<span class="name">code</span>&gt;</span></span> 字段：</span><br><span class="line"></span><br><span class="line"><span class="code">```javascript</span></span><br><span class="line"><span class="code">// visibility-control.js 中的逻辑</span></span><br><span class="line"><span class="code">if (visibility === &#x27;private&#x27;) &#123;</span></span><br><span class="line"><span class="code">  return null; // 不渲染文章</span></span><br><span class="line"><span class="code">  // 添加密码验证界面</span></span><br><span class="line"><span class="code">  // 返回验证界面 HTML</span></span><br><span class="line"><span class="code">&#125;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">if (visibility === &#x27;password&#x27;) &#123;</span></span><br><span class="line"><span class="code">  return post; // 正常渲染文章</span></span><br><span class="line"><span class="code">  // 添加密码验证界面</span></span><br><span class="line"><span class="code">  // 验证成功后显示内容</span></span><br><span class="line"><span class="code">&#125;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">if (visibility === &#x27;public&#x27; || !visibility) &#123;</span></span><br><span class="line"><span class="code">  return post; // 正常渲染文章，不添加任何限制</span></span><br><span class="line"><span class="code">&#125;</span></span><br></pre></td></tr></table></figure>
-
-<div class="guide-step">
-  <strong>步骤 2：密码验证（JavaScript）</strong>
-</div>
-
-<ol>
-<li><strong>文章存储密码</strong>：在 Front-matter 中配置</li>
-<li><strong>用户输入密码</strong>：前端验证</li>
-<li><strong>验证成功</strong>：从 sessionStorage 移除遮罩</li>
-<li><strong>显示完整内容</strong>：正常渲染</li>
-</ol>
-<div class="tip-box">
-  💡 <strong>无数据库实现：</strong>
-  <ul>
-    <li>✅ 密码存储在文章 Front-matter 中</li>
-    <li>✅ 密码验证由前端 JavaScript 完成</li>
-    <li>✅ 使用 sessionStorage 记住已验证会话</li>
-    <li>✅ 完全静态，无需后端数据库</li>
-  </ul>
-</div>
-
-<hr>
-<h2 id="📊-效果对比"><a href="#📊-效果对比" class="headerlink" title="📊 效果对比"></a>📊 效果对比</h2><table>
-<thead>
-<tr>
-<th>对比项</th>
-<th>传统会员系统</th>
-<th>Hexo 静态方案</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>需要数据库</td>
-<td>❌ 是</td>
-<td>✅ 否</td>
-</tr>
-<tr>
-<td>需要后端</td>
-<td>❌ 是</td>
-<td>✅ 否</td>
-</tr>
-<tr>
-<td>部署难度</td>
-<td>🔴 高</td>
-<td>🟢 低</td>
-</tr>
-<tr>
-<td>维护成本</td>
-<td>🔴 高</td>
-<td>🟢 低</td>
-</tr>
-<tr>
-<td>适合个人博客</td>
-<td>❌ 否</td>
-<td>✅ 是</td>
-</tr>
-</tbody></table>
-<hr>
-<h2 id="🎨-样式展示"><a href="#🎨-样式展示" class="headerlink" title="🎨 样式展示"></a>🎨 样式展示</h2><p>本篇文章使用了<strong>密码保护界面</strong>样式，效果如下：</p>
-<div class="password-form" style="border: 2px solid #49b1f5;">
-  <label>请输入密码</label>
-  <input type="password" placeholder="输入密码：123456" />
-  <button onclick="alert('密码正确！')">验证</button>
-  <small style="color: #666;">提示：密码是 123456</small>
-</div>
-
-<hr>
-<h2 id="🎯-使用方法"><a href="#🎯-使用方法" class="headerlink" title="🎯 使用方法"></a>🎯 使用方法</h2><h3 id="在你的文章中添加可见性"><a href="#在你的文章中添加可见性" class="headerlink" title="在你的文章中添加可见性"></a>在你的文章中添加可见性</h3><p>只需在 Front-matter 中添加对应字段：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">文章标题</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2026-02-12 19:30:00</span></span><br><span class="line"><span class="attr">tags:</span> [<span class="string">标签</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可见性设置（三选一）</span></span><br><span class="line"><span class="attr">visibility:</span> <span class="string">public</span>        <span class="comment"># 公开（默认）</span></span><br><span class="line"><span class="comment"># visibility: private      # 私密</span></span><br><span class="line"><span class="comment"># visibility: password     # 需密码</span></span><br><span class="line"><span class="attr">password:</span> <span class="number">123456</span>           <span class="comment"># 密码（需密码时必填）</span></span><br><span class="line"><span class="attr">passwordHint:</span> <span class="string">提示信息</span>  <span class="comment"># 密码提示（可选）</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="推荐配置"><a href="#推荐配置" class="headerlink" title="推荐配置"></a>推荐配置</h3><p><strong>公开文章</strong>（适合大部分内容）：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">我的公开技术博客</span></span><br><span class="line"><span class="attr">tags:</span> [<span class="string">Hexo</span>, <span class="string">教程</span>]</span><br><span class="line"><span class="comment"># visibility 可省略，默认为 public</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>私密文章</strong>（适合草稿、个人笔记）：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">我的私密日记</span></span><br><span class="line"><span class="attr">tags:</span> [<span class="string">个人</span>]</span><br><span class="line"><span class="attr">visibility:</span> <span class="string">private</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>需密码文章</strong>（适合会员内容）：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">Vue3</span> <span class="string">源码分析会员</span></span><br><span class="line"><span class="attr">tags:</span> [<span class="string">Vue</span>, <span class="string">会员</span>]</span><br><span class="line"><span class="attr">visibility:</span> <span class="string">password</span></span><br><span class="line"><span class="attr">password:</span> <span class="number">123456</span></span><br><span class="line"><span class="attr">passwordHint:</span> <span class="string">提示：这是会员专属内容</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="✅-功能特性"><a href="#✅-功能特性" class="headerlink" title="✅ 功能特性"></a>✅ 功能特性</h2><ul>
-<li>🔒 <strong>无数据库</strong> - 完全静态实现</li>
-<li>⚡ <strong>自动化过滤</strong> - Hexo 自动根据 visibility 处理文章</li>
-<li>🎨 <strong>密码验证界面</strong> - 美观的输入框和验证按钮</li>
-<li>💾 <strong>sessionStorage</strong> - 记住已验证的会话</li>
-<li>📱 <strong>响应式设计</strong> - 移动端友好</li>
-<li>🔄 <strong>密码错误提示</strong> - 实时反馈</li>
-</ul>
-<hr>
-<h2 id="📝-部署清单"><a href="#📝-部署清单" class="headerlink" title="📝 部署清单"></a>📝 部署清单</h2><p>部署前确认：</p>
-<ul>
-<li><input checked="" disabled="" type="checkbox"> 已创建可见性控制脚本（visibility-control.js）</li>
-<li><input checked="" disabled="" type="checkbox"> 已在 Butterfly 配置中注入脚本</li>
-<li><input checked="" disabled="" type="checkbox"> 已创建演示文章（三种状态）</li>
-<li><input checked="" disabled="" type="checkbox"> 文章中使用了自定义样式美化</li>
-</ul>
-<hr>
-<h2 id="🔗-相关文档"><a href="#🔗-相关文档" class="headerlink" title="🔗 相关文档"></a>🔗 相关文档</h2><ul>
-<li><a href="/posts/visibility-control-demo/">本文演示文章</a></li>
-<li><a href="/OBSIDIAN_CUSTOM_STYLES_GUIDE.md">OBSIDIAN_CUSTOM_STYLES_GUIDE.md</a> - 自定义样式</li>
-<li><a href="/PICGO_UPLOAD_GUIDE.md">PICGO_UPLOAD_GUIDE.md</a> - PicGo 使用指南</li>
-</ul>
-<hr>
-<div class="tip-box">
-  💡 <strong>下一步建议：</strong>
-  <ol>
-    <li>创建更多测试文章，验证三种可见性状态</li>
-    <li>为现有文章添加可见性控制</li>
-    <li>调整密码验证界面样式以匹配主题</li>
-  </ol>
-</div>
-
-<div class="feature-banner">
-  <h2>🚀 功能已上线</h2>
-  <p>现在你的博客支持完整的文章可见性控制！开始创建需要密码的文章来测试吧。</p>
-</div>
-]]></content>
-      <categories>
-        <category>技术教程</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>教程</tag>
-        <tag>Butterfly</tag>
-        <tag>插件</tag>
-        <tag>前端开发</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Obsidian + PicGo：博客图片管理完美方案</title>
     <url>//posts/obsidian-picgo-workflow/</url>
     <content><![CDATA[<div class="feature-banner">
@@ -585,10 +268,10 @@
         <category>技术教程</category>
       </categories>
       <tags>
-        <tag>教程</tag>
         <tag>Obsidian</tag>
         <tag>PicGo</tag>
         <tag>博客</tag>
+        <tag>教程</tag>
         <tag>工作流</tag>
       </tags>
   </entry>
@@ -882,10 +565,327 @@
         <category>技术教程</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
-        <tag>教程</tag>
         <tag>Obsidian</tag>
         <tag>博客</tag>
+        <tag>教程</tag>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>文章可见性控制演示</title>
+    <url>//posts/visibility-control-demo/</url>
+    <content><![CDATA[<div class="feature-banner">
+  <h2>🔒 文章可见性控制演示</h2>
+  <p>无需数据库！使用 Hexo 插件系统 + JavaScript 实现密码验证</p>
+</div>
+
+<h2 id="功能说明"><a href="#功能说明" class="headerlink" title="功能说明"></a>功能说明</h2><p>本篇文章演示了三种可见性状态：</p>
+<table>
+<thead>
+<tr>
+<th>状态</th>
+<th>说明</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>公开</strong></td>
+<td>所有人可见</td>
+<td>技术分享文章</td>
+</tr>
+<tr>
+<td><strong>私密</strong></td>
+<td>仅作者可见</td>
+<td>个人笔记、草稿</td>
+</tr>
+<tr>
+<td><strong>需密码</strong></td>
+<td>输入密码查看</td>
+<td>会员内容、付费教程</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="📋-快速开始"><a href="#📋-快速开始" class="headerlink" title="📋 快速开始"></a>📋 快速开始</h2><h3 id="状态-1：公开文章（默认）"><a href="#状态-1：公开文章（默认）" class="headerlink" title="状态 1：公开文章（默认）"></a>状态 1：公开文章（默认）</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section">## 介绍</span></span><br><span class="line"></span><br><span class="line">这是一篇<span class="strong">**公开文章**</span>，所有人都可以看到。</span><br><span class="line"></span><br><span class="line">你可以：</span><br><span class="line"><span class="bullet">-</span> ✅ 在首页看到此文章</span><br><span class="line"><span class="bullet">-</span> ✅ 搜索到这篇文章</span><br><span class="line"><span class="bullet">-</span> ✅ 分享链接给他人</span><br><span class="line"><span class="bullet">-</span> ✅ 无需任何密码</span><br><span class="line"></span><br><span class="line">这是默认状态，无需任何配置。</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"><span class="section">## 代码示例</span></span><br><span class="line"></span><br><span class="line"><span class="section">```yaml</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line">title: 文章可见性控制演示</span><br><span class="line">date: 2026-02-12 19:30:00</span><br><span class="line">tags: [Hexo, 教程]</span><br><span class="line"><span class="section">visibility: public</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;tip-box&quot;</span>&gt;</span></span></span><br><span class="line">  💡 <span class="language-xml"><span class="tag">&lt;<span class="name">strong</span>&gt;</span></span>提示：<span class="language-xml"><span class="tag">&lt;/<span class="name">strong</span>&gt;</span></span>不填写 <span class="language-xml"><span class="tag">&lt;<span class="name">code</span>&gt;</span></span>visibility<span class="language-xml"><span class="tag">&lt;/<span class="name">code</span>&gt;</span></span> 字段时，默认为公开</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="状态-2：私密文章"><a href="#状态-2：私密文章" class="headerlink" title="状态 2：私密文章"></a>状态 2：私密文章</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section">## 私密文章</span></span><br><span class="line"></span><br><span class="line">这是一篇<span class="strong">**私密文章**</span>，只有我能看到。</span><br><span class="line"></span><br><span class="line"><span class="strong">**特点：**</span></span><br><span class="line"><span class="bullet">-</span> 🔒 只有作者可见</span><br><span class="line"><span class="bullet">-</span> 🚫 不在首页显示</span><br><span class="line"><span class="bullet">-</span> 🚫 不会出现在搜索结果中</span><br><span class="line"><span class="bullet">-</span> 🚫 不能被直接访问</span><br><span class="line"></span><br><span class="line"><span class="strong">**适用场景：**</span></span><br><span class="line"><span class="bullet">-</span> 个人日记</span><br><span class="line"><span class="bullet">-</span> 未完成的草稿</span><br><span class="line"><span class="bullet">-</span> 内部备忘录</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"><span class="section">## 代码示例</span></span><br><span class="line"></span><br><span class="line"><span class="section">```yaml</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line">title: 我的私密日记</span><br><span class="line">date: 2026-02-12 18:00:00</span><br><span class="line">tags: [日记, 私密]</span><br><span class="line"><span class="section">visibility: private</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;warning-box&quot;</span>&gt;</span></span></span><br><span class="line">  ⚠️ <span class="language-xml"><span class="tag">&lt;<span class="name">strong</span>&gt;</span></span>注意：<span class="language-xml"><span class="tag">&lt;/<span class="name">strong</span>&gt;</span></span>私密文章在本地预览时可以查看，但部署后会被完全隐藏</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"><span class="section">### 状态 3：需密码文章</span></span><br><span class="line"></span><br><span class="line"><span class="code">```markdown</span></span><br><span class="line"><span class="code">## 会员专属内容</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">这是一篇**需密码文章**，需要输入正确的密码才能查看。</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">**特点：**</span></span><br><span class="line"><span class="code">- 🔒 首页被遮罩，需要密码才能看到内容</span></span><br><span class="line"><span class="code">- 🛡️ 输入正确密码后显示完整文章</span></span><br><span class="line"><span class="code">- 📊 访问统计（需要密码的阅读次数）</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">**适用场景：**</span></span><br><span class="line"><span class="code">- 付费教程</span></span><br><span class="line"><span class="code">- 会员专属资源</span></span><br><span class="line"><span class="code">- 限定分享内容</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">---</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">## 代码示例</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">```</span>yaml</span><br><span class="line">---</span><br><span class="line">title: Vue3 高级教程会员</span><br><span class="line">date: 2026-02-12 20:00:00</span><br><span class="line">tags: [Vue, 教程, 会员]</span><br><span class="line">password: 123456</span><br><span class="line">passwordHint: 提示：会员专属内容，密码是 123456</span><br><span class="line"><span class="section">visibility: password</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;info-box&quot;</span>&gt;</span></span></span><br><span class="line">  ℹ️ <span class="language-xml"><span class="tag">&lt;<span class="name">strong</span>&gt;</span></span>信息：<span class="language-xml"><span class="tag">&lt;/<span class="name">strong</span>&gt;</span></span></span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;li&gt;&lt;code&gt;password: 你的密码&lt;/code&gt; - 密码验证字段&lt;/li&gt;</span></span><br><span class="line"><span class="code">    &lt;li&gt;&lt;code&gt;passwordHint: 提示信息&lt;/code&gt; - 自定义密码提示&lt;/li&gt;</span></span><br><span class="line"><span class="code">  &lt;/ul&gt;</span></span><br><span class="line"><span class="code">&lt;/div&gt;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="strong">**密码输入演示：**</span></span><br><span class="line"></span><br><span class="line">当访客打开这篇文章时：</span><br><span class="line"><span class="bullet">1.</span> 首页显示密码输入框</span><br><span class="line"><span class="bullet">2.</span> 输入错误密码会显示提示</span><br><span class="line"><span class="bullet">3.</span> 输入正确密码（123456）后显示完整内容</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"><span class="section">## 🔧 工作原理</span></span><br><span class="line"></span><br><span class="line"><span class="section">### 实现原理</span></span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;guide-step&quot;</span>&gt;</span></span></span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">strong</span>&gt;</span></span>步骤 1：Hexo 过滤器<span class="language-xml"><span class="tag">&lt;/<span class="name">strong</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">文章渲染前，Hexo 会调用 <span class="language-xml"><span class="tag">&lt;<span class="name">code</span>&gt;</span></span>before<span class="emphasis">_post_</span>render<span class="language-xml"><span class="tag">&lt;/<span class="name">code</span>&gt;</span></span> 过滤器检查 <span class="language-xml"><span class="tag">&lt;<span class="name">code</span>&gt;</span></span>visibility<span class="language-xml"><span class="tag">&lt;/<span class="name">code</span>&gt;</span></span> 字段：</span><br><span class="line"></span><br><span class="line"><span class="code">```javascript</span></span><br><span class="line"><span class="code">// visibility-control.js 中的逻辑</span></span><br><span class="line"><span class="code">if (visibility === &#x27;private&#x27;) &#123;</span></span><br><span class="line"><span class="code">  return null; // 不渲染文章</span></span><br><span class="line"><span class="code">  // 添加密码验证界面</span></span><br><span class="line"><span class="code">  // 返回验证界面 HTML</span></span><br><span class="line"><span class="code">&#125;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">if (visibility === &#x27;password&#x27;) &#123;</span></span><br><span class="line"><span class="code">  return post; // 正常渲染文章</span></span><br><span class="line"><span class="code">  // 添加密码验证界面</span></span><br><span class="line"><span class="code">  // 验证成功后显示内容</span></span><br><span class="line"><span class="code">&#125;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">if (visibility === &#x27;public&#x27; || !visibility) &#123;</span></span><br><span class="line"><span class="code">  return post; // 正常渲染文章，不添加任何限制</span></span><br><span class="line"><span class="code">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<div class="guide-step">
+  <strong>步骤 2：密码验证（JavaScript）</strong>
+</div>
+
+<ol>
+<li><strong>文章存储密码</strong>：在 Front-matter 中配置</li>
+<li><strong>用户输入密码</strong>：前端验证</li>
+<li><strong>验证成功</strong>：从 sessionStorage 移除遮罩</li>
+<li><strong>显示完整内容</strong>：正常渲染</li>
+</ol>
+<div class="tip-box">
+  💡 <strong>无数据库实现：</strong>
+  <ul>
+    <li>✅ 密码存储在文章 Front-matter 中</li>
+    <li>✅ 密码验证由前端 JavaScript 完成</li>
+    <li>✅ 使用 sessionStorage 记住已验证会话</li>
+    <li>✅ 完全静态，无需后端数据库</li>
+  </ul>
+</div>
+
+<hr>
+<h2 id="📊-效果对比"><a href="#📊-效果对比" class="headerlink" title="📊 效果对比"></a>📊 效果对比</h2><table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>传统会员系统</th>
+<th>Hexo 静态方案</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>需要数据库</td>
+<td>❌ 是</td>
+<td>✅ 否</td>
+</tr>
+<tr>
+<td>需要后端</td>
+<td>❌ 是</td>
+<td>✅ 否</td>
+</tr>
+<tr>
+<td>部署难度</td>
+<td>🔴 高</td>
+<td>🟢 低</td>
+</tr>
+<tr>
+<td>维护成本</td>
+<td>🔴 高</td>
+<td>🟢 低</td>
+</tr>
+<tr>
+<td>适合个人博客</td>
+<td>❌ 否</td>
+<td>✅ 是</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="🎨-样式展示"><a href="#🎨-样式展示" class="headerlink" title="🎨 样式展示"></a>🎨 样式展示</h2><p>本篇文章使用了<strong>密码保护界面</strong>样式，效果如下：</p>
+<div class="password-form" style="border: 2px solid #49b1f5;">
+  <label>请输入密码</label>
+  <input type="password" placeholder="输入密码：123456" />
+  <button onclick="alert('密码正确！')">验证</button>
+  <small style="color: #666;">提示：密码是 123456</small>
+</div>
+
+<hr>
+<h2 id="🎯-使用方法"><a href="#🎯-使用方法" class="headerlink" title="🎯 使用方法"></a>🎯 使用方法</h2><h3 id="在你的文章中添加可见性"><a href="#在你的文章中添加可见性" class="headerlink" title="在你的文章中添加可见性"></a>在你的文章中添加可见性</h3><p>只需在 Front-matter 中添加对应字段：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">文章标题</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2026-02-12 19:30:00</span></span><br><span class="line"><span class="attr">tags:</span> [<span class="string">标签</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可见性设置（三选一）</span></span><br><span class="line"><span class="attr">visibility:</span> <span class="string">public</span>        <span class="comment"># 公开（默认）</span></span><br><span class="line"><span class="comment"># visibility: private      # 私密</span></span><br><span class="line"><span class="comment"># visibility: password     # 需密码</span></span><br><span class="line"><span class="attr">password:</span> <span class="number">123456</span>           <span class="comment"># 密码（需密码时必填）</span></span><br><span class="line"><span class="attr">passwordHint:</span> <span class="string">提示信息</span>  <span class="comment"># 密码提示（可选）</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="推荐配置"><a href="#推荐配置" class="headerlink" title="推荐配置"></a>推荐配置</h3><p><strong>公开文章</strong>（适合大部分内容）：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">我的公开技术博客</span></span><br><span class="line"><span class="attr">tags:</span> [<span class="string">Hexo</span>, <span class="string">教程</span>]</span><br><span class="line"><span class="comment"># visibility 可省略，默认为 public</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>私密文章</strong>（适合草稿、个人笔记）：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">我的私密日记</span></span><br><span class="line"><span class="attr">tags:</span> [<span class="string">个人</span>]</span><br><span class="line"><span class="attr">visibility:</span> <span class="string">private</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>需密码文章</strong>（适合会员内容）：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">Vue3</span> <span class="string">源码分析会员</span></span><br><span class="line"><span class="attr">tags:</span> [<span class="string">Vue</span>, <span class="string">会员</span>]</span><br><span class="line"><span class="attr">visibility:</span> <span class="string">password</span></span><br><span class="line"><span class="attr">password:</span> <span class="number">123456</span></span><br><span class="line"><span class="attr">passwordHint:</span> <span class="string">提示：这是会员专属内容</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="✅-功能特性"><a href="#✅-功能特性" class="headerlink" title="✅ 功能特性"></a>✅ 功能特性</h2><ul>
+<li>🔒 <strong>无数据库</strong> - 完全静态实现</li>
+<li>⚡ <strong>自动化过滤</strong> - Hexo 自动根据 visibility 处理文章</li>
+<li>🎨 <strong>密码验证界面</strong> - 美观的输入框和验证按钮</li>
+<li>💾 <strong>sessionStorage</strong> - 记住已验证的会话</li>
+<li>📱 <strong>响应式设计</strong> - 移动端友好</li>
+<li>🔄 <strong>密码错误提示</strong> - 实时反馈</li>
+</ul>
+<hr>
+<h2 id="📝-部署清单"><a href="#📝-部署清单" class="headerlink" title="📝 部署清单"></a>📝 部署清单</h2><p>部署前确认：</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 已创建可见性控制脚本（visibility-control.js）</li>
+<li><input checked="" disabled="" type="checkbox"> 已在 Butterfly 配置中注入脚本</li>
+<li><input checked="" disabled="" type="checkbox"> 已创建演示文章（三种状态）</li>
+<li><input checked="" disabled="" type="checkbox"> 文章中使用了自定义样式美化</li>
+</ul>
+<hr>
+<h2 id="🔗-相关文档"><a href="#🔗-相关文档" class="headerlink" title="🔗 相关文档"></a>🔗 相关文档</h2><ul>
+<li><a href="/posts/visibility-control-demo/">本文演示文章</a></li>
+<li><a href="/OBSIDIAN_CUSTOM_STYLES_GUIDE.md">OBSIDIAN_CUSTOM_STYLES_GUIDE.md</a> - 自定义样式</li>
+<li><a href="/PICGO_UPLOAD_GUIDE.md">PICGO_UPLOAD_GUIDE.md</a> - PicGo 使用指南</li>
+</ul>
+<hr>
+<div class="tip-box">
+  💡 <strong>下一步建议：</strong>
+  <ol>
+    <li>创建更多测试文章，验证三种可见性状态</li>
+    <li>为现有文章添加可见性控制</li>
+    <li>调整密码验证界面样式以匹配主题</li>
+  </ol>
+</div>
+
+<div class="feature-banner">
+  <h2>🚀 功能已上线</h2>
+  <p>现在你的博客支持完整的文章可见性控制！开始创建需要密码的文章来测试吧。</p>
+</div>
+]]></content>
+      <categories>
+        <category>技术教程</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>Hexo</tag>
+        <tag>Butterfly</tag>
+        <tag>插件</tag>
+        <tag>前端开发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo+GitHub个人博客搭建</title>
+    <url>//posts/hexo-github-blog-setup/</url>
+    <content><![CDATA[<h1 id="Hexo-GitHub搭建个人博客"><a href="#Hexo-GitHub搭建个人博客" class="headerlink" title="Hexo+GitHub搭建个人博客"></a>Hexo+GitHub搭建个人博客</h1><p>摘要：本文以up主<a href="https://www.bilibili.com/video/BV1Yb411a7ty/?spm_id_from=333.788.recommend_more_video.0&vd_source=91e373e2cbd270e06a052e77397b7938">CodeSheep</a>从零开始搭建自己的个人博客 视频为框架，记录本人从零搭建个人博客的过程，重点表述搭建过程中遇到bug如何解决，以及补充视频没有的细节，文章以图文形式呈现。</p>
+<h2 id="第一章-博客环境搭建"><a href="#第一章-博客环境搭建" class="headerlink" title="第一章 博客环境搭建"></a>第一章 博客环境搭建</h2><p>搭建设备：联想ThinkBook14P、Win11</p>
+<ul>
+<li>1.1 安装Nodejs</li>
+<li>1.2 安装hexo博客框架</li>
+<li>1.3 使用hexo进行博客框架</li>
+</ul>
+<h3 id="1-1-Node-js安装"><a href="#1-1-Node-js安装" class="headerlink" title="1.1 Node.js安装"></a>1.1 Node.js安装</h3><p>进入<a href="https://www.nodejs.org/">https://www.nodejs.org</a>即可进行安装对应系统版本的node.js<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183248497.png"></p>
+<p>随后进入软件的下载界面：<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183248616.png"><br>一路点击next，到达安装路径时确保安装路径在自己想要安装的位置<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183248762.png"><br>自主选择是否安装时候自动安装对应的工具Tool<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183248963.png"><br>在PowerShell控制界面中查看npm的版本，后续创建网站需要用到该包<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183249168.png"></p>
+<hr>
+<h3 id="1-2-安装hexo博客框架"><a href="#1-2-安装hexo博客框架" class="headerlink" title="1.2 安装hexo博客框架"></a>1.2 安装hexo博客框架</h3><p>在刚才打开的powershell中输入<code>npm install -g cnpm --registry=http://registry.npm.taobao.org</code>来安装淘宝的cnpm镜像源，下载速度比较快</p>
+<blockquote>
+<p>但是如果自己有挂vpn或者已经有其他镜像源的话可以自行决定是否进行这一步</p>
+</blockquote>
+<p>下面时对应cnpm的版本信息<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183249362.png"></p>
+<p>接着使用<code>cnpm install -g hexo-cli</code>安装hexo框架<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183249526.png"></p>
+<p>可以使用<code>hexo -v</code>验证安装好的的hexo版本信息<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183249685.png"></p>
+<hr>
+<h3 id="1-3-使用hexo进行博客框架"><a href="#1-3-使用hexo进行博客框架" class="headerlink" title="1.3 使用hexo进行博客框架"></a>1.3 使用hexo进行博客框架</h3><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">pwd</span> <span class="comment">#查看当前目录</span></span><br><span class="line">mkdir blog <span class="comment">#创建blog文件夹</span></span><br></pre></td></tr></table></figure>
+
+<p>这里我将blog项目文件夹放在了 <code>E:\Self-Web\Sheep跟做</code>这个目录下，之后项目有任何问题，可以直接删除blog文件夹重来。<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183249821.png"></p>
+<p>最后在powershell中输入 <code>cd ./blog</code>进入我们的项目文件夹</p>
+<p>随后输入 <code>sudo hexo init</code>使用超级管理员身份生成一个初始化博客</p>
+<blockquote>
+<p>在win上应该直接输入 <code>hexo init</code>就可以了，会自动下载对应所需要的依赖文件<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183249921.png"></p>
+</blockquote>
+<p>此时可以看到文件夹中生成了一些我们创建个人博客所必须的项目文件。<br>使用 <code>ls</code>可以查看当前文件夹下的文件组成<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183250067.png"><br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183250197.png"></p>
+<p><strong>启动博客输入 <code>hexo s</code>即可启动本地博客服务</strong><br>此时的本地端口访问地址是：<a href="http://localhost:4000/">http://localhost:4000/</a><br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183250314.png"></p>
+<p>随后即可在默认浏览器中进入hexo的初始前端界面<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183250422.png"><br>平常就是使用 <code>hexo s</code>进行本地环境下的个人网页测试预览<br><strong>常用的hexo指令如下</strong></p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">hexo n  <span class="string">&quot;健康养生护理&quot;</span> <span class="comment"># 创建一篇名为“健康养生护理”的新博客</span></span><br><span class="line">hexo s <span class="comment"># 运行hexo本地服务</span></span><br><span class="line">hexo clean <span class="comment"># 清理本地端口页面</span></span><br><span class="line">hexo g <span class="comment"># 生成静态文件(每次创建完一篇新博客之后都需要在项目主文件夹blog路径下输入)</span></span><br><span class="line">hexo d <span class="comment"># 部署到远程站点</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183250811.png"></p>
+<p>之后输入 <code>hexo n &quot;xxx的第一篇博客文章&quot;</code>就可以创建你的第一篇博客了</p>
+<blockquote>
+<p>记住此时需要输入 <code>ctrl + c</code>结束我们的本地端口访问再输入对应指令创建博客<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183250558.png"></p>
+</blockquote>
+<p>在得到我们的第一篇博客后，可以进入我们的 <code>E:\Self-Web\Sheep跟做\blog\source\_posts\</code>路径下查看我们新创建好的博客文档<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183250687.png"></p>
+<p>在创建好第一篇博客文章之后，进行以下步骤完成第一次博客文章的前端页面更新：</p>
+<ol>
+<li>回到我们的blog主文件夹输入两次回退指令 <code>cd ../..</code></li>
+<li>首先输入 <code>hexo clean</code>清理本地端口页面和缓存<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183250952.png"></li>
+<li>随后输入 <code>hexo g</code>生成新博客的静态文件<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183251078.png"></li>
+<li>输入 <code>hexo s</code>本地启动我们的博客页面。</li>
+</ol>
+<p>此时再启动服务之后，刷新我们的本地博客页面，即可看到我们的博客首页已经更新了。<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183251235.png"></p>
+<h2 id="第二章-Github远程服务器搭建"><a href="#第二章-Github远程服务器搭建" class="headerlink" title="第二章 Github远程服务器搭建"></a>第二章 Github远程服务器搭建</h2><p>目的：方便以后直接通过github这个网址直接访问我们的博客<br>基本步骤如下：</p>
+<h3 id="2-1-登录Github创建项目仓库"><a href="#2-1-登录Github创建项目仓库" class="headerlink" title="2.1 登录Github创建项目仓库"></a><strong>2.1 登录Github创建项目仓库</strong></h3><p><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183251374.png"><br>创建完成之后会出现如下界面：</p>
+<blockquote>
+<p>其中项目命名是有对应格式要求的<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183251484.png"></p>
+</blockquote>
+<h3 id="2-2-安装git工具-这里我之前已经安装过了，这里就不演示了"><a href="#2-2-安装git工具-这里我之前已经安装过了，这里就不演示了" class="headerlink" title="2.2 安装git工具(这里我之前已经安装过了，这里就不演示了)"></a><strong>2.2 安装git工具(这里我之前已经安装过了，这里就不演示了)</strong></h3><h3 id="2-3-在blog目录下安装git部署插件"><a href="#2-3-在blog目录下安装git部署插件" class="headerlink" title="2.3 在blog目录下安装git部署插件"></a><strong>2.3 在blog目录下安装git部署插件</strong></h3><p>进入blog根目录终端输入命令行 <code>cnpm install --save hexo-deployer-git</code></p>
+<h3 id="2-4-打开blog文件夹下的-config-yml文件进行设置"><a href="#2-4-打开blog文件夹下的-config-yml文件进行设置" class="headerlink" title="2.4 打开blog文件夹下的 _config.yml文件进行设置"></a><strong>2.4 打开blog文件夹下的 <code>_config.yml</code>文件进行设置</strong></h3><p>在文件的最后需要对Deployment进行相应的设置<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183251715.png"><br>将该部分修改成如下：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/one-command-deployment</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:Shiaoming123/Shiaoming123.github.io.git</span></span><br><span class="line">  <span class="comment">## 这里填的是SSH地址，如果你使用HTTPS地址，</span></span><br><span class="line">  <span class="comment">## 请将其改为：https://github.com/Shiaoming123/Shiaoming123.github.io.git</span></span><br><span class="line">  <span class="comment">## 最好选SSH地址，因为HTTPS地址需要每次都输入用户名和密码</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span></span><br><span class="line">  <span class="comment">## 在老版本的github中，默认分支是master</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>视频里填的是HTTPS地址，先说明一下如果填写那个地址以后每次部署到远端就需要输入密码登录一次，非常麻烦。<br>填写SSH地址为的是后面免密hexo d，需要将 Mac上ssh密钥添加到GitHub上，但绝对是一劳永逸的操作！</p>
+</blockquote>
+<h3 id="2-5-命令行中输入-hexo-d进行部署"><a href="#2-5-命令行中输入-hexo-d进行部署" class="headerlink" title="2.5 命令行中输入 hexo d进行部署"></a><strong>2.5 命令行中输入 <code>hexo d</code>进行部署</strong></h3><blockquote>
+<p>报错分析：<br>显示 <code>fatal: unable to auto-detect email address (got &#39;Wuling@DESKTOP-SKF1DTT.(none)&#39;)</code><br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183251841.png"><br>因为前面使用的是SSH地址，所以这里需要再加一步配置SSH连接密钥</p>
+</blockquote>
+<h4 id="2-5-1-Github的SSH密钥配置"><a href="#2-5-1-Github的SSH密钥配置" class="headerlink" title="2.5.1 Github的SSH密钥配置"></a><strong>2.5.1 Github的SSH密钥配置</strong></h4><p>SSH:SSH(Secure SHell):是一个提供数据通信安全、远程登录、远程指令执行等功能的安全网络协议，使用ssh往GitHub上push项目，不需要再次输入账号密码。</p>
+<ul>
+<li>设置git<br>运行下面命令行配置自己的name和email</li>
+</ul>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">git config <span class="literal">--list</span>   <span class="comment">#查看配置</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183251953.png"></p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">git config <span class="literal">--global</span> user.name <span class="string">&quot;你的用户名&quot;</span></span><br><span class="line">git config <span class="literal">--global</span> user.email <span class="string">&quot;你的邮箱&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183252061.png"></p>
+<ul>
+<li>Github SSH密钥配置</li>
+</ul>
+<blockquote>
+<ol>
+<li>检查是否存在SSH Key<br>输入 <code>cd /.ssh</code>和 <code>ls</code>查看SSH配置文件夹内的内容，若是存在 <code>id_rsa</code>和 <code>id_sra.pub</code>文件，说明已经有SSH key了，没有则创建新的<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183252187.png"></li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>创建新的ssh key<br>输入下面的命令行</li>
+</ol>
+<blockquote>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">ssh<span class="literal">-keygen</span> <span class="literal">-t</span> rsa <span class="literal">-C</span><span class="string">&quot;你的邮箱&quot;</span> </span><br><span class="line"><span class="comment">#-t ：密钥的类型</span></span><br><span class="line"><span class="comment">#-C : 用于识别密钥的注释</span></span><br></pre></td></tr></table></figure>
+
+</blockquote>
+<p>会发现 .ssh 目录生成了两个文件：<code>id_rsa</code>和 <code>id_rsa.pub</code><br><code>id_rsa</code> 文件是私有密钥，<code>id_rsa.pub</code>是公开密钥<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183252318.png"></p>
+</blockquote>
+<blockquote>
+<ol start="3">
+<li>获取ssh key公钥内容<br>输入 <code>cat ./id_rsa.pub</code>获取 <code>id_rsa.pub</code>中的公钥内容<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183252485.png"></li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="4">
+<li>添加公钥到github<br>将前面获取到的公钥添加到github中<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183252625.png"><br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183252770.png"></li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="5">
+<li>验证是否设置成功<br>用私有密钥与GitHub进行认证和通信</li>
+</ol>
+<blockquote>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">ssh <span class="literal">-T</span> git@github.com</span><br></pre></td></tr></table></figure>
+
+</blockquote>
+<p>出现以下提示说明连接成功<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183252905.png"></p>
+</blockquote>
+<p>随后返回到我们的blog主文件夹路径下，输入 <code>hexo d</code>即可完成远端部署<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183253030.png"></p>
+<p>此时查看github仓库，即可发现对应文件都已装载进github对应项目仓库中<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183253159.png"></p>
+<p>此时输入我们的域名即可进入我们的博客界面<a href="http://shiaoming123.github.io/">http://shiaoming123.github.io</a>或者&lt;shiaoming123.github.io&gt;</p>
+<h2 id="第三章-更换blog页面主题"><a href="#第三章-更换blog页面主题" class="headerlink" title="第三章 更换blog页面主题"></a>第三章 更换blog页面主题</h2><p><strong><a href="https://github.com/litten/hexo-theme-yilia">yilia</a></strong><br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183253298.png"></p>
+<p><strong><a href="https://github.com/iissnan/hexo-theme-next">NexT</a></strong><br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183253485.png"></p>
+<p><strong><a href="https://github.com/jerryc127/hexo-theme-butterfly">butterfly</a></strong><br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183253937.png"></p>
+<h3 id="3-1-yilia主题更换"><a href="#3-1-yilia主题更换" class="headerlink" title="3.1 yilia主题更换"></a>3.1 yilia主题更换</h3><p><strong>1. 进入blog路径下，使用 <code>git clone</code>指令克隆对应项目到 <code>blog/themes/yilia</code>文件夹中，</strong></p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/litten/hexo<span class="literal">-theme-yilia</span>.git themes/yilia</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183253634.png"></p>
+<p><strong>2. 打开 <code>_config.yml</code>文件，修改 <code>theme</code>对应配置为 <code>yilia</code></strong></p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line"><span class="comment"># theme: landscape</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">yilia</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>3. 随后 <code>hexo clean</code>–&gt;<code>hexo g</code>–&gt;<code>hexo s</code></strong><br>此时可以看到我们的页面主题已经变成了 <code>yilia</code>主题样式<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183253780.png"></p>
+<p><strong>4. 输入 <code>hexo d</code>将编辑好的页面推到远端github服务器</strong></p>
+<blockquote>
+<p>进入界面有可能不会立马生效，可以尝试刷新一下即可正常显示</p>
+</blockquote>
+<h2 id="第四章-图床配置"><a href="#第四章-图床配置" class="headerlink" title="第四章 图床配置"></a>第四章 图床配置</h2><p>在使用中我们可以发现，blog中的图片链接使用的都是基于本地当前文件夹下的相对路径，想要在我们的远端服务器中显示图片，还需要将图片也使用图床等额外配置才可以实现正常的显示功能。这里我们使用Picgo作为我们的图床使用工具。</p>
+<h3 id="4-1-PicGo下载"><a href="#4-1-PicGo下载" class="headerlink" title="4.1 PicGo下载"></a>4.1 PicGo下载</h3><p>Picgo下载链接：<a href="https://github.com/Molunerfinn/PicGo/releases">https://github.com/Molunerfinn/PicGo/releases</a><br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183254078.png"></p>
+<p>下载完成之后，运行exe文件选择对应的下载路径即可完成安装。<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183254215.png"></p>
+<h3 id="4-2-创建Github图床存储仓库"><a href="#4-2-创建Github图床存储仓库" class="headerlink" title="4.2 创建Github图床存储仓库"></a>4.2 创建Github图床存储仓库</h3><p>在下载Picgo之后，我们还需要使用云服务器存储我们的图片文件，这里我们依旧使用github仓库作为我们图片的存储媒介。<br><strong>1.  创建一个新的github仓库，仓库命名随意，需要将权限设置为Public才可以正常使用，可以选择是否创建README.md文件</strong><br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183254342.png"></p>
+<p><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183254487.png"></p>
+<p><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183254645.png"></p>
+<p><strong>2. 将Picgo链接到github项目仓库</strong><br>打开Picgo左侧的“图床设置”中的“GitHub”，设置我们的图床配置文件<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183254805.png"><br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183254932.png"><br>按照我们前面图床仓库的相关信息填入对应框中，其中 <code>token</code>需要在github中获取<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183255090.png"></p>
+<p><strong>3. 获取token</strong><br>打开github的setting，在左侧的“开发者设置”中，创建一个新的 <code>token</code>，选择 <code>classic</code><br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183255230.png"><br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183255369.png"></p>
+<p>其中一些设置需要进行注意调整：<br><code>Note</code>：为该token创建一个识别名<br><code>Expiration</code>：设置该tokens的使用时长，若长期使用，可以设置为 <code>custom</code>来自己设置token过期时间，或者选择 <code>No expiration</code>无期限。<br>随后后面的 <code>repo</code>对应权限需要勾选<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183255541.png"></p>
+<p>随后创建token即可得到一串属于我们图床的token，复制粘贴到我们的PicGo的 <code>token</code>一栏中<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183255680.png"></p>
+<p>随后在我们的“图片上传”处选择我们的对应github配置即可进行我们的图床配置<br><img src="https://raw.githubusercontent.com/Shiaoming123/Picgo_image/main/img/20250622183255824.png"></p>
+]]></content>
+      <categories>
+        <category>前端</category>
+        <category>Blog</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>Hexo</tag>
+        <tag>GitHub</tag>
+        <tag>Blog</tag>
       </tags>
   </entry>
 </search>

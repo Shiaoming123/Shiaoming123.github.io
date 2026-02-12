@@ -33,9 +33,9 @@
     <category term="技术教程" scheme="https://shiaoming123.github.io/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="Hexo" scheme="https://shiaoming123.github.io/tags/Hexo/"/>
-    
     <category term="教程" scheme="https://shiaoming123.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="Hexo" scheme="https://shiaoming123.github.io/tags/Hexo/"/>
     
     <category term="Butterfly" scheme="https://shiaoming123.github.io/tags/Butterfly/"/>
     
@@ -62,13 +62,13 @@
     <category term="技术教程" scheme="https://shiaoming123.github.io/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="教程" scheme="https://shiaoming123.github.io/tags/%E6%95%99%E7%A8%8B/"/>
-    
     <category term="Obsidian" scheme="https://shiaoming123.github.io/tags/Obsidian/"/>
     
     <category term="PicGo" scheme="https://shiaoming123.github.io/tags/PicGo/"/>
     
     <category term="博客" scheme="https://shiaoming123.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+    <category term="教程" scheme="https://shiaoming123.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
     <category term="工作流" scheme="https://shiaoming123.github.io/tags/%E5%B7%A5%E4%BD%9C%E6%B5%81/"/>
     
@@ -91,13 +91,13 @@
     <category term="技术教程" scheme="https://shiaoming123.github.io/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="Hexo" scheme="https://shiaoming123.github.io/tags/Hexo/"/>
-    
-    <category term="教程" scheme="https://shiaoming123.github.io/tags/%E6%95%99%E7%A8%8B/"/>
-    
     <category term="Obsidian" scheme="https://shiaoming123.github.io/tags/Obsidian/"/>
     
     <category term="博客" scheme="https://shiaoming123.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+    <category term="教程" scheme="https://shiaoming123.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="Hexo" scheme="https://shiaoming123.github.io/tags/Hexo/"/>
     
   </entry>
   
@@ -120,13 +120,13 @@
     <category term="Blog" scheme="https://shiaoming123.github.io/categories/%E5%89%8D%E7%AB%AF/Blog/"/>
     
     
+    <category term="教程" scheme="https://shiaoming123.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
     <category term="Hexo" scheme="https://shiaoming123.github.io/tags/Hexo/"/>
     
     <category term="GitHub" scheme="https://shiaoming123.github.io/tags/GitHub/"/>
     
     <category term="Blog" scheme="https://shiaoming123.github.io/tags/Blog/"/>
-    
-    <category term="教程" scheme="https://shiaoming123.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
