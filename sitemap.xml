@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://shiaoming123.github.io/posts/obsidian-picgo-workflow/</loc>
+    <loc>https://shiaoming123.github.io/posts/hexo-github-blog-setup/</loc>
     
     <lastmod>2026-02-12</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>https://shiaoming123.github.io/posts/hexo-github-blog-setup/</loc>
+    <loc>https://shiaoming123.github.io/posts/obsidian-picgo-workflow/</loc>
     
     <lastmod>2026-02-12</lastmod>
     
@@ -83,14 +83,14 @@
 
   
   <url>
-    <loc>https://shiaoming123.github.io/tags/Obsidian/</loc>
+    <loc>https://shiaoming123.github.io/tags/Hexo/</loc>
     <lastmod>2026-02-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://shiaoming123.github.io/tags/PicGo/</loc>
+    <loc>https://shiaoming123.github.io/tags/Obsidian/</loc>
     <lastmod>2026-02-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -111,14 +111,14 @@
   </url>
   
   <url>
-    <loc>https://shiaoming123.github.io/tags/%E5%B7%A5%E4%BD%9C%E6%B5%81/</loc>
+    <loc>https://shiaoming123.github.io/tags/PicGo/</loc>
     <lastmod>2026-02-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://shiaoming123.github.io/tags/Hexo/</loc>
+    <loc>https://shiaoming123.github.io/tags/%E5%B7%A5%E4%BD%9C%E6%B5%81/</loc>
     <lastmod>2026-02-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
