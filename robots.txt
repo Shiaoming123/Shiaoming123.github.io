@@ -1,0 +1,19 @@
+# robots.txt for Shiaoming的技术博客
+
+User-agent: *
+Allow: /
+
+# 禁止爬取以下目录
+Disallow: /api/
+Disallow: /node_modules/
+Disallow: /themes/
+Disallow: /source/_drafts/
+Disallow: /db.json
+Disallow: /.deploy_git/
+
+# 站点地图
+Sitemap: https://shiaoming123.github.io/sitemap.xml
+Sitemap: https://shiaoming123.github.io/baidusitemap.xml
+
+# 爬取延迟（可选，秒）
+Crawl-delay: 1
