@@ -450,7 +450,122 @@
   <entry>
     <title>Obsidian + PicGo：博客图片管理完美方案</title>
     <url>//posts/obsidian-picgo-workflow/</url>
-    <content><![CDATA[<div class="feature-banner">
+    <content><![CDATA[<div class="password-protected" id="visibility-control">
+  <style>
+    .password-protected {
+      position: relative;
+      background: #f8f9fa;
+      border: 2px dashed #ff6b6b;
+      border-radius: 8px;
+      padding: 40px;
+      margin: 20px 0;
+      backdrop-filter: blur(10px);
+      min-height: 300px;
+    }
+
+<pre><code>.password-header &#123;
+  text-align: center;
+  padding: 20px;
+  background: #fff3cd;
+  border-radius: 6px;
+  margin-bottom: 20px;
+&#125;
+
+.password-header h2 &#123;
+  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+&#125;
+
+.password-form &#123;
+  margin-top: 20px;
+  text-align: center;
+&#125;
+
+.password-input &#123;
+  width: 100%;
+  max-width: 400px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+&#125;
+
+.verify-btn &#123;
+  width: 100%;
+  max-width: 400px;
+  padding: 12px;
+  background: #49b1f5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+&#125;
+
+.verify-btn:hover &#123;
+  background: #00c4b6;
+&#125;
+
+.verify-btn:disabled &#123;
+  background: #ccc;
+  cursor: not-allowed;
+&#125;
+
+.password-hint &#123;
+  font-size: 12px;
+  color: #666;
+  margin-top: 10px;
+  text-align: center;
+&#125;
+
+.success-message &#123;
+  color: #28a745;
+  font-weight: 500;
+  text-align: center;
+  padding: 10px;
+  margin-top: 10px;
+&#125;
+
+.error-message &#123;
+  color: #d32f2f;
+  font-size: 12px;
+  text-align: center;
+  padding: 10px;
+  margin-top: 5px;
+&#125;
+
+#article-content &#123;
+  display: none;
+&#125;
+</code></pre>
+<p>  </style></p>
+  <div class="password-header">
+    <h2>🔒 这篇文章需要密码才能查看</h2>
+  </div>
+
+  <div id="password-form-container">
+    <div class="password-form">
+      <input
+        type="password"
+        id="article-password"
+        class="password-input"
+        placeholder="请输入密码"
+        autocomplete="off"
+      />
+      <button id="verify-btn" class="verify-btn" type="button">
+        验证密码
+      </button>
+    </div>
+    <div id="password-message" class="password-hint">最简单的密码</div>
+  </div>
+
+  <div id="article-content">
+<div class="feature-banner">
   <h2>🎉 Obsidian + PicGo 完美工作流</h2>
   <p>写作时使用本地图片快速预览，完成后一键自动上传到图床并替换链接</p>
 </div>
@@ -710,7 +825,65 @@
   <h2>🚀 开始使用</h2>
   <p>现在就打开 Obsidian，开始你的高效写作之旅吧！</p>
 </div>
-]]></content>
+</div>
+
+  <script>
+    (function() {
+      const correctPassword = "123456";
+      const passwordInput = document.getElementById('article-password');
+      const verifyBtn = document.getElementById('verify-btn');
+      const messageBox = document.getElementById('password-message');
+      const formContainer = document.getElementById('password-form-container');
+      const contentDiv = document.getElementById('article-content');
+
+      function showMessage(text, type) {
+        messageBox.textContent = text;
+        messageBox.className = type === 'error' ? 'error-message' : 'success-message';
+      }
+
+      function verifyPassword() {
+        const inputPassword = passwordInput.value;
+
+        if (!inputPassword) {
+          showMessage('请输入密码', 'error');
+          return;
+        }
+
+        if (inputPassword === correctPassword) {
+          // 密码正确，显示内容
+          showMessage('密码正确，正在加载内容...', 'success');
+          verifyBtn.disabled = true;
+          verifyBtn.textContent = '验证成功！';
+
+          setTimeout(function() {
+            formContainer.style.display = 'none';
+            contentDiv.style.display = 'block';
+          }, 500);
+        } else {
+          // 密码错误
+          showMessage('密码错误，请重试', 'error');
+          passwordInput.style.borderColor = '#d32f2f';
+          passwordInput.focus();
+        }
+      }
+
+      // 回车键验证
+      passwordInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          verifyPassword();
+        }
+      });
+
+      // 按钮点击验证
+      verifyBtn.addEventListener('click', verifyPassword);
+
+      // 页面加载时自动聚焦密码输入框
+      passwordInput.focus();
+    })();
+  </script>
+</div>
+    ]]></content>
       <categories>
         <category>技术教程</category>
       </categories>
