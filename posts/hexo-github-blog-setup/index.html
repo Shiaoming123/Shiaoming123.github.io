@@ -1,4 +1,4 @@
-<!DOCTYPE html><html dir="ltr" lang="zh-CN" class="overflow-y-scroll scroll-smooth"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="canonical" href="https://shiaoming123.github.io/posts/hexo-github-blog-setup/"><meta name="generator" content="Astro v6.4.8"><!-- Font --><style>@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/02154cca78ac33f2.woff") format("woff"), url("/_astro/fonts/478e42e4694872ef.ttf") format("truetype");font-display:swap;font-weight:300;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/3a32a7a7a67f4f58.woff") format("woff"), url("/_astro/fonts/0863f4f6964aa89c.ttf") format("truetype");font-display:swap;font-weight:400;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/a5c5808c25effec9.woff") format("woff"), url("/_astro/fonts/792eded6cb3f0350.ttf") format("truetype");font-display:swap;font-weight:500;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/14314705006234cb.woff") format("woff"), url("/_astro/fonts/87d8fc1072d4917b.ttf") format("truetype");font-display:swap;font-weight:600;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/c33265ba093eb291.woff") format("woff"), url("/_astro/fonts/ec883ed4db81a7d9.ttf") format("truetype");font-display:swap;font-weight:700;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/c26ad40d3b1d9169.woff") format("woff"), url("/_astro/fonts/7a5ee0cfcde31b81.ttf") format("truetype");font-display:swap;font-weight:300;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/87ca066ba5b2c7cf.woff") format("woff"), url("/_astro/fonts/f4e25dfe9d6152ec.ttf") format("truetype");font-display:swap;font-weight:400;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/a9a0e80c053be3d5.woff") format("woff"), url("/_astro/fonts/a9df48ecd03749e4.ttf") format("truetype");font-display:swap;font-weight:500;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/da468df88542c99b.woff") format("woff"), url("/_astro/fonts/90f9809471092714.ttf") format("truetype");font-display:swap;font-weight:600;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/f914de358bc554f6.woff") format("woff"), url("/_astro/fonts/dbc9996f99c63e07.ttf") format("truetype");font-display:swap;font-weight:700;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:300;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:400;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:500;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:600;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:700;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:300;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:400;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:500;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:600;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:700;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}:root{--font-google-sans-code:"Google Sans Code-1a30c214885cb404","Google Sans Code-1a30c214885cb404 fallback: Courier New",monospace;}</style><!-- Primary meta --><title>Hexo + GitHub Pages 个人博客搭建 | Shiaoming 的技术博客</title><meta name="title" content="Hexo + GitHub Pages 个人博客搭建 | Shiaoming 的技术博客"><meta name="description" content="记录从 Node.js、Hexo、主题切换到 GitHub Pages 部署的个人博客搭建过程。"><meta name="author" content="Shiaoming"><link rel="sitemap" href="/sitemap.xml"><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:site_name" content="Shiaoming 的技术博客"><meta property="og:title" content="Hexo + GitHub Pages 个人博客搭建 | Shiaoming 的技术博客"><meta property="og:description" content="记录从 Node.js、Hexo、主题切换到 GitHub Pages 部署的个人博客搭建过程。"><meta property="og:url" content="https://shiaoming123.github.io/posts/hexo-github-blog-setup/"><meta property="og:image" content="https://shiaoming123.github.io/posts/hexo-github-blog-setup/index.png"><!-- Twitter / X --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://shiaoming123.github.io/posts/hexo-github-blog-setup/"><meta property="twitter:title" content="Hexo + GitHub Pages 个人博客搭建 | Shiaoming 的技术博客"><meta property="twitter:description" content="记录从 Node.js、Hexo、主题切换到 GitHub Pages 部署的个人博客搭建过程。"><meta property="twitter:image" content="https://shiaoming123.github.io/posts/hexo-github-blog-setup/index.png"><!-- RSS autodiscovery --><link rel="alternate" type="application/rss+xml" title="Shiaoming 的技术博客" href="https://shiaoming123.github.io/rss.xml/"><!-- Filled at runtime by theme.ts to match the current background colour --><meta name="theme-color" content=""><!-- Extra head content injected by child layouts (e.g. JSON-LD, article meta) -->  <meta property="og:type" content="article"> <meta property="article:published_time" content="2025-06-22T15:16:08.000Z"><meta property="article:modified_time" content="2026-02-12T06:47:41.000Z"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Hexo + GitHub Pages 个人博客搭建 | Shiaoming 的技术博客","image":"https://shiaoming123.github.io/posts/hexo-github-blog-setup/index.png","datePublished":"2025-06-22T15:16:08.000Z","dateModified":"2026-02-12T06:47:41.000Z","author":[{"@type":"Person","name":"Shiaoming","url":"https://github.com/Shiaoming123"}]}</script> <!--
+<!DOCTYPE html><html dir="ltr" lang="zh-CN" class="overflow-y-scroll scroll-smooth"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="canonical" href="https://shiaoming123.github.io/posts/hexo-github-blog-setup/"><meta name="generator" content="Astro v6.4.8"><!-- Font --><style>@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/02154cca78ac33f2.woff") format("woff"), url("/_astro/fonts/478e42e4694872ef.ttf") format("truetype");font-display:swap;font-weight:300;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/3a32a7a7a67f4f58.woff") format("woff"), url("/_astro/fonts/0863f4f6964aa89c.ttf") format("truetype");font-display:swap;font-weight:400;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/a5c5808c25effec9.woff") format("woff"), url("/_astro/fonts/792eded6cb3f0350.ttf") format("truetype");font-display:swap;font-weight:500;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/14314705006234cb.woff") format("woff"), url("/_astro/fonts/87d8fc1072d4917b.ttf") format("truetype");font-display:swap;font-weight:600;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/c33265ba093eb291.woff") format("woff"), url("/_astro/fonts/ec883ed4db81a7d9.ttf") format("truetype");font-display:swap;font-weight:700;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/c26ad40d3b1d9169.woff") format("woff"), url("/_astro/fonts/7a5ee0cfcde31b81.ttf") format("truetype");font-display:swap;font-weight:300;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/87ca066ba5b2c7cf.woff") format("woff"), url("/_astro/fonts/f4e25dfe9d6152ec.ttf") format("truetype");font-display:swap;font-weight:400;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/a9a0e80c053be3d5.woff") format("woff"), url("/_astro/fonts/a9df48ecd03749e4.ttf") format("truetype");font-display:swap;font-weight:500;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/da468df88542c99b.woff") format("woff"), url("/_astro/fonts/90f9809471092714.ttf") format("truetype");font-display:swap;font-weight:600;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/f914de358bc554f6.woff") format("woff"), url("/_astro/fonts/dbc9996f99c63e07.ttf") format("truetype");font-display:swap;font-weight:700;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:300;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:400;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:500;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:600;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:700;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:300;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:400;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:500;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:600;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:700;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}:root{--font-google-sans-code:"Google Sans Code-1a30c214885cb404","Google Sans Code-1a30c214885cb404 fallback: Courier New",monospace;}</style><!-- Primary meta --><title>Hexo + GitHub Pages 个人博客搭建 | Shiaoming 的技术博客</title><meta name="title" content="Hexo + GitHub Pages 个人博客搭建 | Shiaoming 的技术博客"><meta name="description" content="从 Node.js 环境、Hexo 初始化、GitHub Pages 仓库、部署配置、主题切换到图片管理，完整记录一次个人博客搭建过程。"><meta name="author" content="Shiaoming"><link rel="sitemap" href="/sitemap.xml"><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:site_name" content="Shiaoming 的技术博客"><meta property="og:title" content="Hexo + GitHub Pages 个人博客搭建 | Shiaoming 的技术博客"><meta property="og:description" content="从 Node.js 环境、Hexo 初始化、GitHub Pages 仓库、部署配置、主题切换到图片管理，完整记录一次个人博客搭建过程。"><meta property="og:url" content="https://shiaoming123.github.io/posts/hexo-github-blog-setup/"><meta property="og:image" content="https://shiaoming123.github.io/posts/hexo-github-blog-setup/index.png"><!-- Twitter / X --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://shiaoming123.github.io/posts/hexo-github-blog-setup/"><meta property="twitter:title" content="Hexo + GitHub Pages 个人博客搭建 | Shiaoming 的技术博客"><meta property="twitter:description" content="从 Node.js 环境、Hexo 初始化、GitHub Pages 仓库、部署配置、主题切换到图片管理，完整记录一次个人博客搭建过程。"><meta property="twitter:image" content="https://shiaoming123.github.io/posts/hexo-github-blog-setup/index.png"><!-- RSS autodiscovery --><link rel="alternate" type="application/rss+xml" title="Shiaoming 的技术博客" href="https://shiaoming123.github.io/rss.xml/"><!-- Filled at runtime by theme.ts to match the current background colour --><meta name="theme-color" content=""><!-- Extra head content injected by child layouts (e.g. JSON-LD, article meta) -->  <meta property="og:type" content="article"> <meta property="article:published_time" content="2025-06-22T15:16:08.000Z"><meta property="article:modified_time" content="2026-02-12T06:47:41.000Z"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Hexo + GitHub Pages 个人博客搭建 | Shiaoming 的技术博客","image":"https://shiaoming123.github.io/posts/hexo-github-blog-setup/index.png","datePublished":"2025-06-22T15:16:08.000Z","dateModified":"2026-02-12T06:47:41.000Z","author":[{"@type":"Person","name":"Shiaoming","url":"https://github.com/Shiaoming123"}]}</script> <!--
       Inline FOUC-prevention script: sets data-theme on <html> before
       the browser paints. Runs synchronously, no defer/async.
     --><script>
@@ -162,8 +162,40 @@
 	animation-name: astroFadeIn; }</style></head> <body class="bg-background font-app text-foreground selection:bg-accent/75 selection:text-accent-foreground flex min-h-svh flex-col">    <a id="skip-to-content" href="#main-content" class="bg-background text-accent absolute inset-s-16 -top-full z-50 px-3 py-2 backdrop-blur-lg transition-all focus:top-4"> 跳到正文 </a> <header class="app-layout neo-header flex flex-col items-center justify-between sm:flex-row"> <div class="neo-header-bar border-border bg-background relative flex w-full items-baseline justify-between border-b py-4 sm:items-center sm:py-6"> <a href="/" class="absolute py-1 text-xl leading-8 font-semibold whitespace-nowrap sm:static sm:my-auto sm:text-2xl sm:leading-none"> Shiaoming 的技术博客 </a> <nav id="nav-menu" class="flex w-full flex-col items-center sm:ms-2 sm:flex-row sm:justify-end sm:space-x-4 sm:py-0"> <button id="menu-btn" class="focus-outline self-end p-2 sm:hidden" aria-label="打开菜单" aria-expanded="false" aria-controls="menu-items" data-label-open="打开菜单" data-label-close="关闭菜单"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="hidden" viewBox="0 0 24 24" id="close-icon"><path stroke="none" d="M0 0h24v24H0z" /><path d="M18 6 6 18M6 6l12 12" /></svg> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon icon-tabler icons-tabler-outline icon-tabler-menu-deep" viewBox="0 0 24 24" id="menu-icon"><path stroke="none" d="M0 0h24v24H0z" /><path d="M4 6h16M7 12h13M10 18h10" /></svg> </button> <ul id="menu-items" class="[&>li>a]:hover:text-accent mt-4 hidden w-44 grid-cols-2 place-content-center gap-2 sm:mt-0 sm:flex sm:w-auto sm:gap-x-5 sm:gap-y-0 sm:[&>li]:h-8 [&>li>a]:block [&>li>a]:px-4 [&>li>a]:py-3 [&>li>a]:text-center [&>li>a]:font-medium sm:[&>li>a]:px-2 sm:[&>li>a]:py-1"> <li class="col-span-2"> <a href="/posts/" class="active-nav"> 文章 </a> </li> <li class="col-span-2"> <a href="/tags/"> 标签 </a> </li> <li class="col-span-2"> <a href="/categories/"> 分类 </a> </li> <li class="col-span-2"> <a href="/about/"> 关于 </a> </li> <li class="col-span-2"> <a href="/archives/" title="归档" aria-label="归档" class="group inline-flex items-center gap-1 hover:text-accent focus-outline flex size-full justify-center p-3 sm:relative sm:size-8 sm:p-0">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="hidden sm:absolute sm:top-1/2 sm:left-1/2 sm:block sm:size-6 sm:-translate-x-1/2 sm:-translate-y-1/2" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v0a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8M10 12h4" /></svg> <span class="sm:sr-only">归档</span>  </a> </li> <li class="col-span-1 flex items-center justify-center"> <a href="/search/" title="搜索" aria-label="搜索" class="group inline-flex items-center gap-1 hover:text-accent focus-outline relative size-8">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-1/2 left-1/2 size-6 -translate-x-1/2 -translate-y-1/2" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 10a7 7 0 1 0 14 0 7 7 0 1 0-14 0M21 21l-6-6" /></svg> <span class="sr-only">搜索</span>  </a> </li> <li class="col-span-1 flex items-center justify-center"> <button id="theme-btn" class="focus-outline hover:[&>svg]:stroke-accent relative size-12 p-4 sm:size-8" title="切换主题" aria-label="auto" aria-live="polite"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-[50%] left-[50%] translate-[-50%] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M12 3h.393a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 2.992z" /></svg> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-[50%] left-[50%] translate-[-50%] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M14.828 14.828a4 4 0 1 0-5.656-5.656 4 4 0 0 0 5.656 5.656M6.343 17.657l-1.414 1.414M6.343 6.343 4.929 4.929M17.657 6.343l1.414-1.414M17.657 17.657l1.414 1.414M4 12H2M12 4V2M20 12h2M12 20v2" /></svg> </button> </li> </ul> </nav> </div> </header> <script type="module">function c(){const e=document.querySelector("#menu-btn"),t=document.querySelector("#menu-items"),n=document.querySelector("#menu-icon"),s=document.querySelector("#close-icon");if(!e||!t||!n||!s)return;const a=e.dataset.labelOpen??"Open menu",l=e.dataset.labelClose??"Close menu";e.addEventListener("click",()=>{const o=e.getAttribute("aria-expanded")==="true";e.setAttribute("aria-expanded",o?"false":"true"),e.setAttribute("aria-label",o?a:l),t.classList.toggle("hidden"),t.classList.toggle("grid"),n.classList.toggle("hidden"),s.classList.toggle("hidden")})}c();document.addEventListener("astro:after-swap",c);</script> <div class="app-layout flex items-center justify-start"><a id="back-button" href="/" class="group inline-flex items-center gap-1 hover:text-accent focus-outline hover:text-foreground/75 -ms-2 mt-8 mb-2"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 rtl:rotate-180" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="m15 6-6 6 6 6" /></svg><span>返回</span> </a></div><script type="module">function o(){const t=document.querySelector("#back-button"),e=sessionStorage.getItem("backUrl");e&&t&&(t.href=e)}document.addEventListener("astro:page-load",o);o();</script> <main id="main-content" class="app-layout" data-pagefind-body> <h1 style="view-transition-name:hexo-git-hub-pages-u004e2au004ebau00535au005ba2u00642du005efa" class="text-accent inline-block text-2xl font-bold sm:text-3xl"> Hexo + GitHub Pages 个人博客搭建 </h1> <div class="my-2 flex items-center gap-2"> <div class="text-muted-foreground flex items-center gap-x-2"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 min-w-5.5" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M4 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zM16 3v4M8 3v4M4 11h16M7 14h.013M10.01 14h.005M13.01 14h.005M16.015 14h.005M13.015 17h.005M7.01 17h.005M10.01 17h.005" /></svg> <span class="text-sm sm:text-base"> 更新于:
 </span> <time class="text-sm sm:text-base" datetime="2026-02-12T06:47:41.000Z"> 12 Feb, 2026 </time> </div> <span aria-hidden="true" class="text-muted-foreground max-sm:hidden hidden">
 |
-</span>  </div> <article id="article" class="mt-8 w-full app-prose max-w-app prose-pre:bg-(--shiki-light-bg) dark:prose-pre:bg-(--shiki-dark-bg)"> <p>这篇文章记录第一次从零搭建 Hexo + GitHub Pages 个人博客的过程。重点不是复述所有官方步骤，而是把容易踩坑的地方记录下来。</p>
+</span>  </div> <article id="article" class="mt-8 w-full app-prose max-w-app prose-pre:bg-(--shiki-light-bg) dark:prose-pre:bg-(--shiki-dark-bg)"> <p>这篇文章记录第一次从零搭建 Hexo + GitHub Pages 个人博客的过程。它不是官方文档的逐字复述，而是一份面向实操的过程笔记：每一步为什么要做、做完以后怎么验证、遇到问题时先查哪里。</p>
+<p>早期个人博客最重要的不是主题有多复杂，而是先把发布链路跑通。只要能稳定做到“本地写 Markdown -> 生成静态页面 -> 推送 GitHub Pages -> 线上访问”，后续再换主题、加图床、加评论、加搜索都比较可控。</p>
+<h2 id="整体链路">整体链路</h2>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="text"><code><span class="line"><span>Node.js / npm</span></span>
+<span class="line"><span>  -> Hexo CLI</span></span>
+<span class="line"><span>  -> 本地 blog 源码目录</span></span>
+<span class="line"><span>  -> hexo generate 生成 public/</span></span>
+<span class="line"><span>  -> hexo-deployer-git 推送到 GitHub Pages 仓库</span></span>
+<span class="line"><span>  -> https://Shiaoming123.github.io/</span></span></code></pre>
+<p>这里有两个目录概念需要先分清：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>目录</th><th>作用</th><th>是否直接写文章</th></tr></thead><tbody><tr><td>Hexo 源码目录</td><td>保存 <code>_config.yml</code>、主题、Markdown 文章、图片</td><td>是</td></tr><tr><td>GitHub Pages 发布仓</td><td>保存构建后的 HTML/CSS/JS/图片</td><td>否</td></tr></tbody></table>
+<p>当时我还是把 Hexo 发布仓直接当作最终站点使用。现在博客已经迁移到 Astro，但这篇记录仍然有参考价值：它保留了静态博客部署的基本心智模型。</p>
 <h2 id="环境准备">环境准备</h2>
+<p>需要准备四类工具：</p>
 
 
 
@@ -189,97 +221,254 @@
 
 
 
-<table><thead><tr><th>工具</th><th>用途</th></tr></thead><tbody><tr><td>Node.js</td><td>提供 Hexo 运行环境</td></tr><tr><td>Git</td><td>管理源码和部署</td></tr><tr><td>Hexo CLI</td><td>创建、生成、预览博客</td></tr><tr><td>GitHub Pages</td><td>托管静态站点</td></tr></tbody></table>
-<p>检查 Node.js 和 npm：</p>
+
+
+
+
+
+<table><thead><tr><th>工具</th><th>用途</th><th>验证方式</th></tr></thead><tbody><tr><td>Node.js</td><td>提供 Hexo 运行环境</td><td><code>node -v</code></td></tr><tr><td>npm</td><td>安装 Hexo CLI 和依赖</td><td><code>npm -v</code></td></tr><tr><td>Git</td><td>管理源码和部署</td><td><code>git --version</code></td></tr><tr><td>GitHub Pages</td><td>托管静态站点</td><td>访问 <code>username.github.io</code></td></tr></tbody></table>
+<p>先进入 Node.js 官网下载 Windows 安装包。</p>
+<p><img src="/images/legacy/hexo-github-blog-setup/01-node-homepage.png" alt="Node.js 官网下载页面"></p>
+<p>安装流程基本保持默认即可。需要注意的是安装路径：如果你习惯把开发工具集中放在某个盘符，可以在安装向导里修改路径，避免后续找不到 Node 或 npm。路径截图通常会暴露本机用户名或目录结构，公开博客里不建议放原图。</p>
+<p><img src="/images/legacy/hexo-github-blog-setup/02-node-installer-welcome.png" alt="Node.js 安装向导"></p>
+<p>安装向导里会出现是否自动安装额外构建工具的选项。刚开始搭 Hexo 不一定需要，保持默认即可；等以后遇到原生依赖编译问题，再单独处理。</p>
+<p><img src="/images/legacy/hexo-github-blog-setup/04-node-tool-options.png" alt="Node.js 可选工具安装项"></p>
+<p>安装完成后打开 PowerShell，检查 Node 和 npm 是否可用：</p>
 <pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="bash"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">node</span><span style="--shiki-light:#2B5581;--shiki-dark:#82AAFF"> -v</span></span>
 <span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">npm</span><span style="--shiki-light:#2B5581;--shiki-dark:#82AAFF"> -v</span></span></code></pre>
-<p>安装 Hexo CLI：</p>
+<p>如果命令不可用，优先检查三件事：</p>
+<ol>
+<li>Node.js 是否安装成功。</li>
+<li>是否重新打开了一个新的终端窗口。</li>
+<li><code>Path</code> 环境变量里是否包含 Node.js 安装目录。</li>
+</ol>
+<h2 id="安装-hexo-cli">安装 Hexo CLI</h2>
+<p>Hexo CLI 是创建、生成和预览博客的命令行工具。可以直接使用 npm 安装：</p>
 <pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="bash"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">npm</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> install</span><span style="--shiki-light:#2B5581;--shiki-dark:#82AAFF"> -g</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> hexo-cli</span></span></code></pre>
-<h2 id="创建博客项目">创建博客项目</h2>
-<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="bash"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">hexo</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> init</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> blog</span></span>
+<p>如果网络访问 npm 官方源较慢，可以换镜像源。旧环境里我曾经使用过 <code>cnpm</code>：</p>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="bash"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">npm</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> install</span><span style="--shiki-light:#2B5581;--shiki-dark:#82AAFF"> -g</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> cnpm</span><span style="--shiki-light:#2B5581;--shiki-dark:#82AAFF"> --registry=https://registry.npmmirror.com</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">cnpm</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> install</span><span style="--shiki-light:#2B5581;--shiki-dark:#82AAFF"> -g</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> hexo-cli</span></span></code></pre>
+<p>安装完成后检查 Hexo 版本：</p>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="bash"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">hexo</span><span style="--shiki-light:#2B5581;--shiki-dark:#82AAFF"> -v</span></span></code></pre>
+<p>能看到 Hexo、Node、npm 等版本信息，就说明基础环境已经可用。</p>
+<h2 id="初始化博客源码目录">初始化博客源码目录</h2>
+<p>选择一个你能长期维护的目录放博客源码。不要把源码随手放在下载目录或桌面临时文件夹里，否则后续迁移、备份和排错都会很麻烦。</p>
+<p>示例：</p>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="bash"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">mkdir</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> blog</span></span>
 <span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#C5E478;--shiki-dark-font-style:italic">cd</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> blog</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">hexo</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> init</span></span>
 <span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">npm</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> install</span></span></code></pre>
-<p>本地启动预览：</p>
+<p>初始化完成后，目录里会生成 Hexo 所需的基础文件。由于终端截图通常会带出本机路径，公开文章里直接列目录结构更清晰：</p>
+<p>核心文件说明如下：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>文件或目录</th><th>作用</th></tr></thead><tbody><tr><td><code>_config.yml</code></td><td>Hexo 主配置</td></tr><tr><td><code>package.json</code></td><td>npm 依赖和脚本</td></tr><tr><td><code>source/_posts</code></td><td>Markdown 文章目录</td></tr><tr><td><code>themes</code></td><td>主题目录</td></tr><tr><td><code>public</code></td><td>构建输出目录，生成后出现</td></tr></tbody></table>
+<p>本地预览：</p>
 <pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="bash"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">hexo</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> clean</span></span>
 <span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">hexo</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> generate</span></span>
 <span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">hexo</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> server</span></span></code></pre>
-<p>浏览器打开 <code>http://localhost:4000</code>，能看到页面说明本地生成正常。</p>
-<h2 id="github-pages-仓库">GitHub Pages 仓库</h2>
-<p>用户站仓库命名格式是：</p>
+<p>浏览器打开 <code>http://localhost:4000/</code>，如果看到默认页面，就说明本地生成和预览链路正常。</p>
+<p><img src="/images/legacy/hexo-github-blog-setup/10-hexo-local-preview.png" alt="Hexo 默认本地预览页面"></p>
+<p>常用命令可以记成下面这组：</p>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="bash"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">hexo</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> clean</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic">      # 清理缓存和旧产物</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">hexo</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> generate</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic">   # 生成静态文件，可简写为 hexo g</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">hexo</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> server</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic">     # 本地预览，可简写为 hexo s</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">hexo</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> deploy</span><span style="--shiki-light:#C2C3C5;--shiki-light-font-style:inherit;--shiki-dark:#637777;--shiki-dark-font-style:italic">     # 部署到远程，可简写为 hexo d</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">hexo</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> new</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> post</span><span style="--shiki-light:#22863A;--shiki-dark:#D9F5DD"> "</span><span style="--shiki-light:#22863A;--shiki-dark:#ECC48D">文章标题</span><span style="--shiki-light:#22863A;--shiki-dark:#D9F5DD">"</span></span></code></pre>
+<p><img src="/images/legacy/hexo-github-blog-setup/11-hexo-command-reference.png" alt="Hexo 常用命令帮助信息"></p>
+<h2 id="创建第一篇文章">创建第一篇文章</h2>
+<p>推荐用 Hexo 命令创建文章，而不是手写空 Markdown 文件。这样 frontmatter 更稳定：</p>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="bash"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">hexo</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> new</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> post</span><span style="--shiki-light:#22863A;--shiki-dark:#D9F5DD"> "</span><span style="--shiki-light:#22863A;--shiki-dark:#ECC48D">我的第一篇博客文章</span><span style="--shiki-light:#22863A;--shiki-dark:#D9F5DD">"</span></span></code></pre>
+<p>文章会生成在：</p>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="text"><code><span class="line"><span>source/_posts/</span></span></code></pre>
+<p>一篇基础文章通常长这样：</p>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="md"><code><span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">---</span></span>
+<span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">title</span><span style="--shiki-light:#D32F2F;--shiki-dark:#D6DEEB">:</span><span style="--shiki-light:#22863A;--shiki-dark:#ECC48D"> 我的第一篇博客文章</span></span>
+<span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">date</span><span style="--shiki-light:#D32F2F;--shiki-dark:#D6DEEB">:</span><span style="--shiki-light:#24292EFF;--shiki-dark:#82AAFF"> 2025-06-22 18:00:00</span></span>
+<span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">tags</span><span style="--shiki-light:#D32F2F;--shiki-dark:#D6DEEB">:</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">  - </span><span style="--shiki-light:#22863A;--shiki-dark:#ECC48D">Hexo</span></span>
+<span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">categories</span><span style="--shiki-light:#D32F2F;--shiki-dark:#D6DEEB">:</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">  - </span><span style="--shiki-light:#22863A;--shiki-dark:#ECC48D">博客建设</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">---</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB">这里写正文。</span></span></code></pre>
+<p>写完后重新执行：</p>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="bash"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">hexo</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> clean</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">hexo</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> generate</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">hexo</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> server</span></span></code></pre>
+<p>如果本地能看到新文章，再进入部署环节。这个顺序很重要：先本地验证，再推线上，能节省很多排错时间。</p>
+<h2 id="创建-github-pages-仓库">创建 GitHub Pages 仓库</h2>
+<p>用户站点仓库命名格式是：</p>
 <pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="text"><code><span class="line"><span>&#x3C;username>.github.io</span></span></code></pre>
 <p>例如：</p>
 <pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="text"><code><span class="line"><span>Shiaoming123.github.io</span></span></code></pre>
-<p>这个仓库的 <code>main</code> 分支通常直接作为静态站发布源。也就是说，最终进入这个仓库的应该是 HTML、CSS、JS、图片等构建产物，而不是随手修改的临时页面。</p>
-<h2 id="配置部署">配置部署</h2>
+<p><img src="/images/legacy/hexo-github-blog-setup/13-github-new-repo.png" alt="GitHub 创建新仓库"></p>
+<p>仓库创建后，GitHub Pages 会把这个仓库的指定分支作为静态站点来源。用户站点通常直接使用 <code>main</code> 分支根目录。</p>
+<p><img src="/images/legacy/hexo-github-blog-setup/14-github-repo-created.png" alt="GitHub Pages 仓库创建完成"></p>
+<p>这一步最常见的问题是仓库名写错。用户站点必须严格匹配 <code>username.github.io</code>，大小写虽然在 URL 上通常不敏感，但仓库名最好保持一致。</p>
+<h2 id="配置-hexo-部署">配置 Hexo 部署</h2>
 <p>安装部署插件：</p>
 <pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="bash"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">npm</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> install</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> hexo-deployer-git</span><span style="--shiki-light:#2B5581;--shiki-dark:#82AAFF"> --save</span></span></code></pre>
-<p>在 <code>_config.yml</code> 中配置：</p>
+<p>然后编辑 <code>_config.yml</code> 末尾的 <code>deploy</code> 配置：</p>
 <pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="yaml"><code><span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">deploy</span><span style="--shiki-light:#D32F2F;--shiki-dark:#D6DEEB">:</span></span>
 <span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">  type</span><span style="--shiki-light:#D32F2F;--shiki-dark:#D6DEEB">:</span><span style="--shiki-light:#22863A;--shiki-dark:#ECC48D"> git</span></span>
 <span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">  repo</span><span style="--shiki-light:#D32F2F;--shiki-dark:#D6DEEB">:</span><span style="--shiki-light:#22863A;--shiki-dark:#ECC48D"> git@github.com:Shiaoming123/Shiaoming123.github.io.git</span></span>
 <span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">  branch</span><span style="--shiki-light:#D32F2F;--shiki-dark:#D6DEEB">:</span><span style="--shiki-light:#22863A;--shiki-dark:#ECC48D"> main</span></span></code></pre>
-<p>发布命令：</p>
+<p><img src="/images/legacy/hexo-github-blog-setup/12-hexo-deploy-config.png" alt="Hexo 部署配置示意"></p>
+<p><img src="/images/legacy/hexo-github-blog-setup/15-deploy-config-edit.png" alt="在配置文件中填写 deploy 字段"></p>
+<p>配置完成后执行：</p>
 <pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="bash"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">hexo</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> clean</span></span>
 <span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">hexo</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> generate</span></span>
 <span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">hexo</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> deploy</span></span></code></pre>
-<h2 id="主题切换">主题切换</h2>
-<p>早期可以尝试 yilia、NexT、Butterfly 等主题。切换主题前要先确认主题和 Hexo 版本兼容。</p>
+<p>如果使用 SSH 地址，必须提前配置好 GitHub SSH key。第一次部署失败时，先看错误信息属于哪一类：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>错误表现</th><th>常见原因</th><th>处理方向</th></tr></thead><tbody><tr><td><code>Permission denied (publickey)</code></td><td>SSH key 未配置或未加入 GitHub</td><td>重新生成并添加 SSH key</td></tr><tr><td><code>unable to auto-detect email address</code></td><td>Git 用户名邮箱未配置</td><td>设置 <code>git config --global user.email</code></td></tr><tr><td>页面没有更新</td><td>deploy 没推成功或 Pages 延迟</td><td>看发布仓 commit 和 Pages 状态</td></tr><tr><td>图片不显示</td><td>图片没提交、路径错误、图床不可访问</td><td>检查文件是否真的存在</td></tr></tbody></table>
+<h2 id="切换主题">切换主题</h2>
+<p>Hexo 默认主题只适合验证流程。等部署链路跑通后，可以再换主题。早期常见选择有 yilia、NexT、Butterfly 等。</p>
+<p><img src="/images/legacy/hexo-github-blog-setup/16-theme-gallery.png" alt="Hexo 主题效果参考"></p>
 <p>以 yilia 为例：</p>
 <pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="bash"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">git</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> clone</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> https://github.com/litten/hexo-theme-yilia.git</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> themes/yilia</span></span></code></pre>
 <p>然后修改 <code>_config.yml</code>：</p>
 <pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="yaml"><code><span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">theme</span><span style="--shiki-light:#D32F2F;--shiki-dark:#D6DEEB">:</span><span style="--shiki-light:#22863A;--shiki-dark:#ECC48D"> yilia</span></span></code></pre>
-<p>切换主题后重新生成：</p>
+<p>主题切换后重新生成：</p>
 <pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="bash"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">hexo</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> clean</span></span>
 <span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">hexo</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> generate</span></span>
 <span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">hexo</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> server</span></span></code></pre>
-<h2 id="图片管理">图片管理</h2>
-<p>博客图片可以走本地目录，也可以走图床。为了迁移和备份更稳定，建议优先保证本地源码里有一份可用图片。</p>
-<p>如果使用 GitHub 图床，PicGo 配置里通常需要：</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>配置项</th><th>说明</th></tr></thead><tbody><tr><td>仓库名</td><td>例如 <code>Shiaoming123/Picgo_image</code></td></tr><tr><td>分支名</td><td>通常是 <code>main</code></td></tr><tr><td>存储路径</td><td>例如 <code>img/</code></td></tr><tr><td>自定义域名</td><td>可使用 raw 链接或 CDN</td></tr></tbody></table>
-<p>不要把 token 写进文章或仓库。文章里只记录配置项含义，不保存真实密钥。</p>
-<blockquote><p>迁移说明：旧版 Hexo 页面曾引用 PicGo 图床中的多张安装截图，但当前这些 GitHub raw 图片链接已经返回 404，本地发布仓也没有保存对应图片文件。因此本次迁移没有把失效截图重新写回文章，只保留可验证的流程、命令和配置。后续如果找回原始 Markdown 或图片目录，可以按小节把截图补回。</p></blockquote>
-<h2 id="常见问题">常见问题</h2>
-<h3 id="部署后页面没更新">部署后页面没更新</h3>
-<p>先检查 GitHub Pages 仓库是否有新 commit，再等待 Pages 刷新。如果本地生成正常但线上没变，通常是 deploy 没有推送成功。</p>
-<h3 id="图片在线上不显示">图片在线上不显示</h3>
-<p>检查三件事：</p>
+<p>主题配置经常会出现“改了但没生效”的情况。排查顺序是：</p>
 <ol>
-<li>图片文件是否已提交或上传</li>
-<li>Markdown 里的路径是否和部署后的路径一致</li>
-<li>图片链接是否需要 URL 编码</li>
+<li>确认改的是 Hexo 根目录的 <code>_config.yml</code>，不是主题目录里的配置。</li>
+<li>执行过 <code>hexo clean</code>。</li>
+<li>本地预览是否已经重启。</li>
+<li>主题版本是否和当前 Hexo 版本兼容。</li>
 </ol>
-<h3 id="主题配置不生效">主题配置不生效</h3>
-<p>先执行清理再生成：</p>
+<h2 id="图片管理和-picgo">图片管理和 PicGo</h2>
+<p>技术博客一旦开始写教程，图片管理就会变成长期问题。图片可以放在本地源码里，也可以放图床。早期我使用 PicGo + GitHub 仓库做图床。</p>
+<p><img src="/images/legacy/hexo-github-blog-setup/18-picgo-homepage.png" alt="PicGo 官网"></p>
+<p><img src="/images/legacy/hexo-github-blog-setup/19-picgo-download.png" alt="PicGo 下载页面"></p>
+<p>PicGo 配置 GitHub 图床时通常需要这些字段：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>配置项</th><th>说明</th></tr></thead><tbody><tr><td>仓库名</td><td>例如 <code>Shiaoming123/Picgo_image</code></td></tr><tr><td>分支名</td><td>通常是 <code>main</code></td></tr><tr><td>存储路径</td><td>例如 <code>img/</code></td></tr><tr><td>自定义域名</td><td>可使用 raw 链接或 CDN</td></tr><tr><td>token</td><td>只保存在本地配置，不写进文章</td></tr></tbody></table>
+<p>这里有一个很重要的经验：图床不是备份。图床链接一旦权限变化、仓库改私有、CDN 规则变化，公开文章里的图片就会失效。更稳妥的方式是：</p>
+<ol>
+<li>原图保留在博客源码或可备份目录。</li>
+<li>公开文章优先引用本地构建资产。</li>
+<li>图床只作为分发层，不作为唯一存储。</li>
+</ol>
+<p>这次博客迁移时就遇到了这个问题：旧文章引用的 PicGo raw 链接公网返回 404，但图片本身还在 <code>Picgo_image</code> 仓库里。最终的修复方式是把确认安全的截图复制回博客源码 <code>public/images/legacy/hexo-github-blog-setup/</code>，让页面不再依赖私有图床外链。</p>
+<h2 id="发布前检查清单">发布前检查清单</h2>
+<p>每次发布前可以按这个顺序检查：</p>
 <pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="bash"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">hexo</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> clean</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">hexo</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> generate</span></span></code></pre>
-<p>如果仍不生效，再检查主题配置文件和 Hexo 主配置是否写在正确位置。</p>
-<h2 id="迁移备注">迁移备注</h2>
-<p>旧版文章包含大量截图和环境细节。本次迁移保留搭建流程、命令和关键配置，删除了旧主题 footer 和错乱的行号文本。</p> </article> <hr class="my-8 border-dashed">  <div id="btt-btn-container" class="fixed inset-e-4 bottom-8 z-50 md:sticky md:inset-e-auto md:float-end md:me-1 translate-y-14 opacity-0 transition duration-500"> <button data-button="back-to-top" class="group bg-background relative px-2 py-1 size-14 rounded-full shadow-xl md:h-8 md:w-fit md:rounded-md md:shadow-none md:focus-visible:rounded-none md:bg-background/35 md:bg-clip-padding md:backdrop-blur-lg"> <span id="progress-indicator" class="absolute inset-0 -z-10 block size-14 scale-110 rounded-full bg-transparent md:hidden md:h-8 md:rounded-md"></span> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block rotate-90 md:hidden" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M5 12h14M5 12l6 6M5 12l6-6" /></svg> <span class="group-hover:text-accent sr-only text-sm md:not-sr-only"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-4" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M12 5v14M16 9l-4-4M8 9l4-4" /></svg> 回到顶部 </span> </button> </div> <script data-astro-rerun>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">hexo</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> generate</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-style:inherit;--shiki-dark:#82AAFF;--shiki-dark-font-style:italic">hexo</span><span style="--shiki-light:#2B5581;--shiki-dark:#ECC48D"> server</span></span></code></pre>
+<p>本地确认：</p>
+<ul>
+<li>首页能打开。</li>
+<li>新文章出现在列表里。</li>
+<li>文章标题、目录、代码块、表格正常。</li>
+<li>图片不是破图。</li>
+<li>外链能打开。</li>
+<li>没有把 token、私钥、账号敏感信息截图发出去。</li>
+</ul>
+<p>线上确认：</p>
+<ul>
+<li>发布仓出现新 commit。</li>
+<li><code>https://Shiaoming123.github.io/</code> 能看到更新。</li>
+<li>文章 URL 能直接打开。</li>
+<li>RSS、sitemap、搜索索引能生成。</li>
+</ul>
+<h2 id="迁移后的复盘">迁移后的复盘</h2>
+<p>Hexo 适合快速建立静态博客，但随着内容变多，长期维护会遇到几个问题：</p>
+<ul>
+<li>主题和插件版本容易老化。</li>
+<li>生成 HTML 不适合作为长期编辑源。</li>
+<li>图片如果依赖外链，迁移时容易断。</li>
+<li>文章 frontmatter、标签、分类需要统一规范。</li>
+</ul>
+<p>这也是后来把博客迁移到 Astro 源码站点的原因：Markdown、内容集合、构建校验和静态部署链路更清晰。Hexo 这篇文章保留的是第一次搭建博客的完整过程，也提醒自己：发布链路可以简单，但源码、图片和内容结构必须从一开始就可维护。</p> </article> <hr class="my-8 border-dashed">  <div id="btt-btn-container" class="fixed inset-e-4 bottom-8 z-50 md:sticky md:inset-e-auto md:float-end md:me-1 translate-y-14 opacity-0 transition duration-500"> <button data-button="back-to-top" class="group bg-background relative px-2 py-1 size-14 rounded-full shadow-xl md:h-8 md:w-fit md:rounded-md md:shadow-none md:focus-visible:rounded-none md:bg-background/35 md:bg-clip-padding md:backdrop-blur-lg"> <span id="progress-indicator" class="absolute inset-0 -z-10 block size-14 scale-110 rounded-full bg-transparent md:hidden md:h-8 md:rounded-md"></span> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block rotate-90 md:hidden" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M5 12h14M5 12l6 6M5 12l6-6" /></svg> <span class="group-hover:text-accent sr-only text-sm md:not-sr-only"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-4" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M12 5v14M16 9l-4-4M8 9l4-4" /></svg> 回到顶部 </span> </button> </div> <script data-astro-rerun>
   function backToTop() {
     const rootElement = document.documentElement;
     const btnContainer = document.querySelector("#btt-btn-container");

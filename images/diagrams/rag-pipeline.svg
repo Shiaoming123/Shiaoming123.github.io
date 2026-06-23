@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">RAG pipeline</title>
+  <desc id="desc">A retrieval augmented generation pipeline from documents to embeddings to retrieval to answer.</desc>
+  <rect width="1200" height="560" rx="28" fill="#f8fafc"/>
+  <text x="70" y="76" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#111827">RAG 检索增强生成流程</text>
+  <g transform="translate(70 160)" font-family="Arial, sans-serif" font-size="18" fill="#1f2937">
+    <rect x="0" y="0" width="170" height="80" rx="14" fill="#dbeafe" stroke="#60a5fa"/>
+    <text x="44" y="48">原始文档</text>
+    <rect x="235" y="0" width="170" height="80" rx="14" fill="#e0f2fe" stroke="#38bdf8"/>
+    <text x="274" y="48">切片清洗</text>
+    <rect x="470" y="0" width="170" height="80" rx="14" fill="#ccfbf1" stroke="#2dd4bf"/>
+    <text x="510" y="48">向量入库</text>
+    <rect x="705" y="0" width="170" height="80" rx="14" fill="#fef3c7" stroke="#f59e0b"/>
+    <text x="742" y="48">召回精排</text>
+    <rect x="940" y="0" width="170" height="80" rx="14" fill="#ede9fe" stroke="#8b5cf6"/>
+    <text x="982" y="48">生成回答</text>
+    <path d="M176 40h52M411 40h52M646 40h52M881 40h52" stroke="#475569" stroke-width="4" marker-end="url(#arrow)"/>
+    <rect x="705" y="150" width="405" height="100" rx="16" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="735" y="190" font-size="20" font-weight="700" fill="#111827">关键风险</text>
+    <text x="735" y="222" fill="#475569">检索不到、召回噪声、引用缺上下文、知识不积累。</text>
+    <path d="M790 87v56" stroke="#475569" stroke-width="3" marker-end="url(#arrow)"/>
+  </g>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#475569"/>
+    </marker>
+  </defs>
+</svg>

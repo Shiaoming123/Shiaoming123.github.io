@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">Static blog visibility states</title>
+  <desc id="desc">A visibility state model for public, private, and password gated static blog posts.</desc>
+  <rect width="1200" height="560" rx="28" fill="#f8fafc"/>
+  <text x="70" y="76" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#111827">静态博客文章可见性模型</text>
+  <g transform="translate(100 150)" font-family="Arial, sans-serif">
+    <rect x="0" y="0" width="280" height="250" rx="20" fill="#ecfdf5" stroke="#34d399"/>
+    <text x="42" y="58" font-size="28" font-weight="700" fill="#065f46">public</text>
+    <text x="42" y="105" font-size="18" fill="#064e3b">进入首页、归档、标签、搜索和 sitemap。</text>
+    <text x="42" y="155" font-size="16" fill="#047857">适合公开技术文章。</text>
+    <rect x="360" y="0" width="280" height="250" rx="20" fill="#fff7ed" stroke="#fb923c"/>
+    <text x="402" y="58" font-size="28" font-weight="700" fill="#9a3412">private</text>
+    <text x="402" y="105" font-size="18" fill="#7c2d12">只保留在源码，不生成公开入口。</text>
+    <text x="402" y="155" font-size="16" fill="#c2410c">适合草稿和私人笔记。</text>
+    <rect x="720" y="0" width="280" height="250" rx="20" fill="#eef2ff" stroke="#818cf8"/>
+    <text x="762" y="58" font-size="28" font-weight="700" fill="#3730a3">password</text>
+    <text x="762" y="105" font-size="18" fill="#4338ca">可生成入口，但正文由前端门禁遮挡。</text>
+    <text x="762" y="155" font-size="16" fill="#4f46e5">只能算轻量提示，不是强安全。</text>
+  </g>
+</svg>

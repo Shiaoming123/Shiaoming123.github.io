@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+  <title id="title">Cherry Studio workflow</title>
+  <desc id="desc">Cherry Studio connects models, knowledge bases, prompts, and MCP tools.</desc>
+  <rect width="1200" height="600" rx="28" fill="#f8fafc"/>
+  <text x="70" y="76" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#111827">Cherry Studio 工作流定位</text>
+  <rect x="450" y="210" width="300" height="140" rx="24" fill="#111827"/>
+  <text x="512" y="288" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">Cherry Studio</text>
+  <g font-family="Arial, sans-serif" font-size="18" fill="#334155">
+    <rect x="80" y="150" width="260" height="84" rx="16" fill="#dbeafe" stroke="#60a5fa"/>
+    <text x="145" y="200">模型服务商</text>
+    <rect x="80" y="360" width="260" height="84" rx="16" fill="#ecfdf5" stroke="#34d399"/>
+    <text x="142" y="410">本地知识库</text>
+    <rect x="860" y="150" width="260" height="84" rx="16" fill="#fef3c7" stroke="#f59e0b"/>
+    <text x="938" y="200">助手模板</text>
+    <rect x="860" y="360" width="260" height="84" rx="16" fill="#ede9fe" stroke="#8b5cf6"/>
+    <text x="952" y="410">MCP 工具</text>
+  </g>
+  <g stroke="#475569" stroke-width="4" fill="none" marker-end="url(#arrow)">
+    <path d="M345 192h94"/>
+    <path d="M345 402h94"/>
+    <path d="M756 192h94"/>
+    <path d="M756 402h94"/>
+  </g>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#475569"/>
+    </marker>
+  </defs>
+</svg>
