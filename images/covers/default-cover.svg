@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">世傲命的技术博客默认封面</title>
+  <desc id="desc">A quiet technical archive cover with grid, dots, and accent lines.</desc>
+  <rect width="1200" height="675" fill="#fdfdfd"/>
+  <path d="M0 104h1200M0 208h1200M0 312h1200M0 416h1200M0 520h1200M0 624h1200M96 0v675M192 0v675M288 0v675M384 0v675M480 0v675M576 0v675M672 0v675M768 0v675M864 0v675M960 0v675M1056 0v675" stroke="#ece9e9" stroke-width="1"/>
+  <circle cx="226" cy="192" r="5" fill="#006cac"/>
+  <circle cx="386" cy="312" r="4" fill="#006cac" opacity=".72"/>
+  <circle cx="672" cy="208" r="6" fill="#006cac" opacity=".55"/>
+  <circle cx="936" cy="420" r="5" fill="#006cac" opacity=".7"/>
+  <path d="M226 192C352 268 470 332 672 208c130-80 204 46 264 212" fill="none" stroke="#006cac" stroke-width="5" stroke-linecap="round"/>
+  <rect x="96" y="472" width="454" height="2" fill="#282728" opacity=".35"/>
+  <text x="96" y="540" fill="#282728" font-family="monospace" font-size="44" font-weight="700">Technical Archive</text>
+  <text x="96" y="590" fill="#6b7280" font-family="monospace" font-size="24">Shiaoming123.github.io</text>
+</svg>
