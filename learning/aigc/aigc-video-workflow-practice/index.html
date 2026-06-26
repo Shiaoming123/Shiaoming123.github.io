@@ -1,0 +1,281 @@
+<!DOCTYPE html><html dir="ltr" lang="zh-CN" class="overflow-y-scroll scroll-smooth"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="canonical" href="https://shiaoming123.github.io/learning/aigc/aigc-video-workflow-practice/"><meta name="generator" content="Astro v6.4.8"><!-- Font --><style>@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/02154cca78ac33f2.woff") format("woff"), url("/_astro/fonts/478e42e4694872ef.ttf") format("truetype");font-display:swap;font-weight:300;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/3a32a7a7a67f4f58.woff") format("woff"), url("/_astro/fonts/0863f4f6964aa89c.ttf") format("truetype");font-display:swap;font-weight:400;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/a5c5808c25effec9.woff") format("woff"), url("/_astro/fonts/792eded6cb3f0350.ttf") format("truetype");font-display:swap;font-weight:500;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/14314705006234cb.woff") format("woff"), url("/_astro/fonts/87d8fc1072d4917b.ttf") format("truetype");font-display:swap;font-weight:600;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/c33265ba093eb291.woff") format("woff"), url("/_astro/fonts/ec883ed4db81a7d9.ttf") format("truetype");font-display:swap;font-weight:700;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/c26ad40d3b1d9169.woff") format("woff"), url("/_astro/fonts/7a5ee0cfcde31b81.ttf") format("truetype");font-display:swap;font-weight:300;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/87ca066ba5b2c7cf.woff") format("woff"), url("/_astro/fonts/f4e25dfe9d6152ec.ttf") format("truetype");font-display:swap;font-weight:400;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/a9a0e80c053be3d5.woff") format("woff"), url("/_astro/fonts/a9df48ecd03749e4.ttf") format("truetype");font-display:swap;font-weight:500;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/da468df88542c99b.woff") format("woff"), url("/_astro/fonts/90f9809471092714.ttf") format("truetype");font-display:swap;font-weight:600;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/f914de358bc554f6.woff") format("woff"), url("/_astro/fonts/dbc9996f99c63e07.ttf") format("truetype");font-display:swap;font-weight:700;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:300;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:400;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:500;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:600;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:700;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:300;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:400;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:500;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:600;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:700;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}:root{--font-google-sans-code:"Google Sans Code-1a30c214885cb404","Google Sans Code-1a30c214885cb404 fallback: Courier New",monospace;}</style><!-- Primary meta --><title>AIGC 视频创作工作流与练习 | 世傲命的技术博客</title><meta name="title" content="AIGC 视频创作工作流与练习 | 世傲命的技术博客"><meta name="description" content="每一轮只追求一个进步点："><meta name="author" content="世傲命"><link rel="sitemap" href="/sitemap.xml"><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:site_name" content="世傲命的技术博客"><meta property="og:title" content="AIGC 视频创作工作流与练习 | 世傲命的技术博客"><meta property="og:description" content="每一轮只追求一个进步点："><meta property="og:url" content="https://shiaoming123.github.io/learning/aigc/aigc-video-workflow-practice/"><meta property="og:image" content="https://shiaoming123.github.io/default-og.jpg"><!-- Twitter / X --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://shiaoming123.github.io/learning/aigc/aigc-video-workflow-practice/"><meta property="twitter:title" content="AIGC 视频创作工作流与练习 | 世傲命的技术博客"><meta property="twitter:description" content="每一轮只追求一个进步点："><meta property="twitter:image" content="https://shiaoming123.github.io/default-og.jpg"><!-- RSS autodiscovery --><link rel="alternate" type="application/rss+xml" title="世傲命的技术博客" href="https://shiaoming123.github.io/rss.xml/"><!-- Filled at runtime by theme.ts to match the current background colour --><meta name="theme-color" content=""><!-- Extra head content injected by child layouts (e.g. JSON-LD, article meta) -->  <meta property="og:type" content="article"> <meta property="article:published_time" content="2026-06-15T00:00:00.000Z"><meta property="article:modified_time" content="2026-06-15T00:00:00.000Z"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"AIGC 视频创作工作流与练习 | 世傲命的技术博客","datePublished":"2026-06-15T00:00:00.000Z","dateModified":"2026-06-15T00:00:00.000Z","author":[{"@type":"Person","name":"世傲命","url":"https://github.com/Shiaoming123"}]}</script> <!--
+      Inline FOUC-prevention script: sets data-theme on <html> before
+      the browser paints. Runs synchronously, no defer/async.
+    --><script>
+      (function () {
+        const stored = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        const theme = stored ?? (prefersDark ? "dark" : "light");
+        const root = document.firstElementChild;
+        root?.setAttribute("data-theme", theme);
+        root?.classList.toggle("dark", theme === "dark");
+        // Expose value so theme.ts can skip re-detection.
+        window.__theme = { value: theme };
+      })();
+    </script><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CAqDO0tx.js"></script><link rel="stylesheet" href="/_astro/Footer.DpZjZP1M.css"></head> <body class="bg-background font-app text-foreground selection:bg-accent/75 selection:text-accent-foreground flex min-h-svh flex-col"> <div class="scroll-progress" aria-hidden="true"></div>    <a id="skip-to-content" href="#main-content" class="bg-background text-accent absolute inset-s-16 -top-full z-50 px-3 py-2 backdrop-blur-lg transition-all focus:top-4"> 跳到正文 </a> <header class="app-layout neo-header flex flex-col items-center justify-between sm:flex-row"> <div class="neo-header-bar relative flex w-full items-baseline justify-between py-4 sm:items-center sm:py-5"> <a href="/" class="absolute py-1 text-xl leading-8 font-semibold whitespace-nowrap sm:static sm:my-auto sm:text-2xl sm:leading-none"> 世傲命的技术博客 </a> <nav id="nav-menu" class="flex w-full flex-col items-center sm:ms-2 sm:flex-row sm:justify-end sm:space-x-4 sm:py-0"> <button id="menu-btn" class="focus-outline self-end p-2 sm:hidden" aria-label="打开菜单" aria-expanded="false" aria-controls="menu-items" data-label-open="打开菜单" data-label-close="关闭菜单"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="hidden" viewBox="0 0 24 24" id="close-icon"><path stroke="none" d="M0 0h24v24H0z" /><path d="M18 6 6 18M6 6l12 12" /></svg> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon icon-tabler icons-tabler-outline icon-tabler-menu-deep" viewBox="0 0 24 24" id="menu-icon"><path stroke="none" d="M0 0h24v24H0z" /><path d="M4 6h16M7 12h13M10 18h10" /></svg> </button> <ul id="menu-items" class="neo-nav-list mt-4 hidden w-44 grid-cols-2 place-content-center gap-2 sm:mt-0 sm:flex sm:w-auto"> <li class="col-span-2"> <a href="/posts/"> 文章 </a> </li> <li class="col-span-2"> <a href="/learning/" class="active-nav"> 学习 </a> </li> <li class="col-span-2"> <a href="/demos/"> 演示 </a> </li> <li class="col-span-2"> <a href="/tags/"> 标签 </a> </li> <li class="col-span-2"> <a href="/categories/"> 分类 </a> </li> <li class="col-span-2"> <a href="/about/"> 关于 </a> </li> <li class="col-span-2"> <a href="/changelog/"> 日志 </a> </li> <li class="neo-nav-icon col-span-2"> <a href="/archives/" title="归档" aria-label="归档" class="group inline-flex items-center gap-1 hover:text-accent focus-outline flex size-full justify-center p-3 sm:relative sm:size-9 sm:p-0">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="hidden sm:absolute sm:top-1/2 sm:left-1/2 sm:block sm:size-6 sm:-translate-x-1/2 sm:-translate-y-1/2" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v0a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8M10 12h4" /></svg> <span class="sm:sr-only">归档</span>  </a> </li> <li class="neo-nav-icon col-span-1 flex items-center justify-center"> <a href="/search/" title="搜索" aria-label="搜索" class="group inline-flex items-center gap-1 hover:text-accent focus-outline relative size-9">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-1/2 left-1/2 size-6 -translate-x-1/2 -translate-y-1/2" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 10a7 7 0 1 0 14 0 7 7 0 1 0-14 0M21 21l-6-6" /></svg> <span class="sr-only">搜索</span>  </a> </li> <li class="neo-nav-icon col-span-1 flex items-center justify-center"> <button id="theme-btn" class="focus-outline hover:[&>svg]:stroke-accent relative size-12 p-4 sm:size-9" title="切换主题" aria-label="auto" aria-live="polite"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-[50%] left-[50%] translate-[-50%] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M12 3h.393a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 2.992z" /></svg> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-[50%] left-[50%] translate-[-50%] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M14.828 14.828a4 4 0 1 0-5.656-5.656 4 4 0 0 0 5.656 5.656M6.343 17.657l-1.414 1.414M6.343 6.343 4.929 4.929M17.657 6.343l1.414-1.414M17.657 17.657l1.414 1.414M4 12H2M12 4V2M20 12h2M12 20v2" /></svg> </button> </li> </ul> </nav> </div> </header> <script type="module">function c(){const e=document.querySelector("#menu-btn"),t=document.querySelector("#menu-items"),n=document.querySelector("#menu-icon"),s=document.querySelector("#close-icon");if(!e||!t||!n||!s)return;const a=e.dataset.labelOpen??"Open menu",l=e.dataset.labelClose??"Close menu";e.addEventListener("click",()=>{const o=e.getAttribute("aria-expanded")==="true";e.setAttribute("aria-expanded",o?"false":"true"),e.setAttribute("aria-label",o?a:l),t.classList.toggle("hidden"),t.classList.toggle("grid"),n.classList.toggle("hidden"),s.classList.toggle("hidden")})}c();document.addEventListener("astro:after-swap",c);</script> <nav class="app-layout mt-8 mb-1" aria-label="breadcrumb"> <ul class="font-light [&>li]:inline [&>li:not(:last-child)>a]:hover:opacity-100"> <li> <a href="/" class="opacity-80"> 首页 </a> <span aria-hidden="true" class="opacity-80">&raquo;</span> </li> <li> <a href="/learning/" class="capitalize opacity-70"> 学习 </a> <span aria-hidden="true" class="opacity-70">
+&raquo;
+</span> </li><li> <a href="/learning/aigc/" class="capitalize opacity-70"> aigc </a> <span aria-hidden="true" class="opacity-70">
+&raquo;
+</span> </li><li> <span class="capitalize opacity-75 lowercase" aria-current="page">  aigc-video-workflow-practice </span> </li> </ul> </nav> <main id="main-content" class="app-layout learning-article" data-pagefind-body> <p class="learning-eyebrow">AIGC 创作</p> <h1 class="text-accent inline-block text-2xl font-bold sm:text-3xl"> AIGC 视频创作工作流与练习 </h1> <div class="my-2 flex flex-wrap items-center gap-2"> <div class="text-muted-foreground flex items-center gap-x-2"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 min-w-5.5" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M4 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zM16 3v4M8 3v4M4 11h16M7 14h.013M10.01 14h.005M13.01 14h.005M16.015 14h.005M13.015 17h.005M7.01 17h.005M10.01 17h.005" /></svg>  <time class="text-sm sm:text-base" datetime="2026-06-15T00:00:00.000Z"> 15 Jun, 2026 </time> </div> <span class="learning-source">来源：wiki/courses/aigc/AIGC视频创作工作流与练习.md</span> </div> <article id="article" class="mt-8 w-full app-prose max-w-app prose-pre:bg-(--shiki-light-bg) dark:prose-pre:bg-(--shiki-dark-bg)"> <h2 id="这篇适合谁读">这篇适合谁读</h2>
+<p>这篇适合想系统学习 AIGC 视频创作的人阅读。重点不是堆提示词，而是把来源治理、分镜结构、镜头语言、版权边界和可复用工作流整理成可练习的方法。</p>
+<h2 id="总流程">总流程</h2>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="text"><code><span class="line"><span>想法 -> 风格锚点 -> 角色/场景设定 -> 分镜 prompt -> 生成抽卡 -> 筛选 -> 剪辑调色 -> 复盘记录</span></span></code></pre>
+<p>每一轮只追求一个进步点：</p>
+<ul>
+<li>第一轮：画面不塑料。</li>
+<li>第二轮：动作有因果。</li>
+<li>第三轮：镜头能接上。</li>
+<li>第四轮：声音和剪辑节奏能服务故事。</li>
+</ul>
+<h2 id="工作流-1从想法到分镜">工作流 1：从想法到分镜</h2>
+<h3 id="1-写一句故事种子">1. 写一句故事种子</h3>
+<p>公式：</p>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="text"><code><span class="line"><span>一个主体，在一个具体地点，因为一个误会/危险/任务，做出一个有反差的动作。</span></span></code></pre>
+<p>例子：</p>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="text"><code><span class="line"><span>废弃便利店里的机器人夜班店员，误把一个丧尸当成深夜顾客，认真执行扫码结账流程。</span></span></code></pre>
+<h3 id="2-提取五个变量">2. 提取五个变量</h3>
+<ul>
+<li>主体：机器人夜班店员。</li>
+<li>地点：废弃便利店。</li>
+<li>冲突：丧尸闯入。</li>
+<li>反差：机器人仍按服务流程接待。</li>
+<li>结尾：收银机吐出小票，丧尸被门口防盗器卡住。</li>
+</ul>
+<h3 id="3-选择风格锚点">3. 选择风格锚点</h3>
+<p>不要超过 5 个：</p>
+<ul>
+<li>原子朋克。</li>
+<li>末日废土。</li>
+<li>荒诞黑色幽默。</li>
+<li>真人实景质感。</li>
+<li>低饱和胶片。</li>
+</ul>
+<h3 id="4-拆成-4-个镜头">4. 拆成 4 个镜头</h3>
+<ol>
+<li>空镜：便利店招牌闪烁，冷柜嗡鸣。</li>
+<li>主体：机器人整理货架，LED 是礼貌笑脸。</li>
+<li>冲突：丧尸推门进来，防盗铃响。</li>
+<li>反差结尾：机器人扫码，丧尸被购物篮绊倒，小票缓慢飘落。</li>
+</ol>
+<h2 id="练习-110-秒单场景">练习 1：10 秒单场景</h2>
+<p>题目：</p>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="text"><code><span class="line"><span>废弃便利店里的机器人夜班店员，误把一个丧尸当成深夜顾客。</span></span></code></pre>
+<p>要求：</p>
+<ul>
+<li>总时长 10-12 秒。</li>
+<li>4 个分镜。</li>
+<li>禁止写“很酷”“震撼”这类空泛词。</li>
+<li>每个分镜必须包含景别、构图、运镜、画面内容。</li>
+<li>至少写 3 个真实细节：灰尘、灯管闪烁、塑料袋、冷柜雾气、地面积水、金属划痕等。</li>
+<li>结尾留白，不要爆炸。</li>
+</ul>
+<p>验收标准：</p>
+<ul>
+<li>读 prompt 时能想象出剪辑顺序。</li>
+<li>任何一个动作都能回答“为什么发生”。</li>
+<li>生成失败后能定位是哪一类信息缺失。</li>
+</ul>
+<h2 id="练习-215-秒一镜到底">练习 2：15 秒一镜到底</h2>
+<p>题目：</p>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="text"><code><span class="line"><span>废土邮差机器人在沙尘暴中修复胸口的旧式导航仪。</span></span></code></pre>
+<p>要求：</p>
+<ul>
+<li>单镜头一镜到底。</li>
+<li>按 0-3、3-6、6-10、10-15 秒拆时间轴。</li>
+<li>镜头只能做一种主运动，例如缓慢推进或半环绕。</li>
+<li>重点写手部动作、仪器反馈、风沙对画面的影响。</li>
+</ul>
+<p>练习目的：</p>
+<ul>
+<li>学会控制单镜头节奏。</li>
+<li>学会用“微动作”避免画面静止。</li>
+<li>学会用环境动态增强真实感。</li>
+</ul>
+<h2 id="练习-3动作戏拆分">练习 3：动作戏拆分</h2>
+<p>题目：</p>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="text"><code><span class="line"><span>机械僧人在雨夜巷口，用一把坏掉的霓虹伞挡住三个感染者。</span></span></code></pre>
+<p>要求：</p>
+<ul>
+<li>5 个分镜。</li>
+<li>每个动作必须有准备动作和受力反馈。</li>
+<li>至少一次利用环境物件：积水、铁门、灯箱、垃圾桶、雨伞骨架。</li>
+<li>不写“打斗很激烈”，改写具体动作。</li>
+</ul>
+<p>复盘问题：</p>
+<ul>
+<li>哪个动作最容易崩？</li>
+<li>是时长太长，还是动作链太复杂？</li>
+<li>能否拆成两个镜头分别生成？</li>
+</ul>
+<h2 id="练习-430-秒小短片">练习 4：30 秒小短片</h2>
+<p>题目：</p>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="text"><code><span class="line"><span>一个清洁机器人在末日商场里坚持打扫，直到发现自己扫的是丧尸留下的脚印。</span></span></code></pre>
+<p>结构：</p>
+<ol>
+<li>环境建立：商场空镜。</li>
+<li>角色入场：机器人工作。</li>
+<li>异常：脚印不断出现。</li>
+<li>追踪：机器人沿脚印移动。</li>
+<li>发现：丧尸在自动扶梯口徘徊。</li>
+<li>结尾：机器人递出“请勿踩踏刚拖地面”的警示牌。</li>
+</ol>
+<p>目标：</p>
+<ul>
+<li>训练多镜头一致性。</li>
+<li>训练动作和笑点的延迟揭示。</li>
+<li>训练剪辑节奏。</li>
+</ul>
+<h2 id="生成与抽卡记录表">生成与抽卡记录表</h2>
+<p>每次生成后记录：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>字段</th><th>内容</th></tr></thead><tbody><tr><td>日期</td><td>生成日期</td></tr><tr><td>平台/模型</td><td>小云雀 / 即梦 / 可灵 / Sora / Veo 等</td></tr><tr><td>prompt 版本</td><td>v1 / v2 / v3</td></tr><tr><td>时长</td><td>5s / 10s / 15s</td></tr><tr><td>可用片段</td><td>哪几秒可用</td></tr><tr><td>失败类型</td><td>塑料感 / 动作崩 / 镜头漂移 / 主体漂移 / 审核拦截</td></tr><tr><td>修改策略</td><td>下一轮只改什么</td></tr><tr><td>剪辑备注</td><td>能否接上前后镜头</td></tr></tbody></table>
+<h2 id="常见失败与修正">常见失败与修正</h2>
+<h3 id="输出像游戏-cg">输出像游戏 CG</h3>
+<p>可能原因：</p>
+<ul>
+<li>只写了“电影感”，没有真实摄影锚点。</li>
+<li>场景太干净。</li>
+<li>材质没有磨损和缺陷。</li>
+<li>镜头太平滑。</li>
+</ul>
+<p>修正：</p>
+<ul>
+<li>加入具体摄影机/镜头描述。</li>
+<li>加轻微手持浮动。</li>
+<li>增加灰尘、划痕、油污、暗部细节。</li>
+</ul>
+<h3 id="动作不连贯">动作不连贯</h3>
+<p>可能原因：</p>
+<ul>
+<li>动作链太长。</li>
+<li>没写准备动作。</li>
+<li>没写受力反馈。</li>
+<li>单镜头时长过长。</li>
+</ul>
+<p>修正：</p>
+<ul>
+<li>拆成 2-3 个镜头。</li>
+<li>每个镜头只做一个主要动作。</li>
+<li>写清“为什么”和“造成什么效果”。</li>
+</ul>
+<h3 id="分镜接不上">分镜接不上</h3>
+<p>可能原因：</p>
+<ul>
+<li>光线方向不一致。</li>
+<li>主体位置跳变。</li>
+<li>镜头运动方向相反。</li>
+<li>结尾没有可剪点。</li>
+</ul>
+<p>修正：</p>
+<ul>
+<li>每个镜头都写主体方位。</li>
+<li>固定色调和光线。</li>
+<li>让前一镜结尾动作成为后一镜开头动作。</li>
+</ul>
+<h3 id="平台审核或版权词拦截">平台审核或版权词拦截</h3>
+<p>可能原因：</p>
+<ul>
+<li>使用了真实 IP、名人、品牌、角色名。</li>
+<li>上传了敏感人脸参考图。</li>
+</ul>
+<p>修正：</p>
+<ul>
+<li>改为风格描述。</li>
+<li>删除品牌/角色名。</li>
+<li>用自创角色和原创设定替代。</li>
+</ul>
+<h2 id="复盘模板">复盘模板</h2>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="markdown"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-light-font-weight:bold;--shiki-dark:#82B1FF;--shiki-dark-font-weight:inherit">## 项目：{标题}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D9F5DD">-</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> 日期：</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D9F5DD">-</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> 平台：</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D9F5DD">-</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> 目标镜头：</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D9F5DD">-</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> Prompt 版本：</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D9F5DD">-</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> 成功点：</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D9F5DD">-</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> 失败点：</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D9F5DD">-</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> 失败归因：</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D9F5DD">-</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> 下一轮只修改：</span></span>
+<span class="line"><span style="--shiki-light:#24292EFF;--shiki-dark:#D9F5DD">-</span><span style="--shiki-light:#24292EFF;--shiki-dark:#D6DEEB"> 可沉淀的新规则：</span></span></code></pre>
+<h2 id="第一条建议">第一条建议</h2>
+<p>不要从 3 分钟短片开始。先做 10 秒镜头，练到能稳定产出“没有明显塑料感、有动作因果、能剪辑”的片段，再扩展到 30 秒和 60 秒。</p> </article> <ul class="learning-tags" aria-label="学习标签"> <li>#AIGC</li><li>#AI视频</li><li>#创作流程</li><li>#练习</li><li>#剪辑</li><li>#AI 视频</li> </ul> </main> <footer class="app-layout mt-auto"> <div class="border-border flex flex-col items-center justify-between border-t py-6 sm:flex-row-reverse sm:py-4"> <div class="flex flex-wrap items-center gap-1"> <a href="https://github.com/Shiaoming123" title="世傲命的技术博客 on Github" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21" /></svg> <span class="sr-only">世傲命的技术博客 on Github</span>  </a><a href="mailto:2405360475@qq.com" title="Send an email to 世傲命的技术博客" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><path d="m3 7 9 6 9-6" /></svg> <span class="sr-only">Send an email to 世傲命的技术博客</span>  </a> </div> <div class="my-2 flex flex-col items-center whitespace-nowrap sm:flex-row"> <span>Copyright &#169; 2026</span> <span class="hidden sm:inline">&nbsp;|&nbsp;</span> <span>All rights reserved.</span> </div> </div> </footer>   <script type="module">function l(){const n=window;n.__scrollMotionCleanup?.();const i=document.documentElement,c=document.querySelector(".scroll-progress"),d=window.matchMedia("(prefers-reduced-motion: reduce)").matches;let t;const e=()=>{if(!c)return;const r=i.scrollHeight-window.innerHeight,o=r>0?window.scrollY/r:0;c.style.setProperty("--scroll-progress",Math.min(1,Math.max(0,o)).toString())};if(e(),window.addEventListener("scroll",e,{passive:!0}),window.addEventListener("resize",e),!d){i.classList.add("scroll-motion-ready");const r=document.querySelectorAll("[data-scroll-reveal]");t=new IntersectionObserver(o=>{o.forEach(s=>{s.isIntersecting&&(s.target.classList.add("is-visible"),t?.unobserve(s.target))})},{rootMargin:"0px 0px -12% 0px",threshold:.12}),r.forEach(o=>t?.observe(o))}n.__scrollMotionCleanup=()=>{window.removeEventListener("scroll",e),window.removeEventListener("resize",e),t?.disconnect()}}l();document.addEventListener("astro:after-swap",l);</script> <script type="module">const c="theme",r="light",n="dark";function s(){const e=localStorage.getItem(c);return e||(window.matchMedia("(prefers-color-scheme: dark)").matches?n:r)}let t=window.__theme?.value??s();function a(){localStorage.setItem(c,t),m()}function m(){const e=document.firstElementChild;e?.setAttribute("data-theme",t),e?.classList.toggle("dark",t===n),document.querySelector("#theme-btn")?.setAttribute("aria-label",t);const o=window.getComputedStyle(document.body).backgroundColor;document.querySelector("meta[name='theme-color']")?.setAttribute("content",o)}function d(){m(),document.querySelector("#theme-btn")?.addEventListener("click",()=>{t=t===r?n:r,a()})}d();document.addEventListener("astro:after-swap",d);document.addEventListener("astro:before-swap",e=>{const o=document.querySelector("meta[name='theme-color']")?.getAttribute("content");o&&e.newDocument.querySelector("meta[name='theme-color']")?.setAttribute("content",o)});window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",({matches:e})=>{t=e?n:r,a()});</script> <script type="module" src="/_astro/Layout.astro_astro_type_script_index_2_lang.DbpMnSYv.js"></script> </body> </html> <script data-astro-rerun>
+  function addHeadingLinks() {
+    const headings = Array.from(
+      document.querySelectorAll("#article h2, #article h3, #article h4")
+    );
+    for (const heading of headings) {
+      if (!heading.id || heading.querySelector(".heading-link")) continue;
+      heading.classList.add("group");
+      const link = document.createElement("a");
+      link.className =
+        "heading-link ms-2 no-underline opacity-75 md:opacity-0 md:group-hover:opacity-100 md:focus:opacity-100";
+      link.href = "#" + heading.id;
+      link.textContent = "#";
+      heading.appendChild(link);
+    }
+  }
+
+  function attachCopyButtons() {
+    for (const codeBlock of Array.from(document.querySelectorAll("pre"))) {
+      if (codeBlock.dataset.language === "mermaid") continue;
+      if (codeBlock.querySelector(".copy-code")) continue;
+      const button = document.createElement("button");
+      button.className =
+        "copy-code absolute end-3 -top-3 rounded bg-muted border border-muted px-2 py-1 text-xs leading-4 text-foreground font-medium";
+      button.textContent = "Copy";
+      codeBlock.style.position = "relative";
+      codeBlock.setAttribute("tabindex", "0");
+      codeBlock.appendChild(button);
+      button.addEventListener("click", async () => {
+        const text = codeBlock.querySelector("code")?.innerText ?? "";
+        await navigator.clipboard.writeText(text);
+        button.textContent = "Copied";
+        setTimeout(() => (button.textContent = "Copy"), 700);
+      });
+    }
+  }
+
+  addHeadingLinks();
+  attachCopyButtons();
+</script>

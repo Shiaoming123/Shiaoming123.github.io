@@ -1,0 +1,240 @@
+<!DOCTYPE html><html dir="ltr" lang="zh-CN" class="overflow-y-scroll scroll-smooth"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="canonical" href="https://shiaoming123.github.io/learning/aigc/aigc-wuxia-fight-prompt/"><meta name="generator" content="Astro v6.4.8"><!-- Font --><style>@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/02154cca78ac33f2.woff") format("woff"), url("/_astro/fonts/478e42e4694872ef.ttf") format("truetype");font-display:swap;font-weight:300;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/3a32a7a7a67f4f58.woff") format("woff"), url("/_astro/fonts/0863f4f6964aa89c.ttf") format("truetype");font-display:swap;font-weight:400;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/a5c5808c25effec9.woff") format("woff"), url("/_astro/fonts/792eded6cb3f0350.ttf") format("truetype");font-display:swap;font-weight:500;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/14314705006234cb.woff") format("woff"), url("/_astro/fonts/87d8fc1072d4917b.ttf") format("truetype");font-display:swap;font-weight:600;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/c33265ba093eb291.woff") format("woff"), url("/_astro/fonts/ec883ed4db81a7d9.ttf") format("truetype");font-display:swap;font-weight:700;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/c26ad40d3b1d9169.woff") format("woff"), url("/_astro/fonts/7a5ee0cfcde31b81.ttf") format("truetype");font-display:swap;font-weight:300;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/87ca066ba5b2c7cf.woff") format("woff"), url("/_astro/fonts/f4e25dfe9d6152ec.ttf") format("truetype");font-display:swap;font-weight:400;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/a9a0e80c053be3d5.woff") format("woff"), url("/_astro/fonts/a9df48ecd03749e4.ttf") format("truetype");font-display:swap;font-weight:500;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/da468df88542c99b.woff") format("woff"), url("/_astro/fonts/90f9809471092714.ttf") format("truetype");font-display:swap;font-weight:600;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/f914de358bc554f6.woff") format("woff"), url("/_astro/fonts/dbc9996f99c63e07.ttf") format("truetype");font-display:swap;font-weight:700;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:300;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:400;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:500;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:600;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:700;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:300;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:400;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:500;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:600;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:700;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}:root{--font-google-sans-code:"Google Sans Code-1a30c214885cb404","Google Sans Code-1a30c214885cb404 fallback: Courier New",monospace;}</style><!-- Primary meta --><title>AIGC 国风武侠打斗 Prompt 拆解 | 世傲命的技术博客</title><meta name="title" content="AIGC 国风武侠打斗 Prompt 拆解 | 世傲命的技术博客"><meta name="description" content="目前没有找到成熟的“雾山五行逐镜头拉片 + 系统 prompt 库 + skill”的开源项目。"><meta name="author" content="世傲命"><link rel="sitemap" href="/sitemap.xml"><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:site_name" content="世傲命的技术博客"><meta property="og:title" content="AIGC 国风武侠打斗 Prompt 拆解 | 世傲命的技术博客"><meta property="og:description" content="目前没有找到成熟的“雾山五行逐镜头拉片 + 系统 prompt 库 + skill”的开源项目。"><meta property="og:url" content="https://shiaoming123.github.io/learning/aigc/aigc-wuxia-fight-prompt/"><meta property="og:image" content="https://shiaoming123.github.io/default-og.jpg"><!-- Twitter / X --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://shiaoming123.github.io/learning/aigc/aigc-wuxia-fight-prompt/"><meta property="twitter:title" content="AIGC 国风武侠打斗 Prompt 拆解 | 世傲命的技术博客"><meta property="twitter:description" content="目前没有找到成熟的“雾山五行逐镜头拉片 + 系统 prompt 库 + skill”的开源项目。"><meta property="twitter:image" content="https://shiaoming123.github.io/default-og.jpg"><!-- RSS autodiscovery --><link rel="alternate" type="application/rss+xml" title="世傲命的技术博客" href="https://shiaoming123.github.io/rss.xml/"><!-- Filled at runtime by theme.ts to match the current background colour --><meta name="theme-color" content=""><!-- Extra head content injected by child layouts (e.g. JSON-LD, article meta) -->  <meta property="og:type" content="article"> <meta property="article:published_time" content="2026-06-15T00:00:00.000Z"><meta property="article:modified_time" content="2026-06-15T00:00:00.000Z"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"AIGC 国风武侠打斗 Prompt 拆解 | 世傲命的技术博客","datePublished":"2026-06-15T00:00:00.000Z","dateModified":"2026-06-15T00:00:00.000Z","author":[{"@type":"Person","name":"世傲命","url":"https://github.com/Shiaoming123"}]}</script> <!--
+      Inline FOUC-prevention script: sets data-theme on <html> before
+      the browser paints. Runs synchronously, no defer/async.
+    --><script>
+      (function () {
+        const stored = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        const theme = stored ?? (prefersDark ? "dark" : "light");
+        const root = document.firstElementChild;
+        root?.setAttribute("data-theme", theme);
+        root?.classList.toggle("dark", theme === "dark");
+        // Expose value so theme.ts can skip re-detection.
+        window.__theme = { value: theme };
+      })();
+    </script><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CAqDO0tx.js"></script><link rel="stylesheet" href="/_astro/Footer.DpZjZP1M.css"></head> <body class="bg-background font-app text-foreground selection:bg-accent/75 selection:text-accent-foreground flex min-h-svh flex-col"> <div class="scroll-progress" aria-hidden="true"></div>    <a id="skip-to-content" href="#main-content" class="bg-background text-accent absolute inset-s-16 -top-full z-50 px-3 py-2 backdrop-blur-lg transition-all focus:top-4"> 跳到正文 </a> <header class="app-layout neo-header flex flex-col items-center justify-between sm:flex-row"> <div class="neo-header-bar relative flex w-full items-baseline justify-between py-4 sm:items-center sm:py-5"> <a href="/" class="absolute py-1 text-xl leading-8 font-semibold whitespace-nowrap sm:static sm:my-auto sm:text-2xl sm:leading-none"> 世傲命的技术博客 </a> <nav id="nav-menu" class="flex w-full flex-col items-center sm:ms-2 sm:flex-row sm:justify-end sm:space-x-4 sm:py-0"> <button id="menu-btn" class="focus-outline self-end p-2 sm:hidden" aria-label="打开菜单" aria-expanded="false" aria-controls="menu-items" data-label-open="打开菜单" data-label-close="关闭菜单"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="hidden" viewBox="0 0 24 24" id="close-icon"><path stroke="none" d="M0 0h24v24H0z" /><path d="M18 6 6 18M6 6l12 12" /></svg> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon icon-tabler icons-tabler-outline icon-tabler-menu-deep" viewBox="0 0 24 24" id="menu-icon"><path stroke="none" d="M0 0h24v24H0z" /><path d="M4 6h16M7 12h13M10 18h10" /></svg> </button> <ul id="menu-items" class="neo-nav-list mt-4 hidden w-44 grid-cols-2 place-content-center gap-2 sm:mt-0 sm:flex sm:w-auto"> <li class="col-span-2"> <a href="/posts/"> 文章 </a> </li> <li class="col-span-2"> <a href="/learning/" class="active-nav"> 学习 </a> </li> <li class="col-span-2"> <a href="/demos/"> 演示 </a> </li> <li class="col-span-2"> <a href="/tags/"> 标签 </a> </li> <li class="col-span-2"> <a href="/categories/"> 分类 </a> </li> <li class="col-span-2"> <a href="/about/"> 关于 </a> </li> <li class="col-span-2"> <a href="/changelog/"> 日志 </a> </li> <li class="neo-nav-icon col-span-2"> <a href="/archives/" title="归档" aria-label="归档" class="group inline-flex items-center gap-1 hover:text-accent focus-outline flex size-full justify-center p-3 sm:relative sm:size-9 sm:p-0">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="hidden sm:absolute sm:top-1/2 sm:left-1/2 sm:block sm:size-6 sm:-translate-x-1/2 sm:-translate-y-1/2" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v0a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8M10 12h4" /></svg> <span class="sm:sr-only">归档</span>  </a> </li> <li class="neo-nav-icon col-span-1 flex items-center justify-center"> <a href="/search/" title="搜索" aria-label="搜索" class="group inline-flex items-center gap-1 hover:text-accent focus-outline relative size-9">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-1/2 left-1/2 size-6 -translate-x-1/2 -translate-y-1/2" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 10a7 7 0 1 0 14 0 7 7 0 1 0-14 0M21 21l-6-6" /></svg> <span class="sr-only">搜索</span>  </a> </li> <li class="neo-nav-icon col-span-1 flex items-center justify-center"> <button id="theme-btn" class="focus-outline hover:[&>svg]:stroke-accent relative size-12 p-4 sm:size-9" title="切换主题" aria-label="auto" aria-live="polite"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-[50%] left-[50%] translate-[-50%] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M12 3h.393a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 2.992z" /></svg> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-[50%] left-[50%] translate-[-50%] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M14.828 14.828a4 4 0 1 0-5.656-5.656 4 4 0 0 0 5.656 5.656M6.343 17.657l-1.414 1.414M6.343 6.343 4.929 4.929M17.657 6.343l1.414-1.414M17.657 17.657l1.414 1.414M4 12H2M12 4V2M20 12h2M12 20v2" /></svg> </button> </li> </ul> </nav> </div> </header> <script type="module">function c(){const e=document.querySelector("#menu-btn"),t=document.querySelector("#menu-items"),n=document.querySelector("#menu-icon"),s=document.querySelector("#close-icon");if(!e||!t||!n||!s)return;const a=e.dataset.labelOpen??"Open menu",l=e.dataset.labelClose??"Close menu";e.addEventListener("click",()=>{const o=e.getAttribute("aria-expanded")==="true";e.setAttribute("aria-expanded",o?"false":"true"),e.setAttribute("aria-label",o?a:l),t.classList.toggle("hidden"),t.classList.toggle("grid"),n.classList.toggle("hidden"),s.classList.toggle("hidden")})}c();document.addEventListener("astro:after-swap",c);</script> <nav class="app-layout mt-8 mb-1" aria-label="breadcrumb"> <ul class="font-light [&>li]:inline [&>li:not(:last-child)>a]:hover:opacity-100"> <li> <a href="/" class="opacity-80"> 首页 </a> <span aria-hidden="true" class="opacity-80">&raquo;</span> </li> <li> <a href="/learning/" class="capitalize opacity-70"> 学习 </a> <span aria-hidden="true" class="opacity-70">
+&raquo;
+</span> </li><li> <a href="/learning/aigc/" class="capitalize opacity-70"> aigc </a> <span aria-hidden="true" class="opacity-70">
+&raquo;
+</span> </li><li> <span class="capitalize opacity-75 lowercase" aria-current="page">  aigc-wuxia-fight-prompt </span> </li> </ul> </nav> <main id="main-content" class="app-layout learning-article" data-pagefind-body> <p class="learning-eyebrow">AIGC 创作</p> <h1 class="text-accent inline-block text-2xl font-bold sm:text-3xl"> AIGC 国风武侠打斗 Prompt 拆解 </h1> <div class="my-2 flex flex-wrap items-center gap-2"> <div class="text-muted-foreground flex items-center gap-x-2"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 min-w-5.5" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M4 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zM16 3v4M8 3v4M4 11h16M7 14h.013M10.01 14h.005M13.01 14h.005M16.015 14h.005M13.015 17h.005M7.01 17h.005M10.01 17h.005" /></svg>  <time class="text-sm sm:text-base" datetime="2026-06-15T00:00:00.000Z"> 15 Jun, 2026 </time> </div> <span class="learning-source">来源：wiki/courses/aigc/AIGC国风武侠打斗Prompt拆解.md</span> </div> <article id="article" class="mt-8 w-full app-prose max-w-app prose-pre:bg-(--shiki-light-bg) dark:prose-pre:bg-(--shiki-dark-bg)"> <h2 id="这篇适合谁读">这篇适合谁读</h2>
+<p>这篇适合想系统学习 AIGC 视频创作的人阅读。重点不是堆提示词，而是把来源治理、分镜结构、镜头语言、版权边界和可复用工作流整理成可练习的方法。</p>
+<h2 id="结论">结论</h2>
+<p>目前没有找到成熟的“雾山五行逐镜头拉片 + 系统 prompt 库 + skill”的开源项目。</p>
+<p>但已经有几类可用材料：</p>
+<ul>
+<li>单条高相关 prompt：OpenNana 的水墨武侠激战。</li>
+<li>通用动作库：Seedance prompt vault 里的 Action &#x26; Fight 分类。</li>
+<li>生成型 skill：Seedance prompt skills，可按自然语言生成仙侠/动作 prompt。</li>
+<li>平台语法 skill：支持 <code>@视频</code> 参考动作、运镜、节奏。</li>
+</ul>
+<p>最佳策略不是复制“雾山五行”，而是抽象成“国风硬边水墨动作体系”。</p>
+<h2 id="需要抽象的核心特征">需要抽象的核心特征</h2>
+<h3 id="1-画风层">1. 画风层</h3>
+<p>不要直接依赖作品名，改写为可迁移的视觉语言：</p>
+<ul>
+<li>硬边水墨线条。</li>
+<li>高对比红黑 / 黑白灰 + 单一强调色。</li>
+<li>墨气、飞白、速度线。</li>
+<li>爆裂但清晰的剪影。</li>
+<li>国漫画风但动作读得清。</li>
+<li>夸张动态构图，身体姿态有张力。</li>
+</ul>
+<h3 id="2-动作层">2. 动作层</h3>
+<p>武侠打斗 prompt 最容易失败在“动作太快但不清楚”。要写清每次攻防的动作因果：</p>
+<ul>
+<li>起手：谁先发力，从哪里发力。</li>
+<li>进攻：劈、砍、刺、挑、扫、砸、格挡、反击。</li>
+<li>接触：武器相撞、拳脚命中、身体偏移。</li>
+<li>反馈：火花、墨气、尘土、地面裂纹、衣摆甩动。</li>
+<li>收束：双方拉开、背对背落地、武器相抵僵持。</li>
+</ul>
+<h3 id="3-运镜层">3. 运镜层</h3>
+<p>高燃武侠动作不是一直快。建议快慢交替：</p>
+<ul>
+<li>低角度高速跟拍：用于冲刺和接近。</li>
+<li>快速切镜：用于攻防互换。</li>
+<li>慢动作特写：用于击中或武器碰撞瞬间。</li>
+<li>环绕运镜：用于双方势均力敌、气场对峙。</li>
+<li>仰视全景：用于大招对轰。</li>
+<li>中景慢推：用于僵持和留白结尾。</li>
+</ul>
+<h3 id="4-节奏层">4. 节奏层</h3>
+<p>推荐 15 秒五段式：</p>
+<ol>
+<li>0-2 秒：无铺垫，直接进入武器对撞。</li>
+<li>2-5 秒：高速攻防互换。</li>
+<li>5-8 秒：近身连击和物理反馈。</li>
+<li>8-12 秒：大招或气场爆发。</li>
+<li>12-15 秒：僵持、定格、留白。</li>
+</ol>
+<p>如果模型动作崩，就改成 8-10 秒三段式：</p>
+<ol>
+<li>0-3 秒：对峙到冲刺。</li>
+<li>3-7 秒：一次清晰交锋。</li>
+<li>7-10 秒：落地收束。</li>
+</ol>
+<h2 id="来源拆解">来源拆解</h2>
+<h3 id="opennana-水墨武侠激战">OpenNana 水墨武侠激战</h3>
+<p>链接：<a href="https://opennana.com/awesome-prompt-gallery/fog-hills-ink-martial-arts-battle">https://opennana.com/awesome-prompt-gallery/fog-hills-ink-martial-arts-battle</a></p>
+<p>可学习点：</p>
+<ul>
+<li>用五个镜头建立完整战斗段落。</li>
+<li>每个镜头都有动作主题：对撞、攻防、近身、大招、僵持。</li>
+<li>强调双方势均力敌，避免一方碾压导致动作单调。</li>
+<li>有镜头语言：低角度、高速跟拍、环绕、慢动作、仰视全景、慢推。</li>
+</ul>
+<p>需要改写的地方：</p>
+<ul>
+<li>删除具体作品名。</li>
+<li>把“同款画风”改为“硬边水墨国风动画质感”。</li>
+<li>把“极致”“拉满”等泛化词换成可见细节。</li>
+</ul>
+<h3 id="huyle82us-action--fight--bamboo-run">HuyLe82US Action &#x26; Fight / Bamboo Run</h3>
+<p>链接：<a href="https://github.com/HuyLe82US/awesome-seedance-prompts">https://github.com/HuyLe82US/awesome-seedance-prompts</a></p>
+<p>可学习点：</p>
+<ul>
+<li>竹林、雨声、压迫氛围适合作为武侠场景。</li>
+<li>打斗前用安静建立张力，再用雷声作为动作触发点。</li>
+<li>武器碰撞后写环境反馈：雨滴爆开、竹叶被剑气切开、地面泥水飞溅。</li>
+<li>背对背落地是很好的收束镜头。</li>
+</ul>
+<p>需要改写的地方：</p>
+<ul>
+<li>把英文 prompt 改成中文结构化分镜。</li>
+<li>把“一段大动作”拆成多个 3 秒左右片段。</li>
+</ul>
+<h3 id="seedance-prompt-skills">Seedance prompt skills</h3>
+<p>相关来源：</p>
+<ul>
+<li><a href="https://github.com/songguoxs/seedance-prompt-skill">https://github.com/songguoxs/seedance-prompt-skill</a></li>
+<li><a href="https://github.com/dexhunter/seedance2-skill">https://github.com/dexhunter/seedance2-skill</a></li>
+</ul>
+<p>可学习点：</p>
+<ul>
+<li>10 秒以上用时间戳分镜。</li>
+<li>每段写画面、运镜、音效。</li>
+<li>参考视频时要明确：只参考动作编排、运镜节奏、打击感，不复制角色和美术。</li>
+</ul>
+<h2 id="通用模板双人兵器对决">通用模板：双人兵器对决</h2>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="text"><code><span class="line"><span>【基础设定】</span></span>
+<span class="line"><span>时长：约 12-15 秒，横屏。</span></span>
+<span class="line"><span>场景：{竹林 / 雨夜古寺 / 山崖石桥 / 破旧戏台}，地面有 {积水 / 落叶 / 尘土 / 碎石}。</span></span>
+<span class="line"><span>角色 A：{武器、服装、动作风格}，动作刚猛。</span></span>
+<span class="line"><span>角色 B：{武器、服装、动作风格}，动作灵动。</span></span>
+<span class="line"><span>声音：只保留雨声、衣摆破风声、武器碰撞声、脚步踏水声和低频冲击声，不要现代 BGM。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>【氛围画质】</span></span>
+<span class="line"><span>硬边水墨国风动画质感，高对比明暗，黑白灰主调，点缀 {红 / 青 / 金} 色。</span></span>
+<span class="line"><span>线条凌厉，墨气飞散，速度线清晰，打击瞬间有火花、墨色气浪和尘土反馈。</span></span>
+<span class="line"><span>避免画面糊成一团，避免肢体扭曲，避免游戏 CG 感，避免动作无重量感。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>【画面内容】</span></span>
+<span class="line"><span>0-2 秒：低角度中景，两人同时踏碎地面积水向前冲刺，镜头高速跟拍，衣摆和发带被气流拉直。</span></span>
+<span class="line"><span>2-5 秒：武器第一次正面相撞，慢动作特写，火花和墨气同时炸开，镜头轻微震动。</span></span>
+<span class="line"><span>5-8 秒：快速切镜，双方连续劈、刺、格挡、反击，各退半步又立刻贴近，地面落叶被剑气掀起。</span></span>
+<span class="line"><span>8-12 秒：环绕运镜，两人同时蓄力横斩，冲击波穿过竹林，几片竹叶被切开后慢慢飘落。</span></span>
+<span class="line"><span>12-15 秒：中景慢推，双方背对背落地，武器尖端仍在滴水，胜负未分，环境声逐渐压低，留白结束。</span></span></code></pre>
+<h2 id="通用模板单人破阵">通用模板：单人破阵</h2>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="text"><code><span class="line"><span>【基础设定】</span></span>
+<span class="line"><span>时长：10-12 秒。</span></span>
+<span class="line"><span>场景：夜色山门前，石阶潮湿，风吹纸符。</span></span>
+<span class="line"><span>主体：一名持长刀的侠客，衣服边缘破损，刀鞘有旧铜件和划痕。</span></span>
+<span class="line"><span>敌人：数名黑影从雾中逼近，只表现轮廓，不强调具体脸部。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>【氛围画质】</span></span>
+<span class="line"><span>国风水墨动画质感，硬边线条，冷色夜景，刀光为唯一暖色。</span></span>
+<span class="line"><span>墨雾在脚边流动，动作清晰，冲击反馈明显。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>【画面内容】</span></span>
+<span class="line"><span>0-3 秒：远景，侠客站在山门中央，黑影从两侧雾中出现，镜头缓慢推近。</span></span>
+<span class="line"><span>3-6 秒：中近景，侠客左脚后撤半步压低重心，因为听到侧后方脚步声，右手按住刀柄。</span></span>
+<span class="line"><span>6-9 秒：拔刀横斩，一道弧形刀光切开雾气，最近的黑影被冲击力震退撞上石灯，纸符被风卷起。</span></span>
+<span class="line"><span>9-12 秒：特写，刀尖停在画面前景，水滴从刀刃滑落，远处黑影不再前进，留白。</span></span></code></pre>
+<h2 id="通用模板参考视频复刻动作">通用模板：参考视频复刻动作</h2>
+<p>适合 Seedance 这类支持 <code>@视频</code> 的平台。</p>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="text"><code><span class="line"><span>参考 @视频1 的动作节奏、镜头速度和打击停顿，但不要复制原视频中的角色、服装、脸、场景和可识别 IP。</span></span>
+<span class="line"><span>使用 @图片1 作为角色 A 的原创形象参考，@图片2 作为角色 B 的原创形象参考。</span></span>
+<span class="line"><span>全片保持原创国风水墨动画质感，动作结构参考 @视频1：对峙、冲刺、第一次武器碰撞、快速攻防、慢动作收束。</span></span></code></pre>
+<h2 id="失败模式">失败模式</h2>
+<h3 id="动作糊成一团">动作糊成一团</h3>
+<p>原因：</p>
+<ul>
+<li>同一镜头里塞了太多招式。</li>
+<li>全程高速，没有慢动作节点。</li>
+<li>没写接触点和受力反馈。</li>
+</ul>
+<p>修正：</p>
+<ul>
+<li>每 3 秒只写 1 个动作重点。</li>
+<li>把击中瞬间改成慢动作特写。</li>
+<li>明确“武器相撞 -> 火花/墨气 -> 双方后退/偏移”。</li>
+</ul>
+<h3 id="像游戏特效不像国风动画">像游戏特效，不像国风动画</h3>
+<p>原因：</p>
+<ul>
+<li>只写了“高燃、4K、酷炫”。</li>
+<li>没有线条、墨气、留白、色彩约束。</li>
+</ul>
+<p>修正：</p>
+<ul>
+<li>加硬边水墨线条、飞白、墨雾、单一强调色。</li>
+<li>减少全屏发光和爆炸。</li>
+</ul>
+<h3 id="角色变成-ip-复刻">角色变成 IP 复刻</h3>
+<p>原因：</p>
+<ul>
+<li>直接写作品名或角色名。</li>
+<li>上传强识别参考图。</li>
+</ul>
+<p>修正：</p>
+<ul>
+<li>改用原创角色。</li>
+<li>参考视频只声明“动作/运镜/节奏”，排除角色和美术。</li>
+</ul>
+<h2 id="后续收集方向">后续收集方向</h2>
+<ul>
+<li>找更多“动作分镜拆解”而不是单句 prompt。</li>
+<li>优先收集带时间轴、运镜、音效、失败修正的来源。</li>
+<li>对雾山五行、鬼灭、火影等强 IP，只记录抽象风格和动作原则，不保存可直接复刻的侵权表达。</li>
+</ul> </article> <ul class="learning-tags" aria-label="学习标签"> <li>#AIGC</li><li>#AI视频</li><li>#武侠</li><li>#打斗分镜</li><li>#国风水墨</li><li>#AI 视频</li> </ul> </main> <footer class="app-layout mt-auto"> <div class="border-border flex flex-col items-center justify-between border-t py-6 sm:flex-row-reverse sm:py-4"> <div class="flex flex-wrap items-center gap-1"> <a href="https://github.com/Shiaoming123" title="世傲命的技术博客 on Github" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21" /></svg> <span class="sr-only">世傲命的技术博客 on Github</span>  </a><a href="mailto:2405360475@qq.com" title="Send an email to 世傲命的技术博客" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><path d="m3 7 9 6 9-6" /></svg> <span class="sr-only">Send an email to 世傲命的技术博客</span>  </a> </div> <div class="my-2 flex flex-col items-center whitespace-nowrap sm:flex-row"> <span>Copyright &#169; 2026</span> <span class="hidden sm:inline">&nbsp;|&nbsp;</span> <span>All rights reserved.</span> </div> </div> </footer>   <script type="module">function l(){const n=window;n.__scrollMotionCleanup?.();const i=document.documentElement,c=document.querySelector(".scroll-progress"),d=window.matchMedia("(prefers-reduced-motion: reduce)").matches;let t;const e=()=>{if(!c)return;const r=i.scrollHeight-window.innerHeight,o=r>0?window.scrollY/r:0;c.style.setProperty("--scroll-progress",Math.min(1,Math.max(0,o)).toString())};if(e(),window.addEventListener("scroll",e,{passive:!0}),window.addEventListener("resize",e),!d){i.classList.add("scroll-motion-ready");const r=document.querySelectorAll("[data-scroll-reveal]");t=new IntersectionObserver(o=>{o.forEach(s=>{s.isIntersecting&&(s.target.classList.add("is-visible"),t?.unobserve(s.target))})},{rootMargin:"0px 0px -12% 0px",threshold:.12}),r.forEach(o=>t?.observe(o))}n.__scrollMotionCleanup=()=>{window.removeEventListener("scroll",e),window.removeEventListener("resize",e),t?.disconnect()}}l();document.addEventListener("astro:after-swap",l);</script> <script type="module">const c="theme",r="light",n="dark";function s(){const e=localStorage.getItem(c);return e||(window.matchMedia("(prefers-color-scheme: dark)").matches?n:r)}let t=window.__theme?.value??s();function a(){localStorage.setItem(c,t),m()}function m(){const e=document.firstElementChild;e?.setAttribute("data-theme",t),e?.classList.toggle("dark",t===n),document.querySelector("#theme-btn")?.setAttribute("aria-label",t);const o=window.getComputedStyle(document.body).backgroundColor;document.querySelector("meta[name='theme-color']")?.setAttribute("content",o)}function d(){m(),document.querySelector("#theme-btn")?.addEventListener("click",()=>{t=t===r?n:r,a()})}d();document.addEventListener("astro:after-swap",d);document.addEventListener("astro:before-swap",e=>{const o=document.querySelector("meta[name='theme-color']")?.getAttribute("content");o&&e.newDocument.querySelector("meta[name='theme-color']")?.setAttribute("content",o)});window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",({matches:e})=>{t=e?n:r,a()});</script> <script type="module" src="/_astro/Layout.astro_astro_type_script_index_2_lang.DbpMnSYv.js"></script> </body> </html> <script data-astro-rerun>
+  function addHeadingLinks() {
+    const headings = Array.from(
+      document.querySelectorAll("#article h2, #article h3, #article h4")
+    );
+    for (const heading of headings) {
+      if (!heading.id || heading.querySelector(".heading-link")) continue;
+      heading.classList.add("group");
+      const link = document.createElement("a");
+      link.className =
+        "heading-link ms-2 no-underline opacity-75 md:opacity-0 md:group-hover:opacity-100 md:focus:opacity-100";
+      link.href = "#" + heading.id;
+      link.textContent = "#";
+      heading.appendChild(link);
+    }
+  }
+
+  function attachCopyButtons() {
+    for (const codeBlock of Array.from(document.querySelectorAll("pre"))) {
+      if (codeBlock.dataset.language === "mermaid") continue;
+      if (codeBlock.querySelector(".copy-code")) continue;
+      const button = document.createElement("button");
+      button.className =
+        "copy-code absolute end-3 -top-3 rounded bg-muted border border-muted px-2 py-1 text-xs leading-4 text-foreground font-medium";
+      button.textContent = "Copy";
+      codeBlock.style.position = "relative";
+      codeBlock.setAttribute("tabindex", "0");
+      codeBlock.appendChild(button);
+      button.addEventListener("click", async () => {
+        const text = codeBlock.querySelector("code")?.innerText ?? "";
+        await navigator.clipboard.writeText(text);
+        button.textContent = "Copied";
+        setTimeout(() => (button.textContent = "Copy"), 700);
+      });
+    }
+  }
+
+  addHeadingLinks();
+  attachCopyButtons();
+</script>

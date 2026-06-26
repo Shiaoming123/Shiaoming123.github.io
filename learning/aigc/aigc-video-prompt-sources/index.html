@@ -1,0 +1,326 @@
+<!DOCTYPE html><html dir="ltr" lang="zh-CN" class="overflow-y-scroll scroll-smooth"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="canonical" href="https://shiaoming123.github.io/learning/aigc/aigc-video-prompt-sources/"><meta name="generator" content="Astro v6.4.8"><!-- Font --><style>@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/02154cca78ac33f2.woff") format("woff"), url("/_astro/fonts/478e42e4694872ef.ttf") format("truetype");font-display:swap;font-weight:300;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/3a32a7a7a67f4f58.woff") format("woff"), url("/_astro/fonts/0863f4f6964aa89c.ttf") format("truetype");font-display:swap;font-weight:400;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/a5c5808c25effec9.woff") format("woff"), url("/_astro/fonts/792eded6cb3f0350.ttf") format("truetype");font-display:swap;font-weight:500;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/14314705006234cb.woff") format("woff"), url("/_astro/fonts/87d8fc1072d4917b.ttf") format("truetype");font-display:swap;font-weight:600;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/c33265ba093eb291.woff") format("woff"), url("/_astro/fonts/ec883ed4db81a7d9.ttf") format("truetype");font-display:swap;font-weight:700;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/c26ad40d3b1d9169.woff") format("woff"), url("/_astro/fonts/7a5ee0cfcde31b81.ttf") format("truetype");font-display:swap;font-weight:300;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/87ca066ba5b2c7cf.woff") format("woff"), url("/_astro/fonts/f4e25dfe9d6152ec.ttf") format("truetype");font-display:swap;font-weight:400;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/a9a0e80c053be3d5.woff") format("woff"), url("/_astro/fonts/a9df48ecd03749e4.ttf") format("truetype");font-display:swap;font-weight:500;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/da468df88542c99b.woff") format("woff"), url("/_astro/fonts/90f9809471092714.ttf") format("truetype");font-display:swap;font-weight:600;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/f914de358bc554f6.woff") format("woff"), url("/_astro/fonts/dbc9996f99c63e07.ttf") format("truetype");font-display:swap;font-weight:700;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:300;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:400;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:500;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:600;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:700;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:300;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:400;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:500;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:600;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:700;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}:root{--font-google-sans-code:"Google Sans Code-1a30c214885cb404","Google Sans Code-1a30c214885cb404 fallback: Courier New",monospace;}</style><!-- Primary meta --><title>AIGC 视频 Prompt 来源库 | 世傲命的技术博客</title><meta name="title" content="AIGC 视频 Prompt 来源库 | 世傲命的技术博客"><meta name="description" content="以后需要找 AIGC 视频 prompt、动作 prompt、武侠 prompt、Seedance prompt、随机 prompt 灵感时，优先从这个页面检索，而不是每次从零开始搜网页。"><meta name="author" content="世傲命"><link rel="sitemap" href="/sitemap.xml"><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:site_name" content="世傲命的技术博客"><meta property="og:title" content="AIGC 视频 Prompt 来源库 | 世傲命的技术博客"><meta property="og:description" content="以后需要找 AIGC 视频 prompt、动作 prompt、武侠 prompt、Seedance prompt、随机 prompt 灵感时，优先从这个页面检索，而不是每次从零开始搜网页。"><meta property="og:url" content="https://shiaoming123.github.io/learning/aigc/aigc-video-prompt-sources/"><meta property="og:image" content="https://shiaoming123.github.io/default-og.jpg"><!-- Twitter / X --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://shiaoming123.github.io/learning/aigc/aigc-video-prompt-sources/"><meta property="twitter:title" content="AIGC 视频 Prompt 来源库 | 世傲命的技术博客"><meta property="twitter:description" content="以后需要找 AIGC 视频 prompt、动作 prompt、武侠 prompt、Seedance prompt、随机 prompt 灵感时，优先从这个页面检索，而不是每次从零开始搜网页。"><meta property="twitter:image" content="https://shiaoming123.github.io/default-og.jpg"><!-- RSS autodiscovery --><link rel="alternate" type="application/rss+xml" title="世傲命的技术博客" href="https://shiaoming123.github.io/rss.xml/"><!-- Filled at runtime by theme.ts to match the current background colour --><meta name="theme-color" content=""><!-- Extra head content injected by child layouts (e.g. JSON-LD, article meta) -->  <meta property="og:type" content="article"> <meta property="article:published_time" content="2026-06-15T00:00:00.000Z"><meta property="article:modified_time" content="2026-06-15T00:00:00.000Z"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"AIGC 视频 Prompt 来源库 | 世傲命的技术博客","datePublished":"2026-06-15T00:00:00.000Z","dateModified":"2026-06-15T00:00:00.000Z","author":[{"@type":"Person","name":"世傲命","url":"https://github.com/Shiaoming123"}]}</script> <!--
+      Inline FOUC-prevention script: sets data-theme on <html> before
+      the browser paints. Runs synchronously, no defer/async.
+    --><script>
+      (function () {
+        const stored = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        const theme = stored ?? (prefersDark ? "dark" : "light");
+        const root = document.firstElementChild;
+        root?.setAttribute("data-theme", theme);
+        root?.classList.toggle("dark", theme === "dark");
+        // Expose value so theme.ts can skip re-detection.
+        window.__theme = { value: theme };
+      })();
+    </script><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CAqDO0tx.js"></script><link rel="stylesheet" href="/_astro/Footer.DpZjZP1M.css"></head> <body class="bg-background font-app text-foreground selection:bg-accent/75 selection:text-accent-foreground flex min-h-svh flex-col"> <div class="scroll-progress" aria-hidden="true"></div>    <a id="skip-to-content" href="#main-content" class="bg-background text-accent absolute inset-s-16 -top-full z-50 px-3 py-2 backdrop-blur-lg transition-all focus:top-4"> 跳到正文 </a> <header class="app-layout neo-header flex flex-col items-center justify-between sm:flex-row"> <div class="neo-header-bar relative flex w-full items-baseline justify-between py-4 sm:items-center sm:py-5"> <a href="/" class="absolute py-1 text-xl leading-8 font-semibold whitespace-nowrap sm:static sm:my-auto sm:text-2xl sm:leading-none"> 世傲命的技术博客 </a> <nav id="nav-menu" class="flex w-full flex-col items-center sm:ms-2 sm:flex-row sm:justify-end sm:space-x-4 sm:py-0"> <button id="menu-btn" class="focus-outline self-end p-2 sm:hidden" aria-label="打开菜单" aria-expanded="false" aria-controls="menu-items" data-label-open="打开菜单" data-label-close="关闭菜单"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="hidden" viewBox="0 0 24 24" id="close-icon"><path stroke="none" d="M0 0h24v24H0z" /><path d="M18 6 6 18M6 6l12 12" /></svg> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon icon-tabler icons-tabler-outline icon-tabler-menu-deep" viewBox="0 0 24 24" id="menu-icon"><path stroke="none" d="M0 0h24v24H0z" /><path d="M4 6h16M7 12h13M10 18h10" /></svg> </button> <ul id="menu-items" class="neo-nav-list mt-4 hidden w-44 grid-cols-2 place-content-center gap-2 sm:mt-0 sm:flex sm:w-auto"> <li class="col-span-2"> <a href="/posts/"> 文章 </a> </li> <li class="col-span-2"> <a href="/learning/" class="active-nav"> 学习 </a> </li> <li class="col-span-2"> <a href="/demos/"> 演示 </a> </li> <li class="col-span-2"> <a href="/tags/"> 标签 </a> </li> <li class="col-span-2"> <a href="/categories/"> 分类 </a> </li> <li class="col-span-2"> <a href="/about/"> 关于 </a> </li> <li class="col-span-2"> <a href="/changelog/"> 日志 </a> </li> <li class="neo-nav-icon col-span-2"> <a href="/archives/" title="归档" aria-label="归档" class="group inline-flex items-center gap-1 hover:text-accent focus-outline flex size-full justify-center p-3 sm:relative sm:size-9 sm:p-0">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="hidden sm:absolute sm:top-1/2 sm:left-1/2 sm:block sm:size-6 sm:-translate-x-1/2 sm:-translate-y-1/2" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v0a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8M10 12h4" /></svg> <span class="sm:sr-only">归档</span>  </a> </li> <li class="neo-nav-icon col-span-1 flex items-center justify-center"> <a href="/search/" title="搜索" aria-label="搜索" class="group inline-flex items-center gap-1 hover:text-accent focus-outline relative size-9">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-1/2 left-1/2 size-6 -translate-x-1/2 -translate-y-1/2" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 10a7 7 0 1 0 14 0 7 7 0 1 0-14 0M21 21l-6-6" /></svg> <span class="sr-only">搜索</span>  </a> </li> <li class="neo-nav-icon col-span-1 flex items-center justify-center"> <button id="theme-btn" class="focus-outline hover:[&>svg]:stroke-accent relative size-12 p-4 sm:size-9" title="切换主题" aria-label="auto" aria-live="polite"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-[50%] left-[50%] translate-[-50%] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M12 3h.393a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 2.992z" /></svg> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-[50%] left-[50%] translate-[-50%] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M14.828 14.828a4 4 0 1 0-5.656-5.656 4 4 0 0 0 5.656 5.656M6.343 17.657l-1.414 1.414M6.343 6.343 4.929 4.929M17.657 6.343l1.414-1.414M17.657 17.657l1.414 1.414M4 12H2M12 4V2M20 12h2M12 20v2" /></svg> </button> </li> </ul> </nav> </div> </header> <script type="module">function c(){const e=document.querySelector("#menu-btn"),t=document.querySelector("#menu-items"),n=document.querySelector("#menu-icon"),s=document.querySelector("#close-icon");if(!e||!t||!n||!s)return;const a=e.dataset.labelOpen??"Open menu",l=e.dataset.labelClose??"Close menu";e.addEventListener("click",()=>{const o=e.getAttribute("aria-expanded")==="true";e.setAttribute("aria-expanded",o?"false":"true"),e.setAttribute("aria-label",o?a:l),t.classList.toggle("hidden"),t.classList.toggle("grid"),n.classList.toggle("hidden"),s.classList.toggle("hidden")})}c();document.addEventListener("astro:after-swap",c);</script> <nav class="app-layout mt-8 mb-1" aria-label="breadcrumb"> <ul class="font-light [&>li]:inline [&>li:not(:last-child)>a]:hover:opacity-100"> <li> <a href="/" class="opacity-80"> 首页 </a> <span aria-hidden="true" class="opacity-80">&raquo;</span> </li> <li> <a href="/learning/" class="capitalize opacity-70"> 学习 </a> <span aria-hidden="true" class="opacity-70">
+&raquo;
+</span> </li><li> <a href="/learning/aigc/" class="capitalize opacity-70"> aigc </a> <span aria-hidden="true" class="opacity-70">
+&raquo;
+</span> </li><li> <span class="capitalize opacity-75 lowercase" aria-current="page">  aigc-video-prompt-sources </span> </li> </ul> </nav> <main id="main-content" class="app-layout learning-article" data-pagefind-body> <p class="learning-eyebrow">AIGC 创作</p> <h1 class="text-accent inline-block text-2xl font-bold sm:text-3xl"> AIGC 视频 Prompt 来源库 </h1> <div class="my-2 flex flex-wrap items-center gap-2"> <div class="text-muted-foreground flex items-center gap-x-2"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 min-w-5.5" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M4 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zM16 3v4M8 3v4M4 11h16M7 14h.013M10.01 14h.005M13.01 14h.005M16.015 14h.005M13.015 17h.005M7.01 17h.005M10.01 17h.005" /></svg>  <time class="text-sm sm:text-base" datetime="2026-06-15T00:00:00.000Z"> 15 Jun, 2026 </time> </div> <span class="learning-source">来源：wiki/courses/aigc/AIGC视频Prompt来源库.md</span> </div> <article id="article" class="mt-8 w-full app-prose max-w-app prose-pre:bg-(--shiki-light-bg) dark:prose-pre:bg-(--shiki-dark-bg)"> <h2 id="这篇适合谁读">这篇适合谁读</h2>
+<p>这篇适合想系统学习 AIGC 视频创作的人阅读。重点不是堆提示词，而是把来源治理、分镜结构、镜头语言、版权边界和可复用工作流整理成可练习的方法。</p>
+<h2 id="用途">用途</h2>
+<p>以后需要找 AIGC 视频 prompt、动作 prompt、武侠 prompt、Seedance prompt、随机 prompt 灵感时，优先从这个页面检索，而不是每次从零开始搜网页。</p>
+<p>使用顺序：</p>
+<ol>
+<li>先查本页面的“高优先级来源”。</li>
+<li>如果是武侠、国风、水墨、打斗，先看 AIGC 国风武侠打斗 Prompt 拆解。</li>
+<li>如果是通用短片 prompt，先看 Mx-Shell《丧尸清道夫》方法论 和 AIGC 视频 Prompt 模板库。</li>
+<li>如果本页没有，再联网搜索，并把新来源补回本页。</li>
+</ol>
+<h2 id="来源评级">来源评级</h2>
+<p>评级标准：</p>
+<ul>
+<li>A：可作为长期来源库或方法论入口，值得反复查。</li>
+<li>B：有可用 prompt 或案例，但需要筛选、改写或注意版权。</li>
+<li>C：只是线索、二手转述、营销页或单条 prompt，适合发现灵感，不适合作为最终依据。</li>
+</ul>
+<h2 id="高优先级来源">高优先级来源</h2>
+<h3 id="1-jnmetacodeai-shortfilm-prompts">1. jnMetaCode/ai-shortfilm-prompts</h3>
+<p>链接：<a href="https://github.com/jnMetaCode/ai-shortfilm-prompts">https://github.com/jnMetaCode/ai-shortfilm-prompts</a></p>
+<p>评级：A</p>
+<p>用途：</p>
+<ul>
+<li>学 Mx-Shell《丧尸清道夫》公开方法论。</li>
+<li>查 AI 短片 5 段式 prompt 结构。</li>
+<li>查多分镜叙事、变身、机甲、打斗、赛博武侠等案例。</li>
+</ul>
+<p>适用任务：</p>
+<ul>
+<li>写电影感短片 prompt。</li>
+<li>把想法拆成分镜。</li>
+<li>降低 AI 味、塑料感和 CG 感。</li>
+<li>做自己的 AIGC 视频 skill。</li>
+</ul>
+<p>边界：</p>
+<ul>
+<li>方法论、模板、Skill 可复用。</li>
+<li><code>prompts/</code> 里的原始提示词归 Mx-Shell，学习结构，不要公开搬运全文或商业再发布。</li>
+</ul>
+<h3 id="2-opennana-雾山五行风格燃向水墨武侠激战">2. OpenNana 雾山五行风格燃向水墨武侠激战</h3>
+<p>链接：<a href="https://opennana.com/awesome-prompt-gallery/fog-hills-ink-martial-arts-battle">https://opennana.com/awesome-prompt-gallery/fog-hills-ink-martial-arts-battle</a></p>
+<p>评级：B+</p>
+<p>用途：</p>
+<ul>
+<li>当前最直接命中“雾山五行 / 水墨武侠 / 激烈打斗 prompt”的页面。</li>
+<li>已拆成五个镜头：开场武器对撞、高速攻防、近身搏杀、大招对轰、僵持定格。</li>
+</ul>
+<p>适用任务：</p>
+<ul>
+<li>学国风水墨动作 prompt 的镜头结构。</li>
+<li>提炼“武器碰撞、墨气、速度线、冲击波、势均力敌”的表达。</li>
+</ul>
+<p>边界：</p>
+<ul>
+<li>页面直接使用“雾山五行”字样。用于学习和私下测试可以，正式产出应改成“硬边水墨国风动画、凌厉线条、高对比红黑色调”等通用描述。</li>
+</ul>
+<h3 id="3-huyle82usawesome-seedance-prompts">3. HuyLe82US/awesome-seedance-prompts</h3>
+<p>链接：<a href="https://github.com/HuyLe82US/awesome-seedance-prompts">https://github.com/HuyLe82US/awesome-seedance-prompts</a></p>
+<p>评级：A-</p>
+<p>用途：</p>
+<ul>
+<li>Seedance prompt vault，包含 Action &#x26; Fight 分类。</li>
+<li>其中 <code>Bamboo Run: Duel at Dusk</code> 是竹林武侠决斗案例，适合学习“压迫氛围 -> 同时冲刺 -> 武器交锋 -> 竹叶/雨水受力反馈 -> 背对背落地”的动作结构。</li>
+</ul>
+<p>适用任务：</p>
+<ul>
+<li>找动作 / 打斗 / 竹林武侠 / 高速运镜 prompt。</li>
+<li>抽象动作场景的镜头节奏和物理反馈。</li>
+</ul>
+<p>边界：</p>
+<ul>
+<li>部分案例来自 X 用户，二次使用要保留来源意识。学习结构，改写角色和场景。</li>
+</ul>
+<h3 id="4-songguoxsseedance-prompt-skill">4. songguoxs/seedance-prompt-skill</h3>
+<p>链接：<a href="https://github.com/songguoxs/seedance-prompt-skill">https://github.com/songguoxs/seedance-prompt-skill</a></p>
+<p>评级：A-</p>
+<p>用途：</p>
+<ul>
+<li>Claude Code Skill，专为 Seedance 2.0 生成视频提示词。</li>
+<li>示例包含“仙侠战斗 15 秒横屏”，按时间段写动作、镜头、音效。</li>
+</ul>
+<p>适用任务：</p>
+<ul>
+<li>写中文 Seedance prompt。</li>
+<li>参考 skill 的交互流程：确认时长、比例、参考素材、风格偏好，再给 2-3 个版本。</li>
+</ul>
+<p>边界：</p>
+<ul>
+<li>可作为 skill 结构参考，不必照搬其示例内容。</li>
+</ul>
+<h3 id="5-mapleshawseedance20-prompt-skill">5. MapleShaw/seedance2.0-prompt-skill</h3>
+<p>链接：<a href="https://github.com/MapleShaw/seedance2.0-prompt-skill">https://github.com/MapleShaw/seedance2.0-prompt-skill</a></p>
+<p>评级：A-</p>
+<p>用途：</p>
+<ul>
+<li>更系统的 Seedance 2.0 Skill。</li>
+<li>包含相机四维编码、长视频生产流水线、素材剪辑节奏、角色卡/首帧图/关键帧图提示词规范。</li>
+</ul>
+<p>适用任务：</p>
+<ul>
+<li>做长视频分段。</li>
+<li>设计角色卡、关键帧、首尾帧。</li>
+<li>处理素材剪辑和风格统一。</li>
+</ul>
+<p>边界：</p>
+<ul>
+<li>更偏平台工程化，不是武侠专用。</li>
+</ul>
+<h3 id="6-dexhunterseedance2-skill">6. dexhunter/seedance2-skill</h3>
+<p>链接：<a href="https://github.com/dexhunter/seedance2-skill">https://github.com/dexhunter/seedance2-skill</a></p>
+<p>评级：A-</p>
+<p>用途：</p>
+<ul>
+<li>Seedance 2.0 多模态 prompt skill。</li>
+<li>重点讲 <code>@图片</code>、<code>@视频</code>、<code>@音频</code> 引用语法。</li>
+<li>对“上传武侠打斗参考视频，只复刻运镜和动作节奏”很有价值。</li>
+</ul>
+<p>适用任务：</p>
+<ul>
+<li>根据参考图保持角色一致。</li>
+<li>根据参考视频复刻动作、运镜、节奏。</li>
+<li>根据音频做卡点或音效控制。</li>
+</ul>
+<p>边界：</p>
+<ul>
+<li>如引用受版权保护的视频，正式产出要避免复刻具体角色、镜头和可识别 IP 表达。</li>
+</ul>
+<h2 id="大型-prompt-池">大型 prompt 池</h2>
+<h3 id="7-youmind-openlabawesome-seedance-2-prompts">7. YouMind-OpenLab/awesome-seedance-2-prompts</h3>
+<p>链接：<a href="https://github.com/YouMind-OpenLab/awesome-seedance-2-prompts">https://github.com/YouMind-OpenLab/awesome-seedance-2-prompts</a></p>
+<p>评级：B+</p>
+<p>用途：</p>
+<ul>
+<li>大规模 Seedance prompt 库，号称 2000+ prompt。</li>
+<li>覆盖 cinematic、anime、UGC、ads、meme 等。</li>
+</ul>
+<p>适用任务：</p>
+<ul>
+<li>随机找灵感。</li>
+<li>搜 action、anime、wuxia、fight、battle 等关键词。</li>
+<li>批量观察不同类型 prompt 的结构。</li>
+</ul>
+<p>边界：</p>
+<ul>
+<li>量大但噪声也高，需要人工筛。</li>
+</ul>
+<h3 id="8-hiapiaiawesome-seedance-2-0-prompts">8. HiAPIAI/awesome-seedance-2-0-prompts</h3>
+<p>链接：<a href="https://github.com/HiAPIAI/awesome-seedance-2-0-prompts">https://github.com/HiAPIAI/awesome-seedance-2-0-prompts</a></p>
+<p>评级：B</p>
+<p>用途：</p>
+<ul>
+<li>163 个 Seedance 2.0 视频 prompt 示例。</li>
+<li>带 OpenAI-compatible HiAPI 请求格式，适合 agent 或 API 集成参考。</li>
+</ul>
+<p>适用任务：</p>
+<ul>
+<li>查可 API 化的 prompt 写法。</li>
+<li>看 prompt 与生成结果如何组织成数据集。</li>
+</ul>
+<p>边界：</p>
+<ul>
+<li>不是武侠专项，按类别筛选。</li>
+</ul>
+<h3 id="9-atlas-cloud-seedance-2-prompt-library">9. Atlas Cloud Seedance 2 Prompt Library</h3>
+<p>链接：<a href="https://www.atlascloud.ai/prompts-hub/seedance-2-prompt">https://www.atlascloud.ai/prompts-hub/seedance-2-prompt</a></p>
+<p>评级：B</p>
+<p>用途：</p>
+<ul>
+<li>线上 prompt gallery，显示有 1000+ Seedance prompt。</li>
+<li>有 Action、Anime、Cinematic 等分类。</li>
+</ul>
+<p>适用任务：</p>
+<ul>
+<li>快速找 action / anime / fantasy / cinematic 灵感。</li>
+<li>查参考资产 <code>@mentions</code> 的使用方式。</li>
+</ul>
+<p>边界：</p>
+<ul>
+<li>网页库，非 GitHub 项目；需要手工筛选和记录来源。</li>
+</ul>
+<h2 id="官方或半官方指南">官方或半官方指南</h2>
+<h3 id="10-hunyuanvideo-15-prompt-handbook">10. HunyuanVideo 1.5 Prompt Handbook</h3>
+<p>链接：<a href="https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5/blob/main/assets/HunyuanVideo_1_5_Prompt_Handbook_EN.md">https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5/blob/main/assets/HunyuanVideo_1_5_Prompt_Handbook_EN.md</a></p>
+<p>评级：A-</p>
+<p>用途：</p>
+<ul>
+<li>腾讯混元视频官方 prompt handbook。</li>
+<li>公式包含主体、动作、场景、景别、运镜、灯光、风格、氛围。</li>
+</ul>
+<p>适用任务：</p>
+<ul>
+<li>建立跨模型通用 prompt 框架。</li>
+<li>把 Seedance 经验迁移到 HunyuanVideo 或其他视频模型。</li>
+</ul>
+<p>边界：</p>
+<ul>
+<li>英文官方指南，模型特性不同，不能直接套 Seedance 参数。</li>
+</ul>
+<h3 id="11-阿里云百炼--万相-文生视频-prompt-指南">11. 阿里云百炼 / 万相 文生视频 Prompt 指南</h3>
+<p>链接：<a href="https://help.aliyun.com/zh/model-studio/text-to-video-prompt">https://help.aliyun.com/zh/model-studio/text-to-video-prompt</a></p>
+<p>评级：A-</p>
+<p>用途：</p>
+<ul>
+<li>官方文生视频 / 图生视频 prompt 指南。</li>
+<li>适合建立最基础的结构化公式：主体、情境、运动。</li>
+</ul>
+<p>适用任务：</p>
+<ul>
+<li>初学者 prompt 基础。</li>
+<li>对照不同平台的 prompt 结构差异。</li>
+</ul>
+<p>边界：</p>
+<ul>
+<li>偏基础和平台文档，不提供复杂武侠打斗拆解。</li>
+</ul>
+<h2 id="低优先级或只作线索">低优先级或只作线索</h2>
+<h3 id="短视频平台x公众号新闻拆解">短视频平台、X、公众号、新闻拆解</h3>
+<p>评级：C</p>
+<p>用途：</p>
+<ul>
+<li>找热门案例、爆款方向、短期灵感。</li>
+<li>例如“AI 视频打斗画面软绵无力”“Seedance 2.0 测评”“国漫水墨打斗热梗视频拆解”等。</li>
+</ul>
+<p>边界：</p>
+<ul>
+<li>多为二手转述或营销内容。</li>
+<li>可能含未授权 IP、热梗、搬运 prompt。</li>
+<li>不作为最终事实依据，不直接复制。</li>
+</ul>
+<h2 id="检索关键词">检索关键词</h2>
+<p>中文：</p>
+<ul>
+<li>Seedance 武侠 打斗 prompt</li>
+<li>即梦 仙侠 战斗 提示词</li>
+<li>雾山五行 AI 视频 提示词</li>
+<li>水墨武侠 打斗 AI 视频</li>
+<li>国漫水墨 打斗 prompt</li>
+<li>AI 视频 动作分镜 提示词</li>
+</ul>
+<p>英文：</p>
+<ul>
+<li>Seedance wuxia fight prompt</li>
+<li>AI video martial arts prompt</li>
+<li>cinematic fight choreography prompt</li>
+<li>anime action fight Seedance prompt</li>
+<li>ink martial arts video prompt</li>
+<li>action fight prompt video generation</li>
+</ul>
+<h2 id="以后新增来源时的记录字段">以后新增来源时的记录字段</h2>
+<pre class="astro-code astro-code-themes min-light night-owl" style="--shiki-light:#24292eff;--shiki-dark:#d6deeb;--shiki-light-bg:#ffffff;--shiki-dark-bg:#011627; overflow-x: auto;--file-name-offset: -0.75rem;" tabindex="0" data-language="yaml"><code><span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">name</span><span style="--shiki-light:#D32F2F;--shiki-dark:#D6DEEB">:</span></span>
+<span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">url</span><span style="--shiki-light:#D32F2F;--shiki-dark:#D6DEEB">:</span></span>
+<span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">type</span><span style="--shiki-light:#D32F2F;--shiki-dark:#D6DEEB">:</span><span style="--shiki-light:#22863A;--shiki-dark:#ECC48D"> repo | gallery | official-doc | video | article | social-post</span></span>
+<span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">topic</span><span style="--shiki-light:#D32F2F;--shiki-dark:#D6DEEB">:</span><span style="--shiki-light:#22863A;--shiki-dark:#ECC48D"> action | wuxia | anime | cinematic | workflow | platform-doc</span></span>
+<span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">priority</span><span style="--shiki-light:#D32F2F;--shiki-dark:#D6DEEB">:</span><span style="--shiki-light:#22863A;--shiki-dark:#ECC48D"> A | B | C</span></span>
+<span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">license_or_boundary</span><span style="--shiki-light:#D32F2F;--shiki-dark:#D6DEEB">:</span></span>
+<span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">best_for</span><span style="--shiki-light:#D32F2F;--shiki-dark:#D6DEEB">:</span></span>
+<span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">notes</span><span style="--shiki-light:#D32F2F;--shiki-dark:#D6DEEB">:</span></span>
+<span class="line"><span style="--shiki-light:#D32F2F;--shiki-dark:#7FDBCA">last_checked</span><span style="--shiki-light:#D32F2F;--shiki-dark:#D6DEEB">:</span></span></code></pre>
+<h2 id="使用守则">使用守则</h2>
+<ul>
+<li>从来源库找结构，不照搬 IP。</li>
+<li>优先抽象成“动作、运镜、材质、节奏、物理反馈”。</li>
+<li>对明确带有“雾山五行”等作品名的 prompt，改成通用风格描述。</li>
+<li>对社交平台 prompt，默认只当线索，除非能追到原作者或原始仓库。</li>
+<li>生成自己的作品时建立原创角色、原创场景和原创招式。</li>
+</ul> </article> <ul class="learning-tags" aria-label="学习标签"> <li>#AIGC</li><li>#AI视频</li><li>#Prompt来源</li><li>#来源治理</li><li>#Seedance</li><li>#AI 视频</li> </ul> </main> <footer class="app-layout mt-auto"> <div class="border-border flex flex-col items-center justify-between border-t py-6 sm:flex-row-reverse sm:py-4"> <div class="flex flex-wrap items-center gap-1"> <a href="https://github.com/Shiaoming123" title="世傲命的技术博客 on Github" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21" /></svg> <span class="sr-only">世傲命的技术博客 on Github</span>  </a><a href="mailto:2405360475@qq.com" title="Send an email to 世傲命的技术博客" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><path d="m3 7 9 6 9-6" /></svg> <span class="sr-only">Send an email to 世傲命的技术博客</span>  </a> </div> <div class="my-2 flex flex-col items-center whitespace-nowrap sm:flex-row"> <span>Copyright &#169; 2026</span> <span class="hidden sm:inline">&nbsp;|&nbsp;</span> <span>All rights reserved.</span> </div> </div> </footer>   <script type="module">function l(){const n=window;n.__scrollMotionCleanup?.();const i=document.documentElement,c=document.querySelector(".scroll-progress"),d=window.matchMedia("(prefers-reduced-motion: reduce)").matches;let t;const e=()=>{if(!c)return;const r=i.scrollHeight-window.innerHeight,o=r>0?window.scrollY/r:0;c.style.setProperty("--scroll-progress",Math.min(1,Math.max(0,o)).toString())};if(e(),window.addEventListener("scroll",e,{passive:!0}),window.addEventListener("resize",e),!d){i.classList.add("scroll-motion-ready");const r=document.querySelectorAll("[data-scroll-reveal]");t=new IntersectionObserver(o=>{o.forEach(s=>{s.isIntersecting&&(s.target.classList.add("is-visible"),t?.unobserve(s.target))})},{rootMargin:"0px 0px -12% 0px",threshold:.12}),r.forEach(o=>t?.observe(o))}n.__scrollMotionCleanup=()=>{window.removeEventListener("scroll",e),window.removeEventListener("resize",e),t?.disconnect()}}l();document.addEventListener("astro:after-swap",l);</script> <script type="module">const c="theme",r="light",n="dark";function s(){const e=localStorage.getItem(c);return e||(window.matchMedia("(prefers-color-scheme: dark)").matches?n:r)}let t=window.__theme?.value??s();function a(){localStorage.setItem(c,t),m()}function m(){const e=document.firstElementChild;e?.setAttribute("data-theme",t),e?.classList.toggle("dark",t===n),document.querySelector("#theme-btn")?.setAttribute("aria-label",t);const o=window.getComputedStyle(document.body).backgroundColor;document.querySelector("meta[name='theme-color']")?.setAttribute("content",o)}function d(){m(),document.querySelector("#theme-btn")?.addEventListener("click",()=>{t=t===r?n:r,a()})}d();document.addEventListener("astro:after-swap",d);document.addEventListener("astro:before-swap",e=>{const o=document.querySelector("meta[name='theme-color']")?.getAttribute("content");o&&e.newDocument.querySelector("meta[name='theme-color']")?.setAttribute("content",o)});window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",({matches:e})=>{t=e?n:r,a()});</script> <script type="module" src="/_astro/Layout.astro_astro_type_script_index_2_lang.DbpMnSYv.js"></script> </body> </html> <script data-astro-rerun>
+  function addHeadingLinks() {
+    const headings = Array.from(
+      document.querySelectorAll("#article h2, #article h3, #article h4")
+    );
+    for (const heading of headings) {
+      if (!heading.id || heading.querySelector(".heading-link")) continue;
+      heading.classList.add("group");
+      const link = document.createElement("a");
+      link.className =
+        "heading-link ms-2 no-underline opacity-75 md:opacity-0 md:group-hover:opacity-100 md:focus:opacity-100";
+      link.href = "#" + heading.id;
+      link.textContent = "#";
+      heading.appendChild(link);
+    }
+  }
+
+  function attachCopyButtons() {
+    for (const codeBlock of Array.from(document.querySelectorAll("pre"))) {
+      if (codeBlock.dataset.language === "mermaid") continue;
+      if (codeBlock.querySelector(".copy-code")) continue;
+      const button = document.createElement("button");
+      button.className =
+        "copy-code absolute end-3 -top-3 rounded bg-muted border border-muted px-2 py-1 text-xs leading-4 text-foreground font-medium";
+      button.textContent = "Copy";
+      codeBlock.style.position = "relative";
+      codeBlock.setAttribute("tabindex", "0");
+      codeBlock.appendChild(button);
+      button.addEventListener("click", async () => {
+        const text = codeBlock.querySelector("code")?.innerText ?? "";
+        await navigator.clipboard.writeText(text);
+        button.textContent = "Copied";
+        setTimeout(() => (button.textContent = "Copy"), 700);
+      });
+    }
+  }
+
+  addHeadingLinks();
+  attachCopyButtons();
+</script>
