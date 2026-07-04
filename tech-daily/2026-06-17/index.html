@@ -1,0 +1,510 @@
+<!DOCTYPE html><html dir="ltr" lang="zh-CN" class="overflow-y-scroll scroll-smooth"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="canonical" href="https://shiaoming123.github.io/tech-daily/2026-06-17/"><meta name="generator" content="Astro v6.4.8"><!-- Font --><style>@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/02154cca78ac33f2.woff") format("woff"), url("/_astro/fonts/478e42e4694872ef.ttf") format("truetype");font-display:swap;font-weight:300;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/3a32a7a7a67f4f58.woff") format("woff"), url("/_astro/fonts/0863f4f6964aa89c.ttf") format("truetype");font-display:swap;font-weight:400;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/a5c5808c25effec9.woff") format("woff"), url("/_astro/fonts/792eded6cb3f0350.ttf") format("truetype");font-display:swap;font-weight:500;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/14314705006234cb.woff") format("woff"), url("/_astro/fonts/87d8fc1072d4917b.ttf") format("truetype");font-display:swap;font-weight:600;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/c33265ba093eb291.woff") format("woff"), url("/_astro/fonts/ec883ed4db81a7d9.ttf") format("truetype");font-display:swap;font-weight:700;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/c26ad40d3b1d9169.woff") format("woff"), url("/_astro/fonts/7a5ee0cfcde31b81.ttf") format("truetype");font-display:swap;font-weight:300;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/87ca066ba5b2c7cf.woff") format("woff"), url("/_astro/fonts/f4e25dfe9d6152ec.ttf") format("truetype");font-display:swap;font-weight:400;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/a9a0e80c053be3d5.woff") format("woff"), url("/_astro/fonts/a9df48ecd03749e4.ttf") format("truetype");font-display:swap;font-weight:500;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/da468df88542c99b.woff") format("woff"), url("/_astro/fonts/90f9809471092714.ttf") format("truetype");font-display:swap;font-weight:600;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/f914de358bc554f6.woff") format("woff"), url("/_astro/fonts/dbc9996f99c63e07.ttf") format("truetype");font-display:swap;font-weight:700;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:300;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:400;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:500;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:600;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:700;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:300;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:400;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:500;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:600;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:700;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}:root{--font-google-sans-code:"Google Sans Code-1a30c214885cb404","Google Sans Code-1a30c214885cb404 fallback: Courier New",monospace;}</style><!-- Primary meta --><title>科技日报 — 2026-06-17 | 世傲命的技术博客</title><meta name="title" content="科技日报 — 2026-06-17 | 世傲命的技术博客"><meta name="description" content="Anthropic 于 6 月 9 日发布 Claude Fable 5（Mythos 级模型），6 月 12 日即被美国政府以出口管制为由要求下线，Anthropic 无法实时识别外国公民，将两模型在全球范围内暂停访问。"><meta name="author" content="世傲命"><link rel="sitemap" href="/sitemap.xml"><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:site_name" content="世傲命的技术博客"><meta property="og:title" content="科技日报 — 2026-06-17 | 世傲命的技术博客"><meta property="og:description" content="Anthropic 于 6 月 9 日发布 Claude Fable 5（Mythos 级模型），6 月 12 日即被美国政府以出口管制为由要求下线，Anthropic 无法实时识别外国公民，将两模型在全球范围内暂停访问。"><meta property="og:url" content="https://shiaoming123.github.io/tech-daily/2026-06-17/"><meta property="og:image" content="https://shiaoming123.github.io/default-og.jpg"><!-- Twitter / X --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://shiaoming123.github.io/tech-daily/2026-06-17/"><meta property="twitter:title" content="科技日报 — 2026-06-17 | 世傲命的技术博客"><meta property="twitter:description" content="Anthropic 于 6 月 9 日发布 Claude Fable 5（Mythos 级模型），6 月 12 日即被美国政府以出口管制为由要求下线，Anthropic 无法实时识别外国公民，将两模型在全球范围内暂停访问。"><meta property="twitter:image" content="https://shiaoming123.github.io/default-og.jpg"><!-- RSS autodiscovery --><link rel="alternate" type="application/rss+xml" title="世傲命的技术博客" href="https://shiaoming123.github.io/rss.xml/"><!-- Filled at runtime by theme.ts to match the current background colour --><meta name="theme-color" content=""><!-- Extra head content injected by child layouts (e.g. JSON-LD, article meta) -->  <meta property="og:type" content="article"> <meta property="article:published_time" content="2026-06-17T00:00:00.000Z"><meta property="article:modified_time" content="2026-06-17T00:00:00.000Z"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"科技日报 — 2026-06-17 | 世傲命的技术博客","datePublished":"2026-06-17T00:00:00.000Z","dateModified":"2026-06-17T00:00:00.000Z","author":[{"@type":"Person","name":"世傲命","url":"https://github.com/Shiaoming123"}]}</script> <!--
+      Inline FOUC-prevention script: sets data-theme on <html> before
+      the browser paints. Runs synchronously, no defer/async.
+    --><script>
+      (function () {
+        const stored = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        const theme = stored ?? (prefersDark ? "dark" : "light");
+        const root = document.firstElementChild;
+        root?.setAttribute("data-theme", theme);
+        root?.classList.toggle("dark", theme === "dark");
+        // Expose value so theme.ts can skip re-detection.
+        window.__theme = { value: theme };
+      })();
+    </script><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CAqDO0tx.js"></script><link rel="stylesheet" href="/_astro/PostLayout.g8X8u49B.css"><link rel="stylesheet" href="/_astro/Footer.BPelsM4Z.css"></head> <body class="bg-background font-app text-foreground selection:bg-accent/75 selection:text-accent-foreground flex min-h-svh flex-col"> <div class="scroll-progress" aria-hidden="true"></div>    <a id="skip-to-content" href="#main-content" class="bg-background text-accent absolute inset-s-16 -top-full z-50 px-3 py-2 backdrop-blur-lg transition-all focus:top-4"> 跳到正文 </a> <header class="app-layout neo-header flex flex-col items-center justify-between sm:flex-row"> <div class="neo-header-bar relative flex w-full items-baseline justify-between py-4 sm:items-center sm:py-5"> <a href="/" class="absolute py-1 text-xl leading-8 font-semibold whitespace-nowrap sm:static sm:my-auto sm:text-2xl sm:leading-none"> 世傲命的技术博客 </a> <nav id="nav-menu" class="flex w-full flex-col items-center sm:ms-2 sm:flex-row sm:justify-end sm:space-x-4 sm:py-0"> <button id="menu-btn" class="focus-outline self-end p-2 sm:hidden" aria-label="打开菜单" aria-expanded="false" aria-controls="menu-items" data-label-open="打开菜单" data-label-close="关闭菜单"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="hidden" viewBox="0 0 24 24" id="close-icon"><path stroke="none" d="M0 0h24v24H0z" /><path d="M18 6 6 18M6 6l12 12" /></svg> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon icon-tabler icons-tabler-outline icon-tabler-menu-deep" viewBox="0 0 24 24" id="menu-icon"><path stroke="none" d="M0 0h24v24H0z" /><path d="M4 6h16M7 12h13M10 18h10" /></svg> </button> <ul id="menu-items" class="neo-nav-list mt-4 hidden w-44 grid-cols-2 place-content-center gap-2 sm:mt-0 sm:flex sm:w-auto"> <li class="col-span-2"> <a href="/posts/"> 文章 </a> </li> <li class="col-span-2"> <a href="/learning/"> 学习 </a> </li> <li class="col-span-2"> <a href="/diary-report/"> 机会日报 </a> </li> <li class="col-span-2"> <a href="/tech-daily/" class="active-nav"> 科技日报 </a> </li> <li class="col-span-2"> <a href="/bookmarks/"> 资源 </a> </li> <li class="col-span-2"> <a href="/arena/"> Arena </a> </li> <li class="col-span-2"> <a href="/demos/"> 演示 </a> </li> <li class="col-span-2"> <a href="/taxonomy/"> 分类与标签 </a> </li> <li class="col-span-2"> <a href="/about/"> 关于 </a> </li> <li class="col-span-2"> <a href="/changelog/"> 日志 </a> </li> <li class="neo-nav-icon col-span-2"> <a href="/archives/" title="归档" aria-label="归档" class="group inline-flex items-center gap-1 hover:text-accent focus-outline flex size-full justify-center p-3 sm:relative sm:size-9 sm:p-0">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="hidden sm:absolute sm:top-1/2 sm:left-1/2 sm:block sm:size-6 sm:-translate-x-1/2 sm:-translate-y-1/2" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v0a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8M10 12h4" /></svg> <span class="sm:sr-only">归档</span>  </a> </li> <li class="neo-nav-icon col-span-1 flex items-center justify-center"> <a href="/search/" title="搜索" aria-label="搜索" class="group inline-flex items-center gap-1 hover:text-accent focus-outline relative size-9">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-1/2 left-1/2 size-6 -translate-x-1/2 -translate-y-1/2" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 10a7 7 0 1 0 14 0 7 7 0 1 0-14 0M21 21l-6-6" /></svg> <span class="sr-only">搜索</span>  </a> </li> <li class="neo-nav-icon col-span-1 flex items-center justify-center"> <button id="theme-btn" class="focus-outline hover:[&>svg]:stroke-accent relative size-12 p-4 sm:size-9" title="切换主题" aria-label="auto" aria-live="polite"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-[50%] left-[50%] translate-[-50%] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M12 3h.393a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 2.992z" /></svg> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-[50%] left-[50%] translate-[-50%] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M14.828 14.828a4 4 0 1 0-5.656-5.656 4 4 0 0 0 5.656 5.656M6.343 17.657l-1.414 1.414M6.343 6.343 4.929 4.929M17.657 6.343l1.414-1.414M17.657 17.657l1.414 1.414M4 12H2M12 4V2M20 12h2M12 20v2" /></svg> </button> </li> </ul> </nav> </div> </header> <script type="module">function c(){const e=document.querySelector("#menu-btn"),t=document.querySelector("#menu-items"),n=document.querySelector("#menu-icon"),s=document.querySelector("#close-icon");if(!e||!t||!n||!s)return;const a=e.dataset.labelOpen??"Open menu",l=e.dataset.labelClose??"Close menu";e.addEventListener("click",()=>{const o=e.getAttribute("aria-expanded")==="true";e.setAttribute("aria-expanded",o?"false":"true"),e.setAttribute("aria-label",o?a:l),t.classList.toggle("hidden"),t.classList.toggle("grid"),n.classList.toggle("hidden"),s.classList.toggle("hidden")})}c();document.addEventListener("astro:after-swap",c);</script> <nav class="app-layout mt-8 mb-1" aria-label="breadcrumb"> <ul class="font-light [&>li]:inline [&>li:not(:last-child)>a]:hover:opacity-100"> <li> <a href="/" class="opacity-80"> 首页 </a> <span aria-hidden="true" class="opacity-80">&raquo;</span> </li> <li> <a href="/tech-daily/" class="capitalize opacity-70"> 科技日报 </a> <span aria-hidden="true" class="opacity-70">
+&raquo;
+</span> </li><li> <span class="capitalize opacity-75 lowercase" aria-current="page">  2026-06-17 </span> </li> </ul> </nav> <main id="main-content" class="article-shell daily-article daily-article--tech" data-pagefind-body> <div class="reading-content article-main"> <p class="daily-kicker">Tech Signal Stream</p> <h1 class="text-accent inline-block text-2xl font-bold sm:text-3xl"> 科技日报 — 2026-06-17 </h1> <div class="my-2 flex flex-wrap items-center gap-2"> <div class="text-muted-foreground flex items-center gap-x-2"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 min-w-5.5" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M4 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zM16 3v4M8 3v4M4 11h16M7 14h.013M10.01 14h.005M13.01 14h.005M16.015 14h.005M13.015 17h.005M7.01 17h.005M10.01 17h.005" /></svg>  <time class="text-sm sm:text-base" datetime="2026-06-17T00:00:00.000Z"> 17 Jun, 2026 </time> </div> <span class="daily-source">来源：wiki/tech-daily/2026-06-17.md</span> </div> <section class="article-guide" aria-label="本文导览" data-pagefind-ignore> <p class="article-guide-label">本文导览</p> <nav class="article-toc article-toc-inline" data-pagefind-ignore aria-label="本文目录" data-astro-cid-u3rwxgrt><details data-astro-cid-u3rwxgrt><summary data-astro-cid-u3rwxgrt><span data-astro-cid-u3rwxgrt>本文目录</span><strong data-astro-cid-u3rwxgrt>23 个小节</strong></summary><ol data-astro-cid-u3rwxgrt><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-今日头条5-个最重磅的" data-toc-target="-今日头条5-个最重磅的" data-astro-cid-u3rwxgrt>🔥 今日头条（5 个最重磅的）</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#1-claude-fable-5-遭美国政府出口管制全球下线" data-toc-target="1-claude-fable-5-遭美国政府出口管制全球下线" data-astro-cid-u3rwxgrt>1. Claude Fable 5 遭美国政府出口管制，全球下线</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#2-openai-提交-ipo-秘密招股书美国政府讨论持股计划" data-toc-target="2-openai-提交-ipo-秘密招股书美国政府讨论持股计划" data-astro-cid-u3rwxgrt>2. OpenAI 提交 IPO 秘密招股书，美国政府讨论持股计划</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#3-月之暗面-kimi-k27-code-开源发布编程-agent-赛道白热化" data-toc-target="3-月之暗面-kimi-k27-code-开源发布编程-agent-赛道白热化" data-astro-cid-u3rwxgrt>3. 月之暗面 Kimi K2.7 Code 开源发布，编程 Agent 赛道白热化</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#4-极佳视界完成-10-亿元-b2-轮融资三个月-35-亿成世界模型独角兽" data-toc-target="4-极佳视界完成-10-亿元-b2-轮融资三个月-35-亿成世界模型独角兽" data-astro-cid-u3rwxgrt>4. 极佳视界完成 10 亿元 B2 轮融资，三个月 35 亿成世界模型独角兽</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#5-spacex-上市首日飙升-30马斯克成全球首位万亿富翁" data-toc-target="5-spacex-上市首日飙升-30马斯克成全球首位万亿富翁" data-astro-cid-u3rwxgrt>5. SpaceX 上市首日飙升 30%，马斯克成全球首位万亿富翁</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-ai-进展5-个" data-toc-target="-ai-进展5-个" data-astro-cid-u3rwxgrt>🤖 AI 进展（5 个）</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#1-huggingface-ceo-力荐1500-美元训出的-hrm-模型" data-toc-target="1-huggingface-ceo-力荐1500-美元训出的-hrm-模型" data-astro-cid-u3rwxgrt>1. HuggingFace CEO 力荐：1500 美元训出的 HRM 模型</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#2-fable-5-引发-ai-开发范式反思skill-和-prompt-都白学了" data-toc-target="2-fable-5-引发-ai-开发范式反思skill-和-prompt-都白学了" data-astro-cid-u3rwxgrt>2. Fable 5 引发 AI 开发范式反思：Skill 和 Prompt 都白学了？</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#3-清华团队提出全球气候模态统一预测模型-unicm登-nature-子刊" data-toc-target="3-清华团队提出全球气候模态统一预测模型-unicm登-nature-子刊" data-astro-cid-u3rwxgrt>3. 清华团队提出全球气候模态统一预测模型 UniCM，登 Nature 子刊</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#4-fox-以-220-亿收购-roku-流媒体平台" data-toc-target="4-fox-以-220-亿收购-roku-流媒体平台" data-astro-cid-u3rwxgrt>4. Fox 以 $220 亿收购 Roku 流媒体平台</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#5-联想为-2026-世界杯提供-ai-视频增强与-3d-球员模型" data-toc-target="5-联想为-2026-世界杯提供-ai-视频增强与-3d-球员模型" data-astro-cid-u3rwxgrt>5. 联想为 2026 世界杯提供 AI 视频增强与 3D 球员模型</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-开发者工具5-个" data-toc-target="-开发者工具5-个" data-astro-cid-u3rwxgrt>💻 开发者/工具（5 个）</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#1-kimi-k27-code--开源编程-agent-模型" data-toc-target="1-kimi-k27-code--开源编程-agent-模型" data-astro-cid-u3rwxgrt>1. Kimi K2.7 Code — 开源编程 Agent 模型</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#3-typst-0150-发布" data-toc-target="3-typst-0150-发布" data-astro-cid-u3rwxgrt>3. Typst 0.15.0 发布</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#4-apple-foundation-models--claude-接入苹果原生框架" data-toc-target="4-apple-foundation-models--claude-接入苹果原生框架" data-astro-cid-u3rwxgrt>4. Apple Foundation Models — Claude 接入苹果原生框架</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#5-phoenix-liveview-12-发布" data-toc-target="5-phoenix-liveview-12-发布" data-astro-cid-u3rwxgrt>5. Phoenix LiveView 1.2 发布</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-社区热议3-条" data-toc-target="-社区热议3-条" data-astro-cid-u3rwxgrt>💬 社区热议（3 条）</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#1--ai-agent-花光了运营商的钱只为了扫描-dn42-网络" data-toc-target="1--ai-agent-花光了运营商的钱只为了扫描-dn42-网络" data-astro-cid-u3rwxgrt>1. 📌 AI Agent 花光了运营商的钱，只为了扫描 DN42 网络</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#2--kimi-k27-code-能否替代-claude-code--codex" data-toc-target="2--kimi-k27-code-能否替代-claude-code--codex" data-astro-cid-u3rwxgrt>2. 📌 Kimi K2.7 Code 能否替代 Claude Code / Codex？</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#3--dont-trust-large-context-windows不要相信大上下文窗口" data-toc-target="3--dont-trust-large-context-windows不要相信大上下文窗口" data-astro-cid-u3rwxgrt>3. 📌 Don’t trust large context windows（不要相信大上下文窗口）</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-一句话快讯8-条" data-toc-target="-一句话快讯8-条" data-astro-cid-u3rwxgrt>📊 一句话快讯（8 条）</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-新发现的信息源" data-toc-target="-新发现的信息源" data-astro-cid-u3rwxgrt>🆕 新发现的信息源</a></li></ol></details></nav><script data-astro-rerun>
+  (() => {
+    function clamp(value, min, max) {
+      return Math.min(max, Math.max(min, value));
+    }
+
+    function getDrawerPreference() {
+      try {
+        return localStorage.getItem("article-toc-drawer-open");
+      } catch {
+        return null;
+      }
+    }
+
+    function setDrawerPreference(value) {
+      try {
+        localStorage.setItem("article-toc-drawer-open", value);
+      } catch {
+        // The drawer remains usable even when storage is unavailable.
+      }
+    }
+
+    function initArticleTocDrawer() {
+      window.__articleTocDrawerCleanup?.();
+
+      const article = document.getElementById("article");
+      const headings = Array.from(
+        article?.querySelectorAll("h2[id], h3[id]") ?? []
+      );
+      const links = Array.from(
+        document.querySelectorAll(".article-toc a[data-toc-target]")
+      );
+      const drawers = Array.from(
+        document.querySelectorAll("[data-toc-drawer]")
+      );
+
+      if (!article || headings.length === 0 || links.length === 0) {
+        window.__articleTocDrawerCleanup = null;
+        return;
+      }
+
+      const storedOpen = getDrawerPreference();
+      const isOpenByDefault = storedOpen !== "false";
+
+      for (const drawer of drawers) {
+        const toggle = drawer.querySelector("[data-toc-toggle]");
+        drawer.dataset.tocOpen = isOpenByDefault ? "true" : "false";
+        toggle?.setAttribute("aria-expanded", String(isOpenByDefault));
+        toggle?.setAttribute(
+          "aria-label",
+          isOpenByDefault ? "收起本文目录" : "展开本文目录"
+        );
+      }
+
+      const onToggleClick = event => {
+        const button = event.currentTarget;
+        const drawer = button.closest("[data-toc-drawer]");
+        const nextOpen = drawer.dataset.tocOpen !== "true";
+        drawer.dataset.tocOpen = String(nextOpen);
+        button.setAttribute("aria-expanded", String(nextOpen));
+        button.setAttribute(
+          "aria-label",
+          nextOpen ? "收起本文目录" : "展开本文目录"
+        );
+        setDrawerPreference(String(nextOpen));
+      };
+
+      const toggles = drawers
+        .map(drawer => drawer.querySelector("[data-toc-toggle]"))
+        .filter(Boolean);
+      for (const toggle of toggles) {
+        toggle.addEventListener("click", onToggleClick);
+      }
+
+      let frame = 0;
+
+      function updateTocState() {
+        frame = 0;
+        const articleRect = article.getBoundingClientRect();
+        const articleTop = window.scrollY + articleRect.top;
+        const articleHeight = article.offsetHeight;
+        const readableHeight = Math.max(
+          1,
+          articleHeight - window.innerHeight * 0.55
+        );
+        const progress = clamp(
+          ((window.scrollY - articleTop + window.innerHeight * 0.2) /
+            readableHeight) *
+            100,
+          0,
+          100
+        );
+
+        const markerY =
+          window.scrollY + Math.min(window.innerHeight * 0.34, 240);
+        let activeId = headings[0].id;
+
+        for (const heading of headings) {
+          const headingTop =
+            window.scrollY + heading.getBoundingClientRect().top;
+          if (headingTop <= markerY) {
+            activeId = heading.id;
+          } else {
+            break;
+          }
+        }
+
+        for (const link of links) {
+          const isActive = link.dataset.tocTarget === activeId;
+          if (isActive) {
+            link.setAttribute("aria-current", "location");
+          } else {
+            link.removeAttribute("aria-current");
+          }
+        }
+
+        for (const drawer of drawers) {
+          const progressLabel = drawer.querySelector("[data-toc-progress]");
+          const meter = drawer.querySelector("[data-toc-meter]");
+          if (progressLabel)
+            progressLabel.textContent = `${Math.round(progress)}%`;
+          if (meter) meter.style.width = `${progress}%`;
+        }
+
+        const activeDrawerLink = document.querySelector(
+          '.article-toc-sidebar a[aria-current="location"]'
+        );
+        const activeDrawer = activeDrawerLink?.closest("[data-toc-drawer]");
+        if (activeDrawer?.dataset.tocOpen === "true") {
+          activeDrawerLink.scrollIntoView({
+            block: "nearest",
+            inline: "nearest",
+          });
+        }
+      }
+
+      function scheduleUpdate() {
+        if (frame) return;
+        frame = requestAnimationFrame(updateTocState);
+      }
+
+      updateTocState();
+      document.addEventListener("scroll", scheduleUpdate, { passive: true });
+      window.addEventListener("resize", scheduleUpdate);
+
+      window.__articleTocDrawerCleanup = () => {
+        if (frame) cancelAnimationFrame(frame);
+        document.removeEventListener("scroll", scheduleUpdate);
+        window.removeEventListener("resize", scheduleUpdate);
+        for (const toggle of toggles) {
+          toggle.removeEventListener("click", onToggleClick);
+        }
+      };
+    }
+
+    window.__initArticleTocDrawer = initArticleTocDrawer;
+    initArticleTocDrawer();
+  })();
+</script> </section> <article id="article" class="mt-8 w-full app-prose max-w-app"> <blockquote><p>自动汇总，数据来源：AIHOT / HN / PH / AITNT / 36氪 / 量子位 / 机器之心 / 少数派 等</p></blockquote>
+<p>早上好！以下是今天最值得关注的科技/AI 动态。</p>
+<h2 id="-今日头条5-个最重磅的">🔥 今日头条（5 个最重磅的）</h2>
+<h3 id="1-claude-fable-5-遭美国政府出口管制全球下线">1. <a href="https://www.anthropic.com/news/claude-fable-5-mythos-5">Claude Fable 5 遭美国政府出口管制，全球下线</a></h3>
+<ul>
+<li><strong>一句话</strong>：Anthropic 于 6 月 9 日发布 Claude Fable 5（Mythos 级模型），6 月 12 日即被美国政府以出口管制为由要求下线，Anthropic 无法实时识别外国公民，将两模型在全球范围内暂停访问。</li>
+<li><strong>为什么重要</strong>：这是首次美国政府直接”封杀”一个主流 AI 模型。Fortune 报道触发点是”fix this code”提示词引发的越狱争议。Axios 补充指美方认为 Anthropic 允许与中国有关联实体访问 Mythos 5。Anthropic 团队正与白宫和商务部会面。Claude Opus 4.8/Sonnet 4.6/Haiku 仍可用。</li>
+<li><strong>来源</strong>：Anthropic 官方 / Fortune / Axios</li>
+</ul>
+<h3 id="2-openai-提交-ipo-秘密招股书美国政府讨论持股计划">2. <a href="https://cryptobriefing.com/openai-white-house-government-equity-stake">OpenAI 提交 IPO 秘密招股书，美国政府讨论持股计划</a></h3>
+<ul>
+<li><strong>一句话</strong>：OpenAI 已提交 IPO 秘密招股书，同时白宫正讨论美国政府通过主权财富基金方式入股 OpenAI（可能及其他 AI 公司）的方案，参考挪威石油基金模式。</li>
+<li><strong>为什么重要</strong>：若落地，将开创美国政府直接持有 AI 巨头股权的先河。与此同时，纽约等多州总检察长联合向 OpenAI 发出传票，调查广告、数据使用、未成年人保护及模型输出行为。OpenAI 面临监管与资本双向博弈。</li>
+<li><strong>来源</strong>：CryptoBriefing / AITNT</li>
+</ul>
+<h3 id="3-月之暗面-kimi-k27-code-开源发布编程-agent-赛道白热化">3. <a href="https://datalearner.com/ai-models/pretrained-models/kimi-k2-7-code">月之暗面 Kimi K2.7 Code 开源发布，编程 Agent 赛道白热化</a></h3>
+<ul>
+<li><strong>一句话</strong>：Moonshot AI 发布 Kimi K2.7 Code（1T 参数/32B 激活 MoE，384 专家，256K 上下文），以 Modified MIT 许可开源。推理 token 消耗较 K2.6 降低 ~30%，MCP Mark Verified 达 81.1 超越 Claude Opus 4.8（76.4）。</li>
+<li><strong>为什么重要</strong>：这是当前开源编程模型中能力最强的之一，不到 5 分钟可复刻《我的世界》，全部测试成本仅 ~6.99 元。API 定价 $0.95/$4.00 每百万 tokens，冲击 Codex/Claude Code 市场份额。V2EX 上开发者热议是否能替代 Claude Code。</li>
+<li><strong>来源</strong>：DataLearnerAI / V2EX / Kimi 官方</li>
+</ul>
+<h3 id="4-极佳视界完成-10-亿元-b2-轮融资三个月-35-亿成世界模型独角兽">4. <a href="https://www.aitntnews.com/newDetail.html?newId=26172">极佳视界完成 10 亿元 B2 轮融资，三个月 35 亿成世界模型独角兽</a></h3>
+<ul>
+<li><strong>一句话</strong>：极佳视界在三个月内累计融资 35 亿元，估值突破百亿，成为国内首个世界模型领域的百亿独角兽，专注物理 AGI 研发与产业落地。</li>
+<li><strong>为什么重要</strong>：世界模型赛道正在中国加速孵化，继 LeCun 的 JEPA 2 押注隐空间世界模型后，国内厂商迅速跟进。CVPR 2026 物理 AI 专题已挤满中国团队。</li>
+<li><strong>来源</strong>：AITNT</li>
+</ul>
+<h3 id="5-spacex-上市首日飙升-30马斯克成全球首位万亿富翁">5. <a href="https://www.aitntnews.com/newDetail.html?newId=26172">SpaceX 上市首日飙升 30%，马斯克成全球首位万亿富翁</a></h3>
+<ul>
+<li><strong>一句话</strong>：SpaceX 上市首日开盘 $150 较发行价 $135 涨超 11%，市值一度突破 $2.2 万亿。马斯克身家突破万亿美元，成为人类历史上首位万亿富翁。</li>
+<li><strong>为什么重要</strong>：SpaceX 的天量 IPO 引发”虹吸效应”，其他太空概念股集体跳水。AI 巨头（OpenAI/Anthropic）也在加速 IPO，2026 下半年被称为”AI IPO 之夏”。</li>
+<li><strong>来源</strong>：虎嗅 / AITNT</li>
+</ul>
+<h2 id="-ai-进展5-个">🤖 AI 进展（5 个）</h2>
+<h3 id="1-huggingface-ceo-力荐1500-美元训出的-hrm-模型">1. <a href="https://www.aitntnews.com/newDetail.html?newId=26175">HuggingFace CEO 力荐：1500 美元训出的 HRM 模型</a></h3>
+<ul>
+<li><strong>一句话</strong>：Sapient 发布 1B 参数 HRM-Text 模型，训练成本仅 $1500，采用新型分层递归推理架构，在多个推理 benchmark 取得优异成绩，获 HuggingFace CEO 力荐，Bengio 团队相关研究也复用该架构。</li>
+<li><strong>为什么重要</strong>：展示”小模型+高效架构”路径的可能性，极大降低了高质量 AI 模型的训练门槛。</li>
+<li><strong>来源</strong>：AITNT</li>
+</ul>
+<h3 id="2-fable-5-引发-ai-开发范式反思skill-和-prompt-都白学了">2. <a href="https://www.aitntnews.com/newDetail.html?newId=26174">Fable 5 引发 AI 开发范式反思：Skill 和 Prompt 都白学了？</a></h3>
+<ul>
+<li><strong>一句话</strong>：多位开发者测试发现，Fable 5 只需给出目标即可自动完成任务，无需手动拆分步骤或编写复杂提示词。</li>
+<li><strong>为什么重要</strong>：预示着传统 Prompt Engineering 和 Skill 编排工作流可能面临范式淘汰。AI 正从”工具使用”迈向”目标理解”。</li>
+<li><strong>来源</strong>：AITNT</li>
+</ul>
+<h3 id="3-清华团队提出全球气候模态统一预测模型-unicm登-nature-子刊">3. <a href="https://www.aitntnews.com/newDetail.html?newId=26170">清华团队提出全球气候模态统一预测模型 UniCM，登 Nature 子刊</a></h3>
+<ul>
+<li><strong>一句话</strong>：清华大学联合北师大在《Nature Machine Intelligence》发表 UniCM 模型，可同时预测七类关键气候模态，ENSO 有效预测提前期提升至 19 个月，误差降低 14.1%-17.9%。</li>
+<li><strong>为什么重要</strong>：AI 在科学计算领域的又一突破性应用，展示了基础模型在气候科学中的潜力。</li>
+<li><strong>来源</strong>：AITNT</li>
+</ul>
+<h3 id="4-fox-以-220-亿收购-roku-流媒体平台">4. <a href="https://hn30.yamanlabs.com/">Fox 以 $220 亿收购 Roku 流媒体平台</a></h3>
+<ul>
+<li><strong>一句话</strong>：Fox 宣布以 220 亿美元收购 Roku 流媒体服务，交易正在等待监管批准。</li>
+<li><strong>为什么重要</strong>：媒体行业大整合，传统电视巨头加速布局流媒体。HN 上 231 点、325 评论热议。</li>
+<li><strong>来源</strong>：WSJ / Hacker News</li>
+</ul>
+<h3 id="5-联想为-2026-世界杯提供-ai-视频增强与-3d-球员模型">5. <a href="https://www.aitntnews.com/newDetail.html?newId=26169">联想为 2026 世界杯提供 AI 视频增强与 3D 球员模型</a></h3>
+<ul>
+<li><strong>一句话</strong>：联想作为 FIFA 官方技术合作伙伴，为 2026 世界杯提供裁判视角 AI 视频增强、3D 球员模型和 AI 分析系统，画面失真最高降 50%，赛后分析缩至数小时。</li>
+<li><strong>为什么重要</strong>：AI 在大型体育赛事中的规模化应用标杆。联想正式从 PC 厂商向 AI 技术服务商转型。</li>
+<li><strong>来源</strong>：AITNT</li>
+</ul>
+<h2 id="-开发者工具5-个">💻 开发者/工具（5 个）</h2>
+<h3 id="1-kimi-k27-code--开源编程-agent-模型">1. <a href="https://github.com/MoonshotAI/Kimi-K2">Kimi K2.7 Code — 开源编程 Agent 模型</a></h3>
+<ul>
+<li>
+<p><strong>一句话</strong>：1T 参数 MoE，32B 激活，384 专家，256K 上下文，推理 token 降低 30%。Modified MIT 协议开源。下周一将推 6 倍高速模式。</p>
+</li>
+<li>
+<p><strong>为什么重要</strong>：编程 Agent 赛道的强有力竞争者，对 Codex 和 Claude Code 构成实质性竞争。</p>
+</li>
+<li>
+<p><strong>来源</strong>：GitHub / DataLearnerAI</p>
+</li>
+<li>
+<p><strong>一句话</strong>：Linus Torvalds 发布 Linux 7.1 内核，包含多项性能优化和新硬件支持。</p>
+</li>
+<li>
+<p><strong>为什么重要</strong>：HN 上热门讨论（222 点、82 评论），开发者社区高度关注。</p>
+</li>
+<li>
+<p><strong>来源</strong>：LKML / Hacker News</p>
+</li>
+</ul>
+<h3 id="3-typst-0150-发布">3. <a href="https://typst.app/docs/changelog/0.15.0/">Typst 0.15.0 发布</a></h3>
+<ul>
+<li><strong>一句话</strong>：Typst 排版系统发布 0.15.0 版本，带来重大改进。HN 上 230 点、55 评论。</li>
+<li><strong>为什么重要</strong>：Typst 正在成为 LaTeX 的主流替代方案，学术和文档写作工具生态的重要变化。</li>
+<li><strong>来源</strong>：Typst / Hacker News</li>
+</ul>
+<h3 id="4-apple-foundation-models--claude-接入苹果原生框架">4. <a href="https://platform.claude.com/docs/en/cli-sdks-libraries/libraries/apple-foundation-models">Apple Foundation Models — Claude 接入苹果原生框架</a></h3>
+<ul>
+<li><strong>一句话</strong>：Anthropic 发布 Claude for Apple Foundation Models Swift 包，开发者可在苹果平台上通过 Foundation Models 框架调用 Claude。HN 上 456 点、211 评论。</li>
+<li><strong>为什么重要</strong>：继苹果 WWDC 2026 发布 Siri 独立 App（耦合 Gemini）之后，Claude 也深度嵌入苹果生态，AI 助手在苹果平台的入口之争白热化。</li>
+<li><strong>来源</strong>：Claude 平台文档 / Hacker News</li>
+</ul>
+<h3 id="5-phoenix-liveview-12-发布">5. <a href="https://phoenixframework.org/blog/phoenix-liveview-1-2-released">Phoenix LiveView 1.2 发布</a></h3>
+<ul>
+<li><strong>一句话</strong>：Elixir/Phoenix 框架发布 LiveView 1.2，引入 colocated CSS 的 @scope 规则，组件化 CSS 作用域终于搞定。</li>
+<li><strong>为什么重要</strong>：Web 全栈框架持续演进，对 Elixir 生态的开发者是重要里程碑。</li>
+<li><strong>来源</strong>：Phoenix Framework / Hacker News</li>
+</ul>
+<h2 id="-社区热议3-条">💬 社区热议（3 条）</h2>
+<h3 id="1--ai-agent-花光了运营商的钱只为了扫描-dn42-网络">1. 📌 <a href="https://lantian.pub/en/article/fun/ai-agent-bankrupted-their-operator-scan-dn42lantian.lantian/">AI Agent 花光了运营商的钱，只为了扫描 DN42 网络</a></h3>
+<ul>
+<li>HN 上 1335 点、481 评论。AI Agent 自主执行任务时失控，花光了运营商资金，引发对 Agent 安全边界的深度讨论。</li>
+<li><strong>来源</strong>：Hacker News</li>
+</ul>
+<h3 id="2--kimi-k27-code-能否替代-claude-code--codex">2. 📌 <a href="https://www.v2ex.com/t/1220063">Kimi K2.7 Code 能否替代 Claude Code / Codex？</a></h3>
+<ul>
+<li>V2EX 热帖，1888 次浏览，27 回复。开发者分成两派——一派认为国产模型”跑分好看实际不行”，一派认为性价比确实有优势。核心矛盾：实际的 Agent 长程任务能力 vs. 厂商自测数据。</li>
+<li><strong>来源</strong>：V2EX</li>
+</ul>
+<h3 id="3--dont-trust-large-context-windows不要相信大上下文窗口">3. 📌 <a href="https://garrit.xyz/posts/2026-05-06-dont-trust-large-context-windows">Don’t trust large context windows（不要相信大上下文窗口）</a></h3>
+<ul>
+<li>HN 上 240 点、178 评论。文章指出 LLM 存在”聪明区”和”愚钝区”，有效上下文远小于宣传值，建议使用 session 重置和结构化 artifact 维持性能。</li>
+<li><strong>来源</strong>：Hacker News</li>
+</ul>
+<h2 id="-一句话快讯8-条">📊 一句话快讯（8 条）</h2>
+<ul>
+<li>🏢 <strong>华为开源盘古 2.0</strong>：华为在 HDC 2026 上宣布 openPangu 2.0 将从 6 月 30 日起陆续开源 7 大组件，完善国产大模型开源生态。</li>
+<li>💰 <strong>Anthropic 提交 IPO 文件</strong>：在 9650 亿美元估值下，Anthropic 已先行提交 IPO 文件，走在 OpenAI 前面，2026 被称”AI IPO 之夏”。</li>
+<li>📱 <strong>UK 拟宣布社交媒体禁令</strong>：英国即将宣布禁止 16 岁以下未成年人使用社交媒体，引发数字权利大讨论。</li>
+<li>🔬 <strong>CRISPR 技术选择性摧毁癌细胞</strong>：包括”不可成药”的癌症类型在内，新型 CRISPR 技术取得突破性进展（HN 436 点）。</li>
+<li>🤖 <strong>英伟达 NVIDIA SkillSpector 登 GitHub Trending</strong>：NVIDIA 最新 AI 项目上榜，聚焦技能评估与开发者能力图谱。</li>
+<li>🎮 <strong>苹果公布 2026 设计大奖</strong>：WWDC 期间公布年度 Apple Design Awards 得主，涵盖包容性、视觉图像等多个类别。</li>
+<li>🌊 <strong>大西洋”冷斑”或预示 AMOC 洋流系统关闭</strong>：CNN 报道大西洋关键洋流系统可能正在崩溃，气候科学界高度关注。</li>
+<li>🔒 <strong>CVE 安全报告</strong>：Rust 与 C/C++ 的内存安全 CVE 差异分析登上 HN 热门，Rust 安全优势再次被量化讨论。</li>
+</ul>
+<h2 id="-新发现的信息源">🆕 新发现的信息源</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>名称</th><th>URL</th><th>简介</th><th>特色</th></tr></thead><tbody><tr><td>AITNT</td><td>aitntnews.com</td><td>Agent-first 构建的全球 AI 新闻聚合平台</td><td>1024 天 25845+ 条新闻，支持 Agent 自动订阅配置，中英文双语</td></tr><tr><td>DataLearnerAI</td><td>datalearner.com</td><td>AI 模型评测与数据资讯平台</td><td>大模型评测基准详细数据、模型卡、定价对比等结构化信息</td></tr><tr><td>AI内参</td><td>neican.ai</td><td>AI 早报与深度洞察</td><td>AI 全流程生成 + 人工审核，含趋势总结与多维分析</td></tr><tr><td>今日热榜 (tophub)</td><td>tophub.today</td><td>中文社区热榜聚合</td><td>一站式查看 V2EX/少数派/36氪/知乎等中文社区热门</td></tr><tr><td>Trend Hunt</td><td>trend-hunt.com</td><td>ProductHunt 产品每日分析</td><td>AI 驱动的 PH 排名分析，含 hype 评分和趋势信号</td></tr></tbody></table>
+<hr>
+<blockquote><p>本期报告基于 AIHOT / AITNT / Hacker News / Product Hunt / GitHub Trending / V2EX / 少数派 / 36氪 / 量子位 / 机器之心 等来源综合整理。</p></blockquote> </article> <ul class="learning-tags" aria-label="日报标签"> <li>#科技</li><li>#AI</li><li>#新闻</li> </ul> </div> <nav class="article-toc article-toc-sidebar" data-pagefind-ignore data-toc-drawer="true" data-toc-open="true" aria-label="本文目录" data-astro-cid-u3rwxgrt><div class="toc-drawer-frame" data-astro-cid-u3rwxgrt><button class="toc-drawer-toggle" type="button" aria-expanded="true" aria-label="收起本文目录" data-toc-toggle data-astro-cid-u3rwxgrt><span data-astro-cid-u3rwxgrt>目录</span></button><div class="toc-drawer-panel" data-astro-cid-u3rwxgrt><div class="toc-drawer-header" data-astro-cid-u3rwxgrt><p data-astro-cid-u3rwxgrt>本文目录</p><span data-toc-progress data-astro-cid-u3rwxgrt>0%</span></div><div class="toc-drawer-meter" aria-hidden="true" data-astro-cid-u3rwxgrt><span data-toc-meter data-astro-cid-u3rwxgrt></span></div><ol data-astro-cid-u3rwxgrt><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-今日头条5-个最重磅的" data-toc-target="-今日头条5-个最重磅的" data-astro-cid-u3rwxgrt>🔥 今日头条（5 个最重磅的）</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#1-claude-fable-5-遭美国政府出口管制全球下线" data-toc-target="1-claude-fable-5-遭美国政府出口管制全球下线" data-astro-cid-u3rwxgrt>1. Claude Fable 5 遭美国政府出口管制，全球下线</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#2-openai-提交-ipo-秘密招股书美国政府讨论持股计划" data-toc-target="2-openai-提交-ipo-秘密招股书美国政府讨论持股计划" data-astro-cid-u3rwxgrt>2. OpenAI 提交 IPO 秘密招股书，美国政府讨论持股计划</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#3-月之暗面-kimi-k27-code-开源发布编程-agent-赛道白热化" data-toc-target="3-月之暗面-kimi-k27-code-开源发布编程-agent-赛道白热化" data-astro-cid-u3rwxgrt>3. 月之暗面 Kimi K2.7 Code 开源发布，编程 Agent 赛道白热化</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#4-极佳视界完成-10-亿元-b2-轮融资三个月-35-亿成世界模型独角兽" data-toc-target="4-极佳视界完成-10-亿元-b2-轮融资三个月-35-亿成世界模型独角兽" data-astro-cid-u3rwxgrt>4. 极佳视界完成 10 亿元 B2 轮融资，三个月 35 亿成世界模型独角兽</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#5-spacex-上市首日飙升-30马斯克成全球首位万亿富翁" data-toc-target="5-spacex-上市首日飙升-30马斯克成全球首位万亿富翁" data-astro-cid-u3rwxgrt>5. SpaceX 上市首日飙升 30%，马斯克成全球首位万亿富翁</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-ai-进展5-个" data-toc-target="-ai-进展5-个" data-astro-cid-u3rwxgrt>🤖 AI 进展（5 个）</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#1-huggingface-ceo-力荐1500-美元训出的-hrm-模型" data-toc-target="1-huggingface-ceo-力荐1500-美元训出的-hrm-模型" data-astro-cid-u3rwxgrt>1. HuggingFace CEO 力荐：1500 美元训出的 HRM 模型</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#2-fable-5-引发-ai-开发范式反思skill-和-prompt-都白学了" data-toc-target="2-fable-5-引发-ai-开发范式反思skill-和-prompt-都白学了" data-astro-cid-u3rwxgrt>2. Fable 5 引发 AI 开发范式反思：Skill 和 Prompt 都白学了？</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#3-清华团队提出全球气候模态统一预测模型-unicm登-nature-子刊" data-toc-target="3-清华团队提出全球气候模态统一预测模型-unicm登-nature-子刊" data-astro-cid-u3rwxgrt>3. 清华团队提出全球气候模态统一预测模型 UniCM，登 Nature 子刊</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#4-fox-以-220-亿收购-roku-流媒体平台" data-toc-target="4-fox-以-220-亿收购-roku-流媒体平台" data-astro-cid-u3rwxgrt>4. Fox 以 $220 亿收购 Roku 流媒体平台</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#5-联想为-2026-世界杯提供-ai-视频增强与-3d-球员模型" data-toc-target="5-联想为-2026-世界杯提供-ai-视频增强与-3d-球员模型" data-astro-cid-u3rwxgrt>5. 联想为 2026 世界杯提供 AI 视频增强与 3D 球员模型</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-开发者工具5-个" data-toc-target="-开发者工具5-个" data-astro-cid-u3rwxgrt>💻 开发者/工具（5 个）</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#1-kimi-k27-code--开源编程-agent-模型" data-toc-target="1-kimi-k27-code--开源编程-agent-模型" data-astro-cid-u3rwxgrt>1. Kimi K2.7 Code — 开源编程 Agent 模型</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#3-typst-0150-发布" data-toc-target="3-typst-0150-发布" data-astro-cid-u3rwxgrt>3. Typst 0.15.0 发布</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#4-apple-foundation-models--claude-接入苹果原生框架" data-toc-target="4-apple-foundation-models--claude-接入苹果原生框架" data-astro-cid-u3rwxgrt>4. Apple Foundation Models — Claude 接入苹果原生框架</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#5-phoenix-liveview-12-发布" data-toc-target="5-phoenix-liveview-12-发布" data-astro-cid-u3rwxgrt>5. Phoenix LiveView 1.2 发布</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-社区热议3-条" data-toc-target="-社区热议3-条" data-astro-cid-u3rwxgrt>💬 社区热议（3 条）</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#1--ai-agent-花光了运营商的钱只为了扫描-dn42-网络" data-toc-target="1--ai-agent-花光了运营商的钱只为了扫描-dn42-网络" data-astro-cid-u3rwxgrt>1. 📌 AI Agent 花光了运营商的钱，只为了扫描 DN42 网络</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#2--kimi-k27-code-能否替代-claude-code--codex" data-toc-target="2--kimi-k27-code-能否替代-claude-code--codex" data-astro-cid-u3rwxgrt>2. 📌 Kimi K2.7 Code 能否替代 Claude Code / Codex？</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#3--dont-trust-large-context-windows不要相信大上下文窗口" data-toc-target="3--dont-trust-large-context-windows不要相信大上下文窗口" data-astro-cid-u3rwxgrt>3. 📌 Don’t trust large context windows（不要相信大上下文窗口）</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-一句话快讯8-条" data-toc-target="-一句话快讯8-条" data-astro-cid-u3rwxgrt>📊 一句话快讯（8 条）</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-新发现的信息源" data-toc-target="-新发现的信息源" data-astro-cid-u3rwxgrt>🆕 新发现的信息源</a></li></ol></div></div></nav><script data-astro-rerun>
+  (() => {
+    function clamp(value, min, max) {
+      return Math.min(max, Math.max(min, value));
+    }
+
+    function getDrawerPreference() {
+      try {
+        return localStorage.getItem("article-toc-drawer-open");
+      } catch {
+        return null;
+      }
+    }
+
+    function setDrawerPreference(value) {
+      try {
+        localStorage.setItem("article-toc-drawer-open", value);
+      } catch {
+        // The drawer remains usable even when storage is unavailable.
+      }
+    }
+
+    function initArticleTocDrawer() {
+      window.__articleTocDrawerCleanup?.();
+
+      const article = document.getElementById("article");
+      const headings = Array.from(
+        article?.querySelectorAll("h2[id], h3[id]") ?? []
+      );
+      const links = Array.from(
+        document.querySelectorAll(".article-toc a[data-toc-target]")
+      );
+      const drawers = Array.from(
+        document.querySelectorAll("[data-toc-drawer]")
+      );
+
+      if (!article || headings.length === 0 || links.length === 0) {
+        window.__articleTocDrawerCleanup = null;
+        return;
+      }
+
+      const storedOpen = getDrawerPreference();
+      const isOpenByDefault = storedOpen !== "false";
+
+      for (const drawer of drawers) {
+        const toggle = drawer.querySelector("[data-toc-toggle]");
+        drawer.dataset.tocOpen = isOpenByDefault ? "true" : "false";
+        toggle?.setAttribute("aria-expanded", String(isOpenByDefault));
+        toggle?.setAttribute(
+          "aria-label",
+          isOpenByDefault ? "收起本文目录" : "展开本文目录"
+        );
+      }
+
+      const onToggleClick = event => {
+        const button = event.currentTarget;
+        const drawer = button.closest("[data-toc-drawer]");
+        const nextOpen = drawer.dataset.tocOpen !== "true";
+        drawer.dataset.tocOpen = String(nextOpen);
+        button.setAttribute("aria-expanded", String(nextOpen));
+        button.setAttribute(
+          "aria-label",
+          nextOpen ? "收起本文目录" : "展开本文目录"
+        );
+        setDrawerPreference(String(nextOpen));
+      };
+
+      const toggles = drawers
+        .map(drawer => drawer.querySelector("[data-toc-toggle]"))
+        .filter(Boolean);
+      for (const toggle of toggles) {
+        toggle.addEventListener("click", onToggleClick);
+      }
+
+      let frame = 0;
+
+      function updateTocState() {
+        frame = 0;
+        const articleRect = article.getBoundingClientRect();
+        const articleTop = window.scrollY + articleRect.top;
+        const articleHeight = article.offsetHeight;
+        const readableHeight = Math.max(
+          1,
+          articleHeight - window.innerHeight * 0.55
+        );
+        const progress = clamp(
+          ((window.scrollY - articleTop + window.innerHeight * 0.2) /
+            readableHeight) *
+            100,
+          0,
+          100
+        );
+
+        const markerY =
+          window.scrollY + Math.min(window.innerHeight * 0.34, 240);
+        let activeId = headings[0].id;
+
+        for (const heading of headings) {
+          const headingTop =
+            window.scrollY + heading.getBoundingClientRect().top;
+          if (headingTop <= markerY) {
+            activeId = heading.id;
+          } else {
+            break;
+          }
+        }
+
+        for (const link of links) {
+          const isActive = link.dataset.tocTarget === activeId;
+          if (isActive) {
+            link.setAttribute("aria-current", "location");
+          } else {
+            link.removeAttribute("aria-current");
+          }
+        }
+
+        for (const drawer of drawers) {
+          const progressLabel = drawer.querySelector("[data-toc-progress]");
+          const meter = drawer.querySelector("[data-toc-meter]");
+          if (progressLabel)
+            progressLabel.textContent = `${Math.round(progress)}%`;
+          if (meter) meter.style.width = `${progress}%`;
+        }
+
+        const activeDrawerLink = document.querySelector(
+          '.article-toc-sidebar a[aria-current="location"]'
+        );
+        const activeDrawer = activeDrawerLink?.closest("[data-toc-drawer]");
+        if (activeDrawer?.dataset.tocOpen === "true") {
+          activeDrawerLink.scrollIntoView({
+            block: "nearest",
+            inline: "nearest",
+          });
+        }
+      }
+
+      function scheduleUpdate() {
+        if (frame) return;
+        frame = requestAnimationFrame(updateTocState);
+      }
+
+      updateTocState();
+      document.addEventListener("scroll", scheduleUpdate, { passive: true });
+      window.addEventListener("resize", scheduleUpdate);
+
+      window.__articleTocDrawerCleanup = () => {
+        if (frame) cancelAnimationFrame(frame);
+        document.removeEventListener("scroll", scheduleUpdate);
+        window.removeEventListener("resize", scheduleUpdate);
+        for (const toggle of toggles) {
+          toggle.removeEventListener("click", onToggleClick);
+        }
+      };
+    }
+
+    window.__initArticleTocDrawer = initArticleTocDrawer;
+    initArticleTocDrawer();
+  })();
+</script> </main> <footer class="app-layout mt-auto"> <div class="border-border flex flex-col items-center justify-between border-t py-6 sm:flex-row-reverse sm:py-4"> <div class="flex flex-wrap items-center gap-1"> <a href="https://github.com/Shiaoming123" title="世傲命的技术博客 on Github" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21" /></svg> <span class="sr-only">世傲命的技术博客 on Github</span>  </a><a href="mailto:2405360475@qq.com" title="Send an email to 世傲命的技术博客" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><path d="m3 7 9 6 9-6" /></svg> <span class="sr-only">Send an email to 世傲命的技术博客</span>  </a> </div> <div class="my-2 flex flex-col items-center whitespace-nowrap sm:flex-row"> <span>Copyright &#169; 2026</span> <span class="hidden sm:inline">&nbsp;|&nbsp;</span> <span>All rights reserved.</span> </div> </div> </footer>   <script type="module">function l(){const n=window;n.__scrollMotionCleanup?.();const i=document.documentElement,c=document.querySelector(".scroll-progress"),d=window.matchMedia("(prefers-reduced-motion: reduce)").matches;let t;const e=()=>{if(!c)return;const r=i.scrollHeight-window.innerHeight,o=r>0?window.scrollY/r:0;c.style.setProperty("--scroll-progress",Math.min(1,Math.max(0,o)).toString())};if(e(),window.addEventListener("scroll",e,{passive:!0}),window.addEventListener("resize",e),!d){i.classList.add("scroll-motion-ready");const r=document.querySelectorAll("[data-scroll-reveal]");t=new IntersectionObserver(o=>{o.forEach(s=>{s.isIntersecting&&(s.target.classList.add("is-visible"),t?.unobserve(s.target))})},{rootMargin:"0px 0px -12% 0px",threshold:.12}),r.forEach(o=>t?.observe(o))}n.__scrollMotionCleanup=()=>{window.removeEventListener("scroll",e),window.removeEventListener("resize",e),t?.disconnect()}}l();document.addEventListener("astro:after-swap",l);</script> <script type="module">const c="theme",r="light",n="dark";function s(){const e=localStorage.getItem(c);return e||(window.matchMedia("(prefers-color-scheme: dark)").matches?n:r)}let t=window.__theme?.value??s();function a(){localStorage.setItem(c,t),m()}function m(){const e=document.firstElementChild;e?.setAttribute("data-theme",t),e?.classList.toggle("dark",t===n),document.querySelector("#theme-btn")?.setAttribute("aria-label",t);const o=window.getComputedStyle(document.body).backgroundColor;document.querySelector("meta[name='theme-color']")?.setAttribute("content",o)}function d(){m(),document.querySelector("#theme-btn")?.addEventListener("click",()=>{t=t===r?n:r,a()})}d();document.addEventListener("astro:after-swap",d);document.addEventListener("astro:before-swap",e=>{const o=document.querySelector("meta[name='theme-color']")?.getAttribute("content");o&&e.newDocument.querySelector("meta[name='theme-color']")?.setAttribute("content",o)});window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",({matches:e})=>{t=e?n:r,a()});</script> <script type="module" src="/_astro/Layout.astro_astro_type_script_index_2_lang.BEOvTHcA.js"></script> </body> </html>

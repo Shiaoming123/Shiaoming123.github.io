@@ -1,0 +1,456 @@
+<!DOCTYPE html><html dir="ltr" lang="zh-CN" class="overflow-y-scroll scroll-smooth"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="canonical" href="https://shiaoming123.github.io/tech-daily/2026-06-22/"><meta name="generator" content="Astro v6.4.8"><!-- Font --><style>@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/02154cca78ac33f2.woff") format("woff"), url("/_astro/fonts/478e42e4694872ef.ttf") format("truetype");font-display:swap;font-weight:300;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/3a32a7a7a67f4f58.woff") format("woff"), url("/_astro/fonts/0863f4f6964aa89c.ttf") format("truetype");font-display:swap;font-weight:400;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/a5c5808c25effec9.woff") format("woff"), url("/_astro/fonts/792eded6cb3f0350.ttf") format("truetype");font-display:swap;font-weight:500;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/14314705006234cb.woff") format("woff"), url("/_astro/fonts/87d8fc1072d4917b.ttf") format("truetype");font-display:swap;font-weight:600;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/c33265ba093eb291.woff") format("woff"), url("/_astro/fonts/ec883ed4db81a7d9.ttf") format("truetype");font-display:swap;font-weight:700;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/c26ad40d3b1d9169.woff") format("woff"), url("/_astro/fonts/7a5ee0cfcde31b81.ttf") format("truetype");font-display:swap;font-weight:300;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/87ca066ba5b2c7cf.woff") format("woff"), url("/_astro/fonts/f4e25dfe9d6152ec.ttf") format("truetype");font-display:swap;font-weight:400;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/a9a0e80c053be3d5.woff") format("woff"), url("/_astro/fonts/a9df48ecd03749e4.ttf") format("truetype");font-display:swap;font-weight:500;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/da468df88542c99b.woff") format("woff"), url("/_astro/fonts/90f9809471092714.ttf") format("truetype");font-display:swap;font-weight:600;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/f914de358bc554f6.woff") format("woff"), url("/_astro/fonts/dbc9996f99c63e07.ttf") format("truetype");font-display:swap;font-weight:700;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:300;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:400;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:500;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:600;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:700;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:300;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:400;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:500;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:600;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:700;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}:root{--font-google-sans-code:"Google Sans Code-1a30c214885cb404","Google Sans Code-1a30c214885cb404 fallback: Courier New",monospace;}</style><!-- Primary meta --><title>科技日报 — 2026-06-22 | 世傲命的技术博客</title><meta name="title" content="科技日报 — 2026-06-22 | 世傲命的技术博客"><meta name="description" content="被誉为&quot;AlphaFold之父&quot;的诺贝尔奖得主宣布加入Anthropic，此前48小时内已有另一位顶级AI科学家离开谷歌转投Anthropic。消息引发Google内部信仰危机讨论。"><meta name="author" content="世傲命"><link rel="sitemap" href="/sitemap.xml"><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:site_name" content="世傲命的技术博客"><meta property="og:title" content="科技日报 — 2026-06-22 | 世傲命的技术博客"><meta property="og:description" content="被誉为&quot;AlphaFold之父&quot;的诺贝尔奖得主宣布加入Anthropic，此前48小时内已有另一位顶级AI科学家离开谷歌转投Anthropic。消息引发Google内部信仰危机讨论。"><meta property="og:url" content="https://shiaoming123.github.io/tech-daily/2026-06-22/"><meta property="og:image" content="https://shiaoming123.github.io/default-og.jpg"><!-- Twitter / X --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://shiaoming123.github.io/tech-daily/2026-06-22/"><meta property="twitter:title" content="科技日报 — 2026-06-22 | 世傲命的技术博客"><meta property="twitter:description" content="被誉为&quot;AlphaFold之父&quot;的诺贝尔奖得主宣布加入Anthropic，此前48小时内已有另一位顶级AI科学家离开谷歌转投Anthropic。消息引发Google内部信仰危机讨论。"><meta property="twitter:image" content="https://shiaoming123.github.io/default-og.jpg"><!-- RSS autodiscovery --><link rel="alternate" type="application/rss+xml" title="世傲命的技术博客" href="https://shiaoming123.github.io/rss.xml/"><!-- Filled at runtime by theme.ts to match the current background colour --><meta name="theme-color" content=""><!-- Extra head content injected by child layouts (e.g. JSON-LD, article meta) -->  <meta property="og:type" content="article"> <meta property="article:published_time" content="2026-06-22T00:00:00.000Z"><meta property="article:modified_time" content="2026-06-22T00:00:00.000Z"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"科技日报 — 2026-06-22 | 世傲命的技术博客","datePublished":"2026-06-22T00:00:00.000Z","dateModified":"2026-06-22T00:00:00.000Z","author":[{"@type":"Person","name":"世傲命","url":"https://github.com/Shiaoming123"}]}</script> <!--
+      Inline FOUC-prevention script: sets data-theme on <html> before
+      the browser paints. Runs synchronously, no defer/async.
+    --><script>
+      (function () {
+        const stored = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        const theme = stored ?? (prefersDark ? "dark" : "light");
+        const root = document.firstElementChild;
+        root?.setAttribute("data-theme", theme);
+        root?.classList.toggle("dark", theme === "dark");
+        // Expose value so theme.ts can skip re-detection.
+        window.__theme = { value: theme };
+      })();
+    </script><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CAqDO0tx.js"></script><link rel="stylesheet" href="/_astro/PostLayout.g8X8u49B.css"><link rel="stylesheet" href="/_astro/Footer.BPelsM4Z.css"></head> <body class="bg-background font-app text-foreground selection:bg-accent/75 selection:text-accent-foreground flex min-h-svh flex-col"> <div class="scroll-progress" aria-hidden="true"></div>    <a id="skip-to-content" href="#main-content" class="bg-background text-accent absolute inset-s-16 -top-full z-50 px-3 py-2 backdrop-blur-lg transition-all focus:top-4"> 跳到正文 </a> <header class="app-layout neo-header flex flex-col items-center justify-between sm:flex-row"> <div class="neo-header-bar relative flex w-full items-baseline justify-between py-4 sm:items-center sm:py-5"> <a href="/" class="absolute py-1 text-xl leading-8 font-semibold whitespace-nowrap sm:static sm:my-auto sm:text-2xl sm:leading-none"> 世傲命的技术博客 </a> <nav id="nav-menu" class="flex w-full flex-col items-center sm:ms-2 sm:flex-row sm:justify-end sm:space-x-4 sm:py-0"> <button id="menu-btn" class="focus-outline self-end p-2 sm:hidden" aria-label="打开菜单" aria-expanded="false" aria-controls="menu-items" data-label-open="打开菜单" data-label-close="关闭菜单"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="hidden" viewBox="0 0 24 24" id="close-icon"><path stroke="none" d="M0 0h24v24H0z" /><path d="M18 6 6 18M6 6l12 12" /></svg> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon icon-tabler icons-tabler-outline icon-tabler-menu-deep" viewBox="0 0 24 24" id="menu-icon"><path stroke="none" d="M0 0h24v24H0z" /><path d="M4 6h16M7 12h13M10 18h10" /></svg> </button> <ul id="menu-items" class="neo-nav-list mt-4 hidden w-44 grid-cols-2 place-content-center gap-2 sm:mt-0 sm:flex sm:w-auto"> <li class="col-span-2"> <a href="/posts/"> 文章 </a> </li> <li class="col-span-2"> <a href="/learning/"> 学习 </a> </li> <li class="col-span-2"> <a href="/diary-report/"> 机会日报 </a> </li> <li class="col-span-2"> <a href="/tech-daily/" class="active-nav"> 科技日报 </a> </li> <li class="col-span-2"> <a href="/bookmarks/"> 资源 </a> </li> <li class="col-span-2"> <a href="/arena/"> Arena </a> </li> <li class="col-span-2"> <a href="/demos/"> 演示 </a> </li> <li class="col-span-2"> <a href="/taxonomy/"> 分类与标签 </a> </li> <li class="col-span-2"> <a href="/about/"> 关于 </a> </li> <li class="col-span-2"> <a href="/changelog/"> 日志 </a> </li> <li class="neo-nav-icon col-span-2"> <a href="/archives/" title="归档" aria-label="归档" class="group inline-flex items-center gap-1 hover:text-accent focus-outline flex size-full justify-center p-3 sm:relative sm:size-9 sm:p-0">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="hidden sm:absolute sm:top-1/2 sm:left-1/2 sm:block sm:size-6 sm:-translate-x-1/2 sm:-translate-y-1/2" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v0a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8M10 12h4" /></svg> <span class="sm:sr-only">归档</span>  </a> </li> <li class="neo-nav-icon col-span-1 flex items-center justify-center"> <a href="/search/" title="搜索" aria-label="搜索" class="group inline-flex items-center gap-1 hover:text-accent focus-outline relative size-9">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-1/2 left-1/2 size-6 -translate-x-1/2 -translate-y-1/2" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 10a7 7 0 1 0 14 0 7 7 0 1 0-14 0M21 21l-6-6" /></svg> <span class="sr-only">搜索</span>  </a> </li> <li class="neo-nav-icon col-span-1 flex items-center justify-center"> <button id="theme-btn" class="focus-outline hover:[&>svg]:stroke-accent relative size-12 p-4 sm:size-9" title="切换主题" aria-label="auto" aria-live="polite"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-[50%] left-[50%] translate-[-50%] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M12 3h.393a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 2.992z" /></svg> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-[50%] left-[50%] translate-[-50%] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M14.828 14.828a4 4 0 1 0-5.656-5.656 4 4 0 0 0 5.656 5.656M6.343 17.657l-1.414 1.414M6.343 6.343 4.929 4.929M17.657 6.343l1.414-1.414M17.657 17.657l1.414 1.414M4 12H2M12 4V2M20 12h2M12 20v2" /></svg> </button> </li> </ul> </nav> </div> </header> <script type="module">function c(){const e=document.querySelector("#menu-btn"),t=document.querySelector("#menu-items"),n=document.querySelector("#menu-icon"),s=document.querySelector("#close-icon");if(!e||!t||!n||!s)return;const a=e.dataset.labelOpen??"Open menu",l=e.dataset.labelClose??"Close menu";e.addEventListener("click",()=>{const o=e.getAttribute("aria-expanded")==="true";e.setAttribute("aria-expanded",o?"false":"true"),e.setAttribute("aria-label",o?a:l),t.classList.toggle("hidden"),t.classList.toggle("grid"),n.classList.toggle("hidden"),s.classList.toggle("hidden")})}c();document.addEventListener("astro:after-swap",c);</script> <nav class="app-layout mt-8 mb-1" aria-label="breadcrumb"> <ul class="font-light [&>li]:inline [&>li:not(:last-child)>a]:hover:opacity-100"> <li> <a href="/" class="opacity-80"> 首页 </a> <span aria-hidden="true" class="opacity-80">&raquo;</span> </li> <li> <a href="/tech-daily/" class="capitalize opacity-70"> 科技日报 </a> <span aria-hidden="true" class="opacity-70">
+&raquo;
+</span> </li><li> <span class="capitalize opacity-75 lowercase" aria-current="page">  2026-06-22 </span> </li> </ul> </nav> <main id="main-content" class="article-shell daily-article daily-article--tech" data-pagefind-body> <div class="reading-content article-main"> <p class="daily-kicker">Tech Signal Stream</p> <h1 class="text-accent inline-block text-2xl font-bold sm:text-3xl"> 科技日报 — 2026-06-22 </h1> <div class="my-2 flex flex-wrap items-center gap-2"> <div class="text-muted-foreground flex items-center gap-x-2"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 min-w-5.5" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M4 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zM16 3v4M8 3v4M4 11h16M7 14h.013M10.01 14h.005M13.01 14h.005M16.015 14h.005M13.015 17h.005M7.01 17h.005M10.01 17h.005" /></svg>  <time class="text-sm sm:text-base" datetime="2026-06-22T00:00:00.000Z"> 22 Jun, 2026 </time> </div> <span class="daily-source">来源：wiki/tech-daily/2026-06-22.md</span> </div> <section class="article-guide" aria-label="本文导览" data-pagefind-ignore> <p class="article-guide-label">本文导览</p> <nav class="article-toc article-toc-inline" data-pagefind-ignore aria-label="本文目录" data-astro-cid-u3rwxgrt><details data-astro-cid-u3rwxgrt><summary data-astro-cid-u3rwxgrt><span data-astro-cid-u3rwxgrt>本文目录</span><strong data-astro-cid-u3rwxgrt>21 个小节</strong></summary><ol data-astro-cid-u3rwxgrt><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-今日头条" data-toc-target="-今日头条" data-astro-cid-u3rwxgrt>🔥 今日头条</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#1-诺奖得主alphafold之父投奔anthropic谷歌48小时连失两大牛" data-toc-target="1-诺奖得主alphafold之父投奔anthropic谷歌48小时连失两大牛" data-astro-cid-u3rwxgrt>1. 诺奖得主、AlphaFold之父投奔Anthropic，谷歌48小时连失两大牛</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#2-claude-正式实施身份验证identity-verification" data-toc-target="2-claude-正式实施身份验证identity-verification" data-astro-cid-u3rwxgrt>2. Claude 正式实施身份验证（Identity Verification）</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#3-gpt-56-pro-泄露一句话48分钟造出完整模拟人生" data-toc-target="3-gpt-56-pro-泄露一句话48分钟造出完整模拟人生" data-astro-cid-u3rwxgrt>3. GPT-5.6 Pro 泄露！一句话48分钟造出完整《模拟人生》</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#4-openai-发布最新里程碑对齐的本质是人格" data-toc-target="4-openai-发布最新里程碑对齐的本质是人格" data-astro-cid-u3rwxgrt>4. OpenAI 发布最新里程碑：对齐的本质是「人格」</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#5-apertus--完全开放主权-ai-基础模型发布" data-toc-target="5-apertus--完全开放主权-ai-基础模型发布" data-astro-cid-u3rwxgrt>5. Apertus — 完全开放主权 AI 基础模型发布</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-ai-进展" data-toc-target="-ai-进展" data-astro-cid-u3rwxgrt>🤖 AI 进展</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#1-微软也烧不起-token该-deepseek-上位了" data-toc-target="1-微软也烧不起-token该-deepseek-上位了" data-astro-cid-u3rwxgrt>1. 微软也烧不起 Token——该 DeepSeek 上位了</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#2-阿里发布首个具身大模型-qwen-robot-系列" data-toc-target="2-阿里发布首个具身大模型-qwen-robot-系列" data-astro-cid-u3rwxgrt>2. 阿里发布首个具身大模型 Qwen-Robot 系列</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#3-智源大会天工ai-重新定义世界模型公布-matrix-game-35-技术突破" data-toc-target="3-智源大会天工ai-重新定义世界模型公布-matrix-game-35-技术突破" data-astro-cid-u3rwxgrt>3. 智源大会：天工AI 重新定义世界模型，公布 Matrix-Game 3.5 技术突破</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#4-hpv-疫苗将30岁前宫颈癌死亡风险降至近乎零" data-toc-target="4-hpv-疫苗将30岁前宫颈癌死亡风险降至近乎零" data-astro-cid-u3rwxgrt>4. HPV 疫苗将30岁前宫颈癌死亡风险降至近乎零</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#5-豆包收费能赚多少钱" data-toc-target="5-豆包收费能赚多少钱" data-astro-cid-u3rwxgrt>5. 豆包收费，能赚多少钱？</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-开发者工具" data-toc-target="-开发者工具" data-astro-cid-u3rwxgrt>💻 开发者/工具</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#1-bytedancedeer-flow--开源长周期-superagent-框架" data-toc-target="1-bytedancedeer-flow--开源长周期-superagent-框架" data-astro-cid-u3rwxgrt>1. bytedance/deer-flow — 开源长周期 SuperAgent 框架</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#2-palmier-pro--macos-ai-视频编辑器" data-toc-target="2-palmier-pro--macos-ai-视频编辑器" data-astro-cid-u3rwxgrt>2. palmier-pro — macOS AI 视频编辑器</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#3-headroom--压缩工具输出减少-60-95-token-消耗" data-toc-target="3-headroom--压缩工具输出减少-60-95-token-消耗" data-astro-cid-u3rwxgrt>3. headroom — 压缩工具输出减少 60-95% Token 消耗</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#4-recall--完全本地化的-claude-code-项目记忆" data-toc-target="4-recall--完全本地化的-claude-code-项目记忆" data-astro-cid-u3rwxgrt>4. Recall — 完全本地化的 Claude Code 项目记忆</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#5-system_prompts_leaks--各大-ai-模型系统提示词泄露汇总" data-toc-target="5-system_prompts_leaks--各大-ai-模型系统提示词泄露汇总" data-astro-cid-u3rwxgrt>5. system_prompts_leaks — 各大 AI 模型系统提示词泄露汇总</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-社区热议" data-toc-target="-社区热议" data-astro-cid-u3rwxgrt>💬 社区热议</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-一句话快讯" data-toc-target="-一句话快讯" data-astro-cid-u3rwxgrt>📊 一句话快讯</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-新发现的信息源" data-toc-target="-新发现的信息源" data-astro-cid-u3rwxgrt>🆕 新发现的信息源</a></li></ol></details></nav><script data-astro-rerun>
+  (() => {
+    function clamp(value, min, max) {
+      return Math.min(max, Math.max(min, value));
+    }
+
+    function getDrawerPreference() {
+      try {
+        return localStorage.getItem("article-toc-drawer-open");
+      } catch {
+        return null;
+      }
+    }
+
+    function setDrawerPreference(value) {
+      try {
+        localStorage.setItem("article-toc-drawer-open", value);
+      } catch {
+        // The drawer remains usable even when storage is unavailable.
+      }
+    }
+
+    function initArticleTocDrawer() {
+      window.__articleTocDrawerCleanup?.();
+
+      const article = document.getElementById("article");
+      const headings = Array.from(
+        article?.querySelectorAll("h2[id], h3[id]") ?? []
+      );
+      const links = Array.from(
+        document.querySelectorAll(".article-toc a[data-toc-target]")
+      );
+      const drawers = Array.from(
+        document.querySelectorAll("[data-toc-drawer]")
+      );
+
+      if (!article || headings.length === 0 || links.length === 0) {
+        window.__articleTocDrawerCleanup = null;
+        return;
+      }
+
+      const storedOpen = getDrawerPreference();
+      const isOpenByDefault = storedOpen !== "false";
+
+      for (const drawer of drawers) {
+        const toggle = drawer.querySelector("[data-toc-toggle]");
+        drawer.dataset.tocOpen = isOpenByDefault ? "true" : "false";
+        toggle?.setAttribute("aria-expanded", String(isOpenByDefault));
+        toggle?.setAttribute(
+          "aria-label",
+          isOpenByDefault ? "收起本文目录" : "展开本文目录"
+        );
+      }
+
+      const onToggleClick = event => {
+        const button = event.currentTarget;
+        const drawer = button.closest("[data-toc-drawer]");
+        const nextOpen = drawer.dataset.tocOpen !== "true";
+        drawer.dataset.tocOpen = String(nextOpen);
+        button.setAttribute("aria-expanded", String(nextOpen));
+        button.setAttribute(
+          "aria-label",
+          nextOpen ? "收起本文目录" : "展开本文目录"
+        );
+        setDrawerPreference(String(nextOpen));
+      };
+
+      const toggles = drawers
+        .map(drawer => drawer.querySelector("[data-toc-toggle]"))
+        .filter(Boolean);
+      for (const toggle of toggles) {
+        toggle.addEventListener("click", onToggleClick);
+      }
+
+      let frame = 0;
+
+      function updateTocState() {
+        frame = 0;
+        const articleRect = article.getBoundingClientRect();
+        const articleTop = window.scrollY + articleRect.top;
+        const articleHeight = article.offsetHeight;
+        const readableHeight = Math.max(
+          1,
+          articleHeight - window.innerHeight * 0.55
+        );
+        const progress = clamp(
+          ((window.scrollY - articleTop + window.innerHeight * 0.2) /
+            readableHeight) *
+            100,
+          0,
+          100
+        );
+
+        const markerY =
+          window.scrollY + Math.min(window.innerHeight * 0.34, 240);
+        let activeId = headings[0].id;
+
+        for (const heading of headings) {
+          const headingTop =
+            window.scrollY + heading.getBoundingClientRect().top;
+          if (headingTop <= markerY) {
+            activeId = heading.id;
+          } else {
+            break;
+          }
+        }
+
+        for (const link of links) {
+          const isActive = link.dataset.tocTarget === activeId;
+          if (isActive) {
+            link.setAttribute("aria-current", "location");
+          } else {
+            link.removeAttribute("aria-current");
+          }
+        }
+
+        for (const drawer of drawers) {
+          const progressLabel = drawer.querySelector("[data-toc-progress]");
+          const meter = drawer.querySelector("[data-toc-meter]");
+          if (progressLabel)
+            progressLabel.textContent = `${Math.round(progress)}%`;
+          if (meter) meter.style.width = `${progress}%`;
+        }
+
+        const activeDrawerLink = document.querySelector(
+          '.article-toc-sidebar a[aria-current="location"]'
+        );
+        const activeDrawer = activeDrawerLink?.closest("[data-toc-drawer]");
+        if (activeDrawer?.dataset.tocOpen === "true") {
+          activeDrawerLink.scrollIntoView({
+            block: "nearest",
+            inline: "nearest",
+          });
+        }
+      }
+
+      function scheduleUpdate() {
+        if (frame) return;
+        frame = requestAnimationFrame(updateTocState);
+      }
+
+      updateTocState();
+      document.addEventListener("scroll", scheduleUpdate, { passive: true });
+      window.addEventListener("resize", scheduleUpdate);
+
+      window.__articleTocDrawerCleanup = () => {
+        if (frame) cancelAnimationFrame(frame);
+        document.removeEventListener("scroll", scheduleUpdate);
+        window.removeEventListener("resize", scheduleUpdate);
+        for (const toggle of toggles) {
+          toggle.removeEventListener("click", onToggleClick);
+        }
+      };
+    }
+
+    window.__initArticleTocDrawer = initArticleTocDrawer;
+    initArticleTocDrawer();
+  })();
+</script> </section> <article id="article" class="mt-8 w-full app-prose max-w-app"> <blockquote><p>自动汇总，数据来源：HN / GitHub Trending / 36氪 / 量子位 / AITNT</p></blockquote>
+<hr>
+<h2 id="-今日头条">🔥 今日头条</h2>
+<h3 id="1-诺奖得主alphafold之父投奔anthropic谷歌48小时连失两大牛">1. <a href="https://www.36kr.com">诺奖得主、AlphaFold之父投奔Anthropic，谷歌48小时连失两大牛</a></h3>
+<ul>
+<li><strong>一句话</strong>：被誉为”AlphaFold之父”的诺贝尔奖得主宣布加入Anthropic，此前48小时内已有另一位顶级AI科学家离开谷歌转投Anthropic。消息引发Google内部信仰危机讨论。</li>
+<li><strong>为什么重要</strong>：这是Anthropic在人才争夺战中对Google的最大打击之一。AlphaFold是AI for Science的标志性成果，这一动向可能重塑AI基础研究的人才版图。</li>
+<li><strong>来源</strong>：36氪、量子位</li>
+</ul>
+<h3 id="2-claude-正式实施身份验证identity-verification">2. <a href="https://support.claude.com/en/articles/14328960-identity-verification-on-claude">Claude 正式实施身份验证（Identity Verification）</a></h3>
+<ul>
+<li><strong>一句话</strong>：Anthropic 宣布对 Claude 部分功能启动身份验证，用户需要提交身份证件才能使用某些能力，以防止滥用并合规运营。</li>
+<li><strong>为什么重要</strong>：这是主流 AI 聊天机器人中首次大规模实施 KYC（实名认证），标志着 AI 行业从”开放实验”转向”合规运营”的分水岭。HN 上 551 分热评。</li>
+<li><strong>来源</strong>：Hacker News（551 pts）</li>
+</ul>
+<h3 id="3-gpt-56-pro-泄露一句话48分钟造出完整模拟人生">3. <a href="https://aitntnews.com">GPT-5.6 Pro 泄露！一句话48分钟造出完整《模拟人生》</a></h3>
+<ul>
+<li><strong>一句话</strong>：疑似 GPT-5.6 Pro 模型信息泄露，据称只需一句提示词、48分钟即可生成一个完整的《模拟人生》风格游戏。</li>
+<li><strong>为什么重要</strong>：如果属实，这意味着 AI 的代码生成和游戏开发能力实现了数量级跃升，可能彻底改变游戏开发行业。</li>
+<li><strong>来源</strong>：AITNT</li>
+</ul>
+<h3 id="4-openai-发布最新里程碑对齐的本质是人格">4. <a href="https://www.36kr.com">OpenAI 发布最新里程碑：对齐的本质是「人格」</a></h3>
+<ul>
+<li><strong>一句话</strong>：OpenAI 公布最新对齐研究里程碑，提出核心观点——AI alignment（对齐）的本质是塑造 AI 的”人格”。</li>
+<li><strong>为什么重要</strong>：这标志着 AI 安全研究的范式从”规则约束”转向”人格塑造”，对模型训练策略、RLHF 方向都有深远影响。</li>
+<li><strong>来源</strong>：36氪、AITNT</li>
+</ul>
+<h3 id="5-apertus--完全开放主权-ai-基础模型发布">5. <a href="https://apertvs.ai/">Apertus — 完全开放主权 AI 基础模型发布</a></h3>
+<ul>
+<li><strong>一句话</strong>：Apertus 推出全球首个完全开放的基础模型（8B/70B），训练数据、代码、权重、方法、对齐原则全部开源可复现。支持 1000+ 语言，符合欧盟 AI 法案要求。</li>
+<li><strong>为什么重要</strong>：这是真正意义上的”开源 AI”里程碑——不仅是模型权重开放，而是从数据到训练的端到端透明。HN 168 分，社区高度关注。</li>
+<li><strong>来源</strong>：Hacker News（168 pts）</li>
+</ul>
+<hr>
+<h2 id="-ai-进展">🤖 AI 进展</h2>
+<h3 id="1-微软也烧不起-token该-deepseek-上位了">1. <a href="https://www.36kr.com">微软也烧不起 Token——该 DeepSeek 上位了</a></h3>
+<ul>
+<li><strong>一句话</strong>：分析指出微软在 AI 基础设施上投入巨大但 Token 成本失控，DeepSeek 等高效能模型正在成为新的选择。</li>
+<li><strong>为什么重要</strong>：Token 经济正在重塑行业格局，高效模型正在替代”大力出奇迹”路线。</li>
+<li><strong>来源</strong>：36氪</li>
+</ul>
+<h3 id="2-阿里发布首个具身大模型-qwen-robot-系列">2. <a href="https://www.qbitai.com">阿里发布首个具身大模型 Qwen-Robot 系列</a></h3>
+<ul>
+<li><strong>一句话</strong>：阿里巴巴正式发布首个具身智能大模型 Qwen-Robot 系列，打通了语言模型到机器人行动的完整链路。</li>
+<li><strong>为什么重要</strong>：国内大厂在具身智能赛道加速布局，阿里这次三连发标志着具身 AI 进入大模型驱动的新阶段。</li>
+<li><strong>来源</strong>：量子位</li>
+</ul>
+<h3 id="3-智源大会天工ai-重新定义世界模型公布-matrix-game-35-技术突破">3. <a href="https://www.qbitai.com">智源大会：天工AI 重新定义世界模型，公布 Matrix-Game 3.5 技术突破</a></h3>
+<ul>
+<li><strong>一句话</strong>：在智源大会上，天工AI 发布 Matrix-Game 3.5，在世界模型技术上取得重要突破。</li>
+<li><strong>为什么重要</strong>：世界模型是实现通用具身智能的关键路径之一，这一突破可能影响自动驾驶、机器人等领域的研发方向。</li>
+<li><strong>来源</strong>：量子位</li>
+</ul>
+<h3 id="4-hpv-疫苗将30岁前宫颈癌死亡风险降至近乎零">4. <a href="https://www.theguardian.com/society/2026/jun/17/hpv-jabs-reduce-risk-dying-cervical-cancer-before-30-zero-study-finds">HPV 疫苗将30岁前宫颈癌死亡风险降至近乎零</a></h3>
+<ul>
+<li><strong>一句话</strong>：最新研究证实，HPV 疫苗接种可将30岁以下女性宫颈癌死亡风险降至几乎为零。HN 135 分，引发广泛讨论。</li>
+<li><strong>为什么重要</strong>：虽然不是纯 AI 新闻，但这是公共卫生领域的里程碑式研究结果，对全球疫苗接种政策有重大影响。</li>
+<li><strong>来源</strong>：Hacker News（135 pts）</li>
+</ul>
+<h3 id="5-豆包收费能赚多少钱">5. <a href="https://www.36kr.com">豆包收费，能赚多少钱？</a></h3>
+<ul>
+<li><strong>一句话</strong>：字节跳动旗下 AI 产品豆包（Doubao）开始收费，引发市场对其商业模式的广泛讨论。</li>
+<li><strong>为什么重要</strong>：国内 AI 应用正在从”免费烧钱”向”商业化”过渡，豆包作为用户量最大的国产 AI 应用之一，其收费策略具有风向标意义。</li>
+<li><strong>来源</strong>：36氪</li>
+</ul>
+<hr>
+<h2 id="-开发者工具">💻 开发者/工具</h2>
+<h3 id="1-bytedancedeer-flow--开源长周期-superagent-框架">1. <a href="https://github.com/bytedance/deer-flow">bytedance/deer-flow — 开源长周期 SuperAgent 框架</a></h3>
+<ul>
+<li><strong>一句话</strong>：字节跳动开源 deer-flow，一个长视野 SuperAgent 框架，支持研究、编码、创作，集成了沙箱、记忆、工具、技能、子代理和消息网关，可处理数分钟到数小时级别的任务。</li>
+<li><strong>为什么重要</strong>：字节系首个开源 Agent 框架，定位”长周期任务代理”，与 OpenAI Codex、Claude Code 形成竞争。GitHub Trending 上榜。</li>
+<li><strong>来源</strong>：GitHub Trending</li>
+</ul>
+<h3 id="2-palmier-pro--macos-ai-视频编辑器">2. <a href="https://github.com/palmier-io/palmier-pro">palmier-pro — macOS AI 视频编辑器</a></h3>
+<ul>
+<li><strong>一句话</strong>：专为 AI 工作流设计的 macOS 视频编辑器，GitHub 今日趋势第一。</li>
+<li><strong>为什么重要</strong>：AI+视频编辑赛道持续升温，这类工具正在改变内容创作的工作流。</li>
+<li><strong>来源</strong>：GitHub Trending</li>
+</ul>
+<h3 id="3-headroom--压缩工具输出减少-60-95-token-消耗">3. <a href="https://github.com/chopratejas/headroom">headroom — 压缩工具输出减少 60-95% Token 消耗</a></h3>
+<ul>
+<li><strong>一句话</strong>：headroom 在工具输出、日志、文件和 RAG 块到达 LLM 之前进行压缩，可减少 60-95% Token 消耗，同时保持答案质量。提供库、代理和 MCP 服务器三种使用方式。</li>
+<li><strong>为什么重要</strong>：Token 成本是 AI 应用最重要的限制因素之一，headroom 直接解决了这个痛点。GitHub Trending #3。</li>
+<li><strong>来源</strong>：GitHub Trending</li>
+</ul>
+<h3 id="4-recall--完全本地化的-claude-code-项目记忆">4. <a href="https://github.com/raiyanyahya/recall">Recall — 完全本地化的 Claude Code 项目记忆</a></h3>
+<ul>
+<li><strong>一句话</strong>：Show HN 项目，为 Claude Code 提供完全本地的项目记忆功能，所有数据存储在本地。</li>
+<li><strong>为什么重要</strong>：解决了 AI 编程助手”上下文窗口有限、每次对话从头开始”的核心痛点。HN 61 分。</li>
+<li><strong>来源</strong>：Hacker News</li>
+</ul>
+<h3 id="5-system_prompts_leaks--各大-ai-模型系统提示词泄露汇总">5. <a href="https://github.com/asgeirtj/system_prompts_leaks">system_prompts_leaks — 各大 AI 模型系统提示词泄露汇总</a></h3>
+<ul>
+<li><strong>一句话</strong>：持续更新的系统提示词泄露仓库，涵盖 Claude Fable 5、Opus 4.8、Claude Code、GPT 5.5 Thinking、Codex、Gemini 3.5 Flash、Grok、Copilot、Cursor、Perplexity 等。</li>
+<li><strong>为什么重要</strong>：对开发者理解各大模型的行为约束、安全机制和架构设计极具参考价值。GitHub Trending 上榜。</li>
+<li><strong>来源</strong>：GitHub Trending</li>
+</ul>
+<hr>
+<h2 id="-社区热议">💬 社区热议</h2>
+<ul>
+<li><strong>HN</strong>：<a href="https://news.ycombinator.com/item?id=47613622">Identity verification on Claude</a> — 551 分，社区两极分化：支持方认为实名制有助于防止滥用，反对方担心隐私和审查。Anthropic 的举措被比作”AI 行业的 Know Your Customer 时刻”。</li>
+<li><strong>HN</strong>：<a href="https://news.ycombinator.com/item?id=47613622">Apertus – Open Foundation Model for Sovereign AI</a> — 168 分，社区对”完全透明开源”模型表示高度期待，特别是其符合 EU AI Act 的设计理念。</li>
+<li><strong>HN</strong>：<a href="https://david.newgas.net/did-my-old-job-only-exist-because-of-fraud/">Did my old job only exist because of fraud?</a> — 178 分，一篇引发广泛共鸣的个人反思，讨论了许多白领工作是否本质上只是”为存在而存在”。</li>
+<li><strong>36氪</strong>：Meta 员工士气跌至 20 年谷底 — 内部直播当众开骂，CTO 承认 AI 重组”糟糕透顶”，反映了大厂在 AI 转型中的组织阵痛。</li>
+</ul>
+<hr>
+<h2 id="-一句话快讯">📊 一句话快讯</h2>
+<ul>
+<li>英伟达成为 AI 最大”地主”——5.4 万亿市值，大模型巨头沦为算力佃农</li>
+<li>FDA 顾问一致投票批准 Moderna 的 mRNA 疫苗，结束了 FDA 管理层动荡时期的争议</li>
+<li>Minecraft: Java Edition 26.2 发布，首个支持 Vulkan 1.2 的版本</li>
+<li>Meta 员工发起请愿，抗议公司收集员工数据用于 ML 模型训练</li>
+<li>诺奖得主陶哲轩12年前的预言被 AI 兑现</li>
+<li>24 岁”AI 股神”横扫华尔街，其未婚妻是 Anthropic CEO 幕僚长</li>
+<li>北京建了一座 AI 工厂：目标 10 万 P 算力，日产 10 万亿 Token</li>
+<li>3 个 00 后 2 个月造出史上最快流式音视频社交模型，跑出 SOTA</li>
+<li>李飞飞投出了一个独角兽</li>
+<li>Claude Cowork 限时翻倍，Anthropic 亏钱请所有打工人</li>
+</ul>
+<hr>
+<h2 id="-新发现的信息源">🆕 新发现的信息源</h2>
+<p>暂无新发现的高质量信息源。已有资源库（AITNT、36氪、量子位、HN、GitHub Trending）覆盖全面。</p> </article> <ul class="learning-tags" aria-label="日报标签"> <li>#科技</li><li>#AI</li><li>#新闻</li> </ul> </div> <nav class="article-toc article-toc-sidebar" data-pagefind-ignore data-toc-drawer="true" data-toc-open="true" aria-label="本文目录" data-astro-cid-u3rwxgrt><div class="toc-drawer-frame" data-astro-cid-u3rwxgrt><button class="toc-drawer-toggle" type="button" aria-expanded="true" aria-label="收起本文目录" data-toc-toggle data-astro-cid-u3rwxgrt><span data-astro-cid-u3rwxgrt>目录</span></button><div class="toc-drawer-panel" data-astro-cid-u3rwxgrt><div class="toc-drawer-header" data-astro-cid-u3rwxgrt><p data-astro-cid-u3rwxgrt>本文目录</p><span data-toc-progress data-astro-cid-u3rwxgrt>0%</span></div><div class="toc-drawer-meter" aria-hidden="true" data-astro-cid-u3rwxgrt><span data-toc-meter data-astro-cid-u3rwxgrt></span></div><ol data-astro-cid-u3rwxgrt><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-今日头条" data-toc-target="-今日头条" data-astro-cid-u3rwxgrt>🔥 今日头条</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#1-诺奖得主alphafold之父投奔anthropic谷歌48小时连失两大牛" data-toc-target="1-诺奖得主alphafold之父投奔anthropic谷歌48小时连失两大牛" data-astro-cid-u3rwxgrt>1. 诺奖得主、AlphaFold之父投奔Anthropic，谷歌48小时连失两大牛</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#2-claude-正式实施身份验证identity-verification" data-toc-target="2-claude-正式实施身份验证identity-verification" data-astro-cid-u3rwxgrt>2. Claude 正式实施身份验证（Identity Verification）</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#3-gpt-56-pro-泄露一句话48分钟造出完整模拟人生" data-toc-target="3-gpt-56-pro-泄露一句话48分钟造出完整模拟人生" data-astro-cid-u3rwxgrt>3. GPT-5.6 Pro 泄露！一句话48分钟造出完整《模拟人生》</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#4-openai-发布最新里程碑对齐的本质是人格" data-toc-target="4-openai-发布最新里程碑对齐的本质是人格" data-astro-cid-u3rwxgrt>4. OpenAI 发布最新里程碑：对齐的本质是「人格」</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#5-apertus--完全开放主权-ai-基础模型发布" data-toc-target="5-apertus--完全开放主权-ai-基础模型发布" data-astro-cid-u3rwxgrt>5. Apertus — 完全开放主权 AI 基础模型发布</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-ai-进展" data-toc-target="-ai-进展" data-astro-cid-u3rwxgrt>🤖 AI 进展</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#1-微软也烧不起-token该-deepseek-上位了" data-toc-target="1-微软也烧不起-token该-deepseek-上位了" data-astro-cid-u3rwxgrt>1. 微软也烧不起 Token——该 DeepSeek 上位了</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#2-阿里发布首个具身大模型-qwen-robot-系列" data-toc-target="2-阿里发布首个具身大模型-qwen-robot-系列" data-astro-cid-u3rwxgrt>2. 阿里发布首个具身大模型 Qwen-Robot 系列</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#3-智源大会天工ai-重新定义世界模型公布-matrix-game-35-技术突破" data-toc-target="3-智源大会天工ai-重新定义世界模型公布-matrix-game-35-技术突破" data-astro-cid-u3rwxgrt>3. 智源大会：天工AI 重新定义世界模型，公布 Matrix-Game 3.5 技术突破</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#4-hpv-疫苗将30岁前宫颈癌死亡风险降至近乎零" data-toc-target="4-hpv-疫苗将30岁前宫颈癌死亡风险降至近乎零" data-astro-cid-u3rwxgrt>4. HPV 疫苗将30岁前宫颈癌死亡风险降至近乎零</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#5-豆包收费能赚多少钱" data-toc-target="5-豆包收费能赚多少钱" data-astro-cid-u3rwxgrt>5. 豆包收费，能赚多少钱？</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-开发者工具" data-toc-target="-开发者工具" data-astro-cid-u3rwxgrt>💻 开发者/工具</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#1-bytedancedeer-flow--开源长周期-superagent-框架" data-toc-target="1-bytedancedeer-flow--开源长周期-superagent-框架" data-astro-cid-u3rwxgrt>1. bytedance/deer-flow — 开源长周期 SuperAgent 框架</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#2-palmier-pro--macos-ai-视频编辑器" data-toc-target="2-palmier-pro--macos-ai-视频编辑器" data-astro-cid-u3rwxgrt>2. palmier-pro — macOS AI 视频编辑器</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#3-headroom--压缩工具输出减少-60-95-token-消耗" data-toc-target="3-headroom--压缩工具输出减少-60-95-token-消耗" data-astro-cid-u3rwxgrt>3. headroom — 压缩工具输出减少 60-95% Token 消耗</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#4-recall--完全本地化的-claude-code-项目记忆" data-toc-target="4-recall--完全本地化的-claude-code-项目记忆" data-astro-cid-u3rwxgrt>4. Recall — 完全本地化的 Claude Code 项目记忆</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#5-system_prompts_leaks--各大-ai-模型系统提示词泄露汇总" data-toc-target="5-system_prompts_leaks--各大-ai-模型系统提示词泄露汇总" data-astro-cid-u3rwxgrt>5. system_prompts_leaks — 各大 AI 模型系统提示词泄露汇总</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-社区热议" data-toc-target="-社区热议" data-astro-cid-u3rwxgrt>💬 社区热议</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-一句话快讯" data-toc-target="-一句话快讯" data-astro-cid-u3rwxgrt>📊 一句话快讯</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-新发现的信息源" data-toc-target="-新发现的信息源" data-astro-cid-u3rwxgrt>🆕 新发现的信息源</a></li></ol></div></div></nav><script data-astro-rerun>
+  (() => {
+    function clamp(value, min, max) {
+      return Math.min(max, Math.max(min, value));
+    }
+
+    function getDrawerPreference() {
+      try {
+        return localStorage.getItem("article-toc-drawer-open");
+      } catch {
+        return null;
+      }
+    }
+
+    function setDrawerPreference(value) {
+      try {
+        localStorage.setItem("article-toc-drawer-open", value);
+      } catch {
+        // The drawer remains usable even when storage is unavailable.
+      }
+    }
+
+    function initArticleTocDrawer() {
+      window.__articleTocDrawerCleanup?.();
+
+      const article = document.getElementById("article");
+      const headings = Array.from(
+        article?.querySelectorAll("h2[id], h3[id]") ?? []
+      );
+      const links = Array.from(
+        document.querySelectorAll(".article-toc a[data-toc-target]")
+      );
+      const drawers = Array.from(
+        document.querySelectorAll("[data-toc-drawer]")
+      );
+
+      if (!article || headings.length === 0 || links.length === 0) {
+        window.__articleTocDrawerCleanup = null;
+        return;
+      }
+
+      const storedOpen = getDrawerPreference();
+      const isOpenByDefault = storedOpen !== "false";
+
+      for (const drawer of drawers) {
+        const toggle = drawer.querySelector("[data-toc-toggle]");
+        drawer.dataset.tocOpen = isOpenByDefault ? "true" : "false";
+        toggle?.setAttribute("aria-expanded", String(isOpenByDefault));
+        toggle?.setAttribute(
+          "aria-label",
+          isOpenByDefault ? "收起本文目录" : "展开本文目录"
+        );
+      }
+
+      const onToggleClick = event => {
+        const button = event.currentTarget;
+        const drawer = button.closest("[data-toc-drawer]");
+        const nextOpen = drawer.dataset.tocOpen !== "true";
+        drawer.dataset.tocOpen = String(nextOpen);
+        button.setAttribute("aria-expanded", String(nextOpen));
+        button.setAttribute(
+          "aria-label",
+          nextOpen ? "收起本文目录" : "展开本文目录"
+        );
+        setDrawerPreference(String(nextOpen));
+      };
+
+      const toggles = drawers
+        .map(drawer => drawer.querySelector("[data-toc-toggle]"))
+        .filter(Boolean);
+      for (const toggle of toggles) {
+        toggle.addEventListener("click", onToggleClick);
+      }
+
+      let frame = 0;
+
+      function updateTocState() {
+        frame = 0;
+        const articleRect = article.getBoundingClientRect();
+        const articleTop = window.scrollY + articleRect.top;
+        const articleHeight = article.offsetHeight;
+        const readableHeight = Math.max(
+          1,
+          articleHeight - window.innerHeight * 0.55
+        );
+        const progress = clamp(
+          ((window.scrollY - articleTop + window.innerHeight * 0.2) /
+            readableHeight) *
+            100,
+          0,
+          100
+        );
+
+        const markerY =
+          window.scrollY + Math.min(window.innerHeight * 0.34, 240);
+        let activeId = headings[0].id;
+
+        for (const heading of headings) {
+          const headingTop =
+            window.scrollY + heading.getBoundingClientRect().top;
+          if (headingTop <= markerY) {
+            activeId = heading.id;
+          } else {
+            break;
+          }
+        }
+
+        for (const link of links) {
+          const isActive = link.dataset.tocTarget === activeId;
+          if (isActive) {
+            link.setAttribute("aria-current", "location");
+          } else {
+            link.removeAttribute("aria-current");
+          }
+        }
+
+        for (const drawer of drawers) {
+          const progressLabel = drawer.querySelector("[data-toc-progress]");
+          const meter = drawer.querySelector("[data-toc-meter]");
+          if (progressLabel)
+            progressLabel.textContent = `${Math.round(progress)}%`;
+          if (meter) meter.style.width = `${progress}%`;
+        }
+
+        const activeDrawerLink = document.querySelector(
+          '.article-toc-sidebar a[aria-current="location"]'
+        );
+        const activeDrawer = activeDrawerLink?.closest("[data-toc-drawer]");
+        if (activeDrawer?.dataset.tocOpen === "true") {
+          activeDrawerLink.scrollIntoView({
+            block: "nearest",
+            inline: "nearest",
+          });
+        }
+      }
+
+      function scheduleUpdate() {
+        if (frame) return;
+        frame = requestAnimationFrame(updateTocState);
+      }
+
+      updateTocState();
+      document.addEventListener("scroll", scheduleUpdate, { passive: true });
+      window.addEventListener("resize", scheduleUpdate);
+
+      window.__articleTocDrawerCleanup = () => {
+        if (frame) cancelAnimationFrame(frame);
+        document.removeEventListener("scroll", scheduleUpdate);
+        window.removeEventListener("resize", scheduleUpdate);
+        for (const toggle of toggles) {
+          toggle.removeEventListener("click", onToggleClick);
+        }
+      };
+    }
+
+    window.__initArticleTocDrawer = initArticleTocDrawer;
+    initArticleTocDrawer();
+  })();
+</script> </main> <footer class="app-layout mt-auto"> <div class="border-border flex flex-col items-center justify-between border-t py-6 sm:flex-row-reverse sm:py-4"> <div class="flex flex-wrap items-center gap-1"> <a href="https://github.com/Shiaoming123" title="世傲命的技术博客 on Github" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21" /></svg> <span class="sr-only">世傲命的技术博客 on Github</span>  </a><a href="mailto:2405360475@qq.com" title="Send an email to 世傲命的技术博客" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><path d="m3 7 9 6 9-6" /></svg> <span class="sr-only">Send an email to 世傲命的技术博客</span>  </a> </div> <div class="my-2 flex flex-col items-center whitespace-nowrap sm:flex-row"> <span>Copyright &#169; 2026</span> <span class="hidden sm:inline">&nbsp;|&nbsp;</span> <span>All rights reserved.</span> </div> </div> </footer>   <script type="module">function l(){const n=window;n.__scrollMotionCleanup?.();const i=document.documentElement,c=document.querySelector(".scroll-progress"),d=window.matchMedia("(prefers-reduced-motion: reduce)").matches;let t;const e=()=>{if(!c)return;const r=i.scrollHeight-window.innerHeight,o=r>0?window.scrollY/r:0;c.style.setProperty("--scroll-progress",Math.min(1,Math.max(0,o)).toString())};if(e(),window.addEventListener("scroll",e,{passive:!0}),window.addEventListener("resize",e),!d){i.classList.add("scroll-motion-ready");const r=document.querySelectorAll("[data-scroll-reveal]");t=new IntersectionObserver(o=>{o.forEach(s=>{s.isIntersecting&&(s.target.classList.add("is-visible"),t?.unobserve(s.target))})},{rootMargin:"0px 0px -12% 0px",threshold:.12}),r.forEach(o=>t?.observe(o))}n.__scrollMotionCleanup=()=>{window.removeEventListener("scroll",e),window.removeEventListener("resize",e),t?.disconnect()}}l();document.addEventListener("astro:after-swap",l);</script> <script type="module">const c="theme",r="light",n="dark";function s(){const e=localStorage.getItem(c);return e||(window.matchMedia("(prefers-color-scheme: dark)").matches?n:r)}let t=window.__theme?.value??s();function a(){localStorage.setItem(c,t),m()}function m(){const e=document.firstElementChild;e?.setAttribute("data-theme",t),e?.classList.toggle("dark",t===n),document.querySelector("#theme-btn")?.setAttribute("aria-label",t);const o=window.getComputedStyle(document.body).backgroundColor;document.querySelector("meta[name='theme-color']")?.setAttribute("content",o)}function d(){m(),document.querySelector("#theme-btn")?.addEventListener("click",()=>{t=t===r?n:r,a()})}d();document.addEventListener("astro:after-swap",d);document.addEventListener("astro:before-swap",e=>{const o=document.querySelector("meta[name='theme-color']")?.getAttribute("content");o&&e.newDocument.querySelector("meta[name='theme-color']")?.setAttribute("content",o)});window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",({matches:e})=>{t=e?n:r,a()});</script> <script type="module" src="/_astro/Layout.astro_astro_type_script_index_2_lang.BEOvTHcA.js"></script> </body> </html>

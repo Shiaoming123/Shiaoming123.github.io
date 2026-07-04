@@ -1,0 +1,471 @@
+<!DOCTYPE html><html dir="ltr" lang="zh-CN" class="overflow-y-scroll scroll-smooth"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="canonical" href="https://shiaoming123.github.io/tech-daily/2026-06-05/"><meta name="generator" content="Astro v6.4.8"><!-- Font --><style>@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/02154cca78ac33f2.woff") format("woff"), url("/_astro/fonts/478e42e4694872ef.ttf") format("truetype");font-display:swap;font-weight:300;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/3a32a7a7a67f4f58.woff") format("woff"), url("/_astro/fonts/0863f4f6964aa89c.ttf") format("truetype");font-display:swap;font-weight:400;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/a5c5808c25effec9.woff") format("woff"), url("/_astro/fonts/792eded6cb3f0350.ttf") format("truetype");font-display:swap;font-weight:500;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/14314705006234cb.woff") format("woff"), url("/_astro/fonts/87d8fc1072d4917b.ttf") format("truetype");font-display:swap;font-weight:600;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/c33265ba093eb291.woff") format("woff"), url("/_astro/fonts/ec883ed4db81a7d9.ttf") format("truetype");font-display:swap;font-weight:700;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/c26ad40d3b1d9169.woff") format("woff"), url("/_astro/fonts/7a5ee0cfcde31b81.ttf") format("truetype");font-display:swap;font-weight:300;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/87ca066ba5b2c7cf.woff") format("woff"), url("/_astro/fonts/f4e25dfe9d6152ec.ttf") format("truetype");font-display:swap;font-weight:400;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/a9a0e80c053be3d5.woff") format("woff"), url("/_astro/fonts/a9df48ecd03749e4.ttf") format("truetype");font-display:swap;font-weight:500;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/da468df88542c99b.woff") format("woff"), url("/_astro/fonts/90f9809471092714.ttf") format("truetype");font-display:swap;font-weight:600;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/f914de358bc554f6.woff") format("woff"), url("/_astro/fonts/dbc9996f99c63e07.ttf") format("truetype");font-display:swap;font-weight:700;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:300;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:400;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:500;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:600;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:700;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:300;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:400;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:500;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:600;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:700;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}:root{--font-google-sans-code:"Google Sans Code-1a30c214885cb404","Google Sans Code-1a30c214885cb404 fallback: Courier New",monospace;}</style><!-- Primary meta --><title>科技日报 — 2026-06-05 | 世傲命的技术博客</title><meta name="title" content="科技日报 — 2026-06-05 | 世傲命的技术博客"><meta name="description" content="Vite、Vitest、Rolldown、Oxc、Vite+ 的开发团队 VoidZero 被 Cloudflare 收购"><meta name="author" content="世傲命"><link rel="sitemap" href="/sitemap.xml"><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:site_name" content="世傲命的技术博客"><meta property="og:title" content="科技日报 — 2026-06-05 | 世傲命的技术博客"><meta property="og:description" content="Vite、Vitest、Rolldown、Oxc、Vite+ 的开发团队 VoidZero 被 Cloudflare 收购"><meta property="og:url" content="https://shiaoming123.github.io/tech-daily/2026-06-05/"><meta property="og:image" content="https://shiaoming123.github.io/default-og.jpg"><!-- Twitter / X --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://shiaoming123.github.io/tech-daily/2026-06-05/"><meta property="twitter:title" content="科技日报 — 2026-06-05 | 世傲命的技术博客"><meta property="twitter:description" content="Vite、Vitest、Rolldown、Oxc、Vite+ 的开发团队 VoidZero 被 Cloudflare 收购"><meta property="twitter:image" content="https://shiaoming123.github.io/default-og.jpg"><!-- RSS autodiscovery --><link rel="alternate" type="application/rss+xml" title="世傲命的技术博客" href="https://shiaoming123.github.io/rss.xml/"><!-- Filled at runtime by theme.ts to match the current background colour --><meta name="theme-color" content=""><!-- Extra head content injected by child layouts (e.g. JSON-LD, article meta) -->  <meta property="og:type" content="article"> <meta property="article:published_time" content="2026-06-05T00:00:00.000Z"><meta property="article:modified_time" content="2026-06-05T00:00:00.000Z"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"科技日报 — 2026-06-05 | 世傲命的技术博客","datePublished":"2026-06-05T00:00:00.000Z","dateModified":"2026-06-05T00:00:00.000Z","author":[{"@type":"Person","name":"世傲命","url":"https://github.com/Shiaoming123"}]}</script> <!--
+      Inline FOUC-prevention script: sets data-theme on <html> before
+      the browser paints. Runs synchronously, no defer/async.
+    --><script>
+      (function () {
+        const stored = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        const theme = stored ?? (prefersDark ? "dark" : "light");
+        const root = document.firstElementChild;
+        root?.setAttribute("data-theme", theme);
+        root?.classList.toggle("dark", theme === "dark");
+        // Expose value so theme.ts can skip re-detection.
+        window.__theme = { value: theme };
+      })();
+    </script><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CAqDO0tx.js"></script><link rel="stylesheet" href="/_astro/PostLayout.g8X8u49B.css"><link rel="stylesheet" href="/_astro/Footer.BPelsM4Z.css"></head> <body class="bg-background font-app text-foreground selection:bg-accent/75 selection:text-accent-foreground flex min-h-svh flex-col"> <div class="scroll-progress" aria-hidden="true"></div>    <a id="skip-to-content" href="#main-content" class="bg-background text-accent absolute inset-s-16 -top-full z-50 px-3 py-2 backdrop-blur-lg transition-all focus:top-4"> 跳到正文 </a> <header class="app-layout neo-header flex flex-col items-center justify-between sm:flex-row"> <div class="neo-header-bar relative flex w-full items-baseline justify-between py-4 sm:items-center sm:py-5"> <a href="/" class="absolute py-1 text-xl leading-8 font-semibold whitespace-nowrap sm:static sm:my-auto sm:text-2xl sm:leading-none"> 世傲命的技术博客 </a> <nav id="nav-menu" class="flex w-full flex-col items-center sm:ms-2 sm:flex-row sm:justify-end sm:space-x-4 sm:py-0"> <button id="menu-btn" class="focus-outline self-end p-2 sm:hidden" aria-label="打开菜单" aria-expanded="false" aria-controls="menu-items" data-label-open="打开菜单" data-label-close="关闭菜单"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="hidden" viewBox="0 0 24 24" id="close-icon"><path stroke="none" d="M0 0h24v24H0z" /><path d="M18 6 6 18M6 6l12 12" /></svg> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon icon-tabler icons-tabler-outline icon-tabler-menu-deep" viewBox="0 0 24 24" id="menu-icon"><path stroke="none" d="M0 0h24v24H0z" /><path d="M4 6h16M7 12h13M10 18h10" /></svg> </button> <ul id="menu-items" class="neo-nav-list mt-4 hidden w-44 grid-cols-2 place-content-center gap-2 sm:mt-0 sm:flex sm:w-auto"> <li class="col-span-2"> <a href="/posts/"> 文章 </a> </li> <li class="col-span-2"> <a href="/learning/"> 学习 </a> </li> <li class="col-span-2"> <a href="/diary-report/"> 机会日报 </a> </li> <li class="col-span-2"> <a href="/tech-daily/" class="active-nav"> 科技日报 </a> </li> <li class="col-span-2"> <a href="/bookmarks/"> 资源 </a> </li> <li class="col-span-2"> <a href="/arena/"> Arena </a> </li> <li class="col-span-2"> <a href="/demos/"> 演示 </a> </li> <li class="col-span-2"> <a href="/taxonomy/"> 分类与标签 </a> </li> <li class="col-span-2"> <a href="/about/"> 关于 </a> </li> <li class="col-span-2"> <a href="/changelog/"> 日志 </a> </li> <li class="neo-nav-icon col-span-2"> <a href="/archives/" title="归档" aria-label="归档" class="group inline-flex items-center gap-1 hover:text-accent focus-outline flex size-full justify-center p-3 sm:relative sm:size-9 sm:p-0">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="hidden sm:absolute sm:top-1/2 sm:left-1/2 sm:block sm:size-6 sm:-translate-x-1/2 sm:-translate-y-1/2" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v0a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8M10 12h4" /></svg> <span class="sm:sr-only">归档</span>  </a> </li> <li class="neo-nav-icon col-span-1 flex items-center justify-center"> <a href="/search/" title="搜索" aria-label="搜索" class="group inline-flex items-center gap-1 hover:text-accent focus-outline relative size-9">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-1/2 left-1/2 size-6 -translate-x-1/2 -translate-y-1/2" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 10a7 7 0 1 0 14 0 7 7 0 1 0-14 0M21 21l-6-6" /></svg> <span class="sr-only">搜索</span>  </a> </li> <li class="neo-nav-icon col-span-1 flex items-center justify-center"> <button id="theme-btn" class="focus-outline hover:[&>svg]:stroke-accent relative size-12 p-4 sm:size-9" title="切换主题" aria-label="auto" aria-live="polite"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-[50%] left-[50%] translate-[-50%] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M12 3h.393a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 2.992z" /></svg> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-[50%] left-[50%] translate-[-50%] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M14.828 14.828a4 4 0 1 0-5.656-5.656 4 4 0 0 0 5.656 5.656M6.343 17.657l-1.414 1.414M6.343 6.343 4.929 4.929M17.657 6.343l1.414-1.414M17.657 17.657l1.414 1.414M4 12H2M12 4V2M20 12h2M12 20v2" /></svg> </button> </li> </ul> </nav> </div> </header> <script type="module">function c(){const e=document.querySelector("#menu-btn"),t=document.querySelector("#menu-items"),n=document.querySelector("#menu-icon"),s=document.querySelector("#close-icon");if(!e||!t||!n||!s)return;const a=e.dataset.labelOpen??"Open menu",l=e.dataset.labelClose??"Close menu";e.addEventListener("click",()=>{const o=e.getAttribute("aria-expanded")==="true";e.setAttribute("aria-expanded",o?"false":"true"),e.setAttribute("aria-label",o?a:l),t.classList.toggle("hidden"),t.classList.toggle("grid"),n.classList.toggle("hidden"),s.classList.toggle("hidden")})}c();document.addEventListener("astro:after-swap",c);</script> <nav class="app-layout mt-8 mb-1" aria-label="breadcrumb"> <ul class="font-light [&>li]:inline [&>li:not(:last-child)>a]:hover:opacity-100"> <li> <a href="/" class="opacity-80"> 首页 </a> <span aria-hidden="true" class="opacity-80">&raquo;</span> </li> <li> <a href="/tech-daily/" class="capitalize opacity-70"> 科技日报 </a> <span aria-hidden="true" class="opacity-70">
+&raquo;
+</span> </li><li> <span class="capitalize opacity-75 lowercase" aria-current="page">  2026-06-05 </span> </li> </ul> </nav> <main id="main-content" class="article-shell daily-article daily-article--tech" data-pagefind-body> <div class="reading-content article-main"> <p class="daily-kicker">Tech Signal Stream</p> <h1 class="text-accent inline-block text-2xl font-bold sm:text-3xl"> 科技日报 — 2026-06-05 </h1> <div class="my-2 flex flex-wrap items-center gap-2"> <div class="text-muted-foreground flex items-center gap-x-2"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 min-w-5.5" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M4 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zM16 3v4M8 3v4M4 11h16M7 14h.013M10.01 14h.005M13.01 14h.005M16.015 14h.005M13.015 17h.005M7.01 17h.005M10.01 17h.005" /></svg>  <time class="text-sm sm:text-base" datetime="2026-06-05T00:00:00.000Z"> 5 Jun, 2026 </time> </div> <span class="daily-source">来源：wiki/tech-daily/2026-06-05.md</span> </div> <section class="article-guide" aria-label="本文导览" data-pagefind-ignore> <p class="article-guide-label">本文导览</p> <nav class="article-toc article-toc-inline" data-pagefind-ignore aria-label="本文目录" data-astro-cid-u3rwxgrt><details data-astro-cid-u3rwxgrt><summary data-astro-cid-u3rwxgrt><span data-astro-cid-u3rwxgrt>本文目录</span><strong data-astro-cid-u3rwxgrt>21 个小节</strong></summary><ol data-astro-cid-u3rwxgrt><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-今日头条" data-toc-target="-今日头条" data-astro-cid-u3rwxgrt>🔥 今日头条</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#1-voidzero-正式加入-cloudflare" data-toc-target="1-voidzero-正式加入-cloudflare" data-astro-cid-u3rwxgrt>1. VoidZero 正式加入 Cloudflare</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#2-anthropic-发布递归自我改进研究当-ai-开始自我构建" data-toc-target="2-anthropic-发布递归自我改进研究当-ai-开始自我构建" data-astro-cid-u3rwxgrt>2. Anthropic 发布递归自我改进研究：当 AI 开始自我构建</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#3-anthropic-开源-ai-安全漏洞发现框架" data-toc-target="3-anthropic-开源-ai-安全漏洞发现框架" data-astro-cid-u3rwxgrt>3. Anthropic 开源 AI 安全漏洞发现框架</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#4-meta-智能眼镜内置面部识别功能已上线" data-toc-target="4-meta-智能眼镜内置面部识别功能已上线" data-astro-cid-u3rwxgrt>4. Meta 智能眼镜内置面部识别功能已上线</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#5-uruky欧洲隐私搜索引擎新增图片搜索和-url-重写" data-toc-target="5-uruky欧洲隐私搜索引擎新增图片搜索和-url-重写" data-astro-cid-u3rwxgrt>5. Uruky：欧洲隐私搜索引擎新增图片搜索和 URL 重写</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-ai-进展" data-toc-target="-ai-进展" data-astro-cid-u3rwxgrt>🤖 AI 进展</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#1-headroomllm-输入压缩神器github-今日最火" data-toc-target="1-headroomllm-输入压缩神器github-今日最火" data-astro-cid-u3rwxgrt>1. Headroom：LLM 输入压缩神器，GitHub 今日最火</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#2-华为开源-kvarnvllm-kv-cache-量化后端" data-toc-target="2-华为开源-kvarnvllm-kv-cache-量化后端" data-astro-cid-u3rwxgrt>2. 华为开源 KVarN：vLLM KV-cache 量化后端</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#3-sam-altman主动式-ai是聊天机器人和-agent-之后的下一阶段" data-toc-target="3-sam-altman主动式-ai是聊天机器人和-agent-之后的下一阶段" data-astro-cid-u3rwxgrt>3. Sam Altman：「主动式 AI」是聊天机器人和 Agent 之后的下一阶段</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#4-ideogram-40-开源原生-2k-分辨率改进文字渲染" data-toc-target="4-ideogram-40-开源原生-2k-分辨率改进文字渲染" data-astro-cid-u3rwxgrt>4. Ideogram 4.0 开源，原生 2K 分辨率，改进文字渲染</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#5-google-gemma-4-12b-发布" data-toc-target="5-google-gemma-4-12b-发布" data-astro-cid-u3rwxgrt>5. Google Gemma 4 12B 发布</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-开发者工具" data-toc-target="-开发者工具" data-astro-cid-u3rwxgrt>💻 开发者/工具</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#1-eccagent-性能优化系统" data-toc-target="1-eccagent-性能优化系统" data-astro-cid-u3rwxgrt>1. ECC：Agent 性能优化系统</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#2-open-llm-vtuber本地语音交互-llm-虚拟形象" data-toc-target="2-open-llm-vtuber本地语音交互-llm-虚拟形象" data-astro-cid-u3rwxgrt>2. Open-LLM-VTuber：本地语音交互 LLM 虚拟形象</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#3-ffmpeg-webcli浏览器中的完整-ffmpeg" data-toc-target="3-ffmpeg-webcli浏览器中的完整-ffmpeg" data-astro-cid-u3rwxgrt>3. FFmpeg WebCLI：浏览器中的完整 FFmpeg</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#4-open-notebook开源版-notebooklm" data-toc-target="4-open-notebook开源版-notebooklm" data-astro-cid-u3rwxgrt>4. Open Notebook：开源版 NotebookLM</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#5-github-copilot-sdk多平台-copilot-agent-集成" data-toc-target="5-github-copilot-sdk多平台-copilot-agent-集成" data-astro-cid-u3rwxgrt>5. GitHub Copilot SDK：多平台 Copilot Agent 集成</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-社区热议" data-toc-target="-社区热议" data-astro-cid-u3rwxgrt>💬 社区热议</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-一句话快讯" data-toc-target="-一句话快讯" data-astro-cid-u3rwxgrt>📊 一句话快讯</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-新发现的信息源" data-toc-target="-新发现的信息源" data-astro-cid-u3rwxgrt>🆕 新发现的信息源</a></li></ol></details></nav><script data-astro-rerun>
+  (() => {
+    function clamp(value, min, max) {
+      return Math.min(max, Math.max(min, value));
+    }
+
+    function getDrawerPreference() {
+      try {
+        return localStorage.getItem("article-toc-drawer-open");
+      } catch {
+        return null;
+      }
+    }
+
+    function setDrawerPreference(value) {
+      try {
+        localStorage.setItem("article-toc-drawer-open", value);
+      } catch {
+        // The drawer remains usable even when storage is unavailable.
+      }
+    }
+
+    function initArticleTocDrawer() {
+      window.__articleTocDrawerCleanup?.();
+
+      const article = document.getElementById("article");
+      const headings = Array.from(
+        article?.querySelectorAll("h2[id], h3[id]") ?? []
+      );
+      const links = Array.from(
+        document.querySelectorAll(".article-toc a[data-toc-target]")
+      );
+      const drawers = Array.from(
+        document.querySelectorAll("[data-toc-drawer]")
+      );
+
+      if (!article || headings.length === 0 || links.length === 0) {
+        window.__articleTocDrawerCleanup = null;
+        return;
+      }
+
+      const storedOpen = getDrawerPreference();
+      const isOpenByDefault = storedOpen !== "false";
+
+      for (const drawer of drawers) {
+        const toggle = drawer.querySelector("[data-toc-toggle]");
+        drawer.dataset.tocOpen = isOpenByDefault ? "true" : "false";
+        toggle?.setAttribute("aria-expanded", String(isOpenByDefault));
+        toggle?.setAttribute(
+          "aria-label",
+          isOpenByDefault ? "收起本文目录" : "展开本文目录"
+        );
+      }
+
+      const onToggleClick = event => {
+        const button = event.currentTarget;
+        const drawer = button.closest("[data-toc-drawer]");
+        const nextOpen = drawer.dataset.tocOpen !== "true";
+        drawer.dataset.tocOpen = String(nextOpen);
+        button.setAttribute("aria-expanded", String(nextOpen));
+        button.setAttribute(
+          "aria-label",
+          nextOpen ? "收起本文目录" : "展开本文目录"
+        );
+        setDrawerPreference(String(nextOpen));
+      };
+
+      const toggles = drawers
+        .map(drawer => drawer.querySelector("[data-toc-toggle]"))
+        .filter(Boolean);
+      for (const toggle of toggles) {
+        toggle.addEventListener("click", onToggleClick);
+      }
+
+      let frame = 0;
+
+      function updateTocState() {
+        frame = 0;
+        const articleRect = article.getBoundingClientRect();
+        const articleTop = window.scrollY + articleRect.top;
+        const articleHeight = article.offsetHeight;
+        const readableHeight = Math.max(
+          1,
+          articleHeight - window.innerHeight * 0.55
+        );
+        const progress = clamp(
+          ((window.scrollY - articleTop + window.innerHeight * 0.2) /
+            readableHeight) *
+            100,
+          0,
+          100
+        );
+
+        const markerY =
+          window.scrollY + Math.min(window.innerHeight * 0.34, 240);
+        let activeId = headings[0].id;
+
+        for (const heading of headings) {
+          const headingTop =
+            window.scrollY + heading.getBoundingClientRect().top;
+          if (headingTop <= markerY) {
+            activeId = heading.id;
+          } else {
+            break;
+          }
+        }
+
+        for (const link of links) {
+          const isActive = link.dataset.tocTarget === activeId;
+          if (isActive) {
+            link.setAttribute("aria-current", "location");
+          } else {
+            link.removeAttribute("aria-current");
+          }
+        }
+
+        for (const drawer of drawers) {
+          const progressLabel = drawer.querySelector("[data-toc-progress]");
+          const meter = drawer.querySelector("[data-toc-meter]");
+          if (progressLabel)
+            progressLabel.textContent = `${Math.round(progress)}%`;
+          if (meter) meter.style.width = `${progress}%`;
+        }
+
+        const activeDrawerLink = document.querySelector(
+          '.article-toc-sidebar a[aria-current="location"]'
+        );
+        const activeDrawer = activeDrawerLink?.closest("[data-toc-drawer]");
+        if (activeDrawer?.dataset.tocOpen === "true") {
+          activeDrawerLink.scrollIntoView({
+            block: "nearest",
+            inline: "nearest",
+          });
+        }
+      }
+
+      function scheduleUpdate() {
+        if (frame) return;
+        frame = requestAnimationFrame(updateTocState);
+      }
+
+      updateTocState();
+      document.addEventListener("scroll", scheduleUpdate, { passive: true });
+      window.addEventListener("resize", scheduleUpdate);
+
+      window.__articleTocDrawerCleanup = () => {
+        if (frame) cancelAnimationFrame(frame);
+        document.removeEventListener("scroll", scheduleUpdate);
+        window.removeEventListener("resize", scheduleUpdate);
+        for (const toggle of toggles) {
+          toggle.removeEventListener("click", onToggleClick);
+        }
+      };
+    }
+
+    window.__initArticleTocDrawer = initArticleTocDrawer;
+    initArticleTocDrawer();
+  })();
+</script> </section> <article id="article" class="mt-8 w-full app-prose max-w-app"> <blockquote><p>自动汇总，数据来源：HN / GitHub Trending / Product Hunt / The Decoder / V2EX 等</p></blockquote>
+<h2 id="-今日头条">🔥 今日头条</h2>
+<h3 id="1-voidzero-正式加入-cloudflare">1. <a href="https://blog.cloudflare.com/voidzero-joins-cloudflare/">VoidZero 正式加入 Cloudflare</a></h3>
+<ul>
+<li><strong>一句话</strong>：Vite、Vitest、Rolldown、Oxc、Vite+ 的开发团队 VoidZero 被 Cloudflare 收购</li>
+<li><strong>为什么重要</strong>：VoidZero 是前端构建工具链的核心玩家，这次收购可能深刻影响前端生态格局。Cloudflare 承诺 Vite 将保持开源、厂商无关</li>
+<li><strong>来源</strong>：HN（562 points，254 comments）</li>
+</ul>
+<h3 id="2-anthropic-发布递归自我改进研究当-ai-开始自我构建">2. <a href="https://www.anthropic.com/institute/recursive-self-improvement">Anthropic 发布递归自我改进研究：当 AI 开始自我构建</a></h3>
+<ul>
+<li><strong>一句话</strong>：Anthropic 发表了关于 AI 递归自我改进的最新进展和影响分析</li>
+<li><strong>为什么重要</strong>：这是 AI 安全领域的核心议题，Anthropic 公开其研究路径具有行业指引意义。HN 上引发 414 条深度讨论</li>
+<li><strong>来源</strong>：HN（313 points，414 comments）</li>
+</ul>
+<h3 id="3-anthropic-开源-ai-安全漏洞发现框架">3. <a href="https://github.com/anthropics/defending-code-reference-harness">Anthropic 开源 AI 安全漏洞发现框架</a></h3>
+<ul>
+<li><strong>一句话</strong>：Anthropic 发布开源工具集，用于威胁建模、漏洞扫描、分类和自动修复</li>
+<li><strong>为什么重要</strong>：这是 AI 用于安全防御的实践落地，开发者可直接使用或自定义扫描流程</li>
+<li><strong>来源</strong>：HN（240 points，82 comments）</li>
+</ul>
+<h3 id="4-meta-智能眼镜内置面部识别功能已上线">4. <a href="https://www.buchodi.com/meta-glasses-facial-recognition/">Meta 智能眼镜内置面部识别功能已上线</a></h3>
+<ul>
+<li><strong>一句话</strong>：Meta 智能眼镜配套应用中发现完整的面部识别功能管线，已随更新部署</li>
+<li><strong>为什么重要</strong>：可穿戴设备 + 面部识别的组合引发了严重的隐私争议，HN 上引发 196 条讨论</li>
+<li><strong>来源</strong>：HN（219 points，196 comments）</li>
+</ul>
+<h3 id="5-uruky欧洲隐私搜索引擎新增图片搜索和-url-重写">5. <a href="https://uruky.com/?il=en">Uruky：欧洲隐私搜索引擎新增图片搜索和 URL 重写</a></h3>
+<ul>
+<li><strong>一句话</strong>：欧洲版 Kagi 替代品 Uruky 新增图片搜索和 URL 重写功能</li>
+<li><strong>为什么重要</strong>：隐私搜索领域持续增长，欧洲开发者在构建替代方案方面更加活跃</li>
+<li><strong>来源</strong>：HN（206 points，193 comments）</li>
+</ul>
+<h2 id="-ai-进展">🤖 AI 进展</h2>
+<h3 id="1-headroomllm-输入压缩神器github-今日最火">1. <a href="https://github.com/chopratejas/headroom">Headroom：LLM 输入压缩神器，GitHub 今日最火</a></h3>
+<ul>
+<li><strong>一句话</strong>：压缩工具输出、日志和 RAG 分块后再送入 LLM，减少 60-95% 的 token 消耗，同时保持答案质量</li>
+<li><strong>为什么重要</strong>：LLM 成本优化的刚需工具，支持库、代理和 MCP 服务器三种形式。今日 GitHub 新增 3,142 星</li>
+<li><strong>来源</strong>：GitHub Trending #1</li>
+</ul>
+<h3 id="2-华为开源-kvarnvllm-kv-cache-量化后端">2. <a href="https://github.com/huawei-csl/KVarN">华为开源 KVarN：vLLM KV-cache 量化后端</a></h3>
+<ul>
+<li><strong>一句话</strong>：vLLM 的 KV-cache 量化原生后端，实现 3-5x 上下文扩展，吞吐量超过 FP16，精度达到 FP16 水平，无需校准</li>
+<li><strong>为什么重要</strong>：KV-cache 量化是降低 LLM 推理成本的关键技术，华为这个实现号称开箱即用、一个 flag 搞定</li>
+<li><strong>来源</strong>：HN（113 points）+ GitHub Trending</li>
+</ul>
+<h3 id="3-sam-altman主动式-ai是聊天机器人和-agent-之后的下一阶段">3. <a href="https://the-decoder.com/">Sam Altman：「主动式 AI」是聊天机器人和 Agent 之后的下一阶段</a></h3>
+<ul>
+<li><strong>一句话</strong>：OpenAI CEO Sam Altman 认为 AI 将从被动响应转向主动感知和行动</li>
+<li><strong>为什么重要</strong>：这是 AI 产品形态演进的重要方向信号，主动式 AI 意味着 AI 可以在用户未请求时主动提供帮助</li>
+<li><strong>来源</strong>：The Decoder</li>
+</ul>
+<h3 id="4-ideogram-40-开源原生-2k-分辨率改进文字渲染">4. <a href="https://the-decoder.com/">Ideogram 4.0 开源，原生 2K 分辨率，改进文字渲染</a></h3>
+<ul>
+<li><strong>一句话</strong>：AI 图像生成模型 Ideogram 4.0 以开放权重发布，支持原生 2K 分辨率和更好的文字渲染能力</li>
+<li><strong>为什么重要</strong>：文字渲染一直是 AI 图像生成的痛点，Ideogram 在这个方向持续领先</li>
+<li><strong>来源</strong>：The Decoder</li>
+</ul>
+<h3 id="5-google-gemma-4-12b-发布">5. <a href="https://www.producthunt.com">Google Gemma 4 12B 发布</a></h3>
+<ul>
+<li><strong>一句话</strong>：Google 发布 Gemma 4 12B 模型，小参数量大能力</li>
+<li><strong>为什么重要</strong>：开源小模型竞争持续激烈，12B 参数量适合边缘部署和本地推理</li>
+<li><strong>来源</strong>：Product Hunt</li>
+</ul>
+<h2 id="-开发者工具">💻 开发者/工具</h2>
+<h3 id="1-eccagent-性能优化系统">1. <a href="https://github.com/affaan-m/ECC">ECC：Agent 性能优化系统</a></h3>
+<ul>
+<li><strong>一句话</strong>：为 Claude Code、Codex、Opencode、Cursor 等 AI 编程助手打造的性能优化框架，涵盖技能、本能、记忆、安全等模块</li>
+<li><strong>为什么重要</strong>：AI 编程助手的使用越来越普遍，如何让它们更高效是开发者关注的问题。今日 GitHub 新增 1,750 星</li>
+<li><strong>来源</strong>：GitHub Trending #3</li>
+</ul>
+<h3 id="2-open-llm-vtuber本地语音交互-llm-虚拟形象">2. <a href="https://github.com/Open-LLM-VTuber/Open-LLM-VTuber">Open-LLM-VTuber：本地语音交互 LLM 虚拟形象</a></h3>
+<ul>
+<li><strong>一句话</strong>：用语音与任意 LLM 对话，支持免提语音交互、语音打断和 Live2D 虚拟形象，全平台本地运行</li>
+<li><strong>为什么重要</strong>：语音是下一代 AI 交互的重要入口，这个项目让开发者可以快速搭建本地语音 AI 助手</li>
+<li><strong>来源</strong>：GitHub Trending（632 stars today）</li>
+</ul>
+<h3 id="3-ffmpeg-webcli浏览器中的完整-ffmpeg">3. <a href="https://github.com/tejaswigowda/ffmpeg-webCLI">FFmpeg WebCLI：浏览器中的完整 FFmpeg</a></h3>
+<ul>
+<li><strong>一句话</strong>：基于 ffmpeg.wasm 的浏览器端视频编辑器，无需上传、无需服务器，全部在浏览器本地处理</li>
+<li><strong>为什么重要</strong>：WASM 技术的又一个实用落地，视频处理不再依赖云端</li>
+<li><strong>来源</strong>：HN Show（72 points）</li>
+</ul>
+<h3 id="4-open-notebook开源版-notebooklm">4. <a href="https://github.com/lfnovo/open-notebook">Open Notebook：开源版 NotebookLM</a></h3>
+<ul>
+<li><strong>一句话</strong>：Google NotebookLM 的开源替代品，功能更多更灵活</li>
+<li><strong>为什么重要</strong>：Google 的 NotebookLM 非常好用但封闭，这个开源版本为自托管和定制化提供了选择</li>
+<li><strong>来源</strong>：GitHub Trending（581 stars today）</li>
+</ul>
+<h3 id="5-github-copilot-sdk多平台-copilot-agent-集成">5. <a href="https://github.com/github/copilot-sdk">GitHub Copilot SDK：多平台 Copilot Agent 集成</a></h3>
+<ul>
+<li><strong>一句话</strong>：GitHub 官方发布的多平台 SDK，用于将 Copilot Agent 集成到各种应用和服务中</li>
+<li><strong>为什么重要</strong>：GitHub 正在将 Copilot 从 IDE 插件扩展为平台级服务，这是重要的战略动作</li>
+<li><strong>来源</strong>：GitHub Trending（411 stars today）</li>
+</ul>
+<h2 id="-社区热议">💬 社区热议</h2>
+<ul>
+<li><strong>HN 热议</strong>：Anthropic 递归自我改进研究引发 414 条讨论，社区对 AI 自我进化的能力和风险分歧明显</li>
+<li><strong>HN 热议</strong>：VoidZero 加入 Cloudflare 引发 254 条讨论，前端开发者对 Vite 未来走向关注度极高</li>
+<li><strong>V2EX 热议</strong>：「Gemma4 12B 如何跑在 16G 显存上？」——小模型本地部署仍是开发者热门话题</li>
+<li><strong>V2EX 热议</strong>：「10 年后程序员会如何，你做好准备了吗？」——AI 对程序员职业的影响持续引发焦虑和思考</li>
+</ul>
+<h2 id="-一句话快讯">📊 一句话快讯</h2>
+<ul>
+<li>Headroom 今日 GitHub 新增 3,142 星，成为当日最热项目——LLM 成本优化是刚需</li>
+<li>NousResearch/hermes-agent 新增 1,913 星——AI Agent 框架持续火爆</li>
+<li>华为开源 KVarN KV-cache 量化方案——大模型推理成本再降一级</li>
+<li>Cloudflare 收购 VoidZero——前端构建工具链迎来大变局</li>
+<li>Meta 智能眼镜内置面部识别——隐私争议再升级</li>
+<li>Perplexity 发布 Windows 版个人电脑应用——AI 搜索向桌面端扩张</li>
+<li>Uruky 隐私搜索引擎获 HN 热议——欧洲隐私搜索生态持续发展</li>
+<li>Open AI 的 Sora 每日烧百万美元，同时流失过半用户——AI 视频生成商业化仍艰难</li>
+</ul>
+<h2 id="-新发现的信息源">🆕 新发现的信息源</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>名称</th><th>URL</th><th>简介</th><th>特色</th></tr></thead><tbody><tr><td>The Decoder</td><td><a href="https://the-decoder.com">https://the-decoder.com</a></td><td>AI 新闻与深度分析</td><td>欧洲视角，学术与产业结合，覆盖全球 AI 动态</td></tr><tr><td>last30days-skill</td><td><a href="https://github.com/mvanhorn/last30days-skill">https://github.com/mvanhorn/last30days-skill</a></td><td>AI Agent 跨平台研究技能</td><td>可跨 Reddit/X/YouTube/HN/Polymarket 等多平台综合研究</td></tr></tbody></table> </article> <ul class="learning-tags" aria-label="日报标签"> <li>#科技</li><li>#AI</li><li>#新闻</li> </ul> </div> <nav class="article-toc article-toc-sidebar" data-pagefind-ignore data-toc-drawer="true" data-toc-open="true" aria-label="本文目录" data-astro-cid-u3rwxgrt><div class="toc-drawer-frame" data-astro-cid-u3rwxgrt><button class="toc-drawer-toggle" type="button" aria-expanded="true" aria-label="收起本文目录" data-toc-toggle data-astro-cid-u3rwxgrt><span data-astro-cid-u3rwxgrt>目录</span></button><div class="toc-drawer-panel" data-astro-cid-u3rwxgrt><div class="toc-drawer-header" data-astro-cid-u3rwxgrt><p data-astro-cid-u3rwxgrt>本文目录</p><span data-toc-progress data-astro-cid-u3rwxgrt>0%</span></div><div class="toc-drawer-meter" aria-hidden="true" data-astro-cid-u3rwxgrt><span data-toc-meter data-astro-cid-u3rwxgrt></span></div><ol data-astro-cid-u3rwxgrt><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-今日头条" data-toc-target="-今日头条" data-astro-cid-u3rwxgrt>🔥 今日头条</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#1-voidzero-正式加入-cloudflare" data-toc-target="1-voidzero-正式加入-cloudflare" data-astro-cid-u3rwxgrt>1. VoidZero 正式加入 Cloudflare</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#2-anthropic-发布递归自我改进研究当-ai-开始自我构建" data-toc-target="2-anthropic-发布递归自我改进研究当-ai-开始自我构建" data-astro-cid-u3rwxgrt>2. Anthropic 发布递归自我改进研究：当 AI 开始自我构建</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#3-anthropic-开源-ai-安全漏洞发现框架" data-toc-target="3-anthropic-开源-ai-安全漏洞发现框架" data-astro-cid-u3rwxgrt>3. Anthropic 开源 AI 安全漏洞发现框架</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#4-meta-智能眼镜内置面部识别功能已上线" data-toc-target="4-meta-智能眼镜内置面部识别功能已上线" data-astro-cid-u3rwxgrt>4. Meta 智能眼镜内置面部识别功能已上线</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#5-uruky欧洲隐私搜索引擎新增图片搜索和-url-重写" data-toc-target="5-uruky欧洲隐私搜索引擎新增图片搜索和-url-重写" data-astro-cid-u3rwxgrt>5. Uruky：欧洲隐私搜索引擎新增图片搜索和 URL 重写</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-ai-进展" data-toc-target="-ai-进展" data-astro-cid-u3rwxgrt>🤖 AI 进展</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#1-headroomllm-输入压缩神器github-今日最火" data-toc-target="1-headroomllm-输入压缩神器github-今日最火" data-astro-cid-u3rwxgrt>1. Headroom：LLM 输入压缩神器，GitHub 今日最火</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#2-华为开源-kvarnvllm-kv-cache-量化后端" data-toc-target="2-华为开源-kvarnvllm-kv-cache-量化后端" data-astro-cid-u3rwxgrt>2. 华为开源 KVarN：vLLM KV-cache 量化后端</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#3-sam-altman主动式-ai是聊天机器人和-agent-之后的下一阶段" data-toc-target="3-sam-altman主动式-ai是聊天机器人和-agent-之后的下一阶段" data-astro-cid-u3rwxgrt>3. Sam Altman：「主动式 AI」是聊天机器人和 Agent 之后的下一阶段</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#4-ideogram-40-开源原生-2k-分辨率改进文字渲染" data-toc-target="4-ideogram-40-开源原生-2k-分辨率改进文字渲染" data-astro-cid-u3rwxgrt>4. Ideogram 4.0 开源，原生 2K 分辨率，改进文字渲染</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#5-google-gemma-4-12b-发布" data-toc-target="5-google-gemma-4-12b-发布" data-astro-cid-u3rwxgrt>5. Google Gemma 4 12B 发布</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-开发者工具" data-toc-target="-开发者工具" data-astro-cid-u3rwxgrt>💻 开发者/工具</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#1-eccagent-性能优化系统" data-toc-target="1-eccagent-性能优化系统" data-astro-cid-u3rwxgrt>1. ECC：Agent 性能优化系统</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#2-open-llm-vtuber本地语音交互-llm-虚拟形象" data-toc-target="2-open-llm-vtuber本地语音交互-llm-虚拟形象" data-astro-cid-u3rwxgrt>2. Open-LLM-VTuber：本地语音交互 LLM 虚拟形象</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#3-ffmpeg-webcli浏览器中的完整-ffmpeg" data-toc-target="3-ffmpeg-webcli浏览器中的完整-ffmpeg" data-astro-cid-u3rwxgrt>3. FFmpeg WebCLI：浏览器中的完整 FFmpeg</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#4-open-notebook开源版-notebooklm" data-toc-target="4-open-notebook开源版-notebooklm" data-astro-cid-u3rwxgrt>4. Open Notebook：开源版 NotebookLM</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#5-github-copilot-sdk多平台-copilot-agent-集成" data-toc-target="5-github-copilot-sdk多平台-copilot-agent-集成" data-astro-cid-u3rwxgrt>5. GitHub Copilot SDK：多平台 Copilot Agent 集成</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-社区热议" data-toc-target="-社区热议" data-astro-cid-u3rwxgrt>💬 社区热议</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-一句话快讯" data-toc-target="-一句话快讯" data-astro-cid-u3rwxgrt>📊 一句话快讯</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-新发现的信息源" data-toc-target="-新发现的信息源" data-astro-cid-u3rwxgrt>🆕 新发现的信息源</a></li></ol></div></div></nav><script data-astro-rerun>
+  (() => {
+    function clamp(value, min, max) {
+      return Math.min(max, Math.max(min, value));
+    }
+
+    function getDrawerPreference() {
+      try {
+        return localStorage.getItem("article-toc-drawer-open");
+      } catch {
+        return null;
+      }
+    }
+
+    function setDrawerPreference(value) {
+      try {
+        localStorage.setItem("article-toc-drawer-open", value);
+      } catch {
+        // The drawer remains usable even when storage is unavailable.
+      }
+    }
+
+    function initArticleTocDrawer() {
+      window.__articleTocDrawerCleanup?.();
+
+      const article = document.getElementById("article");
+      const headings = Array.from(
+        article?.querySelectorAll("h2[id], h3[id]") ?? []
+      );
+      const links = Array.from(
+        document.querySelectorAll(".article-toc a[data-toc-target]")
+      );
+      const drawers = Array.from(
+        document.querySelectorAll("[data-toc-drawer]")
+      );
+
+      if (!article || headings.length === 0 || links.length === 0) {
+        window.__articleTocDrawerCleanup = null;
+        return;
+      }
+
+      const storedOpen = getDrawerPreference();
+      const isOpenByDefault = storedOpen !== "false";
+
+      for (const drawer of drawers) {
+        const toggle = drawer.querySelector("[data-toc-toggle]");
+        drawer.dataset.tocOpen = isOpenByDefault ? "true" : "false";
+        toggle?.setAttribute("aria-expanded", String(isOpenByDefault));
+        toggle?.setAttribute(
+          "aria-label",
+          isOpenByDefault ? "收起本文目录" : "展开本文目录"
+        );
+      }
+
+      const onToggleClick = event => {
+        const button = event.currentTarget;
+        const drawer = button.closest("[data-toc-drawer]");
+        const nextOpen = drawer.dataset.tocOpen !== "true";
+        drawer.dataset.tocOpen = String(nextOpen);
+        button.setAttribute("aria-expanded", String(nextOpen));
+        button.setAttribute(
+          "aria-label",
+          nextOpen ? "收起本文目录" : "展开本文目录"
+        );
+        setDrawerPreference(String(nextOpen));
+      };
+
+      const toggles = drawers
+        .map(drawer => drawer.querySelector("[data-toc-toggle]"))
+        .filter(Boolean);
+      for (const toggle of toggles) {
+        toggle.addEventListener("click", onToggleClick);
+      }
+
+      let frame = 0;
+
+      function updateTocState() {
+        frame = 0;
+        const articleRect = article.getBoundingClientRect();
+        const articleTop = window.scrollY + articleRect.top;
+        const articleHeight = article.offsetHeight;
+        const readableHeight = Math.max(
+          1,
+          articleHeight - window.innerHeight * 0.55
+        );
+        const progress = clamp(
+          ((window.scrollY - articleTop + window.innerHeight * 0.2) /
+            readableHeight) *
+            100,
+          0,
+          100
+        );
+
+        const markerY =
+          window.scrollY + Math.min(window.innerHeight * 0.34, 240);
+        let activeId = headings[0].id;
+
+        for (const heading of headings) {
+          const headingTop =
+            window.scrollY + heading.getBoundingClientRect().top;
+          if (headingTop <= markerY) {
+            activeId = heading.id;
+          } else {
+            break;
+          }
+        }
+
+        for (const link of links) {
+          const isActive = link.dataset.tocTarget === activeId;
+          if (isActive) {
+            link.setAttribute("aria-current", "location");
+          } else {
+            link.removeAttribute("aria-current");
+          }
+        }
+
+        for (const drawer of drawers) {
+          const progressLabel = drawer.querySelector("[data-toc-progress]");
+          const meter = drawer.querySelector("[data-toc-meter]");
+          if (progressLabel)
+            progressLabel.textContent = `${Math.round(progress)}%`;
+          if (meter) meter.style.width = `${progress}%`;
+        }
+
+        const activeDrawerLink = document.querySelector(
+          '.article-toc-sidebar a[aria-current="location"]'
+        );
+        const activeDrawer = activeDrawerLink?.closest("[data-toc-drawer]");
+        if (activeDrawer?.dataset.tocOpen === "true") {
+          activeDrawerLink.scrollIntoView({
+            block: "nearest",
+            inline: "nearest",
+          });
+        }
+      }
+
+      function scheduleUpdate() {
+        if (frame) return;
+        frame = requestAnimationFrame(updateTocState);
+      }
+
+      updateTocState();
+      document.addEventListener("scroll", scheduleUpdate, { passive: true });
+      window.addEventListener("resize", scheduleUpdate);
+
+      window.__articleTocDrawerCleanup = () => {
+        if (frame) cancelAnimationFrame(frame);
+        document.removeEventListener("scroll", scheduleUpdate);
+        window.removeEventListener("resize", scheduleUpdate);
+        for (const toggle of toggles) {
+          toggle.removeEventListener("click", onToggleClick);
+        }
+      };
+    }
+
+    window.__initArticleTocDrawer = initArticleTocDrawer;
+    initArticleTocDrawer();
+  })();
+</script> </main> <footer class="app-layout mt-auto"> <div class="border-border flex flex-col items-center justify-between border-t py-6 sm:flex-row-reverse sm:py-4"> <div class="flex flex-wrap items-center gap-1"> <a href="https://github.com/Shiaoming123" title="世傲命的技术博客 on Github" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21" /></svg> <span class="sr-only">世傲命的技术博客 on Github</span>  </a><a href="mailto:2405360475@qq.com" title="Send an email to 世傲命的技术博客" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><path d="m3 7 9 6 9-6" /></svg> <span class="sr-only">Send an email to 世傲命的技术博客</span>  </a> </div> <div class="my-2 flex flex-col items-center whitespace-nowrap sm:flex-row"> <span>Copyright &#169; 2026</span> <span class="hidden sm:inline">&nbsp;|&nbsp;</span> <span>All rights reserved.</span> </div> </div> </footer>   <script type="module">function l(){const n=window;n.__scrollMotionCleanup?.();const i=document.documentElement,c=document.querySelector(".scroll-progress"),d=window.matchMedia("(prefers-reduced-motion: reduce)").matches;let t;const e=()=>{if(!c)return;const r=i.scrollHeight-window.innerHeight,o=r>0?window.scrollY/r:0;c.style.setProperty("--scroll-progress",Math.min(1,Math.max(0,o)).toString())};if(e(),window.addEventListener("scroll",e,{passive:!0}),window.addEventListener("resize",e),!d){i.classList.add("scroll-motion-ready");const r=document.querySelectorAll("[data-scroll-reveal]");t=new IntersectionObserver(o=>{o.forEach(s=>{s.isIntersecting&&(s.target.classList.add("is-visible"),t?.unobserve(s.target))})},{rootMargin:"0px 0px -12% 0px",threshold:.12}),r.forEach(o=>t?.observe(o))}n.__scrollMotionCleanup=()=>{window.removeEventListener("scroll",e),window.removeEventListener("resize",e),t?.disconnect()}}l();document.addEventListener("astro:after-swap",l);</script> <script type="module">const c="theme",r="light",n="dark";function s(){const e=localStorage.getItem(c);return e||(window.matchMedia("(prefers-color-scheme: dark)").matches?n:r)}let t=window.__theme?.value??s();function a(){localStorage.setItem(c,t),m()}function m(){const e=document.firstElementChild;e?.setAttribute("data-theme",t),e?.classList.toggle("dark",t===n),document.querySelector("#theme-btn")?.setAttribute("aria-label",t);const o=window.getComputedStyle(document.body).backgroundColor;document.querySelector("meta[name='theme-color']")?.setAttribute("content",o)}function d(){m(),document.querySelector("#theme-btn")?.addEventListener("click",()=>{t=t===r?n:r,a()})}d();document.addEventListener("astro:after-swap",d);document.addEventListener("astro:before-swap",e=>{const o=document.querySelector("meta[name='theme-color']")?.getAttribute("content");o&&e.newDocument.querySelector("meta[name='theme-color']")?.setAttribute("content",o)});window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",({matches:e})=>{t=e?n:r,a()});</script> <script type="module" src="/_astro/Layout.astro_astro_type_script_index_2_lang.BEOvTHcA.js"></script> </body> </html>
