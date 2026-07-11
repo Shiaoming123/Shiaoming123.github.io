@@ -1,4 +1,4 @@
-<!DOCTYPE html><html dir="ltr" lang="zh-CN" class="overflow-y-scroll scroll-smooth"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="canonical" href="https://shiaoming123.github.io/posts/visibility-control-demo/"><meta name="generator" content="Astro v6.4.8"><!-- Font --><style>@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/02154cca78ac33f2.woff") format("woff"), url("/_astro/fonts/478e42e4694872ef.ttf") format("truetype");font-display:swap;font-weight:300;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/3a32a7a7a67f4f58.woff") format("woff"), url("/_astro/fonts/0863f4f6964aa89c.ttf") format("truetype");font-display:swap;font-weight:400;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/a5c5808c25effec9.woff") format("woff"), url("/_astro/fonts/792eded6cb3f0350.ttf") format("truetype");font-display:swap;font-weight:500;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/14314705006234cb.woff") format("woff"), url("/_astro/fonts/87d8fc1072d4917b.ttf") format("truetype");font-display:swap;font-weight:600;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/c33265ba093eb291.woff") format("woff"), url("/_astro/fonts/ec883ed4db81a7d9.ttf") format("truetype");font-display:swap;font-weight:700;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/c26ad40d3b1d9169.woff") format("woff"), url("/_astro/fonts/7a5ee0cfcde31b81.ttf") format("truetype");font-display:swap;font-weight:300;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/87ca066ba5b2c7cf.woff") format("woff"), url("/_astro/fonts/f4e25dfe9d6152ec.ttf") format("truetype");font-display:swap;font-weight:400;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/a9a0e80c053be3d5.woff") format("woff"), url("/_astro/fonts/a9df48ecd03749e4.ttf") format("truetype");font-display:swap;font-weight:500;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/da468df88542c99b.woff") format("woff"), url("/_astro/fonts/90f9809471092714.ttf") format("truetype");font-display:swap;font-weight:600;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/f914de358bc554f6.woff") format("woff"), url("/_astro/fonts/dbc9996f99c63e07.ttf") format("truetype");font-display:swap;font-weight:700;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:300;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:400;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:500;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:600;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:700;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:300;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:400;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:500;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:600;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:700;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}:root{--font-google-sans-code:"Google Sans Code-1a30c214885cb404","Google Sans Code-1a30c214885cb404 fallback: Courier New",monospace;}</style><!-- Primary meta --><title>文章可见性控制演示 | 世傲命的技术博客</title><meta name="title" content="文章可见性控制演示 | 世傲命的技术博客"><meta name="description" content="演示静态博客中公开、私密、需密码三种文章可见性状态的设计思路、实现方式和安全边界。"><meta name="author" content="世傲命"><link rel="sitemap" href="/sitemap.xml"><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:site_name" content="世傲命的技术博客"><meta property="og:title" content="文章可见性控制演示 | 世傲命的技术博客"><meta property="og:description" content="演示静态博客中公开、私密、需密码三种文章可见性状态的设计思路、实现方式和安全边界。"><meta property="og:url" content="https://shiaoming123.github.io/posts/visibility-control-demo/"><meta property="og:image" content="https://shiaoming123.github.io/posts/visibility-control-demo/index.png"><!-- Twitter / X --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://shiaoming123.github.io/posts/visibility-control-demo/"><meta property="twitter:title" content="文章可见性控制演示 | 世傲命的技术博客"><meta property="twitter:description" content="演示静态博客中公开、私密、需密码三种文章可见性状态的设计思路、实现方式和安全边界。"><meta property="twitter:image" content="https://shiaoming123.github.io/posts/visibility-control-demo/index.png"><!-- RSS autodiscovery --><link rel="alternate" type="application/rss+xml" title="世傲命的技术博客" href="https://shiaoming123.github.io/rss.xml/"><!-- Filled at runtime by theme.ts to match the current background colour --><meta name="theme-color" content=""><!-- Extra head content injected by child layouts (e.g. JSON-LD, article meta) -->  <meta property="og:type" content="article"> <meta property="article:published_time" content="2026-02-12T11:30:00.000Z"><meta property="article:modified_time" content="2026-02-12T06:20:56.000Z"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"文章可见性控制演示 | 世傲命的技术博客","image":"https://shiaoming123.github.io/posts/visibility-control-demo/index.png","datePublished":"2026-02-12T11:30:00.000Z","dateModified":"2026-02-12T06:20:56.000Z","author":[{"@type":"Person","name":"世傲命","url":"https://github.com/Shiaoming123"}]}</script> <!--
+<!DOCTYPE html><html dir="ltr" lang="zh-CN" class="overflow-y-scroll scroll-smooth"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="canonical" href="https://shiaoming123.github.io/posts/visibility-control-demo/"><meta name="generator" content="Astro v6.4.8"><!-- Font --><style>@font-face{font-family:"Google Sans Code-66787e984771ec7e";src:url("/_astro/fonts/87ca066ba5b2c7cf.woff") format("woff"), url("/_astro/fonts/f4e25dfe9d6152ec.ttf") format("truetype");font-display:swap;font-weight:400;font-style:normal;}@font-face{font-family:"Google Sans Code-66787e984771ec7e";src:url("/_astro/fonts/f914de358bc554f6.woff") format("woff"), url("/_astro/fonts/dbc9996f99c63e07.ttf") format("truetype");font-display:swap;font-weight:700;font-style:normal;}@font-face{font-family:"Google Sans Code-66787e984771ec7e fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:400;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-66787e984771ec7e fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:700;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}:root{--font-google-sans-code:"Google Sans Code-66787e984771ec7e","Google Sans Code-66787e984771ec7e fallback: Courier New",monospace;}</style><!-- Primary meta --><title>文章可见性控制演示 | 世傲命的技术观测站</title><meta name="title" content="文章可见性控制演示 | 世傲命的技术观测站"><meta name="description" content="演示静态博客中公开、私密、需密码三种文章可见性状态的设计思路、实现方式和安全边界。"><meta name="author" content="世傲命"><link rel="sitemap" href="/sitemap.xml"><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:site_name" content="世傲命的技术观测站"><meta property="og:title" content="文章可见性控制演示 | 世傲命的技术观测站"><meta property="og:description" content="演示静态博客中公开、私密、需密码三种文章可见性状态的设计思路、实现方式和安全边界。"><meta property="og:url" content="https://shiaoming123.github.io/posts/visibility-control-demo/"><meta property="og:image" content="https://shiaoming123.github.io/posts/visibility-control-demo/index.png"><!-- Twitter / X --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://shiaoming123.github.io/posts/visibility-control-demo/"><meta property="twitter:title" content="文章可见性控制演示 | 世傲命的技术观测站"><meta property="twitter:description" content="演示静态博客中公开、私密、需密码三种文章可见性状态的设计思路、实现方式和安全边界。"><meta property="twitter:image" content="https://shiaoming123.github.io/posts/visibility-control-demo/index.png"><!-- RSS autodiscovery --><link rel="alternate" type="application/rss+xml" title="世傲命的技术观测站" href="https://shiaoming123.github.io/rss.xml"><!-- Filled at runtime by theme.ts to match the current background colour --><meta name="theme-color" content=""><!-- Extra head content injected by child layouts (e.g. JSON-LD, article meta) -->  <meta property="og:type" content="article"> <meta name="author" content="世傲命"> <meta property="article:section" content="前端实践"><meta property="article:published_time" content="2026-02-12T11:30:00.000Z"><meta property="article:modified_time" content="2026-02-12T06:20:56.000Z"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"文章可见性控制演示 | 世傲命的技术观测站","description":"演示静态博客中公开、私密、需密码三种文章可见性状态的设计思路、实现方式和安全边界。","image":"https://shiaoming123.github.io/posts/visibility-control-demo/index.png","url":"https://shiaoming123.github.io/posts/visibility-control-demo/","mainEntityOfPage":"https://shiaoming123.github.io/posts/visibility-control-demo/","inLanguage":"zh-CN","articleSection":"前端实践","datePublished":"2026-02-12T11:30:00.000Z","dateModified":"2026-02-12T06:20:56.000Z","author":[{"@type":"Person","name":"世傲命","url":"https://github.com/Shiaoming123"}],"publisher":{"@type":"Person","name":"世傲命","url":"https://github.com/Shiaoming123"}}</script> <!--
       Inline FOUC-prevention script: sets data-theme on <html> before
       the browser paints. Runs synchronously, no defer/async.
     --><script>
@@ -14,8 +14,9 @@
         // Expose value so theme.ts can skip re-detection.
         window.__theme = { value: theme };
       })();
-    </script><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CAqDO0tx.js"></script><link rel="stylesheet" href="/_astro/Footer.CCI9BAJA.css"><style>@keyframes astroFadeInOut{0%{opacity:1}to{opacity:0}}@keyframes astroFadeIn{0%{opacity:0;mix-blend-mode:plus-lighter}to{opacity:1;mix-blend-mode:plus-lighter}}@keyframes astroFadeOut{0%{opacity:1;mix-blend-mode:plus-lighter}to{opacity:0;mix-blend-mode:plus-lighter}}@keyframes astroSlideFromRight{0%{transform:translate(100%)}}@keyframes astroSlideFromLeft{0%{transform:translate(-100%)}}@keyframes astroSlideToRight{to{transform:translate(100%)}}@keyframes astroSlideToLeft{to{transform:translate(-100%)}}@media(prefers-reduced-motion){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}[data-astro-transition-scope]{animation:none!important}}
-</style><link rel="stylesheet" href="/_astro/getReadingRail.CFrLYf49.css"><link rel="stylesheet" href="/_astro/PostLayout.g8X8u49B.css"><style>[data-astro-transition-scope="astro-36ssibgs-1"] { view-transition-name: hexo; }@layer astro { ::view-transition-old(hexo) { 
+    </script><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CAqDO0tx.js"></script><link rel="stylesheet" href="/_astro/Footer.D4hZzagA.css"><style>@keyframes astroFadeInOut{0%{opacity:1}to{opacity:0}}@keyframes astroFadeIn{0%{opacity:0;mix-blend-mode:plus-lighter}to{opacity:1;mix-blend-mode:plus-lighter}}@keyframes astroFadeOut{0%{opacity:1;mix-blend-mode:plus-lighter}to{opacity:0;mix-blend-mode:plus-lighter}}@keyframes astroSlideFromRight{0%{transform:translate(100%)}}@keyframes astroSlideFromLeft{0%{transform:translate(-100%)}}@keyframes astroSlideToRight{to{transform:translate(100%)}}@keyframes astroSlideToLeft{to{transform:translate(-100%)}}@media(prefers-reduced-motion){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}[data-astro-transition-scope]{animation:none!important}}
+</style><link rel="stylesheet" href="/_astro/getReadingRail.CFrLYf49.css"><link rel="stylesheet" href="/_astro/PostLayout.g8X8u49B.css"><style>.article-header[data-astro-cid-7ap3hmvm]{display:grid;gap:.75rem;padding-bottom:.25rem}.article-header[data-astro-cid-7ap3hmvm] h1[data-astro-cid-7ap3hmvm],.article-description[data-astro-cid-7ap3hmvm]{margin:0}.article-description[data-astro-cid-7ap3hmvm]{max-width:62ch;color:var(--muted-foreground);font-size:clamp(1rem,2.2vw,1.08rem);line-height:1.65}.article-metadata[data-astro-cid-7ap3hmvm]{display:flex;flex-wrap:wrap;gap:.35rem 1rem;color:var(--muted-foreground);font-size:.82rem}.article-metadata[data-astro-cid-7ap3hmvm] span[data-astro-cid-7ap3hmvm],.article-metadata[data-astro-cid-7ap3hmvm] a[data-astro-cid-7ap3hmvm]{color:inherit;text-decoration:none}.article-metadata[data-astro-cid-7ap3hmvm] strong[data-astro-cid-7ap3hmvm]{color:var(--foreground);font-weight:600}.article-metadata[data-astro-cid-7ap3hmvm] a[data-astro-cid-7ap3hmvm]:hover strong[data-astro-cid-7ap3hmvm]{color:var(--accent)}.article-continuation[data-astro-cid-7ap3hmvm]{display:grid;gap:.65rem;margin-top:2.5rem}.article-continuation[data-astro-cid-7ap3hmvm]>p[data-astro-cid-7ap3hmvm]{margin:0;color:var(--muted-foreground);font-family:var(--font-google-sans-code),monospace;font-size:.74rem;font-weight:700;letter-spacing:.12em}.article-continuation-details[data-astro-cid-7ap3hmvm]>summary[data-astro-cid-7ap3hmvm]{width:fit-content;cursor:pointer;color:var(--accent);font-size:.88rem}.article-continuation-details[data-astro-cid-7ap3hmvm][open]>summary[data-astro-cid-7ap3hmvm]{margin-bottom:.65rem}@media(min-width:768px){.article-continuation-details[data-astro-cid-7ap3hmvm]>summary[data-astro-cid-7ap3hmvm]{display:none}}
+</style><style>[data-astro-transition-scope="astro-36ssibgs-1"] { view-transition-name: hexo; }@layer astro { ::view-transition-old(hexo) { 
 	animation-duration: 180ms;
 	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
 	animation-fill-mode: both;
@@ -159,167 +160,10 @@
 	animation-duration: 180ms;
 	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
 	animation-fill-mode: both;
-	animation-name: astroFadeIn; }</style></head> <body class="bg-background font-app text-foreground selection:bg-accent/75 selection:text-accent-foreground flex min-h-svh flex-col"> <div class="scroll-progress" aria-hidden="true"></div>    <a id="skip-to-content" href="#main-content" class="bg-background text-accent absolute inset-s-16 -top-full z-50 px-3 py-2 backdrop-blur-lg transition-all focus:top-4"> 跳到正文 </a> <header class="app-layout neo-header flex flex-col items-center justify-between sm:flex-row"> <div class="neo-header-bar relative flex w-full items-baseline justify-between py-4 sm:items-center sm:py-5"> <a href="/" class="absolute py-1 text-xl leading-8 font-semibold whitespace-nowrap sm:static sm:my-auto sm:text-2xl sm:leading-none"> 世傲命的技术博客 </a> <nav id="nav-menu" class="flex w-full flex-col items-center sm:ms-2 sm:flex-row sm:justify-end sm:space-x-4 sm:py-0"> <button id="menu-btn" class="focus-outline self-end p-2 sm:hidden" aria-label="打开菜单" aria-expanded="false" aria-controls="menu-items" data-label-open="打开菜单" data-label-close="关闭菜单"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="hidden" viewBox="0 0 24 24" id="close-icon"><path stroke="none" d="M0 0h24v24H0z" /><path d="M18 6 6 18M6 6l12 12" /></svg> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon icon-tabler icons-tabler-outline icon-tabler-menu-deep" viewBox="0 0 24 24" id="menu-icon"><path stroke="none" d="M0 0h24v24H0z" /><path d="M4 6h16M7 12h13M10 18h10" /></svg> </button> <ul id="menu-items" class="neo-nav-list mt-4 hidden w-44 grid-cols-2 place-content-center gap-2 sm:mt-0 sm:flex sm:w-auto"> <li class="col-span-2"> <a href="/posts/" class="active-nav"> 文章 </a> </li> <li class="col-span-2"> <a href="/learning/"> 学习 </a> </li> <li class="col-span-2"> <a href="/diary-report/"> 机会日报 </a> </li> <li class="col-span-2"> <a href="/tech-daily/"> 科技日报 </a> </li> <li class="col-span-2"> <a href="/bookmarks/"> 资源 </a> </li> <li class="col-span-2"> <a href="/arena/"> Arena </a> </li> <li class="col-span-2"> <a href="/demos/"> 演示 </a> </li> <li class="col-span-2"> <a href="/longxu/"> 龙须 </a> </li> <li class="col-span-2"> <a href="/taxonomy/"> 分类与标签 </a> </li> <li class="col-span-2"> <a href="/about/"> 关于 </a> </li> <li class="col-span-2"> <a href="/changelog/"> 日志 </a> </li> <li class="neo-nav-icon col-span-2"> <a href="/archives/" title="归档" aria-label="归档" class="group inline-flex items-center gap-1 hover:text-accent focus-outline flex size-full justify-center p-3 sm:relative sm:size-9 sm:p-0">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="hidden sm:absolute sm:top-1/2 sm:left-1/2 sm:block sm:size-6 sm:-translate-x-1/2 sm:-translate-y-1/2" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v0a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8M10 12h4" /></svg> <span class="sm:sr-only">归档</span>  </a> </li> <li class="neo-nav-icon col-span-1 flex items-center justify-center"> <a href="/search/" title="搜索" aria-label="搜索" class="group inline-flex items-center gap-1 hover:text-accent focus-outline relative size-9">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-1/2 left-1/2 size-6 -translate-x-1/2 -translate-y-1/2" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 10a7 7 0 1 0 14 0 7 7 0 1 0-14 0M21 21l-6-6" /></svg> <span class="sr-only">搜索</span>  </a> </li> <li class="neo-nav-icon col-span-1 flex items-center justify-center"> <button id="theme-btn" class="focus-outline hover:[&>svg]:stroke-accent relative size-12 p-4 sm:size-9" title="切换主题" aria-label="auto" aria-live="polite"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-[50%] left-[50%] translate-[-50%] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M12 3h.393a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 2.992z" /></svg> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-[50%] left-[50%] translate-[-50%] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M14.828 14.828a4 4 0 1 0-5.656-5.656 4 4 0 0 0 5.656 5.656M6.343 17.657l-1.414 1.414M6.343 6.343 4.929 4.929M17.657 6.343l1.414-1.414M17.657 17.657l1.414 1.414M4 12H2M12 4V2M20 12h2M12 20v2" /></svg> </button> </li> </ul> </nav> </div> </header> <script type="module">function c(){const e=document.querySelector("#menu-btn"),t=document.querySelector("#menu-items"),n=document.querySelector("#menu-icon"),s=document.querySelector("#close-icon");if(!e||!t||!n||!s)return;const a=e.dataset.labelOpen??"Open menu",l=e.dataset.labelClose??"Close menu";e.addEventListener("click",()=>{const o=e.getAttribute("aria-expanded")==="true";e.setAttribute("aria-expanded",o?"false":"true"),e.setAttribute("aria-label",o?a:l),t.classList.toggle("hidden"),t.classList.toggle("grid"),n.classList.toggle("hidden"),s.classList.toggle("hidden")})}c();document.addEventListener("astro:after-swap",c);</script> <div class="app-layout flex items-center justify-start"><a id="back-button" href="/" class="group inline-flex items-center gap-1 hover:text-accent focus-outline hover:text-foreground/75 -ms-2 mt-8 mb-2"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 rtl:rotate-180" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="m15 6-6 6 6 6" /></svg><span>返回</span> </a></div><script type="module">function o(){const t=document.querySelector("#back-button"),e=sessionStorage.getItem("backUrl");e&&t&&(t.href=e)}document.addEventListener("astro:page-load",o);o();</script> <main id="main-content" class="article-shell" data-pagefind-body> <div class="reading-content article-main"> <h1 style="view-transition-name:u006587u007ae0u0053efu0089c1u006027u0063a7u005236u006f14u00793a" class="text-accent inline-block text-2xl font-bold sm:text-3xl"> 文章可见性控制演示 </h1> <div class="my-2 flex items-center gap-2"> <div class="text-muted-foreground flex items-center gap-x-2"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 min-w-5.5" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M4 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zM16 3v4M8 3v4M4 11h16M7 14h.013M10.01 14h.005M13.01 14h.005M16.015 14h.005M13.015 17h.005M7.01 17h.005M10.01 17h.005" /></svg>  <time class="text-sm sm:text-base" datetime="2026-02-12T11:30:00.000Z"> 12 Feb, 2026 </time> </div> <span aria-hidden="true" class="text-muted-foreground max-sm:hidden hidden">
-|
-</span>  </div> <section class="article-guide" aria-label="本文导览" data-pagefind-ignore> <p class="article-guide-label">本文导览</p> <nav class="article-toc article-toc-inline" data-pagefind-ignore aria-label="本文目录" data-astro-cid-u3rwxgrt><details data-astro-cid-u3rwxgrt><summary data-astro-cid-u3rwxgrt><span data-astro-cid-u3rwxgrt>本文目录</span><strong data-astro-cid-u3rwxgrt>7 个小节</strong></summary><ol data-astro-cid-u3rwxgrt><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#三种状态" data-toc-target="三种状态" data-astro-cid-u3rwxgrt>三种状态</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#frontmatter-设计" data-toc-target="frontmatter-设计" data-astro-cid-u3rwxgrt>Frontmatter 设计</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#生成阶段过滤" data-toc-target="生成阶段过滤" data-astro-cid-u3rwxgrt>生成阶段过滤</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#密码门禁" data-toc-target="密码门禁" data-astro-cid-u3rwxgrt>密码门禁</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#安全边界" data-toc-target="安全边界" data-astro-cid-u3rwxgrt>安全边界</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#迁移到-astro-后怎么做" data-toc-target="迁移到-astro-后怎么做" data-astro-cid-u3rwxgrt>迁移到 Astro 后怎么做</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#复盘" data-toc-target="复盘" data-astro-cid-u3rwxgrt>复盘</a></li></ol></details></nav><script data-astro-rerun>
-  (() => {
-    function clamp(value, min, max) {
-      return Math.min(max, Math.max(min, value));
-    }
-
-    function getDrawerPreference() {
-      try {
-        return localStorage.getItem("article-toc-drawer-open");
-      } catch {
-        return null;
-      }
-    }
-
-    function setDrawerPreference(value) {
-      try {
-        localStorage.setItem("article-toc-drawer-open", value);
-      } catch {
-        // The drawer remains usable even when storage is unavailable.
-      }
-    }
-
-    function initArticleTocDrawer() {
-      window.__articleTocDrawerCleanup?.();
-
-      const article = document.getElementById("article");
-      const headings = Array.from(
-        article?.querySelectorAll("h2[id], h3[id]") ?? []
-      );
-      const links = Array.from(
-        document.querySelectorAll(".article-toc a[data-toc-target]")
-      );
-      const drawers = Array.from(
-        document.querySelectorAll("[data-toc-drawer]")
-      );
-
-      if (!article || headings.length === 0 || links.length === 0) {
-        window.__articleTocDrawerCleanup = null;
-        return;
-      }
-
-      const storedOpen = getDrawerPreference();
-      const isOpenByDefault = storedOpen !== "false";
-
-      for (const drawer of drawers) {
-        const toggle = drawer.querySelector("[data-toc-toggle]");
-        drawer.dataset.tocOpen = isOpenByDefault ? "true" : "false";
-        toggle?.setAttribute("aria-expanded", String(isOpenByDefault));
-        toggle?.setAttribute(
-          "aria-label",
-          isOpenByDefault ? "收起本文目录" : "展开本文目录"
-        );
-      }
-
-      const onToggleClick = event => {
-        const button = event.currentTarget;
-        const drawer = button.closest("[data-toc-drawer]");
-        const nextOpen = drawer.dataset.tocOpen !== "true";
-        drawer.dataset.tocOpen = String(nextOpen);
-        button.setAttribute("aria-expanded", String(nextOpen));
-        button.setAttribute(
-          "aria-label",
-          nextOpen ? "收起本文目录" : "展开本文目录"
-        );
-        setDrawerPreference(String(nextOpen));
-      };
-
-      const toggles = drawers
-        .map(drawer => drawer.querySelector("[data-toc-toggle]"))
-        .filter(Boolean);
-      for (const toggle of toggles) {
-        toggle.addEventListener("click", onToggleClick);
-      }
-
-      let frame = 0;
-
-      function updateTocState() {
-        frame = 0;
-        const articleRect = article.getBoundingClientRect();
-        const articleTop = window.scrollY + articleRect.top;
-        const articleHeight = article.offsetHeight;
-        const readableHeight = Math.max(
-          1,
-          articleHeight - window.innerHeight * 0.55
-        );
-        const progress = clamp(
-          ((window.scrollY - articleTop + window.innerHeight * 0.2) /
-            readableHeight) *
-            100,
-          0,
-          100
-        );
-
-        const markerY =
-          window.scrollY + Math.min(window.innerHeight * 0.34, 240);
-        let activeId = headings[0].id;
-
-        for (const heading of headings) {
-          const headingTop =
-            window.scrollY + heading.getBoundingClientRect().top;
-          if (headingTop <= markerY) {
-            activeId = heading.id;
-          } else {
-            break;
-          }
-        }
-
-        for (const link of links) {
-          const isActive = link.dataset.tocTarget === activeId;
-          if (isActive) {
-            link.setAttribute("aria-current", "location");
-          } else {
-            link.removeAttribute("aria-current");
-          }
-        }
-
-        for (const drawer of drawers) {
-          const progressLabel = drawer.querySelector("[data-toc-progress]");
-          const meter = drawer.querySelector("[data-toc-meter]");
-          if (progressLabel)
-            progressLabel.textContent = `${Math.round(progress)}%`;
-          if (meter) meter.style.width = `${progress}%`;
-        }
-
-        const activeDrawerLink = document.querySelector(
-          '.article-toc-sidebar a[aria-current="location"]'
-        );
-        const activeDrawer = activeDrawerLink?.closest("[data-toc-drawer]");
-        if (activeDrawer?.dataset.tocOpen === "true") {
-          activeDrawerLink.scrollIntoView({
-            block: "nearest",
-            inline: "nearest",
-          });
-        }
-      }
-
-      function scheduleUpdate() {
-        if (frame) return;
-        frame = requestAnimationFrame(updateTocState);
-      }
-
-      updateTocState();
-      document.addEventListener("scroll", scheduleUpdate, { passive: true });
-      window.addEventListener("resize", scheduleUpdate);
-
-      window.__articleTocDrawerCleanup = () => {
-        if (frame) cancelAnimationFrame(frame);
-        document.removeEventListener("scroll", scheduleUpdate);
-        window.removeEventListener("resize", scheduleUpdate);
-        for (const toggle of toggles) {
-          toggle.removeEventListener("click", onToggleClick);
-        }
-      };
-    }
-
-    window.__initArticleTocDrawer = initArticleTocDrawer;
-    initArticleTocDrawer();
-  })();
-</script> <section class="series-route-card" data-pagefind-ignore aria-label="同类延伸" data-astro-cid-2p2ihuqx><div class="series-route-header" data-astro-cid-2p2ihuqx><div data-astro-cid-2p2ihuqx><p data-astro-cid-2p2ihuqx>同类延伸</p><h2 data-astro-cid-2p2ihuqx>前端实践</h2></div><span data-astro-cid-2p2ihuqx>02 / 2</span></div><nav class="series-route-neighbors" aria-label="系列前后文章" data-astro-cid-2p2ihuqx><a href="/posts/obsidian-style-knowledge-graph-ui/" rel="prev" data-astro-cid-2p2ihuqx><span data-astro-cid-2p2ihuqx>上一篇</span><strong data-astro-cid-2p2ihuqx>把书签做成 Obsidian 风格知识图谱：节点、连线和交互技巧</strong></a></nav><details class="series-route-details" data-astro-cid-2p2ihuqx><summary data-astro-cid-2p2ihuqx>查看完整路线</summary><ol class="series-route-list" data-astro-cid-2p2ihuqx><li data-astro-cid-2p2ihuqx><a href="/posts/obsidian-style-knowledge-graph-ui/" data-astro-cid-2p2ihuqx><span data-astro-cid-2p2ihuqx>01</span><strong data-astro-cid-2p2ihuqx>把书签做成 Obsidian 风格知识图谱：节点、连线和交互技巧</strong></a></li><li data-astro-cid-2p2ihuqx><a href="/posts/visibility-control-demo/" aria-current="page" data-astro-cid-2p2ihuqx><span data-astro-cid-2p2ihuqx>02</span><strong data-astro-cid-2p2ihuqx>文章可见性控制演示</strong><em data-astro-cid-2p2ihuqx>当前</em></a></li></ol></details><ul class="series-route-tags" aria-label="相关标签" data-astro-cid-2p2ihuqx><li data-astro-cid-2p2ihuqx>#Hexo</li><li data-astro-cid-2p2ihuqx>#Butterfly</li><li data-astro-cid-2p2ihuqx>#JavaScript</li><li data-astro-cid-2p2ihuqx>#可见性控制</li></ul></section> </section> <article id="article" class="mt-8 w-full app-prose max-w-app"> <p>这篇文章记录一个静态博客里的文章可见性控制方案。目标是在没有数据库、没有登录系统、没有服务端鉴权的前提下，把文章分成公开、私密和需密码三种状态。</p>
+	animation-name: astroFadeIn; }</style></head> <body class="bg-background font-app text-foreground selection:bg-accent/75 selection:text-accent-foreground flex min-h-svh flex-col"> <div class="scroll-progress" aria-hidden="true"></div>    <a id="skip-to-content" href="#main-content" class="bg-background text-accent absolute inset-s-16 -top-full z-50 px-3 py-2 backdrop-blur-lg transition-all focus:top-4"> 跳到正文 </a> <header class="observatory-header"> <div class="observatory-header-bar"> <a href="/" class="observatory-brand" aria-label="世傲命的技术观测站，返回首页"> <span class="observatory-brand-mark" aria-hidden="true"> <span></span> </span> <span class="observatory-brand-copy"> <strong>世傲命的技术观测站</strong> <small>PERSONAL TECHNOLOGY OBSERVATORY</small> </span> </a> <nav class="observatory-navigation" aria-label="主导航"> <button id="menu-btn" class="focus-outline observatory-menu-button lg:hidden" aria-label="打开菜单" aria-expanded="false" aria-controls="menu-items" data-label-open="打开菜单" data-label-close="关闭菜单"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="hidden" viewBox="0 0 24 24" id="close-icon"><path stroke="none" d="M0 0h24v24H0z" /><path d="M18 6 6 18M6 6l12 12" /></svg> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon icon-tabler icons-tabler-outline icon-tabler-menu-deep" viewBox="0 0 24 24" id="menu-icon"><path stroke="none" d="M0 0h24v24H0z" /><path d="M4 6h16M7 12h13M10 18h10" /></svg> </button> <ul id="menu-items" class="observatory-nav-list hidden max-h-[calc(100svh-4.5rem)] overflow-y-auto lg:flex lg:overflow-visible"> <li class="observatory-nav-item"> <a href="/posts/" class="active-nav" aria-current="page"> 文章 </a> </li><li class="observatory-nav-item"> <a href="/learning/"> 学习 </a> </li><li class="observatory-nav-item"> <a href="/signals/"> 信号 </a> </li><li class="observatory-nav-item"> <a href="/projects/"> 作品 </a> </li><li class="observatory-nav-item"> <a href="/about/"> 关于 </a> </li> <li class="observatory-more-item"> <details id="navigation-more" class="observatory-more"> <summary> 更多 </summary> <ul aria-label="更多"> <li> <a href="/bookmarks/"> 资源 </a> </li><li> <a href="/taxonomy/"> 分类 </a> </li><li> <a href="/archives/"> 归档 </a> </li><li> <a href="/changelog/"> 日志 </a> </li> </ul> </details> </li> <li class="observatory-tool-item"> <a href="/search/" title="搜索" aria-label="搜索"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon icon-tabler icons-tabler-outline icon-tabler-search" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 10a7 7 0 1 0 14 0 7 7 0 1 0-14 0M21 21l-6-6" /></svg> <span class="lg:sr-only">搜索</span> </a> </li> <li class="observatory-tool-item"> <button id="theme-btn" title="切换主题" aria-label="切换到深色主题" aria-live="polite"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M12 3h.393a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 2.992z" /></svg> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M14.828 14.828a4 4 0 1 0-5.656-5.656 4 4 0 0 0 5.656 5.656M6.343 17.657l-1.414 1.414M6.343 6.343 4.929 4.929M17.657 6.343l1.414-1.414M17.657 17.657l1.414 1.414M4 12H2M12 4V2M20 12h2M12 20v2" /></svg> <span class="lg:sr-only">切换主题</span> </button> </li> </ul> </nav> </div> </header> <script type="module">function v(){const a=window;a.__observatoryNavigationCleanup?.();const t=document.querySelector("#menu-btn"),n=document.querySelector("#menu-items"),i=document.querySelector("#menu-icon"),c=document.querySelector("#close-icon"),g=document.querySelector("#navigation-more");if(!t||!n||!i||!c)return;const L=t.dataset.labelOpen??"打开菜单",f=t.dataset.labelClose??"关闭菜单",o=()=>t.getAttribute("aria-expanded")==="true",s=(e,b=!1)=>{t.setAttribute("aria-expanded",String(e)),t.setAttribute("aria-label",e?f:L),n.classList.toggle("hidden",!e),n.classList.toggle("grid",e),i.classList.toggle("hidden",e),c.classList.toggle("hidden",!e),document.documentElement.classList.toggle("shell-menu-open",e),e||(g?.removeAttribute("open"),b&&t.focus())},r=()=>s(!o()),l=e=>{o()&&e.target.closest("a")&&s(!1)},d=e=>{e.key==="Escape"&&o()&&(e.preventDefault(),s(!1,!0))},u=e=>{e.matches&&o()&&s(!1)},m=window.matchMedia("(min-width: 64rem)");t.addEventListener("click",r),n.addEventListener("click",l),document.addEventListener("keydown",d),m.addEventListener("change",u),a.__observatoryNavigationCleanup=()=>{t.removeEventListener("click",r),n.removeEventListener("click",l),document.removeEventListener("keydown",d),m.removeEventListener("change",u),document.documentElement.classList.remove("shell-menu-open")}}v();document.addEventListener("astro:after-swap",v);document.addEventListener("astro:before-swap",()=>{window.__observatoryNavigationCleanup?.()});</script> <nav class="app-layout flex items-center justify-start" aria-label="文章返回"><a id="back-button" href="/" class="group inline-flex items-center gap-1 hover:text-accent focus-outline hover:text-foreground/75 -ms-2 mt-8 mb-2"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 rtl:rotate-180" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="m15 6-6 6 6 6" /></svg><span>返回</span> </a></nav><script type="module">function o(){const t=document.querySelector("#back-button"),e=sessionStorage.getItem("backUrl");e&&t&&(t.href=e)}document.addEventListener("astro:page-load",o);o();</script> <main id="main-content" class="article-shell" data-pagefind-body data-astro-cid-7ap3hmvm> <div class="reading-content article-main" data-astro-cid-7ap3hmvm> <header class="article-header" data-astro-cid-7ap3hmvm> <span class="sr-only" data-pagefind-filter="内容类型" data-pagefind-meta="contentType" data-astro-cid-7ap3hmvm>文章</span> <span class="sr-only" data-pagefind-filter="分类" data-pagefind-meta="category" data-astro-cid-7ap3hmvm> 前端实践 </span> <h1 style="view-transition-name:u006587u007ae0u0053efu0089c1u006027u0063a7u005236u006f14u00793a" class="text-accent inline-block text-2xl font-bold sm:text-3xl" data-astro-cid-7ap3hmvm> 文章可见性控制演示 </h1> <p class="article-description" data-astro-cid-7ap3hmvm>演示静态博客中公开、私密、需密码三种文章可见性状态的设计思路、实现方式和安全边界。</p> <div class="article-metadata" aria-label="文章信息" data-astro-cid-7ap3hmvm> <span data-astro-cid-7ap3hmvm>作者 <strong data-astro-cid-7ap3hmvm>世傲命</strong></span> <a href="/categories/前端实践/" data-astro-cid-7ap3hmvm>
+分类 <strong data-astro-cid-7ap3hmvm>前端实践</strong> </a> <span data-astro-cid-7ap3hmvm>
+发布
+<time datetime="2026-02-12T11:30:00.000Z" data-pagefind-meta="date[datetime]" data-astro-cid-7ap3hmvm> 2026年2月12日 </time> </span>   </div> </header> <article id="article" class="mt-6 w-full app-prose max-w-app" data-astro-cid-7ap3hmvm> <p>这篇文章记录一个静态博客里的文章可见性控制方案。目标是在没有数据库、没有登录系统、没有服务端鉴权的前提下，把文章分成公开、私密和需密码三种状态。</p>
 <p>先说结论：静态站可以做“内容分发层面的可见性控制”，但不能做真正的权限系统。任何需要强安全的内容，都不应该只靠前端脚本保护。</p>
 <p><img src="/images/diagrams/visibility-states.svg" alt="静态博客文章可见性模型"></p>
 <h2 id="三种状态">三种状态</h2>
@@ -406,8 +250,10 @@
 <p>这样比在模板里到处写判断更稳。生成 RSS、sitemap、搜索索引时也要复用同一套过滤逻辑。</p>
 <h2 id="复盘">复盘</h2>
 <p>这套方案的核心是区分“公开入口控制”和“内容安全保护”。静态博客可以很好地控制文章是否出现在列表、归档和索引里；但只要内容已经被生成到前端，任何人都有可能通过源码或网络请求看到。</p>
-<p>所以，我更推荐把它作为内容管理能力，而不是安全能力。需要安全时，上服务端鉴权；需要写作管理时，用 frontmatter 控制生成结果。</p> </article> <hr class="my-8 border-dashed">  <div id="btt-btn-container" class="fixed inset-e-4 bottom-8 z-50 md:sticky md:inset-e-auto md:float-end md:me-1 translate-y-14 opacity-0 transition duration-500"> <button data-button="back-to-top" class="group bg-background relative px-2 py-1 size-14 rounded-full shadow-xl md:h-8 md:w-fit md:rounded-md md:shadow-none md:focus-visible:rounded-none md:bg-background/35 md:bg-clip-padding md:backdrop-blur-lg"> <span id="progress-indicator" class="absolute inset-0 -z-10 block size-14 scale-110 rounded-full bg-transparent md:hidden md:h-8 md:rounded-md"></span> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block rotate-90 md:hidden" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M5 12h14M5 12l6 6M5 12l6-6" /></svg> <span class="group-hover:text-accent sr-only text-sm md:not-sr-only"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-4" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M12 5v14M16 9l-4-4M8 9l4-4" /></svg> 回到顶部 </span> </button> </div> <script data-astro-rerun>
+<p>所以，我更推荐把它作为内容管理能力，而不是安全能力。需要安全时，上服务端鉴权；需要写作管理时，用 frontmatter 控制生成结果。</p> </article> <section class="article-continuation" aria-labelledby="article-continuation-title" data-pagefind-ignore data-astro-cid-7ap3hmvm> <p id="article-continuation-title" data-astro-cid-7ap3hmvm>继续探索</p> <details class="article-continuation-details" data-astro-cid-7ap3hmvm> <summary data-astro-cid-7ap3hmvm>展开系列路线</summary> <section class="series-route-card" data-pagefind-ignore aria-label="同类延伸" data-astro-cid-2p2ihuqx><div class="series-route-header" data-astro-cid-2p2ihuqx><div data-astro-cid-2p2ihuqx><p data-astro-cid-2p2ihuqx>同类延伸</p><h2 data-astro-cid-2p2ihuqx>前端实践</h2></div><span data-astro-cid-2p2ihuqx>02 / 2</span></div><nav class="series-route-neighbors" aria-label="系列前后文章" data-astro-cid-2p2ihuqx><a href="/posts/obsidian-style-knowledge-graph-ui/" rel="prev" data-astro-cid-2p2ihuqx><span data-astro-cid-2p2ihuqx>上一篇</span><strong data-astro-cid-2p2ihuqx>把书签做成 Obsidian 风格知识图谱：节点、连线和交互技巧</strong></a></nav><details class="series-route-details" data-astro-cid-2p2ihuqx><summary data-astro-cid-2p2ihuqx>查看完整路线</summary><ol class="series-route-list" data-astro-cid-2p2ihuqx><li data-astro-cid-2p2ihuqx><a href="/posts/obsidian-style-knowledge-graph-ui/" data-astro-cid-2p2ihuqx><span data-astro-cid-2p2ihuqx>01</span><strong data-astro-cid-2p2ihuqx>把书签做成 Obsidian 风格知识图谱：节点、连线和交互技巧</strong></a></li><li data-astro-cid-2p2ihuqx><a href="/posts/visibility-control-demo/" aria-current="page" data-astro-cid-2p2ihuqx><span data-astro-cid-2p2ihuqx>02</span><strong data-astro-cid-2p2ihuqx>文章可见性控制演示</strong><em data-astro-cid-2p2ihuqx>当前</em></a></li></ol></details><ul class="series-route-tags" aria-label="相关标签" data-astro-cid-2p2ihuqx><li data-astro-cid-2p2ihuqx>#Hexo</li><li data-astro-cid-2p2ihuqx>#Butterfly</li><li data-astro-cid-2p2ihuqx>#JavaScript</li><li data-astro-cid-2p2ihuqx>#可见性控制</li></ul></section> </details> </section> <hr class="my-8 border-dashed" data-astro-cid-7ap3hmvm>  <div id="btt-btn-container" class="fixed inset-e-4 bottom-8 z-50 md:sticky md:inset-e-auto md:float-end md:me-1 translate-y-14 opacity-0 transition duration-500"> <button data-button="back-to-top" class="group bg-background relative px-2 py-1 size-14 rounded-full shadow-xl md:h-8 md:w-fit md:rounded-md md:shadow-none md:focus-visible:rounded-none md:bg-background/35 md:bg-clip-padding md:backdrop-blur-lg"> <span id="progress-indicator" class="absolute inset-0 -z-10 block size-14 scale-110 rounded-full bg-transparent md:hidden md:h-8 md:rounded-md"></span> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block rotate-90 md:hidden" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M5 12h14M5 12l6 6M5 12l6-6" /></svg> <span class="group-hover:text-accent sr-only text-sm md:not-sr-only"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-4" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M12 5v14M16 9l-4-4M8 9l4-4" /></svg> 回到顶部 </span> </button> </div> <script data-astro-rerun>
   function backToTop() {
+    window.__backToTopCleanup?.();
+
     const rootElement = document.documentElement;
     const btnContainer = document.querySelector("#btt-btn-container");
     const backToTopBtn = document.querySelector("[data-button='back-to-top']");
@@ -416,23 +262,29 @@
     if (!rootElement || !btnContainer || !backToTopBtn || !progressIndicator)
       return;
 
-    backToTopBtn.addEventListener("click", () => {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    });
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const handleClick = () => {
+      window.scrollTo({
+        left: 0,
+        top: 0,
+        behavior: reducedMotion.matches ? "auto" : "smooth",
+      });
+    };
+    backToTopBtn.addEventListener("click", handleClick);
 
     let lastVisible = null;
     function handleScroll() {
       const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
       const scrollTop = rootElement.scrollTop;
-      const scrollPercent = Math.floor((scrollTop / scrollTotal) * 100);
+      const scrollPercent =
+        scrollTotal > 0 ? Math.floor((scrollTop / scrollTotal) * 100) : 0;
 
       progressIndicator.style.setProperty(
         "background-image",
         `conic-gradient(var(--accent), var(--accent) ${scrollPercent}%, transparent ${scrollPercent}%)`
       );
 
-      const isVisible = scrollTop / scrollTotal > 0.3;
+      const isVisible = scrollTotal > 0 && scrollTop / scrollTotal > 0.3;
 
       if (isVisible !== lastVisible) {
         btnContainer.classList.toggle("opacity-100", isVisible);
@@ -444,18 +296,28 @@
     }
 
     let ticking = false;
-    document.addEventListener("scroll", () => {
+    let frame = 0;
+    const onScroll = () => {
       if (!ticking) {
-        window.requestAnimationFrame(() => {
+        frame = window.requestAnimationFrame(() => {
           handleScroll();
           ticking = false;
         });
         ticking = true;
       }
-    });
+    };
+
+    handleScroll();
+    document.addEventListener("scroll", onScroll, { passive: true });
+
+    window.__backToTopCleanup = () => {
+      backToTopBtn.removeEventListener("click", handleClick);
+      document.removeEventListener("scroll", onScroll);
+      if (frame) window.cancelAnimationFrame(frame);
+    };
   }
   backToTop();
-</script> <ul class="mt-4 mb-8 flex flex-wrap gap-4 sm:my-8"> <li> <a href="/tags/hexo/" class="flex items-center gap-0.5 border-foreground border-b-2 border-dashed hover:border-accent hover:text-accent hover:-mt-0.5 focus-visible:text-accent focus-visible:border-none text-sm" data-astro-transition-scope="astro-36ssibgs-1"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="opacity-80 size-4" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M5 9h14M5 15h14M11 4 7 20M17 4l-4 16" /></svg> Hexo </a> </li><li> <a href="/tags/butterfly/" class="flex items-center gap-0.5 border-foreground border-b-2 border-dashed hover:border-accent hover:text-accent hover:-mt-0.5 focus-visible:text-accent focus-visible:border-none text-sm" data-astro-transition-scope="astro-36ssibgs-2"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="opacity-80 size-4" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M5 9h14M5 15h14M11 4 7 20M17 4l-4 16" /></svg> Butterfly </a> </li><li> <a href="/tags/javascript/" class="flex items-center gap-0.5 border-foreground border-b-2 border-dashed hover:border-accent hover:text-accent hover:-mt-0.5 focus-visible:text-accent focus-visible:border-none text-sm" data-astro-transition-scope="astro-36ssibgs-3"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="opacity-80 size-4" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M5 9h14M5 15h14M11 4 7 20M17 4l-4 16" /></svg> JavaScript </a> </li><li> <a href="/tags/可见性控制/" class="flex items-center gap-0.5 border-foreground border-b-2 border-dashed hover:border-accent hover:text-accent hover:-mt-0.5 focus-visible:text-accent focus-visible:border-none text-sm" data-astro-transition-scope="astro-36ssibgs-4"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="opacity-80 size-4" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M5 9h14M5 15h14M11 4 7 20M17 4l-4 16" /></svg> 可见性控制 </a> </li> </ul> <div class="flex flex-none flex-col items-center justify-center gap-1 md:items-start"><span class="italic">分享文章:</span><div class="text-center"><a href="mailto:?subject=See%20this%20post&amp;body=https://shiaoming123.github.io/posts/visibility-control-demo/" title="通过邮件分享" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><path d="m3 7 9 6 9-6" /></svg><span class="sr-only">通过邮件分享</span> </a></div></div> <hr class="my-8 border-dashed"> <div data-pagefind-ignore class="my-8 grid grid-cols-1 gap-6 sm:grid-cols-2"> <a href="/posts/hexo-github-blog-setup/" class="flex w-full gap-1 hover:opacity-75"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block flex-none rtl:rotate-180" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M5 12h14M5 12l6 6M5 12l6-6" /></svg> <div> <span>上一篇</span> <div class="text-accent/85 text-sm">Hexo + GitHub Pages 个人博客搭建</div> </div> </a>  </div> </div> <nav class="article-toc article-toc-sidebar" data-pagefind-ignore data-toc-drawer="true" data-toc-open="true" aria-label="本文目录" data-astro-cid-u3rwxgrt><div class="toc-drawer-frame" data-astro-cid-u3rwxgrt><button class="toc-drawer-toggle" type="button" aria-expanded="true" aria-label="收起本文目录" data-toc-toggle data-astro-cid-u3rwxgrt><span data-astro-cid-u3rwxgrt>目录</span></button><div class="toc-drawer-panel" data-astro-cid-u3rwxgrt><div class="toc-drawer-header" data-astro-cid-u3rwxgrt><p data-astro-cid-u3rwxgrt>本文目录</p><span data-toc-progress data-astro-cid-u3rwxgrt>0%</span></div><div class="toc-drawer-meter" aria-hidden="true" data-astro-cid-u3rwxgrt><span data-toc-meter data-astro-cid-u3rwxgrt></span></div><ol data-astro-cid-u3rwxgrt><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#三种状态" data-toc-target="三种状态" data-astro-cid-u3rwxgrt>三种状态</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#frontmatter-设计" data-toc-target="frontmatter-设计" data-astro-cid-u3rwxgrt>Frontmatter 设计</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#生成阶段过滤" data-toc-target="生成阶段过滤" data-astro-cid-u3rwxgrt>生成阶段过滤</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#密码门禁" data-toc-target="密码门禁" data-astro-cid-u3rwxgrt>密码门禁</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#安全边界" data-toc-target="安全边界" data-astro-cid-u3rwxgrt>安全边界</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#迁移到-astro-后怎么做" data-toc-target="迁移到-astro-后怎么做" data-astro-cid-u3rwxgrt>迁移到 Astro 后怎么做</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#复盘" data-toc-target="复盘" data-astro-cid-u3rwxgrt>复盘</a></li></ol></div></div></nav><script data-astro-rerun>
+</script> <ul class="mt-4 mb-8 flex flex-wrap gap-4 sm:my-8" data-astro-cid-7ap3hmvm> <li> <a href="/tags/hexo/" class="flex items-center gap-0.5 border-foreground border-b-2 border-dashed hover:border-accent hover:text-accent hover:-mt-0.5 focus-visible:text-accent focus-visible:border-none text-sm" data-astro-transition-scope="astro-36ssibgs-1"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="opacity-80 size-4" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M5 9h14M5 15h14M11 4 7 20M17 4l-4 16" /></svg> Hexo </a> </li><li> <a href="/tags/butterfly/" class="flex items-center gap-0.5 border-foreground border-b-2 border-dashed hover:border-accent hover:text-accent hover:-mt-0.5 focus-visible:text-accent focus-visible:border-none text-sm" data-astro-transition-scope="astro-36ssibgs-2"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="opacity-80 size-4" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M5 9h14M5 15h14M11 4 7 20M17 4l-4 16" /></svg> Butterfly </a> </li><li> <a href="/tags/javascript/" class="flex items-center gap-0.5 border-foreground border-b-2 border-dashed hover:border-accent hover:text-accent hover:-mt-0.5 focus-visible:text-accent focus-visible:border-none text-sm" data-astro-transition-scope="astro-36ssibgs-3"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="opacity-80 size-4" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M5 9h14M5 15h14M11 4 7 20M17 4l-4 16" /></svg> JavaScript </a> </li><li> <a href="/tags/可见性控制/" class="flex items-center gap-0.5 border-foreground border-b-2 border-dashed hover:border-accent hover:text-accent hover:-mt-0.5 focus-visible:text-accent focus-visible:border-none text-sm" data-astro-transition-scope="astro-36ssibgs-4"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="opacity-80 size-4" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M5 9h14M5 15h14M11 4 7 20M17 4l-4 16" /></svg> 可见性控制 </a> </li> </ul> <div class="flex flex-none flex-col items-center justify-center gap-1 md:items-start"><span class="italic">分享文章:</span><div class="text-center"><a href="mailto:?subject=See%20this%20post&amp;body=https://shiaoming123.github.io/posts/visibility-control-demo/" title="通过邮件分享" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><path d="m3 7 9 6 9-6" /></svg><span class="sr-only">通过邮件分享</span> </a></div></div> <hr class="my-8 border-dashed" data-astro-cid-7ap3hmvm> <div data-pagefind-ignore class="my-8 grid grid-cols-1 gap-6 sm:grid-cols-2"> <a href="/posts/hexo-github-blog-setup/" class="flex w-full gap-1 hover:opacity-75"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block flex-none rtl:rotate-180" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M5 12h14M5 12l6 6M5 12l6-6" /></svg> <div> <span>上一篇</span> <div class="text-accent/85 text-sm">Hexo + GitHub Pages 个人博客搭建</div> </div> </a>  </div> </div> <nav class="article-toc article-toc-sidebar" data-pagefind-ignore data-toc-drawer="true" data-toc-open="true" aria-label="本文目录" data-astro-cid-u3rwxgrt><div class="toc-drawer-frame" data-astro-cid-u3rwxgrt><button class="toc-drawer-toggle" type="button" aria-expanded="true" aria-label="收起本文目录" data-toc-toggle data-astro-cid-u3rwxgrt><span data-astro-cid-u3rwxgrt>目录</span></button><div class="toc-drawer-panel" data-astro-cid-u3rwxgrt><div class="toc-drawer-header" data-astro-cid-u3rwxgrt><p data-astro-cid-u3rwxgrt>本文目录</p><span data-toc-progress data-astro-cid-u3rwxgrt>0%</span></div><div class="toc-drawer-meter" aria-hidden="true" data-astro-cid-u3rwxgrt><span data-toc-meter data-astro-cid-u3rwxgrt></span></div><ol data-astro-cid-u3rwxgrt><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#三种状态" data-toc-target="三种状态" data-astro-cid-u3rwxgrt>三种状态</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#frontmatter-设计" data-toc-target="frontmatter-设计" data-astro-cid-u3rwxgrt>Frontmatter 设计</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#生成阶段过滤" data-toc-target="生成阶段过滤" data-astro-cid-u3rwxgrt>生成阶段过滤</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#密码门禁" data-toc-target="密码门禁" data-astro-cid-u3rwxgrt>密码门禁</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#安全边界" data-toc-target="安全边界" data-astro-cid-u3rwxgrt>安全边界</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#迁移到-astro-后怎么做" data-toc-target="迁移到-astro-后怎么做" data-astro-cid-u3rwxgrt>迁移到 Astro 后怎么做</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#复盘" data-toc-target="复盘" data-astro-cid-u3rwxgrt>复盘</a></li></ol></div></div></nav><script data-astro-rerun>
   (() => {
     function clamp(value, min, max) {
       return Math.min(max, Math.max(min, value));
@@ -613,42 +475,12 @@
     window.__initArticleTocDrawer = initArticleTocDrawer;
     initArticleTocDrawer();
   })();
-</script> </main> <footer class="app-layout mt-auto"> <div class="border-border flex flex-col items-center justify-between border-t py-6 sm:flex-row-reverse sm:py-4"> <div class="flex flex-wrap items-center gap-1"> <a href="https://github.com/Shiaoming123" title="世傲命的技术博客 on Github" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21" /></svg> <span class="sr-only">世傲命的技术博客 on Github</span>  </a><a href="mailto:2405360475@qq.com" title="Send an email to 世傲命的技术博客" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><path d="m3 7 9 6 9-6" /></svg> <span class="sr-only">Send an email to 世傲命的技术博客</span>  </a> </div> <div class="my-2 flex flex-col items-center whitespace-nowrap sm:flex-row"> <span>Copyright &#169; 2026</span> <span class="hidden sm:inline">&nbsp;|&nbsp;</span> <span>All rights reserved.</span> </div> </div> </footer>   <script type="module">function l(){const n=window;n.__scrollMotionCleanup?.();const i=document.documentElement,c=document.querySelector(".scroll-progress"),d=window.matchMedia("(prefers-reduced-motion: reduce)").matches;let t;const e=()=>{if(!c)return;const r=i.scrollHeight-window.innerHeight,o=r>0?window.scrollY/r:0;c.style.setProperty("--scroll-progress",Math.min(1,Math.max(0,o)).toString())};if(e(),window.addEventListener("scroll",e,{passive:!0}),window.addEventListener("resize",e),!d){i.classList.add("scroll-motion-ready");const r=document.querySelectorAll("[data-scroll-reveal]");t=new IntersectionObserver(o=>{o.forEach(s=>{s.isIntersecting&&(s.target.classList.add("is-visible"),t?.unobserve(s.target))})},{rootMargin:"0px 0px -12% 0px",threshold:.12}),r.forEach(o=>t?.observe(o))}n.__scrollMotionCleanup=()=>{window.removeEventListener("scroll",e),window.removeEventListener("resize",e),t?.disconnect()}}l();document.addEventListener("astro:after-swap",l);</script> <script type="module">const c="theme",r="light",n="dark";function s(){const e=localStorage.getItem(c);return e||(window.matchMedia("(prefers-color-scheme: dark)").matches?n:r)}let t=window.__theme?.value??s();function a(){localStorage.setItem(c,t),m()}function m(){const e=document.firstElementChild;e?.setAttribute("data-theme",t),e?.classList.toggle("dark",t===n),document.querySelector("#theme-btn")?.setAttribute("aria-label",t);const o=window.getComputedStyle(document.body).backgroundColor;document.querySelector("meta[name='theme-color']")?.setAttribute("content",o)}function d(){m(),document.querySelector("#theme-btn")?.addEventListener("click",()=>{t=t===r?n:r,a()})}d();document.addEventListener("astro:after-swap",d);document.addEventListener("astro:before-swap",e=>{const o=document.querySelector("meta[name='theme-color']")?.getAttribute("content");o&&e.newDocument.querySelector("meta[name='theme-color']")?.setAttribute("content",o)});window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",({matches:e})=>{t=e?n:r,a()});</script> <script type="module" src="/_astro/Layout.astro_astro_type_script_index_2_lang.BEOvTHcA.js"></script> </body> </html> <script data-astro-rerun>
-  function createProgressBar() {
-    const progressContainer = document.createElement("div");
-    progressContainer.className =
-      "progress-container fixed top-0 z-10 h-1 w-full bg-background";
-
-    const progressBar = document.createElement("div");
-    progressBar.className = "progress-bar h-1 w-0 bg-accent";
-    progressBar.id = "myBar";
-
-    progressContainer.appendChild(progressBar);
-    document.body.appendChild(progressContainer);
-  }
-  createProgressBar();
-
-  function updateScrollProgress() {
-    document.addEventListener("scroll", () => {
-      const winScroll =
-        document.body.scrollTop || document.documentElement.scrollTop;
-      const height =
-        document.documentElement.scrollHeight -
-        document.documentElement.clientHeight;
-      const scrolled = (winScroll / height) * 100;
-      if (document) {
-        const myBar = document.getElementById("myBar");
-        if (myBar) {
-          myBar.style.width = scrolled + "%";
-        }
-      }
-    });
-  }
-  updateScrollProgress();
-
+</script> </main> <footer class="observatory-footer app-layout mt-auto" data-astro-cid-7ap3hmvm="true"> <div class="observatory-footer-grid"> <div class="observatory-footer-signoff"> <p class="observatory-footer-eyebrow">OBSERVATION LOG · 2026</p> <p>持续观察技术变化，也记录把它做成产品的全过程。</p> <div class="flex flex-wrap items-center gap-1"> <a href="https://github.com/Shiaoming123" title="世傲命的技术观测站 on Github" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21" /></svg> <span class="sr-only">世傲命的技术观测站 on Github</span>  </a><a href="mailto:2405360475@qq.com" title="Send an email to 世傲命的技术观测站" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><path d="m3 7 9 6 9-6" /></svg> <span class="sr-only">Send an email to 世傲命的技术观测站</span>  </a> </div> </div> <nav class="observatory-footer-navigation" aria-label="页脚导航"> <div> <p>观测入口</p> <ul> <li> <a href="/posts/">文章</a> </li><li> <a href="/learning/">学习</a> </li><li> <a href="/signals/">信号</a> </li><li> <a href="/projects/">作品</a> </li><li> <a href="/about/">关于</a> </li> </ul> </div> <div> <p>更多</p> <ul> <li> <a href="/bookmarks/">资源</a> </li><li> <a href="/taxonomy/">分类</a> </li><li> <a href="/archives/">归档</a> </li><li> <a href="/changelog/">日志</a> </li> </ul> </div> </nav> </div> <div class="observatory-footer-meta"> <span>© 2026 世傲命</span> <span>PERSONAL TECHNOLOGY OBSERVATORY · SIGNAL CONTINUES</span> </div> </footer>   <script type="module">function l(){const n=window;n.__scrollMotionCleanup?.();const i=document.documentElement,c=document.querySelector(".scroll-progress"),d=window.matchMedia("(prefers-reduced-motion: reduce)").matches;let t;const e=()=>{if(!c)return;const r=i.scrollHeight-window.innerHeight,o=r>0?window.scrollY/r:0;c.style.setProperty("--scroll-progress",Math.min(1,Math.max(0,o)).toString())};if(e(),window.addEventListener("scroll",e,{passive:!0}),window.addEventListener("resize",e),!d){i.classList.add("scroll-motion-ready");const r=document.querySelectorAll("[data-scroll-reveal]");t=new IntersectionObserver(o=>{o.forEach(s=>{s.isIntersecting&&(s.target.classList.add("is-visible"),t?.unobserve(s.target))})},{rootMargin:"0px 0px -12% 0px",threshold:.12}),r.forEach(o=>t?.observe(o))}n.__scrollMotionCleanup=()=>{window.removeEventListener("scroll",e),window.removeEventListener("resize",e),t?.disconnect()}}l();document.addEventListener("astro:after-swap",l);</script> <script type="module">const a="theme",r="light",c="dark";function d(){const e=localStorage.getItem(a);return e||(window.matchMedia("(prefers-color-scheme: dark)").matches?c:r)}let n=window.__theme?.value??d();function s(){localStorage.setItem(a,n),m()}function m(){const e=document.firstElementChild,t=document.querySelector("#theme-btn"),o=n===c;e?.setAttribute("data-theme",n),e?.classList.toggle("dark",o),t?.setAttribute("aria-label",o?"切换到浅色主题":"切换到深色主题"),t?.setAttribute("aria-pressed",String(o));const i=window.getComputedStyle(document.body).backgroundColor;document.querySelector("meta[name='theme-color']")?.setAttribute("content",i)}function u(){const e=window;e.__themeButtonCleanup?.(),m();const t=document.querySelector("#theme-btn"),o=()=>{n=n===r?c:r,s()};t?.addEventListener("click",o),e.__themeButtonCleanup=()=>{t?.removeEventListener("click",o)}}u();document.addEventListener("astro:after-swap",u);document.addEventListener("astro:before-swap",e=>{window.__themeButtonCleanup?.();const t=document.querySelector("meta[name='theme-color']")?.getAttribute("content");t&&e.newDocument.querySelector("meta[name='theme-color']")?.setAttribute("content",t)});window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",({matches:e})=>{n=e?c:r,s()});</script> <script type="module" src="/_astro/Layout.astro_astro_type_script_index_2_lang.CaerEMJ9.js"></script> </body> </html>  <script data-astro-rerun>
   function addHeadingLinks() {
     const headings = Array.from(
-      document.querySelectorAll("h2, h3, h4, h5, h6")
+      document.querySelectorAll(
+        "#article h2, #article h3, #article h4, #article h5, #article h6"
+      )
     );
     for (const heading of headings) {
       if (!heading.id || heading.querySelector(".heading-link")) continue;
@@ -657,6 +489,7 @@
       link.className =
         "heading-link ms-2 no-underline opacity-75 md:opacity-0 md:group-hover:opacity-100 md:focus:opacity-100";
       link.href = "#" + heading.id;
+      link.ariaLabel = `复制“${heading.textContent?.trim()}”段落链接`;
 
       const span = document.createElement("span");
       span.ariaHidden = "true";
@@ -667,8 +500,27 @@
   }
   addHeadingLinks();
 
+  function setupContinuation() {
+    window.__continuationCleanup?.();
+    const details = document.querySelector(".article-continuation-details");
+    if (!details) return;
+
+    const desktop = window.matchMedia("(min-width: 768px)");
+    const syncExpandedState = () => {
+      details.open = desktop.matches;
+    };
+
+    syncExpandedState();
+    desktop.addEventListener("change", syncExpandedState);
+    window.__continuationCleanup = () => {
+      desktop.removeEventListener("change", syncExpandedState);
+    };
+  }
+  setupContinuation();
+
   /** Accessible image lightbox for article images. */
   function initLightbox() {
+    window.__articleInteractionsCleanup?.();
     const article = document.getElementById("article");
     if (!article) return;
 
@@ -680,7 +532,7 @@
 
     // Defer attribute mutations so they don't push the LCP timestamp.
     // Event listeners below use delegation and don't need the attributes to exist yet.
-    requestAnimationFrame(() => {
+    const attributeFrame = requestAnimationFrame(() => {
       const images = Array.from(article.querySelectorAll("img"));
       for (const image of images) {
         if (image.closest("a")) continue;
@@ -909,31 +761,43 @@
       open(image.currentSrc || image.src, image.alt, image);
     }
 
-    article.addEventListener("click", e => {
+    const onArticleClick = e => {
       const image = triggerFromEvent(e);
       if (!image) return;
       e.preventDefault();
       activate(image);
-    });
+    };
 
-    article.addEventListener("keydown", e => {
+    const onArticleKeydown = e => {
       if (e.key !== "Enter" && e.key !== " " && e.key !== "Spacebar") return;
       const image = triggerFromEvent(e);
       if (!image) return;
       e.preventDefault();
       activate(image);
-    });
+    };
+
+    article.addEventListener("click", onArticleClick);
+    article.addEventListener("keydown", onArticleKeydown);
+    window.__articleInteractionsCleanup = () => {
+      cancelAnimationFrame(attributeFrame);
+      close();
+      article.removeEventListener("click", onArticleClick);
+      article.removeEventListener("keydown", onArticleKeydown);
+    };
   }
   initLightbox();
 
   if (!window.__lightboxSwapBound) {
     window.__lightboxSwapBound = true;
-    document.addEventListener("astro:before-swap", () =>
-      window.__closeLightbox?.()
-    );
+    document.addEventListener("astro:before-swap", () => {
+      window.__articleInteractionsCleanup?.();
+      window.__articleInteractionsCleanup = null;
+      window.__continuationCleanup?.();
+      window.__continuationCleanup = null;
+      window.__backToTopCleanup?.();
+      window.__backToTopCleanup = null;
+      window.__articleTocDrawerCleanup?.();
+      window.__articleTocDrawerCleanup = null;
+    });
   }
-
-  document.addEventListener("astro:after-swap", () =>
-    window.scrollTo({ left: 0, top: 0, behavior: "instant" })
-  );
 </script>
