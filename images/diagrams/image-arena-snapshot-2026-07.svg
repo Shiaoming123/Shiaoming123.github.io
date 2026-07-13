@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="980" viewBox="0 0 1200 980" role="img" aria-labelledby="title desc">
+  <title id="title">Image Arena ranking snapshot</title>
+  <desc id="desc">Two dot plots show a text-to-image ranking snapshot from July 5 2026 and an image editing ranking snapshot from July 8 2026.</desc>
+  <rect width="1200" height="840" fill="#ffffff"/>
+  <g font-family="Arial, 'Microsoft YaHei', sans-serif">
+    <text x="70" y="70" font-size="34" font-weight="700" fill="#111827">Image Arena 榜单快照</text>
+    <text x="70" y="106" font-size="17" fill="#4b5563">Elo 来自盲测偏好。两个面板分别对应不同任务，分数只能在各自面板内比较。</text>
+
+    <text x="70" y="166" font-size="24" font-weight="700" fill="#111827">Text-to-Image 总榜</text>
+    <text x="70" y="194" font-size="15" fill="#6b7280">快照：2026-07-05，5,656,156 票，Arena 榜单</text>
+    <g stroke="#d1d5db" stroke-width="1">
+      <line x1="410" y1="222" x2="1080" y2="222"/>
+      <line x1="410" y1="252" x2="1080" y2="252"/>
+      <line x1="410" y1="302" x2="1080" y2="302"/>
+      <line x1="410" y1="352" x2="1080" y2="352"/>
+      <line x1="410" y1="402" x2="1080" y2="402"/>
+      <line x1="410" y1="452" x2="1080" y2="452"/>
+    </g>
+    <g font-size="15" fill="#6b7280" text-anchor="middle">
+      <text x="410" y="242">1200</text><text x="578" y="242">1250</text><text x="745" y="242">1300</text><text x="913" y="242">1350</text><text x="1080" y="242">1400</text>
+    </g>
+    <g font-size="17" fill="#374151">
+      <text x="70" y="307">1  GPT Image 2 (medium)</text>
+      <text x="70" y="357">2  Muse Image</text>
+      <text x="70" y="407">3  Reve 2.0</text>
+      <text x="70" y="457">4  Gemini 3.1 Flash Image</text>
+      <text x="70" y="507">5  MAI-Image-2.5</text>
+    </g>
+    <g stroke="#2563eb" stroke-width="3" fill="#2563eb">
+      <line x1="410" y1="302" x2="1029" y2="302"/><circle cx="1029" cy="302" r="8"/>
+      <line x1="410" y1="352" x2="678" y2="352"/><circle cx="678" cy="352" r="8"/>
+      <line x1="410" y1="402" x2="648" y2="402"/><circle cx="648" cy="402" r="8"/>
+      <line x1="410" y1="452" x2="645" y2="452"/><circle cx="645" cy="452" r="8"/>
+      <line x1="410" y1="502" x2="601" y2="502"/><circle cx="601" cy="502" r="8"/>
+    </g>
+    <g font-size="16" font-weight="700" fill="#1d4ed8">
+      <text x="1043" y="308">1385 ±5</text><text x="692" y="358">1280 ±7</text><text x="662" y="408">1271 ±7</text><text x="659" y="458">1270 ±4</text><text x="615" y="508">1257 ±5</text>
+    </g>
+
+    <text x="70" y="580" font-size="24" font-weight="700" fill="#111827">Image Editing 总榜</text>
+    <text x="70" y="608" font-size="15" fill="#6b7280">快照：2026-07-08，28,127,452 票；空心点表示榜单标注为 Preliminary。</text>
+    <g stroke="#d1d5db" stroke-width="1">
+      <line x1="410" y1="636" x2="1080" y2="636"/>
+      <line x1="410" y1="666" x2="1080" y2="666"/>
+      <line x1="410" y1="716" x2="1080" y2="716"/>
+      <line x1="410" y1="766" x2="1080" y2="766"/>
+      <line x1="410" y1="816" x2="1080" y2="816"/>
+      <line x1="410" y1="866" x2="1080" y2="866"/>
+      <line x1="410" y1="916" x2="1080" y2="916"/>
+    </g>
+    <g font-size="15" fill="#6b7280" text-anchor="middle">
+      <text x="410" y="656">1300</text><text x="578" y="656">1350</text><text x="745" y="656">1400</text><text x="913" y="656">1450</text><text x="1080" y="656">1500</text>
+    </g>
+    <g font-size="17" fill="#374151">
+      <text x="70" y="721">1  GPT Image 2 (medium)</text>
+      <text x="70" y="771">2  Muse Image</text>
+      <text x="70" y="821">3  MAI-Image-2.5</text>
+      <text x="70" y="871">4  Grok Imagine Image Quality</text>
+      <text x="70" y="921">5  Gemini 3 Pro Image Preview 2K</text>
+    </g>
+    <g stroke="#b45309" stroke-width="3" fill="#b45309">
+      <line x1="410" y1="716" x2="966" y2="716"/><circle cx="966" cy="716" r="8"/>
+      <line x1="410" y1="766" x2="762" y2="766"/><circle cx="762" cy="766" r="8" fill="#ffffff"/>
+      <line x1="410" y1="816" x2="742" y2="816"/><circle cx="742" cy="816" r="8"/>
+      <line x1="410" y1="866" x2="708" y2="866"/><circle cx="708" cy="866" r="8" fill="#ffffff"/>
+      <line x1="410" y1="916" x2="705" y2="916"/><circle cx="705" cy="916" r="8"/>
+    </g>
+    <g font-size="16" font-weight="700" fill="#92400e">
+      <text x="980" y="722">1466 ±4</text><text x="776" y="772">1405 ±8</text><text x="756" y="822">1399 ±4</text>
+      <text x="722" y="872">1389 ±5</text><text x="719" y="922">1388 ±3</text>
+    </g>
+    <text x="70" y="960" font-size="15" fill="#6b7280">来源：Arena Leaderboard；榜单会随投票变化，本文只保留上述日期的快照。</text>
+  </g>
+</svg>

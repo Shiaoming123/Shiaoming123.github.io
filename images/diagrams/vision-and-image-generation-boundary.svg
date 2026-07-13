@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Visual understanding and image generation are different evaluation tracks</title>
+  <desc id="desc">A two-track diagram separates visual understanding tasks from image generation and editing tasks, with their appropriate models and evaluation methods.</desc>
+  <rect width="1200" height="520" fill="#ffffff"/>
+  <g font-family="Arial, 'Microsoft YaHei', sans-serif">
+    <text x="70" y="72" font-size="34" font-weight="700" fill="#111827">图像能力不能只看一张总榜</text>
+    <text x="70" y="108" font-size="17" fill="#4b5563">“能看懂截图”和“能生成或改好一张图”是两件事，评测题目、输出和误差都不同。</text>
+
+    <rect x="70" y="156" width="500" height="285" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+    <text x="108" y="204" font-size="26" font-weight="700" fill="#1d4ed8">视觉理解</text>
+    <text x="108" y="242" font-size="17" fill="#1e3a8a">输入：截图、PDF、图表、界面</text>
+    <text x="108" y="278" font-size="17" fill="#1e3a8a">输出：文字、结构化字段、操作建议</text>
+    <text x="108" y="326" font-size="18" font-weight="700" fill="#1e40af">该看什么</text>
+    <text x="108" y="358" font-size="16" fill="#1e3a8a">事实提取准确率、OCR 错误、坐标偏差、</text>
+    <text x="108" y="384" font-size="16" fill="#1e3a8a">多图推理、人工复核次数</text>
+    <text x="108" y="420" font-size="15" fill="#1e40af">适用：GPT-5.6、Claude Vision</text>
+
+    <path d="M602 300 H650" stroke="#6b7280" stroke-width="3" fill="none"/>
+    <path d="M640 288 L654 300 L640 312" stroke="#6b7280" stroke-width="3" fill="none"/>
+
+    <rect x="680" y="156" width="450" height="285" rx="12" fill="#fff7ed" stroke="#fdba74" stroke-width="2"/>
+    <text x="718" y="204" font-size="26" font-weight="700" fill="#c2410c">图像生成与编辑</text>
+    <text x="718" y="242" font-size="17" fill="#7c2d12">输入：提示词，或原图 + 编辑指令</text>
+    <text x="718" y="278" font-size="17" fill="#7c2d12">输出：新位图或修改后的位图</text>
+    <text x="718" y="326" font-size="18" font-weight="700" fill="#9a3412">该看什么</text>
+    <text x="718" y="358" font-size="16" fill="#7c2d12">盲测偏好、文字渲染、结构遵循、</text>
+    <text x="718" y="384" font-size="16" fill="#7c2d12">编辑一致性、局部保真</text>
+    <text x="718" y="420" font-size="15" fill="#9a3412">适用：GPT Image、Gemini Image 等专用模型</text>
+
+    <text x="70" y="486" font-size="15" fill="#6b7280">左侧可用 OSWorld、文档 QA 或自建任务集；右侧可用 Text-to-Image / Image Editing Arena。不要跨赛道比较。</text>
+  </g>
+</svg>

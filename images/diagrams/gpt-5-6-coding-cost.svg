@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">DeepSWE v1.1 score and standard API cost</title>
+  <desc id="desc">A scatter plot comparing DeepSWE v1.1 scores and standard API cost for GPT-5.6, GPT-5.5, and Claude models.</desc>
+  <rect width="1200" height="760" fill="#ffffff"/>
+  <g font-family="Arial, 'Microsoft YaHei', sans-serif">
+    <text x="70" y="70" font-size="34" font-weight="700" fill="#111827">DeepSWE v1.1 与标准 API 成本</text>
+    <text x="70" y="106" font-size="17" fill="#4b5563">纵轴为 OpenAI 发布的同表对照分数；横轴是 100 万输入 + 100 万输出 token 的标准价格（美元）。</text>
+    <text x="70" y="136" font-size="15" fill="#6b7280">这是厂商发布 benchmark，不是独立排行榜。Claude 的 token 口径也可能与 OpenAI 不同。</text>
+
+    <g stroke="#d1d5db" stroke-width="1">
+      <line x1="165" y1="180" x2="1100" y2="180"/>
+      <line x1="165" y1="295" x2="1100" y2="295"/>
+      <line x1="165" y1="410" x2="1100" y2="410"/>
+      <line x1="165" y1="525" x2="1100" y2="525"/>
+      <line x1="165" y1="640" x2="1100" y2="640"/>
+    </g>
+    <g font-size="16" fill="#4b5563" text-anchor="end">
+      <text x="145" y="186">75</text>
+      <text x="145" y="301">70</text>
+      <text x="145" y="416">65</text>
+      <text x="145" y="531">60</text>
+      <text x="145" y="646">55</text>
+    </g>
+    <g stroke="#9ca3af" stroke-width="1.5">
+      <line x1="165" y1="640" x2="1100" y2="640"/>
+      <line x1="165" y1="180" x2="165" y2="640"/>
+    </g>
+    <g font-size="16" fill="#4b5563" text-anchor="middle">
+      <text x="165" y="675">$0</text>
+      <text x="309" y="675">$10</text>
+      <text x="453" y="675">$20</text>
+      <text x="597" y="675">$30</text>
+      <text x="741" y="675">$40</text>
+      <text x="885" y="675">$50</text>
+      <text x="1029" y="675">$60</text>
+    </g>
+    <text x="632" y="722" font-size="17" fill="#374151" text-anchor="middle">标准 API 成本：100 万输入 + 100 万输出 token</text>
+    <text x="30" y="430" font-size="17" fill="#374151" text-anchor="middle" transform="rotate(-90 30 430)">DeepSWE v1.1 分数</text>
+
+    <g fill="#0f766e" stroke="#ffffff" stroke-width="3">
+      <circle cx="266" cy="359" r="10"/>
+      <circle cx="417" cy="304" r="10"/>
+      <circle cx="669" cy="233" r="11"/>
+      <circle cx="669" cy="364" r="9" fill="#5eead4"/>
+    </g>
+    <g fill="#c2410c" stroke="#ffffff" stroke-width="3">
+      <circle cx="597" cy="548" r="10"/>
+      <circle cx="1029" cy="302" r="11"/>
+    </g>
+
+    <g font-size="17" font-weight="700">
+      <text x="282" y="344" fill="#115e59">GPT-5.6 Luna</text>
+      <text x="282" y="366" font-size="15" font-weight="400" fill="#4b5563">67.2 / $7</text>
+      <text x="433" y="289" fill="#115e59">GPT-5.6 Terra</text>
+      <text x="433" y="311" font-size="15" font-weight="400" fill="#4b5563">69.6 / $17.5</text>
+      <text x="685" y="216" fill="#115e59">GPT-5.6 Sol</text>
+      <text x="685" y="238" font-size="15" font-weight="400" fill="#4b5563">72.7 / $35</text>
+      <text x="685" y="389" fill="#0f766e">GPT-5.5</text>
+      <text x="685" y="411" font-size="15" font-weight="400" fill="#4b5563">67.0 / $35</text>
+      <text x="610" y="579" fill="#9a3412">Claude Opus 4.8</text>
+      <text x="610" y="601" font-size="15" font-weight="400" fill="#4b5563">59.0 / $30</text>
+      <text x="840" y="283" fill="#9a3412">Claude Fable 5</text>
+      <text x="840" y="305" font-size="15" font-weight="400" fill="#4b5563">69.7 / $60</text>
+    </g>
+    <g font-size="15" fill="#6b7280">
+      <circle cx="860" cy="712" r="7" fill="#0f766e"/><text x="875" y="717">OpenAI</text>
+      <circle cx="960" cy="712" r="7" fill="#c2410c"/><text x="975" y="717">Anthropic</text>
+    </g>
+  </g>
+</svg>
