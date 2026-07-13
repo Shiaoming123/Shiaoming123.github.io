@@ -1,0 +1,1062 @@
+<!DOCTYPE html><html dir="ltr" lang="zh-CN" class="overflow-y-scroll scroll-smooth"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="canonical" href="https://shiaoming123.github.io/posts/gpt-5-6-codex-gpt-5-5-claude-comparison-2026/"><meta name="generator" content="Astro v6.4.8"><!-- Font --><style>@font-face{font-family:"Google Sans Code-66787e984771ec7e";src:url("/_astro/fonts/87ca066ba5b2c7cf.woff") format("woff"), url("/_astro/fonts/f4e25dfe9d6152ec.ttf") format("truetype");font-display:swap;font-weight:400;font-style:normal;}@font-face{font-family:"Google Sans Code-66787e984771ec7e";src:url("/_astro/fonts/f914de358bc554f6.woff") format("woff"), url("/_astro/fonts/dbc9996f99c63e07.ttf") format("truetype");font-display:swap;font-weight:700;font-style:normal;}@font-face{font-family:"Google Sans Code-66787e984771ec7e fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:400;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-66787e984771ec7e fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:700;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}:root{--font-google-sans-code:"Google Sans Code-66787e984771ec7e","Google Sans Code-66787e984771ec7e fallback: Courier New",monospace;}</style><!-- Primary meta --><title>GPT-5.6 / Codex、GPT-5.5 与 Claude：价格、编码和图像能力怎么选 | 世傲命的技术观测站</title><meta name="title" content="GPT-5.6 / Codex、GPT-5.5 与 Claude：价格、编码和图像能力怎么选 | 世傲命的技术观测站"><meta name="description" content="基于 2026 年 7 月官方价格、公开编码 benchmark 与视觉文档，拆开比较 GPT-5.6 Sol/Terra/Luna、GPT-5.5 和 Claude Fable/Opus/Sonnet，并说明 Codex 这次产品更新到底变了什么。"><meta name="author" content="世傲命"><link rel="sitemap" href="/sitemap.xml"><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:site_name" content="世傲命的技术观测站"><meta property="og:title" content="GPT-5.6 / Codex、GPT-5.5 与 Claude：价格、编码和图像能力怎么选 | 世傲命的技术观测站"><meta property="og:description" content="基于 2026 年 7 月官方价格、公开编码 benchmark 与视觉文档，拆开比较 GPT-5.6 Sol/Terra/Luna、GPT-5.5 和 Claude Fable/Opus/Sonnet，并说明 Codex 这次产品更新到底变了什么。"><meta property="og:url" content="https://shiaoming123.github.io/posts/gpt-5-6-codex-gpt-5-5-claude-comparison-2026/"><meta property="og:image" content="https://shiaoming123.github.io/posts/gpt-5-6-codex-gpt-5-5-claude-comparison-2026/index.png"><!-- Twitter / X --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://shiaoming123.github.io/posts/gpt-5-6-codex-gpt-5-5-claude-comparison-2026/"><meta property="twitter:title" content="GPT-5.6 / Codex、GPT-5.5 与 Claude：价格、编码和图像能力怎么选 | 世傲命的技术观测站"><meta property="twitter:description" content="基于 2026 年 7 月官方价格、公开编码 benchmark 与视觉文档，拆开比较 GPT-5.6 Sol/Terra/Luna、GPT-5.5 和 Claude Fable/Opus/Sonnet，并说明 Codex 这次产品更新到底变了什么。"><meta property="twitter:image" content="https://shiaoming123.github.io/posts/gpt-5-6-codex-gpt-5-5-claude-comparison-2026/index.png"><!-- RSS autodiscovery --><link rel="alternate" type="application/rss+xml" title="世傲命的技术观测站" href="https://shiaoming123.github.io/rss.xml"><!-- Filled at runtime by theme.ts to match the current background colour --><meta name="theme-color" content=""><!-- Extra head content injected by child layouts (e.g. JSON-LD, article meta) -->  <meta property="og:type" content="article"> <meta name="author" content="世傲命"> <meta property="article:section" content="AI 模型"><meta property="article:published_time" content="2026-07-13T02:30:00.000Z"><meta property="article:modified_time" content="2026-07-13T02:30:00.000Z"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"GPT-5.6 / Codex、GPT-5.5 与 Claude：价格、编码和图像能力怎么选 | 世傲命的技术观测站","description":"基于 2026 年 7 月官方价格、公开编码 benchmark 与视觉文档，拆开比较 GPT-5.6 Sol/Terra/Luna、GPT-5.5 和 Claude Fable/Opus/Sonnet，并说明 Codex 这次产品更新到底变了什么。","image":"https://shiaoming123.github.io/posts/gpt-5-6-codex-gpt-5-5-claude-comparison-2026/index.png","url":"https://shiaoming123.github.io/posts/gpt-5-6-codex-gpt-5-5-claude-comparison-2026/","mainEntityOfPage":"https://shiaoming123.github.io/posts/gpt-5-6-codex-gpt-5-5-claude-comparison-2026/","inLanguage":"zh-CN","articleSection":"AI 模型","datePublished":"2026-07-13T02:30:00.000Z","dateModified":"2026-07-13T02:30:00.000Z","author":[{"@type":"Person","name":"世傲命","url":"https://github.com/Shiaoming123"}],"publisher":{"@type":"Person","name":"世傲命","url":"https://github.com/Shiaoming123"}}</script> <!--
+      Inline FOUC-prevention script: sets data-theme on <html> before
+      the browser paints. Runs synchronously, no defer/async.
+    --><script>
+      (function () {
+        const stored = localStorage.getItem("theme");
+        const theme = stored ?? "dark";
+        const root = document.firstElementChild;
+        root?.setAttribute("data-theme", theme);
+        root?.classList.toggle("dark", theme === "dark");
+        // Expose value so theme.ts can skip re-detection.
+        window.__theme = { value: theme };
+      })();
+    </script><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CAqDO0tx.js"></script><link rel="stylesheet" href="/_astro/Footer.TCNT1O9a.css"><style>@keyframes astroFadeInOut{0%{opacity:1}to{opacity:0}}@keyframes astroFadeIn{0%{opacity:0;mix-blend-mode:plus-lighter}to{opacity:1;mix-blend-mode:plus-lighter}}@keyframes astroFadeOut{0%{opacity:1;mix-blend-mode:plus-lighter}to{opacity:0;mix-blend-mode:plus-lighter}}@keyframes astroSlideFromRight{0%{transform:translate(100%)}}@keyframes astroSlideFromLeft{0%{transform:translate(-100%)}}@keyframes astroSlideToRight{to{transform:translate(100%)}}@keyframes astroSlideToLeft{to{transform:translate(-100%)}}@media(prefers-reduced-motion){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}[data-astro-transition-scope]{animation:none!important}}
+</style><link rel="stylesheet" href="/_astro/getReadingRail.CFrLYf49.css"><link rel="stylesheet" href="/_astro/PostLayout.g8X8u49B.css"><style>.article-header[data-astro-cid-7ap3hmvm]{display:grid;gap:.75rem;padding-bottom:.25rem}.article-header[data-astro-cid-7ap3hmvm] h1[data-astro-cid-7ap3hmvm],.article-description[data-astro-cid-7ap3hmvm]{margin:0}.article-description[data-astro-cid-7ap3hmvm]{max-width:62ch;color:var(--muted-foreground);font-size:clamp(1rem,2.2vw,1.08rem);line-height:1.65}.article-metadata[data-astro-cid-7ap3hmvm]{display:flex;flex-wrap:wrap;gap:.35rem 1rem;color:var(--muted-foreground);font-size:.82rem}.article-metadata[data-astro-cid-7ap3hmvm] span[data-astro-cid-7ap3hmvm],.article-metadata[data-astro-cid-7ap3hmvm] a[data-astro-cid-7ap3hmvm]{color:inherit;text-decoration:none}.article-metadata[data-astro-cid-7ap3hmvm] strong[data-astro-cid-7ap3hmvm]{color:var(--foreground);font-weight:600}.article-metadata[data-astro-cid-7ap3hmvm] a[data-astro-cid-7ap3hmvm]:hover strong[data-astro-cid-7ap3hmvm]{color:var(--accent)}.article-continuation[data-astro-cid-7ap3hmvm]{display:grid;gap:.65rem;margin-top:2.5rem}.article-continuation[data-astro-cid-7ap3hmvm]>p[data-astro-cid-7ap3hmvm]{margin:0;color:var(--muted-foreground);font-family:var(--font-google-sans-code),monospace;font-size:.74rem;font-weight:700;letter-spacing:.12em}.article-continuation-details[data-astro-cid-7ap3hmvm]>summary[data-astro-cid-7ap3hmvm]{width:fit-content;cursor:pointer;color:var(--accent);font-size:.88rem}.article-continuation-details[data-astro-cid-7ap3hmvm][open]>summary[data-astro-cid-7ap3hmvm]{margin-bottom:.65rem}@media(min-width:768px){.article-continuation-details[data-astro-cid-7ap3hmvm]>summary[data-astro-cid-7ap3hmvm]{display:none}}
+</style><style>[data-astro-transition-scope="astro-36ssibgs-1"] { view-transition-name: gpt-5_2e6; }@layer astro { ::view-transition-old(gpt-5_2e6) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(gpt-5_2e6) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(gpt-5_2e6) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(gpt-5_2e6) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-1"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-1"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-36ssibgs-2"] { view-transition-name: codex; }@layer astro { ::view-transition-old(codex) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(codex) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(codex) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(codex) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-2"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-2"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-2"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-2"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-36ssibgs-3"] { view-transition-name: claude; }@layer astro { ::view-transition-old(claude) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(claude) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(claude) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(claude) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-3"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-3"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-3"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-3"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-36ssibgs-4"] { view-transition-name: agentic-coding; }@layer astro { ::view-transition-old(agentic-coding) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(agentic-coding) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(agentic-coding) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(agentic-coding) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-4"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-4"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-4"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-4"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-4"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-4"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-4"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-4"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-36ssibgs-5"] { view-transition-name: \6A21\578B\5BF9\6BD4; }@layer astro { ::view-transition-old(\6A21\578B\5BF9\6BD4) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(\6A21\578B\5BF9\6BD4) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(\6A21\578B\5BF9\6BD4) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(\6A21\578B\5BF9\6BD4) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-5"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-5"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-5"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-5"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-5"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-5"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-5"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-5"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-36ssibgs-6"] { view-transition-name: \56FE\50CF\7406\89E3; }@layer astro { ::view-transition-old(\56FE\50CF\7406\89E3) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(\56FE\50CF\7406\89E3) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(\56FE\50CF\7406\89E3) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(\56FE\50CF\7406\89E3) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-6"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-6"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-6"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-6"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-6"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-6"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-6"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-6"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style></head> <body class="bg-background font-app text-foreground selection:bg-accent/75 selection:text-accent-foreground flex min-h-svh flex-col"> <div class="scroll-progress" aria-hidden="true"></div>    <a id="skip-to-content" href="#main-content" class="bg-background text-accent absolute inset-s-16 -top-full z-50 px-3 py-2 backdrop-blur-lg transition-all focus:top-4"> 跳到正文 </a> <header class="observatory-header"> <div class="observatory-header-bar"> <a href="/" class="observatory-brand" aria-label="世傲命的技术观测站，返回首页"> <span class="observatory-brand-mark" aria-hidden="true"> <span></span> </span> <span class="observatory-brand-copy"> <strong>世傲命的技术观测站</strong> <small>PERSONAL TECHNOLOGY OBSERVATORY</small> </span> </a> <nav class="observatory-navigation" aria-label="主导航"> <button id="menu-btn" class="focus-outline observatory-menu-button" aria-label="打开菜单" aria-expanded="false" aria-controls="menu-items" data-label-open="打开菜单" data-label-close="关闭菜单"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="hidden" viewBox="0 0 24 24" id="close-icon"><path stroke="none" d="M0 0h24v24H0z" /><path d="M18 6 6 18M6 6l12 12" /></svg> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon icon-tabler icons-tabler-outline icon-tabler-menu-deep" viewBox="0 0 24 24" id="menu-icon"><path stroke="none" d="M0 0h24v24H0z" /><path d="M4 6h16M7 12h13M10 18h10" /></svg> </button> <ul id="menu-items" class="observatory-nav-list hidden max-h-[calc(100svh-4.5rem)] overflow-y-auto lg:flex lg:overflow-visible"> <li class="observatory-nav-item"> <a href="/posts/" class="active-nav" aria-current="page"> 文章 </a> </li><li class="observatory-nav-item"> <a href="/learning/"> 学习 </a> </li><li class="observatory-nav-item"> <a href="/signals/"> 信号 </a> </li><li class="observatory-nav-item"> <a href="/projects/"> 作品 </a> </li><li class="observatory-nav-item"> <a href="/about/"> 关于 </a> </li> <li class="observatory-more-item"> <details id="navigation-more" class="observatory-more"> <summary> 更多 </summary> <ul aria-label="更多"> <li> <a href="/bookmarks/"> 资源 </a> </li><li> <a href="/taxonomy/"> 分类 </a> </li><li> <a href="/archives/"> 归档 </a> </li><li> <a href="/changelog/"> 日志 </a> </li> </ul> </details> </li> <li class="observatory-tool-item"> <a href="/search/" title="搜索" aria-label="搜索"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon icon-tabler icons-tabler-outline icon-tabler-search" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 10a7 7 0 1 0 14 0 7 7 0 1 0-14 0M21 21l-6-6" /></svg> <span class="lg:sr-only">搜索</span> </a> </li> <li class="observatory-tool-item"> <button id="theme-btn" title="切换主题" aria-label="切换到深色主题" aria-live="polite"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M12 3h.393a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 2.992z" /></svg> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M14.828 14.828a4 4 0 1 0-5.656-5.656 4 4 0 0 0 5.656 5.656M6.343 17.657l-1.414 1.414M6.343 6.343 4.929 4.929M17.657 6.343l1.414-1.414M17.657 17.657l1.414 1.414M4 12H2M12 4V2M20 12h2M12 20v2" /></svg> <span class="lg:sr-only">切换主题</span> </button> </li> </ul> </nav> </div> </header> <script type="module">function v(){const a=window;a.__observatoryNavigationCleanup?.();const t=document.querySelector("#menu-btn"),n=document.querySelector("#menu-items"),i=document.querySelector("#menu-icon"),c=document.querySelector("#close-icon"),g=document.querySelector("#navigation-more");if(!t||!n||!i||!c)return;const L=t.dataset.labelOpen??"打开菜单",f=t.dataset.labelClose??"关闭菜单",o=()=>t.getAttribute("aria-expanded")==="true",s=(e,b=!1)=>{t.setAttribute("aria-expanded",String(e)),t.setAttribute("aria-label",e?f:L),n.classList.toggle("hidden",!e),n.classList.toggle("grid",e),i.classList.toggle("hidden",e),c.classList.toggle("hidden",!e),document.documentElement.classList.toggle("shell-menu-open",e),e||(g?.removeAttribute("open"),b&&t.focus())},r=()=>s(!o()),l=e=>{o()&&e.target.closest("a")&&s(!1)},d=e=>{e.key==="Escape"&&o()&&(e.preventDefault(),s(!1,!0))},u=e=>{e.matches&&o()&&s(!1)},m=window.matchMedia("(min-width: 64rem)");t.addEventListener("click",r),n.addEventListener("click",l),document.addEventListener("keydown",d),m.addEventListener("change",u),a.__observatoryNavigationCleanup=()=>{t.removeEventListener("click",r),n.removeEventListener("click",l),document.removeEventListener("keydown",d),m.removeEventListener("change",u),document.documentElement.classList.remove("shell-menu-open")}}v();document.addEventListener("astro:after-swap",v);document.addEventListener("astro:before-swap",()=>{window.__observatoryNavigationCleanup?.()});</script> <nav class="app-layout flex items-center justify-start" aria-label="文章返回"><a id="back-button" href="/" class="group inline-flex items-center gap-1 hover:text-accent focus-outline hover:text-foreground/75 -ms-2 mt-8 mb-2"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 rtl:rotate-180" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="m15 6-6 6 6 6" /></svg><span>返回</span> </a></nav><script type="module">function o(){const t=document.querySelector("#back-button"),e=sessionStorage.getItem("backUrl");e&&t&&(t.href=e)}document.addEventListener("astro:page-load",o);o();</script> <main id="main-content" class="article-shell" data-pagefind-body data-astro-cid-7ap3hmvm> <div class="reading-content article-main" data-astro-cid-7ap3hmvm> <header class="article-header" data-astro-cid-7ap3hmvm> <span class="sr-only" data-pagefind-filter="内容类型" data-pagefind-meta="contentType" data-astro-cid-7ap3hmvm>文章</span> <span class="sr-only" data-pagefind-filter="分类" data-pagefind-meta="category" data-astro-cid-7ap3hmvm> AI 模型 </span> <span class="sr-only" data-pagefind-meta="date" data-astro-cid-7ap3hmvm> 2026-07 </span> <h1 style="view-transition-name:gpt-5-6-codexu003001-gpt-5-5-u004e0e-claudeu00ff1au004ef7u00683cu003001u007f16u007801u00548cu0056feu0050cfu0080fdu00529bu00600eu004e48u009009" class="text-accent inline-block text-2xl font-bold sm:text-3xl" data-astro-cid-7ap3hmvm> GPT-5.6 / Codex、GPT-5.5 与 Claude：价格、编码和图像能力怎么选 </h1> <p class="article-description" data-astro-cid-7ap3hmvm>基于 2026 年 7 月官方价格、公开编码 benchmark 与视觉文档，拆开比较 GPT-5.6 Sol/Terra/Luna、GPT-5.5 和 Claude Fable/Opus/Sonnet，并说明 Codex 这次产品更新到底变了什么。</p> <div class="article-metadata" aria-label="文章信息" data-astro-cid-7ap3hmvm> <span data-astro-cid-7ap3hmvm>作者 <strong data-astro-cid-7ap3hmvm>世傲命</strong></span> <a href="/categories/ai-模型/" data-astro-cid-7ap3hmvm>
+分类 <strong data-astro-cid-7ap3hmvm>AI 模型</strong> </a> <span data-astro-cid-7ap3hmvm>
+发布
+<time datetime="2026-07-13T02:30:00.000Z" data-astro-cid-7ap3hmvm> 2026年7月13日 </time> </span>   </div> </header> <article id="article" class="mt-6 w-full app-prose max-w-app" data-astro-cid-7ap3hmvm> <p>GPT-5.6 的发布容易让人把三件事混在一起：模型升级、Codex 产品升级，以及图像能力。它们不是一回事。</p>
+<p>先给结论：<strong>日常 Codex 默认用 Terra；复杂改造与长链调试用 Sol；只有任务可以并行拆分、并且时间比额度重要时再开 Ultra。</strong> Claude Fable 5 和 Opus 4.8 的价值，不是取代这个选择，而是给高价值任务提供独立的第二意见。</p>
+<p>本文所有 API 价格均为 2026-07-13 的官方美元价，单位为每百万 token。ChatGPT/Codex 订阅和 API 计费是两套体系。</p>
+<h2 id="先把名称说清楚">先把名称说清楚</h2>
+<ul>
+<li><strong>GPT-5.6 是模型族，Codex 是编程 agent 产品。</strong> Sol、Terra、Luna 是 GPT-5.6 的能力档位，不是三种 Codex 客户端。</li>
+<li><strong>Sol Pro 不是单独的 API 型号。</strong> 它是 ChatGPT 中更高算力的访问档；API 中对应的依然是 <code>gpt-5.6-sol</code>。</li>
+<li><strong>图像理解不等于图像生成。</strong> GPT-5.6 与 Claude 可以看图并输出文字；要生成或编辑图片，应比较专用图像模型，例如 <code>gpt-image-2</code>。Claude 当前官方模型页定义的是图像输入、文本输出，不应放进图像生成排行榜。</li>
+</ul>
+<h2 id="价格与规格">价格与规格</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>模型</th><th>定位</th><th>上下文 / 最大输出</th><th>输入 / 缓存读 / 输出</th><th>100 万输入 + 100 万输出</th></tr></thead><tbody><tr><td>GPT-5.6 Sol</td><td>旗舰；复杂编码、研究、设计、Computer Use</td><td>105 万 / 12.8 万</td><td>$5 / $0.50 / $30</td><td>$35</td></tr><tr><td>GPT-5.6 Terra</td><td>能力、速度、成本平衡</td><td>105 万 / 12.8 万</td><td>$2.50 / $0.25 / $15</td><td>$17.50</td></tr><tr><td>GPT-5.6 Luna</td><td>最快、最便宜</td><td>105 万 / 12.8 万</td><td>$1 / $0.10 / $6</td><td>$7</td></tr><tr><td>GPT-5.5</td><td>上一代通用档</td><td>105 万 / 12.8 万</td><td>$5 / $0.50 / $30</td><td>$35</td></tr><tr><td>GPT-5.5 Pro</td><td>旧代高算力档</td><td>105 万 / 12.8 万</td><td>$30 / - / $180</td><td>$210</td></tr><tr><td>Claude Fable 5</td><td>Anthropic 公开最高档</td><td>100 万 / 12.8 万</td><td>$10 / $1 / $50</td><td>$60</td></tr><tr><td>Claude Opus 4.8</td><td>复杂 agentic coding / 企业工作</td><td>100 万 / 12.8 万</td><td>$5 / $0.50 / $25</td><td>$30</td></tr><tr><td>Claude Sonnet 5</td><td>速度与能力平衡</td><td>100 万 / 12.8 万</td><td>$2 / $0.20 / $10 至 8 月 31 日</td><td>$12</td></tr><tr><td>Claude Haiku 4.5</td><td>吞吐、低成本</td><td>20 万 / 6.4 万</td><td>$1 / $0.10 / $5</td><td>$6</td></tr></tbody></table>
+<p>两点成本提醒：OpenAI 在输入超过 128K 后启用长上下文价，例如 Sol 变为 $10 输入 / $45 输出；缓存写按普通输入的 1.25 倍计。Claude 也有缓存写分档，并且 Anthropic 明确说明 Fable 5、Opus 4.7+、Sonnet 5 的新 tokenizer 对同一文本可能产生约 30% 更多 token。价格相近不等于实际账单相近。</p>
+<h2 id="编码-benchmark看任务形状不要只看总分">编码 benchmark：看任务形状，不要只看总分</h2>
+<p>下表来自 OpenAI 的 GPT-5.6 发布对照。它是厂商自发布数据，不应替代自己的仓库评测，但足够说明不同模型在“补丁修复、长程工程、终端操作”三种任务上的位置。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>模型</th><th align="right">SWE-Bench Pro</th><th align="right">DeepSWE v1.1</th><th align="right">Terminal-Bench 2.1</th></tr></thead><tbody><tr><td>GPT-5.6 Sol</td><td align="right">64.6</td><td align="right"><strong>72.7</strong></td><td align="right">88.8</td></tr><tr><td>GPT-5.6 Terra</td><td align="right">63.4</td><td align="right">69.6</td><td align="right">87.4</td></tr><tr><td>GPT-5.6 Luna</td><td align="right">62.7</td><td align="right">67.2</td><td align="right">84.7</td></tr><tr><td>GPT-5.5</td><td align="right">59.4</td><td align="right">67.0</td><td align="right">85.6</td></tr><tr><td>Claude Fable 5</td><td align="right"><strong>80.0</strong></td><td align="right">69.7</td><td align="right">83.1</td></tr><tr><td>Claude Opus 4.8</td><td align="right">69.2</td><td align="right">59.0</td><td align="right">78.9</td></tr><tr><td>Claude Mythos 5</td><td align="right">80.3</td><td align="right">未列出</td><td align="right">88.0</td></tr></tbody></table>
+<p>这里最实用的判断不是“谁永远第一”，而是：</p>
+<ul>
+<li><strong>Terra 是默认工作马。</strong> 它接近 Sol 的工程表现，成本约一半。</li>
+<li><strong>Sol 替代 GPT-5.5 作为新默认高端档。</strong> 两者标准价格相同，公开对照中 Sol 更强。</li>
+<li><strong>Fable 5 适合做高难任务的交叉验证。</strong> 对 SWE-Bench Pro 型仓库问题，它的分数很高；但输入/输出价格也高于 Sol。</li>
+<li><strong>Mythos 5 不应写进常规采购方案。</strong> 它是 Project Glasswing 限量模型；多数团队实际能买到的是 Fable、Opus、Sonnet 或 Haiku。</li>
+</ul>
+<h2 id="图片能力分成两张表才不会误导">图片能力：分成两张表才不会误导</h2>
+<h3 id="视觉理解截图和文档">视觉理解、截图和文档</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>模型组</th><th>图像输入</th><th>公开可核信息</th><th>适合什么</th></tr></thead><tbody><tr><td>GPT-5.6 Sol / Terra / Luna</td><td>支持</td><td>Sol 在 OSWorld 2.0（屏幕视觉 + 电脑操作）为 62.6%；Codex 能在工作流中检查渲染结果</td><td>UI 截图分析、浏览器/桌面操作、交付前回查</td></tr><tr><td>GPT-5.5</td><td>支持</td><td>同属长上下文多模态路线，但多数公开 agent 指标低于 5.6</td><td>兼容已有提示词或回归行为</td></tr><tr><td>Claude Fable 5 / Opus 4.8 / Sonnet 5</td><td>支持</td><td>最高 2576px 长边、4784 visual tokens；1M 上下文模型 API 单请求最多 600 张图</td><td>高分辨率文档、表格、图表、多图比较</td></tr><tr><td>Claude Haiku 4.5</td><td>支持</td><td>标准分辨率 1568px、1568 visual tokens</td><td>低成本分类、提取、问答</td></tr></tbody></table>
+<p>Claude 官方也提示坐标与定位输出只是近似值。涉及按钮定位、表格数字或密集文本时，仍应做人工抽检，不能把“能看图”理解为无误 OCR。</p>
+<h3 id="图像生成与编辑">图像生成与编辑</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>对象</th><th>是否直接生成位图</th><th>正确的评测口径</th></tr></thead><tbody><tr><td>GPT-5.6 / GPT-5.5</td><td>模型本身以图像输入、文本输出为主；产品可调用图像工具</td><td>视觉理解、Computer Use、UI 交付质量</td></tr><tr><td>OpenAI <code>gpt-image-2</code></td><td>是</td><td>Text-to-Image 与 Image Editing Arena、文字渲染、结构遵循、编辑一致性</td></tr><tr><td>Claude Fable / Opus / Sonnet / Haiku</td><td>否</td><td>文档/截图理解、OCR、图表与多图推理</td></tr></tbody></table>
+<p><a href="https://artificialanalysis.ai/embed/text-to-image-leaderboard/arena">Artificial Analysis Image Arena</a> 的价值在于盲测众包偏好，并分别维护 Text-to-Image 和 Image Editing 榜单；它适合比较专用出图模型。它不适合用来判断 Claude 的视觉理解，也不能代表每一种企业设计任务。</p>
+<p>真正要选图像能力，建议不要只看榜单：拿自己最常见的 30 个样本测试，分为 10 张 UI 截图、10 页表格/图表文档、10 个图片编辑请求，记录事实提取准确率、文字/布局错误、人工返工次数、耗时和成本。这个小评测集会比一张总榜更接近真实工作流。</p>
+<h2 id="codex-这次还更新了什么">Codex 这次还更新了什么</h2>
+<p>除了可选模型，2026-07-09 的 Codex 更新还包括：</p>
+<ul>
+<li>Codex 并入 ChatGPT 桌面端，原用户保留项目、设置和工作流。</li>
+<li>可在应用内直接编辑 Markdown 和代码、添加行内注释，并让 Codex 改写选中内容。</li>
+<li>GitHub PR 审阅进入侧栏，reviewer 反馈与 diff 同屏；一个项目可以跨多个仓库工作。</li>
+<li>GPT-5.6 下的 Computer Use 更快，任务活动和进度更易跟踪，插件管理迁入 Settings。</li>
+<li>Codex CLI 0.144.0 新增额度 reset credit 选择、<code>writes</code> 审批模式、MCP 交互式认证和 Ultra 高并发用量预警；0.144.1 主要修复安装和 code-mode 可靠性。</li>
+</ul>
+<p>订阅上，Plus 为 $20/月；Pro 有 $100 与 $200 两档，区别主要是额度；Business 在多数地区为月付 $25/人或年付 $20/人。Free/Go 的 Codex 使用 Terra，Plus 及以上可选 Sol/Terra/Luna；Ultra 在 Codex 从 Plus 起可用。实际可见模型和额度仍以账户内 model picker 为准。</p>
+<h2 id="最后怎么选">最后怎么选</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>你的任务</th><th>选择</th></tr></thead><tbody><tr><td>每天改代码、跑测试、做中型重构</td><td>Terra</td></tr><tr><td>跨模块重构、疑难 bug、需要浏览器或长链验证</td><td>Sol，必要时 <code>max</code></td></tr><tr><td>可以拆成多条并行工作流，且完成时间最重要</td><td>Codex <code>ultra</code></td></tr><tr><td>已验证为简单的批量任务</td><td>Luna 或 Haiku 4.5</td></tr><tr><td>关键仓库修复，需要独立复核</td><td>Fable 5 或 Opus 4.8 再跑一遍</td></tr><tr><td>看截图、表格、图表</td><td>Sol 或 Claude 的高分辨率 vision 档</td></tr><tr><td>真正要生成或修图</td><td>比较专用 image model，而不是语言模型</td></tr></tbody></table>
+<h2 id="来源">来源</h2>
+<ul>
+<li><a href="https://openai.com/index/gpt-5-6/">OpenAI：GPT-5.6 发布与公开评测</a></li>
+<li><a href="https://developers.openai.com/api/docs/pricing">OpenAI API 定价</a></li>
+<li><a href="https://help.openai.com/en/articles/20001354-gpt-56-in-chatgpt">GPT-5.6 在 ChatGPT / Codex 的可用性</a></li>
+<li><a href="https://learn.chatgpt.com/docs/changelog">Codex changelog</a></li>
+<li><a href="https://platform.claude.com/docs/en/about-claude/models/overview">Anthropic 模型概览</a></li>
+<li><a href="https://platform.claude.com/docs/en/about-claude/pricing">Anthropic 定价</a></li>
+<li><a href="https://platform.claude.com/docs/en/build-with-claude/vision">Anthropic Vision 文档</a></li>
+<li><a href="https://artificialanalysis.ai/embed/text-to-image-leaderboard/arena">Artificial Analysis Image Arena</a></li>
+</ul> </article>  <hr class="my-8 border-dashed" data-astro-cid-7ap3hmvm>  <div id="btt-btn-container" class="fixed inset-e-4 bottom-8 z-50 md:sticky md:inset-e-auto md:float-end md:me-1 translate-y-14 opacity-0 transition duration-500"> <button data-button="back-to-top" class="group bg-background relative px-2 py-1 size-14 rounded-full shadow-xl md:h-8 md:w-fit md:rounded-md md:shadow-none md:focus-visible:rounded-none md:bg-background/35 md:bg-clip-padding md:backdrop-blur-lg"> <span id="progress-indicator" class="absolute inset-0 -z-10 block size-14 scale-110 rounded-full bg-transparent md:hidden md:h-8 md:rounded-md"></span> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block rotate-90 md:hidden" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M5 12h14M5 12l6 6M5 12l6-6" /></svg> <span class="group-hover:text-accent sr-only text-sm md:not-sr-only"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-4" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M12 5v14M16 9l-4-4M8 9l4-4" /></svg> 回到顶部 </span> </button> </div> <script data-astro-rerun>
+  function backToTop() {
+    window.__backToTopCleanup?.();
+
+    const rootElement = document.documentElement;
+    const btnContainer = document.querySelector("#btt-btn-container");
+    const backToTopBtn = document.querySelector("[data-button='back-to-top']");
+    const progressIndicator = document.querySelector("#progress-indicator");
+
+    if (!rootElement || !btnContainer || !backToTopBtn || !progressIndicator)
+      return;
+
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const handleClick = () => {
+      window.scrollTo({
+        left: 0,
+        top: 0,
+        behavior: reducedMotion.matches ? "auto" : "smooth",
+      });
+    };
+    backToTopBtn.addEventListener("click", handleClick);
+
+    let lastVisible = null;
+    function handleScroll() {
+      const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
+      const scrollTop = rootElement.scrollTop;
+      const scrollPercent =
+        scrollTotal > 0 ? Math.floor((scrollTop / scrollTotal) * 100) : 0;
+
+      progressIndicator.style.setProperty(
+        "background-image",
+        `conic-gradient(var(--accent), var(--accent) ${scrollPercent}%, transparent ${scrollPercent}%)`
+      );
+
+      const isVisible = scrollTotal > 0 && scrollTop / scrollTotal > 0.3;
+
+      if (isVisible !== lastVisible) {
+        btnContainer.classList.toggle("opacity-100", isVisible);
+        btnContainer.classList.toggle("translate-y-0", isVisible);
+        btnContainer.classList.toggle("opacity-0", !isVisible);
+        btnContainer.classList.toggle("translate-y-14", !isVisible);
+        lastVisible = isVisible;
+      }
+    }
+
+    let ticking = false;
+    let frame = 0;
+    const onScroll = () => {
+      if (!ticking) {
+        frame = window.requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    handleScroll();
+    document.addEventListener("scroll", onScroll, { passive: true });
+
+    window.__backToTopCleanup = () => {
+      backToTopBtn.removeEventListener("click", handleClick);
+      document.removeEventListener("scroll", onScroll);
+      if (frame) window.cancelAnimationFrame(frame);
+    };
+  }
+  backToTop();
+</script> <ul class="mt-4 mb-8 flex flex-wrap gap-4 sm:my-8" data-astro-cid-7ap3hmvm> <li> <a href="/tags/gpt-5.6/" class="flex items-center gap-0.5 border-foreground border-b-2 border-dashed hover:border-accent hover:text-accent hover:-mt-0.5 focus-visible:text-accent focus-visible:border-none text-sm" data-astro-transition-scope="astro-36ssibgs-1"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="opacity-80 size-4" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M5 9h14M5 15h14M11 4 7 20M17 4l-4 16" /></svg> GPT-5.6 </a> </li><li> <a href="/tags/codex/" class="flex items-center gap-0.5 border-foreground border-b-2 border-dashed hover:border-accent hover:text-accent hover:-mt-0.5 focus-visible:text-accent focus-visible:border-none text-sm" data-astro-transition-scope="astro-36ssibgs-2"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="opacity-80 size-4" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M5 9h14M5 15h14M11 4 7 20M17 4l-4 16" /></svg> Codex </a> </li><li> <a href="/tags/claude/" class="flex items-center gap-0.5 border-foreground border-b-2 border-dashed hover:border-accent hover:text-accent hover:-mt-0.5 focus-visible:text-accent focus-visible:border-none text-sm" data-astro-transition-scope="astro-36ssibgs-3"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="opacity-80 size-4" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M5 9h14M5 15h14M11 4 7 20M17 4l-4 16" /></svg> Claude </a> </li><li> <a href="/tags/agentic-coding/" class="flex items-center gap-0.5 border-foreground border-b-2 border-dashed hover:border-accent hover:text-accent hover:-mt-0.5 focus-visible:text-accent focus-visible:border-none text-sm" data-astro-transition-scope="astro-36ssibgs-4"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="opacity-80 size-4" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M5 9h14M5 15h14M11 4 7 20M17 4l-4 16" /></svg> Agentic Coding </a> </li><li> <a href="/tags/模型对比/" class="flex items-center gap-0.5 border-foreground border-b-2 border-dashed hover:border-accent hover:text-accent hover:-mt-0.5 focus-visible:text-accent focus-visible:border-none text-sm" data-astro-transition-scope="astro-36ssibgs-5"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="opacity-80 size-4" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M5 9h14M5 15h14M11 4 7 20M17 4l-4 16" /></svg> 模型对比 </a> </li><li> <a href="/tags/图像理解/" class="flex items-center gap-0.5 border-foreground border-b-2 border-dashed hover:border-accent hover:text-accent hover:-mt-0.5 focus-visible:text-accent focus-visible:border-none text-sm" data-astro-transition-scope="astro-36ssibgs-6"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="opacity-80 size-4" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M5 9h14M5 15h14M11 4 7 20M17 4l-4 16" /></svg> 图像理解 </a> </li> </ul> <div class="flex flex-none flex-col items-center justify-center gap-1 md:items-start"><span class="italic">分享文章:</span><div class="text-center"><a href="mailto:?subject=See%20this%20post&amp;body=https://shiaoming123.github.io/posts/gpt-5-6-codex-gpt-5-5-claude-comparison-2026/" title="通过邮件分享" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><path d="m3 7 9 6 9-6" /></svg><span class="sr-only">通过邮件分享</span> </a></div></div> <hr class="my-8 border-dashed" data-astro-cid-7ap3hmvm> <div data-pagefind-ignore class="my-8 grid grid-cols-1 gap-6 sm:grid-cols-2">  <a href="/posts/obsidian-style-knowledge-graph-ui/" class="flex w-full justify-end gap-1 text-end hover:opacity-75 sm:col-start-2"> <div> <span>下一篇</span> <div class="text-accent/85 text-sm">把书签做成 Obsidian 风格知识图谱：节点、连线和交互技巧</div> </div> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block flex-none rtl:rotate-180" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M5 12h14M13 18l6-6M13 6l6 6" /></svg> </a> </div> </div> <nav class="article-toc article-toc-sidebar" data-pagefind-ignore data-toc-drawer="true" data-toc-open="true" aria-label="本文目录" data-astro-cid-u3rwxgrt><div class="toc-drawer-frame" data-astro-cid-u3rwxgrt><button class="toc-drawer-toggle" type="button" aria-expanded="true" aria-label="收起本文目录" data-toc-toggle data-astro-cid-u3rwxgrt><span data-astro-cid-u3rwxgrt>目录</span></button><div class="toc-drawer-panel" data-astro-cid-u3rwxgrt><div class="toc-drawer-header" data-astro-cid-u3rwxgrt><p data-astro-cid-u3rwxgrt>本文目录</p><span data-toc-progress data-astro-cid-u3rwxgrt>0%</span></div><div class="toc-drawer-meter" aria-hidden="true" data-astro-cid-u3rwxgrt><span data-toc-meter data-astro-cid-u3rwxgrt></span></div><ol data-astro-cid-u3rwxgrt><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#先把名称说清楚" data-toc-target="先把名称说清楚" data-astro-cid-u3rwxgrt>先把名称说清楚</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#价格与规格" data-toc-target="价格与规格" data-astro-cid-u3rwxgrt>价格与规格</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#编码-benchmark看任务形状不要只看总分" data-toc-target="编码-benchmark看任务形状不要只看总分" data-astro-cid-u3rwxgrt>编码 benchmark：看任务形状，不要只看总分</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#图片能力分成两张表才不会误导" data-toc-target="图片能力分成两张表才不会误导" data-astro-cid-u3rwxgrt>图片能力：分成两张表才不会误导</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#视觉理解截图和文档" data-toc-target="视觉理解截图和文档" data-astro-cid-u3rwxgrt>视觉理解、截图和文档</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#图像生成与编辑" data-toc-target="图像生成与编辑" data-astro-cid-u3rwxgrt>图像生成与编辑</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#codex-这次还更新了什么" data-toc-target="codex-这次还更新了什么" data-astro-cid-u3rwxgrt>Codex 这次还更新了什么</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#最后怎么选" data-toc-target="最后怎么选" data-astro-cid-u3rwxgrt>最后怎么选</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#来源" data-toc-target="来源" data-astro-cid-u3rwxgrt>来源</a></li></ol></div></div></nav><script data-astro-rerun>
+  (() => {
+    function clamp(value, min, max) {
+      return Math.min(max, Math.max(min, value));
+    }
+
+    function getDrawerPreference() {
+      try {
+        return localStorage.getItem("article-toc-drawer-open");
+      } catch {
+        return null;
+      }
+    }
+
+    function setDrawerPreference(value) {
+      try {
+        localStorage.setItem("article-toc-drawer-open", value);
+      } catch {
+        // The drawer remains usable even when storage is unavailable.
+      }
+    }
+
+    function initArticleTocDrawer() {
+      window.__articleTocDrawerCleanup?.();
+
+      const article = document.getElementById("article");
+      const headings = Array.from(
+        article?.querySelectorAll("h2[id], h3[id]") ?? []
+      );
+      const links = Array.from(
+        document.querySelectorAll(".article-toc a[data-toc-target]")
+      );
+      const drawers = Array.from(
+        document.querySelectorAll("[data-toc-drawer]")
+      );
+
+      if (!article || headings.length === 0 || links.length === 0) {
+        window.__articleTocDrawerCleanup = null;
+        return;
+      }
+
+      const storedOpen = getDrawerPreference();
+      const isOpenByDefault = storedOpen !== "false";
+
+      for (const drawer of drawers) {
+        const toggle = drawer.querySelector("[data-toc-toggle]");
+        drawer.dataset.tocOpen = isOpenByDefault ? "true" : "false";
+        toggle?.setAttribute("aria-expanded", String(isOpenByDefault));
+        toggle?.setAttribute(
+          "aria-label",
+          isOpenByDefault ? "收起本文目录" : "展开本文目录"
+        );
+      }
+
+      const onToggleClick = event => {
+        const button = event.currentTarget;
+        const drawer = button.closest("[data-toc-drawer]");
+        const nextOpen = drawer.dataset.tocOpen !== "true";
+        drawer.dataset.tocOpen = String(nextOpen);
+        button.setAttribute("aria-expanded", String(nextOpen));
+        button.setAttribute(
+          "aria-label",
+          nextOpen ? "收起本文目录" : "展开本文目录"
+        );
+        setDrawerPreference(String(nextOpen));
+      };
+
+      const toggles = drawers
+        .map(drawer => drawer.querySelector("[data-toc-toggle]"))
+        .filter(Boolean);
+      for (const toggle of toggles) {
+        toggle.addEventListener("click", onToggleClick);
+      }
+
+      let frame = 0;
+
+      function updateTocState() {
+        frame = 0;
+        const articleRect = article.getBoundingClientRect();
+        const articleTop = window.scrollY + articleRect.top;
+        const articleHeight = article.offsetHeight;
+        const readableHeight = Math.max(
+          1,
+          articleHeight - window.innerHeight * 0.55
+        );
+        const progress = clamp(
+          ((window.scrollY - articleTop + window.innerHeight * 0.2) /
+            readableHeight) *
+            100,
+          0,
+          100
+        );
+
+        const markerY =
+          window.scrollY + Math.min(window.innerHeight * 0.34, 240);
+        let activeId = headings[0].id;
+
+        for (const heading of headings) {
+          const headingTop =
+            window.scrollY + heading.getBoundingClientRect().top;
+          if (headingTop <= markerY) {
+            activeId = heading.id;
+          } else {
+            break;
+          }
+        }
+
+        for (const link of links) {
+          const isActive = link.dataset.tocTarget === activeId;
+          if (isActive) {
+            link.setAttribute("aria-current", "location");
+          } else {
+            link.removeAttribute("aria-current");
+          }
+        }
+
+        for (const drawer of drawers) {
+          const progressLabel = drawer.querySelector("[data-toc-progress]");
+          const meter = drawer.querySelector("[data-toc-meter]");
+          if (progressLabel)
+            progressLabel.textContent = `${Math.round(progress)}%`;
+          if (meter) meter.style.width = `${progress}%`;
+        }
+
+        const activeDrawerLink = document.querySelector(
+          '.article-toc-sidebar a[aria-current="location"]'
+        );
+        const activeDrawer = activeDrawerLink?.closest("[data-toc-drawer]");
+        if (activeDrawer?.dataset.tocOpen === "true") {
+          activeDrawerLink.scrollIntoView({
+            block: "nearest",
+            inline: "nearest",
+          });
+        }
+      }
+
+      function scheduleUpdate() {
+        if (frame) return;
+        frame = requestAnimationFrame(updateTocState);
+      }
+
+      updateTocState();
+      document.addEventListener("scroll", scheduleUpdate, { passive: true });
+      window.addEventListener("resize", scheduleUpdate);
+
+      window.__articleTocDrawerCleanup = () => {
+        if (frame) cancelAnimationFrame(frame);
+        document.removeEventListener("scroll", scheduleUpdate);
+        window.removeEventListener("resize", scheduleUpdate);
+        for (const toggle of toggles) {
+          toggle.removeEventListener("click", onToggleClick);
+        }
+      };
+    }
+
+    window.__initArticleTocDrawer = initArticleTocDrawer;
+    initArticleTocDrawer();
+  })();
+</script> </main> <footer class="observatory-footer app-layout mt-auto" data-astro-cid-7ap3hmvm="true"> <div class="observatory-footer-grid"> <div class="observatory-footer-signoff"> <p class="observatory-footer-eyebrow">OBSERVATION LOG · 2026</p> <p>持续观察技术变化，也记录把它做成产品的全过程。</p> <div class="flex flex-wrap items-center gap-1"> <a href="https://github.com/Shiaoming123" title="世傲命的技术观测站 on Github" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21" /></svg> <span class="sr-only">世傲命的技术观测站 on Github</span>  </a><a href="mailto:2405360475@qq.com" title="Send an email to 世傲命的技术观测站" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><path d="m3 7 9 6 9-6" /></svg> <span class="sr-only">Send an email to 世傲命的技术观测站</span>  </a> </div> </div> <nav class="observatory-footer-navigation" aria-label="页脚导航"> <div> <p>观测入口</p> <ul> <li> <a href="/posts/">文章</a> </li><li> <a href="/learning/">学习</a> </li><li> <a href="/signals/">信号</a> </li><li> <a href="/projects/">作品</a> </li><li> <a href="/about/">关于</a> </li> </ul> </div> <div> <p>更多</p> <ul> <li> <a href="/bookmarks/">资源</a> </li><li> <a href="/taxonomy/">分类</a> </li><li> <a href="/archives/">归档</a> </li><li> <a href="/changelog/">日志</a> </li> </ul> </div> </nav> </div> <div class="observatory-footer-meta"> <span>© 2026 世傲命</span> <span>PERSONAL TECHNOLOGY OBSERVATORY · SIGNAL CONTINUES</span> </div> </footer>   <script type="module">function l(){const n=window;n.__scrollMotionCleanup?.();const i=document.documentElement,c=document.querySelector(".scroll-progress"),d=window.matchMedia("(prefers-reduced-motion: reduce)").matches;let t;const e=()=>{if(!c)return;const r=i.scrollHeight-window.innerHeight,o=r>0?window.scrollY/r:0;c.style.setProperty("--scroll-progress",Math.min(1,Math.max(0,o)).toString())};if(e(),window.addEventListener("scroll",e,{passive:!0}),window.addEventListener("resize",e),!d){i.classList.add("scroll-motion-ready");const r=document.querySelectorAll("[data-scroll-reveal]");t=new IntersectionObserver(o=>{o.forEach(s=>{s.isIntersecting&&(s.target.classList.add("is-visible"),t?.unobserve(s.target))})},{rootMargin:"0px 0px -12% 0px",threshold:.12}),r.forEach(o=>t?.observe(o))}n.__scrollMotionCleanup=()=>{window.removeEventListener("scroll",e),window.removeEventListener("resize",e),t?.disconnect()}}l();document.addEventListener("astro:after-swap",l);</script> <script type="module">const s="theme",a="light",c="dark";function m(e,t){return e??t??c}let u=c;function d({button:e,initialTheme:t,persist:r,reflect:n}){let o=t;n(o);const i=()=>{o=o===a?c:a,r(o),n(o)};return e?.addEventListener("click",i),{cleanup:()=>e?.removeEventListener("click",i)}}function h(e){const t=document.firstElementChild,r=document.querySelector("#theme-btn"),n=e===c;t?.setAttribute("data-theme",e),t?.classList.toggle("dark",n),r?.setAttribute("aria-label",n?"切换到浅色主题":"切换到深色主题"),r?.setAttribute("aria-pressed",String(n));const o=window.getComputedStyle(document.body).backgroundColor;document.querySelector("meta[name='theme-color']")?.setAttribute("content",o)}function l(){const e=window;e.__themeButtonCleanup?.();const t=document.querySelector("#theme-btn");u=m(localStorage.getItem(s),window.__theme?.value);const r=d({button:t,initialTheme:u,persist:n=>{u=n,localStorage.setItem(s,n)},reflect:h});e.__themeButtonCleanup=()=>{r.cleanup()}}typeof window<"u"&&(l(),document.addEventListener("astro:after-swap",l),document.addEventListener("astro:before-swap",e=>{window.__themeButtonCleanup?.();const t=document.querySelector("meta[name='theme-color']")?.getAttribute("content");t&&e.newDocument.querySelector("meta[name='theme-color']")?.setAttribute("content",t)}));</script> <script type="module" src="/_astro/Layout.astro_astro_type_script_index_2_lang.CaerEMJ9.js"></script> </body> </html>  <script data-astro-rerun>
+  function addHeadingLinks() {
+    const headings = Array.from(
+      document.querySelectorAll(
+        "#article h2, #article h3, #article h4, #article h5, #article h6"
+      )
+    );
+    for (const heading of headings) {
+      if (!heading.id || heading.querySelector(".heading-link")) continue;
+      heading.classList.add("group");
+      const link = document.createElement("a");
+      link.className =
+        "heading-link ms-2 no-underline opacity-75 md:opacity-0 md:group-hover:opacity-100 md:focus:opacity-100";
+      link.href = "#" + heading.id;
+      link.ariaLabel = `复制“${heading.textContent?.trim()}”段落链接`;
+
+      const span = document.createElement("span");
+      span.ariaHidden = "true";
+      span.innerText = "#";
+      link.appendChild(span);
+      heading.appendChild(link);
+    }
+  }
+  addHeadingLinks();
+
+  function setupContinuation() {
+    window.__continuationCleanup?.();
+    const details = document.querySelector(".article-continuation-details");
+    if (!details) return;
+
+    const desktop = window.matchMedia("(min-width: 768px)");
+    const syncExpandedState = () => {
+      details.open = desktop.matches;
+    };
+
+    syncExpandedState();
+    desktop.addEventListener("change", syncExpandedState);
+    window.__continuationCleanup = () => {
+      desktop.removeEventListener("change", syncExpandedState);
+    };
+  }
+  setupContinuation();
+
+  /** Accessible image lightbox for article images. */
+  function initLightbox() {
+    window.__articleInteractionsCleanup?.();
+    const article = document.getElementById("article");
+    if (!article) return;
+
+    const prefersReducedMotion = () =>
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    let overlay = null;
+    let lastFocused = null;
+
+    // Defer attribute mutations so they don't push the LCP timestamp.
+    // Event listeners below use delegation and don't need the attributes to exist yet.
+    const attributeFrame = requestAnimationFrame(() => {
+      const images = Array.from(article.querySelectorAll("img"));
+      for (const image of images) {
+        if (image.closest("a")) continue;
+        image.setAttribute("role", "button");
+        image.setAttribute("tabindex", "0");
+        image.setAttribute("aria-haspopup", "dialog");
+        image.setAttribute(
+          "aria-label",
+          image.alt ? `Zoom image: ${image.alt}` : "Zoom image"
+        );
+      }
+    });
+
+    function open(src, alt, trigger) {
+      if (overlay) return;
+      lastFocused = trigger ?? document.activeElement;
+
+      overlay = document.createElement("div");
+      overlay.setAttribute("role", "dialog");
+      overlay.setAttribute("aria-modal", "true");
+      overlay.setAttribute(
+        "aria-label",
+        alt ? `Image preview: ${alt}` : "Image preview"
+      );
+      overlay.className =
+        "fixed inset-0 z-50 flex cursor-zoom-out items-center justify-center bg-black/70 backdrop-blur-sm opacity-0 transition-opacity duration-200 motion-reduce:transition-none";
+
+      const closeButton = document.createElement("button");
+      closeButton.type = "button";
+      closeButton.setAttribute("aria-label", "Close image preview");
+      closeButton.className =
+        "absolute end-4 top-4 rounded p-2 text-3xl leading-none text-white";
+      closeButton.innerHTML = "&#10005;";
+      closeButton.addEventListener("click", close);
+
+      const image = document.createElement("img");
+      image.src = src;
+      image.alt = "";
+      image.className =
+        "max-h-[90dvh] max-w-[90dvw] cursor-default object-contain";
+
+      overlay.append(closeButton, image);
+      overlay.addEventListener("click", e => {
+        if (e.target === overlay && currentScale <= 1) close();
+      });
+
+      let currentScale = 1;
+      let translateX = 0;
+      let translateY = 0;
+      let initialDist = 0;
+      let initialScale = 1;
+      let panStartX = 0;
+      let panStartY = 0;
+      let panStartTranslateX = 0;
+      let panStartTranslateY = 0;
+      let lastTapTime = 0;
+
+      function applyTransform() {
+        image.style.transform = `scale(${currentScale}) translate(${translateX}px, ${translateY}px)`;
+      }
+
+      function resetTransform() {
+        currentScale = 1;
+        translateX = 0;
+        translateY = 0;
+        image.style.transform = "";
+      }
+
+      overlay.addEventListener(
+        "touchstart",
+        e => {
+          const t = e.touches;
+          if (t.length === 2) {
+            initialDist = Math.hypot(
+              t[1].clientX - t[0].clientX,
+              t[1].clientY - t[0].clientY
+            );
+            initialScale = currentScale;
+          } else if (t.length === 1) {
+            const now = Date.now();
+            if (now - lastTapTime < 300) {
+              e.preventDefault();
+              if (currentScale > 1) {
+                resetTransform();
+              } else {
+                currentScale = 2;
+                translateX = 0;
+                translateY = 0;
+                applyTransform();
+              }
+              lastTapTime = 0;
+              panStartX = t[0].clientX;
+              panStartY = t[0].clientY;
+              panStartTranslateX = translateX;
+              panStartTranslateY = translateY;
+            } else {
+              lastTapTime = now;
+              if (currentScale > 1) {
+                panStartX = t[0].clientX;
+                panStartY = t[0].clientY;
+                panStartTranslateX = translateX;
+                panStartTranslateY = translateY;
+              }
+            }
+          }
+        },
+        { passive: false }
+      );
+
+      overlay.addEventListener(
+        "touchmove",
+        e => {
+          const t = e.touches;
+          if (t.length === 2) {
+            e.preventDefault();
+            const dist = Math.hypot(
+              t[1].clientX - t[0].clientX,
+              t[1].clientY - t[0].clientY
+            );
+            currentScale = Math.min(
+              4,
+              Math.max(1, initialScale * (dist / initialDist))
+            );
+            applyTransform();
+          } else if (t.length === 1) {
+            if (currentScale > 1) {
+              e.preventDefault();
+              translateX =
+                panStartTranslateX + (t[0].clientX - panStartX) / currentScale;
+              translateY =
+                panStartTranslateY + (t[0].clientY - panStartY) / currentScale;
+              const maxX = Math.max(
+                0,
+                (image.clientWidth - overlay.clientWidth / currentScale) / 2
+              );
+              const maxY = Math.max(
+                0,
+                (image.clientHeight - overlay.clientHeight / currentScale) / 2
+              );
+              translateX = Math.min(maxX, Math.max(-maxX, translateX));
+              translateY = Math.min(maxY, Math.max(-maxY, translateY));
+              applyTransform();
+            } else {
+              e.preventDefault();
+            }
+          }
+        },
+        { passive: false }
+      );
+
+      overlay.addEventListener("touchend", e => {
+        if (e.touches.length === 0 && currentScale <= 1.05) {
+          resetTransform();
+        }
+      });
+
+      overlay.addEventListener("touchcancel", e => {
+        if (e.touches.length === 0 && currentScale <= 1.05) {
+          resetTransform();
+        }
+      });
+
+      document.body.appendChild(overlay);
+      document.body.style.overflow = "hidden";
+      document.addEventListener("keydown", onKeyDown);
+      window.__closeLightbox = close;
+
+      requestAnimationFrame(() => overlay?.classList.add("opacity-100"));
+      closeButton.focus();
+    }
+
+    function close() {
+      if (!overlay) return;
+      const el = overlay;
+      overlay = null;
+      window.__closeLightbox = null;
+
+      document.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = "";
+      lastFocused?.focus();
+      lastFocused = null;
+
+      if (prefersReducedMotion()) {
+        el.remove();
+        return;
+      }
+      const remove = () => el.remove();
+      el.addEventListener("transitionend", remove, { once: true });
+      setTimeout(remove, 250); // fallback in case transitionend never fires
+      el.classList.remove("opacity-100");
+    }
+
+    function onKeyDown(e) {
+      if (e.key === "Escape") {
+        close();
+      } else if (e.key === "Tab") {
+        trapFocus(e);
+      }
+    }
+
+    // Keep keyboard focus inside the open dialog.
+    function trapFocus(e) {
+      if (!overlay) return;
+      const focusables = overlay.querySelectorAll(
+        'a[href], button, [tabindex]:not([tabindex="-1"])'
+      );
+      if (focusables.length === 0) return;
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+
+    function triggerFromEvent(e) {
+      const image = e.target.closest("img");
+      if (!image || !article.contains(image) || image.closest("a")) return null;
+      return image;
+    }
+
+    function activate(image) {
+      open(image.currentSrc || image.src, image.alt, image);
+    }
+
+    const onArticleClick = e => {
+      const image = triggerFromEvent(e);
+      if (!image) return;
+      e.preventDefault();
+      activate(image);
+    };
+
+    const onArticleKeydown = e => {
+      if (e.key !== "Enter" && e.key !== " " && e.key !== "Spacebar") return;
+      const image = triggerFromEvent(e);
+      if (!image) return;
+      e.preventDefault();
+      activate(image);
+    };
+
+    article.addEventListener("click", onArticleClick);
+    article.addEventListener("keydown", onArticleKeydown);
+    window.__articleInteractionsCleanup = () => {
+      cancelAnimationFrame(attributeFrame);
+      close();
+      article.removeEventListener("click", onArticleClick);
+      article.removeEventListener("keydown", onArticleKeydown);
+    };
+  }
+  initLightbox();
+
+  if (!window.__lightboxSwapBound) {
+    window.__lightboxSwapBound = true;
+    document.addEventListener("astro:before-swap", () => {
+      window.__articleInteractionsCleanup?.();
+      window.__articleInteractionsCleanup = null;
+      window.__continuationCleanup?.();
+      window.__continuationCleanup = null;
+      window.__backToTopCleanup?.();
+      window.__backToTopCleanup = null;
+      window.__articleTocDrawerCleanup?.();
+      window.__articleTocDrawerCleanup = null;
+    });
+  }
+</script>
