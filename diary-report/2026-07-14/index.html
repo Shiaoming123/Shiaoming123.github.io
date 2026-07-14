@@ -1,0 +1,490 @@
+<!DOCTYPE html><html dir="ltr" lang="zh-CN" class="overflow-y-scroll scroll-smooth"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="canonical" href="https://shiaoming123.github.io/diary-report/2026-07-14/"><meta name="generator" content="Astro v6.4.8"><!-- Font --><style>@font-face{font-family:"Google Sans Code-66787e984771ec7e";src:url("/_astro/fonts/87ca066ba5b2c7cf.woff") format("woff"), url("/_astro/fonts/f4e25dfe9d6152ec.ttf") format("truetype");font-display:swap;font-weight:400;font-style:normal;}@font-face{font-family:"Google Sans Code-66787e984771ec7e";src:url("/_astro/fonts/f914de358bc554f6.woff") format("woff"), url("/_astro/fonts/dbc9996f99c63e07.ttf") format("truetype");font-display:swap;font-weight:700;font-style:normal;}@font-face{font-family:"Google Sans Code-66787e984771ec7e fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:400;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-66787e984771ec7e fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:700;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}:root{--font-google-sans-code:"Google Sans Code-66787e984771ec7e","Google Sans Code-66787e984771ec7e fallback: Courier New",monospace;}</style><!-- Primary meta --><title>个人开发者机会日报 — 2026-07-14 | 世傲命的技术观测站</title><meta name="title" content="个人开发者机会日报 — 2026-07-14 | 世傲命的技术观测站"><meta name="description" content="一个 Python 库，能拦截任意桌面应用的窗口并像调用 Python 函数一样操控它（点击、输入、读取）。"><meta name="author" content="世傲命"><link rel="sitemap" href="/sitemap.xml"><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:site_name" content="世傲命的技术观测站"><meta property="og:title" content="个人开发者机会日报 — 2026-07-14 | 世傲命的技术观测站"><meta property="og:description" content="一个 Python 库，能拦截任意桌面应用的窗口并像调用 Python 函数一样操控它（点击、输入、读取）。"><meta property="og:url" content="https://shiaoming123.github.io/diary-report/2026-07-14/"><meta property="og:image" content="https://shiaoming123.github.io/default-og.jpg"><!-- Twitter / X --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://shiaoming123.github.io/diary-report/2026-07-14/"><meta property="twitter:title" content="个人开发者机会日报 — 2026-07-14 | 世傲命的技术观测站"><meta property="twitter:description" content="一个 Python 库，能拦截任意桌面应用的窗口并像调用 Python 函数一样操控它（点击、输入、读取）。"><meta property="twitter:image" content="https://shiaoming123.github.io/default-og.jpg"><!-- RSS autodiscovery --><link rel="alternate" type="application/rss+xml" title="世傲命的技术观测站" href="https://shiaoming123.github.io/rss.xml"><!-- Filled at runtime by theme.ts to match the current background colour --><meta name="theme-color" content=""><!-- Extra head content injected by child layouts (e.g. JSON-LD, article meta) -->  <meta property="og:type" content="article"> <meta name="author" content="世傲命"> <meta property="article:published_time" content="2026-07-14T00:00:00.000Z"><meta property="article:modified_time" content="2026-07-14T00:00:00.000Z"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"个人开发者机会日报 — 2026-07-14 | 世傲命的技术观测站","description":"一个 Python 库，能拦截任意桌面应用的窗口并像调用 Python 函数一样操控它（点击、输入、读取）。","url":"https://shiaoming123.github.io/diary-report/2026-07-14/","mainEntityOfPage":"https://shiaoming123.github.io/diary-report/2026-07-14/","inLanguage":"zh-CN","datePublished":"2026-07-14T00:00:00.000Z","dateModified":"2026-07-14T00:00:00.000Z","author":[{"@type":"Person","name":"世傲命","url":"https://github.com/Shiaoming123"}],"publisher":{"@type":"Person","name":"世傲命","url":"https://github.com/Shiaoming123"}}</script> <!--
+      Inline FOUC-prevention script: sets data-theme on <html> before
+      the browser paints. Runs synchronously, no defer/async.
+    --><script>
+      (function () {
+        const stored = localStorage.getItem("theme");
+        const theme = stored ?? "dark";
+        const root = document.firstElementChild;
+        root?.setAttribute("data-theme", theme);
+        root?.classList.toggle("dark", theme === "dark");
+        // Expose value so theme.ts can skip re-detection.
+        window.__theme = { value: theme };
+      })();
+    </script><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CAqDO0tx.js"></script><link rel="stylesheet" href="/_astro/PostLayout.g8X8u49B.css"><link rel="stylesheet" href="/_astro/Footer.D71eAuKB.css"><link rel="stylesheet" href="/_astro/DailyReportArticle.zMxQNJjj.css"></head> <body class="bg-background font-app text-foreground selection:bg-accent/75 selection:text-accent-foreground flex min-h-svh flex-col"> <div class="scroll-progress" aria-hidden="true"></div>    <a id="skip-to-content" href="#main-content" class="bg-background text-accent absolute inset-s-16 -top-full z-50 px-3 py-2 backdrop-blur-lg transition-all focus:top-4"> 跳到正文 </a> <header class="observatory-header"> <div class="observatory-header-bar"> <a href="/" class="observatory-brand" aria-label="世傲命的技术观测站，返回首页"> <span class="observatory-brand-mark" aria-hidden="true"> <span></span> </span> <span class="observatory-brand-copy"> <strong>世傲命的技术观测站</strong> <small>PERSONAL TECHNOLOGY OBSERVATORY</small> </span> </a> <nav class="observatory-navigation" aria-label="主导航"> <button id="menu-btn" class="focus-outline observatory-menu-button" aria-label="打开菜单" aria-expanded="false" aria-controls="menu-items" data-label-open="打开菜单" data-label-close="关闭菜单"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="hidden" viewBox="0 0 24 24" id="close-icon"><path stroke="none" d="M0 0h24v24H0z" /><path d="M18 6 6 18M6 6l12 12" /></svg> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon icon-tabler icons-tabler-outline icon-tabler-menu-deep" viewBox="0 0 24 24" id="menu-icon"><path stroke="none" d="M0 0h24v24H0z" /><path d="M4 6h16M7 12h13M10 18h10" /></svg> </button> <ul id="menu-items" class="observatory-nav-list hidden max-h-[calc(100svh-4.5rem)] overflow-y-auto lg:flex lg:overflow-visible"> <li class="observatory-nav-item"> <a href="/posts/"> 文章 </a> </li><li class="observatory-nav-item"> <a href="/learning/"> 学习 </a> </li><li class="observatory-nav-item"> <a href="/signals/"> 信号 </a> </li><li class="observatory-nav-item"> <a href="/projects/"> 作品 </a> </li><li class="observatory-nav-item"> <a href="/about/"> 关于 </a> </li> <li class="observatory-more-item"> <details id="navigation-more" class="observatory-more"> <summary> 更多 </summary> <ul aria-label="更多"> <li> <a href="/bookmarks/"> 资源 </a> </li><li> <a href="/arena/"> 榜单 </a> </li><li> <a href="/taxonomy/"> 分类 </a> </li><li> <a href="/archives/"> 归档 </a> </li><li> <a href="/changelog/"> 日志 </a> </li> </ul> </details> </li> <li class="observatory-tool-item"> <a href="/search/" title="搜索" aria-label="搜索"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon icon-tabler icons-tabler-outline icon-tabler-search" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 10a7 7 0 1 0 14 0 7 7 0 1 0-14 0M21 21l-6-6" /></svg> <span class="lg:sr-only">搜索</span> </a> </li> <li class="observatory-tool-item"> <button id="theme-btn" title="切换主题" aria-label="切换到深色主题" aria-live="polite"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M12 3h.393a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 2.992z" /></svg> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M14.828 14.828a4 4 0 1 0-5.656-5.656 4 4 0 0 0 5.656 5.656M6.343 17.657l-1.414 1.414M6.343 6.343 4.929 4.929M17.657 6.343l1.414-1.414M17.657 17.657l1.414 1.414M4 12H2M12 4V2M20 12h2M12 20v2" /></svg> <span class="lg:sr-only">切换主题</span> </button> </li> </ul> </nav> </div> </header> <script type="module">function v(){const a=window;a.__observatoryNavigationCleanup?.();const t=document.querySelector("#menu-btn"),n=document.querySelector("#menu-items"),i=document.querySelector("#menu-icon"),c=document.querySelector("#close-icon"),g=document.querySelector("#navigation-more");if(!t||!n||!i||!c)return;const L=t.dataset.labelOpen??"打开菜单",f=t.dataset.labelClose??"关闭菜单",o=()=>t.getAttribute("aria-expanded")==="true",s=(e,b=!1)=>{t.setAttribute("aria-expanded",String(e)),t.setAttribute("aria-label",e?f:L),n.classList.toggle("hidden",!e),n.classList.toggle("grid",e),i.classList.toggle("hidden",e),c.classList.toggle("hidden",!e),document.documentElement.classList.toggle("shell-menu-open",e),e||(g?.removeAttribute("open"),b&&t.focus())},r=()=>s(!o()),l=e=>{o()&&e.target.closest("a")&&s(!1)},d=e=>{e.key==="Escape"&&o()&&(e.preventDefault(),s(!1,!0))},u=e=>{e.matches&&o()&&s(!1)},m=window.matchMedia("(min-width: 64rem)");t.addEventListener("click",r),n.addEventListener("click",l),document.addEventListener("keydown",d),m.addEventListener("change",u),a.__observatoryNavigationCleanup=()=>{t.removeEventListener("click",r),n.removeEventListener("click",l),document.removeEventListener("keydown",d),m.removeEventListener("change",u),document.documentElement.classList.remove("shell-menu-open")}}v();document.addEventListener("astro:after-swap",v);document.addEventListener("astro:before-swap",()=>{window.__observatoryNavigationCleanup?.()});</script> <nav class="app-layout mt-8 mb-1" aria-label="breadcrumb"> <ul class="font-light [&>li]:inline [&>li:not(:last-child)>a]:hover:opacity-100"> <li> <a href="/" class="opacity-80"> 首页 </a> <span aria-hidden="true" class="opacity-80">&raquo;</span> </li> <li> <a href="/diary-report/" class="capitalize opacity-70"> 机会日报 </a> <span aria-hidden="true" class="opacity-70">
+&raquo;
+</span> </li><li> <span class="capitalize opacity-75 lowercase" aria-current="page">  2026-07-14 </span> </li> </ul> </nav> <main id="main-content" class="article-shell daily-article daily-article--diary" data-pagefind-body> <div class="sr-only" aria-hidden="true"> <span data-pagefind-filter="内容类型" data-pagefind-meta="contentType">信号</span> <span data-pagefind-filter="分类" data-pagefind-meta="category">机会日报</span> <time data-pagefind-meta="date">2026-07</time> </div> <div class="reading-content article-main"> <header class="daily-article-header"> <div class="daily-article-classification"> <span>机会观测记录</span> <time datetime="2026-07-14">2026-07-14</time> </div> <h1>个人开发者机会日报 — 2026-07-14</h1> <p>一个 Python 库，能拦截任意桌面应用的窗口并像调用 Python 函数一样操控它（点击、输入、读取）。</p> <dl> <div> <dt>发布时间</dt> <dd><div class="text-muted-foreground flex items-center gap-x-2"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 min-w-5.5" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M4 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zM16 3v4M8 3v4M4 11h16M7 14h.013M10.01 14h.005M13.01 14h.005M16.015 14h.005M13.015 17h.005M7.01 17h.005M10.01 17h.005" /></svg>  <time class="text-sm sm:text-base" datetime="2026-07-14T00:00:00.000Z"> 14 Jul, 2026 </time> </div></dd> </div> <div> <dt>分类</dt> <dd>机会日报</dd> </div> <div> <dt>来源状态</dt> <dd> 7 条原始来源 </dd> </div> <div> <dt>导入记录</dt> <dd class="daily-source">wiki/diary-report/2026-07-14.md</dd> </div> </dl> </header> <section class="article-guide" aria-label="本文导览" data-pagefind-ignore> <nav class="article-toc article-toc-inline" data-pagefind-ignore aria-label="本期目录" data-astro-cid-u3rwxgrt><details data-astro-cid-u3rwxgrt><summary data-astro-cid-u3rwxgrt><span data-astro-cid-u3rwxgrt>本期目录</span><strong data-astro-cid-u3rwxgrt>15 个小节</strong></summary><ol data-astro-cid-u3rwxgrt><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-今日精选" data-toc-target="-今日精选" data-astro-cid-u3rwxgrt>🔥 今日精选</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#1-mimic--从-python-里操控任何桌面应用" data-toc-target="1-mimic--从-python-里操控任何桌面应用" data-astro-cid-u3rwxgrt>1. mimic — 从 Python 里操控任何桌面应用</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#2-apple-speechanalyzer-api--对标-whisper-的新语音-api" data-toc-target="2-apple-speechanalyzer-api--对标-whisper-的新语音-api" data-astro-cid-u3rwxgrt>2. Apple SpeechAnalyzer API — 对标 Whisper 的新语音 API</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#3-dom-docx--html-转原生可编辑-word-文档mit-开源" data-toc-target="3-dom-docx--html-转原生可编辑-word-文档mit-开源" data-astro-cid-u3rwxgrt>3. DOM-docx — HTML 转原生可编辑 Word 文档，MIT 开源</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#4-nobie--让-agent-和人共用-excel-兼容运行时" data-toc-target="4-nobie--让-agent-和人共用-excel-兼容运行时" data-astro-cid-u3rwxgrt>4. Nobie — 让 Agent 和人共用 Excel 兼容运行时</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#5-headroom--给-llm-的-token-压缩器省-60-95-token" data-toc-target="5-headroom--给-llm-的-token-压缩器省-60-95-token" data-astro-cid-u3rwxgrt>5. headroom — 给 LLM 的 token 压缩器，省 60-95% token</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#6-tradingview-mcp--让-claude-控制-tradingview-桌面版" data-toc-target="6-tradingview-mcp--让-claude-控制-tradingview-桌面版" data-astro-cid-u3rwxgrt>6. Tradingview-MCP — 让 Claude 控制 Tradingview 桌面版</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#7-build-macios-apps-without-xcode" data-toc-target="7-build-macios-apps-without-xcode" data-astro-cid-u3rwxgrt>7. Build Mac/iOS apps without Xcode</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-值得关注的趋势" data-toc-target="-值得关注的趋势" data-astro-cid-u3rwxgrt>💡 值得关注的趋势</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#app-拦截成为-ai-agent-的新入口" data-toc-target="app-拦截成为-ai-agent-的新入口" data-astro-cid-u3rwxgrt>「App 拦截」成为 AI Agent 的新入口</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#apple-端侧-ai-api-全面追赶" data-toc-target="apple-端侧-ai-api-全面追赶" data-astro-cid-u3rwxgrt>Apple 端侧 AI API 全面追赶</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#ai-文档生成进入开源时代" data-toc-target="ai-文档生成进入开源时代" data-astro-cid-u3rwxgrt>AI 文档生成进入开源时代</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#️-工具框架速览" data-toc-target="️-工具框架速览" data-astro-cid-u3rwxgrt>🛠️ 工具/框架速览</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-社区热议" data-toc-target="-社区热议" data-astro-cid-u3rwxgrt>💬 社区热议</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-行动建议" data-toc-target="-行动建议" data-astro-cid-u3rwxgrt>🎯 行动建议</a></li></ol></details></nav><script data-astro-rerun>
+  (() => {
+    function clamp(value, min, max) {
+      return Math.min(max, Math.max(min, value));
+    }
+
+    function getDrawerPreference() {
+      try {
+        return localStorage.getItem("article-toc-drawer-open");
+      } catch {
+        return null;
+      }
+    }
+
+    function setDrawerPreference(value) {
+      try {
+        localStorage.setItem("article-toc-drawer-open", value);
+      } catch {
+        // The drawer remains usable even when storage is unavailable.
+      }
+    }
+
+    function initArticleTocDrawer() {
+      window.__articleTocDrawerCleanup?.();
+
+      const article = document.getElementById("article");
+      const headings = Array.from(
+        article?.querySelectorAll("h2[id], h3[id]") ?? []
+      );
+      const links = Array.from(
+        document.querySelectorAll(".article-toc a[data-toc-target]")
+      );
+      const drawers = Array.from(
+        document.querySelectorAll("[data-toc-drawer]")
+      );
+
+      if (!article || headings.length === 0 || links.length === 0) {
+        window.__articleTocDrawerCleanup = null;
+        return;
+      }
+
+      const storedOpen = getDrawerPreference();
+      const isOpenByDefault = storedOpen !== "false";
+
+      for (const drawer of drawers) {
+        const toggle = drawer.querySelector("[data-toc-toggle]");
+        drawer.dataset.tocOpen = isOpenByDefault ? "true" : "false";
+        toggle?.setAttribute("aria-expanded", String(isOpenByDefault));
+        toggle?.setAttribute(
+          "aria-label",
+          isOpenByDefault ? "收起本文目录" : "展开本文目录"
+        );
+      }
+
+      const onToggleClick = event => {
+        const button = event.currentTarget;
+        const drawer = button.closest("[data-toc-drawer]");
+        const nextOpen = drawer.dataset.tocOpen !== "true";
+        drawer.dataset.tocOpen = String(nextOpen);
+        button.setAttribute("aria-expanded", String(nextOpen));
+        button.setAttribute(
+          "aria-label",
+          nextOpen ? "收起本文目录" : "展开本文目录"
+        );
+        setDrawerPreference(String(nextOpen));
+      };
+
+      const toggles = drawers
+        .map(drawer => drawer.querySelector("[data-toc-toggle]"))
+        .filter(Boolean);
+      for (const toggle of toggles) {
+        toggle.addEventListener("click", onToggleClick);
+      }
+
+      let frame = 0;
+
+      function updateTocState() {
+        frame = 0;
+        const articleRect = article.getBoundingClientRect();
+        const articleTop = window.scrollY + articleRect.top;
+        const articleHeight = article.offsetHeight;
+        const readableHeight = Math.max(
+          1,
+          articleHeight - window.innerHeight * 0.55
+        );
+        const progress = clamp(
+          ((window.scrollY - articleTop + window.innerHeight * 0.2) /
+            readableHeight) *
+            100,
+          0,
+          100
+        );
+
+        const markerY =
+          window.scrollY + Math.min(window.innerHeight * 0.34, 240);
+        let activeId = headings[0].id;
+
+        for (const heading of headings) {
+          const headingTop =
+            window.scrollY + heading.getBoundingClientRect().top;
+          if (headingTop <= markerY) {
+            activeId = heading.id;
+          } else {
+            break;
+          }
+        }
+
+        for (const link of links) {
+          const isActive = link.dataset.tocTarget === activeId;
+          if (isActive) {
+            link.setAttribute("aria-current", "location");
+          } else {
+            link.removeAttribute("aria-current");
+          }
+        }
+
+        for (const drawer of drawers) {
+          const progressLabel = drawer.querySelector("[data-toc-progress]");
+          const meter = drawer.querySelector("[data-toc-meter]");
+          if (progressLabel)
+            progressLabel.textContent = `${Math.round(progress)}%`;
+          if (meter) meter.style.width = `${progress}%`;
+        }
+
+        const activeDrawerLink = document.querySelector(
+          '.article-toc-sidebar a[aria-current="location"]'
+        );
+        const activeDrawer = activeDrawerLink?.closest("[data-toc-drawer]");
+        if (activeDrawer?.dataset.tocOpen === "true") {
+          activeDrawerLink.scrollIntoView({
+            block: "nearest",
+            inline: "nearest",
+          });
+        }
+      }
+
+      function scheduleUpdate() {
+        if (frame) return;
+        frame = requestAnimationFrame(updateTocState);
+      }
+
+      updateTocState();
+      document.addEventListener("scroll", scheduleUpdate, { passive: true });
+      window.addEventListener("resize", scheduleUpdate);
+
+      window.__articleTocDrawerCleanup = () => {
+        if (frame) cancelAnimationFrame(frame);
+        document.removeEventListener("scroll", scheduleUpdate);
+        window.removeEventListener("resize", scheduleUpdate);
+        for (const toggle of toggles) {
+          toggle.removeEventListener("click", onToggleClick);
+        }
+      };
+    }
+
+    window.__initArticleTocDrawer = initArticleTocDrawer;
+    initArticleTocDrawer();
+  })();
+</script> </section> <article id="article" class="mt-8 w-full app-prose max-w-app"> <blockquote><p>自动生成，数据来源：GitHub Trending / Hacker News / Indie Hackers / V2EX</p></blockquote>
+<h2 id="-今日精选">🔥 今日精选</h2>
+<h3 id="1-mimic--从-python-里操控任何桌面应用">1. <a href="https://github.com/littledivy/mimic">mimic — 从 Python 里操控任何桌面应用</a></h3>
+<ul>
+<li><strong>一句话</strong>：一个 Python 库，能拦截任意桌面应用的窗口并像调用 Python 函数一样操控它（点击、输入、读取）。</li>
+<li><strong>为什么值得关注</strong>：⭐662，14 小时内暴增。这比 Playwright/Selenium 更进一步——不挑 Web 还是原生 App，任何桌面软件都能被 AI Agent「遥控」。AI Agent 的「手」终于有了通用接口。</li>
+<li><strong>Star/热度</strong>：⭐662 | 🚀 极速上升 | Python</li>
+<li><strong>个人开发者切入点</strong>：基于 mimic 做的第一层产品：① 企业 RPA 自动化（无需改造旧系统）；② AI Agent 的「桌面浏览器」——让 Agent 能用任何软件；③ 测试自动化即服务（TaaS）。</li>
+</ul>
+<h3 id="2-apple-speechanalyzer-api--对标-whisper-的新语音-api">2. <a href="https://get-inscribe.com/blog/apple-speech-api-benchmark.html">Apple SpeechAnalyzer API — 对标 Whisper 的新语音 API</a></h3>
+<ul>
+<li><strong>一句话</strong>：Apple 新发布的 SpeechAnalyzer API 在多项基准上超越 Whisper，纯端侧运行，零延迟。</li>
+<li><strong>为什么值得关注</strong>：HN 420 分。Apple 第一次在语音领域拿出比 OpenAI 更优的方案。端侧推理 = 零 API 成本、隐私友好，这对独立开发者极其友好——不需要 GPU 也能做语音产品。</li>
+<li><strong>Star/热度</strong>：🔺420 HN 榜首 | 技术圈极度关注</li>
+<li><strong>个人开发者切入点</strong>：做 Mac/iOS 端的语音应用——会议纪要（本地转录）、语音笔记、口播稿转文字、语音搜索。分发走 App Store，无服务器成本，利润空间大。</li>
+</ul>
+<h3 id="3-dom-docx--html-转原生可编辑-word-文档mit-开源">3. <a href="https://github.com/floodtide/dom-docx">DOM-docx — HTML 转原生可编辑 Word 文档，MIT 开源</a></h3>
+<ul>
+<li><strong>一句话</strong>：将 HTML 转换为原生 Word（docx）文档，保持可编辑性，纯 MIT 协议。</li>
+<li><strong>为什么值得关注</strong>：Show HN 135 分。文档生成是 SaaS 最成熟的赛道之一（DocRaptor、PDF.co 等年收入百万级），但极缺好的开源库。DOM-docx 是 MIT 协议，可以直接包装成 SaaS。</li>
+<li><strong>Star/热度</strong>：🔺135 HN | Show HN 热门</li>
+<li><strong>个人开发者切入点</strong>：包一层 API + 模板编辑器，做「文档生成 SaaS」——支持企业报价单、合同、报告按需生成。定价参考 DocRaptor（$100-500/月）。</li>
+</ul>
+<h3 id="4-nobie--让-agent-和人共用-excel-兼容运行时">4. <a href="https://nobie.com">Nobie — 让 Agent 和人共用 Excel 兼容运行时</a></h3>
+<ul>
+<li><strong>一句话</strong>：一个兼容 Excel 公式和数据的运行时，专为 AI Agent 和人类协作者设计。</li>
+<li><strong>为什么值得关注</strong>：Show HN 70 分。Excel 是全世界最广泛的数据界面。让 AI Agent 能「理解」和「操作」Excel 表格，等于打开了企业市场的钥匙。</li>
+<li><strong>Star/热度</strong>：🔺70 HN | Show HN</li>
+<li><strong>个人开发者切入点</strong>：做「AI 财务/运营助手」——基于 Nobie，让 Agent 自动读取 Excel 报表、生成洞察、写入计算结果。按表单/报表数收费。</li>
+</ul>
+<h3 id="5-headroom--给-llm-的-token-压缩器省-60-95-token">5. <a href="https://github.com/headroomlabs-ai/headroom">headroom — 给 LLM 的 token 压缩器，省 60-95% token</a></h3>
+<ul>
+<li><strong>一句话</strong>：在工具输出、日志、文件到达 LLM 之前进行智能压缩，最高减少 95% token 消耗而答案质量不变。</li>
+<li><strong>为什么值得关注</strong>：⭐58,963，增长曲线惊人。Token 成本是 AI 产品的最大开销之一，任何能降低 token 消耗的中间件都有巨大市场。企业级 AI 产品最痛的就是 token 账单。</li>
+<li><strong>Star/热度</strong>：⭐58,963 | 极速增长</li>
+<li><strong>个人开发者切入点</strong>：做 headroom 的企业版——集成到 CI/CD 管道、Agent 框架、或作为代理服务运行。按 token 节省量抽成或按月订阅。</li>
+</ul>
+<h3 id="6-tradingview-mcp--让-claude-控制-tradingview-桌面版">6. <a href="https://github.com/pueschel88/Tradingview-MCP">Tradingview-MCP — 让 Claude 控制 Tradingview 桌面版</a></h3>
+<ul>
+<li><strong>一句话</strong>：MCP Server，通过 Chrome DevTools Protocol 让 Claude Code 控制 Tradingview 桌面端。</li>
+<li><strong>为什么值得关注</strong>：⭐51 新项目。MCP 生态从 IDE 扩展到金融工具。交易/量化是个人开发者强付费意愿的领域。</li>
+<li><strong>Star/热度</strong>：⭐51 | ⭐ 新项目</li>
+<li><strong>个人开发者切入点</strong>：做「AI 交易助手」——Tradingview-MCP + mimic + 量化策略，打包成桌面应用卖月费。量化交易工具年均付费 $100-500/用户。</li>
+</ul>
+<h3 id="7-build-macios-apps-without-xcode">7. <a href="https://scottwillsey.com/building-and-shipping-mac-and-ios-apps-without-ever-opening-xcode/">Build Mac/iOS apps without Xcode</a></h3>
+<ul>
+<li><strong>一句话</strong>：开发者分享如何纯用命令行（xcodebuild、altool）构建和发布 Apple 应用，完全不打开 Xcode。</li>
+<li><strong>为什么值得关注</strong>：HN 259 分。这意味着 CI/CD 流程可以完全自动化 Apple 应用发布的每一步。对独立开发者来说，这是降低 Apple 生态发布摩擦的重要技巧。</li>
+<li><strong>Star/热度</strong>：🔺259 HN | 开发者工具类热门</li>
+<li><strong>个人开发者切入点</strong>：将这套流程包装成一键式 CLI 工具或 GitHub Action——「Xcode-free iOS CI/CD」。给独立开发者按构建次数收费。</li>
+</ul>
+<h2 id="-值得关注的趋势">💡 值得关注的趋势</h2>
+<h3 id="app-拦截成为-ai-agent-的新入口">「App 拦截」成为 AI Agent 的新入口</h3>
+<ul>
+<li>mimic 的爆发（14h ⭐662）揭示了一个大趋势：AI Agent 不再满足于「只操控浏览器」，而是想要操控一切桌面软件。这套模式的可商业化空间极大——RPA 即服务、自动化测试、Agent 操作记录分析。</li>
+<li>对个人开发者：围绕 mimic 做垂直行业适配（财务软件、设计工具、CRM），比做通用平台更容易早期获利。</li>
+</ul>
+<h3 id="apple-端侧-ai-api-全面追赶">Apple 端侧 AI API 全面追赶</h3>
+<ul>
+<li>SpeechAnalyzer API 是 Apple 在端侧 AI 领域的重拳。端侧 = 零 API 成本 + 隐私 + 低延迟，这对独立开发者是福音。预计 Apple 还会持续推出更多端侧 AI API（OCR、翻译、图像理解）。</li>
+<li>对个人开发者：关注 WWDC 2026 预告的 API，提前储备 Mac/iOS 开发能力。Apple 平台的分发效率和付费率远高于 Web。</li>
+</ul>
+<h3 id="ai-文档生成进入开源时代">AI 文档生成进入开源时代</h3>
+<ul>
+<li>DOM-docx（MIT）补上了 AI 文档生成链路中最缺的一环：HTML → 可编辑 docx。结合 LLM（生成 HTML），个人开发者可以用极低成本搭建文档生成 SaaS。</li>
+<li>对个人开发者：文档模板 SaaS 市场已有成熟对标（DocRaptor、APITemplate.io），但大多贵且旧。用 AI + 新开源库做「更智能、更便宜」的替代品，有明确的市场空间。</li>
+</ul>
+<h2 id="️-工具框架速览">🛠️ 工具/框架速览</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>项目</th><th>简介</th><th>Star</th><th>变现潜力</th></tr></thead><tbody><tr><td>mimic</td><td>从 Python 拦截/操控任何桌面应用</td><td>⭐662</td><td>高</td></tr><tr><td>headroom</td><td>LLM token 压缩器，省 60-95%</td><td>⭐58k</td><td>高</td></tr><tr><td>DOM-docx</td><td>HTML → 可编辑 Word（MIT）</td><td>HN 135pts</td><td>高</td></tr><tr><td>Tradingview-MCP</td><td>Claude 控制 Tradingview</td><td>⭐51</td><td>中</td></tr><tr><td>Nobie</td><td>AI+人类共用的 Excel 运行时</td><td>HN 70pts</td><td>高</td></tr><tr><td>sigwire</td><td>Linux 信号监控 TUI</td><td>⭐57</td><td>低</td></tr><tr><td>youtube-guitar-tab-parser</td><td>YT 吉他教学转 PDF</td><td>⭐58</td><td>低</td></tr><tr><td>Jacquard</td><td>AI 写、人类审的编程语言</td><td>HN 38pts</td><td>中</td></tr><tr><td>Hackney</td><td>比价 Uber/Lyft/Waymo</td><td>HN 8pts</td><td>中</td></tr><tr><td>ContextVault</td><td>AI 和团队的共享记忆层</td><td>HN 3pts</td><td>中</td></tr><tr><td>OpenClawMachines</td><td>OpenClaw 企业扩展</td><td>HN 26pts</td><td>中</td></tr></tbody></table>
+<h2 id="-社区热议">💬 社区热议</h2>
+<ul>
+<li><strong>HN 榜首：Apple SpeechAnalyzer API 对比 Whisper</strong>（420pts）— 社区兴奋于 Apple 端侧 AI 能力的突破，多位开发者表示计划在新 App 中集成。讨论集中在「完全本地处理」对隐私 App 商业模式的利好。</li>
+<li><strong>HN：「Claude is just Mr. Meeseeks」</strong>（94pts）— 一个恶搞项目将 Claude 比作《瑞克和莫蒂》里的 Meeseeks（存在就是为了完成特定任务然后消失），引发对 AI Agent 设计哲学的深度讨论。</li>
+<li><strong>V2EX 热门：GPT 中转站推广</strong> — V2EX 创造分享板块继续被 GPT 中转站（API 代理转售）刷屏，显示这个细分领域的竞争已白热化，个人开发者的利润空间正在收窄。启示：不要在红海里卷，找新场景。</li>
+</ul>
+<h2 id="-行动建议">🎯 行动建议</h2>
+<blockquote><p><strong>方向一：基于 mimic 做「桌面 RPA 即服务」</strong>
+mimic 让任何桌面应用都成了 AI Agent 的可编程控件。建议：包装 mimic + Python 脚本为 SaaS 产品——用户录制一次操作，Agent 自动复现。面向中小企业收费 $49-199/月。竞品对标 UiPath 但价格低 10x。</p></blockquote>
+<blockquote><p><strong>方向二：DOM-docx + LLM = 智能文档生成 SaaS</strong>
+DOM-docx（MIT）解决了「HTML 到 Word」的问题，LLM 解决了「从需求到 HTML」的问题。两者结合 = 完整的自动化文档 SaaS。目标客户：中小企业的报价单、合同、报告生成。定价参照 APITemplate.io（$49/月起）。</p></blockquote> </article> <ul class="learning-tags" aria-label="日报标签"> <li>#开发者机会</li><li>#赚钱</li><li>#indie</li><li>#AI工具</li> </ul> <nav class="daily-period-navigation" aria-label="日报期次导航"> <a href="/diary-report/2026-07-13/" rel="prev"> <span>上一期</span> <strong>2026-07-13</strong> </a> <a class="daily-calendar-return" href="/signals/?date=2026-07-14&amp;type=diary">
+返回所选日期
+</a>  </nav> </div> <nav class="article-toc article-toc-sidebar" data-pagefind-ignore data-toc-drawer="true" data-toc-open="true" aria-label="本期目录" data-astro-cid-u3rwxgrt><div class="toc-drawer-frame" data-astro-cid-u3rwxgrt><button class="toc-drawer-toggle" type="button" aria-expanded="true" aria-label="收起本文目录" data-toc-toggle data-astro-cid-u3rwxgrt><span data-astro-cid-u3rwxgrt>目录</span></button><div class="toc-drawer-panel" data-astro-cid-u3rwxgrt><div class="toc-drawer-header" data-astro-cid-u3rwxgrt><p data-astro-cid-u3rwxgrt>本期目录</p><span data-toc-progress data-astro-cid-u3rwxgrt>0%</span></div><div class="toc-drawer-meter" aria-hidden="true" data-astro-cid-u3rwxgrt><span data-toc-meter data-astro-cid-u3rwxgrt></span></div><ol data-astro-cid-u3rwxgrt><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-今日精选" data-toc-target="-今日精选" data-astro-cid-u3rwxgrt>🔥 今日精选</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#1-mimic--从-python-里操控任何桌面应用" data-toc-target="1-mimic--从-python-里操控任何桌面应用" data-astro-cid-u3rwxgrt>1. mimic — 从 Python 里操控任何桌面应用</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#2-apple-speechanalyzer-api--对标-whisper-的新语音-api" data-toc-target="2-apple-speechanalyzer-api--对标-whisper-的新语音-api" data-astro-cid-u3rwxgrt>2. Apple SpeechAnalyzer API — 对标 Whisper 的新语音 API</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#3-dom-docx--html-转原生可编辑-word-文档mit-开源" data-toc-target="3-dom-docx--html-转原生可编辑-word-文档mit-开源" data-astro-cid-u3rwxgrt>3. DOM-docx — HTML 转原生可编辑 Word 文档，MIT 开源</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#4-nobie--让-agent-和人共用-excel-兼容运行时" data-toc-target="4-nobie--让-agent-和人共用-excel-兼容运行时" data-astro-cid-u3rwxgrt>4. Nobie — 让 Agent 和人共用 Excel 兼容运行时</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#5-headroom--给-llm-的-token-压缩器省-60-95-token" data-toc-target="5-headroom--给-llm-的-token-压缩器省-60-95-token" data-astro-cid-u3rwxgrt>5. headroom — 给 LLM 的 token 压缩器，省 60-95% token</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#6-tradingview-mcp--让-claude-控制-tradingview-桌面版" data-toc-target="6-tradingview-mcp--让-claude-控制-tradingview-桌面版" data-astro-cid-u3rwxgrt>6. Tradingview-MCP — 让 Claude 控制 Tradingview 桌面版</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#7-build-macios-apps-without-xcode" data-toc-target="7-build-macios-apps-without-xcode" data-astro-cid-u3rwxgrt>7. Build Mac/iOS apps without Xcode</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-值得关注的趋势" data-toc-target="-值得关注的趋势" data-astro-cid-u3rwxgrt>💡 值得关注的趋势</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#app-拦截成为-ai-agent-的新入口" data-toc-target="app-拦截成为-ai-agent-的新入口" data-astro-cid-u3rwxgrt>「App 拦截」成为 AI Agent 的新入口</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#apple-端侧-ai-api-全面追赶" data-toc-target="apple-端侧-ai-api-全面追赶" data-astro-cid-u3rwxgrt>Apple 端侧 AI API 全面追赶</a></li><li class="depth-3" data-astro-cid-u3rwxgrt><a href="#ai-文档生成进入开源时代" data-toc-target="ai-文档生成进入开源时代" data-astro-cid-u3rwxgrt>AI 文档生成进入开源时代</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#️-工具框架速览" data-toc-target="️-工具框架速览" data-astro-cid-u3rwxgrt>🛠️ 工具/框架速览</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-社区热议" data-toc-target="-社区热议" data-astro-cid-u3rwxgrt>💬 社区热议</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#-行动建议" data-toc-target="-行动建议" data-astro-cid-u3rwxgrt>🎯 行动建议</a></li></ol></div></div></nav><script data-astro-rerun>
+  (() => {
+    function clamp(value, min, max) {
+      return Math.min(max, Math.max(min, value));
+    }
+
+    function getDrawerPreference() {
+      try {
+        return localStorage.getItem("article-toc-drawer-open");
+      } catch {
+        return null;
+      }
+    }
+
+    function setDrawerPreference(value) {
+      try {
+        localStorage.setItem("article-toc-drawer-open", value);
+      } catch {
+        // The drawer remains usable even when storage is unavailable.
+      }
+    }
+
+    function initArticleTocDrawer() {
+      window.__articleTocDrawerCleanup?.();
+
+      const article = document.getElementById("article");
+      const headings = Array.from(
+        article?.querySelectorAll("h2[id], h3[id]") ?? []
+      );
+      const links = Array.from(
+        document.querySelectorAll(".article-toc a[data-toc-target]")
+      );
+      const drawers = Array.from(
+        document.querySelectorAll("[data-toc-drawer]")
+      );
+
+      if (!article || headings.length === 0 || links.length === 0) {
+        window.__articleTocDrawerCleanup = null;
+        return;
+      }
+
+      const storedOpen = getDrawerPreference();
+      const isOpenByDefault = storedOpen !== "false";
+
+      for (const drawer of drawers) {
+        const toggle = drawer.querySelector("[data-toc-toggle]");
+        drawer.dataset.tocOpen = isOpenByDefault ? "true" : "false";
+        toggle?.setAttribute("aria-expanded", String(isOpenByDefault));
+        toggle?.setAttribute(
+          "aria-label",
+          isOpenByDefault ? "收起本文目录" : "展开本文目录"
+        );
+      }
+
+      const onToggleClick = event => {
+        const button = event.currentTarget;
+        const drawer = button.closest("[data-toc-drawer]");
+        const nextOpen = drawer.dataset.tocOpen !== "true";
+        drawer.dataset.tocOpen = String(nextOpen);
+        button.setAttribute("aria-expanded", String(nextOpen));
+        button.setAttribute(
+          "aria-label",
+          nextOpen ? "收起本文目录" : "展开本文目录"
+        );
+        setDrawerPreference(String(nextOpen));
+      };
+
+      const toggles = drawers
+        .map(drawer => drawer.querySelector("[data-toc-toggle]"))
+        .filter(Boolean);
+      for (const toggle of toggles) {
+        toggle.addEventListener("click", onToggleClick);
+      }
+
+      let frame = 0;
+
+      function updateTocState() {
+        frame = 0;
+        const articleRect = article.getBoundingClientRect();
+        const articleTop = window.scrollY + articleRect.top;
+        const articleHeight = article.offsetHeight;
+        const readableHeight = Math.max(
+          1,
+          articleHeight - window.innerHeight * 0.55
+        );
+        const progress = clamp(
+          ((window.scrollY - articleTop + window.innerHeight * 0.2) /
+            readableHeight) *
+            100,
+          0,
+          100
+        );
+
+        const markerY =
+          window.scrollY + Math.min(window.innerHeight * 0.34, 240);
+        let activeId = headings[0].id;
+
+        for (const heading of headings) {
+          const headingTop =
+            window.scrollY + heading.getBoundingClientRect().top;
+          if (headingTop <= markerY) {
+            activeId = heading.id;
+          } else {
+            break;
+          }
+        }
+
+        for (const link of links) {
+          const isActive = link.dataset.tocTarget === activeId;
+          if (isActive) {
+            link.setAttribute("aria-current", "location");
+          } else {
+            link.removeAttribute("aria-current");
+          }
+        }
+
+        for (const drawer of drawers) {
+          const progressLabel = drawer.querySelector("[data-toc-progress]");
+          const meter = drawer.querySelector("[data-toc-meter]");
+          if (progressLabel)
+            progressLabel.textContent = `${Math.round(progress)}%`;
+          if (meter) meter.style.width = `${progress}%`;
+        }
+
+        const activeDrawerLink = document.querySelector(
+          '.article-toc-sidebar a[aria-current="location"]'
+        );
+        const activeDrawer = activeDrawerLink?.closest("[data-toc-drawer]");
+        if (activeDrawer?.dataset.tocOpen === "true") {
+          activeDrawerLink.scrollIntoView({
+            block: "nearest",
+            inline: "nearest",
+          });
+        }
+      }
+
+      function scheduleUpdate() {
+        if (frame) return;
+        frame = requestAnimationFrame(updateTocState);
+      }
+
+      updateTocState();
+      document.addEventListener("scroll", scheduleUpdate, { passive: true });
+      window.addEventListener("resize", scheduleUpdate);
+
+      window.__articleTocDrawerCleanup = () => {
+        if (frame) cancelAnimationFrame(frame);
+        document.removeEventListener("scroll", scheduleUpdate);
+        window.removeEventListener("resize", scheduleUpdate);
+        for (const toggle of toggles) {
+          toggle.removeEventListener("click", onToggleClick);
+        }
+      };
+    }
+
+    window.__initArticleTocDrawer = initArticleTocDrawer;
+    initArticleTocDrawer();
+  })();
+</script> </main> <footer class="observatory-footer app-layout mt-auto"> <div class="observatory-footer-grid"> <div class="observatory-footer-signoff"> <p class="observatory-footer-eyebrow">OBSERVATION LOG · 2026</p> <p>持续观察技术变化，也记录把它做成产品的全过程。</p> <div class="flex flex-wrap items-center gap-1"> <a href="https://github.com/Shiaoming123" title="世傲命的技术观测站 on Github" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21" /></svg> <span class="sr-only">世傲命的技术观测站 on Github</span>  </a><a href="mailto:2405360475@qq.com" title="Send an email to 世傲命的技术观测站" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><path d="m3 7 9 6 9-6" /></svg> <span class="sr-only">Send an email to 世傲命的技术观测站</span>  </a> </div> </div> <nav class="observatory-footer-navigation" aria-label="页脚导航"> <div> <p>观测入口</p> <ul> <li> <a href="/posts/">文章</a> </li><li> <a href="/learning/">学习</a> </li><li> <a href="/signals/">信号</a> </li><li> <a href="/projects/">作品</a> </li><li> <a href="/about/">关于</a> </li> </ul> </div> <div> <p>更多</p> <ul> <li> <a href="/bookmarks/">资源</a> </li><li> <a href="/arena/">榜单</a> </li><li> <a href="/taxonomy/">分类</a> </li><li> <a href="/archives/">归档</a> </li><li> <a href="/changelog/">日志</a> </li> </ul> </div> </nav> </div> <div class="observatory-footer-meta"> <span>© 2026 世傲命</span> <span>PERSONAL TECHNOLOGY OBSERVATORY · SIGNAL CONTINUES</span> </div> </footer>   <script type="module">function l(){const n=window;n.__scrollMotionCleanup?.();const i=document.documentElement,c=document.querySelector(".scroll-progress"),d=window.matchMedia("(prefers-reduced-motion: reduce)").matches;let t;const e=()=>{if(!c)return;const r=i.scrollHeight-window.innerHeight,o=r>0?window.scrollY/r:0;c.style.setProperty("--scroll-progress",Math.min(1,Math.max(0,o)).toString())};if(e(),window.addEventListener("scroll",e,{passive:!0}),window.addEventListener("resize",e),!d){i.classList.add("scroll-motion-ready");const r=document.querySelectorAll("[data-scroll-reveal]");t=new IntersectionObserver(o=>{o.forEach(s=>{s.isIntersecting&&(s.target.classList.add("is-visible"),t?.unobserve(s.target))})},{rootMargin:"0px 0px -12% 0px",threshold:.12}),r.forEach(o=>t?.observe(o))}n.__scrollMotionCleanup=()=>{window.removeEventListener("scroll",e),window.removeEventListener("resize",e),t?.disconnect()}}l();document.addEventListener("astro:after-swap",l);</script> <script type="module">const s="theme",a="light",c="dark";function m(e,t){return e??t??c}let u=c;function d({button:e,initialTheme:t,persist:r,reflect:n}){let o=t;n(o);const i=()=>{o=o===a?c:a,r(o),n(o)};return e?.addEventListener("click",i),{cleanup:()=>e?.removeEventListener("click",i)}}function h(e){const t=document.firstElementChild,r=document.querySelector("#theme-btn"),n=e===c;t?.setAttribute("data-theme",e),t?.classList.toggle("dark",n),r?.setAttribute("aria-label",n?"切换到浅色主题":"切换到深色主题"),r?.setAttribute("aria-pressed",String(n));const o=window.getComputedStyle(document.body).backgroundColor;document.querySelector("meta[name='theme-color']")?.setAttribute("content",o)}function l(){const e=window;e.__themeButtonCleanup?.();const t=document.querySelector("#theme-btn");u=m(localStorage.getItem(s),window.__theme?.value);const r=d({button:t,initialTheme:u,persist:n=>{u=n,localStorage.setItem(s,n)},reflect:h});e.__themeButtonCleanup=()=>{r.cleanup()}}typeof window<"u"&&(l(),document.addEventListener("astro:after-swap",l),document.addEventListener("astro:before-swap",e=>{window.__themeButtonCleanup?.();const t=document.querySelector("meta[name='theme-color']")?.getAttribute("content");t&&e.newDocument.querySelector("meta[name='theme-color']")?.setAttribute("content",t)}));</script> <script type="module" src="/_astro/Layout.astro_astro_type_script_index_2_lang.CaerEMJ9.js"></script> </body> </html>
