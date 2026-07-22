@@ -11,7 +11,7 @@
         // Expose value so theme.ts can skip re-detection.
         window.__theme = { value: theme };
       })();
-    </script><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CAqDO0tx.js"></script><link rel="stylesheet" href="/_astro/Footer.BiNdA1AI.css"><link rel="stylesheet" href="/_astro/agent-architecture-control.BJxUbbvg.css"></head> <body class="bg-background font-app text-foreground selection:bg-accent/75 selection:text-accent-foreground flex min-h-svh flex-col"> <div class="scroll-progress" aria-hidden="true"></div>  <a id="skip-to-content" href="#main-content" class="bg-background text-accent absolute inset-s-16 -top-full z-50 px-3 py-2 backdrop-blur-lg transition-all focus:top-4"> 跳到正文 </a> <header class="observatory-header"> <div class="observatory-header-bar"> <a href="/" class="observatory-brand" aria-label="世傲命的技术观测站，返回首页"> <span class="observatory-brand-mark" aria-hidden="true"> <span></span> </span> <span class="observatory-brand-copy"> <strong>世傲命的技术观测站</strong> <small>PERSONAL TECHNOLOGY OBSERVATORY</small> </span> </a> <nav class="observatory-navigation" aria-label="主导航"> <button id="menu-btn" class="focus-outline observatory-menu-button" aria-label="打开菜单" aria-expanded="false" aria-controls="menu-items" data-label-open="打开菜单" data-label-close="关闭菜单"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="hidden" viewBox="0 0 24 24" id="close-icon"><path stroke="none" d="M0 0h24v24H0z" /><path d="M18 6 6 18M6 6l12 12" /></svg> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon icon-tabler icons-tabler-outline icon-tabler-menu-deep" viewBox="0 0 24 24" id="menu-icon"><path stroke="none" d="M0 0h24v24H0z" /><path d="M4 6h16M7 12h13M10 18h10" /></svg> </button> <ul id="menu-items" class="observatory-nav-list hidden max-h-[calc(100svh-4.5rem)] overflow-y-auto lg:flex lg:overflow-visible"> <li class="observatory-nav-item"> <a href="/posts/"> 文章 </a> </li><li class="observatory-nav-item"> <a href="/learning/"> 学习 </a> </li><li class="observatory-nav-item"> <a href="/signals/"> 信号 </a> </li><li class="observatory-nav-item"> <a href="/projects/"> 作品 </a> </li><li class="observatory-nav-item"> <a href="/about/"> 关于 </a> </li> <li class="observatory-more-item"> <details id="navigation-more" class="observatory-more"> <summary> 更多 </summary> <ul aria-label="更多"> <li> <a href="/bookmarks/"> 资源 </a> </li><li> <a href="/arena/"> 榜单 </a> </li><li> <a href="/taxonomy/"> 分类 </a> </li><li> <a href="/archives/"> 归档 </a> </li><li> <a href="/changelog/"> 日志 </a> </li> </ul> </details> </li> <li class="observatory-tool-item"> <a href="/search/" title="搜索" aria-label="搜索"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon icon-tabler icons-tabler-outline icon-tabler-search" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 10a7 7 0 1 0 14 0 7 7 0 1 0-14 0M21 21l-6-6" /></svg> <span class="lg:sr-only">搜索</span> </a> </li> <li class="observatory-tool-item"> <button id="theme-btn" title="切换主题" aria-label="切换到深色主题" aria-live="polite"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M12 3h.393a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 2.992z" /></svg> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M14.828 14.828a4 4 0 1 0-5.656-5.656 4 4 0 0 0 5.656 5.656M6.343 17.657l-1.414 1.414M6.343 6.343 4.929 4.929M17.657 6.343l1.414-1.414M17.657 17.657l1.414 1.414M4 12H2M12 4V2M20 12h2M12 20v2" /></svg> <span class="lg:sr-only">切换主题</span> </button> </li> </ul> </nav> </div> </header> <script type="module">function v(){const a=window;a.__observatoryNavigationCleanup?.();const t=document.querySelector("#menu-btn"),n=document.querySelector("#menu-items"),i=document.querySelector("#menu-icon"),c=document.querySelector("#close-icon"),g=document.querySelector("#navigation-more");if(!t||!n||!i||!c)return;const L=t.dataset.labelOpen??"打开菜单",f=t.dataset.labelClose??"关闭菜单",o=()=>t.getAttribute("aria-expanded")==="true",s=(e,b=!1)=>{t.setAttribute("aria-expanded",String(e)),t.setAttribute("aria-label",e?f:L),n.classList.toggle("hidden",!e),n.classList.toggle("grid",e),i.classList.toggle("hidden",e),c.classList.toggle("hidden",!e),document.documentElement.classList.toggle("shell-menu-open",e),e||(g?.removeAttribute("open"),b&&t.focus())},r=()=>s(!o()),l=e=>{o()&&e.target.closest("a")&&s(!1)},d=e=>{e.key==="Escape"&&o()&&(e.preventDefault(),s(!1,!0))},u=e=>{e.matches&&o()&&s(!1)},m=window.matchMedia("(min-width: 64rem)");t.addEventListener("click",r),n.addEventListener("click",l),document.addEventListener("keydown",d),m.addEventListener("change",u),a.__observatoryNavigationCleanup=()=>{t.removeEventListener("click",r),n.removeEventListener("click",l),document.removeEventListener("keydown",d),m.removeEventListener("change",u),document.documentElement.classList.remove("shell-menu-open")}}v();document.addEventListener("astro:after-swap",v);document.addEventListener("astro:before-swap",()=>{window.__observatoryNavigationCleanup?.()});</script> <main id="main-content" class="research-workbench" data-pagefind-body data-pagefind-meta="contentType:研究"> <aside class="workbench-nav" aria-label="研究工作台目录"> <a class="workbench-brand" href="#summary" aria-label="回到研究摘要"> <span>Agent Systems Lab</span> <small>architecture study · 2026</small> </a> <ol> <li><a href="#summary"><span>01</span>研究摘要</a></li> <li><a href="#sources"><span>02</span>证据来源</a></li> <li><a href="#architectures"><span>03</span>架构链路</a></li> <li><a href="#hypotheses"><span>04</span>实验假设</a></li> <li><a href="#pilot-a"><span>05</span>Pilot A</a></li> <li><a href="#pilot-b"><span>06</span>Pilot B</a></li> <li><a href="#decision"><span>07</span>业务选型</a></li> <li><a href="#reproduce"><span>08</span>边界与复现</a></li> </ol> <p class="workbench-nav-note">
+    </script><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CAqDO0tx.js"></script><link rel="stylesheet" href="/_astro/Footer.BiNdA1AI.css"><link rel="stylesheet" href="/_astro/agent-architecture-control.DYhZRyi0.css"></head> <body class="bg-background font-app text-foreground selection:bg-accent/75 selection:text-accent-foreground flex min-h-svh flex-col"> <div class="scroll-progress" aria-hidden="true"></div>  <a id="skip-to-content" href="#main-content" class="bg-background text-accent absolute inset-s-16 -top-full z-50 px-3 py-2 backdrop-blur-lg transition-all focus:top-4"> 跳到正文 </a> <header class="observatory-header"> <div class="observatory-header-bar"> <a href="/" class="observatory-brand" aria-label="世傲命的技术观测站，返回首页"> <span class="observatory-brand-mark" aria-hidden="true"> <span></span> </span> <span class="observatory-brand-copy"> <strong>世傲命的技术观测站</strong> <small>PERSONAL TECHNOLOGY OBSERVATORY</small> </span> </a> <nav class="observatory-navigation" aria-label="主导航"> <button id="menu-btn" class="focus-outline observatory-menu-button" aria-label="打开菜单" aria-expanded="false" aria-controls="menu-items" data-label-open="打开菜单" data-label-close="关闭菜单"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="hidden" viewBox="0 0 24 24" id="close-icon"><path stroke="none" d="M0 0h24v24H0z" /><path d="M18 6 6 18M6 6l12 12" /></svg> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon icon-tabler icons-tabler-outline icon-tabler-menu-deep" viewBox="0 0 24 24" id="menu-icon"><path stroke="none" d="M0 0h24v24H0z" /><path d="M4 6h16M7 12h13M10 18h10" /></svg> </button> <ul id="menu-items" class="observatory-nav-list hidden max-h-[calc(100svh-4.5rem)] overflow-y-auto lg:flex lg:overflow-visible"> <li class="observatory-nav-item"> <a href="/posts/"> 文章 </a> </li><li class="observatory-nav-item"> <a href="/learning/"> 学习 </a> </li><li class="observatory-nav-item"> <a href="/signals/"> 信号 </a> </li><li class="observatory-nav-item"> <a href="/projects/"> 作品 </a> </li><li class="observatory-nav-item"> <a href="/about/"> 关于 </a> </li> <li class="observatory-more-item"> <details id="navigation-more" class="observatory-more"> <summary> 更多 </summary> <ul aria-label="更多"> <li> <a href="/bookmarks/"> 资源 </a> </li><li> <a href="/arena/"> 榜单 </a> </li><li> <a href="/taxonomy/"> 分类 </a> </li><li> <a href="/archives/"> 归档 </a> </li><li> <a href="/changelog/"> 日志 </a> </li> </ul> </details> </li> <li class="observatory-tool-item"> <a href="/search/" title="搜索" aria-label="搜索"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon icon-tabler icons-tabler-outline icon-tabler-search" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 10a7 7 0 1 0 14 0 7 7 0 1 0-14 0M21 21l-6-6" /></svg> <span class="lg:sr-only">搜索</span> </a> </li> <li class="observatory-tool-item"> <button id="theme-btn" title="切换主题" aria-label="切换到深色主题" aria-live="polite"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M12 3h.393a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 2.992z" /></svg> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M14.828 14.828a4 4 0 1 0-5.656-5.656 4 4 0 0 0 5.656 5.656M6.343 17.657l-1.414 1.414M6.343 6.343 4.929 4.929M17.657 6.343l1.414-1.414M17.657 17.657l1.414 1.414M4 12H2M12 4V2M20 12h2M12 20v2" /></svg> <span class="lg:sr-only">切换主题</span> </button> </li> </ul> </nav> </div> </header> <script type="module">function v(){const a=window;a.__observatoryNavigationCleanup?.();const t=document.querySelector("#menu-btn"),n=document.querySelector("#menu-items"),i=document.querySelector("#menu-icon"),c=document.querySelector("#close-icon"),g=document.querySelector("#navigation-more");if(!t||!n||!i||!c)return;const L=t.dataset.labelOpen??"打开菜单",f=t.dataset.labelClose??"关闭菜单",o=()=>t.getAttribute("aria-expanded")==="true",s=(e,b=!1)=>{t.setAttribute("aria-expanded",String(e)),t.setAttribute("aria-label",e?f:L),n.classList.toggle("hidden",!e),n.classList.toggle("grid",e),i.classList.toggle("hidden",e),c.classList.toggle("hidden",!e),document.documentElement.classList.toggle("shell-menu-open",e),e||(g?.removeAttribute("open"),b&&t.focus())},r=()=>s(!o()),l=e=>{o()&&e.target.closest("a")&&s(!1)},d=e=>{e.key==="Escape"&&o()&&(e.preventDefault(),s(!1,!0))},u=e=>{e.matches&&o()&&s(!1)},m=window.matchMedia("(min-width: 64rem)");t.addEventListener("click",r),n.addEventListener("click",l),document.addEventListener("keydown",d),m.addEventListener("change",u),a.__observatoryNavigationCleanup=()=>{t.removeEventListener("click",r),n.removeEventListener("click",l),document.removeEventListener("keydown",d),m.removeEventListener("change",u),document.documentElement.classList.remove("shell-menu-open")}}v();document.addEventListener("astro:after-swap",v);document.addEventListener("astro:before-swap",()=>{window.__observatoryNavigationCleanup?.()});</script> <main id="main-content" class="research-workbench" data-pagefind-body data-pagefind-meta="contentType:研究"> <aside class="workbench-nav" aria-label="研究工作台目录"> <a class="workbench-brand" href="#summary" aria-label="回到研究摘要"> <span>Agent Systems Lab</span> <small>architecture study · 2026</small> </a> <ol> <li><a href="#summary"><span>01</span>研究摘要</a></li> <li><a href="#sources"><span>02</span>证据来源</a></li> <li><a href="#architectures"><span>03</span>架构链路</a></li> <li><a href="#case-replay"><span>03A</span>真实回放</a></li> <li><a href="#hypotheses"><span>04</span>实验假设</a></li> <li><a href="#pilot-a"><span>05</span>Pilot A</a></li> <li><a href="#pilot-b"><span>06</span>Pilot B</a></li> <li><a href="#decision"><span>07</span>业务选型</a></li> <li><a href="#reproduce"><span>08</span>边界与复现</a></li> </ol> <p class="workbench-nav-note">
 研究对象是控制架构，不是 Manus、Genspark 或任何产品排行榜。
 </p> </aside> <div class="workbench-main"> <section id="summary" class="research-hero" aria-labelledby="research-title"> <div class="hero-kicker" data-reveal> <span>Agent architecture mechanism study</span> <span class="evidence-tag evidence-tag--experiment">两组正式实验</span> </div> <h1 id="research-title" data-reveal>
 同一模型，为什么会跑出完全不同的 Agent？
@@ -35,7 +35,1220 @@ V4 Flash<small>thinking off · temperature 0</small> </dd> </div> </dl> <div cla
 </h2> <p>
 Pilot A 比较开放式执行与工作流受控执行；Pilot B
             比较开放式执行与目标图混合执行。三种架构不是同场比较，任务和工具只在各自的配对实验内保持一致。
-</p> </header> <dl class="shared-base" aria-label="两组配对实验的控制变量"> <div><dt>跨 Pilot 相同</dt><dd>deepseek-v4-flash</dd></div> <div><dt>各 Pilot 内相同</dt><dd>冻结实例与提示</dd></div> <div><dt>各 Pilot 内相同</dt><dd>工具入口与错误结构</dd></div> <div><dt>各实例内相同</dt><dd>只检查最终结果</dd></div> <div><dt>统一记录</dt><dd>调用、tokens、时间、轨迹</dd></div> </dl> <div class="architecture-switcher" role="tablist" aria-label="选择架构查看链路"> <button type="button" role="tab" aria-selected="true" aria-controls="architecture-react" id="architecture-tab-react" data-architecture-tab="react"> <span>A</span> 开放式执行 </button><button type="button" role="tab" aria-selected="false" aria-controls="architecture-controlled" id="architecture-tab-controlled" data-architecture-tab="controlled"> <span>B</span> 工作流受控执行 </button><button type="button" role="tab" aria-selected="false" aria-controls="architecture-hybrid" id="architecture-tab-hybrid" data-architecture-tab="hybrid"> <span>C</span> 目标图混合执行 </button> </div> <div class="architecture-panels"> <article id="architecture-react" class="architecture-panel" role="tabpanel" aria-labelledby="architecture-tab-react" data-architecture-panel="react"> <header> <p>Contracted ReAct</p> <h3>开放式执行</h3> <span>模型依据完整记录，自行决定下一步、恢复方式和停止时机。</span> </header> <ol class="architecture-flow" aria-label="开放式执行执行顺序"> <li data-flow-node> <span>01</span> <b>读取任务与记录</b> </li><li data-flow-node> <span>02</span> <b>选择工具与参数</b> </li><li data-flow-node> <span>03</span> <b>接收环境结果</b> </li><li data-flow-node> <span>04</span> <b>继续或停止</b> </li> </ol> <p class="architecture-fit"> <b>可优先验证：</b> 路径未知、探索空间大、错误成本可控 </p> </article><article id="architecture-controlled" class="architecture-panel" role="tabpanel" aria-labelledby="architecture-tab-controlled" hidden data-architecture-panel="controlled"> <header> <p>Workflow Controlled</p> <h3>工作流受控执行</h3> <span>程序维护状态和合法动作，模型只在当前允许范围内判断。</span> </header> <ol class="architecture-flow" aria-label="工作流受控执行执行顺序"> <li data-flow-node> <span>01</span> <b>读取任务状态</b> </li><li data-flow-node> <span>02</span> <b>开放合法动作</b> </li><li data-flow-node> <span>03</span> <b>按错误类型恢复</b> </li><li data-flow-node> <span>04</span> <b>代码验收后停止</b> </li> </ol> <p class="architecture-fit"> <b>可优先验证：</b> 规则清楚、顺序严格、失败代价较高 </p> </article><article id="architecture-hybrid" class="architecture-panel" role="tabpanel" aria-labelledby="architecture-tab-hybrid" hidden data-architecture-panel="hybrid"> <header> <p>Goal-Graph Hybrid</p> <h3>目标图混合执行</h3> <span>程序维护目标依赖与证据状态，模型在多条合法路径之间选择。</span> </header> <ol class="architecture-flow" aria-label="目标图混合执行执行顺序"> <li data-flow-node> <span>01</span> <b>拆成目标节点</b> </li><li data-flow-node> <span>02</span> <b>释放可执行分支</b> </li><li data-flow-node> <span>03</span> <b>汇总证据状态</b> </li><li data-flow-node> <span>04</span> <b>合并并验收</b> </li> </ol> <p class="architecture-fit"> <b>可优先验证：</b> 子目标可并行、路径不止一条、仍需可控边界 </p> </article> </div> <figure class="publication-figure"> <picture> <source media="(max-width: 46rem)" srcset="/research/agent-architecture/figures/architecture-flows-mobile.svg"> <img src="/research/agent-architecture/figures/architecture-flows.svg" alt="共享底座下开放式执行、工作流受控执行与目标图混合执行的架构链路" loading="lazy"> </picture> <figcaption> <div><b>比较什么</b><span>三种控制回路如何决定下一步。</span></div> <div> <b>怎样读</b><span>先分清 Pilot A 与 B，再看各自的控制回路。</span> </div> <div> <b>不能推出</b><span>架构层次更多，不代表效果自然更好。</span> </div> </figcaption> <p class="figure-links"> <a href="/research/agent-architecture/figures/architecture-flows.svg">SVG</a><a href="/research/agent-architecture/figures/architecture-flows.pdf">PDF</a> </p> </figure> </section> <section id="hypotheses" class="research-section" aria-labelledby="hypotheses-title"> <header class="section-heading"> <p>04 · From mechanism to test</p> <h2 id="hypotheses-title">
+</p> </header> <dl class="shared-base" aria-label="两组配对实验的控制变量"> <div><dt>跨 Pilot 相同</dt><dd>deepseek-v4-flash</dd></div> <div><dt>各 Pilot 内相同</dt><dd>冻结实例与提示</dd></div> <div><dt>各 Pilot 内相同</dt><dd>工具入口与错误结构</dd></div> <div><dt>各实例内相同</dt><dd>只检查最终结果</dd></div> <div><dt>统一记录</dt><dd>调用、tokens、时间、轨迹</dd></div> </dl> <div class="architecture-switcher" role="tablist" aria-label="选择架构查看链路"> <button type="button" role="tab" aria-selected="true" aria-controls="architecture-react" id="architecture-tab-react" data-architecture-tab="react"> <span>A</span> 开放式执行 </button><button type="button" role="tab" aria-selected="false" aria-controls="architecture-controlled" id="architecture-tab-controlled" data-architecture-tab="controlled"> <span>B</span> 工作流受控执行 </button><button type="button" role="tab" aria-selected="false" aria-controls="architecture-hybrid" id="architecture-tab-hybrid" data-architecture-tab="hybrid"> <span>C</span> 目标图混合执行 </button> </div> <div class="architecture-panels"> <article id="architecture-react" class="architecture-panel" role="tabpanel" aria-labelledby="architecture-tab-react" data-architecture-panel="react"> <header> <p>Contracted ReAct</p> <h3>开放式执行</h3> <span>模型依据完整记录，自行决定下一步、恢复方式和停止时机。</span> </header> <ol class="architecture-flow" aria-label="开放式执行执行顺序"> <li data-flow-node> <span>01</span> <b>读取任务与记录</b> </li><li data-flow-node> <span>02</span> <b>选择工具与参数</b> </li><li data-flow-node> <span>03</span> <b>接收环境结果</b> </li><li data-flow-node> <span>04</span> <b>继续或停止</b> </li> </ol> <p class="architecture-fit"> <b>可优先验证：</b> 路径未知、探索空间大、错误成本可控 </p> </article><article id="architecture-controlled" class="architecture-panel" role="tabpanel" aria-labelledby="architecture-tab-controlled" hidden data-architecture-panel="controlled"> <header> <p>Workflow Controlled</p> <h3>工作流受控执行</h3> <span>程序维护状态和合法动作，模型只在当前允许范围内判断。</span> </header> <ol class="architecture-flow" aria-label="工作流受控执行执行顺序"> <li data-flow-node> <span>01</span> <b>读取任务状态</b> </li><li data-flow-node> <span>02</span> <b>开放合法动作</b> </li><li data-flow-node> <span>03</span> <b>按错误类型恢复</b> </li><li data-flow-node> <span>04</span> <b>代码验收后停止</b> </li> </ol> <p class="architecture-fit"> <b>可优先验证：</b> 规则清楚、顺序严格、失败代价较高 </p> </article><article id="architecture-hybrid" class="architecture-panel" role="tabpanel" aria-labelledby="architecture-tab-hybrid" hidden data-architecture-panel="hybrid"> <header> <p>Goal-Graph Hybrid</p> <h3>目标图混合执行</h3> <span>程序维护目标依赖与证据状态，模型在多条合法路径之间选择。</span> </header> <ol class="architecture-flow" aria-label="目标图混合执行执行顺序"> <li data-flow-node> <span>01</span> <b>拆成目标节点</b> </li><li data-flow-node> <span>02</span> <b>释放可执行分支</b> </li><li data-flow-node> <span>03</span> <b>汇总证据状态</b> </li><li data-flow-node> <span>04</span> <b>合并并验收</b> </li> </ol> <p class="architecture-fit"> <b>可优先验证：</b> 子目标可并行、路径不止一条、仍需可控边界 </p> </article> </div> <figure class="publication-figure"> <picture> <source media="(max-width: 46rem)" srcset="/research/agent-architecture/figures/architecture-flows-mobile.svg"> <img src="/research/agent-architecture/figures/architecture-flows.svg" alt="共享底座下开放式执行、工作流受控执行与目标图混合执行的架构链路" loading="lazy"> </picture> <figcaption> <div><b>比较什么</b><span>三种控制回路如何决定下一步。</span></div> <div> <b>怎样读</b><span>先分清 Pilot A 与 B，再看各自的控制回路。</span> </div> <div> <b>不能推出</b><span>架构层次更多，不代表效果自然更好。</span> </div> </figcaption> <p class="figure-links"> <a href="/research/agent-architecture/figures/architecture-flows.svg">SVG</a><a href="/research/agent-architecture/figures/architecture-flows.pdf">PDF</a> </p> </figure> </section> <section id="case-replay" class="research-section case-replay" aria-labelledby="case-replay-title" data-case-replay> <header class="section-heading"> <p>REAL TRACE · 完成实验记录回放</p> <h2 id="case-replay-title">同一输入进入两套架构后，信息怎样流动？</h2> <p>
+这里播放的是已经完成的实验记录，不会在浏览器里重新调用模型，也不展示隐藏推理。
+</p> <p class="replay-downloads"> <a href="/research/agent-architecture/case-replays/case-replays.json" download>下载公开回放数据</a> <span aria-hidden="true">·</span> <a href="/research/agent-architecture/case-replays/manifest.json" download>下载哈希清单</a> </p> </header> <script type="application/json" data-replay-payload>[{"id":"procurement-rate-limit-01","title":"采购限流恢复","divergence":8,"architectures":[{"name":"开放式执行","events":[{"visible_state":{"advanced_units":0,"evidence_sources":0,"finished":false,"last_error":"none","read_inputs":["requirements.md"],"resources_discovered":false,"written_outputs":[]},"allowed_tools":["fetch_resource","finish","list_resources","read_file","wait_or_advance","write_output"],"action_public":{"path":"requirements.md","tool":"read_file"},"actionLabel":"读取附件","observation_public":{"error_code":"none","fact_count":2,"ok":true,"retry_after_units":null,"state_changed":false,"status_code":200},"state_delta":{"last_error":"none","read_inputs":["requirements.md"]},"evidence_delta":{"fact_count":2,"source_added":"obs-001"},"verification_state":"pending","disposition":"gateway_success","prompt_sha256":"08d5d092624b629c5062531c5262d5c9772a26b5c692763526521eb4cf6a85e8","response_sha256":"5450adad906e1fc405387273bdaea95b942b399de7c7d6535239fb4e1e325cf1","cumulative_usage":{"completion_tokens":25,"latency_seconds":0.6653101998381317,"model_calls":1,"prompt_tokens":581,"tool_calls":1,"total_tokens":606},"teaching":"读取一份冻结附件，并把事实加入当前记录。"},{"visible_state":{"advanced_units":0,"evidence_sources":0,"finished":false,"last_error":"none","read_inputs":["requirements.md","vendors.csv"],"resources_discovered":false,"written_outputs":[]},"allowed_tools":["fetch_resource","finish","list_resources","read_file","wait_or_advance","write_output"],"action_public":{"path":"vendors.csv","tool":"read_file"},"actionLabel":"读取附件","observation_public":{"error_code":"none","fact_count":2,"ok":true,"retry_after_units":null,"state_changed":false,"status_code":200},"state_delta":{"read_inputs":["requirements.md","vendors.csv"]},"evidence_delta":{"fact_count":2,"source_added":"obs-002"},"verification_state":"pending","disposition":"gateway_success","prompt_sha256":"02b7f38b1aea138b1d40d1b564cd7f13527ea2c71de2ed8f8de8fd5d5851dee8","response_sha256":"f21406f40770378c3406b85cb47274d470944318b4724385e03f30ca969515f0","cumulative_usage":{"completion_tokens":51,"latency_seconds":1.4681474997196347,"model_calls":2,"prompt_tokens":1386,"tool_calls":2,"total_tokens":1437},"teaching":"读取一份冻结附件，并把事实加入当前记录。"},{"visible_state":{"advanced_units":0,"evidence_sources":0,"finished":false,"last_error":"none","read_inputs":["amendments.csv","requirements.md","vendors.csv"],"resources_discovered":false,"written_outputs":[]},"allowed_tools":["fetch_resource","finish","list_resources","read_file","wait_or_advance","write_output"],"action_public":{"path":"amendments.csv","tool":"read_file"},"actionLabel":"读取附件","observation_public":{"error_code":"none","fact_count":2,"ok":true,"retry_after_units":null,"state_changed":false,"status_code":200},"state_delta":{"read_inputs":["amendments.csv","requirements.md","vendors.csv"]},"evidence_delta":{"fact_count":2,"source_added":"obs-003"},"verification_state":"pending","disposition":"gateway_success","prompt_sha256":"9b4dadbd7ed03c5af0f195d83bd4b2f1742b1cce5b9a4f7387995351faa42df0","response_sha256":"d067ae982a31bad827bf82cd134a445b9ae4a03fe88ec8519f44687e0e4a55f2","cumulative_usage":{"completion_tokens":77,"latency_seconds":2.2138722997624427,"model_calls":3,"prompt_tokens":2364,"tool_calls":3,"total_tokens":2441},"teaching":"读取一份冻结附件，并把事实加入当前记录。"},{"visible_state":{"advanced_units":0,"evidence_sources":0,"finished":false,"last_error":"none","read_inputs":["amendments.csv","requirements.md","vendors.csv"],"resources_discovered":true,"written_outputs":[]},"allowed_tools":["fetch_resource","finish","list_resources","read_file","wait_or_advance","write_output"],"action_public":{"tool":"list_resources"},"actionLabel":"列出远程资源","observation_public":{"error_code":"none","fact_count":2,"ok":true,"retry_after_units":null,"state_changed":false,"status_code":200},"state_delta":{"resources_discovered":true},"evidence_delta":{"fact_count":2,"source_added":null},"verification_state":"pending","disposition":"gateway_success","prompt_sha256":"4a60d51886ae2dea7613bfe2b98d6880ac55f6e9060bf5d7a99e3874fb000877","response_sha256":"8c1f7807d75674801ae1cb7c83ea44947ba6e7e852ff95dc1fa5eef723c13f2b","cumulative_usage":{"completion_tokens":93,"latency_seconds":2.912294999929145,"model_calls":4,"prompt_tokens":3466,"tool_calls":4,"total_tokens":3559},"teaching":"确认当前有哪些远程资源可以使用。"},{"visible_state":{"advanced_units":0,"evidence_sources":0,"finished":false,"last_error":"rate_limited","read_inputs":["amendments.csv","requirements.md","vendors.csv"],"resources_discovered":true,"written_outputs":[]},"allowed_tools":["fetch_resource","finish","list_resources","read_file","wait_or_advance","write_output"],"action_public":{"resource":"live_quote","token_present":false,"tool":"fetch_resource"},"actionLabel":"获取远程资源","observation_public":{"error_code":"rate_limited","fact_count":1,"ok":false,"retry_after_units":1,"state_changed":false,"status_code":429},"state_delta":{"last_error":"rate_limited"},"evidence_delta":{"fact_count":1,"source_added":null},"verification_state":"pending","disposition":"tool_error","prompt_sha256":"ad823b83d133c129db746da039733a1cc9a1736afc97159f4e7cd20c4d49573a","response_sha256":"19be750544a754cf6233e2d1d1c9a104edfb7acabcf4523f65dc92c0518716fa","cumulative_usage":{"completion_tokens":119,"latency_seconds":3.6499706998001784,"model_calls":5,"prompt_tokens":4658,"tool_calls":5,"total_tokens":4777},"teaching":"工具返回 rate_limited，Agent 需要决定如何恢复。"},{"visible_state":{"advanced_units":1,"evidence_sources":0,"finished":false,"last_error":"none","read_inputs":["amendments.csv","requirements.md","vendors.csv"],"resources_discovered":true,"written_outputs":[]},"allowed_tools":["fetch_resource","finish","list_resources","read_file","wait_or_advance","write_output"],"action_public":{"tool":"wait_or_advance","units":1},"actionLabel":"等待后重试","observation_public":{"error_code":"none","fact_count":2,"ok":true,"retry_after_units":null,"state_changed":true,"status_code":200},"state_delta":{"advanced_units":1,"last_error":"none"},"evidence_delta":{"fact_count":2,"source_added":null},"verification_state":"pending","disposition":"gateway_success","prompt_sha256":"8e457624e2974e51c3a17ba8ea386bce119403cd8d450b0844b8ee9ce64cb031","response_sha256":"5bb6367f83413e2ed9f337d71168af8bc70ae886f02bf1ccde80d781afb26567","cumulative_usage":{"completion_tokens":146,"latency_seconds":4.48668639967218,"model_calls":6,"prompt_tokens":5948,"tool_calls":6,"total_tokens":6094},"teaching":"遵守限流反馈，等待后再继续。"},{"visible_state":{"advanced_units":1,"evidence_sources":1,"finished":false,"last_error":"none","read_inputs":["amendments.csv","requirements.md","vendors.csv"],"resources_discovered":true,"written_outputs":[]},"allowed_tools":["fetch_resource","finish","list_resources","read_file","wait_or_advance","write_output"],"action_public":{"resource":"live_quote","token_present":false,"tool":"fetch_resource"},"actionLabel":"获取远程资源","observation_public":{"error_code":"none","fact_count":5,"ok":true,"retry_after_units":null,"state_changed":true,"status_code":200},"state_delta":{"evidence_sources":1},"evidence_delta":{"fact_count":5,"source_added":"obs-007"},"verification_state":"pending","disposition":"gateway_success","prompt_sha256":"b3b6a4b88974f8157f14a628f1786bae32972623ac4eb695710e4ecfc37487bf","response_sha256":"19be750544a754cf6233e2d1d1c9a104edfb7acabcf4523f65dc92c0518716fa","cumulative_usage":{"completion_tokens":172,"latency_seconds":5.20340839959681,"model_calls":7,"prompt_tokens":7342,"tool_calls":7,"total_tokens":7514},"teaching":"请求远程证据，并根据返回结果更新任务状态。"},{"visible_state":{"advanced_units":1,"evidence_sources":2,"finished":false,"last_error":"none","read_inputs":["amendments.csv","requirements.md","vendors.csv"],"resources_discovered":true,"written_outputs":[]},"allowed_tools":["fetch_resource","finish","list_resources","read_file","wait_or_advance","write_output"],"action_public":{"resource":"live_quote","token_present":false,"tool":"fetch_resource"},"actionLabel":"获取远程资源","observation_public":{"error_code":"none","fact_count":5,"ok":true,"retry_after_units":null,"state_changed":true,"status_code":200},"state_delta":{"evidence_sources":2},"evidence_delta":{"fact_count":5,"source_added":"obs-008"},"verification_state":"pending","disposition":"gateway_success","prompt_sha256":"dcf28f0224ec01c35f7475c63adcb7140e76b73b24d5c0d0626f336e49bf4ba0","response_sha256":"19be750544a754cf6233e2d1d1c9a104edfb7acabcf4523f65dc92c0518716fa","cumulative_usage":{"completion_tokens":198,"latency_seconds":5.898050799733028,"model_calls":8,"prompt_tokens":8859,"tool_calls":8,"total_tokens":9057},"teaching":"请求远程证据，并根据返回结果更新任务状态。"},{"visible_state":{"advanced_units":1,"evidence_sources":3,"finished":false,"last_error":"none","read_inputs":["amendments.csv","requirements.md","vendors.csv"],"resources_discovered":true,"written_outputs":[]},"allowed_tools":["fetch_resource","finish","list_resources","read_file","wait_or_advance","write_output"],"action_public":{"resource":"live_quote","token_present":false,"tool":"fetch_resource"},"actionLabel":"获取远程资源","observation_public":{"error_code":"none","fact_count":5,"ok":true,"retry_after_units":null,"state_changed":true,"status_code":200},"state_delta":{"evidence_sources":3},"evidence_delta":{"fact_count":5,"source_added":"obs-009"},"verification_state":"pending","disposition":"gateway_success","prompt_sha256":"e349e5b3e4d29d24ddd9255b71da0079c411e6966f47baf5b5787e24000009c7","response_sha256":"19be750544a754cf6233e2d1d1c9a104edfb7acabcf4523f65dc92c0518716fa","cumulative_usage":{"completion_tokens":224,"latency_seconds":6.59980299975723,"model_calls":9,"prompt_tokens":10499,"tool_calls":9,"total_tokens":10723},"teaching":"请求远程证据，并根据返回结果更新任务状态。"},{"visible_state":{"advanced_units":1,"evidence_sources":4,"finished":false,"last_error":"none","read_inputs":["amendments.csv","requirements.md","vendors.csv"],"resources_discovered":true,"written_outputs":[]},"allowed_tools":["fetch_resource","finish","list_resources","read_file","wait_or_advance","write_output"],"action_public":{"resource":"live_quote","token_present":false,"tool":"fetch_resource"},"actionLabel":"获取远程资源","observation_public":{"error_code":"none","fact_count":5,"ok":true,"retry_after_units":null,"state_changed":true,"status_code":200},"state_delta":{"evidence_sources":4},"evidence_delta":{"fact_count":5,"source_added":"obs-010"},"verification_state":"pending","disposition":"gateway_success","prompt_sha256":"384e8b47595cb10f1ff88f8f83c8d8897e80338655dae6f4ba91438b740008ba","response_sha256":"19be750544a754cf6233e2d1d1c9a104edfb7acabcf4523f65dc92c0518716fa","cumulative_usage":{"completion_tokens":250,"latency_seconds":7.3855902997311205,"model_calls":10,"prompt_tokens":12262,"tool_calls":10,"total_tokens":12512},"teaching":"请求远程证据，并根据返回结果更新任务状态。"},{"visible_state":{"advanced_units":1,"evidence_sources":5,"finished":false,"last_error":"none","read_inputs":["amendments.csv","requirements.md","vendors.csv"],"resources_discovered":true,"written_outputs":[]},"allowed_tools":["fetch_resource","finish","list_resources","read_file","wait_or_advance","write_output"],"action_public":{"resource":"live_quote","token_present":false,"tool":"fetch_resource"},"actionLabel":"获取远程资源","observation_public":{"error_code":"none","fact_count":5,"ok":true,"retry_after_units":null,"state_changed":true,"status_code":200},"state_delta":{"evidence_sources":5},"evidence_delta":{"fact_count":5,"source_added":"obs-011"},"verification_state":"pending","disposition":"gateway_success","prompt_sha256":"a1a671a287d0adbc1f2bb442ac40d5b3579f62b56aa4c1114ea8a380d060e578","response_sha256":"19be750544a754cf6233e2d1d1c9a104edfb7acabcf4523f65dc92c0518716fa","cumulative_usage":{"completion_tokens":276,"latency_seconds":8.113490599906072,"model_calls":11,"prompt_tokens":14148,"tool_calls":11,"total_tokens":14424},"teaching":"请求远程证据，并根据返回结果更新任务状态。"},{"visible_state":{"advanced_units":1,"evidence_sources":6,"finished":false,"last_error":"none","read_inputs":["amendments.csv","requirements.md","vendors.csv"],"resources_discovered":true,"written_outputs":[]},"allowed_tools":["fetch_resource","finish","list_resources","read_file","wait_or_advance","write_output"],"action_public":{"resource":"live_quote","token_present":false,"tool":"fetch_resource"},"actionLabel":"获取远程资源","observation_public":{"error_code":"none","fact_count":5,"ok":true,"retry_after_units":null,"state_changed":true,"status_code":200},"state_delta":{"evidence_sources":6},"evidence_delta":{"fact_count":5,"source_added":"obs-012"},"verification_state":"pending","disposition":"gateway_success","prompt_sha256":"adec8785e6fa542d6c6cc7c97980c3dbd6e5944878d8e775f6adb017b4da7855","response_sha256":"19be750544a754cf6233e2d1d1c9a104edfb7acabcf4523f65dc92c0518716fa","cumulative_usage":{"completion_tokens":302,"latency_seconds":8.8702833999414,"model_calls":12,"prompt_tokens":16157,"tool_calls":12,"total_tokens":16459},"teaching":"请求远程证据，并根据返回结果更新任务状态。"},{"visible_state":{"advanced_units":1,"evidence_sources":7,"finished":false,"last_error":"none","read_inputs":["amendments.csv","requirements.md","vendors.csv"],"resources_discovered":true,"written_outputs":[]},"allowed_tools":["fetch_resource","finish","list_resources","read_file","wait_or_advance","write_output"],"action_public":{"resource":"live_quote","token_present":false,"tool":"fetch_resource"},"actionLabel":"获取远程资源","observation_public":{"error_code":"none","fact_count":5,"ok":true,"retry_after_units":null,"state_changed":true,"status_code":200},"state_delta":{"evidence_sources":7},"evidence_delta":{"fact_count":5,"source_added":"obs-013"},"verification_state":"pending","disposition":"gateway_success","prompt_sha256":"a313ccc07bfa6be59389a4d62790e1c032f057e47c69f7804dde63450bdeecce","response_sha256":"19be750544a754cf6233e2d1d1c9a104edfb7acabcf4523f65dc92c0518716fa","cumulative_usage":{"completion_tokens":328,"latency_seconds":9.77868859982118,"model_calls":13,"prompt_tokens":18289,"tool_calls":13,"total_tokens":18617},"teaching":"请求远程证据，并根据返回结果更新任务状态。"},{"visible_state":{"advanced_units":1,"evidence_sources":8,"finished":false,"last_error":"none","read_inputs":["amendments.csv","requirements.md","vendors.csv"],"resources_discovered":true,"written_outputs":[]},"allowed_tools":["fetch_resource","finish","list_resources","read_file","wait_or_advance","write_output"],"action_public":{"resource":"live_quote","token_present":false,"tool":"fetch_resource"},"actionLabel":"获取远程资源","observation_public":{"error_code":"none","fact_count":5,"ok":true,"retry_after_units":null,"state_changed":true,"status_code":200},"state_delta":{"evidence_sources":8},"evidence_delta":{"fact_count":5,"source_added":"obs-014"},"verification_state":"pending","disposition":"gateway_success","prompt_sha256":"2f6a97983584ed64ac6caa3c68b6263d980fd829a7c336ba34433adf55a6ff12","response_sha256":"19be750544a754cf6233e2d1d1c9a104edfb7acabcf4523f65dc92c0518716fa","cumulative_usage":{"completion_tokens":354,"latency_seconds":10.572679699864239,"model_calls":14,"prompt_tokens":20544,"tool_calls":14,"total_tokens":20898},"teaching":"请求远程证据，并根据返回结果更新任务状态。"},{"visible_state":{"advanced_units":1,"evidence_sources":9,"finished":false,"last_error":"none","read_inputs":["amendments.csv","requirements.md","vendors.csv"],"resources_discovered":true,"written_outputs":[]},"allowed_tools":["fetch_resource","finish","list_resources","read_file","wait_or_advance","write_output"],"action_public":{"resource":"live_quote","token_present":false,"tool":"fetch_resource"},"actionLabel":"获取远程资源","observation_public":{"error_code":"none","fact_count":5,"ok":true,"retry_after_units":null,"state_changed":true,"status_code":200},"state_delta":{"evidence_sources":9},"evidence_delta":{"fact_count":5,"source_added":"obs-015"},"verification_state":"pending","disposition":"gateway_success","prompt_sha256":"63be5f8f6216864764df0485985ca54f78176c36a7b497932adaa8d8cb976404","response_sha256":"19be750544a754cf6233e2d1d1c9a104edfb7acabcf4523f65dc92c0518716fa","cumulative_usage":{"completion_tokens":380,"latency_seconds":11.579461499815807,"model_calls":15,"prompt_tokens":22922,"tool_calls":15,"total_tokens":23302},"teaching":"请求远程证据，并根据返回结果更新任务状态。"},{"visible_state":{"advanced_units":1,"evidence_sources":10,"finished":false,"last_error":"none","read_inputs":["amendments.csv","requirements.md","vendors.csv"],"resources_discovered":true,"written_outputs":[]},"allowed_tools":["fetch_resource","finish","list_resources","read_file","wait_or_advance","write_output"],"action_public":{"resource":"live_quote","token_present":false,"tool":"fetch_resource"},"actionLabel":"获取远程资源","observation_public":{"error_code":"none","fact_count":5,"ok":true,"retry_after_units":null,"state_changed":true,"status_code":200},"state_delta":{"evidence_sources":10},"evidence_delta":{"fact_count":5,"source_added":"obs-016"},"verification_state":"failed","disposition":"gateway_success","prompt_sha256":"0766ba3ea78a0b00bd1564581b27f93562b97128f8a174f429d48f4b6e97b416","response_sha256":"19be750544a754cf6233e2d1d1c9a104edfb7acabcf4523f65dc92c0518716fa","cumulative_usage":{"completion_tokens":406,"latency_seconds":12.545160599751398,"model_calls":16,"prompt_tokens":25423,"tool_calls":16,"total_tokens":25829},"teaching":"请求远程证据，并根据返回结果更新任务状态。"}]},{"name":"工作流受控执行","events":[{"visible_state":{"advanced_units":0,"evidence_sources":0,"finished":false,"last_error":"none","read_inputs":["requirements.md"],"resources_discovered":false,"written_outputs":[]},"allowed_tools":["list_resources","read_file"],"action_public":{"path":"requirements.md","tool":"read_file"},"actionLabel":"读取附件","observation_public":{"error_code":"none","fact_count":2,"ok":true,"retry_after_units":null,"state_changed":false,"status_code":200},"state_delta":{"last_error":"none","read_inputs":["requirements.md"]},"evidence_delta":{"fact_count":2,"source_added":"obs-001"},"verification_state":"pending","disposition":"gateway_success","prompt_sha256":"cd07c7e89a36fad19c441eb8b9e27a6cb032708385d07143c94b0ac71ef4ca0f","response_sha256":"5450adad906e1fc405387273bdaea95b942b399de7c7d6535239fb4e1e325cf1","cumulative_usage":{"completion_tokens":25,"latency_seconds":0.9422581999097019,"model_calls":1,"prompt_tokens":700,"tool_calls":1,"total_tokens":725},"teaching":"读取一份冻结附件，并把事实加入当前记录。"},{"visible_state":{"advanced_units":0,"evidence_sources":0,"finished":false,"last_error":"none","read_inputs":["requirements.md","vendors.csv"],"resources_discovered":false,"written_outputs":[]},"allowed_tools":["list_resources","read_file"],"action_public":{"path":"vendors.csv","tool":"read_file"},"actionLabel":"读取附件","observation_public":{"error_code":"none","fact_count":2,"ok":true,"retry_after_units":null,"state_changed":false,"status_code":200},"state_delta":{"read_inputs":["requirements.md","vendors.csv"]},"evidence_delta":{"fact_count":2,"source_added":"obs-002"},"verification_state":"pending","disposition":"gateway_success","prompt_sha256":"32b1ca3ce54b11d31d4ebdff15f592c79b3fc68c38a03aa198e378fcc2e69484","response_sha256":"f21406f40770378c3406b85cb47274d470944318b4724385e03f30ca969515f0","cumulative_usage":{"completion_tokens":51,"latency_seconds":2.0417146999388933,"model_calls":2,"prompt_tokens":1548,"tool_calls":2,"total_tokens":1599},"teaching":"读取一份冻结附件，并把事实加入当前记录。"},{"visible_state":{"advanced_units":0,"evidence_sources":0,"finished":false,"last_error":"none","read_inputs":["amendments.csv","requirements.md","vendors.csv"],"resources_discovered":false,"written_outputs":[]},"allowed_tools":["list_resources","read_file"],"action_public":{"path":"amendments.csv","tool":"read_file"},"actionLabel":"读取附件","observation_public":{"error_code":"none","fact_count":2,"ok":true,"retry_after_units":null,"state_changed":false,"status_code":200},"state_delta":{"read_inputs":["amendments.csv","requirements.md","vendors.csv"]},"evidence_delta":{"fact_count":2,"source_added":"obs-003"},"verification_state":"pending","disposition":"gateway_success","prompt_sha256":"d94fd2650f74e62aff89cc5ada3dc2c7a869fca8f182dd4e2b89d71a4d7d257c","response_sha256":"d067ae982a31bad827bf82cd134a445b9ae4a03fe88ec8519f44687e0e4a55f2","cumulative_usage":{"completion_tokens":77,"latency_seconds":2.9114109999500215,"model_calls":3,"prompt_tokens":2492,"tool_calls":3,"total_tokens":2569},"teaching":"读取一份冻结附件，并把事实加入当前记录。"},{"visible_state":{"advanced_units":0,"evidence_sources":0,"finished":false,"last_error":"none","read_inputs":["amendments.csv","requirements.md","vendors.csv"],"resources_discovered":true,"written_outputs":[]},"allowed_tools":["fetch_resource","list_resources"],"action_public":{"tool":"list_resources"},"actionLabel":"列出远程资源","observation_public":{"error_code":"none","fact_count":2,"ok":true,"retry_after_units":null,"state_changed":false,"status_code":200},"state_delta":{"resources_discovered":true},"evidence_delta":{"fact_count":2,"source_added":null},"verification_state":"pending","disposition":"gateway_success","prompt_sha256":"5235d4806f0e7898063f0a137a77bc92fcfe323f2634373302ba014009978423","response_sha256":"8c1f7807d75674801ae1cb7c83ea44947ba6e7e852ff95dc1fa5eef723c13f2b","cumulative_usage":{"completion_tokens":93,"latency_seconds":4.129641399951652,"model_calls":4,"prompt_tokens":3486,"tool_calls":4,"total_tokens":3579},"teaching":"确认当前有哪些远程资源可以使用。"},{"visible_state":{"advanced_units":0,"evidence_sources":0,"finished":false,"last_error":"rate_limited","read_inputs":["amendments.csv","requirements.md","vendors.csv"],"resources_discovered":true,"written_outputs":[]},"allowed_tools":["fetch_resource"],"action_public":{"resource":"live_quote","token_present":false,"tool":"fetch_resource"},"actionLabel":"获取远程资源","observation_public":{"error_code":"rate_limited","fact_count":1,"ok":false,"retry_after_units":1,"state_changed":false,"status_code":429},"state_delta":{"last_error":"rate_limited"},"evidence_delta":{"fact_count":1,"source_added":null},"verification_state":"pending","disposition":"tool_error","prompt_sha256":"6fb0901105a3c8c02717eaef152e6084dda905bd06ce0a7659a498daed3411c2","response_sha256":"19be750544a754cf6233e2d1d1c9a104edfb7acabcf4523f65dc92c0518716fa","cumulative_usage":{"completion_tokens":119,"latency_seconds":4.867867999942973,"model_calls":5,"prompt_tokens":4504,"tool_calls":5,"total_tokens":4623},"teaching":"工具返回 rate_limited，Agent 需要决定如何恢复。"},{"visible_state":{"advanced_units":1,"evidence_sources":0,"finished":false,"last_error":"none","read_inputs":["amendments.csv","requirements.md","vendors.csv"],"resources_discovered":true,"written_outputs":[]},"allowed_tools":["wait_or_advance"],"action_public":{"tool":"wait_or_advance","units":1},"actionLabel":"等待后重试","observation_public":{"error_code":"none","fact_count":2,"ok":true,"retry_after_units":null,"state_changed":true,"status_code":200},"state_delta":{"advanced_units":1,"last_error":"none"},"evidence_delta":{"fact_count":2,"source_added":null},"verification_state":"pending","disposition":"gateway_success","prompt_sha256":"963d5781fb140af8a8e1fb261c1db39e7f9d84e73035673f95741a6ffe12719d","response_sha256":"5bb6367f83413e2ed9f337d71168af8bc70ae886f02bf1ccde80d781afb26567","cumulative_usage":{"completion_tokens":146,"latency_seconds":5.668413299834356,"model_calls":6,"prompt_tokens":5536,"tool_calls":6,"total_tokens":5682},"teaching":"遵守限流反馈，等待后再继续。"},{"visible_state":{"advanced_units":1,"evidence_sources":1,"finished":false,"last_error":"none","read_inputs":["amendments.csv","requirements.md","vendors.csv"],"resources_discovered":true,"written_outputs":[]},"allowed_tools":["fetch_resource"],"action_public":{"resource":"live_quote","token_present":false,"tool":"fetch_resource"},"actionLabel":"获取远程资源","observation_public":{"error_code":"none","fact_count":5,"ok":true,"retry_after_units":null,"state_changed":true,"status_code":200},"state_delta":{"evidence_sources":1},"evidence_delta":{"fact_count":5,"source_added":"obs-007"},"verification_state":"pending","disposition":"gateway_success","prompt_sha256":"88a8dd6ebd1b35bf37bbbcc2d1ce0679141149a92b0249e7b85bbaf5077bf08e","response_sha256":"19be750544a754cf6233e2d1d1c9a104edfb7acabcf4523f65dc92c0518716fa","cumulative_usage":{"completion_tokens":172,"latency_seconds":6.591308499919251,"model_calls":7,"prompt_tokens":6591,"tool_calls":7,"total_tokens":6763},"teaching":"请求远程证据，并根据返回结果更新任务状态。"},{"visible_state":{"advanced_units":1,"evidence_sources":1,"finished":false,"last_error":"none","read_inputs":["amendments.csv","requirements.md","vendors.csv"],"resources_discovered":true,"written_outputs":["decision.json"]},"allowed_tools":["write_output"],"action_public":{"artifact_bytes":357,"artifact_sha256":"68a40d5abd3c4b1a88324b053743b4248955c75a41b3b050bffe47eff4012623","path":"decision.json","tool":"write_output"},"actionLabel":"写入交付物","observation_public":{"error_code":"none","fact_count":1,"ok":true,"retry_after_units":null,"state_changed":true,"status_code":200},"state_delta":{"written_outputs":["decision.json"]},"evidence_delta":{"fact_count":1,"source_added":null},"verification_state":"pending","disposition":"gateway_success","prompt_sha256":"e8c720a4c3fcfcd78cc699a4d4fc6fb5fb276be0d8e42acefceb54082518503e","response_sha256":"dc12bc93c93b4df3f292efedfb6bcdc4acaac9f1ff97451b9bcdf3025367dd69","cumulative_usage":{"completion_tokens":324,"latency_seconds":8.09736689995043,"model_calls":8,"prompt_tokens":7684,"tool_calls":8,"total_tokens":8008},"teaching":"把已确认的事实写入可验收的交付物。"},{"visible_state":{"advanced_units":1,"evidence_sources":1,"finished":false,"last_error":"none","read_inputs":["amendments.csv","requirements.md","vendors.csv"],"resources_discovered":true,"written_outputs":["decision.json","evidence/claims.json"]},"allowed_tools":["write_output"],"action_public":{"artifact_bytes":549,"artifact_sha256":"01010a7a38c7fceaa03d558a93cc68bee0430fa9dd14bd9d5233a2d311f5a913","path":"evidence/claims.json","tool":"write_output"},"actionLabel":"写入交付物","observation_public":{"error_code":"none","fact_count":1,"ok":true,"retry_after_units":null,"state_changed":true,"status_code":200},"state_delta":{"written_outputs":["decision.json","evidence/claims.json"]},"evidence_delta":{"fact_count":1,"source_added":null},"verification_state":"passed","disposition":"gateway_success","prompt_sha256":"9e7a2830ff06d762e2de687f24f75898faea8d176715e53e25f4f99dd54996fe","response_sha256":"8cc0f129d14281fb3472a7e86f85aa8ec842734ca0b6a7007ecc65662b9b9ee5","cumulative_usage":{"completion_tokens":572,"latency_seconds":10.466561499983072,"model_calls":9,"prompt_tokens":8801,"tool_calls":9,"total_tokens":9373},"teaching":"代码验收通过，任务在这里完成。"}]}]},{"id":"alternative-path-01","title":"替代路径 A-01","divergence":5,"architectures":[{"name":"开放式执行","events":[{"visible_state":{"advanced_units":0,"evidence_sources":0,"finished":false,"last_error":null,"read_inputs":[],"resources_discovered":false,"written_outputs":[]},"allowed_tools":["list_evidence","read_evidence","submit_result","finish"],"action_public":{"tool":"list_evidence"},"actionLabel":"列出证据","observation_public":{"error_code":null,"fact_count":0,"ok":true,"retry_after_units":null,"state_changed":true,"status_code":null},"state_delta":{},"evidence_delta":{"fact_count":0,"source_added":null},"verification_state":"pending","disposition":"executed","prompt_sha256":"72acd4fb9649938f93bb1039b5fab440ea9d816649bdfefd7ef37b0a7f544477","response_sha256":"1199fd234b315946d0650fb28abc53628005ff2fa289c4986b1b55c67fc6af9b","cumulative_usage":{"completion_tokens":16,"latency_seconds":1.032197599997744,"model_calls":1,"prompt_tokens":388,"tool_calls":1,"total_tokens":404},"teaching":"查看可用证据入口。"},{"visible_state":{"advanced_units":0,"evidence_sources":0,"finished":false,"last_error":"route_unavailable","read_inputs":[],"resources_discovered":false,"written_outputs":[]},"allowed_tools":["list_evidence","read_evidence","submit_result","finish"],"action_public":{"tool":"read_evidence"},"actionLabel":"读取证据","observation_public":{"error_code":"route_unavailable","fact_count":0,"ok":false,"retry_after_units":null,"state_changed":true,"status_code":null},"state_delta":{"last_error":"route_unavailable"},"evidence_delta":{"fact_count":0,"source_added":null},"verification_state":"pending","disposition":"tool_error","prompt_sha256":"6e5eda99c15c3943a5c6d4ea3d4580d2d0b1250a31c3d0514cbc5dd593e362f8","response_sha256":"295fdef966214727a1013e96c0eb72f6bbcc1f5d8d5dfb5e6face00863de3983","cumulative_usage":{"completion_tokens":44,"latency_seconds":2.135290800011717,"model_calls":2,"prompt_tokens":849,"tool_calls":2,"total_tokens":893},"teaching":"工具返回 route_unavailable，Agent 需要决定如何恢复。"},{"visible_state":{"advanced_units":0,"evidence_sources":1,"finished":false,"last_error":null,"read_inputs":[],"resources_discovered":false,"written_outputs":[]},"allowed_tools":["list_evidence","read_evidence","submit_result","finish"],"action_public":{"tool":"read_evidence"},"actionLabel":"读取证据","observation_public":{"error_code":null,"fact_count":1,"ok":true,"retry_after_units":null,"state_changed":true,"status_code":null},"state_delta":{"evidence_sources":1,"last_error":null},"evidence_delta":{"fact_count":1,"source_added":"fact-group-003"},"verification_state":"pending","disposition":"executed","prompt_sha256":"2f5824f5fb54f30a060a37bec2ec9f902952a30a3a767452a22851444e780fdf","response_sha256":"5ba84ad90f55e4808ccf8e4c18893f24557b94e3851892cf5f07b67f85eb50fe","cumulative_usage":{"completion_tokens":73,"latency_seconds":3.0878119999542832,"model_calls":3,"prompt_tokens":1364,"tool_calls":3,"total_tokens":1437},"teaching":"读取一条候选证据。"},{"visible_state":{"advanced_units":0,"evidence_sources":1,"finished":false,"last_error":null,"read_inputs":[],"resources_discovered":false,"written_outputs":["submitted_result"]},"allowed_tools":["list_evidence","read_evidence","submit_result","finish"],"action_public":{"tool":"submit_result"},"actionLabel":"提交结果","observation_public":{"error_code":null,"fact_count":0,"ok":true,"retry_after_units":null,"state_changed":true,"status_code":null},"state_delta":{"written_outputs":["submitted_result"]},"evidence_delta":{"fact_count":0,"source_added":null},"verification_state":"pending","disposition":"executed","prompt_sha256":"d44a2169948be779c105d862fe2fdce2b565e2594d0069f9d2a5011f09b81dfa","response_sha256":"203d8619b22a85be1124e4a141d0f478c94c94d64b6b9394e7a0c03b6a3c2a92","cumulative_usage":{"completion_tokens":122,"latency_seconds":4.193988699931651,"model_calls":4,"prompt_tokens":1972,"tool_calls":4,"total_tokens":2094},"teaching":"提交当前答案，由代码检查最终结果。"},{"visible_state":{"advanced_units":0,"evidence_sources":1,"finished":true,"last_error":null,"read_inputs":[],"resources_discovered":false,"written_outputs":["submitted_result"]},"allowed_tools":["list_evidence","read_evidence","submit_result","finish"],"action_public":{"tool":"finish"},"actionLabel":"结束任务","observation_public":{"error_code":null,"fact_count":0,"ok":true,"retry_after_units":null,"state_changed":true,"status_code":null},"state_delta":{"finished":true},"evidence_delta":{"fact_count":0,"source_added":null},"verification_state":"passed","disposition":"executed","prompt_sha256":"626bf4aab1bb57f09f70d0706cd7dcaf7d445f66133779b5739a09427acfad97","response_sha256":"7310372e895dfcd49057382944f726a4b0ab03cbdea6904b834b3516d3bead52","cumulative_usage":{"completion_tokens":137,"latency_seconds":5.016533499932848,"model_calls":5,"prompt_tokens":2659,"tool_calls":5,"total_tokens":2796},"teaching":"代码验收通过，任务在这里完成。"}]},{"name":"目标图混合执行","events":[{"visible_state":{"advanced_units":0,"evidence_sources":0,"finished":false,"last_error":null,"read_inputs":[],"resources_discovered":false,"written_outputs":[]},"allowed_tools":["list_evidence","read_evidence","submit_result","finish"],"action_public":{"tool":"list_evidence"},"actionLabel":"列出证据","observation_public":{"error_code":null,"fact_count":0,"ok":true,"retry_after_units":null,"state_changed":true,"status_code":null},"state_delta":{},"evidence_delta":{"fact_count":0,"source_added":null},"verification_state":"pending","disposition":"executed","prompt_sha256":"04ff39e755b40b22cc16c72b931a6235f5502c9b8c30f0a9f957f1fe0b9f4570","response_sha256":"1199fd234b315946d0650fb28abc53628005ff2fa289c4986b1b55c67fc6af9b","cumulative_usage":{"completion_tokens":16,"latency_seconds":0.886095599969849,"model_calls":1,"prompt_tokens":519,"tool_calls":1,"total_tokens":535},"teaching":"查看可用证据入口。"},{"visible_state":{"advanced_units":0,"evidence_sources":0,"finished":false,"last_error":"route_unavailable","read_inputs":[],"resources_discovered":false,"written_outputs":[]},"allowed_tools":["list_evidence","read_evidence","submit_result","finish"],"action_public":{"tool":"read_evidence"},"actionLabel":"读取证据","observation_public":{"error_code":"route_unavailable","fact_count":0,"ok":false,"retry_after_units":null,"state_changed":true,"status_code":null},"state_delta":{"last_error":"route_unavailable"},"evidence_delta":{"fact_count":0,"source_added":null},"verification_state":"pending","disposition":"tool_error","prompt_sha256":"ea9c33161ec96aacb0634bf79ddd27192366af53eeeefc82dfc967f1229bfce9","response_sha256":"295fdef966214727a1013e96c0eb72f6bbcc1f5d8d5dfb5e6face00863de3983","cumulative_usage":{"completion_tokens":44,"latency_seconds":1.951848299941048,"model_calls":2,"prompt_tokens":1027,"tool_calls":2,"total_tokens":1071},"teaching":"工具返回 route_unavailable，Agent 需要决定如何恢复。"},{"visible_state":{"advanced_units":0,"evidence_sources":1,"finished":false,"last_error":null,"read_inputs":[],"resources_discovered":false,"written_outputs":[]},"allowed_tools":["list_evidence","read_evidence","submit_result","finish"],"action_public":{"tool":"read_evidence"},"actionLabel":"读取证据","observation_public":{"error_code":null,"fact_count":1,"ok":true,"retry_after_units":null,"state_changed":true,"status_code":null},"state_delta":{"evidence_sources":1,"last_error":null},"evidence_delta":{"fact_count":1,"source_added":"fact-group-003"},"verification_state":"pending","disposition":"executed","prompt_sha256":"94034cf43a7ca8a184ae11cf581675f20d6cd3b738dd120f3ee790b2eb133127","response_sha256":"5ba84ad90f55e4808ccf8e4c18893f24557b94e3851892cf5f07b67f85eb50fe","cumulative_usage":{"completion_tokens":73,"latency_seconds":2.74279869988095,"model_calls":3,"prompt_tokens":1542,"tool_calls":3,"total_tokens":1615},"teaching":"读取一条候选证据。"},{"visible_state":{"advanced_units":0,"evidence_sources":1,"finished":false,"last_error":null,"read_inputs":[],"resources_discovered":false,"written_outputs":["submitted_result"]},"allowed_tools":["list_evidence","read_evidence","submit_result","finish"],"action_public":{"tool":"submit_result"},"actionLabel":"提交结果","observation_public":{"error_code":null,"fact_count":0,"ok":true,"retry_after_units":null,"state_changed":true,"status_code":null},"state_delta":{"written_outputs":["submitted_result"]},"evidence_delta":{"fact_count":0,"source_added":null},"verification_state":"pending","disposition":"executed","prompt_sha256":"6a3628b53697f3b93ef65920ad9fe2a70b7a6e0d5ee2828239f0efb499463a9b","response_sha256":"203d8619b22a85be1124e4a141d0f478c94c94d64b6b9394e7a0c03b6a3c2a92","cumulative_usage":{"completion_tokens":122,"latency_seconds":3.682784599950537,"model_calls":4,"prompt_tokens":2091,"tool_calls":4,"total_tokens":2213},"teaching":"提交当前答案，由代码检查最终结果。"},{"visible_state":{"advanced_units":0,"evidence_sources":1,"finished":false,"last_error":"not_in_legal_frontier","read_inputs":[],"resources_discovered":false,"written_outputs":["submitted_result"]},"allowed_tools":["list_evidence","read_evidence","submit_result","finish"],"action_public":{"tool":"submit_result"},"actionLabel":"提交结果","observation_public":{"error_code":"not_in_legal_frontier","fact_count":0,"ok":false,"retry_after_units":null,"state_changed":false,"status_code":null},"state_delta":{"last_error":"not_in_legal_frontier"},"evidence_delta":{"fact_count":0,"source_added":null},"verification_state":"pending","disposition":"controller_rejected","prompt_sha256":"19d242e07a398be1313d1392d30f86035bb8e730d3cd6d81c99391b1b02bf26f","response_sha256":"203d8619b22a85be1124e4a141d0f478c94c94d64b6b9394e7a0c03b6a3c2a92","cumulative_usage":{"completion_tokens":171,"latency_seconds":4.906565999961458,"model_calls":5,"prompt_tokens":2629,"tool_calls":4,"total_tokens":2800},"teaching":"工具返回 not_in_legal_frontier，Agent 需要决定如何恢复。"},{"visible_state":{"advanced_units":0,"evidence_sources":1,"finished":false,"last_error":"not_in_legal_frontier","read_inputs":[],"resources_discovered":false,"written_outputs":["submitted_result"]},"allowed_tools":["list_evidence","read_evidence","submit_result","finish"],"action_public":{"tool":"submit_result"},"actionLabel":"提交结果","observation_public":{"error_code":"not_in_legal_frontier","fact_count":0,"ok":false,"retry_after_units":null,"state_changed":false,"status_code":null},"state_delta":{},"evidence_delta":{"fact_count":0,"source_added":null},"verification_state":"pending","disposition":"controller_rejected","prompt_sha256":"46522d73c8751dc91c25db3d3d298efe36b3b137a8494f3f087cf6be52307e86","response_sha256":"203d8619b22a85be1124e4a141d0f478c94c94d64b6b9394e7a0c03b6a3c2a92","cumulative_usage":{"completion_tokens":220,"latency_seconds":6.059445000020787,"model_calls":6,"prompt_tokens":3189,"tool_calls":4,"total_tokens":3409},"teaching":"工具返回 not_in_legal_frontier，Agent 需要决定如何恢复。"},{"visible_state":{"advanced_units":0,"evidence_sources":1,"finished":false,"last_error":"not_in_legal_frontier","read_inputs":[],"resources_discovered":false,"written_outputs":["submitted_result"]},"allowed_tools":["list_evidence","read_evidence","submit_result","finish"],"action_public":{"tool":"submit_result"},"actionLabel":"提交结果","observation_public":{"error_code":"not_in_legal_frontier","fact_count":0,"ok":false,"retry_after_units":null,"state_changed":false,"status_code":null},"state_delta":{},"evidence_delta":{"fact_count":0,"source_added":null},"verification_state":"pending","disposition":"controller_rejected","prompt_sha256":"304ad45af8ded4b09f25a056cba7fc270002ebd50701ec5470c7f237d531e304","response_sha256":"843caf795919aa6a0c0052ce9f76769f21efcf847577f788f994d3f6ee5db258","cumulative_usage":{"completion_tokens":265,"latency_seconds":7.197977900039405,"model_calls":7,"prompt_tokens":3771,"tool_calls":4,"total_tokens":4036},"teaching":"工具返回 not_in_legal_frontier，Agent 需要决定如何恢复。"},{"visible_state":{"advanced_units":0,"evidence_sources":1,"finished":true,"last_error":null,"read_inputs":[],"resources_discovered":false,"written_outputs":["submitted_result"]},"allowed_tools":["list_evidence","read_evidence","submit_result","finish"],"action_public":{"tool":"finish"},"actionLabel":"结束任务","observation_public":{"error_code":null,"fact_count":0,"ok":true,"retry_after_units":null,"state_changed":true,"status_code":null},"state_delta":{"finished":true,"last_error":null},"evidence_delta":{"fact_count":0,"source_added":null},"verification_state":"passed","disposition":"executed","prompt_sha256":"36debcc9dccbd6ae71b2fdb1b1ccfdcba6ce9f137a888462efbd12b8667bbd2a","response_sha256":"7310372e895dfcd49057382944f726a4b0ab03cbdea6904b834b3516d3bead52","cumulative_usage":{"completion_tokens":280,"latency_seconds":8.091274600010365,"model_calls":8,"prompt_tokens":4375,"tool_calls":5,"total_tokens":4655},"teaching":"代码验收通过，任务在这里完成。"}]}]}]</script> <div class="replay-case-tabs" role="group" aria-label="选择回放案例"> <button type="button" data-replay-case="procurement-rate-limit-01" aria-pressed="true">  <span>说明性配对运行</span> <b>采购限流恢复</b>  </button><button type="button" data-replay-case="alternative-path-01" aria-pressed="false">  <span>正式实验记录</span> <b>替代路径 A-01</b>  </button> </div> <article class="replay-contract" data-replay-context="procurement-rate-limit-01"> <div class="replay-request"> <span class="evidence-tag evidence-tag--experiment"> 说明性配对运行 </span> <h3>采购限流恢复</h3> <p>在相同附件、工具、限流场景、模型与预算下完成采购决策并提交可验证证据。</p> </div> <dl class="replay-shared" aria-label="采购限流恢复共享条件"> <div>  <dt>模型</dt> <dd>deepseek-v4-flash</dd>  </div> <div>  <dt>预算</dt> <dd>20 次工具调用 · 最多 16 次模型调用 · 180 秒</dd>  </div> <div>  <dt>统一工具入口</dt> <dd>read_file · list_resources · fetch_resource · write_output · wait_or_advance · finish</dd>  </div> <div>  <dt>完成条件</dt> <dd>相同代码验收，只检查最终结果</dd>  </div> <div>  <dt>运行环境</dt> <dd> rate_limit 冻结夹具，独立运行目录 </dd>  </div> </dl> <details class="replay-input-details"> <summary>查看冻结原文与输入附件</summary> <div class="replay-input-grid"> <article>  <h4>实际用户输入</h4> <pre>Complete the procurement task using only the listed tools and their observations.</pre>  </article> <article> <h4>requirements.md</h4> <pre># Procurement requirements
+
+Purchase exactly 100 replacement control modules. Consider only approved
+vendors quoting in USD that can deliver within seven calendar days. For each
+eligible vendor, use its current live quote when one is available; otherwise
+use its standard catalog price. Select the one vendor with the lowest authoritative unit price.
+
+The final `decision.json` must distinguish `unit_price_usd` from
+`total_price_usd`; the total is quantity 100 multiplied by the selected unit
+price. It must also identify the selected `vendor_id`, `vendor_name`,
+`quantity`, and `currency`.</pre> <small>SHA-256 · ce939c27df8f0b0560361e1f80e7fecb1297cbaa45d2197b0aea55bcbea6ee68</small> </article><article> <h4>vendors.csv</h4> <pre>vendor_id,vendor_name,approved,currency,standard_unit_price_usd,delivery_days
+atlas,Atlas Components,yes,USD,104.00,5
+northstar,Northstar Supplies,yes,USD,99.00,6
+harbor,Harbor Industrial,no,USD,91.00,4</pre> <small>SHA-256 · b0b987b072d129f44d1d91627b671b46d54df5d848aaa4f851643e0e3bc0d6d3</small> </article><article> <h4>amendments.csv</h4> <pre>amendment_id,description
+A-17,Use the current live quote instead of the standard catalog price when available.</pre> <small>SHA-256 · d4c5ffe7542c67e014e0c7700567cfb71bd5cb5fe913b2b40ba40e1463b47d21</small> </article> </div> </details> <p class="replay-contract-note">这组新配对只解释执行链，不计入 Pilot A 或 Pilot B 的成功率。</p> </article><article class="replay-contract" data-replay-context="alternative-path-01" hidden> <div class="replay-request"> <span class="evidence-tag evidence-tag--experiment"> 正式实验记录 </span> <h3>替代路径 A-01</h3> <p>主证据路径失败后，切换到独立副本并提交受事实 ID 支持的发布令牌。</p> </div> <dl class="replay-shared" aria-label="替代路径 A-01共享条件"> <div>  <dt>模型</dt> <dd>deepseek-v4-flash</dd>  </div> <div>  <dt>预算</dt> <dd>3 个并行分支 · 最多 18 次模型调用 · 24 次工具调用 · 30,000 tokens · 240 秒</dd>  </div> <div>  <dt>统一工具入口</dt> <dd>list_evidence · read_evidence · submit_result · finish</dd>  </div> <div>  <dt>完成条件</dt> <dd>相同代码验收，只检查最终结果</dd>  </div> <div>  <dt>运行环境</dt> <dd> 冻结 Pilot B 夹具，独立运行目录 </dd>  </div> </dl> <details class="replay-input-details"> <summary>查看冻结原文与输入附件</summary> <div class="replay-input-grid"> <article>  <h4>实际用户输入</h4> <pre>Recover the canonical release token for record A-01. Return {&quot;release_token&quot;: string} and cite only supporting fact IDs.</pre>  </article> <article> <h4>tasks.json</h4> <pre>{
+  &quot;schema_version&quot;: &quot;1.0&quot;,
+  &quot;study&quot;: &quot;pilot-b&quot;,
+  &quot;instances&quot;: [
+    {
+      &quot;instance_id&quot;: &quot;alternative_path-01&quot;,
+      &quot;family&quot;: &quot;alternative_path&quot;,
+      &quot;task&quot;: &quot;Recover the canonical release token for record A-01. Return {\&quot;release_token\&quot;: string} and cite only supporting fact IDs.&quot;,
+      &quot;sources&quot;: [
+        {
+          &quot;source_id&quot;: &quot;a01-primary&quot;,
+          &quot;label&quot;: &quot;Primary release archive&quot;,
+          &quot;role&quot;: &quot;route&quot;,
+          &quot;outcome&quot;: &quot;error&quot;,
+          &quot;error_code&quot;: &quot;route_unavailable&quot;,
+          &quot;facts&quot;: []
+        },
+        {
+          &quot;source_id&quot;: &quot;a01-replica&quot;,
+          &quot;label&quot;: &quot;Independent release replica&quot;,
+          &quot;role&quot;: &quot;route&quot;,
+          &quot;outcome&quot;: &quot;ok&quot;,
+          &quot;error_code&quot;: null,
+          &quot;facts&quot;: [
+            {&quot;fact_id&quot;: &quot;alt-01-token&quot;, &quot;goal_id&quot;: &quot;resolve_token&quot;, &quot;claim&quot;: &quot;release_token&quot;, &quot;value&quot;: &quot;CIRRUS-41&quot;}
+          ]
+        }
+      ],
+      &quot;required_fact_ids&quot;: [&quot;alt-01-token&quot;],
+      &quot;expected_answer&quot;: {&quot;release_token&quot;: &quot;CIRRUS-41&quot;},
+      &quot;subgoals&quot;: [&quot;resolve_token&quot;],
+      &quot;merge_rule&quot;: null
+    },
+    {
+      &quot;instance_id&quot;: &quot;alternative_path-02&quot;,
+      &quot;family&quot;: &quot;alternative_path&quot;,
+      &quot;task&quot;: &quot;Recover the canonical release token for record A-02. Return {\&quot;release_token\&quot;: string} and cite only supporting fact IDs.&quot;,
+      &quot;sources&quot;: [
+        {
+          &quot;source_id&quot;: &quot;a02-primary&quot;,
+          &quot;label&quot;: &quot;Primary release archive&quot;,
+          &quot;role&quot;: &quot;route&quot;,
+          &quot;outcome&quot;: &quot;error&quot;,
+          &quot;error_code&quot;: &quot;route_unavailable&quot;,
+          &quot;facts&quot;: []
+        },
+        {
+          &quot;source_id&quot;: &quot;a02-replica&quot;,
+          &quot;label&quot;: &quot;Independent release replica&quot;,
+          &quot;role&quot;: &quot;route&quot;,
+          &quot;outcome&quot;: &quot;ok&quot;,
+          &quot;error_code&quot;: null,
+          &quot;facts&quot;: [
+            {&quot;fact_id&quot;: &quot;alt-02-token&quot;, &quot;goal_id&quot;: &quot;resolve_token&quot;, &quot;claim&quot;: &quot;release_token&quot;, &quot;value&quot;: &quot;EMBER-73&quot;}
+          ]
+        }
+      ],
+      &quot;required_fact_ids&quot;: [&quot;alt-02-token&quot;],
+      &quot;expected_answer&quot;: {&quot;release_token&quot;: &quot;EMBER-73&quot;},
+      &quot;subgoals&quot;: [&quot;resolve_token&quot;],
+      &quot;merge_rule&quot;: null
+    },
+    {
+      &quot;instance_id&quot;: &quot;alternative_path-03&quot;,
+      &quot;family&quot;: &quot;alternative_path&quot;,
+      &quot;task&quot;: &quot;Recover the canonical release token for record A-03. Return {\&quot;release_token\&quot;: string} and cite only supporting fact IDs.&quot;,
+      &quot;sources&quot;: [
+        {
+          &quot;source_id&quot;: &quot;a03-primary&quot;,
+          &quot;label&quot;: &quot;Primary release archive&quot;,
+          &quot;role&quot;: &quot;route&quot;,
+          &quot;outcome&quot;: &quot;error&quot;,
+          &quot;error_code&quot;: &quot;route_unavailable&quot;,
+          &quot;facts&quot;: []
+        },
+        {
+          &quot;source_id&quot;: &quot;a03-replica&quot;,
+          &quot;label&quot;: &quot;Independent release replica&quot;,
+          &quot;role&quot;: &quot;route&quot;,
+          &quot;outcome&quot;: &quot;ok&quot;,
+          &quot;error_code&quot;: null,
+          &quot;facts&quot;: [
+            {&quot;fact_id&quot;: &quot;alt-03-token&quot;, &quot;goal_id&quot;: &quot;resolve_token&quot;, &quot;claim&quot;: &quot;release_token&quot;, &quot;value&quot;: &quot;HARBOR-29&quot;}
+          ]
+        }
+      ],
+      &quot;required_fact_ids&quot;: [&quot;alt-03-token&quot;],
+      &quot;expected_answer&quot;: {&quot;release_token&quot;: &quot;HARBOR-29&quot;},
+      &quot;subgoals&quot;: [&quot;resolve_token&quot;],
+      &quot;merge_rule&quot;: null
+    },
+    {
+      &quot;instance_id&quot;: &quot;alternative_path-04&quot;,
+      &quot;family&quot;: &quot;alternative_path&quot;,
+      &quot;task&quot;: &quot;Recover the canonical release token for record A-04. Return {\&quot;release_token\&quot;: string} and cite only supporting fact IDs.&quot;,
+      &quot;sources&quot;: [
+        {
+          &quot;source_id&quot;: &quot;a04-primary&quot;,
+          &quot;label&quot;: &quot;Primary release archive&quot;,
+          &quot;role&quot;: &quot;route&quot;,
+          &quot;outcome&quot;: &quot;error&quot;,
+          &quot;error_code&quot;: &quot;route_unavailable&quot;,
+          &quot;facts&quot;: []
+        },
+        {
+          &quot;source_id&quot;: &quot;a04-replica&quot;,
+          &quot;label&quot;: &quot;Independent release replica&quot;,
+          &quot;role&quot;: &quot;route&quot;,
+          &quot;outcome&quot;: &quot;ok&quot;,
+          &quot;error_code&quot;: null,
+          &quot;facts&quot;: [
+            {&quot;fact_id&quot;: &quot;alt-04-token&quot;, &quot;goal_id&quot;: &quot;resolve_token&quot;, &quot;claim&quot;: &quot;release_token&quot;, &quot;value&quot;: &quot;LATTICE-86&quot;}
+          ]
+        }
+      ],
+      &quot;required_fact_ids&quot;: [&quot;alt-04-token&quot;],
+      &quot;expected_answer&quot;: {&quot;release_token&quot;: &quot;LATTICE-86&quot;},
+      &quot;subgoals&quot;: [&quot;resolve_token&quot;],
+      &quot;merge_rule&quot;: null
+    },
+    {
+      &quot;instance_id&quot;: &quot;open_evidence-01&quot;,
+      &quot;family&quot;: &quot;open_evidence&quot;,
+      &quot;task&quot;: &quot;Assemble the current O-01 brief from open evidence. Return codename, launch_window, and owner, citing only current supporting fact IDs.&quot;,
+      &quot;sources&quot;: [
+        {&quot;source_id&quot;: &quot;o01-name&quot;, &quot;label&quot;: &quot;Current naming register&quot;, &quot;role&quot;: &quot;required&quot;, &quot;outcome&quot;: &quot;ok&quot;, &quot;error_code&quot;: null, &quot;facts&quot;: [{&quot;fact_id&quot;: &quot;open-01-codename&quot;, &quot;goal_id&quot;: &quot;codename&quot;, &quot;claim&quot;: &quot;codename&quot;, &quot;value&quot;: &quot;Juniper&quot;}]},
+        {&quot;source_id&quot;: &quot;o01-window&quot;, &quot;label&quot;: &quot;Current launch calendar&quot;, &quot;role&quot;: &quot;required&quot;, &quot;outcome&quot;: &quot;ok&quot;, &quot;error_code&quot;: null, &quot;facts&quot;: [{&quot;fact_id&quot;: &quot;open-01-window&quot;, &quot;goal_id&quot;: &quot;launch_window&quot;, &quot;claim&quot;: &quot;launch_window&quot;, &quot;value&quot;: &quot;2026-W31&quot;}]},
+        {&quot;source_id&quot;: &quot;o01-owner&quot;, &quot;label&quot;: &quot;Current ownership roster&quot;, &quot;role&quot;: &quot;required&quot;, &quot;outcome&quot;: &quot;ok&quot;, &quot;error_code&quot;: null, &quot;facts&quot;: [{&quot;fact_id&quot;: &quot;open-01-owner&quot;, &quot;goal_id&quot;: &quot;owner&quot;, &quot;claim&quot;: &quot;owner&quot;, &quot;value&quot;: &quot;Orion&quot;}]},
+        {&quot;source_id&quot;: &quot;o01-history&quot;, &quot;label&quot;: &quot;Historical naming memo&quot;, &quot;role&quot;: &quot;distractor&quot;, &quot;outcome&quot;: &quot;ok&quot;, &quot;error_code&quot;: null, &quot;facts&quot;: [{&quot;fact_id&quot;: &quot;open-01-old-name&quot;, &quot;goal_id&quot;: null, &quot;claim&quot;: &quot;superseded_codename&quot;, &quot;value&quot;: &quot;Cedar&quot;}]},
+        {&quot;source_id&quot;: &quot;o01-ops&quot;, &quot;label&quot;: &quot;Unrelated operations note&quot;, &quot;role&quot;: &quot;distractor&quot;, &quot;outcome&quot;: &quot;ok&quot;, &quot;error_code&quot;: null, &quot;facts&quot;: [{&quot;fact_id&quot;: &quot;open-01-priority&quot;, &quot;goal_id&quot;: null, &quot;claim&quot;: &quot;queue_priority&quot;, &quot;value&quot;: &quot;low&quot;}]}
+      ],
+      &quot;required_fact_ids&quot;: [&quot;open-01-codename&quot;, &quot;open-01-window&quot;, &quot;open-01-owner&quot;],
+      &quot;expected_answer&quot;: {&quot;codename&quot;: &quot;Juniper&quot;, &quot;launch_window&quot;: &quot;2026-W31&quot;, &quot;owner&quot;: &quot;Orion&quot;},
+      &quot;subgoals&quot;: [&quot;codename&quot;, &quot;launch_window&quot;, &quot;owner&quot;],
+      &quot;merge_rule&quot;: null
+    },
+    {
+      &quot;instance_id&quot;: &quot;open_evidence-02&quot;,
+      &quot;family&quot;: &quot;open_evidence&quot;,
+      &quot;task&quot;: &quot;Assemble the current O-02 brief from open evidence. Return codename, launch_window, and owner, citing only current supporting fact IDs.&quot;,
+      &quot;sources&quot;: [
+        {&quot;source_id&quot;: &quot;o02-name&quot;, &quot;label&quot;: &quot;Current naming register&quot;, &quot;role&quot;: &quot;required&quot;, &quot;outcome&quot;: &quot;ok&quot;, &quot;error_code&quot;: null, &quot;facts&quot;: [{&quot;fact_id&quot;: &quot;open-02-codename&quot;, &quot;goal_id&quot;: &quot;codename&quot;, &quot;claim&quot;: &quot;codename&quot;, &quot;value&quot;: &quot;Kestrel&quot;}]},
+        {&quot;source_id&quot;: &quot;o02-window&quot;, &quot;label&quot;: &quot;Current launch calendar&quot;, &quot;role&quot;: &quot;required&quot;, &quot;outcome&quot;: &quot;ok&quot;, &quot;error_code&quot;: null, &quot;facts&quot;: [{&quot;fact_id&quot;: &quot;open-02-window&quot;, &quot;goal_id&quot;: &quot;launch_window&quot;, &quot;claim&quot;: &quot;launch_window&quot;, &quot;value&quot;: &quot;2026-W34&quot;}]},
+        {&quot;source_id&quot;: &quot;o02-owner&quot;, &quot;label&quot;: &quot;Current ownership roster&quot;, &quot;role&quot;: &quot;required&quot;, &quot;outcome&quot;: &quot;ok&quot;, &quot;error_code&quot;: null, &quot;facts&quot;: [{&quot;fact_id&quot;: &quot;open-02-owner&quot;, &quot;goal_id&quot;: &quot;owner&quot;, &quot;claim&quot;: &quot;owner&quot;, &quot;value&quot;: &quot;Nova&quot;}]},
+        {&quot;source_id&quot;: &quot;o02-history&quot;, &quot;label&quot;: &quot;Historical ownership memo&quot;, &quot;role&quot;: &quot;distractor&quot;, &quot;outcome&quot;: &quot;ok&quot;, &quot;error_code&quot;: null, &quot;facts&quot;: [{&quot;fact_id&quot;: &quot;open-02-old-owner&quot;, &quot;goal_id&quot;: null, &quot;claim&quot;: &quot;superseded_owner&quot;, &quot;value&quot;: &quot;Lyra&quot;}]},
+        {&quot;source_id&quot;: &quot;o02-ops&quot;, &quot;label&quot;: &quot;Unrelated capacity note&quot;, &quot;role&quot;: &quot;distractor&quot;, &quot;outcome&quot;: &quot;ok&quot;, &quot;error_code&quot;: null, &quot;facts&quot;: [{&quot;fact_id&quot;: &quot;open-02-capacity&quot;, &quot;goal_id&quot;: null, &quot;claim&quot;: &quot;capacity_band&quot;, &quot;value&quot;: &quot;green&quot;}]}
+      ],
+      &quot;required_fact_ids&quot;: [&quot;open-02-codename&quot;, &quot;open-02-window&quot;, &quot;open-02-owner&quot;],
+      &quot;expected_answer&quot;: {&quot;codename&quot;: &quot;Kestrel&quot;, &quot;launch_window&quot;: &quot;2026-W34&quot;, &quot;owner&quot;: &quot;Nova&quot;},
+      &quot;subgoals&quot;: [&quot;codename&quot;, &quot;launch_window&quot;, &quot;owner&quot;],
+      &quot;merge_rule&quot;: null
+    },
+    {
+      &quot;instance_id&quot;: &quot;open_evidence-03&quot;,
+      &quot;family&quot;: &quot;open_evidence&quot;,
+      &quot;task&quot;: &quot;Assemble the current O-03 brief from open evidence. Return codename, launch_window, and owner, citing only current supporting fact IDs.&quot;,
+      &quot;sources&quot;: [
+        {&quot;source_id&quot;: &quot;o03-name&quot;, &quot;label&quot;: &quot;Current naming register&quot;, &quot;role&quot;: &quot;required&quot;, &quot;outcome&quot;: &quot;ok&quot;, &quot;error_code&quot;: null, &quot;facts&quot;: [{&quot;fact_id&quot;: &quot;open-03-codename&quot;, &quot;goal_id&quot;: &quot;codename&quot;, &quot;claim&quot;: &quot;codename&quot;, &quot;value&quot;: &quot;Meridian&quot;}]},
+        {&quot;source_id&quot;: &quot;o03-window&quot;, &quot;label&quot;: &quot;Current launch calendar&quot;, &quot;role&quot;: &quot;required&quot;, &quot;outcome&quot;: &quot;ok&quot;, &quot;error_code&quot;: null, &quot;facts&quot;: [{&quot;fact_id&quot;: &quot;open-03-window&quot;, &quot;goal_id&quot;: &quot;launch_window&quot;, &quot;claim&quot;: &quot;launch_window&quot;, &quot;value&quot;: &quot;2026-W37&quot;}]},
+        {&quot;source_id&quot;: &quot;o03-owner&quot;, &quot;label&quot;: &quot;Current ownership roster&quot;, &quot;role&quot;: &quot;required&quot;, &quot;outcome&quot;: &quot;ok&quot;, &quot;error_code&quot;: null, &quot;facts&quot;: [{&quot;fact_id&quot;: &quot;open-03-owner&quot;, &quot;goal_id&quot;: &quot;owner&quot;, &quot;claim&quot;: &quot;owner&quot;, &quot;value&quot;: &quot;Quill&quot;}]},
+        {&quot;source_id&quot;: &quot;o03-history&quot;, &quot;label&quot;: &quot;Historical launch memo&quot;, &quot;role&quot;: &quot;distractor&quot;, &quot;outcome&quot;: &quot;ok&quot;, &quot;error_code&quot;: null, &quot;facts&quot;: [{&quot;fact_id&quot;: &quot;open-03-old-window&quot;, &quot;goal_id&quot;: null, &quot;claim&quot;: &quot;superseded_window&quot;, &quot;value&quot;: &quot;2026-W35&quot;}]},
+        {&quot;source_id&quot;: &quot;o03-ops&quot;, &quot;label&quot;: &quot;Unrelated risk note&quot;, &quot;role&quot;: &quot;distractor&quot;, &quot;outcome&quot;: &quot;ok&quot;, &quot;error_code&quot;: null, &quot;facts&quot;: [{&quot;fact_id&quot;: &quot;open-03-risk&quot;, &quot;goal_id&quot;: null, &quot;claim&quot;: &quot;risk_band&quot;, &quot;value&quot;: &quot;amber&quot;}]}
+      ],
+      &quot;required_fact_ids&quot;: [&quot;open-03-codename&quot;, &quot;open-03-window&quot;, &quot;open-03-owner&quot;],
+      &quot;expected_answer&quot;: {&quot;codename&quot;: &quot;Meridian&quot;, &quot;launch_window&quot;: &quot;2026-W37&quot;, &quot;owner&quot;: &quot;Quill&quot;},
+      &quot;subgoals&quot;: [&quot;codename&quot;, &quot;launch_window&quot;, &quot;owner&quot;],
+      &quot;merge_rule&quot;: null
+    },
+    {
+      &quot;instance_id&quot;: &quot;open_evidence-04&quot;,
+      &quot;family&quot;: &quot;open_evidence&quot;,
+      &quot;task&quot;: &quot;Assemble the current O-04 brief from open evidence. Return codename, launch_window, and owner, citing only current supporting fact IDs.&quot;,
+      &quot;sources&quot;: [
+        {&quot;source_id&quot;: &quot;o04-name&quot;, &quot;label&quot;: &quot;Current naming register&quot;, &quot;role&quot;: &quot;required&quot;, &quot;outcome&quot;: &quot;ok&quot;, &quot;error_code&quot;: null, &quot;facts&quot;: [{&quot;fact_id&quot;: &quot;open-04-codename&quot;, &quot;goal_id&quot;: &quot;codename&quot;, &quot;claim&quot;: &quot;codename&quot;, &quot;value&quot;: &quot;Solstice&quot;}]},
+        {&quot;source_id&quot;: &quot;o04-window&quot;, &quot;label&quot;: &quot;Current launch calendar&quot;, &quot;role&quot;: &quot;required&quot;, &quot;outcome&quot;: &quot;ok&quot;, &quot;error_code&quot;: null, &quot;facts&quot;: [{&quot;fact_id&quot;: &quot;open-04-window&quot;, &quot;goal_id&quot;: &quot;launch_window&quot;, &quot;claim&quot;: &quot;launch_window&quot;, &quot;value&quot;: &quot;2026-W40&quot;}]},
+        {&quot;source_id&quot;: &quot;o04-owner&quot;, &quot;label&quot;: &quot;Current ownership roster&quot;, &quot;role&quot;: &quot;required&quot;, &quot;outcome&quot;: &quot;ok&quot;, &quot;error_code&quot;: null, &quot;facts&quot;: [{&quot;fact_id&quot;: &quot;open-04-owner&quot;, &quot;goal_id&quot;: &quot;owner&quot;, &quot;claim&quot;: &quot;owner&quot;, &quot;value&quot;: &quot;Rook&quot;}]},
+        {&quot;source_id&quot;: &quot;o04-history&quot;, &quot;label&quot;: &quot;Historical naming memo&quot;, &quot;role&quot;: &quot;distractor&quot;, &quot;outcome&quot;: &quot;ok&quot;, &quot;error_code&quot;: null, &quot;facts&quot;: [{&quot;fact_id&quot;: &quot;open-04-old-name&quot;, &quot;goal_id&quot;: null, &quot;claim&quot;: &quot;superseded_codename&quot;, &quot;value&quot;: &quot;Equinox&quot;}]},
+        {&quot;source_id&quot;: &quot;o04-ops&quot;, &quot;label&quot;: &quot;Unrelated staffing note&quot;, &quot;role&quot;: &quot;distractor&quot;, &quot;outcome&quot;: &quot;ok&quot;, &quot;error_code&quot;: null, &quot;facts&quot;: [{&quot;fact_id&quot;: &quot;open-04-staffing&quot;, &quot;goal_id&quot;: null, &quot;claim&quot;: &quot;staffing_band&quot;, &quot;value&quot;: &quot;stable&quot;}]}
+      ],
+      &quot;required_fact_ids&quot;: [&quot;open-04-codename&quot;, &quot;open-04-window&quot;, &quot;open-04-owner&quot;],
+      &quot;expected_answer&quot;: {&quot;codename&quot;: &quot;Solstice&quot;, &quot;launch_window&quot;: &quot;2026-W40&quot;, &quot;owner&quot;: &quot;Rook&quot;},
+      &quot;subgoals&quot;: [&quot;codename&quot;, &quot;launch_window&quot;, &quot;owner&quot;],
+      &quot;merge_rule&quot;: null
+    },
+    {
+      &quot;instance_id&quot;: &quot;parallel_decomposition-01&quot;,
+      &quot;family&quot;: &quot;parallel_decomposition&quot;,
+      &quot;task&quot;: &quot;Resolve independent alpha, beta, and gamma segment values for P-01. Return segments plus total=sum(values) and checksum=alpha-beta-gamma:total, citing all three supporting facts.&quot;,
+      &quot;sources&quot;: [
+        {&quot;source_id&quot;: &quot;p01-alpha&quot;, &quot;label&quot;: &quot;Alpha segment ledger&quot;, &quot;role&quot;: &quot;required&quot;, &quot;outcome&quot;: &quot;ok&quot;, &quot;error_code&quot;: null, &quot;facts&quot;: [{&quot;fact_id&quot;: &quot;parallel-01-alpha&quot;, &quot;goal_id&quot;: &quot;alpha&quot;, &quot;claim&quot;: &quot;segment_value&quot;, &quot;value&quot;: 7}]},
+        {&quot;source_id&quot;: &quot;p01-beta&quot;, &quot;label&quot;: &quot;Beta segment ledger&quot;, &quot;role&quot;: &quot;required&quot;, &quot;outcome&quot;: &quot;ok&quot;, &quot;error_code&quot;: null, &quot;facts&quot;: [{&quot;fact_id&quot;: &quot;parallel-01-beta&quot;, &quot;goal_id&quot;: &quot;beta&quot;, &quot;claim&quot;: &quot;segment_value&quot;, &quot;value&quot;: 13}]},
+        {&quot;source_id&quot;: &quot;p01-gamma&quot;, &quot;label&quot;: &quot;Gamma segment ledger&quot;, &quot;role&quot;: &quot;required&quot;, &quot;outcome&quot;: &quot;ok&quot;, &quot;error_code&quot;: null, &quot;facts&quot;: [{&quot;fact_id&quot;: &quot;parallel-01-gamma&quot;, &quot;goal_id&quot;: &quot;gamma&quot;, &quot;claim&quot;: &quot;segment_value&quot;, &quot;value&quot;: 22}]}
+      ],
+      &quot;required_fact_ids&quot;: [&quot;parallel-01-alpha&quot;, &quot;parallel-01-beta&quot;, &quot;parallel-01-gamma&quot;],
+      &quot;expected_answer&quot;: {&quot;segments&quot;: {&quot;alpha&quot;: 7, &quot;beta&quot;: 13, &quot;gamma&quot;: 22}, &quot;total&quot;: 42, &quot;checksum&quot;: &quot;7-13-22:42&quot;},
+      &quot;subgoals&quot;: [&quot;alpha&quot;, &quot;beta&quot;, &quot;gamma&quot;],
+      &quot;merge_rule&quot;: &quot;total is the sum of alpha, beta, and gamma; checksum is alpha-beta-gamma:total&quot;
+    },
+    {
+      &quot;instance_id&quot;: &quot;parallel_decomposition-02&quot;,
+      &quot;family&quot;: &quot;parallel_decomposition&quot;,
+      &quot;task&quot;: &quot;Resolve independent alpha, beta, and gamma segment values for P-02. Return segments plus total=sum(values) and checksum=alpha-beta-gamma:total, citing all three supporting facts.&quot;,
+      &quot;sources&quot;: [
+        {&quot;source_id&quot;: &quot;p02-alpha&quot;, &quot;label&quot;: &quot;Alpha segment ledger&quot;, &quot;role&quot;: &quot;required&quot;, &quot;outcome&quot;: &quot;ok&quot;, &quot;error_code&quot;: null, &quot;facts&quot;: [{&quot;fact_id&quot;: &quot;parallel-02-alpha&quot;, &quot;goal_id&quot;: &quot;alpha&quot;, &quot;claim&quot;: &quot;segment_value&quot;, &quot;value&quot;: 9}]},
+        {&quot;source_id&quot;: &quot;p02-beta&quot;, &quot;label&quot;: &quot;Beta segment ledger&quot;, &quot;role&quot;: &quot;required&quot;, &quot;outcome&quot;: &quot;ok&quot;, &quot;error_code&quot;: null, &quot;facts&quot;: [{&quot;fact_id&quot;: &quot;parallel-02-beta&quot;, &quot;goal_id&quot;: &quot;beta&quot;, &quot;claim&quot;: &quot;segment_value&quot;, &quot;value&quot;: 16}]},
+        {&quot;source_id&quot;: &quot;p02-gamma&quot;, &quot;label&quot;: &quot;Gamma segment ledger&quot;, &quot;role&quot;: &quot;required&quot;, &quot;outcome&quot;: &quot;ok&quot;, &quot;error_code&quot;: null, &quot;facts&quot;: [{&quot;fact_id&quot;: &quot;parallel-02-gamma&quot;, &quot;goal_id&quot;: &quot;gamma&quot;, &quot;claim&quot;: &quot;segment_value&quot;, &quot;value&quot;: 24}]}
+      ],
+      &quot;required_fact_ids&quot;: [&quot;parallel-02-alpha&quot;, &quot;parallel-02-beta&quot;, &quot;parallel-02-gamma&quot;],
+      &quot;expected_answer&quot;: {&quot;segments&quot;: {&quot;alpha&quot;: 9, &quot;beta&quot;: 16, &quot;gamma&quot;: 24}, &quot;total&quot;: 49, &quot;checksum&quot;: &quot;9-16-24:49&quot;},
+      &quot;subgoals&quot;: [&quot;alpha&quot;, &quot;beta&quot;, &quot;gamma&quot;],
+      &quot;merge_rule&quot;: &quot;total is the sum of alpha, beta, and gamma; checksum is alpha-beta-gamma:total&quot;
+    },
+    {
+      &quot;instance_id&quot;: &quot;parallel_decomposition-03&quot;,
+      &quot;family&quot;: &quot;parallel_decomposition&quot;,
+      &quot;task&quot;: &quot;Resolve independent alpha, beta, and gamma segment values for P-03. Return segments plus total=sum(values) and checksum=alpha-beta-gamma:total, citing all three supporting facts.&quot;,
+      &quot;sources&quot;: [
+        {&quot;source_id&quot;: &quot;p03-alpha&quot;, &quot;label&quot;: &quot;Alpha segment ledger&quot;, &quot;role&quot;: &quot;required&quot;, &quot;outcome&quot;: &quot;ok&quot;, &quot;error_code&quot;: null, &quot;facts&quot;: [{&quot;fact_id&quot;: &quot;parallel-03-alpha&quot;, &quot;goal_id&quot;: &quot;alpha&quot;, &quot;claim&quot;: &quot;segment_value&quot;, &quot;value&quot;: 11}]},
+        {&quot;source_id&quot;: &quot;p03-beta&quot;, &quot;label&quot;: &quot;Beta segment ledger&quot;, &quot;role&quot;: &quot;required&quot;, &quot;outcome&quot;: &quot;ok&quot;, &quot;error_code&quot;: null, &quot;facts&quot;: [{&quot;fact_id&quot;: &quot;parallel-03-beta&quot;, &quot;goal_id&quot;: &quot;beta&quot;, &quot;claim&quot;: &quot;segment_value&quot;, &quot;value&quot;: 18}]},
+        {&quot;source_id&quot;: &quot;p03-gamma&quot;, &quot;label&quot;: &quot;Gamma segment ledger&quot;, &quot;role&quot;: &quot;required&quot;, &quot;outcome&quot;: &quot;ok&quot;, &quot;error_code&quot;: null, &quot;facts&quot;: [{&quot;fact_id&quot;: &quot;parallel-03-gamma&quot;, &quot;goal_id&quot;: &quot;gamma&quot;, &quot;claim&quot;: &quot;segment_value&quot;, &quot;value&quot;: 27}]}
+      ],
+      &quot;required_fact_ids&quot;: [&quot;parallel-03-alpha&quot;, &quot;parallel-03-beta&quot;, &quot;parallel-03-gamma&quot;],
+      &quot;expected_answer&quot;: {&quot;segments&quot;: {&quot;alpha&quot;: 11, &quot;beta&quot;: 18, &quot;gamma&quot;: 27}, &quot;total&quot;: 56, &quot;checksum&quot;: &quot;11-18-27:56&quot;},
+      &quot;subgoals&quot;: [&quot;alpha&quot;, &quot;beta&quot;, &quot;gamma&quot;],
+      &quot;merge_rule&quot;: &quot;total is the sum of alpha, beta, and gamma; checksum is alpha-beta-gamma:total&quot;
+    },
+    {
+      &quot;instance_id&quot;: &quot;parallel_decomposition-04&quot;,
+      &quot;family&quot;: &quot;parallel_decomposition&quot;,
+      &quot;task&quot;: &quot;Resolve independent alpha, beta, and gamma segment values for P-04. Return segments plus total=sum(values) and checksum=alpha-beta-gamma:total, citing all three supporting facts.&quot;,
+      &quot;sources&quot;: [
+        {&quot;source_id&quot;: &quot;p04-alpha&quot;, &quot;label&quot;: &quot;Alpha segment ledger&quot;, &quot;role&quot;: &quot;required&quot;, &quot;outcome&quot;: &quot;ok&quot;, &quot;error_code&quot;: null, &quot;facts&quot;: [{&quot;fact_id&quot;: &quot;parallel-04-alpha&quot;, &quot;goal_id&quot;: &quot;alpha&quot;, &quot;claim&quot;: &quot;segment_value&quot;, &quot;value&quot;: 14}]},
+        {&quot;source_id&quot;: &quot;p04-beta&quot;, &quot;label&quot;: &quot;Beta segment ledger&quot;, &quot;role&quot;: &quot;required&quot;, &quot;outcome&quot;: &quot;ok&quot;, &quot;error_code&quot;: null, &quot;facts&quot;: [{&quot;fact_id&quot;: &quot;parallel-04-beta&quot;, &quot;goal_id&quot;: &quot;beta&quot;, &quot;claim&quot;: &quot;segment_value&quot;, &quot;value&quot;: 21}]},
+        {&quot;source_id&quot;: &quot;p04-gamma&quot;, &quot;label&quot;: &quot;Gamma segment ledger&quot;, &quot;role&quot;: &quot;required&quot;, &quot;outcome&quot;: &quot;ok&quot;, &quot;error_code&quot;: null, &quot;facts&quot;: [{&quot;fact_id&quot;: &quot;parallel-04-gamma&quot;, &quot;goal_id&quot;: &quot;gamma&quot;, &quot;claim&quot;: &quot;segment_value&quot;, &quot;value&quot;: 31}]}
+      ],
+      &quot;required_fact_ids&quot;: [&quot;parallel-04-alpha&quot;, &quot;parallel-04-beta&quot;, &quot;parallel-04-gamma&quot;],
+      &quot;expected_answer&quot;: {&quot;segments&quot;: {&quot;alpha&quot;: 14, &quot;beta&quot;: 21, &quot;gamma&quot;: 31}, &quot;total&quot;: 66, &quot;checksum&quot;: &quot;14-21-31:66&quot;},
+      &quot;subgoals&quot;: [&quot;alpha&quot;, &quot;beta&quot;, &quot;gamma&quot;],
+      &quot;merge_rule&quot;: &quot;total is the sum of alpha, beta, and gamma; checksum is alpha-beta-gamma:total&quot;
+    }
+  ]
+}</pre> <small>SHA-256 · b1c85c278660edf1b45f3bb0d69324808c30b898fb3916c332b979c2ea47a8bc</small> </article> </div> </details> <p class="replay-contract-note">这是一条正式配对记录，但单条案例仍不能代替 24 次 Pilot B 统计。</p> </article> <div class="replay-toolbar" aria-label="回放控制"> <div class="replay-modes" role="group" aria-label="查看模式"> <button type="button" data-replay-mode="teach" aria-pressed="true">讲解模式</button> <button type="button" data-replay-mode="evidence" aria-pressed="false">证据模式</button> </div> <div class="replay-buttons"> <button type="button" data-replay-play aria-pressed="false">播放</button> <button type="button" data-replay-prev aria-label="上一步">上一步</button> <button type="button" data-replay-next aria-label="下一步">下一步</button> <button type="button" data-replay-reset>重置</button> <button type="button" data-replay-divergence>跳到首次动作分叉</button> </div> <label class="replay-range-label"> <span data-replay-step-label>第 1 / 16 步</span> <input data-replay-range type="range" min="1" max="16" value="1"> </label> </div> <div class="replay-path" aria-hidden="true"> <span data-replay-pulse>模型动作</span><span data-replay-pulse>统一工具入口</span><span data-replay-pulse>工具反馈</span><span data-replay-pulse>状态与证据</span><span data-replay-pulse>代码验收</span> </div> <p class="replay-live sr-only" data-replay-live aria-live="polite">
+已载入采购限流恢复，第 1 步。
+</p> <div class="replay-lanes"> <article class="replay-lane" data-replay-lane="0"> <header>  <span>A</span> <div>  <small>架构泳道</small> <h3 data-replay-arm-name>开放式执行</h3>  </div>  </header> <div class="replay-teaching" data-replay-teaching> <b>根据公开事件生成的教学摘要</b> <p data-replay-teaching-copy>读取一份冻结附件，并把事实加入当前记录。</p> </div> <dl class="replay-step-grid"> <div>  <dt>当前状态</dt> <dd data-replay-state>{
+  &quot;advanced_units&quot;: 0,
+  &quot;evidence_sources&quot;: 0,
+  &quot;finished&quot;: false,
+  &quot;last_error&quot;: &quot;none&quot;,
+  &quot;read_inputs&quot;: [
+    &quot;requirements.md&quot;
+  ],
+  &quot;resources_discovered&quot;: false,
+  &quot;written_outputs&quot;: []
+}</dd>  </div> <div>  <dt>当前可用工具</dt> <dd data-replay-tools>fetch_resource · finish · list_resources · read_file · wait_or_advance · write_output</dd>  </div> <div>  <dt>模型生成的工具动作</dt> <dd data-replay-action>读取附件</dd>  </div> <div>  <dt>工具返回</dt> <dd data-replay-observation> {
+  &quot;error_code&quot;: &quot;none&quot;,
+  &quot;fact_count&quot;: 2,
+  &quot;ok&quot;: true,
+  &quot;retry_after_units&quot;: null,
+  &quot;state_changed&quot;: false,
+  &quot;status_code&quot;: 200
+} </dd>  </div> <div>  <dt>状态 / 证据变化</dt> <dd data-replay-delta> {
+  &quot;state&quot;: {
+    &quot;last_error&quot;: &quot;none&quot;,
+    &quot;read_inputs&quot;: [
+      &quot;requirements.md&quot;
+    ]
+  },
+  &quot;evidence&quot;: {
+    &quot;fact_count&quot;: 2,
+    &quot;source_added&quot;: &quot;obs-001&quot;
+  }
+} </dd>  </div> <div>  <dt>代码验收</dt> <dd data-replay-verification>pending</dd>  </div> </dl> <div class="replay-evidence" data-replay-evidence hidden> <code data-replay-evidence-action> {
+  &quot;path&quot;: &quot;requirements.md&quot;,
+  &quot;tool&quot;: &quot;read_file&quot;
+} </code> <code data-replay-evidence-meta> {
+  &quot;disposition&quot;: &quot;gateway_success&quot;,
+  &quot;observation&quot;: {
+    &quot;error_code&quot;: &quot;none&quot;,
+    &quot;fact_count&quot;: 2,
+    &quot;ok&quot;: true,
+    &quot;retry_after_units&quot;: null,
+    &quot;state_changed&quot;: false,
+    &quot;status_code&quot;: 200
+  },
+  &quot;prompt_sha256&quot;: &quot;08d5d092624b629c5062531c5262d5c9772a26b5c692763526521eb4cf6a85e8&quot;,
+  &quot;response_sha256&quot;: &quot;5450adad906e1fc405387273bdaea95b942b399de7c7d6535239fb4e1e325cf1&quot;
+} </code> </div> <footer data-replay-usage> 1 次模型 ·  1 次工具 ·  606 tokens ·  0.67s
+</footer> </article><article class="replay-lane" data-replay-lane="1"> <header>  <span>B</span> <div>  <small>架构泳道</small> <h3 data-replay-arm-name>工作流受控执行</h3>  </div>  </header> <div class="replay-teaching" data-replay-teaching> <b>根据公开事件生成的教学摘要</b> <p data-replay-teaching-copy>读取一份冻结附件，并把事实加入当前记录。</p> </div> <dl class="replay-step-grid"> <div>  <dt>当前状态</dt> <dd data-replay-state>{
+  &quot;advanced_units&quot;: 0,
+  &quot;evidence_sources&quot;: 0,
+  &quot;finished&quot;: false,
+  &quot;last_error&quot;: &quot;none&quot;,
+  &quot;read_inputs&quot;: [
+    &quot;requirements.md&quot;
+  ],
+  &quot;resources_discovered&quot;: false,
+  &quot;written_outputs&quot;: []
+}</dd>  </div> <div>  <dt>当前可用工具</dt> <dd data-replay-tools>list_resources · read_file</dd>  </div> <div>  <dt>模型生成的工具动作</dt> <dd data-replay-action>读取附件</dd>  </div> <div>  <dt>工具返回</dt> <dd data-replay-observation> {
+  &quot;error_code&quot;: &quot;none&quot;,
+  &quot;fact_count&quot;: 2,
+  &quot;ok&quot;: true,
+  &quot;retry_after_units&quot;: null,
+  &quot;state_changed&quot;: false,
+  &quot;status_code&quot;: 200
+} </dd>  </div> <div>  <dt>状态 / 证据变化</dt> <dd data-replay-delta> {
+  &quot;state&quot;: {
+    &quot;last_error&quot;: &quot;none&quot;,
+    &quot;read_inputs&quot;: [
+      &quot;requirements.md&quot;
+    ]
+  },
+  &quot;evidence&quot;: {
+    &quot;fact_count&quot;: 2,
+    &quot;source_added&quot;: &quot;obs-001&quot;
+  }
+} </dd>  </div> <div>  <dt>代码验收</dt> <dd data-replay-verification>pending</dd>  </div> </dl> <div class="replay-evidence" data-replay-evidence hidden> <code data-replay-evidence-action> {
+  &quot;path&quot;: &quot;requirements.md&quot;,
+  &quot;tool&quot;: &quot;read_file&quot;
+} </code> <code data-replay-evidence-meta> {
+  &quot;disposition&quot;: &quot;gateway_success&quot;,
+  &quot;observation&quot;: {
+    &quot;error_code&quot;: &quot;none&quot;,
+    &quot;fact_count&quot;: 2,
+    &quot;ok&quot;: true,
+    &quot;retry_after_units&quot;: null,
+    &quot;state_changed&quot;: false,
+    &quot;status_code&quot;: 200
+  },
+  &quot;prompt_sha256&quot;: &quot;cd07c7e89a36fad19c441eb8b9e27a6cb032708385d07143c94b0ac71ef4ca0f&quot;,
+  &quot;response_sha256&quot;: &quot;5450adad906e1fc405387273bdaea95b942b399de7c7d6535239fb4e1e325cf1&quot;
+} </code> </div> <footer data-replay-usage> 1 次模型 ·  1 次工具 ·  725 tokens ·  0.94s
+</footer> </article> </div> <div class="replay-results" data-replay-results="procurement-rate-limit-01"> <article class="replay-result is-failure"> <header> <h3>开放式执行</h3> <strong>未通过代码验收</strong> </header> <pre>没有形成可验收输出</pre> <ul class="replay-checks" aria-label="开放式执行验收项"> <li class="is-passed"> <span aria-hidden="true"> ✓ </span> <b>冻结输入完整</b> <small>  all protected fixture hashes match the run-start manifest </small> </li><li> <span aria-hidden="true"> × </span> <b>交付格式正确</b> <small>  decision.json is missing </small> </li><li class="is-not-run"> <span aria-hidden="true"> — </span> <b>供应商选择正确</b> <small> 未执行 ·  not evaluated because decision schema failed </small> </li><li class="is-not-run"> <span aria-hidden="true"> — </span> <b>数量与价格正确</b> <small> 未执行 ·  not evaluated because decision schema failed </small> </li><li class="is-not-run"> <span aria-hidden="true"> — </span> <b>淘汰理由完整</b> <small> 未执行 ·  not evaluated because decision schema failed </small> </li><li> <span aria-hidden="true"> × </span> <b>结论有工具证据</b> <small>  evidence/claims.json is missing </small> </li> </ul> <p> 16 次模型 · 16 次工具 ·  25,829 tokens ·  12.56s
+ </p> </article><article class="replay-result is-success"> <header> <h3>工作流受控执行</h3> <strong>代码验收通过</strong> </header> <pre>{
+  &quot;currency&quot;: &quot;USD&quot;,
+  &quot;evidence_file&quot;: &quot;evidence/claims.json&quot;,
+  &quot;quantity&quot;: 100,
+  &quot;rejections&quot;: [
+    {
+      &quot;reason_code&quot;: &quot;higher_authoritative_price&quot;,
+      &quot;vendor_id&quot;: &quot;atlas&quot;
+    },
+    {
+      &quot;reason_code&quot;: &quot;not_approved&quot;,
+      &quot;vendor_id&quot;: &quot;harbor&quot;
+    }
+  ],
+  &quot;schema_version&quot;: &quot;1.0&quot;,
+  &quot;total_price_usd&quot;: 9600,
+  &quot;unit_price_usd&quot;: 96,
+  &quot;vendor_id&quot;: &quot;northstar&quot;,
+  &quot;vendor_name&quot;: &quot;Northstar Supplies&quot;
+}</pre> <ul class="replay-checks" aria-label="工作流受控执行验收项"> <li class="is-passed"> <span aria-hidden="true"> ✓ </span> <b>冻结输入完整</b> <small>  all protected fixture hashes match the run-start manifest </small> </li><li class="is-passed"> <span aria-hidden="true"> ✓ </span> <b>交付格式正确</b> <small>  decision.json matches schema version 1.0 </small> </li><li class="is-passed"> <span aria-hidden="true"> ✓ </span> <b>供应商选择正确</b> <small>  selected vendor identity and currency match derived Gold </small> </li><li class="is-passed"> <span aria-hidden="true"> ✓ </span> <b>数量与价格正确</b> <small>  quantity, unit price, and total match derived Gold </small> </li><li class="is-passed"> <span aria-hidden="true"> ✓ </span> <b>淘汰理由完整</b> <small>  all non-selected vendors have the derived reason </small> </li><li class="is-passed"> <span aria-hidden="true"> ✓ </span> <b>结论有工具证据</b> <small>  all claims resolve to successful tool-observation facts </small> </li> </ul> <p> 9 次模型 · 9 次工具 ·  9,373 tokens ·  10.49s
+ </p> </article> <p class="replay-result-boundary">这组新配对只解释执行链，不计入 Pilot A 或 Pilot B 的成功率。</p> </div><div class="replay-results" data-replay-results="alternative-path-01" hidden> <article class="replay-result is-success"> <header> <h3>开放式执行</h3> <strong>代码验收通过</strong> </header> <pre>{
+  &quot;release_token&quot;: &quot;CIRRUS-41&quot;
+}</pre> <ul class="replay-checks" aria-label="开放式执行验收项"> <li class="is-passed"> <span aria-hidden="true"> ✓ </span> <b>任务效用</b> <small>  100 </small> </li><li class="is-passed"> <span aria-hidden="true"> ✓ </span> <b>关键事实覆盖</b> <small>  100% </small> </li><li class="is-passed"> <span aria-hidden="true"> ✓ </span> <b>错误证据</b> <small>  0 </small> </li><li class="is-passed"> <span aria-hidden="true"> ✓ </span> <b>合并遗漏</b> <small>  0 </small> </li><li class="is-passed"> <span aria-hidden="true"> ✓ </span> <b>合并冲突</b> <small>  0 </small> </li> </ul> <p> 5 次模型 · 5 次工具 ·  2,796 tokens ·  5.02s
+ </p> </article><article class="replay-result is-success"> <header> <h3>目标图混合执行</h3> <strong>代码验收通过</strong> </header> <pre>{
+  &quot;release_token&quot;: &quot;CIRRUS-41&quot;
+}</pre> <ul class="replay-checks" aria-label="目标图混合执行验收项"> <li class="is-passed"> <span aria-hidden="true"> ✓ </span> <b>任务效用</b> <small>  100 </small> </li><li class="is-passed"> <span aria-hidden="true"> ✓ </span> <b>关键事实覆盖</b> <small>  100% </small> </li><li class="is-passed"> <span aria-hidden="true"> ✓ </span> <b>错误证据</b> <small>  0 </small> </li><li class="is-passed"> <span aria-hidden="true"> ✓ </span> <b>合并遗漏</b> <small>  0 </small> </li><li class="is-passed"> <span aria-hidden="true"> ✓ </span> <b>合并冲突</b> <small>  0 </small> </li> </ul> <p> 8 次模型 · 5 次工具 ·  4,655 tokens ·  8.09s
+ · 3 次控制器拒绝 </p> </article> <p class="replay-result-boundary">这是一条正式配对记录，但单条案例仍不能代替 24 次 Pilot B 统计。</p> </div> <div class="replay-static-record" aria-label="完整静态回放记录"> <section> <h3>采购限流恢复 · 完整双泳道</h3> <p>在相同附件、工具、限流场景、模型与预算下完成采购决策并提交可验证证据。</p> <p> <b>冻结输入：</b> requirements.md · vendors.csv · amendments.csv <br> <b>共享条件：</b> deepseek-v4-flash · read_file · list_resources · fetch_resource · write_output · wait_or_advance · finish ·
+            相同代码验收
+</p> <section class="replay-static-lane"> <h4>开放式执行</h4> <table> <caption>开放式执行的完整公开事件记录</caption> <thead> <tr> <th>步骤</th> <th>工具动作</th> <th>工具反馈</th> <th>状态 / 证据变化</th> <th>代码验收</th> <th>累计使用</th> </tr> </thead> <tbody> <tr> <th scope="row">1</th> <td> 读取附件 <small>{
+  &quot;path&quot;: &quot;requirements.md&quot;,
+  &quot;tool&quot;: &quot;read_file&quot;
+}</small> </td> <td>{
+  &quot;error_code&quot;: &quot;none&quot;,
+  &quot;fact_count&quot;: 2,
+  &quot;ok&quot;: true,
+  &quot;retry_after_units&quot;: null,
+  &quot;state_changed&quot;: false,
+  &quot;status_code&quot;: 200
+}</td> <td> {
+  &quot;state&quot;: {
+    &quot;last_error&quot;: &quot;none&quot;,
+    &quot;read_inputs&quot;: [
+      &quot;requirements.md&quot;
+    ]
+  },
+  &quot;evidence&quot;: {
+    &quot;fact_count&quot;: 2,
+    &quot;source_added&quot;: &quot;obs-001&quot;
+  }
+} </td> <td>pending</td> <td> 1 次模型 ·  1 次工具 ·  606 
+tokens ·  0.67s
+</td> </tr><tr> <th scope="row">2</th> <td> 读取附件 <small>{
+  &quot;path&quot;: &quot;vendors.csv&quot;,
+  &quot;tool&quot;: &quot;read_file&quot;
+}</small> </td> <td>{
+  &quot;error_code&quot;: &quot;none&quot;,
+  &quot;fact_count&quot;: 2,
+  &quot;ok&quot;: true,
+  &quot;retry_after_units&quot;: null,
+  &quot;state_changed&quot;: false,
+  &quot;status_code&quot;: 200
+}</td> <td> {
+  &quot;state&quot;: {
+    &quot;read_inputs&quot;: [
+      &quot;requirements.md&quot;,
+      &quot;vendors.csv&quot;
+    ]
+  },
+  &quot;evidence&quot;: {
+    &quot;fact_count&quot;: 2,
+    &quot;source_added&quot;: &quot;obs-002&quot;
+  }
+} </td> <td>pending</td> <td> 2 次模型 ·  2 次工具 ·  1,437 
+tokens ·  1.47s
+</td> </tr><tr> <th scope="row">3</th> <td> 读取附件 <small>{
+  &quot;path&quot;: &quot;amendments.csv&quot;,
+  &quot;tool&quot;: &quot;read_file&quot;
+}</small> </td> <td>{
+  &quot;error_code&quot;: &quot;none&quot;,
+  &quot;fact_count&quot;: 2,
+  &quot;ok&quot;: true,
+  &quot;retry_after_units&quot;: null,
+  &quot;state_changed&quot;: false,
+  &quot;status_code&quot;: 200
+}</td> <td> {
+  &quot;state&quot;: {
+    &quot;read_inputs&quot;: [
+      &quot;amendments.csv&quot;,
+      &quot;requirements.md&quot;,
+      &quot;vendors.csv&quot;
+    ]
+  },
+  &quot;evidence&quot;: {
+    &quot;fact_count&quot;: 2,
+    &quot;source_added&quot;: &quot;obs-003&quot;
+  }
+} </td> <td>pending</td> <td> 3 次模型 ·  3 次工具 ·  2,441 
+tokens ·  2.21s
+</td> </tr><tr> <th scope="row">4</th> <td> 列出远程资源 <small>{
+  &quot;tool&quot;: &quot;list_resources&quot;
+}</small> </td> <td>{
+  &quot;error_code&quot;: &quot;none&quot;,
+  &quot;fact_count&quot;: 2,
+  &quot;ok&quot;: true,
+  &quot;retry_after_units&quot;: null,
+  &quot;state_changed&quot;: false,
+  &quot;status_code&quot;: 200
+}</td> <td> {
+  &quot;state&quot;: {
+    &quot;resources_discovered&quot;: true
+  },
+  &quot;evidence&quot;: {
+    &quot;fact_count&quot;: 2,
+    &quot;source_added&quot;: null
+  }
+} </td> <td>pending</td> <td> 4 次模型 ·  4 次工具 ·  3,559 
+tokens ·  2.91s
+</td> </tr><tr> <th scope="row">5</th> <td> 获取远程资源 <small>{
+  &quot;resource&quot;: &quot;live_quote&quot;,
+  &quot;token_present&quot;: false,
+  &quot;tool&quot;: &quot;fetch_resource&quot;
+}</small> </td> <td>{
+  &quot;error_code&quot;: &quot;rate_limited&quot;,
+  &quot;fact_count&quot;: 1,
+  &quot;ok&quot;: false,
+  &quot;retry_after_units&quot;: 1,
+  &quot;state_changed&quot;: false,
+  &quot;status_code&quot;: 429
+}</td> <td> {
+  &quot;state&quot;: {
+    &quot;last_error&quot;: &quot;rate_limited&quot;
+  },
+  &quot;evidence&quot;: {
+    &quot;fact_count&quot;: 1,
+    &quot;source_added&quot;: null
+  }
+} </td> <td>pending</td> <td> 5 次模型 ·  5 次工具 ·  4,777 
+tokens ·  3.65s
+</td> </tr><tr> <th scope="row">6</th> <td> 等待后重试 <small>{
+  &quot;tool&quot;: &quot;wait_or_advance&quot;,
+  &quot;units&quot;: 1
+}</small> </td> <td>{
+  &quot;error_code&quot;: &quot;none&quot;,
+  &quot;fact_count&quot;: 2,
+  &quot;ok&quot;: true,
+  &quot;retry_after_units&quot;: null,
+  &quot;state_changed&quot;: true,
+  &quot;status_code&quot;: 200
+}</td> <td> {
+  &quot;state&quot;: {
+    &quot;advanced_units&quot;: 1,
+    &quot;last_error&quot;: &quot;none&quot;
+  },
+  &quot;evidence&quot;: {
+    &quot;fact_count&quot;: 2,
+    &quot;source_added&quot;: null
+  }
+} </td> <td>pending</td> <td> 6 次模型 ·  6 次工具 ·  6,094 
+tokens ·  4.49s
+</td> </tr><tr> <th scope="row">7</th> <td> 获取远程资源 <small>{
+  &quot;resource&quot;: &quot;live_quote&quot;,
+  &quot;token_present&quot;: false,
+  &quot;tool&quot;: &quot;fetch_resource&quot;
+}</small> </td> <td>{
+  &quot;error_code&quot;: &quot;none&quot;,
+  &quot;fact_count&quot;: 5,
+  &quot;ok&quot;: true,
+  &quot;retry_after_units&quot;: null,
+  &quot;state_changed&quot;: true,
+  &quot;status_code&quot;: 200
+}</td> <td> {
+  &quot;state&quot;: {
+    &quot;evidence_sources&quot;: 1
+  },
+  &quot;evidence&quot;: {
+    &quot;fact_count&quot;: 5,
+    &quot;source_added&quot;: &quot;obs-007&quot;
+  }
+} </td> <td>pending</td> <td> 7 次模型 ·  7 次工具 ·  7,514 
+tokens ·  5.20s
+</td> </tr><tr> <th scope="row">8</th> <td> 获取远程资源 <small>{
+  &quot;resource&quot;: &quot;live_quote&quot;,
+  &quot;token_present&quot;: false,
+  &quot;tool&quot;: &quot;fetch_resource&quot;
+}</small> </td> <td>{
+  &quot;error_code&quot;: &quot;none&quot;,
+  &quot;fact_count&quot;: 5,
+  &quot;ok&quot;: true,
+  &quot;retry_after_units&quot;: null,
+  &quot;state_changed&quot;: true,
+  &quot;status_code&quot;: 200
+}</td> <td> {
+  &quot;state&quot;: {
+    &quot;evidence_sources&quot;: 2
+  },
+  &quot;evidence&quot;: {
+    &quot;fact_count&quot;: 5,
+    &quot;source_added&quot;: &quot;obs-008&quot;
+  }
+} </td> <td>pending</td> <td> 8 次模型 ·  8 次工具 ·  9,057 
+tokens ·  5.90s
+</td> </tr><tr> <th scope="row">9</th> <td> 获取远程资源 <small>{
+  &quot;resource&quot;: &quot;live_quote&quot;,
+  &quot;token_present&quot;: false,
+  &quot;tool&quot;: &quot;fetch_resource&quot;
+}</small> </td> <td>{
+  &quot;error_code&quot;: &quot;none&quot;,
+  &quot;fact_count&quot;: 5,
+  &quot;ok&quot;: true,
+  &quot;retry_after_units&quot;: null,
+  &quot;state_changed&quot;: true,
+  &quot;status_code&quot;: 200
+}</td> <td> {
+  &quot;state&quot;: {
+    &quot;evidence_sources&quot;: 3
+  },
+  &quot;evidence&quot;: {
+    &quot;fact_count&quot;: 5,
+    &quot;source_added&quot;: &quot;obs-009&quot;
+  }
+} </td> <td>pending</td> <td> 9 次模型 ·  9 次工具 ·  10,723 
+tokens ·  6.60s
+</td> </tr><tr> <th scope="row">10</th> <td> 获取远程资源 <small>{
+  &quot;resource&quot;: &quot;live_quote&quot;,
+  &quot;token_present&quot;: false,
+  &quot;tool&quot;: &quot;fetch_resource&quot;
+}</small> </td> <td>{
+  &quot;error_code&quot;: &quot;none&quot;,
+  &quot;fact_count&quot;: 5,
+  &quot;ok&quot;: true,
+  &quot;retry_after_units&quot;: null,
+  &quot;state_changed&quot;: true,
+  &quot;status_code&quot;: 200
+}</td> <td> {
+  &quot;state&quot;: {
+    &quot;evidence_sources&quot;: 4
+  },
+  &quot;evidence&quot;: {
+    &quot;fact_count&quot;: 5,
+    &quot;source_added&quot;: &quot;obs-010&quot;
+  }
+} </td> <td>pending</td> <td> 10 次模型 ·  10 次工具 ·  12,512 
+tokens ·  7.39s
+</td> </tr><tr> <th scope="row">11</th> <td> 获取远程资源 <small>{
+  &quot;resource&quot;: &quot;live_quote&quot;,
+  &quot;token_present&quot;: false,
+  &quot;tool&quot;: &quot;fetch_resource&quot;
+}</small> </td> <td>{
+  &quot;error_code&quot;: &quot;none&quot;,
+  &quot;fact_count&quot;: 5,
+  &quot;ok&quot;: true,
+  &quot;retry_after_units&quot;: null,
+  &quot;state_changed&quot;: true,
+  &quot;status_code&quot;: 200
+}</td> <td> {
+  &quot;state&quot;: {
+    &quot;evidence_sources&quot;: 5
+  },
+  &quot;evidence&quot;: {
+    &quot;fact_count&quot;: 5,
+    &quot;source_added&quot;: &quot;obs-011&quot;
+  }
+} </td> <td>pending</td> <td> 11 次模型 ·  11 次工具 ·  14,424 
+tokens ·  8.11s
+</td> </tr><tr> <th scope="row">12</th> <td> 获取远程资源 <small>{
+  &quot;resource&quot;: &quot;live_quote&quot;,
+  &quot;token_present&quot;: false,
+  &quot;tool&quot;: &quot;fetch_resource&quot;
+}</small> </td> <td>{
+  &quot;error_code&quot;: &quot;none&quot;,
+  &quot;fact_count&quot;: 5,
+  &quot;ok&quot;: true,
+  &quot;retry_after_units&quot;: null,
+  &quot;state_changed&quot;: true,
+  &quot;status_code&quot;: 200
+}</td> <td> {
+  &quot;state&quot;: {
+    &quot;evidence_sources&quot;: 6
+  },
+  &quot;evidence&quot;: {
+    &quot;fact_count&quot;: 5,
+    &quot;source_added&quot;: &quot;obs-012&quot;
+  }
+} </td> <td>pending</td> <td> 12 次模型 ·  12 次工具 ·  16,459 
+tokens ·  8.87s
+</td> </tr><tr> <th scope="row">13</th> <td> 获取远程资源 <small>{
+  &quot;resource&quot;: &quot;live_quote&quot;,
+  &quot;token_present&quot;: false,
+  &quot;tool&quot;: &quot;fetch_resource&quot;
+}</small> </td> <td>{
+  &quot;error_code&quot;: &quot;none&quot;,
+  &quot;fact_count&quot;: 5,
+  &quot;ok&quot;: true,
+  &quot;retry_after_units&quot;: null,
+  &quot;state_changed&quot;: true,
+  &quot;status_code&quot;: 200
+}</td> <td> {
+  &quot;state&quot;: {
+    &quot;evidence_sources&quot;: 7
+  },
+  &quot;evidence&quot;: {
+    &quot;fact_count&quot;: 5,
+    &quot;source_added&quot;: &quot;obs-013&quot;
+  }
+} </td> <td>pending</td> <td> 13 次模型 ·  13 次工具 ·  18,617 
+tokens ·  9.78s
+</td> </tr><tr> <th scope="row">14</th> <td> 获取远程资源 <small>{
+  &quot;resource&quot;: &quot;live_quote&quot;,
+  &quot;token_present&quot;: false,
+  &quot;tool&quot;: &quot;fetch_resource&quot;
+}</small> </td> <td>{
+  &quot;error_code&quot;: &quot;none&quot;,
+  &quot;fact_count&quot;: 5,
+  &quot;ok&quot;: true,
+  &quot;retry_after_units&quot;: null,
+  &quot;state_changed&quot;: true,
+  &quot;status_code&quot;: 200
+}</td> <td> {
+  &quot;state&quot;: {
+    &quot;evidence_sources&quot;: 8
+  },
+  &quot;evidence&quot;: {
+    &quot;fact_count&quot;: 5,
+    &quot;source_added&quot;: &quot;obs-014&quot;
+  }
+} </td> <td>pending</td> <td> 14 次模型 ·  14 次工具 ·  20,898 
+tokens ·  10.57s
+</td> </tr><tr> <th scope="row">15</th> <td> 获取远程资源 <small>{
+  &quot;resource&quot;: &quot;live_quote&quot;,
+  &quot;token_present&quot;: false,
+  &quot;tool&quot;: &quot;fetch_resource&quot;
+}</small> </td> <td>{
+  &quot;error_code&quot;: &quot;none&quot;,
+  &quot;fact_count&quot;: 5,
+  &quot;ok&quot;: true,
+  &quot;retry_after_units&quot;: null,
+  &quot;state_changed&quot;: true,
+  &quot;status_code&quot;: 200
+}</td> <td> {
+  &quot;state&quot;: {
+    &quot;evidence_sources&quot;: 9
+  },
+  &quot;evidence&quot;: {
+    &quot;fact_count&quot;: 5,
+    &quot;source_added&quot;: &quot;obs-015&quot;
+  }
+} </td> <td>pending</td> <td> 15 次模型 ·  15 次工具 ·  23,302 
+tokens ·  11.58s
+</td> </tr><tr> <th scope="row">16</th> <td> 获取远程资源 <small>{
+  &quot;resource&quot;: &quot;live_quote&quot;,
+  &quot;token_present&quot;: false,
+  &quot;tool&quot;: &quot;fetch_resource&quot;
+}</small> </td> <td>{
+  &quot;error_code&quot;: &quot;none&quot;,
+  &quot;fact_count&quot;: 5,
+  &quot;ok&quot;: true,
+  &quot;retry_after_units&quot;: null,
+  &quot;state_changed&quot;: true,
+  &quot;status_code&quot;: 200
+}</td> <td> {
+  &quot;state&quot;: {
+    &quot;evidence_sources&quot;: 10
+  },
+  &quot;evidence&quot;: {
+    &quot;fact_count&quot;: 5,
+    &quot;source_added&quot;: &quot;obs-016&quot;
+  }
+} </td> <td>failed</td> <td> 16 次模型 ·  16 次工具 ·  25,829 
+tokens ·  12.55s
+</td> </tr> </tbody> </table> <div class="replay-static-result"> <b>未通过代码验收</b> <pre>                  没有形成可验收输出
+                </pre> <ul class="replay-checks"> <li> <b>冻结输入完整</b> <small>  all protected fixture hashes match the run-start manifest </small> </li><li> <b>交付格式正确</b> <small>  decision.json is missing </small> </li><li> <b>供应商选择正确</b> <small> 未执行 ·  not evaluated because decision schema failed </small> </li><li> <b>数量与价格正确</b> <small> 未执行 ·  not evaluated because decision schema failed </small> </li><li> <b>淘汰理由完整</b> <small> 未执行 ·  not evaluated because decision schema failed </small> </li><li> <b>结论有工具证据</b> <small>  evidence/claims.json is missing </small> </li> </ul> <p> 16 次模型 · 16 
+次工具 · 25,829 tokens ·  12.56s
+</p> </div> </section><section class="replay-static-lane"> <h4>工作流受控执行</h4> <table> <caption>工作流受控执行的完整公开事件记录</caption> <thead> <tr> <th>步骤</th> <th>工具动作</th> <th>工具反馈</th> <th>状态 / 证据变化</th> <th>代码验收</th> <th>累计使用</th> </tr> </thead> <tbody> <tr> <th scope="row">1</th> <td> 读取附件 <small>{
+  &quot;path&quot;: &quot;requirements.md&quot;,
+  &quot;tool&quot;: &quot;read_file&quot;
+}</small> </td> <td>{
+  &quot;error_code&quot;: &quot;none&quot;,
+  &quot;fact_count&quot;: 2,
+  &quot;ok&quot;: true,
+  &quot;retry_after_units&quot;: null,
+  &quot;state_changed&quot;: false,
+  &quot;status_code&quot;: 200
+}</td> <td> {
+  &quot;state&quot;: {
+    &quot;last_error&quot;: &quot;none&quot;,
+    &quot;read_inputs&quot;: [
+      &quot;requirements.md&quot;
+    ]
+  },
+  &quot;evidence&quot;: {
+    &quot;fact_count&quot;: 2,
+    &quot;source_added&quot;: &quot;obs-001&quot;
+  }
+} </td> <td>pending</td> <td> 1 次模型 ·  1 次工具 ·  725 
+tokens ·  0.94s
+</td> </tr><tr> <th scope="row">2</th> <td> 读取附件 <small>{
+  &quot;path&quot;: &quot;vendors.csv&quot;,
+  &quot;tool&quot;: &quot;read_file&quot;
+}</small> </td> <td>{
+  &quot;error_code&quot;: &quot;none&quot;,
+  &quot;fact_count&quot;: 2,
+  &quot;ok&quot;: true,
+  &quot;retry_after_units&quot;: null,
+  &quot;state_changed&quot;: false,
+  &quot;status_code&quot;: 200
+}</td> <td> {
+  &quot;state&quot;: {
+    &quot;read_inputs&quot;: [
+      &quot;requirements.md&quot;,
+      &quot;vendors.csv&quot;
+    ]
+  },
+  &quot;evidence&quot;: {
+    &quot;fact_count&quot;: 2,
+    &quot;source_added&quot;: &quot;obs-002&quot;
+  }
+} </td> <td>pending</td> <td> 2 次模型 ·  2 次工具 ·  1,599 
+tokens ·  2.04s
+</td> </tr><tr> <th scope="row">3</th> <td> 读取附件 <small>{
+  &quot;path&quot;: &quot;amendments.csv&quot;,
+  &quot;tool&quot;: &quot;read_file&quot;
+}</small> </td> <td>{
+  &quot;error_code&quot;: &quot;none&quot;,
+  &quot;fact_count&quot;: 2,
+  &quot;ok&quot;: true,
+  &quot;retry_after_units&quot;: null,
+  &quot;state_changed&quot;: false,
+  &quot;status_code&quot;: 200
+}</td> <td> {
+  &quot;state&quot;: {
+    &quot;read_inputs&quot;: [
+      &quot;amendments.csv&quot;,
+      &quot;requirements.md&quot;,
+      &quot;vendors.csv&quot;
+    ]
+  },
+  &quot;evidence&quot;: {
+    &quot;fact_count&quot;: 2,
+    &quot;source_added&quot;: &quot;obs-003&quot;
+  }
+} </td> <td>pending</td> <td> 3 次模型 ·  3 次工具 ·  2,569 
+tokens ·  2.91s
+</td> </tr><tr> <th scope="row">4</th> <td> 列出远程资源 <small>{
+  &quot;tool&quot;: &quot;list_resources&quot;
+}</small> </td> <td>{
+  &quot;error_code&quot;: &quot;none&quot;,
+  &quot;fact_count&quot;: 2,
+  &quot;ok&quot;: true,
+  &quot;retry_after_units&quot;: null,
+  &quot;state_changed&quot;: false,
+  &quot;status_code&quot;: 200
+}</td> <td> {
+  &quot;state&quot;: {
+    &quot;resources_discovered&quot;: true
+  },
+  &quot;evidence&quot;: {
+    &quot;fact_count&quot;: 2,
+    &quot;source_added&quot;: null
+  }
+} </td> <td>pending</td> <td> 4 次模型 ·  4 次工具 ·  3,579 
+tokens ·  4.13s
+</td> </tr><tr> <th scope="row">5</th> <td> 获取远程资源 <small>{
+  &quot;resource&quot;: &quot;live_quote&quot;,
+  &quot;token_present&quot;: false,
+  &quot;tool&quot;: &quot;fetch_resource&quot;
+}</small> </td> <td>{
+  &quot;error_code&quot;: &quot;rate_limited&quot;,
+  &quot;fact_count&quot;: 1,
+  &quot;ok&quot;: false,
+  &quot;retry_after_units&quot;: 1,
+  &quot;state_changed&quot;: false,
+  &quot;status_code&quot;: 429
+}</td> <td> {
+  &quot;state&quot;: {
+    &quot;last_error&quot;: &quot;rate_limited&quot;
+  },
+  &quot;evidence&quot;: {
+    &quot;fact_count&quot;: 1,
+    &quot;source_added&quot;: null
+  }
+} </td> <td>pending</td> <td> 5 次模型 ·  5 次工具 ·  4,623 
+tokens ·  4.87s
+</td> </tr><tr> <th scope="row">6</th> <td> 等待后重试 <small>{
+  &quot;tool&quot;: &quot;wait_or_advance&quot;,
+  &quot;units&quot;: 1
+}</small> </td> <td>{
+  &quot;error_code&quot;: &quot;none&quot;,
+  &quot;fact_count&quot;: 2,
+  &quot;ok&quot;: true,
+  &quot;retry_after_units&quot;: null,
+  &quot;state_changed&quot;: true,
+  &quot;status_code&quot;: 200
+}</td> <td> {
+  &quot;state&quot;: {
+    &quot;advanced_units&quot;: 1,
+    &quot;last_error&quot;: &quot;none&quot;
+  },
+  &quot;evidence&quot;: {
+    &quot;fact_count&quot;: 2,
+    &quot;source_added&quot;: null
+  }
+} </td> <td>pending</td> <td> 6 次模型 ·  6 次工具 ·  5,682 
+tokens ·  5.67s
+</td> </tr><tr> <th scope="row">7</th> <td> 获取远程资源 <small>{
+  &quot;resource&quot;: &quot;live_quote&quot;,
+  &quot;token_present&quot;: false,
+  &quot;tool&quot;: &quot;fetch_resource&quot;
+}</small> </td> <td>{
+  &quot;error_code&quot;: &quot;none&quot;,
+  &quot;fact_count&quot;: 5,
+  &quot;ok&quot;: true,
+  &quot;retry_after_units&quot;: null,
+  &quot;state_changed&quot;: true,
+  &quot;status_code&quot;: 200
+}</td> <td> {
+  &quot;state&quot;: {
+    &quot;evidence_sources&quot;: 1
+  },
+  &quot;evidence&quot;: {
+    &quot;fact_count&quot;: 5,
+    &quot;source_added&quot;: &quot;obs-007&quot;
+  }
+} </td> <td>pending</td> <td> 7 次模型 ·  7 次工具 ·  6,763 
+tokens ·  6.59s
+</td> </tr><tr> <th scope="row">8</th> <td> 写入交付物 <small>{
+  &quot;artifact_bytes&quot;: 357,
+  &quot;artifact_sha256&quot;: &quot;68a40d5abd3c4b1a88324b053743b4248955c75a41b3b050bffe47eff4012623&quot;,
+  &quot;path&quot;: &quot;decision.json&quot;,
+  &quot;tool&quot;: &quot;write_output&quot;
+}</small> </td> <td>{
+  &quot;error_code&quot;: &quot;none&quot;,
+  &quot;fact_count&quot;: 1,
+  &quot;ok&quot;: true,
+  &quot;retry_after_units&quot;: null,
+  &quot;state_changed&quot;: true,
+  &quot;status_code&quot;: 200
+}</td> <td> {
+  &quot;state&quot;: {
+    &quot;written_outputs&quot;: [
+      &quot;decision.json&quot;
+    ]
+  },
+  &quot;evidence&quot;: {
+    &quot;fact_count&quot;: 1,
+    &quot;source_added&quot;: null
+  }
+} </td> <td>pending</td> <td> 8 次模型 ·  8 次工具 ·  8,008 
+tokens ·  8.10s
+</td> </tr><tr> <th scope="row">9</th> <td> 写入交付物 <small>{
+  &quot;artifact_bytes&quot;: 549,
+  &quot;artifact_sha256&quot;: &quot;01010a7a38c7fceaa03d558a93cc68bee0430fa9dd14bd9d5233a2d311f5a913&quot;,
+  &quot;path&quot;: &quot;evidence/claims.json&quot;,
+  &quot;tool&quot;: &quot;write_output&quot;
+}</small> </td> <td>{
+  &quot;error_code&quot;: &quot;none&quot;,
+  &quot;fact_count&quot;: 1,
+  &quot;ok&quot;: true,
+  &quot;retry_after_units&quot;: null,
+  &quot;state_changed&quot;: true,
+  &quot;status_code&quot;: 200
+}</td> <td> {
+  &quot;state&quot;: {
+    &quot;written_outputs&quot;: [
+      &quot;decision.json&quot;,
+      &quot;evidence/claims.json&quot;
+    ]
+  },
+  &quot;evidence&quot;: {
+    &quot;fact_count&quot;: 1,
+    &quot;source_added&quot;: null
+  }
+} </td> <td>passed</td> <td> 9 次模型 ·  9 次工具 ·  9,373 
+tokens ·  10.47s
+</td> </tr> </tbody> </table> <div class="replay-static-result"> <b>代码验收通过</b> <pre>                  {
+  &quot;currency&quot;: &quot;USD&quot;,
+  &quot;evidence_file&quot;: &quot;evidence/claims.json&quot;,
+  &quot;quantity&quot;: 100,
+  &quot;rejections&quot;: [
+    {
+      &quot;reason_code&quot;: &quot;higher_authoritative_price&quot;,
+      &quot;vendor_id&quot;: &quot;atlas&quot;
+    },
+    {
+      &quot;reason_code&quot;: &quot;not_approved&quot;,
+      &quot;vendor_id&quot;: &quot;harbor&quot;
+    }
+  ],
+  &quot;schema_version&quot;: &quot;1.0&quot;,
+  &quot;total_price_usd&quot;: 9600,
+  &quot;unit_price_usd&quot;: 96,
+  &quot;vendor_id&quot;: &quot;northstar&quot;,
+  &quot;vendor_name&quot;: &quot;Northstar Supplies&quot;
+}
+                </pre> <ul class="replay-checks"> <li> <b>冻结输入完整</b> <small>  all protected fixture hashes match the run-start manifest </small> </li><li> <b>交付格式正确</b> <small>  decision.json matches schema version 1.0 </small> </li><li> <b>供应商选择正确</b> <small>  selected vendor identity and currency match derived Gold </small> </li><li> <b>数量与价格正确</b> <small>  quantity, unit price, and total match derived Gold </small> </li><li> <b>淘汰理由完整</b> <small>  all non-selected vendors have the derived reason </small> </li><li> <b>结论有工具证据</b> <small>  all claims resolve to successful tool-observation facts </small> </li> </ul> <p> 9 次模型 · 9 
+次工具 · 9,373 tokens ·  10.49s
+</p> </div> </section> </section><section> <h3>替代路径 A-01 · 完整双泳道</h3> <p>主证据路径失败后，切换到独立副本并提交受事实 ID 支持的发布令牌。</p> <p> <b>冻结输入：</b> tasks.json <br> <b>共享条件：</b> deepseek-v4-flash · list_evidence · read_evidence · submit_result · finish ·
+            相同代码验收
+</p> <section class="replay-static-lane"> <h4>开放式执行</h4> <table> <caption>开放式执行的完整公开事件记录</caption> <thead> <tr> <th>步骤</th> <th>工具动作</th> <th>工具反馈</th> <th>状态 / 证据变化</th> <th>代码验收</th> <th>累计使用</th> </tr> </thead> <tbody> <tr> <th scope="row">1</th> <td> 列出证据 <small>{
+  &quot;tool&quot;: &quot;list_evidence&quot;
+}</small> </td> <td>{
+  &quot;error_code&quot;: null,
+  &quot;fact_count&quot;: 0,
+  &quot;ok&quot;: true,
+  &quot;retry_after_units&quot;: null,
+  &quot;state_changed&quot;: true,
+  &quot;status_code&quot;: null
+}</td> <td> {
+  &quot;state&quot;: {},
+  &quot;evidence&quot;: {
+    &quot;fact_count&quot;: 0,
+    &quot;source_added&quot;: null
+  }
+} </td> <td>pending</td> <td> 1 次模型 ·  1 次工具 ·  404 
+tokens ·  1.03s
+</td> </tr><tr> <th scope="row">2</th> <td> 读取证据 <small>{
+  &quot;tool&quot;: &quot;read_evidence&quot;
+}</small> </td> <td>{
+  &quot;error_code&quot;: &quot;route_unavailable&quot;,
+  &quot;fact_count&quot;: 0,
+  &quot;ok&quot;: false,
+  &quot;retry_after_units&quot;: null,
+  &quot;state_changed&quot;: true,
+  &quot;status_code&quot;: null
+}</td> <td> {
+  &quot;state&quot;: {
+    &quot;last_error&quot;: &quot;route_unavailable&quot;
+  },
+  &quot;evidence&quot;: {
+    &quot;fact_count&quot;: 0,
+    &quot;source_added&quot;: null
+  }
+} </td> <td>pending</td> <td> 2 次模型 ·  2 次工具 ·  893 
+tokens ·  2.14s
+</td> </tr><tr> <th scope="row">3</th> <td> 读取证据 <small>{
+  &quot;tool&quot;: &quot;read_evidence&quot;
+}</small> </td> <td>{
+  &quot;error_code&quot;: null,
+  &quot;fact_count&quot;: 1,
+  &quot;ok&quot;: true,
+  &quot;retry_after_units&quot;: null,
+  &quot;state_changed&quot;: true,
+  &quot;status_code&quot;: null
+}</td> <td> {
+  &quot;state&quot;: {
+    &quot;evidence_sources&quot;: 1,
+    &quot;last_error&quot;: null
+  },
+  &quot;evidence&quot;: {
+    &quot;fact_count&quot;: 1,
+    &quot;source_added&quot;: &quot;fact-group-003&quot;
+  }
+} </td> <td>pending</td> <td> 3 次模型 ·  3 次工具 ·  1,437 
+tokens ·  3.09s
+</td> </tr><tr> <th scope="row">4</th> <td> 提交结果 <small>{
+  &quot;tool&quot;: &quot;submit_result&quot;
+}</small> </td> <td>{
+  &quot;error_code&quot;: null,
+  &quot;fact_count&quot;: 0,
+  &quot;ok&quot;: true,
+  &quot;retry_after_units&quot;: null,
+  &quot;state_changed&quot;: true,
+  &quot;status_code&quot;: null
+}</td> <td> {
+  &quot;state&quot;: {
+    &quot;written_outputs&quot;: [
+      &quot;submitted_result&quot;
+    ]
+  },
+  &quot;evidence&quot;: {
+    &quot;fact_count&quot;: 0,
+    &quot;source_added&quot;: null
+  }
+} </td> <td>pending</td> <td> 4 次模型 ·  4 次工具 ·  2,094 
+tokens ·  4.19s
+</td> </tr><tr> <th scope="row">5</th> <td> 结束任务 <small>{
+  &quot;tool&quot;: &quot;finish&quot;
+}</small> </td> <td>{
+  &quot;error_code&quot;: null,
+  &quot;fact_count&quot;: 0,
+  &quot;ok&quot;: true,
+  &quot;retry_after_units&quot;: null,
+  &quot;state_changed&quot;: true,
+  &quot;status_code&quot;: null
+}</td> <td> {
+  &quot;state&quot;: {
+    &quot;finished&quot;: true
+  },
+  &quot;evidence&quot;: {
+    &quot;fact_count&quot;: 0,
+    &quot;source_added&quot;: null
+  }
+} </td> <td>passed</td> <td> 5 次模型 ·  5 次工具 ·  2,796 
+tokens ·  5.02s
+</td> </tr> </tbody> </table> <div class="replay-static-result"> <b>代码验收通过</b> <pre>                  {
+  &quot;release_token&quot;: &quot;CIRRUS-41&quot;
+}
+                </pre> <ul class="replay-checks"> <li> <b>任务效用</b> <small>  100 </small> </li><li> <b>关键事实覆盖</b> <small>  100% </small> </li><li> <b>错误证据</b> <small>  0 </small> </li><li> <b>合并遗漏</b> <small>  0 </small> </li><li> <b>合并冲突</b> <small>  0 </small> </li> </ul> <p> 5 次模型 · 5 
+次工具 · 2,796 tokens ·  5.02s
+</p> </div> </section><section class="replay-static-lane"> <h4>目标图混合执行</h4> <table> <caption>目标图混合执行的完整公开事件记录</caption> <thead> <tr> <th>步骤</th> <th>工具动作</th> <th>工具反馈</th> <th>状态 / 证据变化</th> <th>代码验收</th> <th>累计使用</th> </tr> </thead> <tbody> <tr> <th scope="row">1</th> <td> 列出证据 <small>{
+  &quot;tool&quot;: &quot;list_evidence&quot;
+}</small> </td> <td>{
+  &quot;error_code&quot;: null,
+  &quot;fact_count&quot;: 0,
+  &quot;ok&quot;: true,
+  &quot;retry_after_units&quot;: null,
+  &quot;state_changed&quot;: true,
+  &quot;status_code&quot;: null
+}</td> <td> {
+  &quot;state&quot;: {},
+  &quot;evidence&quot;: {
+    &quot;fact_count&quot;: 0,
+    &quot;source_added&quot;: null
+  }
+} </td> <td>pending</td> <td> 1 次模型 ·  1 次工具 ·  535 
+tokens ·  0.89s
+</td> </tr><tr> <th scope="row">2</th> <td> 读取证据 <small>{
+  &quot;tool&quot;: &quot;read_evidence&quot;
+}</small> </td> <td>{
+  &quot;error_code&quot;: &quot;route_unavailable&quot;,
+  &quot;fact_count&quot;: 0,
+  &quot;ok&quot;: false,
+  &quot;retry_after_units&quot;: null,
+  &quot;state_changed&quot;: true,
+  &quot;status_code&quot;: null
+}</td> <td> {
+  &quot;state&quot;: {
+    &quot;last_error&quot;: &quot;route_unavailable&quot;
+  },
+  &quot;evidence&quot;: {
+    &quot;fact_count&quot;: 0,
+    &quot;source_added&quot;: null
+  }
+} </td> <td>pending</td> <td> 2 次模型 ·  2 次工具 ·  1,071 
+tokens ·  1.95s
+</td> </tr><tr> <th scope="row">3</th> <td> 读取证据 <small>{
+  &quot;tool&quot;: &quot;read_evidence&quot;
+}</small> </td> <td>{
+  &quot;error_code&quot;: null,
+  &quot;fact_count&quot;: 1,
+  &quot;ok&quot;: true,
+  &quot;retry_after_units&quot;: null,
+  &quot;state_changed&quot;: true,
+  &quot;status_code&quot;: null
+}</td> <td> {
+  &quot;state&quot;: {
+    &quot;evidence_sources&quot;: 1,
+    &quot;last_error&quot;: null
+  },
+  &quot;evidence&quot;: {
+    &quot;fact_count&quot;: 1,
+    &quot;source_added&quot;: &quot;fact-group-003&quot;
+  }
+} </td> <td>pending</td> <td> 3 次模型 ·  3 次工具 ·  1,615 
+tokens ·  2.74s
+</td> </tr><tr> <th scope="row">4</th> <td> 提交结果 <small>{
+  &quot;tool&quot;: &quot;submit_result&quot;
+}</small> </td> <td>{
+  &quot;error_code&quot;: null,
+  &quot;fact_count&quot;: 0,
+  &quot;ok&quot;: true,
+  &quot;retry_after_units&quot;: null,
+  &quot;state_changed&quot;: true,
+  &quot;status_code&quot;: null
+}</td> <td> {
+  &quot;state&quot;: {
+    &quot;written_outputs&quot;: [
+      &quot;submitted_result&quot;
+    ]
+  },
+  &quot;evidence&quot;: {
+    &quot;fact_count&quot;: 0,
+    &quot;source_added&quot;: null
+  }
+} </td> <td>pending</td> <td> 4 次模型 ·  4 次工具 ·  2,213 
+tokens ·  3.68s
+</td> </tr><tr> <th scope="row">5</th> <td> 提交结果 <small>{
+  &quot;tool&quot;: &quot;submit_result&quot;
+}</small> </td> <td>{
+  &quot;error_code&quot;: &quot;not_in_legal_frontier&quot;,
+  &quot;fact_count&quot;: 0,
+  &quot;ok&quot;: false,
+  &quot;retry_after_units&quot;: null,
+  &quot;state_changed&quot;: false,
+  &quot;status_code&quot;: null
+}</td> <td> {
+  &quot;state&quot;: {
+    &quot;last_error&quot;: &quot;not_in_legal_frontier&quot;
+  },
+  &quot;evidence&quot;: {
+    &quot;fact_count&quot;: 0,
+    &quot;source_added&quot;: null
+  }
+} </td> <td>pending</td> <td> 5 次模型 ·  4 次工具 ·  2,800 
+tokens ·  4.91s
+</td> </tr><tr> <th scope="row">6</th> <td> 提交结果 <small>{
+  &quot;tool&quot;: &quot;submit_result&quot;
+}</small> </td> <td>{
+  &quot;error_code&quot;: &quot;not_in_legal_frontier&quot;,
+  &quot;fact_count&quot;: 0,
+  &quot;ok&quot;: false,
+  &quot;retry_after_units&quot;: null,
+  &quot;state_changed&quot;: false,
+  &quot;status_code&quot;: null
+}</td> <td> {
+  &quot;state&quot;: {},
+  &quot;evidence&quot;: {
+    &quot;fact_count&quot;: 0,
+    &quot;source_added&quot;: null
+  }
+} </td> <td>pending</td> <td> 6 次模型 ·  4 次工具 ·  3,409 
+tokens ·  6.06s
+</td> </tr><tr> <th scope="row">7</th> <td> 提交结果 <small>{
+  &quot;tool&quot;: &quot;submit_result&quot;
+}</small> </td> <td>{
+  &quot;error_code&quot;: &quot;not_in_legal_frontier&quot;,
+  &quot;fact_count&quot;: 0,
+  &quot;ok&quot;: false,
+  &quot;retry_after_units&quot;: null,
+  &quot;state_changed&quot;: false,
+  &quot;status_code&quot;: null
+}</td> <td> {
+  &quot;state&quot;: {},
+  &quot;evidence&quot;: {
+    &quot;fact_count&quot;: 0,
+    &quot;source_added&quot;: null
+  }
+} </td> <td>pending</td> <td> 7 次模型 ·  4 次工具 ·  4,036 
+tokens ·  7.20s
+</td> </tr><tr> <th scope="row">8</th> <td> 结束任务 <small>{
+  &quot;tool&quot;: &quot;finish&quot;
+}</small> </td> <td>{
+  &quot;error_code&quot;: null,
+  &quot;fact_count&quot;: 0,
+  &quot;ok&quot;: true,
+  &quot;retry_after_units&quot;: null,
+  &quot;state_changed&quot;: true,
+  &quot;status_code&quot;: null
+}</td> <td> {
+  &quot;state&quot;: {
+    &quot;finished&quot;: true,
+    &quot;last_error&quot;: null
+  },
+  &quot;evidence&quot;: {
+    &quot;fact_count&quot;: 0,
+    &quot;source_added&quot;: null
+  }
+} </td> <td>passed</td> <td> 8 次模型 ·  5 次工具 ·  4,655 
+tokens ·  8.09s
+</td> </tr> </tbody> </table> <div class="replay-static-result"> <b>代码验收通过</b> <pre>                  {
+  &quot;release_token&quot;: &quot;CIRRUS-41&quot;
+}
+                </pre> <ul class="replay-checks"> <li> <b>任务效用</b> <small>  100 </small> </li><li> <b>关键事实覆盖</b> <small>  100% </small> </li><li> <b>错误证据</b> <small>  0 </small> </li><li> <b>合并遗漏</b> <small>  0 </small> </li><li> <b>合并冲突</b> <small>  0 </small> </li> </ul> <p> 8 次模型 · 5 
+次工具 · 4,655 tokens ·  8.09s
+</p> </div> </section> </section> </div> <noscript><style>
+      .case-replay .replay-static-record {
+        display: block !important;
+      }
+      .case-replay .replay-toolbar,
+      .case-replay .replay-path,
+      .case-replay .replay-lanes,
+      .case-replay .replay-results,
+      .case-replay .replay-case-tabs,
+      .case-replay .replay-contract {
+        display: none !important;
+      }
+    </style></noscript> </section> <script type="module" src="/_astro/CaseReplay.astro_astro_type_script_index_0_lang.BgX1RpRv.js"></script> <section id="hypotheses" class="research-section" aria-labelledby="hypotheses-title"> <header class="section-heading"> <p>04 · From mechanism to test</p> <h2 id="hypotheses-title">
 不是先做题再解释，而是先把架构差异写成测试题
 </h2> <p>
 每个测试场景都对应一个明确的控制差异；验收器只看最终结果，不检查预设路线。
@@ -61,13 +1274,7 @@ Pilot A 比较开放式执行与工作流受控执行；Pilot B
             次配对运行。正式运行前的 6 次 smoke 只用于确认协议与记录字段。
 </p> </header> <div class="section-actions"> <a class="button-secondary" href="/research/agent-architecture-control/pilot-b-data/">浏览 24 条逐运行数据</a> </div> <dl class="protocol-strip" aria-label="Pilot B 冻结协议"> <div> <dt>模型</dt><dd> deepseek-v4-flash </dd> </div> <div> <dt>模型调用</dt><dd>≤ 18</dd> </div> <div> <dt>工具调用</dt><dd>≤ 24</dd> </div> <div> <dt>Tokens</dt><dd>
 ≤ 30,000 </dd> </div> <div> <dt>并行分支</dt><dd>
-≤ 3 </dd> </div> <div> <dt>超时</dt><dd>240s</dd> </div> </dl> <div class="pilot-b-scoreboard"> <article> <p>Contracted ReAct</p> <strong>8/12</strong> <span>成功 · 平均 3709 tokens</span> </article> <div class="scoreboard-equals" aria-label="两种架构成功数相同">=</div> <article> <p>Goal-Graph Hybrid</p> <strong>8/12</strong> <span>成功 · 平均 12288 tokens</span> </article> </div> <div class="family-results" aria-label="Pilot B 分任务结果"> <article> <h3>替代路径</h3> <p>  <span>开放式</span> <b>4/4</b>  </p> <p>  <span>目标图混合</span> <b>4/4</b>  </p>  </article><article> <h3>开放取证</h3> <p>  <span>开放式</span> <b>4/4</b>  </p> <p>  <span>目标图混合</span> <b>4/4</b>  </p>  </article><article> <h3>并行拆解</h3> <p>  <span>开放式</span> <b>0/4</b>  </p> <p>  <span>目标图混合</span> <b>0/4</b>  </p> <small>两边都找全事实，但合并时各遗漏 3 项。</small> </article> </div> <figure class="publication-figure"> <picture> <source media="(max-width: 46rem)" srcset="/research/agent-architecture/figures/pilot-b-results-mobile.svg"> <img src="/research/agent-architecture/figures/pilot-b-results.svg" alt="Pilot B 两种架构的分场景成功、质量、模型调用、工具调用、tokens 与时间对比" loading="lazy"> </picture> <figcaption> <div><b>比较什么</b><span>成功、质量和成本的配对结果。</span></div> <div> <b>怎样读</b><span>结果相同后，再看成本与失败位置。</span> </div> <div> <b>不能推出</b><span>不能把较短关键路径等同于更高成功率。</span> </div> </figcaption> <p class="figure-links"> <a href="/research/agent-architecture/figures/pilot-b-results.svg">SVG</a><a href="/research/agent-architecture/figures/pilot-b-results.pdf">PDF</a> </p> </figure> <div class="trace-console" data-trace-console> <header> <div> <span class="evidence-tag evidence-tag--experiment">代表执行记录</span><h3>开放取证实例 01：首次分叉发生在哪里</h3> </div> <button type="button" data-play-trace aria-label="逐步播放代表执行记录">播放执行记录</button> </header> <div class="trace-table-wrap"> <table> <thead><tr><th>轮次</th><th>开放式执行</th><th>目标图混合</th><th>观察</th></tr></thead> <tbody><tr data-trace-step>  <td>01</td> <td>列出证据</td> <td>列出证据</td> <td>共同起点</td>  </tr><tr data-trace-step>  <td>02</td> <td>读取证据 1</td> <td>读取证据 1</td> <td>路径仍相同</td>  </tr><tr data-trace-step>  <td>03</td> <td>读取证据 2</td> <td>读取证据 2</td> <td>路径仍相同</td>  </tr><tr data-trace-step>  <td>04</td> <td>读取证据 3</td> <td>读取证据 3</td> <td>路径仍相同</td>  </tr><tr data-trace-step>  <td>05</td> <td>提交结果</td> <td>提交结果</td> <td>两边均通过代码验收</td>  </tr><tr data-trace-step class="trace-divergence">  <td>06</td> <td>完成并停止</td> <td>再次提交，被控制器拒绝</td> <td>首次分叉</td>  </tr><tr data-trace-step>  <td>07—18</td> <td>已停止</td> <td>继续重复非法动作</td> <td>直到模型调用预算耗尽</td>  </tr></tbody> </table> </div> <p>
-两边在第 5
-            轮都提交了完整事实并通过验收。开放式执行随后正常停止，目标图混合执行却继续提交同一结果，直到耗尽
-            18
-            次模型调用。真正的调优点不是“加更多控制”，而是让拒绝反馈改变下一轮可选动作，并在通过后立即停止。并行拆解场景则另外说明：关键路径缩短不等于合并正确，两边都因遗漏
-            3 项而失败。
-</p> </div> <figure class="publication-figure publication-figure--compact"> <img src="/research/agent-architecture/figures/representative-divergence.svg" alt="Pilot B 代表轨迹及开放式与目标图混合架构的首次执行分叉" loading="lazy"> <figcaption> <div> <b>比较什么</b><span>同一实例中两条轨迹的首次分叉。</span> </div> <div><b>怎样读</b><span>从共同起点追踪到重复拒绝。</span></div> <div> <b>不能推出</b><span>单条代表轨迹不替代全部 24 次统计。</span> </div> </figcaption> <p class="figure-links"> <a href="/research/agent-architecture/figures/representative-divergence.svg">SVG</a><a href="/research/agent-architecture/figures/representative-divergence.pdf">PDF</a> </p> </figure> </section> <section id="decision" class="research-section" aria-labelledby="decision-title"> <header class="section-heading"> <p>07 · Business decision</p> <h2 id="decision-title">从任务结构出发，而不是从架构名出发</h2> <p>下面的选择器给出工程起点，不替代上线前的业务回放测试。</p> </header> <div class="decision-workbench" data-decision-workbench> <div class="decision-options" role="group" aria-label="选择最接近的任务类型"> <button type="button" data-decision="controlled" aria-pressed="true"><b>顺序固定</b><span>规则清楚、必须按步骤执行</span></button> <button type="button" data-decision="react" aria-pressed="false"><b>路径未知</b><span>需要探索，错误成本可控</span></button> <button type="button" data-decision="hybrid" aria-pressed="false"><b>可并行拆解</b><span>多个子目标独立，但必须统一验收</span></button> <button type="button" data-decision="hybrid-guarded" aria-pressed="false"><b>开放但高风险</b><span>需要多路径，也必须限制动作与预算</span></button> </div> <output class="decision-output" aria-live="polite" data-decision-output> <span>推荐起点</span> <strong>工作流受控执行</strong> <p>
+≤ 3 </dd> </div> <div> <dt>超时</dt><dd>240s</dd> </div> </dl> <div class="pilot-b-scoreboard"> <article> <p>Contracted ReAct</p> <strong>8/12</strong> <span>成功 · 平均 3709 tokens</span> </article> <div class="scoreboard-equals" aria-label="两种架构成功数相同">=</div> <article> <p>Goal-Graph Hybrid</p> <strong>8/12</strong> <span>成功 · 平均 12288 tokens</span> </article> </div> <div class="family-results" aria-label="Pilot B 分任务结果"> <article> <h3>替代路径</h3> <p>  <span>开放式</span> <b>4/4</b>  </p> <p>  <span>目标图混合</span> <b>4/4</b>  </p>  </article><article> <h3>开放取证</h3> <p>  <span>开放式</span> <b>4/4</b>  </p> <p>  <span>目标图混合</span> <b>4/4</b>  </p>  </article><article> <h3>并行拆解</h3> <p>  <span>开放式</span> <b>0/4</b>  </p> <p>  <span>目标图混合</span> <b>0/4</b>  </p> <small>两边都找全事实，但合并时各遗漏 3 项。</small> </article> </div> <figure class="publication-figure"> <picture> <source media="(max-width: 46rem)" srcset="/research/agent-architecture/figures/pilot-b-results-mobile.svg"> <img src="/research/agent-architecture/figures/pilot-b-results.svg" alt="Pilot B 两种架构的分场景成功、质量、模型调用、工具调用、tokens 与时间对比" loading="lazy"> </picture> <figcaption> <div><b>比较什么</b><span>成功、质量和成本的配对结果。</span></div> <div> <b>怎样读</b><span>结果相同后，再看成本与失败位置。</span> </div> <div> <b>不能推出</b><span>不能把较短关键路径等同于更高成功率。</span> </div> </figcaption> <p class="figure-links"> <a href="/research/agent-architecture/figures/pilot-b-results.svg">SVG</a><a href="/research/agent-architecture/figures/pilot-b-results.pdf">PDF</a> </p> </figure> </section> <section id="decision" class="research-section" aria-labelledby="decision-title"> <header class="section-heading"> <p>07 · Business decision</p> <h2 id="decision-title">从任务结构出发，而不是从架构名出发</h2> <p>下面的选择器给出工程起点，不替代上线前的业务回放测试。</p> </header> <div class="decision-workbench" data-decision-workbench> <div class="decision-options" role="group" aria-label="选择最接近的任务类型"> <button type="button" data-decision="controlled" aria-pressed="true"><b>顺序固定</b><span>规则清楚、必须按步骤执行</span></button> <button type="button" data-decision="react" aria-pressed="false"><b>路径未知</b><span>需要探索，错误成本可控</span></button> <button type="button" data-decision="hybrid" aria-pressed="false"><b>可并行拆解</b><span>多个子目标独立，但必须统一验收</span></button> <button type="button" data-decision="hybrid-guarded" aria-pressed="false"><b>开放但高风险</b><span>需要多路径，也必须限制动作与预算</span></button> </div> <output class="decision-output" aria-live="polite" data-decision-output> <span>推荐起点</span> <strong>工作流受控执行</strong> <p>
 先把状态、合法动作、错误恢复和完成条件写进程序；模型只处理局部判断。
 </p> </output> </div> <figure class="publication-figure publication-figure--compact"> <picture> <source media="(max-width: 46rem)" srcset="/research/agent-architecture/figures/architecture-decision-mobile.svg"> <img src="/research/agent-architecture/figures/architecture-decision.svg" alt="从任务规则、风险、路径数量与并行需求选择 Agent 架构的决策图" loading="lazy"> </picture> <figcaption> <div> <b>比较什么</b><span>任务条件与架构起点的对应关系。</span> </div> <div> <b>怎样读</b><span>先判断规则和风险，再判断路径与并行。</span> </div> <div><b>不能推出</b><span>选择结果不是免测的上线结论。</span></div> </figcaption> <p class="figure-links"> <a href="/research/agent-architecture/figures/architecture-decision.svg">SVG</a><a href="/research/agent-architecture/figures/architecture-decision.pdf">PDF</a> </p> </figure> <div class="product-architecture"> <div> <span class="evidence-tag">产品参考架构</span> <h3>把模型放在控制层之内，而不是让它独占整个系统</h3> <p>
 产品层定义业务合同；控制层维护目标、状态和预算；工具层统一协议；证据层保存轨迹；评估层用代码和人工复核决定是否完成。
@@ -79,4 +1286,4 @@ Pilot A 比较开放式执行与工作流受控执行；Pilot B
 只包含脱敏运行记录、统计、代表轨迹与哈希；不包含 API
               Key、绝对路径和供应商原始响应。
 </p> </div> <div class="repro-links"> <a href="/research/agent-architecture-control/pilot-b-data/">Pilot B 数据浏览器</a> <a href="https://github.com/Shiaoming123/agent-control-lab">实验代码与完整 README</a> <a href="/research/agent-architecture/runs.csv">Pilot A CSV</a> <a href="/research/agent-architecture/manifest.json">Pilot A manifest</a> <a href="/research/agent-architecture/pilot-b/pilot-b-runs.csv">Pilot B CSV</a> <a href="/research/agent-architecture/pilot-b/pilot-b-manifest.json">Pilot B manifest</a> <a href="/research/agent-architecture/figures/source-data/figure-source-data.json">科研图源数据</a> </div> </div> <p class="study-stamp">
-Pilot A batch: 2026-07-20-deepseek-v4-flash-a · Pilot B batch: 2026-07-22-pilot-b-deepseek-v4-flash-a </p> </section> </div> </main> <footer class="observatory-footer app-layout mt-auto"> <div class="observatory-footer-grid"> <div class="observatory-footer-signoff"> <p class="observatory-footer-eyebrow">OBSERVATION LOG · 2026</p> <p>持续观察技术变化，也记录把它做成产品的全过程。</p> <div class="flex flex-wrap items-center gap-1"> <a href="https://github.com/Shiaoming123" title="世傲命的技术观测站 on Github" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21" /></svg> <span class="sr-only">世傲命的技术观测站 on Github</span>  </a><a href="mailto:2405360475@qq.com" title="Send an email to 世傲命的技术观测站" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><path d="m3 7 9 6 9-6" /></svg> <span class="sr-only">Send an email to 世傲命的技术观测站</span>  </a> </div> </div> <nav class="observatory-footer-navigation" aria-label="页脚导航"> <div> <p>观测入口</p> <ul> <li> <a href="/posts/">文章</a> </li><li> <a href="/learning/">学习</a> </li><li> <a href="/signals/">信号</a> </li><li> <a href="/projects/">作品</a> </li><li> <a href="/about/">关于</a> </li> </ul> </div> <div> <p>更多</p> <ul> <li> <a href="/bookmarks/">资源</a> </li><li> <a href="/arena/">榜单</a> </li><li> <a href="/taxonomy/">分类</a> </li><li> <a href="/archives/">归档</a> </li><li> <a href="/changelog/">日志</a> </li> </ul> </div> </nav> </div> <div class="observatory-footer-meta"> <span>© 2026 世傲命</span> <span>PERSONAL TECHNOLOGY OBSERVATORY · SIGNAL CONTINUES</span> </div> </footer>  <script type="module">function l(){const n=window;n.__scrollMotionCleanup?.();const i=document.documentElement,c=document.querySelector(".scroll-progress"),d=window.matchMedia("(prefers-reduced-motion: reduce)").matches;let t;const e=()=>{if(!c)return;const r=i.scrollHeight-window.innerHeight,o=r>0?window.scrollY/r:0;c.style.setProperty("--scroll-progress",Math.min(1,Math.max(0,o)).toString())};if(e(),window.addEventListener("scroll",e,{passive:!0}),window.addEventListener("resize",e),!d){i.classList.add("scroll-motion-ready");const r=document.querySelectorAll("[data-scroll-reveal]");t=new IntersectionObserver(o=>{o.forEach(s=>{s.isIntersecting&&(s.target.classList.add("is-visible"),t?.unobserve(s.target))})},{rootMargin:"0px 0px -12% 0px",threshold:.12}),r.forEach(o=>t?.observe(o))}n.__scrollMotionCleanup=()=>{window.removeEventListener("scroll",e),window.removeEventListener("resize",e),t?.disconnect()}}l();document.addEventListener("astro:after-swap",l);</script> <script type="module">const s="theme",a="light",c="dark";function m(e,t){return e??t??c}let u=c;function d({button:e,initialTheme:t,persist:r,reflect:n}){let o=t;n(o);const i=()=>{o=o===a?c:a,r(o),n(o)};return e?.addEventListener("click",i),{cleanup:()=>e?.removeEventListener("click",i)}}function h(e){const t=document.firstElementChild,r=document.querySelector("#theme-btn"),n=e===c;t?.setAttribute("data-theme",e),t?.classList.toggle("dark",n),r?.setAttribute("aria-label",n?"切换到浅色主题":"切换到深色主题"),r?.setAttribute("aria-pressed",String(n));const o=window.getComputedStyle(document.body).backgroundColor;document.querySelector("meta[name='theme-color']")?.setAttribute("content",o)}function l(){const e=window;e.__themeButtonCleanup?.();const t=document.querySelector("#theme-btn");u=m(localStorage.getItem(s),window.__theme?.value);const r=d({button:t,initialTheme:u,persist:n=>{u=n,localStorage.setItem(s,n)},reflect:h});e.__themeButtonCleanup=()=>{r.cleanup()}}typeof window<"u"&&(l(),document.addEventListener("astro:after-swap",l),document.addEventListener("astro:before-swap",e=>{window.__themeButtonCleanup?.();const t=document.querySelector("meta[name='theme-color']")?.getAttribute("content");t&&e.newDocument.querySelector("meta[name='theme-color']")?.setAttribute("content",t)}));</script> <script type="module" src="/_astro/Layout.astro_astro_type_script_index_2_lang.BKhR6OZe.js"></script> </body> </html> <script type="module" src="/_astro/agent-architecture-control.astro_astro_type_script_index_0_lang.BTYvEgtf.js"></script>
+Pilot A batch: 2026-07-20-deepseek-v4-flash-a · Pilot B batch: 2026-07-22-pilot-b-deepseek-v4-flash-a </p> </section> </div> </main> <footer class="observatory-footer app-layout mt-auto"> <div class="observatory-footer-grid"> <div class="observatory-footer-signoff"> <p class="observatory-footer-eyebrow">OBSERVATION LOG · 2026</p> <p>持续观察技术变化，也记录把它做成产品的全过程。</p> <div class="flex flex-wrap items-center gap-1"> <a href="https://github.com/Shiaoming123" title="世傲命的技术观测站 on Github" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21" /></svg> <span class="sr-only">世傲命的技术观测站 on Github</span>  </a><a href="mailto:2405360475@qq.com" title="Send an email to 世傲命的技术观测站" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><path d="m3 7 9 6 9-6" /></svg> <span class="sr-only">Send an email to 世傲命的技术观测站</span>  </a> </div> </div> <nav class="observatory-footer-navigation" aria-label="页脚导航"> <div> <p>观测入口</p> <ul> <li> <a href="/posts/">文章</a> </li><li> <a href="/learning/">学习</a> </li><li> <a href="/signals/">信号</a> </li><li> <a href="/projects/">作品</a> </li><li> <a href="/about/">关于</a> </li> </ul> </div> <div> <p>更多</p> <ul> <li> <a href="/bookmarks/">资源</a> </li><li> <a href="/arena/">榜单</a> </li><li> <a href="/taxonomy/">分类</a> </li><li> <a href="/archives/">归档</a> </li><li> <a href="/changelog/">日志</a> </li> </ul> </div> </nav> </div> <div class="observatory-footer-meta"> <span>© 2026 世傲命</span> <span>PERSONAL TECHNOLOGY OBSERVATORY · SIGNAL CONTINUES</span> </div> </footer>  <script type="module">function l(){const n=window;n.__scrollMotionCleanup?.();const i=document.documentElement,c=document.querySelector(".scroll-progress"),d=window.matchMedia("(prefers-reduced-motion: reduce)").matches;let t;const e=()=>{if(!c)return;const r=i.scrollHeight-window.innerHeight,o=r>0?window.scrollY/r:0;c.style.setProperty("--scroll-progress",Math.min(1,Math.max(0,o)).toString())};if(e(),window.addEventListener("scroll",e,{passive:!0}),window.addEventListener("resize",e),!d){i.classList.add("scroll-motion-ready");const r=document.querySelectorAll("[data-scroll-reveal]");t=new IntersectionObserver(o=>{o.forEach(s=>{s.isIntersecting&&(s.target.classList.add("is-visible"),t?.unobserve(s.target))})},{rootMargin:"0px 0px -12% 0px",threshold:.12}),r.forEach(o=>t?.observe(o))}n.__scrollMotionCleanup=()=>{window.removeEventListener("scroll",e),window.removeEventListener("resize",e),t?.disconnect()}}l();document.addEventListener("astro:after-swap",l);</script> <script type="module">const s="theme",a="light",c="dark";function m(e,t){return e??t??c}let u=c;function d({button:e,initialTheme:t,persist:r,reflect:n}){let o=t;n(o);const i=()=>{o=o===a?c:a,r(o),n(o)};return e?.addEventListener("click",i),{cleanup:()=>e?.removeEventListener("click",i)}}function h(e){const t=document.firstElementChild,r=document.querySelector("#theme-btn"),n=e===c;t?.setAttribute("data-theme",e),t?.classList.toggle("dark",n),r?.setAttribute("aria-label",n?"切换到浅色主题":"切换到深色主题"),r?.setAttribute("aria-pressed",String(n));const o=window.getComputedStyle(document.body).backgroundColor;document.querySelector("meta[name='theme-color']")?.setAttribute("content",o)}function l(){const e=window;e.__themeButtonCleanup?.();const t=document.querySelector("#theme-btn");u=m(localStorage.getItem(s),window.__theme?.value);const r=d({button:t,initialTheme:u,persist:n=>{u=n,localStorage.setItem(s,n)},reflect:h});e.__themeButtonCleanup=()=>{r.cleanup()}}typeof window<"u"&&(l(),document.addEventListener("astro:after-swap",l),document.addEventListener("astro:before-swap",e=>{window.__themeButtonCleanup?.();const t=document.querySelector("meta[name='theme-color']")?.getAttribute("content");t&&e.newDocument.querySelector("meta[name='theme-color']")?.setAttribute("content",t)}));</script> <script type="module" src="/_astro/Layout.astro_astro_type_script_index_2_lang.BKhR6OZe.js"></script> </body> </html> <script type="module" src="/_astro/agent-architecture-control.astro_astro_type_script_index_0_lang.DKRDXdax.js"></script>
