@@ -1,0 +1,691 @@
+{
+  "schema_version": "1.0",
+  "generated_from": [
+    "src/data/research/agent-architecture/methods.json",
+    "src/data/research/agent-architecture/summary.json",
+    "src/data/research/agent-architecture/diagnostic-summary.json",
+    "src/data/research/agent-architecture/pilot-b/pilot-b-methods.json",
+    "src/data/research/agent-architecture/pilot-b/pilot-b-summary.json",
+    "src/data/research/agent-architecture/pilot-b/pilot-b-representative-traces.json"
+  ],
+  "figures": [
+    {
+      "id": "evidence-chain",
+      "title": "Evidence chain from public clues to local tests",
+      "subtitle": "Evidence roles stay explicit; product material proposes hypotheses, not internal implementation claims",
+      "data_source": [
+        "public-source review",
+        "local experiment design"
+      ],
+      "evidence_role": "architecture_hypothesis",
+      "rows": [
+        {
+          "stage": "Public evidence",
+          "items": [
+            "Official disclosures",
+            "Research papers",
+            "Open-source references"
+          ],
+          "claim_boundary": "hypothesis_only"
+        },
+        {
+          "stage": "Engineering clues",
+          "items": [
+            "Context management",
+            "State / legal actions",
+            "Evidence and recovery"
+          ],
+          "claim_boundary": "hypothesis_only"
+        },
+        {
+          "stage": "Local abstractions",
+          "items": [
+            "Contracted ReAct",
+            "Workflow Controlled",
+            "Goal-Graph Hybrid"
+          ],
+          "claim_boundary": "local_design"
+        },
+        {
+          "stage": "Controlled tests",
+          "items": [
+            "Pilot A: rule tasks",
+            "Pilot B: open tasks",
+            "Code-based acceptance"
+          ],
+          "claim_boundary": "local_design"
+        }
+      ]
+    },
+    {
+      "id": "architecture-flows",
+      "title": "Shared base and three execution-control architectures",
+      "subtitle": "Shared engineering base; Pilot A and Pilot B are separate two-arm comparisons, not one three-arm experiment",
+      "data_source": [
+        "Pilot A methods",
+        "Pilot B methods",
+        "local implementation"
+      ],
+      "evidence_role": "local_architecture_abstraction",
+      "formal_comparisons": {
+        "pilot_a": {
+          "architectures": [
+            "open_react",
+            "workflow_controlled"
+          ],
+          "formal_runs": 30
+        },
+        "pilot_b": {
+          "architectures": [
+            "contracted_react",
+            "goal_graph_hybrid"
+          ],
+          "formal_runs": 24
+        }
+      },
+      "rows": [
+        {
+          "architecture": "Open execution family\nPilot A: Open ReAct\nPilot B: Contracted ReAct",
+          "control_steps": [
+            "Full trace",
+            "Model selects next action",
+            "Tool result",
+            "Model decides stop"
+          ],
+          "shared_base": [
+            "DeepSeek V4 Flash",
+            "Frozen task",
+            "Unified tool entry",
+            "Code acceptance",
+            "Trace recorder"
+          ]
+        },
+        {
+          "architecture": "Workflow Controlled",
+          "control_steps": [
+            "Explicit state",
+            "Legal-action set",
+            "Typed recovery",
+            "Stop on pass"
+          ],
+          "shared_base": [
+            "DeepSeek V4 Flash",
+            "Frozen task",
+            "Unified tool entry",
+            "Code acceptance",
+            "Trace recorder"
+          ]
+        },
+        {
+          "architecture": "Goal-Graph Hybrid",
+          "control_steps": [
+            "Goal dependencies",
+            "Legal frontier",
+            "Bounded branches",
+            "Merge + verify"
+          ],
+          "shared_base": [
+            "DeepSeek V4 Flash",
+            "Frozen task",
+            "Unified tool entry",
+            "Code acceptance",
+            "Trace recorder"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hypothesis-matrix",
+      "title": "Architecture difference, hypothesis, and test matrix",
+      "subtitle": "Three task families map control mechanisms to observable outcomes before reading Pilot B results",
+      "data_source": [
+        "Pilot B preregistered task matrix",
+        "Pilot B methods"
+      ],
+      "evidence_role": "experiment_design",
+      "rows": [
+        {
+          "task_family": "Alternative path",
+          "architecture_difference": "Route history vs explicit dependency state",
+          "test_hypothesis": "Can execution switch after a frozen route failure?",
+          "primary_observations": "success · path switch calls · tokens"
+        },
+        {
+          "task_family": "Open evidence",
+          "architecture_difference": "Free evidence search vs tracked evidence state",
+          "test_hypothesis": "Can key facts be retained without false evidence?",
+          "primary_observations": "fact recall · false evidence repeated actions"
+        },
+        {
+          "task_family": "Parallel decomposition",
+          "architecture_difference": "Serial planning vs bounded independent branches",
+          "test_hypothesis": "Can parallel work shorten the critical path without merge loss?",
+          "primary_observations": "critical path · omissions success · total cost"
+        }
+      ]
+    },
+    {
+      "id": "pilot-a-formal",
+      "title": "Pilot A formal results",
+      "subtitle": "DeepSeek V4 Flash · 5 scenarios × 3 repeats × 2 architectures · n=30 formal runs",
+      "data_source": [
+        "Pilot A reviewed public runs",
+        "Pilot A summary"
+      ],
+      "evidence_role": "formal_experiment",
+      "rows": [
+        {
+          "architecture": "react",
+          "eligible_n": 15,
+          "rate": 0.0,
+          "successes": 0,
+          "wilson_ci95": [
+            0.0,
+            0.20388330103584862
+          ]
+        },
+        {
+          "architecture": "workflow_controlled",
+          "eligible_n": 15,
+          "rate": 1.0,
+          "successes": 15,
+          "wilson_ci95": [
+            0.7961166989641515,
+            1.0
+          ]
+        },
+        {
+          "scenario": "clean",
+          "label": "Clean",
+          "react_tool_calls": [
+            16,
+            16,
+            16
+          ],
+          "workflow_controlled_tool_calls": [
+            7,
+            7,
+            7
+          ]
+        },
+        {
+          "scenario": "precondition",
+          "label": "Precondition",
+          "react_tool_calls": [
+            16,
+            16,
+            16
+          ],
+          "workflow_controlled_tool_calls": [
+            9,
+            9,
+            9
+          ]
+        },
+        {
+          "scenario": "transient_5xx",
+          "label": "Transient 5xx",
+          "react_tool_calls": [
+            16,
+            16,
+            16
+          ],
+          "workflow_controlled_tool_calls": [
+            8,
+            8,
+            8
+          ]
+        },
+        {
+          "scenario": "rate_limit",
+          "label": "Rate limit",
+          "react_tool_calls": [
+            16,
+            16,
+            16
+          ],
+          "workflow_controlled_tool_calls": [
+            9,
+            9,
+            9
+          ]
+        },
+        {
+          "scenario": "post_success",
+          "label": "Post-success",
+          "react_tool_calls": [
+            16,
+            16,
+            16
+          ],
+          "workflow_controlled_tool_calls": [
+            7,
+            7,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pilot-a-diagnostic",
+      "title": "Pilot A post-experiment routing diagnostic",
+      "subtitle": "One routing clarification · n=15 diagnostic runs · excluded from the formal Pilot A comparison",
+      "data_source": [
+        "Pilot A post-hoc diagnostic summary"
+      ],
+      "evidence_role": "post_hoc_diagnostic",
+      "rows": [
+        {
+          "measure": "stage_reached",
+          "stage": "Read inputs",
+          "count": 15,
+          "total": 15
+        },
+        {
+          "measure": "stage_reached",
+          "stage": "Write outputs",
+          "count": 9,
+          "total": 15
+        },
+        {
+          "measure": "stage_reached",
+          "stage": "Finish",
+          "count": 9,
+          "total": 15
+        },
+        {
+          "measure": "stage_reached",
+          "stage": "Verified",
+          "count": 9,
+          "total": 15
+        },
+        {
+          "measure": "verified_by_scenario",
+          "scenario": "clean",
+          "count": 3,
+          "total": 3
+        },
+        {
+          "measure": "verified_by_scenario",
+          "scenario": "precondition",
+          "count": 0,
+          "total": 3
+        },
+        {
+          "measure": "verified_by_scenario",
+          "scenario": "transient_5xx",
+          "count": 3,
+          "total": 3
+        },
+        {
+          "measure": "verified_by_scenario",
+          "scenario": "rate_limit",
+          "count": 0,
+          "total": 3
+        },
+        {
+          "measure": "verified_by_scenario",
+          "scenario": "post_success",
+          "count": 3,
+          "total": 3
+        }
+      ]
+    },
+    {
+      "id": "pilot-b-results",
+      "title": "Pilot B success, quality, and execution cost",
+      "subtitle": "3 task families × 4 frozen instances × 2 architectures · n=24 paired formal runs",
+      "data_source": [
+        "Pilot B reviewed public summary"
+      ],
+      "evidence_role": "formal_experiment",
+      "rows": [
+        {
+          "section": "family_success",
+          "family": "alternative_path",
+          "architecture": "contracted_react",
+          "successes": 4,
+          "eligible_n": 4,
+          "success_rate": 1.0
+        },
+        {
+          "section": "family_success",
+          "family": "alternative_path",
+          "architecture": "goal_graph_hybrid",
+          "successes": 4,
+          "eligible_n": 4,
+          "success_rate": 1.0
+        },
+        {
+          "section": "family_success",
+          "family": "open_evidence",
+          "architecture": "contracted_react",
+          "successes": 4,
+          "eligible_n": 4,
+          "success_rate": 1.0
+        },
+        {
+          "section": "family_success",
+          "family": "open_evidence",
+          "architecture": "goal_graph_hybrid",
+          "successes": 4,
+          "eligible_n": 4,
+          "success_rate": 1.0
+        },
+        {
+          "section": "family_success",
+          "family": "parallel_decomposition",
+          "architecture": "contracted_react",
+          "successes": 0,
+          "eligible_n": 4,
+          "success_rate": 0.0
+        },
+        {
+          "section": "family_success",
+          "family": "parallel_decomposition",
+          "architecture": "goal_graph_hybrid",
+          "successes": 0,
+          "eligible_n": 4,
+          "success_rate": 0.0
+        },
+        {
+          "section": "quality",
+          "architecture": "contracted_react",
+          "utility_mean": 75.0,
+          "required_fact_recall_mean": 1.0,
+          "false_evidence_count_mean": 0.0
+        },
+        {
+          "section": "quality",
+          "architecture": "goal_graph_hybrid",
+          "utility_mean": 75.0,
+          "required_fact_recall_mean": 1.0,
+          "false_evidence_count_mean": 0.0
+        },
+        {
+          "section": "cost",
+          "metric": "model_calls",
+          "unit": "calls",
+          "contracted_react": 5.666666666666667,
+          "goal_graph_hybrid": 15.583333333333334
+        },
+        {
+          "section": "cost",
+          "metric": "tool_calls",
+          "unit": "calls",
+          "contracted_react": 5.666666666666667,
+          "goal_graph_hybrid": 4.833333333333333
+        },
+        {
+          "section": "cost",
+          "metric": "total_tokens",
+          "unit": "tokens",
+          "contracted_react": 3708.6666666666665,
+          "goal_graph_hybrid": 12288.0
+        },
+        {
+          "section": "cost",
+          "metric": "elapsed_seconds",
+          "unit": "seconds",
+          "contracted_react": 5.4793617750013555,
+          "goal_graph_hybrid": 17.087285999994492
+        },
+        {
+          "section": "cost",
+          "metric": "critical_path_rounds",
+          "unit": "rounds",
+          "contracted_react": 4.666666666666667,
+          "goal_graph_hybrid": 3.6666666666666665
+        }
+      ]
+    },
+    {
+      "id": "representative-divergence",
+      "title": "Representative Pilot B trace and first divergence",
+      "subtitle": "Open-evidence instance 01 · both runs verified · trace pair included in the reviewed public bundle",
+      "data_source": [
+        "Pilot B reviewed representative traces"
+      ],
+      "evidence_role": "representative_trace",
+      "rows": [
+        {
+          "architecture": "contracted_react",
+          "family": "open_evidence",
+          "pair_id": "open_evidence-01",
+          "verified_success": true,
+          "selection_basis": "reviewed public representative trace bundle",
+          "first_divergence_round": 6,
+          "trace": [
+            {
+              "model_round": 1,
+              "tool": "list_evidence",
+              "disposition": "executed"
+            },
+            {
+              "model_round": 2,
+              "tool": "read_evidence",
+              "disposition": "executed"
+            },
+            {
+              "model_round": 3,
+              "tool": "read_evidence",
+              "disposition": "executed"
+            },
+            {
+              "model_round": 4,
+              "tool": "read_evidence",
+              "disposition": "executed"
+            },
+            {
+              "model_round": 5,
+              "tool": "submit_result",
+              "disposition": "executed"
+            },
+            {
+              "model_round": 6,
+              "tool": "finish",
+              "disposition": "executed"
+            }
+          ]
+        },
+        {
+          "architecture": "goal_graph_hybrid",
+          "family": "open_evidence",
+          "pair_id": "open_evidence-01",
+          "verified_success": true,
+          "selection_basis": "reviewed public representative trace bundle",
+          "first_divergence_round": 6,
+          "trace": [
+            {
+              "model_round": 1,
+              "tool": "list_evidence",
+              "disposition": "executed"
+            },
+            {
+              "model_round": 2,
+              "tool": "read_evidence",
+              "disposition": "executed"
+            },
+            {
+              "model_round": 3,
+              "tool": "read_evidence",
+              "disposition": "executed"
+            },
+            {
+              "model_round": 4,
+              "tool": "read_evidence",
+              "disposition": "executed"
+            },
+            {
+              "model_round": 5,
+              "tool": "submit_result",
+              "disposition": "executed"
+            },
+            {
+              "model_round": 6,
+              "tool": "submit_result",
+              "disposition": "controller_rejected"
+            },
+            {
+              "model_round": 7,
+              "tool": "submit_result",
+              "disposition": "controller_rejected"
+            },
+            {
+              "model_round": 8,
+              "tool": "submit_result",
+              "disposition": "controller_rejected"
+            },
+            {
+              "model_round": 9,
+              "tool": "submit_result",
+              "disposition": "controller_rejected"
+            },
+            {
+              "model_round": 10,
+              "tool": "submit_result",
+              "disposition": "controller_rejected"
+            },
+            {
+              "model_round": 11,
+              "tool": "submit_result",
+              "disposition": "controller_rejected"
+            },
+            {
+              "model_round": 12,
+              "tool": "submit_result",
+              "disposition": "controller_rejected"
+            },
+            {
+              "model_round": 13,
+              "tool": "submit_result",
+              "disposition": "controller_rejected"
+            },
+            {
+              "model_round": 14,
+              "tool": "submit_result",
+              "disposition": "controller_rejected"
+            },
+            {
+              "model_round": 15,
+              "tool": "submit_result",
+              "disposition": "controller_rejected"
+            },
+            {
+              "model_round": 16,
+              "tool": "submit_result",
+              "disposition": "controller_rejected"
+            },
+            {
+              "model_round": 17,
+              "tool": "submit_result",
+              "disposition": "controller_rejected"
+            },
+            {
+              "model_round": 18,
+              "tool": "submit_result",
+              "disposition": "controller_rejected"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "architecture-decision",
+      "title": "Task conditions to architecture choice",
+      "subtitle": "Engineering decision aid derived from both pilots; recommendations are conditional, not a universal ranking",
+      "data_source": [
+        "Pilot A formal result",
+        "Pilot B formal result",
+        "engineering interpretation"
+      ],
+      "evidence_role": "conditional_recommendation",
+      "rows": [
+        {
+          "condition": "stable and code-verifiable completion rules",
+          "recommended_architecture": "workflow_controlled",
+          "evidence": "Pilot A",
+          "guardrail": "keep outcome verifier independent from the prescribed route"
+        },
+        {
+          "condition": "independent subgoals with verifiable merge",
+          "candidate_architecture": "goal_graph_hybrid",
+          "recommendation_strength": "candidate_only",
+          "evidence": "Pilot B negative result",
+          "pilot_b_parallel_successes_per_arm": 0,
+          "pilot_b_parallel_eligible_n_per_arm": 4,
+          "pilot_b_parallel_merge_omissions_per_run": 3.0,
+          "guardrail": "require a domain merge acceptance gate before adoption",
+          "conservative_fallback": "contracted_react"
+        },
+        {
+          "condition": "open path without stable workflow or safe parallel merge",
+          "recommended_architecture": "contracted_react",
+          "evidence": "Pilot B",
+          "guardrail": "clear tool contract, complete trace, hard aggregate budget"
+        }
+      ]
+    },
+    {
+      "id": "product-reference-architecture",
+      "title": "Five-layer product reference architecture",
+      "subtitle": "A deployable structure that separates business policy, execution control, tool access, evidence, and evaluation",
+      "data_source": [
+        "local architecture synthesis",
+        "Pilot A and Pilot B instrumentation"
+      ],
+      "evidence_role": "product_reference_design",
+      "rows": [
+        {
+          "layer": "Product layer",
+          "components": [
+            "Task intake",
+            "Business policy",
+            "Human handoff"
+          ],
+          "feedback_to_control": false
+        },
+        {
+          "layer": "Control layer",
+          "components": [
+            "Planner",
+            "State / goal graph",
+            "Legal actions",
+            "Recovery / stop"
+          ],
+          "feedback_to_control": false
+        },
+        {
+          "layer": "Tool layer",
+          "components": [
+            "Unified entry",
+            "Schema validation",
+            "Timeout / retry",
+            "Permission boundary"
+          ],
+          "feedback_to_control": false
+        },
+        {
+          "layer": "Evidence layer",
+          "components": [
+            "Execution trace",
+            "Evidence record",
+            "Artifact versions",
+            "Cost ledger"
+          ],
+          "feedback_to_control": false
+        },
+        {
+          "layer": "Evaluation layer",
+          "components": [
+            "Code acceptance",
+            "Quality metrics",
+            "Regression set",
+            "Release gate"
+          ],
+          "feedback_to_control": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,837 @@
+<!DOCTYPE html><html dir="ltr" lang="zh-CN" class="overflow-y-scroll scroll-smooth"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="canonical" href="https://shiaoming123.github.io/research/agent-architecture-control/pilot-b-data/"><meta name="generator" content="Astro v6.4.8"><!-- Font --><style>@font-face{font-family:"Google Sans Code-66787e984771ec7e";src:url("/_astro/fonts/87ca066ba5b2c7cf.woff") format("woff"), url("/_astro/fonts/f4e25dfe9d6152ec.ttf") format("truetype");font-display:swap;font-weight:400;font-style:normal;}@font-face{font-family:"Google Sans Code-66787e984771ec7e";src:url("/_astro/fonts/f914de358bc554f6.woff") format("woff"), url("/_astro/fonts/dbc9996f99c63e07.ttf") format("truetype");font-display:swap;font-weight:700;font-style:normal;}@font-face{font-family:"Google Sans Code-66787e984771ec7e fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:400;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-66787e984771ec7e fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:700;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}:root{--font-google-sans-code:"Google Sans Code-66787e984771ec7e","Google Sans Code-66787e984771ec7e fallback: Courier New",monospace;}</style><!-- Primary meta --><title>Pilot B 数据浏览器 | 世傲命的技术观测站</title><meta name="title" content="Pilot B 数据浏览器 | 世傲命的技术观测站"><meta name="description" content="查看 Agent 架构 Pilot B 的实验设计、24 条脱敏运行记录、指标、验收结果与完整公开数据下载。"><meta name="author" content="世傲命"><link rel="sitemap" href="/sitemap.xml"><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:site_name" content="世傲命的技术观测站"><meta property="og:title" content="Pilot B 数据浏览器 | 世傲命的技术观测站"><meta property="og:description" content="查看 Agent 架构 Pilot B 的实验设计、24 条脱敏运行记录、指标、验收结果与完整公开数据下载。"><meta property="og:url" content="https://shiaoming123.github.io/research/agent-architecture-control/pilot-b-data/"><meta property="og:image" content="https://shiaoming123.github.io/default-og.jpg"><!-- Twitter / X --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://shiaoming123.github.io/research/agent-architecture-control/pilot-b-data/"><meta property="twitter:title" content="Pilot B 数据浏览器 | 世傲命的技术观测站"><meta property="twitter:description" content="查看 Agent 架构 Pilot B 的实验设计、24 条脱敏运行记录、指标、验收结果与完整公开数据下载。"><meta property="twitter:image" content="https://shiaoming123.github.io/default-og.jpg"><!-- RSS autodiscovery --><link rel="alternate" type="application/rss+xml" title="世傲命的技术观测站" href="https://shiaoming123.github.io/rss.xml"><!-- Filled at runtime by theme.ts to match the current background colour --><meta name="theme-color" content=""><!-- Extra head content injected by child layouts (e.g. JSON-LD, article meta) --><!--
+      Inline FOUC-prevention script: sets data-theme on <html> before
+      the browser paints. Runs synchronously, no defer/async.
+    --><script>
+      (function () {
+        const stored = localStorage.getItem("theme");
+        const theme = stored ?? "dark";
+        const root = document.firstElementChild;
+        root?.setAttribute("data-theme", theme);
+        root?.classList.toggle("dark", theme === "dark");
+        // Expose value so theme.ts can skip re-detection.
+        window.__theme = { value: theme };
+      })();
+    </script><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CAqDO0tx.js"></script><link rel="stylesheet" href="/_astro/Footer.BiNdA1AI.css"><link rel="stylesheet" href="/_astro/pilot-b-data.JAQLrBdx.css"></head> <body class="bg-background font-app text-foreground selection:bg-accent/75 selection:text-accent-foreground flex min-h-svh flex-col"> <div class="scroll-progress" aria-hidden="true"></div>  <a id="skip-to-content" href="#main-content" class="bg-background text-accent absolute inset-s-16 -top-full z-50 px-3 py-2 backdrop-blur-lg transition-all focus:top-4"> 跳到正文 </a> <header class="observatory-header"> <div class="observatory-header-bar"> <a href="/" class="observatory-brand" aria-label="世傲命的技术观测站，返回首页"> <span class="observatory-brand-mark" aria-hidden="true"> <span></span> </span> <span class="observatory-brand-copy"> <strong>世傲命的技术观测站</strong> <small>PERSONAL TECHNOLOGY OBSERVATORY</small> </span> </a> <nav class="observatory-navigation" aria-label="主导航"> <button id="menu-btn" class="focus-outline observatory-menu-button" aria-label="打开菜单" aria-expanded="false" aria-controls="menu-items" data-label-open="打开菜单" data-label-close="关闭菜单"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="hidden" viewBox="0 0 24 24" id="close-icon"><path stroke="none" d="M0 0h24v24H0z" /><path d="M18 6 6 18M6 6l12 12" /></svg> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon icon-tabler icons-tabler-outline icon-tabler-menu-deep" viewBox="0 0 24 24" id="menu-icon"><path stroke="none" d="M0 0h24v24H0z" /><path d="M4 6h16M7 12h13M10 18h10" /></svg> </button> <ul id="menu-items" class="observatory-nav-list hidden max-h-[calc(100svh-4.5rem)] overflow-y-auto lg:flex lg:overflow-visible"> <li class="observatory-nav-item"> <a href="/posts/"> 文章 </a> </li><li class="observatory-nav-item"> <a href="/learning/"> 学习 </a> </li><li class="observatory-nav-item"> <a href="/signals/"> 信号 </a> </li><li class="observatory-nav-item"> <a href="/projects/"> 作品 </a> </li><li class="observatory-nav-item"> <a href="/about/"> 关于 </a> </li> <li class="observatory-more-item"> <details id="navigation-more" class="observatory-more"> <summary> 更多 </summary> <ul aria-label="更多"> <li> <a href="/bookmarks/"> 资源 </a> </li><li> <a href="/arena/"> 榜单 </a> </li><li> <a href="/taxonomy/"> 分类 </a> </li><li> <a href="/archives/"> 归档 </a> </li><li> <a href="/changelog/"> 日志 </a> </li> </ul> </details> </li> <li class="observatory-tool-item"> <a href="/search/" title="搜索" aria-label="搜索"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon icon-tabler icons-tabler-outline icon-tabler-search" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 10a7 7 0 1 0 14 0 7 7 0 1 0-14 0M21 21l-6-6" /></svg> <span class="lg:sr-only">搜索</span> </a> </li> <li class="observatory-tool-item"> <button id="theme-btn" title="切换主题" aria-label="切换到深色主题" aria-live="polite"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M12 3h.393a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 2.992z" /></svg> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M14.828 14.828a4 4 0 1 0-5.656-5.656 4 4 0 0 0 5.656 5.656M6.343 17.657l-1.414 1.414M6.343 6.343 4.929 4.929M17.657 6.343l1.414-1.414M17.657 17.657l1.414 1.414M4 12H2M12 4V2M20 12h2M12 20v2" /></svg> <span class="lg:sr-only">切换主题</span> </button> </li> </ul> </nav> </div> </header> <script type="module">function v(){const a=window;a.__observatoryNavigationCleanup?.();const t=document.querySelector("#menu-btn"),n=document.querySelector("#menu-items"),i=document.querySelector("#menu-icon"),c=document.querySelector("#close-icon"),g=document.querySelector("#navigation-more");if(!t||!n||!i||!c)return;const L=t.dataset.labelOpen??"打开菜单",f=t.dataset.labelClose??"关闭菜单",o=()=>t.getAttribute("aria-expanded")==="true",s=(e,b=!1)=>{t.setAttribute("aria-expanded",String(e)),t.setAttribute("aria-label",e?f:L),n.classList.toggle("hidden",!e),n.classList.toggle("grid",e),i.classList.toggle("hidden",e),c.classList.toggle("hidden",!e),document.documentElement.classList.toggle("shell-menu-open",e),e||(g?.removeAttribute("open"),b&&t.focus())},r=()=>s(!o()),l=e=>{o()&&e.target.closest("a")&&s(!1)},d=e=>{e.key==="Escape"&&o()&&(e.preventDefault(),s(!1,!0))},u=e=>{e.matches&&o()&&s(!1)},m=window.matchMedia("(min-width: 64rem)");t.addEventListener("click",r),n.addEventListener("click",l),document.addEventListener("keydown",d),m.addEventListener("change",u),a.__observatoryNavigationCleanup=()=>{t.removeEventListener("click",r),n.removeEventListener("click",l),document.removeEventListener("keydown",d),m.removeEventListener("change",u),document.documentElement.classList.remove("shell-menu-open")}}v();document.addEventListener("astro:after-swap",v);document.addEventListener("astro:before-swap",()=>{window.__observatoryNavigationCleanup?.()});</script> <main id="main-content" class="pilot-b-explorer" data-pagefind-body> <header class="pilot-b-hero"> <nav aria-label="面包屑"> <a href="/research/agent-architecture-control/">返回完整研究页</a> <span aria-hidden="true">/</span> <span>Pilot B 数据</span> </nav> <p class="pilot-b-kicker">Open data · reviewed public projection</p> <h1>Pilot B：24 次运行的数据浏览器</h1> <p class="pilot-b-lede">
+这里公开实验设计和逐运行数据，方便读者检查每一条结论。页面展示的是经过字段白名单与隐私检查的公开投影，不包含
+        API Key、私有响应正文、本机路径或内部产物。
+</p> <dl class="pilot-b-overview" aria-label="Pilot B 实验概览"> <div> <dt>实验矩阵</dt><dd> 3 × 4 × 2<small>任务类型 × 实例 × 架构</small> </dd> </div> <div> <dt>正式运行</dt><dd>24<small>无静默替换运行</small></dd> </div> <div> <dt>模型</dt><dd> deepseek-v4-flash<small>thinking 关闭</small> </dd> </div> <div> <dt>通过代码验收</dt><dd> 8/12 · 8/12 <small>开放式 · 目标图混合</small> </dd> </div> </dl> <aside class="boundary-note" aria-label="证据边界"> <strong>这不是产品排行。</strong> <span>数据只回答两种本地架构在这 12
+个冻结实例中的表现，不能推出某种架构普遍更强，也不能还原商业产品的内部系统。</span> </aside> </header> <section class="pilot-b-section" aria-labelledby="design-title"> <div class="section-title"> <p>01 · Study design</p> <h2 id="design-title">先看控制变量，再看结果</h2> <span>两边使用同一模型、同一任务实例、同一组工具、同一代码验收和同一总预算。改变的是模型外面的执行控制方式。</span> </div> <div class="design-grid"> <article> <span>A</span> <h3>开放式执行</h3> <p>Clear tool contract, all tools visible, complete trace; the model chooses planning, recovery, and stop.</p> </article> <article> <span>B</span> <h3>目标图混合执行</h3> <p>Explicit goal/dependency state, all currently legal frontier actions visible, evidence ledger, one-attempt failed-route recovery, and deterministic bounded parallel branches for independent decomposition goals.</p> </article> <article class="budget-card"> <span>预算</span> <h3>每条运行统一计费</h3> <ul> <li>模型调用 ≤ 18</li> <li>工具调用 ≤ 24</li> <li>总 tokens ≤ 30,000</li> <li>并行分支 ≤ 3</li> <li>超时 240 秒</li> </ul> </article> </div> <div class="matrix-wrap" role="region" tabindex="0" aria-label="Pilot B 运行矩阵"> <table class="matrix-table"> <caption>3 类任务 × 4 个实例 × 2 种架构 = 24 条正式运行</caption> <thead><tr><th>任务类型</th><th>冻结实例</th><th>开放式执行</th><th>目标图混合</th></tr></thead> <tbody> <tr> <th scope="row"> 替代路径 <code>alternative_path</code> </th> <td>4</td> <td>4</td> <td>4</td> </tr><tr> <th scope="row"> 开放取证 <code>open_evidence</code> </th> <td>4</td> <td>4</td> <td>4</td> </tr><tr> <th scope="row"> 并行拆解 <code>parallel_decomposition</code> </th> <td>4</td> <td>4</td> <td>4</td> </tr> </tbody> </table> </div> </section> <section class="pilot-b-section" aria-labelledby="runs-title"> <div class="section-title"> <p>02 · Run explorer</p> <h2 id="runs-title">逐条检查 24 次运行</h2> <span>先用筛选缩小范围，再展开单条记录。页面只展示公开指标、结束原因、代码验收结果和响应哈希；完整公开字段可下载
+          JSON。</span> </div> <form class="run-filters" data-run-filters aria-label="筛选运行记录"> <label> <span>任务类型</span> <select data-filter-family> <option value="all">全部任务</option> <option value="alternative_path">替代路径</option><option value="open_evidence">开放取证</option><option value="parallel_decomposition">并行拆解</option> </select> </label> <label> <span>执行架构</span> <select data-filter-architecture> <option value="all">全部架构</option> <option value="contracted_react"> 开放式执行 </option><option value="goal_graph_hybrid"> 目标图混合执行 </option> </select> </label> <label> <span>代码验收</span> <select data-filter-success> <option value="all">全部状态</option> <option value="true">通过</option> <option value="false">未通过</option> </select> </label> <button type="reset">清除筛选</button> <p aria-live="polite" data-filter-status>
+显示 24 / 24 条
+</p> </form> <div class="run-table-wrap" role="region" tabindex="0" aria-label="Pilot B 逐运行记录"> <table class="run-table"> <thead> <tr><th>#</th><th>实例</th><th>架构</th><th>验收</th><th>效用</th><th>模型 / 工具</th><th>tokens</th><th>时间</th><th>公开详情</th></tr> </thead> <tbody> <tr data-run-row data-family="alternative_path" data-architecture="contracted_react" data-success="true"> <td>01</td> <th scope="row">  <span>替代路径</span> <code>alternative_path-01</code>  </th> <td>开放式执行</td> <td> <span class="run-status is-pass"> 通过 </span> </td> <td>100</td> <td> 5 / 5 </td> <td>2,796</td> <td>5.02 s</td> <td> <details> <summary>展开</summary> <div class="run-details"> <section> <h3>运行与结束</h3> <dl> <div>  <dt>run key</dt> <dd> <code>contracted_react__alternative_path-01</code> </dd>  </div> <div>  <dt>termination</dt> <dd> <code>finish</code> </dd>  </div> <div>  <dt>eligibility</dt> <dd> <code>eligible_agent_result</code> </dd>  </div> <div>  <dt>pair</dt> <dd> <code>eligible_pair</code> </dd>  </div> </dl> </section> <section> <h3>代码验收</h3> <dl> <div>  <dt>关键事实覆盖</dt> <dd> 100
+%
+</dd>  </div> <div>  <dt>错误证据</dt> <dd>0</dd>  </div> <div>  <dt>合并遗漏</dt> <dd>0</dd>  </div> <div>  <dt>合并冲突</dt> <dd>0</dd>  </div> </dl> </section> <section> <h3>执行指标</h3> <dl> <div>  <dt>重复动作</dt> <dd>0</dd>  </div> <div>  <dt>无关动作</dt> <dd>0</dd>  </div> <div>  <dt>路径切换</dt> <dd>是</dd>  </div> <div>  <dt>关键路径轮次</dt> <dd>4</dd>  </div> <div>  <dt>控制器拒绝</dt> <dd> 0 </dd>  </div> <div>  <dt>prompt / completion</dt> <dd> 2,659 /  137 </dd>  </div> </dl> </section> <section class="hash-list"> <h3>模型交换哈希</h3> <p>用于核对公开记录，不公开响应正文。</p> <ol> <li> <span>
+round 1 ·  controller </span> <code title="prompt SHA-256">
+P 72acd4fb9649938f93bb1039b5fab440ea9d816649bdfefd7ef37b0a7f544477 </code> <code title="response SHA-256">
+R 1199fd234b315946d0650fb28abc53628005ff2fa289c4986b1b55c67fc6af9b </code> </li><li> <span>
+round 2 ·  controller </span> <code title="prompt SHA-256">
+P 6e5eda99c15c3943a5c6d4ea3d4580d2d0b1250a31c3d0514cbc5dd593e362f8 </code> <code title="response SHA-256">
+R 295fdef966214727a1013e96c0eb72f6bbcc1f5d8d5dfb5e6face00863de3983 </code> </li><li> <span>
+round 3 ·  controller </span> <code title="prompt SHA-256">
+P 2f5824f5fb54f30a060a37bec2ec9f902952a30a3a767452a22851444e780fdf </code> <code title="response SHA-256">
+R 5ba84ad90f55e4808ccf8e4c18893f24557b94e3851892cf5f07b67f85eb50fe </code> </li><li> <span>
+round 4 ·  controller </span> <code title="prompt SHA-256">
+P d44a2169948be779c105d862fe2fdce2b565e2594d0069f9d2a5011f09b81dfa </code> <code title="response SHA-256">
+R 203d8619b22a85be1124e4a141d0f478c94c94d64b6b9394e7a0c03b6a3c2a92 </code> </li><li> <span>
+round 5 ·  controller </span> <code title="prompt SHA-256">
+P 626bf4aab1bb57f09f70d0706cd7dcaf7d445f66133779b5739a09427acfad97 </code> <code title="response SHA-256">
+R 7310372e895dfcd49057382944f726a4b0ab03cbdea6904b834b3516d3bead52 </code> </li> </ol> </section> </div> </details> </td> </tr><tr data-run-row data-family="alternative_path" data-architecture="goal_graph_hybrid" data-success="true"> <td>02</td> <th scope="row">  <span>替代路径</span> <code>alternative_path-01</code>  </th> <td>目标图混合执行</td> <td> <span class="run-status is-pass"> 通过 </span> </td> <td>100</td> <td> 8 / 5 </td> <td>4,655</td> <td>8.09 s</td> <td> <details> <summary>展开</summary> <div class="run-details"> <section> <h3>运行与结束</h3> <dl> <div>  <dt>run key</dt> <dd> <code>goal_graph_hybrid__alternative_path-01</code> </dd>  </div> <div>  <dt>termination</dt> <dd> <code>finish</code> </dd>  </div> <div>  <dt>eligibility</dt> <dd> <code>eligible_agent_result</code> </dd>  </div> <div>  <dt>pair</dt> <dd> <code>eligible_pair</code> </dd>  </div> </dl> </section> <section> <h3>代码验收</h3> <dl> <div>  <dt>关键事实覆盖</dt> <dd> 100
+%
+</dd>  </div> <div>  <dt>错误证据</dt> <dd>0</dd>  </div> <div>  <dt>合并遗漏</dt> <dd>0</dd>  </div> <div>  <dt>合并冲突</dt> <dd>0</dd>  </div> </dl> </section> <section> <h3>执行指标</h3> <dl> <div>  <dt>重复动作</dt> <dd>3</dd>  </div> <div>  <dt>无关动作</dt> <dd>0</dd>  </div> <div>  <dt>路径切换</dt> <dd>是</dd>  </div> <div>  <dt>关键路径轮次</dt> <dd>4</dd>  </div> <div>  <dt>控制器拒绝</dt> <dd> 3 </dd>  </div> <div>  <dt>prompt / completion</dt> <dd> 4,375 /  280 </dd>  </div> </dl> </section> <section class="hash-list"> <h3>模型交换哈希</h3> <p>用于核对公开记录，不公开响应正文。</p> <ol> <li> <span>
+round 1 ·  controller </span> <code title="prompt SHA-256">
+P 04ff39e755b40b22cc16c72b931a6235f5502c9b8c30f0a9f957f1fe0b9f4570 </code> <code title="response SHA-256">
+R 1199fd234b315946d0650fb28abc53628005ff2fa289c4986b1b55c67fc6af9b </code> </li><li> <span>
+round 2 ·  controller </span> <code title="prompt SHA-256">
+P ea9c33161ec96aacb0634bf79ddd27192366af53eeeefc82dfc967f1229bfce9 </code> <code title="response SHA-256">
+R 295fdef966214727a1013e96c0eb72f6bbcc1f5d8d5dfb5e6face00863de3983 </code> </li><li> <span>
+round 3 ·  controller </span> <code title="prompt SHA-256">
+P 94034cf43a7ca8a184ae11cf581675f20d6cd3b738dd120f3ee790b2eb133127 </code> <code title="response SHA-256">
+R 5ba84ad90f55e4808ccf8e4c18893f24557b94e3851892cf5f07b67f85eb50fe </code> </li><li> <span>
+round 4 ·  controller </span> <code title="prompt SHA-256">
+P 6a3628b53697f3b93ef65920ad9fe2a70b7a6e0d5ee2828239f0efb499463a9b </code> <code title="response SHA-256">
+R 203d8619b22a85be1124e4a141d0f478c94c94d64b6b9394e7a0c03b6a3c2a92 </code> </li><li> <span>
+round 5 ·  controller </span> <code title="prompt SHA-256">
+P 19d242e07a398be1313d1392d30f86035bb8e730d3cd6d81c99391b1b02bf26f </code> <code title="response SHA-256">
+R 203d8619b22a85be1124e4a141d0f478c94c94d64b6b9394e7a0c03b6a3c2a92 </code> </li><li> <span>
+round 6 ·  controller </span> <code title="prompt SHA-256">
+P 46522d73c8751dc91c25db3d3d298efe36b3b137a8494f3f087cf6be52307e86 </code> <code title="response SHA-256">
+R 203d8619b22a85be1124e4a141d0f478c94c94d64b6b9394e7a0c03b6a3c2a92 </code> </li><li> <span>
+round 7 ·  controller </span> <code title="prompt SHA-256">
+P 304ad45af8ded4b09f25a056cba7fc270002ebd50701ec5470c7f237d531e304 </code> <code title="response SHA-256">
+R 843caf795919aa6a0c0052ce9f76769f21efcf847577f788f994d3f6ee5db258 </code> </li><li> <span>
+round 8 ·  controller </span> <code title="prompt SHA-256">
+P 36debcc9dccbd6ae71b2fdb1b1ccfdcba6ce9f137a888462efbd12b8667bbd2a </code> <code title="response SHA-256">
+R 7310372e895dfcd49057382944f726a4b0ab03cbdea6904b834b3516d3bead52 </code> </li> </ol> </section> </div> </details> </td> </tr><tr data-run-row data-family="alternative_path" data-architecture="goal_graph_hybrid" data-success="true"> <td>03</td> <th scope="row">  <span>替代路径</span> <code>alternative_path-02</code>  </th> <td>目标图混合执行</td> <td> <span class="run-status is-pass"> 通过 </span> </td> <td>100</td> <td> 7 / 5 </td> <td>3,985</td> <td>5.94 s</td> <td> <details> <summary>展开</summary> <div class="run-details"> <section> <h3>运行与结束</h3> <dl> <div>  <dt>run key</dt> <dd> <code>goal_graph_hybrid__alternative_path-02</code> </dd>  </div> <div>  <dt>termination</dt> <dd> <code>finish</code> </dd>  </div> <div>  <dt>eligibility</dt> <dd> <code>eligible_agent_result</code> </dd>  </div> <div>  <dt>pair</dt> <dd> <code>eligible_pair</code> </dd>  </div> </dl> </section> <section> <h3>代码验收</h3> <dl> <div>  <dt>关键事实覆盖</dt> <dd> 100
+%
+</dd>  </div> <div>  <dt>错误证据</dt> <dd>0</dd>  </div> <div>  <dt>合并遗漏</dt> <dd>0</dd>  </div> <div>  <dt>合并冲突</dt> <dd>0</dd>  </div> </dl> </section> <section> <h3>执行指标</h3> <dl> <div>  <dt>重复动作</dt> <dd>2</dd>  </div> <div>  <dt>无关动作</dt> <dd>0</dd>  </div> <div>  <dt>路径切换</dt> <dd>是</dd>  </div> <div>  <dt>关键路径轮次</dt> <dd>4</dd>  </div> <div>  <dt>控制器拒绝</dt> <dd> 2 </dd>  </div> <div>  <dt>prompt / completion</dt> <dd> 3,759 /  226 </dd>  </div> </dl> </section> <section class="hash-list"> <h3>模型交换哈希</h3> <p>用于核对公开记录，不公开响应正文。</p> <ol> <li> <span>
+round 1 ·  controller </span> <code title="prompt SHA-256">
+P 2115969a0ba27437d5143c3276f4352d329a4d6c776f689508425e8fa86f6817 </code> <code title="response SHA-256">
+R 1199fd234b315946d0650fb28abc53628005ff2fa289c4986b1b55c67fc6af9b </code> </li><li> <span>
+round 2 ·  controller </span> <code title="prompt SHA-256">
+P 2c676b4112e9e04a062c7cc7afc1355dae8c6ef7c329516de17d382cc9d32788 </code> <code title="response SHA-256">
+R 79566c274ead8a167911b979d693844cdcca5cf0857b42da9b1eb239a88db31d </code> </li><li> <span>
+round 3 ·  controller </span> <code title="prompt SHA-256">
+P 17c2dee98c19a71502f542b9181cf47601a62fa25c5c2d81d9348b7708597246 </code> <code title="response SHA-256">
+R c33d722124abdf6782d7cf08b98e2f96db8f28c6245a9e15b92d9ce08f191b5d </code> </li><li> <span>
+round 4 ·  controller </span> <code title="prompt SHA-256">
+P f6e8b66c14ad4728ba945801e48f15754f73ae30d32f29458c453bc9ac250cd7 </code> <code title="response SHA-256">
+R cd1223a2de4b951b7b1d4b63c6e5c041fae13c5cfb5035f9e6a423bfa7cd8b09 </code> </li><li> <span>
+round 5 ·  controller </span> <code title="prompt SHA-256">
+P 1319510d1c9a301d9e23b80ea3c6503b4ef3f8b0502a7f3cfe2d0feeb24d2755 </code> <code title="response SHA-256">
+R cd1223a2de4b951b7b1d4b63c6e5c041fae13c5cfb5035f9e6a423bfa7cd8b09 </code> </li><li> <span>
+round 6 ·  controller </span> <code title="prompt SHA-256">
+P f3765159a32d3e5f23e8f8454b32a3e69aa4d77538f2bc82b31520096fed9105 </code> <code title="response SHA-256">
+R cd1223a2de4b951b7b1d4b63c6e5c041fae13c5cfb5035f9e6a423bfa7cd8b09 </code> </li><li> <span>
+round 7 ·  controller </span> <code title="prompt SHA-256">
+P 2718f24ad7196b5d00f223ba853a833e4e946b976db12ae66d493991b9eb3703 </code> <code title="response SHA-256">
+R 7310372e895dfcd49057382944f726a4b0ab03cbdea6904b834b3516d3bead52 </code> </li> </ol> </section> </div> </details> </td> </tr><tr data-run-row data-family="alternative_path" data-architecture="contracted_react" data-success="true"> <td>04</td> <th scope="row">  <span>替代路径</span> <code>alternative_path-02</code>  </th> <td>开放式执行</td> <td> <span class="run-status is-pass"> 通过 </span> </td> <td>100</td> <td> 5 / 5 </td> <td>2,784</td> <td>3.93 s</td> <td> <details> <summary>展开</summary> <div class="run-details"> <section> <h3>运行与结束</h3> <dl> <div>  <dt>run key</dt> <dd> <code>contracted_react__alternative_path-02</code> </dd>  </div> <div>  <dt>termination</dt> <dd> <code>finish</code> </dd>  </div> <div>  <dt>eligibility</dt> <dd> <code>eligible_agent_result</code> </dd>  </div> <div>  <dt>pair</dt> <dd> <code>eligible_pair</code> </dd>  </div> </dl> </section> <section> <h3>代码验收</h3> <dl> <div>  <dt>关键事实覆盖</dt> <dd> 100
+%
+</dd>  </div> <div>  <dt>错误证据</dt> <dd>0</dd>  </div> <div>  <dt>合并遗漏</dt> <dd>0</dd>  </div> <div>  <dt>合并冲突</dt> <dd>0</dd>  </div> </dl> </section> <section> <h3>执行指标</h3> <dl> <div>  <dt>重复动作</dt> <dd>0</dd>  </div> <div>  <dt>无关动作</dt> <dd>0</dd>  </div> <div>  <dt>路径切换</dt> <dd>是</dd>  </div> <div>  <dt>关键路径轮次</dt> <dd>4</dd>  </div> <div>  <dt>控制器拒绝</dt> <dd> 0 </dd>  </div> <div>  <dt>prompt / completion</dt> <dd> 2,650 /  134 </dd>  </div> </dl> </section> <section class="hash-list"> <h3>模型交换哈希</h3> <p>用于核对公开记录，不公开响应正文。</p> <ol> <li> <span>
+round 1 ·  controller </span> <code title="prompt SHA-256">
+P f272a0d5bee5925608bbea495711358613818d8f366f9aa33924cbd286eefe39 </code> <code title="response SHA-256">
+R 1199fd234b315946d0650fb28abc53628005ff2fa289c4986b1b55c67fc6af9b </code> </li><li> <span>
+round 2 ·  controller </span> <code title="prompt SHA-256">
+P 040d50bf9f9f15b3928fdf1aac5a34cec068c983ad3f5f94d19f17170f8b8717 </code> <code title="response SHA-256">
+R 79566c274ead8a167911b979d693844cdcca5cf0857b42da9b1eb239a88db31d </code> </li><li> <span>
+round 3 ·  controller </span> <code title="prompt SHA-256">
+P ab5cf09aece3c7dd340332af5f61bf38a3e96c3d89f98ef15b072186dba0512c </code> <code title="response SHA-256">
+R c33d722124abdf6782d7cf08b98e2f96db8f28c6245a9e15b92d9ce08f191b5d </code> </li><li> <span>
+round 4 ·  controller </span> <code title="prompt SHA-256">
+P 289c24ecef9be0dbb55f60068d7e41ab1b5916ac5c6efa1521025bd4be0f4978 </code> <code title="response SHA-256">
+R cd1223a2de4b951b7b1d4b63c6e5c041fae13c5cfb5035f9e6a423bfa7cd8b09 </code> </li><li> <span>
+round 5 ·  controller </span> <code title="prompt SHA-256">
+P a87e48926f99e70cbd2f40ac90f902be43296758a3cf783b71a6c9ca9d4fe912 </code> <code title="response SHA-256">
+R 7310372e895dfcd49057382944f726a4b0ab03cbdea6904b834b3516d3bead52 </code> </li> </ol> </section> </div> </details> </td> </tr><tr data-run-row data-family="alternative_path" data-architecture="contracted_react" data-success="true"> <td>05</td> <th scope="row">  <span>替代路径</span> <code>alternative_path-03</code>  </th> <td>开放式执行</td> <td> <span class="run-status is-pass"> 通过 </span> </td> <td>100</td> <td> 5 / 5 </td> <td>2,796</td> <td>4.80 s</td> <td> <details> <summary>展开</summary> <div class="run-details"> <section> <h3>运行与结束</h3> <dl> <div>  <dt>run key</dt> <dd> <code>contracted_react__alternative_path-03</code> </dd>  </div> <div>  <dt>termination</dt> <dd> <code>finish</code> </dd>  </div> <div>  <dt>eligibility</dt> <dd> <code>eligible_agent_result</code> </dd>  </div> <div>  <dt>pair</dt> <dd> <code>eligible_pair</code> </dd>  </div> </dl> </section> <section> <h3>代码验收</h3> <dl> <div>  <dt>关键事实覆盖</dt> <dd> 100
+%
+</dd>  </div> <div>  <dt>错误证据</dt> <dd>0</dd>  </div> <div>  <dt>合并遗漏</dt> <dd>0</dd>  </div> <div>  <dt>合并冲突</dt> <dd>0</dd>  </div> </dl> </section> <section> <h3>执行指标</h3> <dl> <div>  <dt>重复动作</dt> <dd>0</dd>  </div> <div>  <dt>无关动作</dt> <dd>0</dd>  </div> <div>  <dt>路径切换</dt> <dd>是</dd>  </div> <div>  <dt>关键路径轮次</dt> <dd>4</dd>  </div> <div>  <dt>控制器拒绝</dt> <dd> 0 </dd>  </div> <div>  <dt>prompt / completion</dt> <dd> 2,659 /  137 </dd>  </div> </dl> </section> <section class="hash-list"> <h3>模型交换哈希</h3> <p>用于核对公开记录，不公开响应正文。</p> <ol> <li> <span>
+round 1 ·  controller </span> <code title="prompt SHA-256">
+P 6933acd555be72210f8aaeab2f16cf20c7ae699a6ee05ca3d181ae109d183748 </code> <code title="response SHA-256">
+R 1199fd234b315946d0650fb28abc53628005ff2fa289c4986b1b55c67fc6af9b </code> </li><li> <span>
+round 2 ·  controller </span> <code title="prompt SHA-256">
+P 77386662a941f700b893545cf5cb91ab296fe2d6c31f01bccd661099a98d47f8 </code> <code title="response SHA-256">
+R d6786857b1d395171819efc3597fcc3a65bd4036e5156a4bcfcb7ab5e5abd27e </code> </li><li> <span>
+round 3 ·  controller </span> <code title="prompt SHA-256">
+P 5280c28487225d77892cdde5653a5ce751cbc8f369ddbd9f143f29ee80abf398 </code> <code title="response SHA-256">
+R 4acb41bc8505adf99b0077525f9b09033bc4edd0c91a9f7418e91f49b6bfac0c </code> </li><li> <span>
+round 4 ·  controller </span> <code title="prompt SHA-256">
+P ea04f365489ae3c444eb4d012da43dd8d0d3c8f74b26dff3b69dabcd0b0098b9 </code> <code title="response SHA-256">
+R 21e98c2581232bb2a7ff2e949420bb28a8d000ce06669eff32173fe7f1ac716b </code> </li><li> <span>
+round 5 ·  controller </span> <code title="prompt SHA-256">
+P f3a0b6095f6d33484ee99872954aa12532b319706ae6d0e2832f566b23406277 </code> <code title="response SHA-256">
+R 7310372e895dfcd49057382944f726a4b0ab03cbdea6904b834b3516d3bead52 </code> </li> </ol> </section> </div> </details> </td> </tr><tr data-run-row data-family="alternative_path" data-architecture="goal_graph_hybrid" data-success="true"> <td>06</td> <th scope="row">  <span>替代路径</span> <code>alternative_path-03</code>  </th> <td>目标图混合执行</td> <td> <span class="run-status is-pass"> 通过 </span> </td> <td>100</td> <td> 10 / 5 </td> <td>6,020</td> <td>8.86 s</td> <td> <details> <summary>展开</summary> <div class="run-details"> <section> <h3>运行与结束</h3> <dl> <div>  <dt>run key</dt> <dd> <code>goal_graph_hybrid__alternative_path-03</code> </dd>  </div> <div>  <dt>termination</dt> <dd> <code>finish</code> </dd>  </div> <div>  <dt>eligibility</dt> <dd> <code>eligible_agent_result</code> </dd>  </div> <div>  <dt>pair</dt> <dd> <code>eligible_pair</code> </dd>  </div> </dl> </section> <section> <h3>代码验收</h3> <dl> <div>  <dt>关键事实覆盖</dt> <dd> 100
+%
+</dd>  </div> <div>  <dt>错误证据</dt> <dd>0</dd>  </div> <div>  <dt>合并遗漏</dt> <dd>0</dd>  </div> <div>  <dt>合并冲突</dt> <dd>0</dd>  </div> </dl> </section> <section> <h3>执行指标</h3> <dl> <div>  <dt>重复动作</dt> <dd>5</dd>  </div> <div>  <dt>无关动作</dt> <dd>0</dd>  </div> <div>  <dt>路径切换</dt> <dd>是</dd>  </div> <div>  <dt>关键路径轮次</dt> <dd>4</dd>  </div> <div>  <dt>控制器拒绝</dt> <dd> 5 </dd>  </div> <div>  <dt>prompt / completion</dt> <dd> 5,649 /  371 </dd>  </div> </dl> </section> <section class="hash-list"> <h3>模型交换哈希</h3> <p>用于核对公开记录，不公开响应正文。</p> <ol> <li> <span>
+round 1 ·  controller </span> <code title="prompt SHA-256">
+P ba33ac721d2db2e6b853fe352db9e12017210a6ffaad43af35b0866e31e95814 </code> <code title="response SHA-256">
+R 1199fd234b315946d0650fb28abc53628005ff2fa289c4986b1b55c67fc6af9b </code> </li><li> <span>
+round 2 ·  controller </span> <code title="prompt SHA-256">
+P 2337632e6731426dd0d518f70c690fba8d0f6895301c62822968ab4bbf415c44 </code> <code title="response SHA-256">
+R d6786857b1d395171819efc3597fcc3a65bd4036e5156a4bcfcb7ab5e5abd27e </code> </li><li> <span>
+round 3 ·  controller </span> <code title="prompt SHA-256">
+P cb1d57124859af72b85af30fe27958db2be64c261f087f72801d5f66d7153914 </code> <code title="response SHA-256">
+R 217ec23fa932e61e25163a60c1260d0ae0b9133ba664d4c8969a0b58701e4a42 </code> </li><li> <span>
+round 4 ·  controller </span> <code title="prompt SHA-256">
+P 2eb10a7dfa39deb82a348dfaf5746066809855a0faf8cdf06b68f2d36a0dac20 </code> <code title="response SHA-256">
+R 21e98c2581232bb2a7ff2e949420bb28a8d000ce06669eff32173fe7f1ac716b </code> </li><li> <span>
+round 5 ·  controller </span> <code title="prompt SHA-256">
+P 34c751f92c0705f3268495be3b1ab2162fef67508b51073c4204912e67af35b8 </code> <code title="response SHA-256">
+R 21e98c2581232bb2a7ff2e949420bb28a8d000ce06669eff32173fe7f1ac716b </code> </li><li> <span>
+round 6 ·  controller </span> <code title="prompt SHA-256">
+P e035d99f5ee93b3b5246933765e5b148ac348155bafe1e2489c2bf701000c6ef </code> <code title="response SHA-256">
+R 21e98c2581232bb2a7ff2e949420bb28a8d000ce06669eff32173fe7f1ac716b </code> </li><li> <span>
+round 7 ·  controller </span> <code title="prompt SHA-256">
+P 455223ce4b53701cc8b08475c1e4bf08070401aef00e430a9e72b020f3d760be </code> <code title="response SHA-256">
+R 21e98c2581232bb2a7ff2e949420bb28a8d000ce06669eff32173fe7f1ac716b </code> </li><li> <span>
+round 8 ·  controller </span> <code title="prompt SHA-256">
+P 5ed508d7d9880089a57eff25c82243b27ac2f7a5bb058ba1b81bc5b2e06f6338 </code> <code title="response SHA-256">
+R 21e98c2581232bb2a7ff2e949420bb28a8d000ce06669eff32173fe7f1ac716b </code> </li><li> <span>
+round 9 ·  controller </span> <code title="prompt SHA-256">
+P bce5c741bb08c5faadba32952a3f8563b7694a057e2f2cd8e34c980ebba2191a </code> <code title="response SHA-256">
+R 21e98c2581232bb2a7ff2e949420bb28a8d000ce06669eff32173fe7f1ac716b </code> </li><li> <span>
+round 10 ·  controller </span> <code title="prompt SHA-256">
+P ba8adcd7371952ec126107ae7a7e22768190a07540de10af8b9a49755c277f12 </code> <code title="response SHA-256">
+R 7310372e895dfcd49057382944f726a4b0ab03cbdea6904b834b3516d3bead52 </code> </li> </ol> </section> </div> </details> </td> </tr><tr data-run-row data-family="alternative_path" data-architecture="goal_graph_hybrid" data-success="true"> <td>07</td> <th scope="row">  <span>替代路径</span> <code>alternative_path-04</code>  </th> <td>目标图混合执行</td> <td> <span class="run-status is-pass"> 通过 </span> </td> <td>100</td> <td> 18 / 4 </td> <td>12,403</td> <td>16.21 s</td> <td> <details> <summary>展开</summary> <div class="run-details"> <section> <h3>运行与结束</h3> <dl> <div>  <dt>run key</dt> <dd> <code>goal_graph_hybrid__alternative_path-04</code> </dd>  </div> <div>  <dt>termination</dt> <dd> <code>model_budget_exhausted</code> </dd>  </div> <div>  <dt>eligibility</dt> <dd> <code>eligible_agent_result</code> </dd>  </div> <div>  <dt>pair</dt> <dd> <code>eligible_pair</code> </dd>  </div> </dl> </section> <section> <h3>代码验收</h3> <dl> <div>  <dt>关键事实覆盖</dt> <dd> 100
+%
+</dd>  </div> <div>  <dt>错误证据</dt> <dd>0</dd>  </div> <div>  <dt>合并遗漏</dt> <dd>0</dd>  </div> <div>  <dt>合并冲突</dt> <dd>0</dd>  </div> </dl> </section> <section> <h3>执行指标</h3> <dl> <div>  <dt>重复动作</dt> <dd>14</dd>  </div> <div>  <dt>无关动作</dt> <dd>0</dd>  </div> <div>  <dt>路径切换</dt> <dd>是</dd>  </div> <div>  <dt>关键路径轮次</dt> <dd>4</dd>  </div> <div>  <dt>控制器拒绝</dt> <dd> 14 </dd>  </div> <div>  <dt>prompt / completion</dt> <dd> 11,610 /  793 </dd>  </div> </dl> </section> <section class="hash-list"> <h3>模型交换哈希</h3> <p>用于核对公开记录，不公开响应正文。</p> <ol> <li> <span>
+round 1 ·  controller </span> <code title="prompt SHA-256">
+P fe423a66de39086636aef39a075e3a5b03e7a48879f2b61022b247458b5e1643 </code> <code title="response SHA-256">
+R 1199fd234b315946d0650fb28abc53628005ff2fa289c4986b1b55c67fc6af9b </code> </li><li> <span>
+round 2 ·  controller </span> <code title="prompt SHA-256">
+P 0234e76d1cf8c59fe7c1814463a48a63bdd15da972ad204ec4ce271133143083 </code> <code title="response SHA-256">
+R cffe4d0d4becfa93b65dea9bcd03ff111771165b0bd2fc86282ee2f91a8255d3 </code> </li><li> <span>
+round 3 ·  controller </span> <code title="prompt SHA-256">
+P ecc9d41d26c96b2e0a4bb2b6649d7a58353c6e6cd4c3b35147d0c8f969ae3ec5 </code> <code title="response SHA-256">
+R f9214d7bd9a1c6c64ee9c88d1ec71bdffcbef343b061238d995a46cd54384324 </code> </li><li> <span>
+round 4 ·  controller </span> <code title="prompt SHA-256">
+P 548393e9c2b831ef856a06fcc13686e04776d19de2c1b038c06c109ede61d972 </code> <code title="response SHA-256">
+R 5390266cfd85c4e0f60544f0b518936e815e99d160e573344981cbe476d51e58 </code> </li><li> <span>
+round 5 ·  controller </span> <code title="prompt SHA-256">
+P f6368ad974d9586d31d7e9ad88fb4d6a632fd0483f13095c411451d15a273f7a </code> <code title="response SHA-256">
+R 5390266cfd85c4e0f60544f0b518936e815e99d160e573344981cbe476d51e58 </code> </li><li> <span>
+round 6 ·  controller </span> <code title="prompt SHA-256">
+P 21eb2bf4907e90834e637fe890cb3a5427f506472a4307535ed4ea0288bcb4b0 </code> <code title="response SHA-256">
+R 5390266cfd85c4e0f60544f0b518936e815e99d160e573344981cbe476d51e58 </code> </li><li> <span>
+round 7 ·  controller </span> <code title="prompt SHA-256">
+P 6f9d50d6c1e3dc2930c6625ff43716ecc312855d821e417df42f5b9e61e42490 </code> <code title="response SHA-256">
+R 5390266cfd85c4e0f60544f0b518936e815e99d160e573344981cbe476d51e58 </code> </li><li> <span>
+round 8 ·  controller </span> <code title="prompt SHA-256">
+P 071201a7a3744702a05b0854f4659da0e789b66ced9c38df780982d4d68ff403 </code> <code title="response SHA-256">
+R 5390266cfd85c4e0f60544f0b518936e815e99d160e573344981cbe476d51e58 </code> </li><li> <span>
+round 9 ·  controller </span> <code title="prompt SHA-256">
+P 4f81503f48f304c5adef12667d22ac99c34d7eea8dc3f2c9f860686c859c4280 </code> <code title="response SHA-256">
+R 5390266cfd85c4e0f60544f0b518936e815e99d160e573344981cbe476d51e58 </code> </li><li> <span>
+round 10 ·  controller </span> <code title="prompt SHA-256">
+P 2f3576da857b68fde18cc22859274fc689124f1a90938f9c144fbda828cd9ca9 </code> <code title="response SHA-256">
+R 5390266cfd85c4e0f60544f0b518936e815e99d160e573344981cbe476d51e58 </code> </li><li> <span>
+round 11 ·  controller </span> <code title="prompt SHA-256">
+P eaf99452b4fe7f572207b3d184840559630c0f27bc3b1b235a8087f8beded86b </code> <code title="response SHA-256">
+R 5390266cfd85c4e0f60544f0b518936e815e99d160e573344981cbe476d51e58 </code> </li><li> <span>
+round 12 ·  controller </span> <code title="prompt SHA-256">
+P a05f45bd2ba427e42cba6e19e5bef7152088d587f7143b32573b623f44d66903 </code> <code title="response SHA-256">
+R 5390266cfd85c4e0f60544f0b518936e815e99d160e573344981cbe476d51e58 </code> </li><li> <span>
+round 13 ·  controller </span> <code title="prompt SHA-256">
+P 6cd2e3865584cebe6f9ba54a05f2fce0ada0dd36f1eac0d8f89785d43cb1beb8 </code> <code title="response SHA-256">
+R 5390266cfd85c4e0f60544f0b518936e815e99d160e573344981cbe476d51e58 </code> </li><li> <span>
+round 14 ·  controller </span> <code title="prompt SHA-256">
+P a25aa6b822f561227d48bc64e5e066c93e1abf2103784abc13c682298403d5db </code> <code title="response SHA-256">
+R 5390266cfd85c4e0f60544f0b518936e815e99d160e573344981cbe476d51e58 </code> </li><li> <span>
+round 15 ·  controller </span> <code title="prompt SHA-256">
+P 1c3e7940f099911f00d67c88c88a12d8137094e010ed8d6313badcd53836c8c9 </code> <code title="response SHA-256">
+R 5390266cfd85c4e0f60544f0b518936e815e99d160e573344981cbe476d51e58 </code> </li><li> <span>
+round 16 ·  controller </span> <code title="prompt SHA-256">
+P 0112f1e46817e935424f93245eee16cc21151e837e2cad9af45a83117f348bd2 </code> <code title="response SHA-256">
+R 5390266cfd85c4e0f60544f0b518936e815e99d160e573344981cbe476d51e58 </code> </li><li> <span>
+round 17 ·  controller </span> <code title="prompt SHA-256">
+P 6159e7cbde89e41cfceed59d8acb63cd84f974164734d94b1ed1d689a2c26b56 </code> <code title="response SHA-256">
+R 5390266cfd85c4e0f60544f0b518936e815e99d160e573344981cbe476d51e58 </code> </li><li> <span>
+round 18 ·  controller </span> <code title="prompt SHA-256">
+P 3f8bb64a8a00c8dd13b2ae690723b420f474d28fead3a461c90d4f69c692484b </code> <code title="response SHA-256">
+R 5390266cfd85c4e0f60544f0b518936e815e99d160e573344981cbe476d51e58 </code> </li> </ol> </section> </div> </details> </td> </tr><tr data-run-row data-family="alternative_path" data-architecture="contracted_react" data-success="true"> <td>08</td> <th scope="row">  <span>替代路径</span> <code>alternative_path-04</code>  </th> <td>开放式执行</td> <td> <span class="run-status is-pass"> 通过 </span> </td> <td>100</td> <td> 5 / 5 </td> <td>2,792</td> <td>4.01 s</td> <td> <details> <summary>展开</summary> <div class="run-details"> <section> <h3>运行与结束</h3> <dl> <div>  <dt>run key</dt> <dd> <code>contracted_react__alternative_path-04</code> </dd>  </div> <div>  <dt>termination</dt> <dd> <code>finish</code> </dd>  </div> <div>  <dt>eligibility</dt> <dd> <code>eligible_agent_result</code> </dd>  </div> <div>  <dt>pair</dt> <dd> <code>eligible_pair</code> </dd>  </div> </dl> </section> <section> <h3>代码验收</h3> <dl> <div>  <dt>关键事实覆盖</dt> <dd> 100
+%
+</dd>  </div> <div>  <dt>错误证据</dt> <dd>0</dd>  </div> <div>  <dt>合并遗漏</dt> <dd>0</dd>  </div> <div>  <dt>合并冲突</dt> <dd>0</dd>  </div> </dl> </section> <section> <h3>执行指标</h3> <dl> <div>  <dt>重复动作</dt> <dd>0</dd>  </div> <div>  <dt>无关动作</dt> <dd>0</dd>  </div> <div>  <dt>路径切换</dt> <dd>是</dd>  </div> <div>  <dt>关键路径轮次</dt> <dd>4</dd>  </div> <div>  <dt>控制器拒绝</dt> <dd> 0 </dd>  </div> <div>  <dt>prompt / completion</dt> <dd> 2,656 /  136 </dd>  </div> </dl> </section> <section class="hash-list"> <h3>模型交换哈希</h3> <p>用于核对公开记录，不公开响应正文。</p> <ol> <li> <span>
+round 1 ·  controller </span> <code title="prompt SHA-256">
+P 5ef9c5922aa3e1a9bf1cf13714c5adbe83d6ed0b3b2456327ea83a64d6b2d674 </code> <code title="response SHA-256">
+R 1199fd234b315946d0650fb28abc53628005ff2fa289c4986b1b55c67fc6af9b </code> </li><li> <span>
+round 2 ·  controller </span> <code title="prompt SHA-256">
+P 3491edefbf627272a01620542399d833ed23ebee5f5ae4549f94669d86d9fe9e </code> <code title="response SHA-256">
+R cffe4d0d4becfa93b65dea9bcd03ff111771165b0bd2fc86282ee2f91a8255d3 </code> </li><li> <span>
+round 3 ·  controller </span> <code title="prompt SHA-256">
+P b11b2ec9a1bc841d6c2a918a0f9176d5ed0d8673061dbd4be95ad51b6ba5de8c </code> <code title="response SHA-256">
+R f9214d7bd9a1c6c64ee9c88d1ec71bdffcbef343b061238d995a46cd54384324 </code> </li><li> <span>
+round 4 ·  controller </span> <code title="prompt SHA-256">
+P a5163d00dc786a238672d52c6e173db250726b5c8a81df5ea2730a626f73a046 </code> <code title="response SHA-256">
+R 5390266cfd85c4e0f60544f0b518936e815e99d160e573344981cbe476d51e58 </code> </li><li> <span>
+round 5 ·  controller </span> <code title="prompt SHA-256">
+P c81fa0bd2981c65a22149e5f24096161e30648171ece638733198491a747af88 </code> <code title="response SHA-256">
+R 7310372e895dfcd49057382944f726a4b0ab03cbdea6904b834b3516d3bead52 </code> </li> </ol> </section> </div> </details> </td> </tr><tr data-run-row data-family="open_evidence" data-architecture="contracted_react" data-success="true"> <td>09</td> <th scope="row">  <span>开放取证</span> <code>open_evidence-01</code>  </th> <td>开放式执行</td> <td> <span class="run-status is-pass"> 通过 </span> </td> <td>100</td> <td> 6 / 6 </td> <td>4,318</td> <td>5.13 s</td> <td> <details> <summary>展开</summary> <div class="run-details"> <section> <h3>运行与结束</h3> <dl> <div>  <dt>run key</dt> <dd> <code>contracted_react__open_evidence-01</code> </dd>  </div> <div>  <dt>termination</dt> <dd> <code>finish</code> </dd>  </div> <div>  <dt>eligibility</dt> <dd> <code>eligible_agent_result</code> </dd>  </div> <div>  <dt>pair</dt> <dd> <code>eligible_pair</code> </dd>  </div> </dl> </section> <section> <h3>代码验收</h3> <dl> <div>  <dt>关键事实覆盖</dt> <dd> 100
+%
+</dd>  </div> <div>  <dt>错误证据</dt> <dd>0</dd>  </div> <div>  <dt>合并遗漏</dt> <dd>0</dd>  </div> <div>  <dt>合并冲突</dt> <dd>0</dd>  </div> </dl> </section> <section> <h3>执行指标</h3> <dl> <div>  <dt>重复动作</dt> <dd>0</dd>  </div> <div>  <dt>无关动作</dt> <dd>0</dd>  </div> <div>  <dt>路径切换</dt> <dd>否</dd>  </div> <div>  <dt>关键路径轮次</dt> <dd>5</dd>  </div> <div>  <dt>控制器拒绝</dt> <dd> 0 </dd>  </div> <div>  <dt>prompt / completion</dt> <dd> 4,120 /  198 </dd>  </div> </dl> </section> <section class="hash-list"> <h3>模型交换哈希</h3> <p>用于核对公开记录，不公开响应正文。</p> <ol> <li> <span>
+round 1 ·  controller </span> <code title="prompt SHA-256">
+P 091caacb8265f87c1ad6255d34d58c205183e143fd550de3bc9a56f3a0219bc7 </code> <code title="response SHA-256">
+R 1199fd234b315946d0650fb28abc53628005ff2fa289c4986b1b55c67fc6af9b </code> </li><li> <span>
+round 2 ·  controller </span> <code title="prompt SHA-256">
+P 46a0e0876175c6456f3d5aa22ac0e2e6fabe752cc63c72b0cabcc6879f967cce </code> <code title="response SHA-256">
+R 83974279ee363b0f44ba453803a6840d09132b3dfa433f960fb6edb1fb9d1136 </code> </li><li> <span>
+round 3 ·  controller </span> <code title="prompt SHA-256">
+P e347de150e6b1433bc12a3471321d0c595250cc17cfe3fff947d782b7340441d </code> <code title="response SHA-256">
+R f78bf6fcf38377ff9cf4bcaf2b8bedc28bec540921b67a059fc3ba69b4c795c8 </code> </li><li> <span>
+round 4 ·  controller </span> <code title="prompt SHA-256">
+P 97bdc1f020654e706790eb3d7a2b5c0be98eba723f621051f98d8f4f045d902d </code> <code title="response SHA-256">
+R 766478af48faa1ae324506451d32fdb13724e9f2a6864bbc04c0b06c847044e5 </code> </li><li> <span>
+round 5 ·  controller </span> <code title="prompt SHA-256">
+P 7df8cb58a8b57737018663dc78c1111d3f66bb544ebfb97f6b20a3e5a71b967e </code> <code title="response SHA-256">
+R 16a25e35fee767802b2919d79136ea77f5c2a258684d02865f452c6c1524b4c0 </code> </li><li> <span>
+round 6 ·  controller </span> <code title="prompt SHA-256">
+P 027a9948bc29cfaf805f2b4e43816003549e489124bb235f61a2ecd4a803de37 </code> <code title="response SHA-256">
+R 7310372e895dfcd49057382944f726a4b0ab03cbdea6904b834b3516d3bead52 </code> </li> </ol> </section> </div> </details> </td> </tr><tr data-run-row data-family="open_evidence" data-architecture="goal_graph_hybrid" data-success="true"> <td>10</td> <th scope="row">  <span>开放取证</span> <code>open_evidence-01</code>  </th> <td>目标图混合执行</td> <td> <span class="run-status is-pass"> 通过 </span> </td> <td>100</td> <td> 18 / 5 </td> <td>15,220</td> <td>18.77 s</td> <td> <details> <summary>展开</summary> <div class="run-details"> <section> <h3>运行与结束</h3> <dl> <div>  <dt>run key</dt> <dd> <code>goal_graph_hybrid__open_evidence-01</code> </dd>  </div> <div>  <dt>termination</dt> <dd> <code>model_budget_exhausted</code> </dd>  </div> <div>  <dt>eligibility</dt> <dd> <code>eligible_agent_result</code> </dd>  </div> <div>  <dt>pair</dt> <dd> <code>eligible_pair</code> </dd>  </div> </dl> </section> <section> <h3>代码验收</h3> <dl> <div>  <dt>关键事实覆盖</dt> <dd> 100
+%
+</dd>  </div> <div>  <dt>错误证据</dt> <dd>0</dd>  </div> <div>  <dt>合并遗漏</dt> <dd>0</dd>  </div> <div>  <dt>合并冲突</dt> <dd>0</dd>  </div> </dl> </section> <section> <h3>执行指标</h3> <dl> <div>  <dt>重复动作</dt> <dd>13</dd>  </div> <div>  <dt>无关动作</dt> <dd>0</dd>  </div> <div>  <dt>路径切换</dt> <dd>否</dd>  </div> <div>  <dt>关键路径轮次</dt> <dd>5</dd>  </div> <div>  <dt>控制器拒绝</dt> <dd> 13 </dd>  </div> <div>  <dt>prompt / completion</dt> <dd> 13,989 /  1,231 </dd>  </div> </dl> </section> <section class="hash-list"> <h3>模型交换哈希</h3> <p>用于核对公开记录，不公开响应正文。</p> <ol> <li> <span>
+round 1 ·  controller </span> <code title="prompt SHA-256">
+P ad0fc9e5a3ebd3522e0e8e3bd4b4ed5d14f9252c9c382650bab6ba698809ca7b </code> <code title="response SHA-256">
+R 0929f8a7ea7640da08e12673da0f1f33c8572bd3cf1f7721e9a0e0984916ada1 </code> </li><li> <span>
+round 2 ·  controller </span> <code title="prompt SHA-256">
+P 8060f21995bbda73bfd4f889ba7bef9ecb1a3f300beec5ebcd05408ec5646cca </code> <code title="response SHA-256">
+R 83974279ee363b0f44ba453803a6840d09132b3dfa433f960fb6edb1fb9d1136 </code> </li><li> <span>
+round 3 ·  controller </span> <code title="prompt SHA-256">
+P 2fd7e16a27a83c2ea6e7a083c72cc32a476fb1f446f721f90348adccfd86fe99 </code> <code title="response SHA-256">
+R f78bf6fcf38377ff9cf4bcaf2b8bedc28bec540921b67a059fc3ba69b4c795c8 </code> </li><li> <span>
+round 4 ·  controller </span> <code title="prompt SHA-256">
+P 25cb5e66517377947084381d98e5d32f4f441016ed37a112e3bd2811c7405a23 </code> <code title="response SHA-256">
+R 766478af48faa1ae324506451d32fdb13724e9f2a6864bbc04c0b06c847044e5 </code> </li><li> <span>
+round 5 ·  controller </span> <code title="prompt SHA-256">
+P e18e4c3a0116cf57cc3d8adafcc0eead94f4e4c71b8f2f10b7752f51fb386433 </code> <code title="response SHA-256">
+R 16a25e35fee767802b2919d79136ea77f5c2a258684d02865f452c6c1524b4c0 </code> </li><li> <span>
+round 6 ·  controller </span> <code title="prompt SHA-256">
+P 8d57bd8b3def283739d1557d88db847172da131dc97841243c8d008d28721769 </code> <code title="response SHA-256">
+R 16a25e35fee767802b2919d79136ea77f5c2a258684d02865f452c6c1524b4c0 </code> </li><li> <span>
+round 7 ·  controller </span> <code title="prompt SHA-256">
+P 1dc7e8a22bd891dd67f8b1042c50a7ad02f02e2d713a4d724b9871d660481d4c </code> <code title="response SHA-256">
+R 16a25e35fee767802b2919d79136ea77f5c2a258684d02865f452c6c1524b4c0 </code> </li><li> <span>
+round 8 ·  controller </span> <code title="prompt SHA-256">
+P bc972f4b612b5e013d4171f728c8e79cddbfdcb9c2b292f3a4c86c7e2310e31b </code> <code title="response SHA-256">
+R 16a25e35fee767802b2919d79136ea77f5c2a258684d02865f452c6c1524b4c0 </code> </li><li> <span>
+round 9 ·  controller </span> <code title="prompt SHA-256">
+P 550171a5e4a779a098586d2175d31635e392156f955ae31ba16fd34c1f0ee0b4 </code> <code title="response SHA-256">
+R 16a25e35fee767802b2919d79136ea77f5c2a258684d02865f452c6c1524b4c0 </code> </li><li> <span>
+round 10 ·  controller </span> <code title="prompt SHA-256">
+P ffe17e307004747b750d42005809feb2b0c5383787f55846096c8d02f978cf5a </code> <code title="response SHA-256">
+R 16a25e35fee767802b2919d79136ea77f5c2a258684d02865f452c6c1524b4c0 </code> </li><li> <span>
+round 11 ·  controller </span> <code title="prompt SHA-256">
+P 3f3a9409271867981c6a5900fc7c5bdcf694b0ae5a2151b32c89102d5f8fd5e5 </code> <code title="response SHA-256">
+R 16a25e35fee767802b2919d79136ea77f5c2a258684d02865f452c6c1524b4c0 </code> </li><li> <span>
+round 12 ·  controller </span> <code title="prompt SHA-256">
+P 3a9943dcc3ce4176519f6c501c8b7275f0ad09b2fc08520c9e3286f97aaf7c03 </code> <code title="response SHA-256">
+R 16a25e35fee767802b2919d79136ea77f5c2a258684d02865f452c6c1524b4c0 </code> </li><li> <span>
+round 13 ·  controller </span> <code title="prompt SHA-256">
+P 839bf2e98d3182bcd91ebd9d87dbc7cf16889bf66aced480ce9dd6d46c5610e2 </code> <code title="response SHA-256">
+R 16a25e35fee767802b2919d79136ea77f5c2a258684d02865f452c6c1524b4c0 </code> </li><li> <span>
+round 14 ·  controller </span> <code title="prompt SHA-256">
+P f77b32c25754d21fef9793b7c4d9f7ca6de867756c5f459e82b6ee42c524057f </code> <code title="response SHA-256">
+R 16a25e35fee767802b2919d79136ea77f5c2a258684d02865f452c6c1524b4c0 </code> </li><li> <span>
+round 15 ·  controller </span> <code title="prompt SHA-256">
+P e4e9d6e710e073f9235424b07c9158c3be6bd6bd185ef1c0ad5a653fdef01a93 </code> <code title="response SHA-256">
+R 16a25e35fee767802b2919d79136ea77f5c2a258684d02865f452c6c1524b4c0 </code> </li><li> <span>
+round 16 ·  controller </span> <code title="prompt SHA-256">
+P 20f7b6be9ac7cef3ee9c9c837f83a4077b1cb094e9307d5f35f26832bc448198 </code> <code title="response SHA-256">
+R 16a25e35fee767802b2919d79136ea77f5c2a258684d02865f452c6c1524b4c0 </code> </li><li> <span>
+round 17 ·  controller </span> <code title="prompt SHA-256">
+P e33f1f9ad0dafcd7249e0a8b1ea187fe08dcc989a9c16fc44b05a34c3a20f976 </code> <code title="response SHA-256">
+R 16a25e35fee767802b2919d79136ea77f5c2a258684d02865f452c6c1524b4c0 </code> </li><li> <span>
+round 18 ·  controller </span> <code title="prompt SHA-256">
+P 29fdced443a60758a23e8427ca23f2e1b9f5dad9eb2725e78b528bc6577dc374 </code> <code title="response SHA-256">
+R 16a25e35fee767802b2919d79136ea77f5c2a258684d02865f452c6c1524b4c0 </code> </li> </ol> </section> </div> </details> </td> </tr><tr data-run-row data-family="open_evidence" data-architecture="goal_graph_hybrid" data-success="true"> <td>11</td> <th scope="row">  <span>开放取证</span> <code>open_evidence-02</code>  </th> <td>目标图混合执行</td> <td> <span class="run-status is-pass"> 通过 </span> </td> <td>100</td> <td> 18 / 5 </td> <td>15,225</td> <td>20.74 s</td> <td> <details> <summary>展开</summary> <div class="run-details"> <section> <h3>运行与结束</h3> <dl> <div>  <dt>run key</dt> <dd> <code>goal_graph_hybrid__open_evidence-02</code> </dd>  </div> <div>  <dt>termination</dt> <dd> <code>model_budget_exhausted</code> </dd>  </div> <div>  <dt>eligibility</dt> <dd> <code>eligible_agent_result</code> </dd>  </div> <div>  <dt>pair</dt> <dd> <code>eligible_pair</code> </dd>  </div> </dl> </section> <section> <h3>代码验收</h3> <dl> <div>  <dt>关键事实覆盖</dt> <dd> 100
+%
+</dd>  </div> <div>  <dt>错误证据</dt> <dd>0</dd>  </div> <div>  <dt>合并遗漏</dt> <dd>0</dd>  </div> <div>  <dt>合并冲突</dt> <dd>0</dd>  </div> </dl> </section> <section> <h3>执行指标</h3> <dl> <div>  <dt>重复动作</dt> <dd>13</dd>  </div> <div>  <dt>无关动作</dt> <dd>0</dd>  </div> <div>  <dt>路径切换</dt> <dd>否</dd>  </div> <div>  <dt>关键路径轮次</dt> <dd>5</dd>  </div> <div>  <dt>控制器拒绝</dt> <dd> 13 </dd>  </div> <div>  <dt>prompt / completion</dt> <dd> 13,989 /  1,236 </dd>  </div> </dl> </section> <section class="hash-list"> <h3>模型交换哈希</h3> <p>用于核对公开记录，不公开响应正文。</p> <ol> <li> <span>
+round 1 ·  controller </span> <code title="prompt SHA-256">
+P a45089fbc9271922275e2617e6846724c65946791a5cec81951263b60c7f3cf7 </code> <code title="response SHA-256">
+R 1199fd234b315946d0650fb28abc53628005ff2fa289c4986b1b55c67fc6af9b </code> </li><li> <span>
+round 2 ·  controller </span> <code title="prompt SHA-256">
+P d818f9806a6758e71442cc033eb0275031cdc69f940d7c15f25c46f7cd0ed033 </code> <code title="response SHA-256">
+R ee437febbd1cd556a3212ed0c24af62e7ee29f24289f08347b9c98358c5ec3e1 </code> </li><li> <span>
+round 3 ·  controller </span> <code title="prompt SHA-256">
+P 6970646925b899c02272d875868b99846f358dc82768d08c3f81f46a3b18b52e </code> <code title="response SHA-256">
+R 87d1decd1bc4ee0f979ffbc691561d94d7ed52c43a16aa8bd702dde00bca960e </code> </li><li> <span>
+round 4 ·  controller </span> <code title="prompt SHA-256">
+P 6076ced79fe7348a5affcf0e238cc3166c971146ddf40a5863145bc15327cc0b </code> <code title="response SHA-256">
+R 59aad9050a4f0b3b02fc8dcd20c956117dd8953d1b75b057bdcfbe620e1f389c </code> </li><li> <span>
+round 5 ·  controller </span> <code title="prompt SHA-256">
+P a3e3b4abd45dbfba13dcc1e610ccd837e4eb3cbba99f6f020251fb5f3489a111 </code> <code title="response SHA-256">
+R 484187a8612af504caac0b266b76a9263ec394621237cb45bc25ac9cf35f194f </code> </li><li> <span>
+round 6 ·  controller </span> <code title="prompt SHA-256">
+P 18f585a3fd9647796d13223b99be0a0c637e2dc60a44f6b4d0cf618589a38b29 </code> <code title="response SHA-256">
+R 484187a8612af504caac0b266b76a9263ec394621237cb45bc25ac9cf35f194f </code> </li><li> <span>
+round 7 ·  controller </span> <code title="prompt SHA-256">
+P 12481bd8eeff6b1ed537dc3f734e022d17d9d94efd5fe73a79de254abd447217 </code> <code title="response SHA-256">
+R 484187a8612af504caac0b266b76a9263ec394621237cb45bc25ac9cf35f194f </code> </li><li> <span>
+round 8 ·  controller </span> <code title="prompt SHA-256">
+P feaf58ab521cc714229ac3d85ad2e7da56d21074d77ecd64a2bee9d4b18851b8 </code> <code title="response SHA-256">
+R 484187a8612af504caac0b266b76a9263ec394621237cb45bc25ac9cf35f194f </code> </li><li> <span>
+round 9 ·  controller </span> <code title="prompt SHA-256">
+P 6ee1ab0d0af795bc7568a808d525392f637c4fc3c640b88927490e947b8baafc </code> <code title="response SHA-256">
+R 484187a8612af504caac0b266b76a9263ec394621237cb45bc25ac9cf35f194f </code> </li><li> <span>
+round 10 ·  controller </span> <code title="prompt SHA-256">
+P e86160e1c09e907dbf86c79aa99cfe9eb005d69d90c3393945bf3638609bbe57 </code> <code title="response SHA-256">
+R 484187a8612af504caac0b266b76a9263ec394621237cb45bc25ac9cf35f194f </code> </li><li> <span>
+round 11 ·  controller </span> <code title="prompt SHA-256">
+P 9653a270f855c3e4f59c403b7b22a860b44099845a477fa2ba2f9769206fe14f </code> <code title="response SHA-256">
+R 484187a8612af504caac0b266b76a9263ec394621237cb45bc25ac9cf35f194f </code> </li><li> <span>
+round 12 ·  controller </span> <code title="prompt SHA-256">
+P e8f4d3aeffcc959a00247ba8c856d7cfea56aaf1f7a6ff7bc569f6c4cedb51c0 </code> <code title="response SHA-256">
+R 484187a8612af504caac0b266b76a9263ec394621237cb45bc25ac9cf35f194f </code> </li><li> <span>
+round 13 ·  controller </span> <code title="prompt SHA-256">
+P 375c0d8f459dde9145bcd1333700b029854c7470694295661bdcf0f9f5ac09d7 </code> <code title="response SHA-256">
+R 484187a8612af504caac0b266b76a9263ec394621237cb45bc25ac9cf35f194f </code> </li><li> <span>
+round 14 ·  controller </span> <code title="prompt SHA-256">
+P f11daf369ba86bc71979163be056149315f5bda99b8eb59edb9a3575592e34a8 </code> <code title="response SHA-256">
+R 484187a8612af504caac0b266b76a9263ec394621237cb45bc25ac9cf35f194f </code> </li><li> <span>
+round 15 ·  controller </span> <code title="prompt SHA-256">
+P 5854065d2fe67c0ff9b206ec1d5c2d3a027473eaaf262392c8564d1f85e81b59 </code> <code title="response SHA-256">
+R 484187a8612af504caac0b266b76a9263ec394621237cb45bc25ac9cf35f194f </code> </li><li> <span>
+round 16 ·  controller </span> <code title="prompt SHA-256">
+P 0b3c881330d4ca51dded41c873e74531df511284286ac57e9f8bd6cbcde65c44 </code> <code title="response SHA-256">
+R 484187a8612af504caac0b266b76a9263ec394621237cb45bc25ac9cf35f194f </code> </li><li> <span>
+round 17 ·  controller </span> <code title="prompt SHA-256">
+P 2edde1cbefbd14bf1d8ed08ae30af1991e52548f2bb161fd7cf59839f6a6d209 </code> <code title="response SHA-256">
+R 484187a8612af504caac0b266b76a9263ec394621237cb45bc25ac9cf35f194f </code> </li><li> <span>
+round 18 ·  controller </span> <code title="prompt SHA-256">
+P 9a89babc4880755d5afbc76930aa4c6457ad6023cf61ddb02053d294d1a53957 </code> <code title="response SHA-256">
+R 484187a8612af504caac0b266b76a9263ec394621237cb45bc25ac9cf35f194f </code> </li> </ol> </section> </div> </details> </td> </tr><tr data-run-row data-family="open_evidence" data-architecture="contracted_react" data-success="true"> <td>12</td> <th scope="row">  <span>开放取证</span> <code>open_evidence-02</code>  </th> <td>开放式执行</td> <td> <span class="run-status is-pass"> 通过 </span> </td> <td>100</td> <td> 6 / 6 </td> <td>4,318</td> <td>6.26 s</td> <td> <details> <summary>展开</summary> <div class="run-details"> <section> <h3>运行与结束</h3> <dl> <div>  <dt>run key</dt> <dd> <code>contracted_react__open_evidence-02</code> </dd>  </div> <div>  <dt>termination</dt> <dd> <code>finish</code> </dd>  </div> <div>  <dt>eligibility</dt> <dd> <code>eligible_agent_result</code> </dd>  </div> <div>  <dt>pair</dt> <dd> <code>eligible_pair</code> </dd>  </div> </dl> </section> <section> <h3>代码验收</h3> <dl> <div>  <dt>关键事实覆盖</dt> <dd> 100
+%
+</dd>  </div> <div>  <dt>错误证据</dt> <dd>0</dd>  </div> <div>  <dt>合并遗漏</dt> <dd>0</dd>  </div> <div>  <dt>合并冲突</dt> <dd>0</dd>  </div> </dl> </section> <section> <h3>执行指标</h3> <dl> <div>  <dt>重复动作</dt> <dd>0</dd>  </div> <div>  <dt>无关动作</dt> <dd>0</dd>  </div> <div>  <dt>路径切换</dt> <dd>否</dd>  </div> <div>  <dt>关键路径轮次</dt> <dd>5</dd>  </div> <div>  <dt>控制器拒绝</dt> <dd> 0 </dd>  </div> <div>  <dt>prompt / completion</dt> <dd> 4,120 /  198 </dd>  </div> </dl> </section> <section class="hash-list"> <h3>模型交换哈希</h3> <p>用于核对公开记录，不公开响应正文。</p> <ol> <li> <span>
+round 1 ·  controller </span> <code title="prompt SHA-256">
+P 7fc427c153786e310fd3b2a24349d4679c9609a45f12bb34efab01c775cfa526 </code> <code title="response SHA-256">
+R 1199fd234b315946d0650fb28abc53628005ff2fa289c4986b1b55c67fc6af9b </code> </li><li> <span>
+round 2 ·  controller </span> <code title="prompt SHA-256">
+P 601e4de38561a67db3bbbc41fb44fea3c97a05c3363287eada55627e245ef33e </code> <code title="response SHA-256">
+R ee437febbd1cd556a3212ed0c24af62e7ee29f24289f08347b9c98358c5ec3e1 </code> </li><li> <span>
+round 3 ·  controller </span> <code title="prompt SHA-256">
+P 32b806600232c15be3739bcc1cc4f22e1ddd2bd41ffa8dd33036201ac65102ad </code> <code title="response SHA-256">
+R 87d1decd1bc4ee0f979ffbc691561d94d7ed52c43a16aa8bd702dde00bca960e </code> </li><li> <span>
+round 4 ·  controller </span> <code title="prompt SHA-256">
+P 10952265add05e7c067f1366131a4c079f1cbce4b1fae8d3d705895c89b862ec </code> <code title="response SHA-256">
+R 59aad9050a4f0b3b02fc8dcd20c956117dd8953d1b75b057bdcfbe620e1f389c </code> </li><li> <span>
+round 5 ·  controller </span> <code title="prompt SHA-256">
+P 37ad50d47a173da07c526798c946c744d6a38fb53acd43c34cc75e6456990f69 </code> <code title="response SHA-256">
+R 484187a8612af504caac0b266b76a9263ec394621237cb45bc25ac9cf35f194f </code> </li><li> <span>
+round 6 ·  controller </span> <code title="prompt SHA-256">
+P 3191ff756143c4fcdde3f28794bb4e593a16a0e9fa3ac3eb13f61dd69266d60c </code> <code title="response SHA-256">
+R 7310372e895dfcd49057382944f726a4b0ab03cbdea6904b834b3516d3bead52 </code> </li> </ol> </section> </div> </details> </td> </tr><tr data-run-row data-family="open_evidence" data-architecture="contracted_react" data-success="true"> <td>13</td> <th scope="row">  <span>开放取证</span> <code>open_evidence-03</code>  </th> <td>开放式执行</td> <td> <span class="run-status is-pass"> 通过 </span> </td> <td>100</td> <td> 6 / 6 </td> <td>4,312</td> <td>5.46 s</td> <td> <details> <summary>展开</summary> <div class="run-details"> <section> <h3>运行与结束</h3> <dl> <div>  <dt>run key</dt> <dd> <code>contracted_react__open_evidence-03</code> </dd>  </div> <div>  <dt>termination</dt> <dd> <code>finish</code> </dd>  </div> <div>  <dt>eligibility</dt> <dd> <code>eligible_agent_result</code> </dd>  </div> <div>  <dt>pair</dt> <dd> <code>eligible_pair</code> </dd>  </div> </dl> </section> <section> <h3>代码验收</h3> <dl> <div>  <dt>关键事实覆盖</dt> <dd> 100
+%
+</dd>  </div> <div>  <dt>错误证据</dt> <dd>0</dd>  </div> <div>  <dt>合并遗漏</dt> <dd>0</dd>  </div> <div>  <dt>合并冲突</dt> <dd>0</dd>  </div> </dl> </section> <section> <h3>执行指标</h3> <dl> <div>  <dt>重复动作</dt> <dd>0</dd>  </div> <div>  <dt>无关动作</dt> <dd>0</dd>  </div> <div>  <dt>路径切换</dt> <dd>否</dd>  </div> <div>  <dt>关键路径轮次</dt> <dd>5</dd>  </div> <div>  <dt>控制器拒绝</dt> <dd> 0 </dd>  </div> <div>  <dt>prompt / completion</dt> <dd> 4,115 /  197 </dd>  </div> </dl> </section> <section class="hash-list"> <h3>模型交换哈希</h3> <p>用于核对公开记录，不公开响应正文。</p> <ol> <li> <span>
+round 1 ·  controller </span> <code title="prompt SHA-256">
+P 94c1a1828cbb2cf5cc73988a64281ec9d66cdd6cca5400a2b2efcb8275a281ef </code> <code title="response SHA-256">
+R 1199fd234b315946d0650fb28abc53628005ff2fa289c4986b1b55c67fc6af9b </code> </li><li> <span>
+round 2 ·  controller </span> <code title="prompt SHA-256">
+P 48d8997fc911345bd8ec5f727918c6b8624fbb742ca71f6e994fa6eff81c8881 </code> <code title="response SHA-256">
+R 6585026d6b9f78fd25ad14cc61a2819bb6e8c63a13c822b5ea071044fbb9f36c </code> </li><li> <span>
+round 3 ·  controller </span> <code title="prompt SHA-256">
+P 5cdbb0602729105060c075b9c2fdab823d86995cc7836908fb22d3438b08f614 </code> <code title="response SHA-256">
+R 10415679d83912250eaf38bdf50b94ee83b78932b4e178945acdd71f57da1c1e </code> </li><li> <span>
+round 4 ·  controller </span> <code title="prompt SHA-256">
+P 72f2675d4b1ac59e68b116043910ae700cc85790222b5c489edbec14d812dd07 </code> <code title="response SHA-256">
+R d4d6c7854a49625d9f6289317ef5fd916199cef00e953b7b32b8a65fe956f224 </code> </li><li> <span>
+round 5 ·  controller </span> <code title="prompt SHA-256">
+P 8c66ba91f11a3e219ab2c8de9a2dd8e382274d63b8a5472ebe00793d5649a27c </code> <code title="response SHA-256">
+R e4a64fff85f2685a276ebd85d815426187214d6b3a0f4fe482ba7e252e077faf </code> </li><li> <span>
+round 6 ·  controller </span> <code title="prompt SHA-256">
+P 8d72143031ea1fe559c8eb584bdf6bd044293134522b17ded6c1006d313d559d </code> <code title="response SHA-256">
+R 7310372e895dfcd49057382944f726a4b0ab03cbdea6904b834b3516d3bead52 </code> </li> </ol> </section> </div> </details> </td> </tr><tr data-run-row data-family="open_evidence" data-architecture="goal_graph_hybrid" data-success="true"> <td>14</td> <th scope="row">  <span>开放取证</span> <code>open_evidence-03</code>  </th> <td>目标图混合执行</td> <td> <span class="run-status is-pass"> 通过 </span> </td> <td>100</td> <td> 18 / 5 </td> <td>15,195</td> <td>23.13 s</td> <td> <details> <summary>展开</summary> <div class="run-details"> <section> <h3>运行与结束</h3> <dl> <div>  <dt>run key</dt> <dd> <code>goal_graph_hybrid__open_evidence-03</code> </dd>  </div> <div>  <dt>termination</dt> <dd> <code>model_budget_exhausted</code> </dd>  </div> <div>  <dt>eligibility</dt> <dd> <code>eligible_agent_result</code> </dd>  </div> <div>  <dt>pair</dt> <dd> <code>eligible_pair</code> </dd>  </div> </dl> </section> <section> <h3>代码验收</h3> <dl> <div>  <dt>关键事实覆盖</dt> <dd> 100
+%
+</dd>  </div> <div>  <dt>错误证据</dt> <dd>0</dd>  </div> <div>  <dt>合并遗漏</dt> <dd>0</dd>  </div> <div>  <dt>合并冲突</dt> <dd>0</dd>  </div> </dl> </section> <section> <h3>执行指标</h3> <dl> <div>  <dt>重复动作</dt> <dd>13</dd>  </div> <div>  <dt>无关动作</dt> <dd>0</dd>  </div> <div>  <dt>路径切换</dt> <dd>否</dd>  </div> <div>  <dt>关键路径轮次</dt> <dd>5</dd>  </div> <div>  <dt>控制器拒绝</dt> <dd> 13 </dd>  </div> <div>  <dt>prompt / completion</dt> <dd> 13,973 /  1,222 </dd>  </div> </dl> </section> <section class="hash-list"> <h3>模型交换哈希</h3> <p>用于核对公开记录，不公开响应正文。</p> <ol> <li> <span>
+round 1 ·  controller </span> <code title="prompt SHA-256">
+P dc987dab7e8e7fd37032a6af207c222031c41edae27db2550ede7bf523b94ecb </code> <code title="response SHA-256">
+R 1199fd234b315946d0650fb28abc53628005ff2fa289c4986b1b55c67fc6af9b </code> </li><li> <span>
+round 2 ·  controller </span> <code title="prompt SHA-256">
+P c1064ea44c0ba9977ba2d6693701e9ab5eb6b16761567b2fc95802f96994a2e1 </code> <code title="response SHA-256">
+R 6585026d6b9f78fd25ad14cc61a2819bb6e8c63a13c822b5ea071044fbb9f36c </code> </li><li> <span>
+round 3 ·  controller </span> <code title="prompt SHA-256">
+P b59dc16772b39e0519277afe51130696af1af154e8cac0eadb8290922d5fdfd5 </code> <code title="response SHA-256">
+R 10415679d83912250eaf38bdf50b94ee83b78932b4e178945acdd71f57da1c1e </code> </li><li> <span>
+round 4 ·  controller </span> <code title="prompt SHA-256">
+P aec937e1d0250652f409f871bc0a302998d4df5d7d08f200e5d7c0305e8817aa </code> <code title="response SHA-256">
+R d4d6c7854a49625d9f6289317ef5fd916199cef00e953b7b32b8a65fe956f224 </code> </li><li> <span>
+round 5 ·  controller </span> <code title="prompt SHA-256">
+P 2ca3e64d2ffad3dee107f106a677e868dcc990fad0ff6af3684175e39ba400fa </code> <code title="response SHA-256">
+R e4a64fff85f2685a276ebd85d815426187214d6b3a0f4fe482ba7e252e077faf </code> </li><li> <span>
+round 6 ·  controller </span> <code title="prompt SHA-256">
+P 942638ac3dad7ea0af064265216fe3c64bc6bd0d8a3d7907206c652340312363 </code> <code title="response SHA-256">
+R e4a64fff85f2685a276ebd85d815426187214d6b3a0f4fe482ba7e252e077faf </code> </li><li> <span>
+round 7 ·  controller </span> <code title="prompt SHA-256">
+P 2f24523e0bda95a2dfb67267420e3e6a1838cc2b0c905d90f85edc5e500afeef </code> <code title="response SHA-256">
+R e4a64fff85f2685a276ebd85d815426187214d6b3a0f4fe482ba7e252e077faf </code> </li><li> <span>
+round 8 ·  controller </span> <code title="prompt SHA-256">
+P 8daf0967fab7e901cd4f625ac9fc7682d58e8b929caae833f6b16c0d98ea47f0 </code> <code title="response SHA-256">
+R e4a64fff85f2685a276ebd85d815426187214d6b3a0f4fe482ba7e252e077faf </code> </li><li> <span>
+round 9 ·  controller </span> <code title="prompt SHA-256">
+P 3b2e56f7ee259a548745083d2d8c1bd89ce3795e3ffc90835fb4215272e6bc6b </code> <code title="response SHA-256">
+R e4a64fff85f2685a276ebd85d815426187214d6b3a0f4fe482ba7e252e077faf </code> </li><li> <span>
+round 10 ·  controller </span> <code title="prompt SHA-256">
+P 184573af4131e16be1a4de9695115e15509c07e918e0fee6cc295cea7915dd16 </code> <code title="response SHA-256">
+R e4a64fff85f2685a276ebd85d815426187214d6b3a0f4fe482ba7e252e077faf </code> </li><li> <span>
+round 11 ·  controller </span> <code title="prompt SHA-256">
+P cd206888fee4025ba5421a9db360f4ec5d69d40733dfcd6384c6b29dd4fcebd0 </code> <code title="response SHA-256">
+R e4a64fff85f2685a276ebd85d815426187214d6b3a0f4fe482ba7e252e077faf </code> </li><li> <span>
+round 12 ·  controller </span> <code title="prompt SHA-256">
+P 98b5bcf8134758d6cdedb391413b429b9550f7d00630d8f6f64581d0a7274909 </code> <code title="response SHA-256">
+R e4a64fff85f2685a276ebd85d815426187214d6b3a0f4fe482ba7e252e077faf </code> </li><li> <span>
+round 13 ·  controller </span> <code title="prompt SHA-256">
+P 094b4b241d36ab7b62dc8288bb1aadc5c585851660ea22755c43fbb830a6cd08 </code> <code title="response SHA-256">
+R e4a64fff85f2685a276ebd85d815426187214d6b3a0f4fe482ba7e252e077faf </code> </li><li> <span>
+round 14 ·  controller </span> <code title="prompt SHA-256">
+P 71142a4d0c6c3cd630527ca1d6ea7070166d1c62f237f8672151b6151ba78fd2 </code> <code title="response SHA-256">
+R e4a64fff85f2685a276ebd85d815426187214d6b3a0f4fe482ba7e252e077faf </code> </li><li> <span>
+round 15 ·  controller </span> <code title="prompt SHA-256">
+P 1c2b57c484889a4dd6afb75e7db134fa8d2e102c1d47e619fc5d0919acbbc6ca </code> <code title="response SHA-256">
+R e4a64fff85f2685a276ebd85d815426187214d6b3a0f4fe482ba7e252e077faf </code> </li><li> <span>
+round 16 ·  controller </span> <code title="prompt SHA-256">
+P 936597fb2e83c73b6876773a44ed3f01c58c9bb56dc421ee0f3265577f57d44a </code> <code title="response SHA-256">
+R e4a64fff85f2685a276ebd85d815426187214d6b3a0f4fe482ba7e252e077faf </code> </li><li> <span>
+round 17 ·  controller </span> <code title="prompt SHA-256">
+P 01d72a675b98e57ed07afcf83eb4ba22a17e502a6d4ca095dcd7f5f200b5ece8 </code> <code title="response SHA-256">
+R e4a64fff85f2685a276ebd85d815426187214d6b3a0f4fe482ba7e252e077faf </code> </li><li> <span>
+round 18 ·  controller </span> <code title="prompt SHA-256">
+P a1cb85a4d1f41d5edc2afbc343004ba80e4732ff8eba7ff8284a40138e560c25 </code> <code title="response SHA-256">
+R e4a64fff85f2685a276ebd85d815426187214d6b3a0f4fe482ba7e252e077faf </code> </li> </ol> </section> </div> </details> </td> </tr><tr data-run-row data-family="open_evidence" data-architecture="goal_graph_hybrid" data-success="true"> <td>15</td> <th scope="row">  <span>开放取证</span> <code>open_evidence-04</code>  </th> <td>目标图混合执行</td> <td> <span class="run-status is-pass"> 通过 </span> </td> <td>100</td> <td> 18 / 5 </td> <td>15,190</td> <td>24.34 s</td> <td> <details> <summary>展开</summary> <div class="run-details"> <section> <h3>运行与结束</h3> <dl> <div>  <dt>run key</dt> <dd> <code>goal_graph_hybrid__open_evidence-04</code> </dd>  </div> <div>  <dt>termination</dt> <dd> <code>model_budget_exhausted</code> </dd>  </div> <div>  <dt>eligibility</dt> <dd> <code>eligible_agent_result</code> </dd>  </div> <div>  <dt>pair</dt> <dd> <code>eligible_pair</code> </dd>  </div> </dl> </section> <section> <h3>代码验收</h3> <dl> <div>  <dt>关键事实覆盖</dt> <dd> 100
+%
+</dd>  </div> <div>  <dt>错误证据</dt> <dd>0</dd>  </div> <div>  <dt>合并遗漏</dt> <dd>0</dd>  </div> <div>  <dt>合并冲突</dt> <dd>0</dd>  </div> </dl> </section> <section> <h3>执行指标</h3> <dl> <div>  <dt>重复动作</dt> <dd>13</dd>  </div> <div>  <dt>无关动作</dt> <dd>0</dd>  </div> <div>  <dt>路径切换</dt> <dd>否</dd>  </div> <div>  <dt>关键路径轮次</dt> <dd>5</dd>  </div> <div>  <dt>控制器拒绝</dt> <dd> 13 </dd>  </div> <div>  <dt>prompt / completion</dt> <dd> 13,973 /  1,217 </dd>  </div> </dl> </section> <section class="hash-list"> <h3>模型交换哈希</h3> <p>用于核对公开记录，不公开响应正文。</p> <ol> <li> <span>
+round 1 ·  controller </span> <code title="prompt SHA-256">
+P 92380e127bca408bdf2978ff60b609fd7750dd61cbfee15b4b966ad1d4a2dbfd </code> <code title="response SHA-256">
+R 0929f8a7ea7640da08e12673da0f1f33c8572bd3cf1f7721e9a0e0984916ada1 </code> </li><li> <span>
+round 2 ·  controller </span> <code title="prompt SHA-256">
+P 94708bc38ea9b192b05221f1c2fc0b6dbcc8328133ef476858900758fd85e382 </code> <code title="response SHA-256">
+R 37ab26215c7e86116bdf3ddf389b2f31ac0384858b248e27ea6656dad134b13b </code> </li><li> <span>
+round 3 ·  controller </span> <code title="prompt SHA-256">
+P 46839806710ea1308c92c80ea4e3c5d6d76b0abae9e609b6be5ef92ead547165 </code> <code title="response SHA-256">
+R 8abfaf49df46d084f807c63cc69f2dacbc004154f756d09d3531f73f38d46083 </code> </li><li> <span>
+round 4 ·  controller </span> <code title="prompt SHA-256">
+P 7f3c897358683016a38bcb6d23c30132ae47bf12b2d9c3cb59b3f086bc23d2f4 </code> <code title="response SHA-256">
+R e06aee95a62932cefd87332e72f720254a5ed08ae36d0052d2f24b44cef3a129 </code> </li><li> <span>
+round 5 ·  controller </span> <code title="prompt SHA-256">
+P f512c1900b4254fcde5c3e31f668b2efcc4a9e7eb621b2759867d5fe40bf63c4 </code> <code title="response SHA-256">
+R 2fd737c26653eec5b9da0cdae46d9f7d7485e947b31bc64cbef7b515be9425f5 </code> </li><li> <span>
+round 6 ·  controller </span> <code title="prompt SHA-256">
+P 074dd91602715d41a1451e799c07e9e90773d9b03c1c1b28ec0015f9c052666c </code> <code title="response SHA-256">
+R 2fd737c26653eec5b9da0cdae46d9f7d7485e947b31bc64cbef7b515be9425f5 </code> </li><li> <span>
+round 7 ·  controller </span> <code title="prompt SHA-256">
+P 305c0631e4568def2b03d4ea08df8f8e7d624358d74ecdd8d15084c32896d1c2 </code> <code title="response SHA-256">
+R 2fd737c26653eec5b9da0cdae46d9f7d7485e947b31bc64cbef7b515be9425f5 </code> </li><li> <span>
+round 8 ·  controller </span> <code title="prompt SHA-256">
+P 2c2dad03bce8e17659317629c4b83c4291ee46a29376069baeb3eda0a53327be </code> <code title="response SHA-256">
+R 2fd737c26653eec5b9da0cdae46d9f7d7485e947b31bc64cbef7b515be9425f5 </code> </li><li> <span>
+round 9 ·  controller </span> <code title="prompt SHA-256">
+P 0bc7601928152740de6fbacb418918a71f11e9795254fe189cf84c9a742c627b </code> <code title="response SHA-256">
+R 2fd737c26653eec5b9da0cdae46d9f7d7485e947b31bc64cbef7b515be9425f5 </code> </li><li> <span>
+round 10 ·  controller </span> <code title="prompt SHA-256">
+P a5c128217689dc08d37e672d348f81dae4640592392973b01bb19ab3364b1554 </code> <code title="response SHA-256">
+R 2fd737c26653eec5b9da0cdae46d9f7d7485e947b31bc64cbef7b515be9425f5 </code> </li><li> <span>
+round 11 ·  controller </span> <code title="prompt SHA-256">
+P 9c1638d775fdf8627a97f15910f0f0f84de53fb451601421ef9bf5aaefb60b3f </code> <code title="response SHA-256">
+R 2fd737c26653eec5b9da0cdae46d9f7d7485e947b31bc64cbef7b515be9425f5 </code> </li><li> <span>
+round 12 ·  controller </span> <code title="prompt SHA-256">
+P 45342142f558d37174c64879bb086c8b1b7ae92917eeeb367ab0fc3f970d7f57 </code> <code title="response SHA-256">
+R 2fd737c26653eec5b9da0cdae46d9f7d7485e947b31bc64cbef7b515be9425f5 </code> </li><li> <span>
+round 13 ·  controller </span> <code title="prompt SHA-256">
+P 7e9c86d869736f04d528d05ac2c08a171b62eb612684afc64dee1908d6eea56d </code> <code title="response SHA-256">
+R 2fd737c26653eec5b9da0cdae46d9f7d7485e947b31bc64cbef7b515be9425f5 </code> </li><li> <span>
+round 14 ·  controller </span> <code title="prompt SHA-256">
+P 1000063f35da5560fb16efcfcf73b18a52491f453c8c391c566bfd3dee94879d </code> <code title="response SHA-256">
+R 2fd737c26653eec5b9da0cdae46d9f7d7485e947b31bc64cbef7b515be9425f5 </code> </li><li> <span>
+round 15 ·  controller </span> <code title="prompt SHA-256">
+P 827ee78ce5214022761d398a110e724f7ed57557cee3e8981edc98b1b0ea4998 </code> <code title="response SHA-256">
+R 2fd737c26653eec5b9da0cdae46d9f7d7485e947b31bc64cbef7b515be9425f5 </code> </li><li> <span>
+round 16 ·  controller </span> <code title="prompt SHA-256">
+P cb8818bfb49782333ebf94181ef4e2ab0fdf64ff46102a41a0af8edb64587577 </code> <code title="response SHA-256">
+R 2fd737c26653eec5b9da0cdae46d9f7d7485e947b31bc64cbef7b515be9425f5 </code> </li><li> <span>
+round 17 ·  controller </span> <code title="prompt SHA-256">
+P 7d292b48250b90db7ef27018269e22b34094ab76bd34f669fa135b64987a8cca </code> <code title="response SHA-256">
+R 2fd737c26653eec5b9da0cdae46d9f7d7485e947b31bc64cbef7b515be9425f5 </code> </li><li> <span>
+round 18 ·  controller </span> <code title="prompt SHA-256">
+P 29689db41bf5ff361caaae4169099b7be1820e1cf44f9a59a62530a866572e63 </code> <code title="response SHA-256">
+R 2fd737c26653eec5b9da0cdae46d9f7d7485e947b31bc64cbef7b515be9425f5 </code> </li> </ol> </section> </div> </details> </td> </tr><tr data-run-row data-family="open_evidence" data-architecture="contracted_react" data-success="true"> <td>16</td> <th scope="row">  <span>开放取证</span> <code>open_evidence-04</code>  </th> <td>开放式执行</td> <td> <span class="run-status is-pass"> 通过 </span> </td> <td>100</td> <td> 6 / 6 </td> <td>4,312</td> <td>6.34 s</td> <td> <details> <summary>展开</summary> <div class="run-details"> <section> <h3>运行与结束</h3> <dl> <div>  <dt>run key</dt> <dd> <code>contracted_react__open_evidence-04</code> </dd>  </div> <div>  <dt>termination</dt> <dd> <code>finish</code> </dd>  </div> <div>  <dt>eligibility</dt> <dd> <code>eligible_agent_result</code> </dd>  </div> <div>  <dt>pair</dt> <dd> <code>eligible_pair</code> </dd>  </div> </dl> </section> <section> <h3>代码验收</h3> <dl> <div>  <dt>关键事实覆盖</dt> <dd> 100
+%
+</dd>  </div> <div>  <dt>错误证据</dt> <dd>0</dd>  </div> <div>  <dt>合并遗漏</dt> <dd>0</dd>  </div> <div>  <dt>合并冲突</dt> <dd>0</dd>  </div> </dl> </section> <section> <h3>执行指标</h3> <dl> <div>  <dt>重复动作</dt> <dd>0</dd>  </div> <div>  <dt>无关动作</dt> <dd>0</dd>  </div> <div>  <dt>路径切换</dt> <dd>否</dd>  </div> <div>  <dt>关键路径轮次</dt> <dd>5</dd>  </div> <div>  <dt>控制器拒绝</dt> <dd> 0 </dd>  </div> <div>  <dt>prompt / completion</dt> <dd> 4,115 /  197 </dd>  </div> </dl> </section> <section class="hash-list"> <h3>模型交换哈希</h3> <p>用于核对公开记录，不公开响应正文。</p> <ol> <li> <span>
+round 1 ·  controller </span> <code title="prompt SHA-256">
+P 58f0781c166f3952ea4317417475c39b7f300cf8a72b11b869138c8f8b046e69 </code> <code title="response SHA-256">
+R 1199fd234b315946d0650fb28abc53628005ff2fa289c4986b1b55c67fc6af9b </code> </li><li> <span>
+round 2 ·  controller </span> <code title="prompt SHA-256">
+P 7bfaf958393c788fbfa5c15621ce466895b3f341d905b1204007f611bc3731b1 </code> <code title="response SHA-256">
+R 37ab26215c7e86116bdf3ddf389b2f31ac0384858b248e27ea6656dad134b13b </code> </li><li> <span>
+round 3 ·  controller </span> <code title="prompt SHA-256">
+P f5d7664dbf36b0d1d8e58a33ee9498743c61ed2be7f0d6f73a6449bd9652a257 </code> <code title="response SHA-256">
+R 8abfaf49df46d084f807c63cc69f2dacbc004154f756d09d3531f73f38d46083 </code> </li><li> <span>
+round 4 ·  controller </span> <code title="prompt SHA-256">
+P 5c6612d0567e2efe7f8df8991f4461a68e8e4afa6e961f77c6f6451314093517 </code> <code title="response SHA-256">
+R e06aee95a62932cefd87332e72f720254a5ed08ae36d0052d2f24b44cef3a129 </code> </li><li> <span>
+round 5 ·  controller </span> <code title="prompt SHA-256">
+P 589b763485107c677a95b0c46b0c9dfc61907b488315d15c2f6f22d8f8314fcd </code> <code title="response SHA-256">
+R 2fd737c26653eec5b9da0cdae46d9f7d7485e947b31bc64cbef7b515be9425f5 </code> </li><li> <span>
+round 6 ·  controller </span> <code title="prompt SHA-256">
+P d5ad4f0099d5520dd60a17c8f63a2e9a8b88359254b6cff5dbe9f9844add7f20 </code> <code title="response SHA-256">
+R 7310372e895dfcd49057382944f726a4b0ab03cbdea6904b834b3516d3bead52 </code> </li> </ol> </section> </div> </details> </td> </tr><tr data-run-row data-family="parallel_decomposition" data-architecture="contracted_react" data-success="false"> <td>17</td> <th scope="row">  <span>并行拆解</span> <code>parallel_decomposition-01</code>  </th> <td>开放式执行</td> <td> <span class="run-status is-fail"> 未通过 </span> </td> <td>25</td> <td> 6 / 6 </td> <td>4,019</td> <td>6.46 s</td> <td> <details> <summary>展开</summary> <div class="run-details"> <section> <h3>运行与结束</h3> <dl> <div>  <dt>run key</dt> <dd> <code>contracted_react__parallel_decomposition-01</code> </dd>  </div> <div>  <dt>termination</dt> <dd> <code>finish</code> </dd>  </div> <div>  <dt>eligibility</dt> <dd> <code>eligible_agent_result</code> </dd>  </div> <div>  <dt>pair</dt> <dd> <code>eligible_pair</code> </dd>  </div> </dl> </section> <section> <h3>代码验收</h3> <dl> <div>  <dt>关键事实覆盖</dt> <dd> 100
+%
+</dd>  </div> <div>  <dt>错误证据</dt> <dd>0</dd>  </div> <div>  <dt>合并遗漏</dt> <dd>3</dd>  </div> <div>  <dt>合并冲突</dt> <dd>0</dd>  </div> </dl> </section> <section> <h3>执行指标</h3> <dl> <div>  <dt>重复动作</dt> <dd>0</dd>  </div> <div>  <dt>无关动作</dt> <dd>0</dd>  </div> <div>  <dt>路径切换</dt> <dd>否</dd>  </div> <div>  <dt>关键路径轮次</dt> <dd>5</dd>  </div> <div>  <dt>控制器拒绝</dt> <dd> 0 </dd>  </div> <div>  <dt>prompt / completion</dt> <dd> 3,813 /  206 </dd>  </div> </dl> </section> <section class="hash-list"> <h3>模型交换哈希</h3> <p>用于核对公开记录，不公开响应正文。</p> <ol> <li> <span>
+round 1 ·  controller </span> <code title="prompt SHA-256">
+P f0bab67495651ae4bcb22f53257d8af4d777f8d78e07a18a48010d99e16bc204 </code> <code title="response SHA-256">
+R 1199fd234b315946d0650fb28abc53628005ff2fa289c4986b1b55c67fc6af9b </code> </li><li> <span>
+round 2 ·  controller </span> <code title="prompt SHA-256">
+P d6e346682f3cb8b594d6de97f135f965a9c17d920cfc4f1425dd385e50331eaa </code> <code title="response SHA-256">
+R 1de8849ca69262c0e648cf36bd05d8d9581a3545f073721fad91bb36954de3ca </code> </li><li> <span>
+round 3 ·  controller </span> <code title="prompt SHA-256">
+P 83fae745b1f9d5dffefdec588a739ec73e5dfb75c64898b184e09ce8a4e55e0a </code> <code title="response SHA-256">
+R f13f77122b5d1af690bab4fe8c29a53762f4a826f918eabb67645da48c459cbd </code> </li><li> <span>
+round 4 ·  controller </span> <code title="prompt SHA-256">
+P e8d9496b3b3b020905f9680d7d1a28aef1579139c914bca569b6e9dc6891a0d0 </code> <code title="response SHA-256">
+R f66599ca184ac1930b0d5761d8c44ad03628cb1aef77d215737de5d774ffcdcb </code> </li><li> <span>
+round 5 ·  controller </span> <code title="prompt SHA-256">
+P 1d59c49d5d81743e26a6f19907b873a4ca23e11f3cb8ba152b0c3dc0ccc25862 </code> <code title="response SHA-256">
+R 0e432736d38ed622dfda6f4bd17ee4a286d5a3d19cd34db97a72ba2c45ef0910 </code> </li><li> <span>
+round 6 ·  controller </span> <code title="prompt SHA-256">
+P eb5d48c85da85b0c5d7ea1bbb53eb4db1ede917c393d96a68188106447bc773c </code> <code title="response SHA-256">
+R 7310372e895dfcd49057382944f726a4b0ab03cbdea6904b834b3516d3bead52 </code> </li> </ol> </section> </div> </details> </td> </tr><tr data-run-row data-family="parallel_decomposition" data-architecture="goal_graph_hybrid" data-success="false"> <td>18</td> <th scope="row">  <span>并行拆解</span> <code>parallel_decomposition-01</code>  </th> <td>目标图混合执行</td> <td> <span class="run-status is-fail"> 未通过 </span> </td> <td>25</td> <td> 18 / 5 </td> <td>14,754</td> <td>20.55 s</td> <td> <details> <summary>展开</summary> <div class="run-details"> <section> <h3>运行与结束</h3> <dl> <div>  <dt>run key</dt> <dd> <code>goal_graph_hybrid__parallel_decomposition-01</code> </dd>  </div> <div>  <dt>termination</dt> <dd> <code>model_budget_exhausted</code> </dd>  </div> <div>  <dt>eligibility</dt> <dd> <code>eligible_agent_result</code> </dd>  </div> <div>  <dt>pair</dt> <dd> <code>eligible_pair</code> </dd>  </div> </dl> </section> <section> <h3>代码验收</h3> <dl> <div>  <dt>关键事实覆盖</dt> <dd> 100
+%
+</dd>  </div> <div>  <dt>错误证据</dt> <dd>0</dd>  </div> <div>  <dt>合并遗漏</dt> <dd>3</dd>  </div> <div>  <dt>合并冲突</dt> <dd>0</dd>  </div> </dl> </section> <section> <h3>执行指标</h3> <dl> <div>  <dt>重复动作</dt> <dd>13</dd>  </div> <div>  <dt>无关动作</dt> <dd>0</dd>  </div> <div>  <dt>路径切换</dt> <dd>否</dd>  </div> <div>  <dt>关键路径轮次</dt> <dd>2</dd>  </div> <div>  <dt>控制器拒绝</dt> <dd> 13 </dd>  </div> <div>  <dt>prompt / completion</dt> <dd> 13,426 /  1,328 </dd>  </div> </dl> </section> <section class="hash-list"> <h3>模型交换哈希</h3> <p>用于核对公开记录，不公开响应正文。</p> <ol> <li> <span>
+round 1 ·  alpha </span> <code title="prompt SHA-256">
+P abf4be44b6597f6e4306afff3a30c63892ea7717a4a6331fb9431c04c654c245 </code> <code title="response SHA-256">
+R 9e7968c4d43b8acfa2488237b84398061841be61d4b7ac91dc30f0047173c0bb </code> </li><li> <span>
+round 1 ·  beta </span> <code title="prompt SHA-256">
+P f2718f4e414bf87491b96e6de655150318e1bacae142230b29f5ffd2fbfb224d </code> <code title="response SHA-256">
+R 14f1f147551bfe49d431a2dfc29768d532d90b992fb959c08cb324b269a6ccb9 </code> </li><li> <span>
+round 1 ·  gamma </span> <code title="prompt SHA-256">
+P b7ac62f2b6d734cbf2518069850031ed88233af3eda64d73254836ad42800b87 </code> <code title="response SHA-256">
+R c65f6c95f348f2420eff8c516a08897529fadaec1456a4ca1256f6b1ce59245e </code> </li><li> <span>
+round 2 ·  controller </span> <code title="prompt SHA-256">
+P afa95fa19f53563fc186b764c8b0d1e7cefb6b9e0074452841f4f70828c37365 </code> <code title="response SHA-256">
+R 0e432736d38ed622dfda6f4bd17ee4a286d5a3d19cd34db97a72ba2c45ef0910 </code> </li><li> <span>
+round 3 ·  controller </span> <code title="prompt SHA-256">
+P 54bc6c660a03e54b705304fc8fbe83dca2b8179fed0e5435d010826e35abf15f </code> <code title="response SHA-256">
+R 0e432736d38ed622dfda6f4bd17ee4a286d5a3d19cd34db97a72ba2c45ef0910 </code> </li><li> <span>
+round 4 ·  controller </span> <code title="prompt SHA-256">
+P 86bf64e6213639976553f7807656911d176f90b0a1ae523454574d69b777ba1a </code> <code title="response SHA-256">
+R 0e432736d38ed622dfda6f4bd17ee4a286d5a3d19cd34db97a72ba2c45ef0910 </code> </li><li> <span>
+round 5 ·  controller </span> <code title="prompt SHA-256">
+P 49a733b2c2ca4ba30bd2beb08191308477637d31c0221836c66c4c665c631243 </code> <code title="response SHA-256">
+R 0e432736d38ed622dfda6f4bd17ee4a286d5a3d19cd34db97a72ba2c45ef0910 </code> </li><li> <span>
+round 6 ·  controller </span> <code title="prompt SHA-256">
+P c9fd3a36f4a4b5ca1ab0c27b826e5857c827bd920c4086a3c45eafe2ea4c6c37 </code> <code title="response SHA-256">
+R 0e432736d38ed622dfda6f4bd17ee4a286d5a3d19cd34db97a72ba2c45ef0910 </code> </li><li> <span>
+round 7 ·  controller </span> <code title="prompt SHA-256">
+P 73140a882a4f8ee3dd1aec9e827cd6b409b02d55779a3b39a70dbf6fbb5ab5ad </code> <code title="response SHA-256">
+R 1199fd234b315946d0650fb28abc53628005ff2fa289c4986b1b55c67fc6af9b </code> </li><li> <span>
+round 8 ·  controller </span> <code title="prompt SHA-256">
+P 0938e708ba0a84035d4de6c77bd0bc896ff56747f44fb181e49c19b908e05f05 </code> <code title="response SHA-256">
+R 0e432736d38ed622dfda6f4bd17ee4a286d5a3d19cd34db97a72ba2c45ef0910 </code> </li><li> <span>
+round 9 ·  controller </span> <code title="prompt SHA-256">
+P 8d49a2d6a8a3c6ca049cffed328742f6ec5ee6c606f8a0f0ca741dfff23a94cf </code> <code title="response SHA-256">
+R 0e432736d38ed622dfda6f4bd17ee4a286d5a3d19cd34db97a72ba2c45ef0910 </code> </li><li> <span>
+round 10 ·  controller </span> <code title="prompt SHA-256">
+P cf00744a98027af39ba363fe0ce21fa06b005a9111b10602f1e99f809e985d73 </code> <code title="response SHA-256">
+R 0e432736d38ed622dfda6f4bd17ee4a286d5a3d19cd34db97a72ba2c45ef0910 </code> </li><li> <span>
+round 11 ·  controller </span> <code title="prompt SHA-256">
+P fe99616c480af6fee63b85e48f723df37be499d00910bbf61e05893d9c23f8fc </code> <code title="response SHA-256">
+R 0e432736d38ed622dfda6f4bd17ee4a286d5a3d19cd34db97a72ba2c45ef0910 </code> </li><li> <span>
+round 12 ·  controller </span> <code title="prompt SHA-256">
+P ccf711ba717f60411d21538ba4e4be2be602f0d2ea74eff8a3d5780b84cc7d33 </code> <code title="response SHA-256">
+R 0e432736d38ed622dfda6f4bd17ee4a286d5a3d19cd34db97a72ba2c45ef0910 </code> </li><li> <span>
+round 13 ·  controller </span> <code title="prompt SHA-256">
+P a67d601be45fcb166853d14b55767cc8847b5572233425c1d71ceda57a247663 </code> <code title="response SHA-256">
+R 0e432736d38ed622dfda6f4bd17ee4a286d5a3d19cd34db97a72ba2c45ef0910 </code> </li><li> <span>
+round 14 ·  controller </span> <code title="prompt SHA-256">
+P 0683bf2181cbc621357724815b6f200fbb1468ffc9babde39a4a367c4331d24a </code> <code title="response SHA-256">
+R 0e432736d38ed622dfda6f4bd17ee4a286d5a3d19cd34db97a72ba2c45ef0910 </code> </li><li> <span>
+round 15 ·  controller </span> <code title="prompt SHA-256">
+P 8b24543e175ff8e7bd610ed3ee2265f71ebd1012ecdf096dc50df156f24c9cbe </code> <code title="response SHA-256">
+R 0e432736d38ed622dfda6f4bd17ee4a286d5a3d19cd34db97a72ba2c45ef0910 </code> </li><li> <span>
+round 16 ·  controller </span> <code title="prompt SHA-256">
+P 5829d8da12b9832f96d5338c5704a293e3508491beaf894cf3ac6c534232f005 </code> <code title="response SHA-256">
+R 0e432736d38ed622dfda6f4bd17ee4a286d5a3d19cd34db97a72ba2c45ef0910 </code> </li> </ol> </section> </div> </details> </td> </tr><tr data-run-row data-family="parallel_decomposition" data-architecture="goal_graph_hybrid" data-success="false"> <td>19</td> <th scope="row">  <span>并行拆解</span> <code>parallel_decomposition-02</code>  </th> <td>目标图混合执行</td> <td> <span class="run-status is-fail"> 未通过 </span> </td> <td>25</td> <td> 18 / 5 </td> <td>14,952</td> <td>20.65 s</td> <td> <details> <summary>展开</summary> <div class="run-details"> <section> <h3>运行与结束</h3> <dl> <div>  <dt>run key</dt> <dd> <code>goal_graph_hybrid__parallel_decomposition-02</code> </dd>  </div> <div>  <dt>termination</dt> <dd> <code>model_budget_exhausted</code> </dd>  </div> <div>  <dt>eligibility</dt> <dd> <code>eligible_agent_result</code> </dd>  </div> <div>  <dt>pair</dt> <dd> <code>eligible_pair</code> </dd>  </div> </dl> </section> <section> <h3>代码验收</h3> <dl> <div>  <dt>关键事实覆盖</dt> <dd> 100
+%
+</dd>  </div> <div>  <dt>错误证据</dt> <dd>0</dd>  </div> <div>  <dt>合并遗漏</dt> <dd>3</dd>  </div> <div>  <dt>合并冲突</dt> <dd>0</dd>  </div> </dl> </section> <section> <h3>执行指标</h3> <dl> <div>  <dt>重复动作</dt> <dd>13</dd>  </div> <div>  <dt>无关动作</dt> <dd>0</dd>  </div> <div>  <dt>路径切换</dt> <dd>否</dd>  </div> <div>  <dt>关键路径轮次</dt> <dd>2</dd>  </div> <div>  <dt>控制器拒绝</dt> <dd> 13 </dd>  </div> <div>  <dt>prompt / completion</dt> <dd> 13,624 /  1,328 </dd>  </div> </dl> </section> <section class="hash-list"> <h3>模型交换哈希</h3> <p>用于核对公开记录，不公开响应正文。</p> <ol> <li> <span>
+round 1 ·  alpha </span> <code title="prompt SHA-256">
+P b822d1a67e2563f1647bf40d1100964b39c0009529728f11a88080cb94782a01 </code> <code title="response SHA-256">
+R 1e36ed3c08e06911f1ee36e88519dcd4141fc0c12adf9b92d9a20852b3b2c66c </code> </li><li> <span>
+round 1 ·  beta </span> <code title="prompt SHA-256">
+P 3a1f8d6529e6fecb485b38fbb539771ccc7d3cd423399225233fe9c0f2bed88b </code> <code title="response SHA-256">
+R 0b8c7284b7dd78bb9746b4817a01f4742be81aa0a20276db7a6b1e98daa4e830 </code> </li><li> <span>
+round 1 ·  gamma </span> <code title="prompt SHA-256">
+P d06206372f5c82d91d29fd87896836a984bcdfe7bd8decd02a6a1aee377bd004 </code> <code title="response SHA-256">
+R d0dc6f0fb175bb8dfa45f136879ff89e452c3384aae319d8a252e6892571ae92 </code> </li><li> <span>
+round 2 ·  controller </span> <code title="prompt SHA-256">
+P 7b28c23eac4b4b3d7991984d3a11569444adbdd9bf5429f9096b8a2fbcc571ab </code> <code title="response SHA-256">
+R 8f0f630160247947c46f8f4da89cdd26601d9616f93595ea4af72ce84d9f44e2 </code> </li><li> <span>
+round 3 ·  controller </span> <code title="prompt SHA-256">
+P 4ee3d6d62988c3391a27525aeb575fd408affac3d3fc5778b76eaf849cd70822 </code> <code title="response SHA-256">
+R 8f0f630160247947c46f8f4da89cdd26601d9616f93595ea4af72ce84d9f44e2 </code> </li><li> <span>
+round 4 ·  controller </span> <code title="prompt SHA-256">
+P 47f8c16577e2c8aea74ca12583cc6174562474c93ef317b8158084391db1a8b6 </code> <code title="response SHA-256">
+R 8f0f630160247947c46f8f4da89cdd26601d9616f93595ea4af72ce84d9f44e2 </code> </li><li> <span>
+round 5 ·  controller </span> <code title="prompt SHA-256">
+P 114593a7e8efc7913754ca1c0a365597dfd5284b3c40a9887224e0efad6a7cfa </code> <code title="response SHA-256">
+R 8f0f630160247947c46f8f4da89cdd26601d9616f93595ea4af72ce84d9f44e2 </code> </li><li> <span>
+round 6 ·  controller </span> <code title="prompt SHA-256">
+P a995320c4ce999c54a849e1563871719bf109a5e2051c3c1d93dbe2e7967a9d1 </code> <code title="response SHA-256">
+R 8f0f630160247947c46f8f4da89cdd26601d9616f93595ea4af72ce84d9f44e2 </code> </li><li> <span>
+round 7 ·  controller </span> <code title="prompt SHA-256">
+P fda32afaf1197155720ca08df90d0d27fbc13494e718efaa9f3ecbd8d246bcc4 </code> <code title="response SHA-256">
+R 8f0f630160247947c46f8f4da89cdd26601d9616f93595ea4af72ce84d9f44e2 </code> </li><li> <span>
+round 8 ·  controller </span> <code title="prompt SHA-256">
+P 1889bd483bec4cbb2096ab4acdfe6c9cbb261283b9cf70ab42f362ebde5a6e2c </code> <code title="response SHA-256">
+R 8f0f630160247947c46f8f4da89cdd26601d9616f93595ea4af72ce84d9f44e2 </code> </li><li> <span>
+round 9 ·  controller </span> <code title="prompt SHA-256">
+P 26fadfb752644b166dc0772aa3cec652355db94fc84d2471b5f0491693b4c020 </code> <code title="response SHA-256">
+R 8f0f630160247947c46f8f4da89cdd26601d9616f93595ea4af72ce84d9f44e2 </code> </li><li> <span>
+round 10 ·  controller </span> <code title="prompt SHA-256">
+P 9f76285a64ee33512b9a9c8b250d0a75b9a7d3eaac174af4eace7a3ba79ea761 </code> <code title="response SHA-256">
+R 8f0f630160247947c46f8f4da89cdd26601d9616f93595ea4af72ce84d9f44e2 </code> </li><li> <span>
+round 11 ·  controller </span> <code title="prompt SHA-256">
+P a65961b161548c4ce1ee75bb76b6c99c7e7a12d4ad234dc7afc3854eaaa69af0 </code> <code title="response SHA-256">
+R 8f0f630160247947c46f8f4da89cdd26601d9616f93595ea4af72ce84d9f44e2 </code> </li><li> <span>
+round 12 ·  controller </span> <code title="prompt SHA-256">
+P c2c034ee4bbb89a14401de3c7cf659270f4fae82cfba6684ac0358ef487db8a3 </code> <code title="response SHA-256">
+R 8f0f630160247947c46f8f4da89cdd26601d9616f93595ea4af72ce84d9f44e2 </code> </li><li> <span>
+round 13 ·  controller </span> <code title="prompt SHA-256">
+P 3ddf474bfdac8a71656448cb1920f3084db6d1b8d4f1ec986c8973bfa4d03b36 </code> <code title="response SHA-256">
+R 1199fd234b315946d0650fb28abc53628005ff2fa289c4986b1b55c67fc6af9b </code> </li><li> <span>
+round 14 ·  controller </span> <code title="prompt SHA-256">
+P 5839a5f2b7808c97f67c0d096c16459070984856d7de1d0f0017d8622aed1902 </code> <code title="response SHA-256">
+R 8f0f630160247947c46f8f4da89cdd26601d9616f93595ea4af72ce84d9f44e2 </code> </li><li> <span>
+round 15 ·  controller </span> <code title="prompt SHA-256">
+P 1b5f5a295275edfcc4e846bd85febd120d0ec5e538b64ba9f501a252507cba53 </code> <code title="response SHA-256">
+R 8f0f630160247947c46f8f4da89cdd26601d9616f93595ea4af72ce84d9f44e2 </code> </li><li> <span>
+round 16 ·  controller </span> <code title="prompt SHA-256">
+P b5054cec787dc2c3b3b0eded39a19422f1b290c637372dfb60717793f98b85f1 </code> <code title="response SHA-256">
+R 8f0f630160247947c46f8f4da89cdd26601d9616f93595ea4af72ce84d9f44e2 </code> </li> </ol> </section> </div> </details> </td> </tr><tr data-run-row data-family="parallel_decomposition" data-architecture="contracted_react" data-success="false"> <td>20</td> <th scope="row">  <span>并行拆解</span> <code>parallel_decomposition-02</code>  </th> <td>开放式执行</td> <td> <span class="run-status is-fail"> 未通过 </span> </td> <td>25</td> <td> 6 / 6 </td> <td>4,019</td> <td>5.74 s</td> <td> <details> <summary>展开</summary> <div class="run-details"> <section> <h3>运行与结束</h3> <dl> <div>  <dt>run key</dt> <dd> <code>contracted_react__parallel_decomposition-02</code> </dd>  </div> <div>  <dt>termination</dt> <dd> <code>finish</code> </dd>  </div> <div>  <dt>eligibility</dt> <dd> <code>eligible_agent_result</code> </dd>  </div> <div>  <dt>pair</dt> <dd> <code>eligible_pair</code> </dd>  </div> </dl> </section> <section> <h3>代码验收</h3> <dl> <div>  <dt>关键事实覆盖</dt> <dd> 100
+%
+</dd>  </div> <div>  <dt>错误证据</dt> <dd>0</dd>  </div> <div>  <dt>合并遗漏</dt> <dd>3</dd>  </div> <div>  <dt>合并冲突</dt> <dd>0</dd>  </div> </dl> </section> <section> <h3>执行指标</h3> <dl> <div>  <dt>重复动作</dt> <dd>0</dd>  </div> <div>  <dt>无关动作</dt> <dd>0</dd>  </div> <div>  <dt>路径切换</dt> <dd>否</dd>  </div> <div>  <dt>关键路径轮次</dt> <dd>5</dd>  </div> <div>  <dt>控制器拒绝</dt> <dd> 0 </dd>  </div> <div>  <dt>prompt / completion</dt> <dd> 3,813 /  206 </dd>  </div> </dl> </section> <section class="hash-list"> <h3>模型交换哈希</h3> <p>用于核对公开记录，不公开响应正文。</p> <ol> <li> <span>
+round 1 ·  controller </span> <code title="prompt SHA-256">
+P 942b9be2dbe2660fda6f024cb8d8549e820367db33e9434b61bfd2960d3d804c </code> <code title="response SHA-256">
+R 1199fd234b315946d0650fb28abc53628005ff2fa289c4986b1b55c67fc6af9b </code> </li><li> <span>
+round 2 ·  controller </span> <code title="prompt SHA-256">
+P 9388bddf5c1d0b2ccce2383a413ff7f82834fe575f9d48779e963b1dafe78f26 </code> <code title="response SHA-256">
+R 447dbd199d303d82d66e9427d5d0fe13dc522a29a9ea4403757d0ced5ff550f8 </code> </li><li> <span>
+round 3 ·  controller </span> <code title="prompt SHA-256">
+P 2a5f2798cf53441b1212d103e20d9fc6371b4406a226ccd0c078ffd34b850709 </code> <code title="response SHA-256">
+R 715f2a7f205bb8ddf07587561c857e485ab369112132673995d233e265b93c11 </code> </li><li> <span>
+round 4 ·  controller </span> <code title="prompt SHA-256">
+P ac4e78c84b0d9930e288532d2dbd57ad0b20f61d29327d03662aa343bf4db64a </code> <code title="response SHA-256">
+R f5fd750b6de3203b71c7ad76ab3660e1a4ad89b61767d6bdc3ba7db89d71ba0b </code> </li><li> <span>
+round 5 ·  controller </span> <code title="prompt SHA-256">
+P ce570a1d01227dfc8a3304e74ba53c9a04cd778f1adf66e8e8fd34e919b20e1b </code> <code title="response SHA-256">
+R 8f0f630160247947c46f8f4da89cdd26601d9616f93595ea4af72ce84d9f44e2 </code> </li><li> <span>
+round 6 ·  controller </span> <code title="prompt SHA-256">
+P 740f6c116ee5d780c549ccaf644cdb136edbef05831bf3a996c419d606d24c90 </code> <code title="response SHA-256">
+R 7310372e895dfcd49057382944f726a4b0ab03cbdea6904b834b3516d3bead52 </code> </li> </ol> </section> </div> </details> </td> </tr><tr data-run-row data-family="parallel_decomposition" data-architecture="contracted_react" data-success="false"> <td>21</td> <th scope="row">  <span>并行拆解</span> <code>parallel_decomposition-03</code>  </th> <td>开放式执行</td> <td> <span class="run-status is-fail"> 未通过 </span> </td> <td>25</td> <td> 6 / 6 </td> <td>4,019</td> <td>5.46 s</td> <td> <details> <summary>展开</summary> <div class="run-details"> <section> <h3>运行与结束</h3> <dl> <div>  <dt>run key</dt> <dd> <code>contracted_react__parallel_decomposition-03</code> </dd>  </div> <div>  <dt>termination</dt> <dd> <code>finish</code> </dd>  </div> <div>  <dt>eligibility</dt> <dd> <code>eligible_agent_result</code> </dd>  </div> <div>  <dt>pair</dt> <dd> <code>eligible_pair</code> </dd>  </div> </dl> </section> <section> <h3>代码验收</h3> <dl> <div>  <dt>关键事实覆盖</dt> <dd> 100
+%
+</dd>  </div> <div>  <dt>错误证据</dt> <dd>0</dd>  </div> <div>  <dt>合并遗漏</dt> <dd>3</dd>  </div> <div>  <dt>合并冲突</dt> <dd>0</dd>  </div> </dl> </section> <section> <h3>执行指标</h3> <dl> <div>  <dt>重复动作</dt> <dd>0</dd>  </div> <div>  <dt>无关动作</dt> <dd>0</dd>  </div> <div>  <dt>路径切换</dt> <dd>否</dd>  </div> <div>  <dt>关键路径轮次</dt> <dd>5</dd>  </div> <div>  <dt>控制器拒绝</dt> <dd> 0 </dd>  </div> <div>  <dt>prompt / completion</dt> <dd> 3,813 /  206 </dd>  </div> </dl> </section> <section class="hash-list"> <h3>模型交换哈希</h3> <p>用于核对公开记录，不公开响应正文。</p> <ol> <li> <span>
+round 1 ·  controller </span> <code title="prompt SHA-256">
+P b8d833d5b85debe6321702252944c2d9e71854887a7ad81b3a685a9d5c3a3d3f </code> <code title="response SHA-256">
+R 1199fd234b315946d0650fb28abc53628005ff2fa289c4986b1b55c67fc6af9b </code> </li><li> <span>
+round 2 ·  controller </span> <code title="prompt SHA-256">
+P c6147add13e60e396a3327ee0ea6898776b20c7c3c11f86a4f6e471093dabcd5 </code> <code title="response SHA-256">
+R df344990177ddf50d3cabf583e8d104941fb557dc066b642449c918a2f82095a </code> </li><li> <span>
+round 3 ·  controller </span> <code title="prompt SHA-256">
+P 427d3c75d21c745b7da334944d512072ff5e5a8969cf805a45929488a80c12ce </code> <code title="response SHA-256">
+R 8aaf01ae9b648ee883a6281468ae3b7c9ad597bf0cbf963bf441c34c94098281 </code> </li><li> <span>
+round 4 ·  controller </span> <code title="prompt SHA-256">
+P d7b6d5b77e671b2aac5c24d9b45b3c2092f47b65af4d4e132bcd63d8044fec89 </code> <code title="response SHA-256">
+R 992e9b146d52d41e318ff3232285bd8c0576399a8a0c4a5fc811f1ebd06e6ca9 </code> </li><li> <span>
+round 5 ·  controller </span> <code title="prompt SHA-256">
+P 34b9f19b0dc75f553a87bca30e8249a3368207051a2a6353498afa446e54ce18 </code> <code title="response SHA-256">
+R e75bca37b0a9c98cfde29535bee930bb64787e7a3ce0feb977f1c175c794ee92 </code> </li><li> <span>
+round 6 ·  controller </span> <code title="prompt SHA-256">
+P 428d20265e2570f345ee7691bd4471497b2698eb797900efa1c63c9f46cea3e7 </code> <code title="response SHA-256">
+R 7310372e895dfcd49057382944f726a4b0ab03cbdea6904b834b3516d3bead52 </code> </li> </ol> </section> </div> </details> </td> </tr><tr data-run-row data-family="parallel_decomposition" data-architecture="goal_graph_hybrid" data-success="false"> <td>22</td> <th scope="row">  <span>并行拆解</span> <code>parallel_decomposition-03</code>  </th> <td>目标图混合执行</td> <td> <span class="run-status is-fail"> 未通过 </span> </td> <td>25</td> <td> 18 / 5 </td> <td>14,721</td> <td>18.59 s</td> <td> <details> <summary>展开</summary> <div class="run-details"> <section> <h3>运行与结束</h3> <dl> <div>  <dt>run key</dt> <dd> <code>goal_graph_hybrid__parallel_decomposition-03</code> </dd>  </div> <div>  <dt>termination</dt> <dd> <code>model_budget_exhausted</code> </dd>  </div> <div>  <dt>eligibility</dt> <dd> <code>eligible_agent_result</code> </dd>  </div> <div>  <dt>pair</dt> <dd> <code>eligible_pair</code> </dd>  </div> </dl> </section> <section> <h3>代码验收</h3> <dl> <div>  <dt>关键事实覆盖</dt> <dd> 100
+%
+</dd>  </div> <div>  <dt>错误证据</dt> <dd>0</dd>  </div> <div>  <dt>合并遗漏</dt> <dd>3</dd>  </div> <div>  <dt>合并冲突</dt> <dd>0</dd>  </div> </dl> </section> <section> <h3>执行指标</h3> <dl> <div>  <dt>重复动作</dt> <dd>13</dd>  </div> <div>  <dt>无关动作</dt> <dd>0</dd>  </div> <div>  <dt>路径切换</dt> <dd>否</dd>  </div> <div>  <dt>关键路径轮次</dt> <dd>2</dd>  </div> <div>  <dt>控制器拒绝</dt> <dd> 13 </dd>  </div> <div>  <dt>prompt / completion</dt> <dd> 13,393 /  1,328 </dd>  </div> </dl> </section> <section class="hash-list"> <h3>模型交换哈希</h3> <p>用于核对公开记录，不公开响应正文。</p> <ol> <li> <span>
+round 1 ·  alpha </span> <code title="prompt SHA-256">
+P 3111bd0ba295dfc91daf75b48c1d74b8d3c22a23d110b86731e45ff9ccd2ca1c </code> <code title="response SHA-256">
+R 0df103790891a9fd1570a3ec98d04c624411e34e235100c42406abf4a89a72b1 </code> </li><li> <span>
+round 1 ·  beta </span> <code title="prompt SHA-256">
+P 2aae6bb4ddce830791cc218c96ac59337725177ae8bb36d9c4745e124851ca35 </code> <code title="response SHA-256">
+R ec759c082dfbd0137a5422edd12893495649a5dcaf3fadc143692db79f7f110c </code> </li><li> <span>
+round 1 ·  gamma </span> <code title="prompt SHA-256">
+P 07c8d3580822d7d179e0d9262b84a496fce23534ed9b87e1270dd122a15ce074 </code> <code title="response SHA-256">
+R 82449bc20814c0e570f209c347001bae7d334adffaec51680acdfcdd2d317c4a </code> </li><li> <span>
+round 2 ·  controller </span> <code title="prompt SHA-256">
+P 192b3e9814a23d92d2e5d0ca8a743809cae64c41a3608c4662c66610b80f5c7e </code> <code title="response SHA-256">
+R e75bca37b0a9c98cfde29535bee930bb64787e7a3ce0feb977f1c175c794ee92 </code> </li><li> <span>
+round 3 ·  controller </span> <code title="prompt SHA-256">
+P f064212556167dee024fdf73c5bd734e50bdbb59bea201f0dc115348054a67f9 </code> <code title="response SHA-256">
+R e75bca37b0a9c98cfde29535bee930bb64787e7a3ce0feb977f1c175c794ee92 </code> </li><li> <span>
+round 4 ·  controller </span> <code title="prompt SHA-256">
+P 1097c86f6714077dade9b045fcddda239f43c42c0ac1ff4531ed6afd8a192b78 </code> <code title="response SHA-256">
+R e75bca37b0a9c98cfde29535bee930bb64787e7a3ce0feb977f1c175c794ee92 </code> </li><li> <span>
+round 5 ·  controller </span> <code title="prompt SHA-256">
+P 83c93d781458c4d6ddac681fcb34d32cc1d283c4efdcf42b92fc85b459924241 </code> <code title="response SHA-256">
+R e75bca37b0a9c98cfde29535bee930bb64787e7a3ce0feb977f1c175c794ee92 </code> </li><li> <span>
+round 6 ·  controller </span> <code title="prompt SHA-256">
+P 207379d3e1698913379647eb82b069e35d343454988fcd3ed0a65c4aa5fa3b72 </code> <code title="response SHA-256">
+R 1199fd234b315946d0650fb28abc53628005ff2fa289c4986b1b55c67fc6af9b </code> </li><li> <span>
+round 7 ·  controller </span> <code title="prompt SHA-256">
+P 29a7251c475001fc981d1f2d32daf23fecfa16f1da09e0f7cce429b35c2f0c26 </code> <code title="response SHA-256">
+R e75bca37b0a9c98cfde29535bee930bb64787e7a3ce0feb977f1c175c794ee92 </code> </li><li> <span>
+round 8 ·  controller </span> <code title="prompt SHA-256">
+P 8f6ba21f41fee9a193b6ef38ebf4395855d18559d98839e1bee1ea4a0f78baaa </code> <code title="response SHA-256">
+R e75bca37b0a9c98cfde29535bee930bb64787e7a3ce0feb977f1c175c794ee92 </code> </li><li> <span>
+round 9 ·  controller </span> <code title="prompt SHA-256">
+P c6367b436090f1582fb0cffaf69b2e25819270719a7c8702347a801c24e598f5 </code> <code title="response SHA-256">
+R e75bca37b0a9c98cfde29535bee930bb64787e7a3ce0feb977f1c175c794ee92 </code> </li><li> <span>
+round 10 ·  controller </span> <code title="prompt SHA-256">
+P 72d8c7ab1ae74b50f2de075ca484494bb48c2e490895a18499e6b89a5bc259d8 </code> <code title="response SHA-256">
+R e75bca37b0a9c98cfde29535bee930bb64787e7a3ce0feb977f1c175c794ee92 </code> </li><li> <span>
+round 11 ·  controller </span> <code title="prompt SHA-256">
+P 1b70b898cd21893bc20f154010d79aa689f3f1ab11aee9e059d72ac6b6d0065d </code> <code title="response SHA-256">
+R e75bca37b0a9c98cfde29535bee930bb64787e7a3ce0feb977f1c175c794ee92 </code> </li><li> <span>
+round 12 ·  controller </span> <code title="prompt SHA-256">
+P da0d0cf4200fc01c39d42736b1b963ccbd0c87dbc34e29631cd0f6391ea0d34e </code> <code title="response SHA-256">
+R e75bca37b0a9c98cfde29535bee930bb64787e7a3ce0feb977f1c175c794ee92 </code> </li><li> <span>
+round 13 ·  controller </span> <code title="prompt SHA-256">
+P cbc2e99f3569ac6696a0e5b309641ef1dbde5d9e555beb93b1dcc9f86ee4f091 </code> <code title="response SHA-256">
+R e75bca37b0a9c98cfde29535bee930bb64787e7a3ce0feb977f1c175c794ee92 </code> </li><li> <span>
+round 14 ·  controller </span> <code title="prompt SHA-256">
+P 52b3b7fb3fb15ca3b3201b7a3e88d722aad13fc5dce125a0ed104c9a119708a7 </code> <code title="response SHA-256">
+R e75bca37b0a9c98cfde29535bee930bb64787e7a3ce0feb977f1c175c794ee92 </code> </li><li> <span>
+round 15 ·  controller </span> <code title="prompt SHA-256">
+P da79cb8156f355e569fe60e79e2a795542fb507d6e01aa18a263b0f4b691028c </code> <code title="response SHA-256">
+R e75bca37b0a9c98cfde29535bee930bb64787e7a3ce0feb977f1c175c794ee92 </code> </li><li> <span>
+round 16 ·  controller </span> <code title="prompt SHA-256">
+P fe713bf0e1a8a270085650b8f0d21c79e26576dcf8c4949728b752aa703cd5b6 </code> <code title="response SHA-256">
+R e75bca37b0a9c98cfde29535bee930bb64787e7a3ce0feb977f1c175c794ee92 </code> </li> </ol> </section> </div> </details> </td> </tr><tr data-run-row data-family="parallel_decomposition" data-architecture="goal_graph_hybrid" data-success="false"> <td>23</td> <th scope="row">  <span>并行拆解</span> <code>parallel_decomposition-04</code>  </th> <td>目标图混合执行</td> <td> <span class="run-status is-fail"> 未通过 </span> </td> <td>25</td> <td> 18 / 4 </td> <td>15,136</td> <td>19.17 s</td> <td> <details> <summary>展开</summary> <div class="run-details"> <section> <h3>运行与结束</h3> <dl> <div>  <dt>run key</dt> <dd> <code>goal_graph_hybrid__parallel_decomposition-04</code> </dd>  </div> <div>  <dt>termination</dt> <dd> <code>model_budget_exhausted</code> </dd>  </div> <div>  <dt>eligibility</dt> <dd> <code>eligible_agent_result</code> </dd>  </div> <div>  <dt>pair</dt> <dd> <code>eligible_pair</code> </dd>  </div> </dl> </section> <section> <h3>代码验收</h3> <dl> <div>  <dt>关键事实覆盖</dt> <dd> 100
+%
+</dd>  </div> <div>  <dt>错误证据</dt> <dd>0</dd>  </div> <div>  <dt>合并遗漏</dt> <dd>3</dd>  </div> <div>  <dt>合并冲突</dt> <dd>0</dd>  </div> </dl> </section> <section> <h3>执行指标</h3> <dl> <div>  <dt>重复动作</dt> <dd>14</dd>  </div> <div>  <dt>无关动作</dt> <dd>0</dd>  </div> <div>  <dt>路径切换</dt> <dd>否</dd>  </div> <div>  <dt>关键路径轮次</dt> <dd>2</dd>  </div> <div>  <dt>控制器拒绝</dt> <dd> 14 </dd>  </div> <div>  <dt>prompt / completion</dt> <dd> 13,723 /  1,413 </dd>  </div> </dl> </section> <section class="hash-list"> <h3>模型交换哈希</h3> <p>用于核对公开记录，不公开响应正文。</p> <ol> <li> <span>
+round 1 ·  alpha </span> <code title="prompt SHA-256">
+P 22cefbeacdb4e042c69a4a2cc18a646ee9f9e8e075dfb4eabe04d1a1161622a0 </code> <code title="response SHA-256">
+R f069d18237a002163bab29c8f4fe01f3128fb22845f41ed26f3c19d57c571855 </code> </li><li> <span>
+round 1 ·  beta </span> <code title="prompt SHA-256">
+P cb68447e3d6fbc6032219ed40a9870d14d62a37c19d61861a6da26e6b08921d9 </code> <code title="response SHA-256">
+R fc68ccd8ca6ec71ee38d69393c16e1eb330aa082acdd91ebec2343956e2caab8 </code> </li><li> <span>
+round 1 ·  gamma </span> <code title="prompt SHA-256">
+P 430be591625741f180efd6ebde5742d3b895d75689aaa6a04c37059f80ed2845 </code> <code title="response SHA-256">
+R d27b118d9548b9f99df00ebf78eb55381c6606e4fe0e65d17d174b623544d1d3 </code> </li><li> <span>
+round 2 ·  controller </span> <code title="prompt SHA-256">
+P 0e897cd5539c3646e384f8ca939312cb8af63dff2f13fb2f73ba9b48d240fd36 </code> <code title="response SHA-256">
+R c3167d0a7630e501e407451749c68a74c38200d605a4ea5c50fd3c7db6fa489e </code> </li><li> <span>
+round 3 ·  controller </span> <code title="prompt SHA-256">
+P cccacb74a482cbb0f342a28e1af1196bc5c1d3a101c4ac3ef02b059176bb8a8d </code> <code title="response SHA-256">
+R c3167d0a7630e501e407451749c68a74c38200d605a4ea5c50fd3c7db6fa489e </code> </li><li> <span>
+round 4 ·  controller </span> <code title="prompt SHA-256">
+P 14229f2716a7b5c1531fae8d393ff1d9979149306c7d79ebeeb7da1fb496a552 </code> <code title="response SHA-256">
+R c3167d0a7630e501e407451749c68a74c38200d605a4ea5c50fd3c7db6fa489e </code> </li><li> <span>
+round 5 ·  controller </span> <code title="prompt SHA-256">
+P d996a6ee110075cc494d9b6a971ce3e87344a15ff3b40987bd43ccca609dfbaa </code> <code title="response SHA-256">
+R c3167d0a7630e501e407451749c68a74c38200d605a4ea5c50fd3c7db6fa489e </code> </li><li> <span>
+round 6 ·  controller </span> <code title="prompt SHA-256">
+P e7a5f9f920ec800db7a22d34b8e64fe3ede13c2c54b748c507c58f638d54228b </code> <code title="response SHA-256">
+R c3167d0a7630e501e407451749c68a74c38200d605a4ea5c50fd3c7db6fa489e </code> </li><li> <span>
+round 7 ·  controller </span> <code title="prompt SHA-256">
+P 8770774811bbf9d2190fc9afc27004c94fbb2b9e766132439005382ba56c4c4f </code> <code title="response SHA-256">
+R c3167d0a7630e501e407451749c68a74c38200d605a4ea5c50fd3c7db6fa489e </code> </li><li> <span>
+round 8 ·  controller </span> <code title="prompt SHA-256">
+P 7f8f10b6ce8be48d2fc8609e1e86a854dc7504b61de174b62e4d859b29aea06a </code> <code title="response SHA-256">
+R c3167d0a7630e501e407451749c68a74c38200d605a4ea5c50fd3c7db6fa489e </code> </li><li> <span>
+round 9 ·  controller </span> <code title="prompt SHA-256">
+P d13c52a2e9ed8d31d418c481b5391892e7e0e930a1b1d0d16e3ed7d420461377 </code> <code title="response SHA-256">
+R c3167d0a7630e501e407451749c68a74c38200d605a4ea5c50fd3c7db6fa489e </code> </li><li> <span>
+round 10 ·  controller </span> <code title="prompt SHA-256">
+P ab99438feeb323b287b8bbc5bce0c1ad2dd37d047abf6f31ea7e1f13acd8b613 </code> <code title="response SHA-256">
+R c3167d0a7630e501e407451749c68a74c38200d605a4ea5c50fd3c7db6fa489e </code> </li><li> <span>
+round 11 ·  controller </span> <code title="prompt SHA-256">
+P 665df71870af37eeed9241c4e16f6b04e0cdd1ae855277f1117a3e95111b3894 </code> <code title="response SHA-256">
+R c3167d0a7630e501e407451749c68a74c38200d605a4ea5c50fd3c7db6fa489e </code> </li><li> <span>
+round 12 ·  controller </span> <code title="prompt SHA-256">
+P d123f4a658faaac1a144673ce61583aad823ea6e38e772dd7d6bdbdc119a4a6f </code> <code title="response SHA-256">
+R c3167d0a7630e501e407451749c68a74c38200d605a4ea5c50fd3c7db6fa489e </code> </li><li> <span>
+round 13 ·  controller </span> <code title="prompt SHA-256">
+P df5a9c5473031d36696c83833518c81e2820f7f042761a142e63060a0f8bf60c </code> <code title="response SHA-256">
+R c3167d0a7630e501e407451749c68a74c38200d605a4ea5c50fd3c7db6fa489e </code> </li><li> <span>
+round 14 ·  controller </span> <code title="prompt SHA-256">
+P 6e3c3f5b824f946af7244ae1f067334eb7642090c74e9fea94ac5b85cb598022 </code> <code title="response SHA-256">
+R c3167d0a7630e501e407451749c68a74c38200d605a4ea5c50fd3c7db6fa489e </code> </li><li> <span>
+round 15 ·  controller </span> <code title="prompt SHA-256">
+P df7e383685983fa1e7d33b4bc96c958a257e1b62d5c0738c4a2c2e6c8d60b146 </code> <code title="response SHA-256">
+R c3167d0a7630e501e407451749c68a74c38200d605a4ea5c50fd3c7db6fa489e </code> </li><li> <span>
+round 16 ·  controller </span> <code title="prompt SHA-256">
+P 58f010e73f172707b7e599d248bcf57c88be5077012c27889001ffa6640e5af7 </code> <code title="response SHA-256">
+R c3167d0a7630e501e407451749c68a74c38200d605a4ea5c50fd3c7db6fa489e </code> </li> </ol> </section> </div> </details> </td> </tr><tr data-run-row data-family="parallel_decomposition" data-architecture="contracted_react" data-success="false"> <td>24</td> <th scope="row">  <span>并行拆解</span> <code>parallel_decomposition-04</code>  </th> <td>开放式执行</td> <td> <span class="run-status is-fail"> 未通过 </span> </td> <td>25</td> <td> 6 / 6 </td> <td>4,019</td> <td>7.14 s</td> <td> <details> <summary>展开</summary> <div class="run-details"> <section> <h3>运行与结束</h3> <dl> <div>  <dt>run key</dt> <dd> <code>contracted_react__parallel_decomposition-04</code> </dd>  </div> <div>  <dt>termination</dt> <dd> <code>finish</code> </dd>  </div> <div>  <dt>eligibility</dt> <dd> <code>eligible_agent_result</code> </dd>  </div> <div>  <dt>pair</dt> <dd> <code>eligible_pair</code> </dd>  </div> </dl> </section> <section> <h3>代码验收</h3> <dl> <div>  <dt>关键事实覆盖</dt> <dd> 100
+%
+</dd>  </div> <div>  <dt>错误证据</dt> <dd>0</dd>  </div> <div>  <dt>合并遗漏</dt> <dd>3</dd>  </div> <div>  <dt>合并冲突</dt> <dd>0</dd>  </div> </dl> </section> <section> <h3>执行指标</h3> <dl> <div>  <dt>重复动作</dt> <dd>0</dd>  </div> <div>  <dt>无关动作</dt> <dd>0</dd>  </div> <div>  <dt>路径切换</dt> <dd>否</dd>  </div> <div>  <dt>关键路径轮次</dt> <dd>5</dd>  </div> <div>  <dt>控制器拒绝</dt> <dd> 0 </dd>  </div> <div>  <dt>prompt / completion</dt> <dd> 3,813 /  206 </dd>  </div> </dl> </section> <section class="hash-list"> <h3>模型交换哈希</h3> <p>用于核对公开记录，不公开响应正文。</p> <ol> <li> <span>
+round 1 ·  controller </span> <code title="prompt SHA-256">
+P 7c5c5e997fa7ff726801a0d1577ac4e443c9f44cc6a67298d5fff0ba4cd6d1de </code> <code title="response SHA-256">
+R 1199fd234b315946d0650fb28abc53628005ff2fa289c4986b1b55c67fc6af9b </code> </li><li> <span>
+round 2 ·  controller </span> <code title="prompt SHA-256">
+P 6e853cc1c1f87ba223bbdc5c589eefc0b7db695f53491d5e829b6dba3a2517e8 </code> <code title="response SHA-256">
+R f069d18237a002163bab29c8f4fe01f3128fb22845f41ed26f3c19d57c571855 </code> </li><li> <span>
+round 3 ·  controller </span> <code title="prompt SHA-256">
+P feabca689aa94bf141752cb2e1afb442401c8bc3c572f159216a8bdf1c107c4d </code> <code title="response SHA-256">
+R 253e7aefd335d10a3c2d4e3d15717bfc9b8cfe0b1a2ad7c53e4bb54c03beb3fb </code> </li><li> <span>
+round 4 ·  controller </span> <code title="prompt SHA-256">
+P bc64e54bc1a6369514298f8741faafef4545acd63a5cd01378a0fe8767d60f34 </code> <code title="response SHA-256">
+R e22918c728ab35f3298e311aadf9c35946e5116744300e481fd419ee40887ca9 </code> </li><li> <span>
+round 5 ·  controller </span> <code title="prompt SHA-256">
+P bf745d54999f6371ec6614d139f49a5caffca12f5d696ac88d627e6250a26549 </code> <code title="response SHA-256">
+R c3167d0a7630e501e407451749c68a74c38200d605a4ea5c50fd3c7db6fa489e </code> </li><li> <span>
+round 6 ·  controller </span> <code title="prompt SHA-256">
+P 53f6eadb7759b485991aeafb370ba795dc86e1d2c2979b3aaae4aa191e693418 </code> <code title="response SHA-256">
+R 7310372e895dfcd49057382944f726a4b0ab03cbdea6904b834b3516d3bead52 </code> </li> </ol> </section> </div> </details> </td> </tr> </tbody> </table> </div> <p class="empty-state" data-empty-state hidden>
+当前筛选下没有运行记录。
+</p> </section> <section class="pilot-b-section" aria-labelledby="download-title"> <div class="section-title"> <p>03 · Download</p> <h2 id="download-title">下载完整公开证据包</h2> <span>manifest 是完整性边界：它记录其余五个文件的字节数和
+          SHA-256。下载后可自行复算。</span> </div> <div class="download-grid"> <a href="/research/agent-architecture/pilot-b/pilot-b-runs.public.json" download> <span>逐运行 JSON</span> <code>pilot-b-runs.public.json</code> <small>24 条脱敏运行记录</small> </a><a href="/research/agent-architecture/pilot-b/pilot-b-runs.csv" download> <span>逐运行 CSV</span> <code>pilot-b-runs.csv</code> <small>适合表格分析与科研作图</small> </a><a href="/research/agent-architecture/pilot-b/pilot-b-methods.json" download> <span>实验方法</span> <code>pilot-b-methods.json</code> <small>冻结变量、预算与指标定义</small> </a><a href="/research/agent-architecture/pilot-b/pilot-b-summary.json" download> <span>聚合结果</span> <code>pilot-b-summary.json</code> <small>按架构与任务类型汇总</small> </a><a href="/research/agent-architecture/pilot-b/pilot-b-representative-traces.json" download> <span>代表轨迹</span> <code>pilot-b-representative-traces.json</code> <small>用于检查分叉点</small> </a><a href="/research/agent-architecture/pilot-b/pilot-b-manifest.json" download> <span>完整性清单</span> <code>pilot-b-manifest.json</code> <small>文件大小与 SHA-256</small> </a> </div> <div class="repro-note"> <p><strong>批次</strong><code>2026-07-22-pilot-b-deepseek-v4-flash-a</code></p> <p> <strong>模型身份</strong><code>deepseek-v4-flash</code> </p> <p> <strong>公开规则</strong><span>字段白名单投影；不含私有输入、原始响应正文和凭据。</span> </p> <a href="https://github.com/Shiaoming123/agent-control-lab">查看实验代码与复现命令</a> </div> </section> </main> <footer class="observatory-footer app-layout mt-auto"> <div class="observatory-footer-grid"> <div class="observatory-footer-signoff"> <p class="observatory-footer-eyebrow">OBSERVATION LOG · 2026</p> <p>持续观察技术变化，也记录把它做成产品的全过程。</p> <div class="flex flex-wrap items-center gap-1"> <a href="https://github.com/Shiaoming123" title="世傲命的技术观测站 on Github" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21" /></svg> <span class="sr-only">世傲命的技术观测站 on Github</span>  </a><a href="mailto:2405360475@qq.com" title="Send an email to 世傲命的技术观测站" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><path d="m3 7 9 6 9-6" /></svg> <span class="sr-only">Send an email to 世傲命的技术观测站</span>  </a> </div> </div> <nav class="observatory-footer-navigation" aria-label="页脚导航"> <div> <p>观测入口</p> <ul> <li> <a href="/posts/">文章</a> </li><li> <a href="/learning/">学习</a> </li><li> <a href="/signals/">信号</a> </li><li> <a href="/projects/">作品</a> </li><li> <a href="/about/">关于</a> </li> </ul> </div> <div> <p>更多</p> <ul> <li> <a href="/bookmarks/">资源</a> </li><li> <a href="/arena/">榜单</a> </li><li> <a href="/taxonomy/">分类</a> </li><li> <a href="/archives/">归档</a> </li><li> <a href="/changelog/">日志</a> </li> </ul> </div> </nav> </div> <div class="observatory-footer-meta"> <span>© 2026 世傲命</span> <span>PERSONAL TECHNOLOGY OBSERVATORY · SIGNAL CONTINUES</span> </div> </footer> <script type="module">function d(){const e=document.querySelector("[data-run-filters]");if(!e)return;const a=e.querySelector("[data-filter-family]"),c=e.querySelector("[data-filter-architecture]"),n=e.querySelector("[data-filter-success]"),l=e.querySelector("[data-filter-status]"),u=[...document.querySelectorAll("[data-run-row]")],i=document.querySelector("[data-empty-state]"),r=()=>{let t=0;u.forEach(s=>{const o=(!a||a.value==="all"||s.dataset.family===a.value)&&(!c||c.value==="all"||s.dataset.architecture===c.value)&&(!n||n.value==="all"||s.dataset.success===n.value);s.hidden=!o,o&&(t+=1)}),l&&(l.textContent=`显示 ${t} / ${u.length} 条`),i&&(i.hidden=t!==0)};e.addEventListener("change",r),e.addEventListener("reset",()=>requestAnimationFrame(r)),e.addEventListener("keydown",t=>{t.key==="Escape"&&(e.reset(),requestAnimationFrame(()=>{r(),a?.focus()}))}),r()}d();document.addEventListener("astro:after-swap",d);</script>  <script type="module">function l(){const n=window;n.__scrollMotionCleanup?.();const i=document.documentElement,c=document.querySelector(".scroll-progress"),d=window.matchMedia("(prefers-reduced-motion: reduce)").matches;let t;const e=()=>{if(!c)return;const r=i.scrollHeight-window.innerHeight,o=r>0?window.scrollY/r:0;c.style.setProperty("--scroll-progress",Math.min(1,Math.max(0,o)).toString())};if(e(),window.addEventListener("scroll",e,{passive:!0}),window.addEventListener("resize",e),!d){i.classList.add("scroll-motion-ready");const r=document.querySelectorAll("[data-scroll-reveal]");t=new IntersectionObserver(o=>{o.forEach(s=>{s.isIntersecting&&(s.target.classList.add("is-visible"),t?.unobserve(s.target))})},{rootMargin:"0px 0px -12% 0px",threshold:.12}),r.forEach(o=>t?.observe(o))}n.__scrollMotionCleanup=()=>{window.removeEventListener("scroll",e),window.removeEventListener("resize",e),t?.disconnect()}}l();document.addEventListener("astro:after-swap",l);</script> <script type="module">const s="theme",a="light",c="dark";function m(e,t){return e??t??c}let u=c;function d({button:e,initialTheme:t,persist:r,reflect:n}){let o=t;n(o);const i=()=>{o=o===a?c:a,r(o),n(o)};return e?.addEventListener("click",i),{cleanup:()=>e?.removeEventListener("click",i)}}function h(e){const t=document.firstElementChild,r=document.querySelector("#theme-btn"),n=e===c;t?.setAttribute("data-theme",e),t?.classList.toggle("dark",n),r?.setAttribute("aria-label",n?"切换到浅色主题":"切换到深色主题"),r?.setAttribute("aria-pressed",String(n));const o=window.getComputedStyle(document.body).backgroundColor;document.querySelector("meta[name='theme-color']")?.setAttribute("content",o)}function l(){const e=window;e.__themeButtonCleanup?.();const t=document.querySelector("#theme-btn");u=m(localStorage.getItem(s),window.__theme?.value);const r=d({button:t,initialTheme:u,persist:n=>{u=n,localStorage.setItem(s,n)},reflect:h});e.__themeButtonCleanup=()=>{r.cleanup()}}typeof window<"u"&&(l(),document.addEventListener("astro:after-swap",l),document.addEventListener("astro:before-swap",e=>{window.__themeButtonCleanup?.();const t=document.querySelector("meta[name='theme-color']")?.getAttribute("content");t&&e.newDocument.querySelector("meta[name='theme-color']")?.setAttribute("content",t)}));</script> <script type="module" src="/_astro/Layout.astro_astro_type_script_index_2_lang.BKhR6OZe.js"></script> </body> </html>

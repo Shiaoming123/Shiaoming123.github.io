@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="486.144pt" height="324.036pt" viewBox="0 0 486.144 324.036" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 324.036
+L 486.144 324.036
+L 486.144 0
+L 0 0
+z
+" style="fill: #fbfcfe"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 177.02784 119.542032
+L 309.11616 119.542032
+Q 314.777088 119.542032 314.777088 116.334
+L 314.777088 84.25368
+Q 314.777088 81.045648 309.11616 81.045648
+L 177.02784 81.045648
+Q 171.366912 81.045648 171.366912 84.25368
+L 171.366912 116.334
+Q 171.366912 119.542032 177.02784 119.542032
+z
+" clip-path="url(#p8132cc7e8b)" style="fill: #e9edf2; stroke: #626d7c; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 30.7872 194.396112
+L 148.7232 194.396112
+Q 154.384128 194.396112 154.384128 191.18808
+L 154.384128 156.4344
+Q 154.384128 153.226368 148.7232 153.226368
+L 30.7872 153.226368
+Q 25.126272 153.226368 25.126272 156.4344
+L 25.126272 191.18808
+Q 25.126272 194.396112 30.7872 194.396112
+z
+" clip-path="url(#p8132cc7e8b)" style="fill: #f4e4d7; stroke: #b66b32; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 280.81152 194.396112
+L 445.92192 194.396112
+Q 451.582848 194.396112 451.582848 191.18808
+L 451.582848 156.4344
+Q 451.582848 153.226368 445.92192 153.226368
+L 280.81152 153.226368
+Q 275.150592 153.226368 275.150592 156.4344
+L 275.150592 191.18808
+Q 275.150592 194.396112 280.81152 194.396112
+z
+" clip-path="url(#p8132cc7e8b)" style="fill: #e9edf2; stroke: #626d7c; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 195.8976 279.943632
+L 332.70336 279.943632
+Q 338.364288 279.943632 338.364288 276.7356
+L 338.364288 239.30856
+Q 338.364288 236.100528 332.70336 236.100528
+L 195.8976 236.100528
+Q 190.236672 236.100528 190.236672 239.30856
+L 190.236672 276.7356
+Q 190.236672 279.943632 195.8976 279.943632
+z
+" clip-path="url(#p8132cc7e8b)" style="fill: #e7ebd9; stroke: #71804b; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 346.85568 279.943632
+L 455.3568 279.943632
+Q 461.017728 279.943632 461.017728 276.7356
+L 461.017728 239.30856
+Q 461.017728 236.100528 455.3568 236.100528
+L 346.85568 236.100528
+Q 341.194752 236.100528 341.194752 239.30856
+L 341.194752 276.7356
+Q 341.194752 279.943632 346.85568 279.943632
+z
+" clip-path="url(#p8132cc7e8b)" style="fill: #dce8f4; stroke: #315e96; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 203.518955 117.180357
+Q 165.232871 135.048159 127.858608 152.490421
+" clip-path="url(#p8132cc7e8b)" style="fill: none; stroke: #b66b32; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 131.435013 152.587007
+L 127.858608 152.490421
+L 130.08172 149.687249
+z
+" clip-path="url(#p8132cc7e8b)" style="fill: #b66b32; stroke: #b66b32; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 282.548888 117.318561
+Q 313.832902 135.047124 344.241485 152.279583
+" clip-path="url(#p8132cc7e8b)" style="fill: none; stroke: #626d7c; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 342.246302 149.309861
+L 344.241485 152.279583
+L 340.668598 152.093895
+z
+" clip-path="url(#p8132cc7e8b)" style="fill: #626d7c; stroke: #626d7c; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 340.532456 192.378071
+Q 311.475727 213.911012 283.227437 234.844847
+" clip-path="url(#p8132cc7e8b)" style="fill: none; stroke: #71804b; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 286.751054 234.225072
+L 283.227437 234.844847
+L 284.845787 231.654088
+z
+" clip-path="url(#p8132cc7e8b)" style="fill: #71804b; stroke: #71804b; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 394.436061 193.14366
+Q 398.747437 213.911242 402.85428 233.6936
+" clip-path="url(#p8132cc7e8b)" style="fill: none; stroke: #315e96; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 403.770422 230.235178
+L 402.85428 233.6936
+L 400.637228 230.885633
+z
+" clip-path="url(#p8132cc7e8b)" style="fill: #315e96; stroke: #315e96; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 334.704471 268.71552
+Q 338.598994 268.71552 341.487286 268.71552
+" clip-path="url(#p8132cc7e8b)" style="fill: none; stroke-dasharray: 3.33,1.44; stroke-dashoffset: 0; stroke: #626d7c; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 338.287286 267.11552
+L 341.487286 268.71552
+L 338.287286 270.31552
+z
+" clip-path="url(#p8132cc7e8b)" style="fill: #626d7c; stroke-dasharray: 3.33,1.44; stroke-dashoffset: 0; stroke: #626d7c; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 7.4px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #172033" transform="translate(194.550547 97.871605)">Are completion rules stable</text>
+    <text style="font-weight: 700; font-size: 7.4px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #172033" transform="translate(207.094125 107.284419)">and code-verifiable?</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 7.4px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #172033" transform="translate(53.649559 172.119177)">Workflow Controlled</text>
+    <text style="font-weight: 700; font-size: 7.4px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #172033" transform="translate(47.697762 180.02135)">explicit state + recovery</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 7.4px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #172033" transform="translate(300.053361 171.340442)">Do independent subgoals exist, and</text>
+    <text style="font-weight: 700; font-size: 7.4px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #172033" transform="translate(308.27372 180.066444)">can merged output be verified?</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 7.4px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #172033" transform="translate(203.041777 255.596376)">Goal-Graph Hybrid: candidate only</text>
+    <text style="font-weight: 700; font-size: 7.4px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #172033" transform="translate(204.157558 264.23219)">pilot + merge acceptance required</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 7.4px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #172033" transform="translate(369.858584 256.330017)">Contracted ReAct</text>
+    <text style="font-weight: 700; font-size: 7.4px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #172033" transform="translate(362.963287 265.012659)">clear tools + full trace</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 6.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #b66b32" x="153.44064" y="132.37416" transform="rotate(-0 153.44064 132.37416)">YES</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 6.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #626d7c" x="323.26848" y="132.37416" transform="rotate(-0 323.26848 132.37416)">NO</text>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 6.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #71804b" x="294.96384" y="215.24832" transform="rotate(-0 294.96384 215.24832)">YES</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 6.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #315e96" x="408.1824" y="215.24832" transform="rotate(-0 408.1824 215.24832)">NO</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 5.8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #626d7c" x="339.77952" y="232.62516" transform="rotate(-0 339.77952 232.62516)">merge gate fails → conservative fallback</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 6.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #687385" x="89.7552" y="212.57496" transform="rotate(-0 89.7552 212.57496)">Pilot A supports this boundary</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 6.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #687385" x="266.6592" y="300.79584" transform="rotate(-0 266.6592 300.79584)">Pilot B parallel: both arms 0/4 and 3 merge omissions per run; use Hybrid only after a domain merge gate passes</text>
+   </g>
+  </g>
+  <g id="text_13">
+   <text style="font-weight: 700; font-size: 12px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #172033" x="12.384" y="15.936328" transform="rotate(-0 12.384 15.936328)">Task conditions to architecture choice</text>
+  </g>
+  <g id="text_14">
+   <text style="font-size: 7.2px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #687385" x="12.384" y="29.361797" transform="rotate(-0 12.384 29.361797)">Engineering decision aid derived from both pilots; recommendations are conditional, not a universal ranking</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p8132cc7e8b">
+   <rect x="7.2" y="49.5" width="471.744" height="267.336"/>
+  </clipPath>
+ </defs>
+</svg>
