@@ -1,0 +1,679 @@
+.observatory-hero {
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.observatory-hero::after {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  content: "";
+}
+
+.observatory-hero::after {
+  inset: 0;
+  background: radial-gradient(
+    circle at calc(50% + var(--observer-x, 0) * 24%)
+      calc(48% + var(--observer-y, 0) * 20%),
+    color-mix(in srgb, var(--accent) 14%, transparent),
+    transparent 22%
+  );
+  opacity: 0.9;
+  transition: background-position 320ms ease-out;
+}
+
+.observatory-sky {
+  z-index: 0;
+}
+
+.observatory-hero-grid {
+  z-index: 2;
+}
+
+.observatory-thesis-accent {
+  background: linear-gradient(
+    105deg,
+    var(--accent) 6%,
+    color-mix(in srgb, var(--accent) 74%, #ffd0a8) 52%,
+    color-mix(in srgb, var(--foreground) 64%, var(--accent)) 94%
+  );
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home-motion-mounted.scroll-motion-ready
+  .observatory-hero.is-visible
+  .observatory-type-char {
+  visibility: hidden;
+  animation: observatory-type-character 1ms steps(1, end) forwards;
+  animation-delay: calc(210ms + var(--char-index) * 92ms);
+}
+
+.observatory-thesis-accent::after {
+  display: inline-block;
+  width: 0.065em;
+  height: 0.78em;
+  margin-left: 0.09em;
+  background: var(--accent);
+  content: "";
+  opacity: 0;
+  vertical-align: -0.02em;
+}
+
+.home-motion-mounted.scroll-motion-ready
+  .observatory-hero.is-visible
+  .observatory-thesis-accent::after {
+  animation: observatory-type-caret 640ms steps(1, end) 210ms 3;
+}
+
+.scroll-motion-ready .observatory-home [data-scroll-reveal] {
+  filter: none;
+  transition:
+    opacity 560ms ease,
+    transform 780ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.scroll-motion-ready .observatory-home [data-scroll-reveal].is-visible {
+  will-change: auto;
+}
+
+.scroll-motion-ready .observatory-hero .observatory-kicker,
+.scroll-motion-ready .observatory-hero h1,
+.scroll-motion-ready .observatory-hero .observatory-lede,
+.scroll-motion-ready .observatory-hero .observer-readout,
+.scroll-motion-ready .observatory-hero .observatory-actions {
+  opacity: 0;
+  transform: translate3d(0, 1.1rem, 0);
+  transition:
+    opacity 620ms ease,
+    transform 820ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scroll-motion-ready .observatory-hero .github-contributions--floating {
+  opacity: 0;
+  transition:
+    opacity 620ms ease,
+    transform 180ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.scroll-motion-ready .observatory-hero.is-visible .observatory-kicker,
+.scroll-motion-ready .observatory-hero.is-visible h1,
+.scroll-motion-ready .observatory-hero.is-visible .observatory-lede,
+.scroll-motion-ready .observatory-hero.is-visible .observer-readout,
+.scroll-motion-ready .observatory-hero.is-visible .observatory-actions {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.scroll-motion-ready
+  .observatory-hero.is-visible
+  .github-contributions--floating {
+  opacity: 1;
+}
+
+.scroll-motion-ready .observatory-hero.is-visible h1 {
+  transition-delay: 90ms;
+}
+
+.scroll-motion-ready .observatory-hero.is-visible .observatory-lede {
+  transition-delay: 170ms;
+}
+
+.scroll-motion-ready .observatory-hero.is-visible .observer-readout {
+  transform: translate(
+    calc(var(--observer-x, 0) * 0.3rem),
+    calc(var(--observer-y, 0) * 0.3rem)
+  );
+  transition-delay: 240ms;
+}
+
+.scroll-motion-ready .observatory-hero.is-visible .observatory-actions {
+  transition-delay: 310ms;
+}
+
+.scroll-motion-ready
+  .observatory-hero.is-visible
+  .github-contributions--floating {
+  transition-delay: 210ms;
+}
+
+.observatory-actions a {
+  position: relative;
+  overflow: hidden;
+  transition:
+    border-color var(--motion-fast) var(--motion-ease),
+    color var(--motion-fast) var(--motion-ease),
+    transform var(--motion-fast) var(--motion-ease);
+}
+
+.observatory-actions a::before {
+  position: absolute;
+  inset: 0 auto 0 -45%;
+  width: 32%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in srgb, currentColor 24%, transparent),
+    transparent
+  );
+  content: "";
+  transform: skewX(-18deg);
+  transition: transform 540ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.observatory-actions a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-0.16rem);
+}
+
+.observatory-actions .observatory-primary:hover {
+  color: var(--on-accent-solid, #fff);
+}
+
+.observatory-actions a:hover::before {
+  transform: skewX(-18deg) translateX(480%);
+}
+
+.observatory-actions svg {
+  transition: transform var(--motion-fast) var(--motion-ease);
+}
+
+.observatory-actions a:hover svg {
+  transform: translateX(0.24rem);
+}
+
+.observatory-scroll::after {
+  display: inline-block;
+  width: 0.35rem;
+  height: 0.35rem;
+  margin-left: 0.5rem;
+  border-right: 1px solid var(--accent);
+  border-bottom: 1px solid var(--accent);
+  content: "";
+  transform: translateY(-0.1rem) rotate(45deg);
+  animation: observatory-scroll-pulse 1.8s ease-in-out infinite;
+}
+
+.observatory-section {
+  position: relative;
+  isolation: isolate;
+}
+
+.observatory-section::after {
+  position: absolute;
+  z-index: -1;
+  width: min(32rem, 72vw);
+  aspect-ratio: 1;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--accent) 10%, transparent),
+    transparent 68%
+  );
+  content: "";
+  opacity: 0;
+  transform: scale(0.76);
+  transition:
+    opacity 900ms ease,
+    transform 1.1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#featured-stories::after,
+#featured-projects::after {
+  top: 10%;
+  right: -12rem;
+}
+
+#learning-map::after,
+#latest-signals::after {
+  top: 18%;
+  left: -12rem;
+}
+
+.observatory-section.is-visible::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.observatory-section-head {
+  position: relative;
+}
+
+.observatory-section-head::before {
+  position: absolute;
+  top: -1px;
+  right: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--accent),
+    color-mix(in srgb, var(--accent) 22%, transparent) 46%,
+    transparent
+  );
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 960ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.observatory-section.is-visible .observatory-section-head::before {
+  transform: scaleX(1);
+}
+
+.observatory-section-head > * {
+  opacity: 0;
+  transform: translateY(0.85rem);
+  transition:
+    opacity 560ms ease,
+    transform 760ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.observatory-section.is-visible .observatory-section-head > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.observatory-section.is-visible .observatory-section-head > :nth-child(2) {
+  transition-delay: 90ms;
+}
+
+.observatory-section.is-visible .observatory-section-head > :nth-child(3) {
+  transition-delay: 160ms;
+}
+
+.observatory-story-list .neo-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.observatory-story-list .neo-card::after {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--accent), transparent 80%);
+  content: "";
+  opacity: 0.35;
+  transform: scaleY(0.25);
+  transform-origin: top;
+  transition:
+    opacity 360ms ease,
+    transform 520ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.observatory-story-list .neo-card:hover::after {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.observatory-route-grid a,
+.observatory-project-grid article {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      145deg,
+      color-mix(in srgb, var(--accent) 9%, transparent),
+      transparent 43%
+    ),
+    var(--surface);
+  background-size: 180% 180%;
+  transition:
+    border-color var(--motion-fast) var(--motion-ease),
+    background-position 720ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow var(--motion-standard) var(--motion-ease),
+    transform var(--motion-fast) var(--motion-ease);
+}
+
+.observatory-route-grid a::before,
+.observatory-project-grid article::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-top: 1px solid color-mix(in srgb, var(--accent) 62%, transparent);
+  border-right: 1px solid color-mix(in srgb, var(--accent) 62%, transparent);
+  content: "";
+  opacity: 0.5;
+  transform: translate(1.6rem, -1.6rem);
+  transition: transform 480ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.observatory-route-grid a:hover,
+.observatory-project-grid article:hover {
+  background-position: 100% 100%;
+  box-shadow: 0 1.6rem 3.4rem -2rem
+    color-mix(in srgb, var(--accent) 46%, transparent);
+}
+
+.observatory-route-grid a:hover::before,
+.observatory-project-grid article:hover::before {
+  transform: translate(0.35rem, -0.35rem);
+}
+
+.observatory-project-grid article li {
+  transition:
+    border-color var(--motion-fast) var(--motion-ease),
+    color var(--motion-fast) var(--motion-ease),
+    transform var(--motion-fast) var(--motion-ease);
+}
+
+.observatory-project-grid article:hover li {
+  border-color: color-mix(in srgb, var(--accent) 54%, var(--border));
+  color: var(--foreground);
+  transform: translateY(-0.08rem);
+}
+
+.observatory-signals li {
+  position: relative;
+  padding-inline: 0.8rem;
+  transition:
+    background var(--motion-standard) var(--motion-ease),
+    border-color var(--motion-standard) var(--motion-ease),
+    transform var(--motion-fast) var(--motion-ease);
+}
+
+.observatory-signals li::before {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 2px;
+  background: var(--accent);
+  content: "";
+  opacity: 0;
+  transform: scaleY(0.2);
+  transition:
+    opacity var(--motion-fast) var(--motion-ease),
+    transform var(--motion-standard) var(--motion-ease);
+}
+
+.observatory-signals li:hover {
+  border-color: color-mix(in srgb, var(--accent) 54%, var(--border));
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--accent) 9%, transparent),
+    transparent 62%
+  );
+  transform: translateX(0.25rem);
+}
+
+.observatory-signals li:hover::before {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.observatory-signals li > span {
+  transition:
+    filter var(--motion-fast) var(--motion-ease),
+    text-shadow var(--motion-fast) var(--motion-ease);
+}
+
+.observatory-signals li:hover > span {
+  filter: brightness(1.2);
+  text-shadow: 0 0 1.2rem color-mix(in srgb, var(--accent) 64%, transparent);
+}
+
+.observatory-about {
+  position: relative;
+  isolation: isolate;
+}
+
+.observatory-about::before {
+  position: absolute;
+  z-index: -1;
+  inset: -6rem -15vw auto auto;
+  width: min(34rem, 76vw);
+  aspect-ratio: 1;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--accent) 12%, transparent),
+    transparent 66%
+  );
+  content: "";
+}
+
+.observatory-about h2 {
+  background: linear-gradient(
+    115deg,
+    var(--foreground),
+    color-mix(in srgb, var(--foreground) 62%, var(--accent))
+  );
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+.home-motion-mounted .observatory-brand-mark::before {
+  animation: observatory-brand-orbit 7s linear infinite;
+}
+
+.home-motion-mounted .observatory-brand-mark::after {
+  animation: observatory-brand-beacon 2.4s ease-in-out infinite;
+}
+
+.home-motion-mounted .observatory-nav-item > a,
+.home-motion-mounted .observatory-more summary,
+.home-motion-mounted .observatory-more li > a {
+  position: relative;
+}
+
+.home-motion-mounted .observatory-nav-item > a::after,
+.home-motion-mounted .observatory-more summary::before,
+.home-motion-mounted .observatory-more li > a::after {
+  position: absolute;
+  right: 0.7rem;
+  bottom: 0.28rem;
+  left: 0.7rem;
+  height: 1px;
+  background: var(--accent);
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--motion-fast) var(--motion-ease);
+}
+
+.home-motion-mounted .observatory-nav-item > a:hover::after,
+.home-motion-mounted .observatory-more summary:hover::before,
+.home-motion-mounted .observatory-more li > a:hover::after {
+  transform: scaleX(1);
+}
+
+.home-motion-mounted .observatory-menu-button svg,
+.home-motion-mounted .observatory-tool-item svg {
+  transition: transform var(--motion-fast) var(--motion-ease);
+}
+
+.home-motion-mounted .observatory-menu-button:hover svg,
+.home-motion-mounted .observatory-tool-item > a:hover svg,
+.home-motion-mounted .observatory-tool-item > button:hover svg {
+  transform: scale(1.1) rotate(-4deg);
+}
+
+.github-contributions--floating .github-contributions-board {
+  position: relative;
+  background-size: 180% 180%;
+  transition:
+    border-color var(--motion-standard) var(--motion-ease),
+    background-position 700ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow var(--motion-standard) var(--motion-ease);
+}
+
+.github-contributions--floating .github-contributions-board::after {
+  position: absolute;
+  z-index: 3;
+  inset: 0 auto 0 -30%;
+  width: 22%;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in srgb, var(--accent) 26%, transparent),
+    transparent
+  );
+  content: "";
+  opacity: 0;
+  transform: skewX(-12deg);
+}
+
+.github-contributions--floating:hover .github-contributions-board {
+  border-color: color-mix(in srgb, var(--accent) 76%, var(--border));
+  background-position: 100% 100%;
+  box-shadow:
+    var(--shadow-floating),
+    0 0 2.8rem color-mix(in srgb, var(--accent) 13%, transparent);
+}
+
+.github-contributions--floating:hover .github-contributions-board::after {
+  animation: github-board-scan 1.15s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.github-day {
+  position: relative;
+  transition:
+    filter var(--motion-fast) var(--motion-ease),
+    transform var(--motion-fast) var(--motion-ease);
+}
+
+.github-day:hover {
+  z-index: 2;
+  filter: brightness(1.35)
+    drop-shadow(0 0 0.35rem color-mix(in srgb, var(--accent) 72%, transparent));
+  transform: scale(1.55);
+}
+
+@keyframes observatory-type-character {
+  to {
+    visibility: visible;
+  }
+}
+
+@keyframes observatory-type-caret {
+  0%,
+  48% {
+    opacity: 1;
+  }
+
+  49%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes observatory-scroll-pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: translateY(-0.18rem) rotate(45deg);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(0.18rem) rotate(45deg);
+  }
+}
+
+@keyframes observatory-brand-orbit {
+  to {
+    transform: rotate(332deg);
+  }
+}
+
+@keyframes observatory-brand-beacon {
+  0%,
+  100% {
+    box-shadow: 0 0 0.55rem color-mix(in srgb, var(--accent) 56%, transparent);
+    opacity: 0.72;
+  }
+
+  50% {
+    box-shadow:
+      0 0 1rem color-mix(in srgb, var(--accent) 86%, transparent),
+      0 0 0 0.28rem color-mix(in srgb, var(--accent) 12%, transparent);
+    opacity: 1;
+  }
+}
+
+@keyframes github-board-scan {
+  0% {
+    opacity: 0;
+    transform: skewX(-12deg) translateX(0);
+  }
+
+  22% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: skewX(-12deg) translateX(620%);
+  }
+}
+
+@media (max-width: 640px) {
+  .observatory-hero::after {
+    opacity: 0.65;
+  }
+
+  .observatory-section-head > * {
+    transform: translateY(0.55rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .observatory-scroll::after,
+  .observatory-brand-mark::before,
+  .observatory-brand-mark::after,
+  .github-contributions--floating .github-contributions-board::after {
+    animation: none !important;
+  }
+
+  .github-contributions--floating .github-contributions-board::after {
+    opacity: 0;
+  }
+
+  .observatory-type-char {
+    visibility: visible !important;
+    animation: none !important;
+  }
+
+  .observatory-thesis-accent::after {
+    display: none;
+  }
+
+  .observatory-home [data-scroll-reveal],
+  .observatory-hero .observatory-kicker,
+  .observatory-hero h1,
+  .observatory-hero .observatory-lede,
+  .observatory-hero .observer-readout,
+  .observatory-hero .observatory-actions,
+  .observatory-hero .github-contributions--floating,
+  .observatory-section-head > * {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .observatory-actions a,
+  .observatory-actions svg,
+  .observatory-route-grid a,
+  .observatory-project-grid article,
+  .observatory-project-grid article li,
+  .observatory-signals li,
+  .observatory-signals li::before,
+  .observatory-section::after,
+  .observatory-section-head::before,
+  .observatory-story-list .neo-card::after,
+  .observatory-menu-button svg,
+  .observatory-tool-item svg,
+  .github-contributions--floating .github-contributions-board,
+  .github-day {
+    transition: none !important;
+  }
+}
