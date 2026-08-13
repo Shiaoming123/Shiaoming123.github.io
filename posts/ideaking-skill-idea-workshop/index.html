@@ -1,0 +1,956 @@
+<!DOCTYPE html><html dir="ltr" lang="zh-CN" class="overflow-y-scroll scroll-smooth"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="canonical" href="https://shiaoming123.github.io/posts/ideaking-skill-idea-workshop/"><meta name="generator" content="Astro v6.4.8"><!-- Font --><style>@font-face{font-family:"Space Grotesk-8acfc48496a32ee9";src:url("/_astro/fonts/ffe7449c24780736.ttf") format("truetype");font-display:swap;font-weight:400;font-style:normal;}@font-face{font-family:"Space Grotesk-8acfc48496a32ee9";src:url("/_astro/fonts/dbc43aefdefcfede.ttf") format("truetype");font-display:swap;font-weight:700;font-style:normal;}@font-face{font-family:"Space Grotesk-8acfc48496a32ee9 fallback: Arial";src:local("Arial");font-display:swap;font-weight:400;font-style:normal;size-adjust:99.4524%;ascent-override:108.5044%;descent-override:25.2359%;line-gap-override:0%;}@font-face{font-family:"Space Grotesk-8acfc48496a32ee9 fallback: Arial Bold";src:local("Arial Bold");font-display:swap;font-weight:700;font-style:normal;size-adjust:92.3703%;ascent-override:116.8234%;descent-override:27.1707%;line-gap-override:0%;}:root{--font-space-grotesk:"Space Grotesk-8acfc48496a32ee9","Space Grotesk-8acfc48496a32ee9 fallback: Arial","Space Grotesk-8acfc48496a32ee9 fallback: Arial Bold",sans-serif;}</style><style>@font-face{font-family:Consolas-12820b1350513750;src:url("/_astro/fonts/26de1668ba532bbd.ttf") format("truetype");font-display:swap;font-weight:400;font-style:normal;}@font-face{font-family:Consolas-12820b1350513750;src:url("/_astro/fonts/e49b45bbf41fc8cf.ttf") format("truetype");font-display:swap;font-weight:700;font-style:normal;}@font-face{font-family:"Consolas-12820b1350513750 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:400;font-style:normal;size-adjust:91.6192%;ascent-override:81.0611%;descent-override:28.0863%;line-gap-override:18.6531%;}@font-face{font-family:"Consolas-12820b1350513750 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:700;font-style:normal;size-adjust:91.6192%;ascent-override:81.0611%;descent-override:28.0863%;line-gap-override:18.6531%;}:root{--font-google-sans-code:Consolas-12820b1350513750,"Consolas-12820b1350513750 fallback: Courier New",ui-monospace,monospace;}</style><!-- Primary meta --><title>我给 AI 装了一个点子王：IdeaKing 的 8 种不正经用法 | 世傲命的技术观测站</title><meta name="title" content="我给 AI 装了一个点子王：IdeaKing 的 8 种不正经用法 | 世傲命的技术观测站"><meta name="description" content="我把一份点子规则交给 AI，结果它既能救卡壳、拆项目，也能把 Todo 变成魂系游戏。这里不讲黑话，只分享 IdeaKing 的 8 种玩法、复制即用的触发句，以及它不该背的锅。"><meta name="author" content="世傲命"><link rel="sitemap" href="/sitemap.xml"><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:site_name" content="世傲命的技术观测站"><meta property="og:title" content="我给 AI 装了一个点子王：IdeaKing 的 8 种不正经用法 | 世傲命的技术观测站"><meta property="og:description" content="我把一份点子规则交给 AI，结果它既能救卡壳、拆项目，也能把 Todo 变成魂系游戏。这里不讲黑话，只分享 IdeaKing 的 8 种玩法、复制即用的触发句，以及它不该背的锅。"><meta property="og:url" content="https://shiaoming123.github.io/posts/ideaking-skill-idea-workshop/"><meta property="og:image" content="https://shiaoming123.github.io/posts/ideaking-skill-idea-workshop/index.png"><!-- Twitter / X --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://shiaoming123.github.io/posts/ideaking-skill-idea-workshop/"><meta property="twitter:title" content="我给 AI 装了一个点子王：IdeaKing 的 8 种不正经用法 | 世傲命的技术观测站"><meta property="twitter:description" content="我把一份点子规则交给 AI，结果它既能救卡壳、拆项目，也能把 Todo 变成魂系游戏。这里不讲黑话，只分享 IdeaKing 的 8 种玩法、复制即用的触发句，以及它不该背的锅。"><meta property="twitter:image" content="https://shiaoming123.github.io/posts/ideaking-skill-idea-workshop/index.png"><!-- RSS autodiscovery --><link rel="alternate" type="application/rss+xml" title="世傲命的技术观测站" href="https://shiaoming123.github.io/rss.xml"><!-- Filled at runtime by theme.ts to match the current background colour --><meta name="theme-color" content=""><!-- Extra head content injected by child layouts (e.g. JSON-LD, article meta) -->  <meta property="og:type" content="article"> <meta name="author" content="世傲命"> <meta property="article:section" content="AI 工具"><meta property="article:published_time" content="2026-08-13T14:30:00.000Z"><meta property="article:modified_time" content="2026-08-13T14:30:00.000Z"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"我给 AI 装了一个点子王：IdeaKing 的 8 种不正经用法 | 世傲命的技术观测站","description":"我把一份点子规则交给 AI，结果它既能救卡壳、拆项目，也能把 Todo 变成魂系游戏。这里不讲黑话，只分享 IdeaKing 的 8 种玩法、复制即用的触发句，以及它不该背的锅。","image":"https://shiaoming123.github.io/posts/ideaking-skill-idea-workshop/index.png","url":"https://shiaoming123.github.io/posts/ideaking-skill-idea-workshop/","mainEntityOfPage":"https://shiaoming123.github.io/posts/ideaking-skill-idea-workshop/","inLanguage":"zh-CN","articleSection":"AI 工具","datePublished":"2026-08-13T14:30:00.000Z","dateModified":"2026-08-13T14:30:00.000Z","author":[{"@type":"Person","name":"世傲命","url":"https://github.com/Shiaoming123"}],"publisher":{"@type":"Person","name":"世傲命","url":"https://github.com/Shiaoming123"}}</script> <!--
+      Inline FOUC-prevention script: sets data-theme on <html> before
+      the browser paints. Runs synchronously, no defer/async.
+    --><script>
+      (function () {
+        const stored = localStorage.getItem("theme");
+        const theme = stored ?? "dark";
+        const root = document.firstElementChild;
+        root?.setAttribute("data-theme", theme);
+        root?.classList.toggle("dark", theme === "dark");
+        // Expose value so theme.ts can skip re-detection.
+        window.__theme = { value: theme };
+      })();
+    </script><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CAqDO0tx.js"></script><link rel="stylesheet" href="/_astro/Footer.B0MW2hOD.css"><style>@keyframes astroFadeInOut{0%{opacity:1}to{opacity:0}}@keyframes astroFadeIn{0%{opacity:0;mix-blend-mode:plus-lighter}to{opacity:1;mix-blend-mode:plus-lighter}}@keyframes astroFadeOut{0%{opacity:1;mix-blend-mode:plus-lighter}to{opacity:0;mix-blend-mode:plus-lighter}}@keyframes astroSlideFromRight{0%{transform:translate(100%)}}@keyframes astroSlideFromLeft{0%{transform:translate(-100%)}}@keyframes astroSlideToRight{to{transform:translate(100%)}}@keyframes astroSlideToLeft{to{transform:translate(-100%)}}@media(prefers-reduced-motion){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}[data-astro-transition-scope]{animation:none!important}}
+</style><link rel="stylesheet" href="/_astro/getReadingRail.CFrLYf49.css"><link rel="stylesheet" href="/_astro/PostLayout.g8X8u49B.css"><style>.article-header[data-astro-cid-7ap3hmvm]{display:grid;gap:.75rem;padding-bottom:.25rem}.article-header[data-astro-cid-7ap3hmvm] h1[data-astro-cid-7ap3hmvm],.article-description[data-astro-cid-7ap3hmvm]{margin:0}.article-description[data-astro-cid-7ap3hmvm]{max-width:62ch;color:var(--muted-foreground);font-size:clamp(1rem,2.2vw,1.08rem);line-height:1.65}.article-metadata[data-astro-cid-7ap3hmvm]{display:flex;flex-wrap:wrap;gap:.35rem 1rem;color:var(--muted-foreground);font-size:.82rem}.article-metadata[data-astro-cid-7ap3hmvm] span[data-astro-cid-7ap3hmvm],.article-metadata[data-astro-cid-7ap3hmvm] a[data-astro-cid-7ap3hmvm]{color:inherit;text-decoration:none}.article-metadata[data-astro-cid-7ap3hmvm] strong[data-astro-cid-7ap3hmvm]{color:var(--foreground);font-weight:600}.article-metadata[data-astro-cid-7ap3hmvm] a[data-astro-cid-7ap3hmvm]:hover strong[data-astro-cid-7ap3hmvm]{color:var(--accent)}.article-continuation[data-astro-cid-7ap3hmvm]{display:grid;gap:.65rem;margin-top:2.5rem}.article-continuation[data-astro-cid-7ap3hmvm]>p[data-astro-cid-7ap3hmvm]{margin:0;color:var(--muted-foreground);font-family:var(--font-google-sans-code),monospace;font-size:.74rem;font-weight:700;letter-spacing:.12em}.article-continuation-details[data-astro-cid-7ap3hmvm]>summary[data-astro-cid-7ap3hmvm]{width:fit-content;cursor:pointer;color:var(--accent);font-size:.88rem}.article-continuation-details[data-astro-cid-7ap3hmvm][open]>summary[data-astro-cid-7ap3hmvm]{margin-bottom:.65rem}@media(min-width:768px){.article-continuation-details[data-astro-cid-7ap3hmvm]>summary[data-astro-cid-7ap3hmvm]{display:none}}
+.comments-section[data-astro-cid-qdzwzgpn]{display:grid;gap:1.25rem;margin-top:2.5rem;padding:1.25rem;border:1px solid color-mix(in srgb,var(--border) 72%,transparent);background:color-mix(in srgb,var(--surface) 72%,transparent)}.comments-heading[data-astro-cid-qdzwzgpn]{display:grid;gap:.65rem}.comments-kicker[data-astro-cid-qdzwzgpn]{margin:0 0 .35rem;color:var(--muted-foreground);font-family:var(--font-google-sans-code),monospace;font-size:.72rem;font-weight:700;letter-spacing:.12em}.comments-heading[data-astro-cid-qdzwzgpn] h2[data-astro-cid-qdzwzgpn]{margin:0;color:var(--accent);font-size:1.35rem}.comments-heading[data-astro-cid-qdzwzgpn]>p[data-astro-cid-qdzwzgpn]{margin:0;color:var(--muted-foreground);font-size:.88rem;line-height:1.7}.giscus-container[data-astro-cid-qdzwzgpn]{min-width:0}@media(max-width:640px){.comments-section[data-astro-cid-qdzwzgpn]{padding:1rem}}
+</style><style>[data-astro-transition-scope="astro-36ssibgs-1"] { view-transition-name: ideaking; }@layer astro { ::view-transition-old(ideaking) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(ideaking) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(ideaking) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(ideaking) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-1"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-1"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-36ssibgs-2"] { view-transition-name: skill; }@layer astro { ::view-transition-old(skill) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(skill) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(skill) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(skill) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-2"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-2"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-2"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-2"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-36ssibgs-3"] { view-transition-name: ai-\521B\610F; }@layer astro { ::view-transition-old(ai-\521B\610F) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(ai-\521B\610F) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(ai-\521B\610F) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(ai-\521B\610F) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-3"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-3"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-3"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-3"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-36ssibgs-4"] { view-transition-name: \6548\7387\5DE5\5177; }@layer astro { ::view-transition-old(\6548\7387\5DE5\5177) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(\6548\7387\5DE5\5177) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(\6548\7387\5DE5\5177) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(\6548\7387\5DE5\5177) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-4"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-4"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-4"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-4"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-4"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-4"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-4"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-4"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-36ssibgs-5"] { view-transition-name: \63D0\793A\8BCD; }@layer astro { ::view-transition-old(\63D0\793A\8BCD) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(\63D0\793A\8BCD) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(\63D0\793A\8BCD) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(\63D0\793A\8BCD) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-5"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-5"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-5"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-5"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-36ssibgs-5"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-36ssibgs-5"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-36ssibgs-5"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-36ssibgs-5"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><link rel="stylesheet" href="/_astro/ideaking-skill-idea-workshop.WhOh0PfK.css"></head> <body class="bg-background font-app text-foreground selection:bg-accent/75 selection:text-accent-foreground flex min-h-svh flex-col"> <div class="scroll-progress" aria-hidden="true"></div>    <a id="skip-to-content" href="#main-content" class="bg-background text-accent absolute inset-s-16 -top-full z-50 px-3 py-2 backdrop-blur-lg transition-all focus:top-4"> 跳到正文 </a> <header class="observatory-header"> <div class="observatory-header-bar"> <a href="/" class="observatory-brand" aria-label="世傲命的技术观测站，返回首页" data-analytics-event="nav_click" data-analytics-item="home"> <span class="observatory-brand-mark" aria-hidden="true"> <span></span> </span> <span class="observatory-brand-copy"> <strong>世傲命的技术观测站</strong> <small>PERSONAL TECHNOLOGY OBSERVATORY</small> </span> </a> <nav class="observatory-navigation" aria-label="主导航"> <button id="menu-btn" class="focus-outline observatory-menu-button" aria-label="打开菜单" aria-expanded="false" aria-controls="menu-items" data-label-open="打开菜单" data-label-close="关闭菜单" data-analytics-event="menu_toggle" data-analytics-item="header"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="hidden" viewBox="0 0 24 24" id="close-icon"><path stroke="none" d="M0 0h24v24H0z" /><path d="M18 6 6 18M6 6l12 12" /></svg> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon icon-tabler icons-tabler-outline icon-tabler-menu-deep" viewBox="0 0 24 24" id="menu-icon"><path stroke="none" d="M0 0h24v24H0z" /><path d="M4 6h16M7 12h13M10 18h10" /></svg> </button> <ul id="menu-items" class="observatory-nav-list hidden max-h-[calc(100svh-4.5rem)] overflow-y-auto lg:flex lg:overflow-visible"> <li class="observatory-nav-item"> <a href="/posts/" class="active-nav" aria-current="page" data-analytics-event="nav_click" data-analytics-item="文章"> 文章 </a> </li><li class="observatory-nav-item"> <a href="/learning/" data-analytics-event="nav_click" data-analytics-item="学习"> 学习 </a> </li><li class="observatory-nav-item"> <a href="/english-practice/" data-analytics-event="nav_click" data-analytics-item="英语口语"> 英语口语 </a> </li><li class="observatory-nav-item"> <a href="/signals/" data-analytics-event="nav_click" data-analytics-item="信号"> 信号 </a> </li><li class="observatory-nav-item"> <a href="/projects/" data-analytics-event="nav_click" data-analytics-item="作品"> 作品 </a> </li> <li class="observatory-more-item"> <details id="navigation-more" class="observatory-more"> <summary> 更多 </summary> <ul aria-label="更多"> <li> <a href="/about/" data-analytics-event="nav_click" data-analytics-item="关于"> 关于 </a> </li><li> <a href="/bookmarks/" data-analytics-event="nav_click" data-analytics-item="资源"> 资源 </a> </li><li> <a href="/arena/" data-analytics-event="nav_click" data-analytics-item="榜单"> 榜单 </a> </li><li> <a href="/taxonomy/" data-analytics-event="nav_click" data-analytics-item="分类"> 分类 </a> </li><li> <a href="/archives/" data-analytics-event="nav_click" data-analytics-item="归档"> 归档 </a> </li><li> <a href="/changelog/" data-analytics-event="nav_click" data-analytics-item="日志"> 日志 </a> </li> </ul> </details> </li> <li class="observatory-tool-item"> <a href="/search/" title="搜索" aria-label="搜索" data-analytics-event="nav_click" data-analytics-item="search"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon icon-tabler icons-tabler-outline icon-tabler-search" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 10a7 7 0 1 0 14 0 7 7 0 1 0-14 0M21 21l-6-6" /></svg> <span class="lg:sr-only">搜索</span> </a> </li> <li class="observatory-tool-item"> <button id="theme-btn" title="切换主题" aria-label="切换到深色主题" aria-live="polite" data-analytics-event="theme_toggle" data-analytics-item="header"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M12 3h.393a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 2.992z" /></svg> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M14.828 14.828a4 4 0 1 0-5.656-5.656 4 4 0 0 0 5.656 5.656M6.343 17.657l-1.414 1.414M6.343 6.343 4.929 4.929M17.657 6.343l1.414-1.414M17.657 17.657l1.414 1.414M4 12H2M12 4V2M20 12h2M12 20v2" /></svg> <span class="lg:sr-only">切换主题</span> </button> </li> </ul> </nav> </div> </header> <script type="module">function v(){const a=window;a.__observatoryNavigationCleanup?.();const t=document.querySelector("#menu-btn"),n=document.querySelector("#menu-items"),i=document.querySelector("#menu-icon"),c=document.querySelector("#close-icon"),g=document.querySelector("#navigation-more");if(!t||!n||!i||!c)return;const L=t.dataset.labelOpen??"打开菜单",f=t.dataset.labelClose??"关闭菜单",o=()=>t.getAttribute("aria-expanded")==="true",s=(e,b=!1)=>{t.setAttribute("aria-expanded",String(e)),t.setAttribute("aria-label",e?f:L),n.classList.toggle("hidden",!e),n.classList.toggle("grid",e),i.classList.toggle("hidden",e),c.classList.toggle("hidden",!e),document.documentElement.classList.toggle("shell-menu-open",e),e||(g?.removeAttribute("open"),b&&t.focus())},r=()=>s(!o()),l=e=>{o()&&e.target.closest("a")&&s(!1)},d=e=>{e.key==="Escape"&&o()&&(e.preventDefault(),s(!1,!0))},u=e=>{e.matches&&o()&&s(!1)},m=window.matchMedia("(min-width: 64rem)");t.addEventListener("click",r),n.addEventListener("click",l),document.addEventListener("keydown",d),m.addEventListener("change",u),a.__observatoryNavigationCleanup=()=>{t.removeEventListener("click",r),n.removeEventListener("click",l),document.removeEventListener("keydown",d),m.removeEventListener("change",u),document.documentElement.classList.remove("shell-menu-open")}}v();document.addEventListener("astro:after-swap",v);document.addEventListener("astro:before-swap",()=>{window.__observatoryNavigationCleanup?.()});</script> <nav class="app-layout flex items-center justify-start" aria-label="文章返回"><a id="back-button" href="/" class="group inline-flex items-center gap-1 hover:text-accent focus-outline hover:text-foreground/75 -ms-2 mt-8 mb-2"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 rtl:rotate-180" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="m15 6-6 6 6 6" /></svg><span>返回</span> </a></nav><script type="module">function o(){const t=document.querySelector("#back-button"),e=sessionStorage.getItem("backUrl");e&&t&&(t.href=e)}document.addEventListener("astro:page-load",o);o();</script> <main id="main-content" class="article-shell" data-pagefind-body data-astro-cid-7ap3hmvm> <div class="reading-content article-main" data-astro-cid-7ap3hmvm> <header class="article-header" data-astro-cid-7ap3hmvm> <span class="sr-only" data-pagefind-filter="内容类型" data-pagefind-meta="contentType" data-astro-cid-7ap3hmvm>文章</span> <span class="sr-only" data-pagefind-filter="分类" data-pagefind-meta="category" data-astro-cid-7ap3hmvm> AI 工具 </span> <span class="sr-only" data-pagefind-meta="date" data-astro-cid-7ap3hmvm> 2026-08 </span> <h1 style="view-transition-name:u006211u007ed9-ai-u0088c5u004e86u004e00u004e2au0070b9u005b50u00738bu00ff1a-idea-king-u007684-8-u0079cdu004e0du006b63u007ecfu007528u006cd5" class="text-accent inline-block text-2xl font-bold sm:text-3xl" data-astro-cid-7ap3hmvm> 我给 AI 装了一个点子王：IdeaKing 的 8 种不正经用法 </h1> <p class="article-description" data-astro-cid-7ap3hmvm>我把一份点子规则交给 AI，结果它既能救卡壳、拆项目，也能把 Todo 变成魂系游戏。这里不讲黑话，只分享 IdeaKing 的 8 种玩法、复制即用的触发句，以及它不该背的锅。</p> <div class="article-metadata" aria-label="文章信息" data-astro-cid-7ap3hmvm> <span data-astro-cid-7ap3hmvm>作者 <strong data-astro-cid-7ap3hmvm>世傲命</strong></span> <a href="/categories/ai-工具/" data-astro-cid-7ap3hmvm>
+分类 <strong data-astro-cid-7ap3hmvm>AI 工具</strong> </a> <span data-astro-cid-7ap3hmvm>
+发布
+<time datetime="2026-08-13T14:30:00.000Z" data-astro-cid-7ap3hmvm> 2026年8月13日 </time> </span>   </div> </header> <article id="article" class="mt-6 w-full app-prose max-w-app" data-astro-cid-7ap3hmvm> <p><img src="/images/ideaking-skill/cover.webp" alt="IdeaKing 点子王宣传封面：眼镜、皇冠与举起的手指周围迸发出旅行、烹饪、学习和创作点子"/></p>
+<p>我给 AI 装了一个专门负责出点子的开关。</p>
+<p>开关一按，它先来一句：<strong>“诶，我有一个好点子👆🤓”</strong>。这个手势很像班里那位还没等老师点名就已经站起来的同学。区别是，这位同学偶尔真的有点东西。</p>
+<p>这就是我做 <a href="https://github.com/Shiaoming123/IdeaKing">IdeaKing</a> 的起点。它不是一个新模型，也不是会在后台神秘运转的软件。说白了，我只是写了一份规则交给 AI：当我主动讨点子，或者在一个问题上转圈圈时，别再把原答案换个说法念一遍，试着换个角度。</p>
+<p>我喜欢它，不是因为它能“凭空创造伟大创意”——这句话一说出口，PPT 味儿就上来了——而是因为它经常能把一句“我不知道怎么办”，变成一个今天就能试的小动作。</p>
+<section class="idea-lab" aria-labelledby="idea-lab-title" data-idea-lab data-astro-cid-diqkzzxu> <div class="idea-lab__masthead" data-astro-cid-diqkzzxu> <p data-astro-cid-diqkzzxu>IDEA LAB · 点子试玩台</p> <h2 id="idea-lab-title" data-astro-cid-diqkzzxu>同一个点子王，三种打开方式</h2> <span data-astro-cid-diqkzzxu>玩法示意，不是模型评测</span> </div> <div class="idea-lab__tabs" role="tablist" aria-label="选择 IdeaKing 玩法" data-astro-cid-diqkzzxu> <button type="button" id="blind-box-tab" role="tab" aria-controls="blind-box-panel" aria-selected="true" tabindex="0" data-idea-tab="blind-box" data-astro-cid-diqkzzxu> <span data-astro-cid-diqkzzxu>01</span> 随手开盲盒 </button><button type="button" id="stuck-tab" role="tab" aria-controls="stuck-panel" aria-selected="false" tabindex="-1" data-idea-tab="stuck" data-astro-cid-diqkzzxu> <span data-astro-cid-diqkzzxu>02</span> 卡住时救场 </button><button type="button" id="mashup-tab" role="tab" aria-controls="mashup-panel" aria-selected="false" tabindex="-1" data-idea-tab="mashup" data-astro-cid-diqkzzxu> <span data-astro-cid-diqkzzxu>03</span> 跨界乱炖 </button> </div> <div class="idea-lab__panel" id="blind-box-panel" role="tabpanel" aria-labelledby="blind-box-tab" data-idea-panel="blind-box" data-astro-cid-diqkzzxu> <div class="idea-lab__prompt" data-astro-cid-diqkzzxu> <span data-astro-cid-diqkzzxu>我卡在哪</span> <p data-astro-cid-diqkzzxu>我只想来点新鲜的</p> <blockquote data-astro-cid-diqkzzxu>“来个点子，最好今天就能试。”</blockquote> </div> <div class="idea-lab__answer" data-astro-cid-diqkzzxu> <span data-astro-cid-diqkzzxu>点子王接球</span> <h3 data-astro-cid-diqkzzxu>👆🤓 把通勤路变成一条私人支线</h3> <p data-astro-cid-diqkzzxu>每次路过一个从没进去过的小店，就只做一件事：拍下最奇怪的商品、问一句它的来历，或者记一条气味。一个月后，把这些碎片拼成一张‘城市隐藏地图’。</p> <dl data-astro-cid-diqkzzxu> <div data-astro-cid-diqkzzxu> <dt data-astro-cid-diqkzzxu>为什么值得试</dt> <dd data-astro-cid-diqkzzxu>它没有逼我先做宏大项目，只给了一个能立刻出门试的小动作。</dd> </div> <div data-astro-cid-diqkzzxu> <dt data-astro-cid-diqkzzxu>现在就做</dt> <dd data-astro-cid-diqkzzxu>先选今天下班路上的一个陌生路口。</dd> </div> </dl> </div> </div><div class="idea-lab__panel" id="stuck-panel" role="tabpanel" aria-labelledby="stuck-tab" hidden data-idea-panel="stuck" data-astro-cid-diqkzzxu> <div class="idea-lab__prompt" data-astro-cid-diqkzzxu> <span data-astro-cid-diqkzzxu>我卡在哪</span> <p data-astro-cid-diqkzzxu>Todo 已经写到怀疑人生</p> <blockquote data-astro-cid-diqkzzxu>“这个 Todo 应用我做不下去了，越看越像作业。”</blockquote> </div> <div class="idea-lab__answer" data-astro-cid-diqkzzxu> <span data-astro-cid-diqkzzxu>点子王接球</span> <h3 data-astro-cid-diqkzzxu>👆🤓 把 Todo 变成一款魂系受苦游戏</h3> <p data-astro-cid-diqkzzxu>任务是 Boss，逾期任务会变成游魂，完成任务赚‘灵魂’。先别做完整游戏，只给最难的三项任务加血条、失败台词和通关动画。</p> <dl data-astro-cid-diqkzzxu> <div data-astro-cid-diqkzzxu> <dt data-astro-cid-diqkzzxu>为什么值得试</dt> <dd data-astro-cid-diqkzzxu>它把‘缺功能’换成了‘缺戏剧性’，问题突然从补表单变成设计体验。</dd> </div> <div data-astro-cid-diqkzzxu> <dt data-astro-cid-diqkzzxu>现在就做</dt> <dd data-astro-cid-diqkzzxu>先给今天最难的任务画一条 100 点血条。</dd> </div> </dl> </div> </div><div class="idea-lab__panel" id="mashup-panel" role="tabpanel" aria-labelledby="mashup-tab" hidden data-idea-panel="mashup" data-astro-cid-diqkzzxu> <div class="idea-lab__prompt" data-astro-cid-diqkzzxu> <span data-astro-cid-diqkzzxu>我卡在哪</span> <p data-astro-cid-diqkzzxu>图表又长成了年终汇报</p> <blockquote data-astro-cid-diqkzzxu>“这组数据很重要，但做出来总像一张没人想看的报表。”</blockquote> </div> <div class="idea-lab__answer" data-astro-cid-diqkzzxu> <span data-astro-cid-diqkzzxu>点子王接球</span> <h3 data-astro-cid-diqkzzxu>👆🤓 别画图表了，画一场三幕漫画</h3> <p data-astro-cid-diqkzzxu>第一幕让异常值登场，第二幕让两条趋势线‘吵架’，第三幕再把真正的结论亮出来。数据不改，只把阅读顺序从‘看全表’改成‘追冲突’。</p> <dl data-astro-cid-diqkzzxu> <div data-astro-cid-diqkzzxu> <dt data-astro-cid-diqkzzxu>为什么值得试</dt> <dd data-astro-cid-diqkzzxu>跨界不是给柱状图戴帽子，而是借漫画的节奏重新安排信息。</dd> </div> <div data-astro-cid-diqkzzxu> <dt data-astro-cid-diqkzzxu>现在就做</dt> <dd data-astro-cid-diqkzzxu>只挑一个冲突最大的指标，先画三格草图。</dd> </div> </dl> </div> </div> </section>  <script type="module">function s(){document.querySelectorAll("[data-idea-lab]").forEach(o=>{const a=Array.from(o.querySelectorAll("[data-idea-tab]")),i=Array.from(o.querySelectorAll("[data-idea-panel]")),c=t=>{const d=t.dataset.ideaTab;a.forEach(e=>{const r=e===t;e.setAttribute("aria-selected",String(r)),e.tabIndex=r?0:-1}),i.forEach(e=>{e.hidden=e.dataset.ideaPanel!==d})};a.forEach((t,d)=>{t.dataset.ideaLabBound!=="true"&&(t.dataset.ideaLabBound="true",t.addEventListener("click",()=>c(t)),t.addEventListener("keydown",e=>{if(e.key!=="ArrowLeft"&&e.key!=="ArrowRight")return;e.preventDefault();const r=e.key==="ArrowRight"?1:-1,n=a[(d+r+a.length)%a.length];n&&(c(n),n.focus())}))})})}document.addEventListener("astro:page-load",s);s();</script>
+<h2 id="玩法一把来个点子当盲盒">玩法一：把“来个点子”当盲盒</h2>
+<p>最省事的用法，就是一句：</p>
+<blockquote><p>来个点子。不要太大，最好今天就能试。</p></blockquote>
+<p>这里的关键不是“点子”，而是后半句。只说“给我一个创业点子”，很容易收到一份《如何用 AI 改变世界》的空气套餐。加上时间、预算、手边材料或者你讨厌什么，点子就会从云端慢慢降落到地面。</p>
+<p>我常用的限制条件包括：</p>
+<ul>
+<li>30 分钟内能开始。</li>
+<li>不买新设备。</li>
+<li>一个人可以完成。</li>
+<li>先做一个难看但能用的版本。</li>
+<li>最好让我自己也觉得“这居然行？”</li>
+</ul>
+<p>这时它很像一个盲盒机，只是我可以先把“谢谢惠顾”从奖池里删掉。</p>
+<h2 id="玩法二项目卡住时先换问题">玩法二：项目卡住时，先换问题</h2>
+<p>IdeaKing 里我最看重的不是随机脑洞，而是“卡住时救场”。</p>
+<p>比如我一直问：“消息怎么同步？”AI 可能继续给我同步方案。但点子王会尝试追问另一件事：<strong>也许我不需要同步，而是需要合并？</strong> 这正是仓库示例里“像 Git 一样管理消息”的来源。</p>
+<p>它不保证这个方案一定适合生产环境，但会把我从原来的轨道上推下来。很多时候，我缺的不是第四个答案，而是第二个问题。</p>
+<p>我会这样说：</p>
+<div class="expressive-code"><link rel="stylesheet" href="/_astro/ec.iezo3.css"/><script type="module" src="/_astro/ec.0vx5m.js"></script><figure class="frame"><figcaption class="header"></figcaption><pre data-language="text"><code><div class="ec-line"><div class="code"><span style="--0:#212121;--1:#d6deeb">我已经在同一个方向试了三次，还是卡住。</span></div></div><div class="ec-line"><div class="code"><span style="--0:#212121;--1:#d6deeb">先别继续修补原方案，给我三个“换问题”的角度：</span></div></div><div class="ec-line"><div class="code"><span style="--0:#212121;--1:#d6deeb">一个务实的，一个跨界的，一个有点离谱但能启发我的。</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="我已经在同一个方向试了三次，还是卡住。先别继续修补原方案，给我三个“换问题”的角度：一个务实的，一个跨界的，一个有点离谱但能启发我的。"><div></div></button></div></figure></div>
+<h2 id="玩法三给无聊功能加一点戏">玩法三：给无聊功能加一点戏</h2>
+<p>Todo 应用是创作者的百慕大三角：每个人都想做一个，做到一半又被自己的 Todo 提醒“完成 Todo 应用”。</p>
+<p>IdeaKing 的示例把它改成了魂系游戏：任务是 Boss，完成后赚灵魂，逾期任务会变成游魂。它不一定是正确的产品方向，但一下子把“再加一个筛选器”变成了“用户为什么愿意回来”。</p>
+<p>我后来发现，这套玩法可以套在很多无聊但必要的事情上：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>原本很无聊</th><th>换一个说法</th><th>可以先试什么</th></tr></thead><tbody><tr><td>清理 Bug</td><td>给 Bug 建怪物图鉴</td><td>记录出现条件、弱点和最后一击</td></tr><tr><td>整理资料</td><td>做一场知识考古</td><td>每份旧文件只回答“它当时解决了什么”</td></tr><tr><td>周报</td><td>剪一支项目预告片</td><td>只写冲突、转折和下一集</td></tr><tr><td>背单词</td><td>经营一家词语酒馆</td><td>新词必须和旧词发生一段对话</td></tr></tbody></table>
+<p>如果一个 Bug 修了三次还活着，我甚至会建议给它取名字。第四次修掉后写一段悼词，至少情绪价值不能再亏。</p>
+<h2 id="玩法四让两个不相干的东西碰一下">玩法四：让两个不相干的东西碰一下</h2>
+<p>“跨界”听起来很像一个要收费的词，其实玩法特别朴素：</p>
+<blockquote><p>这个问题，如果交给游戏设计师、厨师和博物馆策展人，他们会分别怎么做？</p></blockquote>
+<p>我可以把图表当成漫画分镜，把学习计划当成游戏地图，把收纳当成仓库调度，把旅行计划当成一张支线任务表。重点不是给旧东西换皮，而是借用另一个领域的<strong>阅读顺序、反馈方式或取舍方法</strong>。</p>
+<p>如果答案只是“给柱状图加个漫画人物”，那不叫跨界，那叫柱状图戴帽子。</p>
+<h2 id="玩法五一次不要一个要一支队伍">玩法五：一次不要一个，要一支队伍</h2>
+<p>单个点子很容易让人产生恋爱脑：“它这么新，一定是对的。”我更喜欢让 IdeaKing 一次给出一组彼此打架的候选：</p>
+<div class="expressive-code"><figure class="frame"><figcaption class="header"></figcaption><pre data-language="text"><code><div class="ec-line"><div class="code"><span style="--0:#212121;--1:#d6deeb">围绕这个目标给我 5 个方向：</span></div></div><div class="ec-line"><div class="code"><span style="--0:#212121;--1:#d6deeb">1 个最稳妥，1 个最快，1 个最省钱，</span></div></div><div class="ec-line"><div class="code"><span style="--0:#212121;--1:#d6deeb">1 个最有传播性，1 个故意反常识。</span></div></div><div class="ec-line"><div class="code"><span style="--0:#212121;--1:#d6deeb">每个方向只说：核心动作、为什么值得试、最可能怎么翻车。</span></div></div><div class="ec-line"><div class="code"><span style="--0:#212121;--1:#d6deeb">最后不要替我拍板。</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="围绕这个目标给我 5 个方向：1 个最稳妥，1 个最快，1 个最省钱，1 个最有传播性，1 个故意反常识。每个方向只说：核心动作、为什么值得试、最可能怎么翻车。最后不要替我拍板。"><div></div></button></div></figure></div>
+<p>这样拿到的不是“五个同义句”，而是一张小型选项桌。我可以先淘汰明显不合适的，再让 AI 把剩下两个做成最小实验。</p>
+<h2 id="玩法六让它专门负责缩小">玩法六：让它专门负责“缩小”</h2>
+<p>灵感工具最危险的时刻，是它越说越兴奋：App、社区、积分、排行榜、订阅制，最后顺手给我安排了一个跨国公司。</p>
+<p>所以我经常反过来用：</p>
+<blockquote><p>这个点子太大了。砍掉 80%，保留最有意思的那个瞬间。告诉我今天能做出的最小版本。</p></blockquote>
+<p>这也是 IdeaKing 规则里“最小可行方案”的实际价值。点子不只负责把世界撑大，也应该负责把第一步缩小。</p>
+<h2 id="玩法七先出坏点子再找好点子">玩法七：先出坏点子，再找好点子</h2>
+<p>有时候我不是没想法，而是脑子里的评委太早上班。每冒出一个念头，它就举牌：不够新、不够实用、别人做过。</p>
+<p>这时我会故意要求：</p>
+<blockquote><p>先给我 10 个明显不靠谱的点子，越敢越好。然后从里面各偷一个可用零件，拼成 3 个能落地的版本。</p></blockquote>
+<p>坏点子没有交付压力，所以更容易暴露隐藏假设。它像厨房里的边角料：不适合直接端上桌，但可能正好熬出一锅汤。</p>
+<h2 id="玩法八把它当内容搭子但别让它当事实替身">玩法八：把它当内容搭子，但别让它当事实替身</h2>
+<p>写文章、拍视频、做分享时，我会让它帮我找开头、比喻、互动环节和反差标题。比如这篇文章的展示就可以拆成：一句触发、一个点子、为什么值得试、现在做什么。</p>
+<p>但冷知识、产品信息、健康建议、价格和链接要单独核对。IdeaKing 规则会要求“给依据、风险和资源”，那是对输出的要求，不是一张自动生效的免检贴纸。</p>
+<p>它负责把门推开。门外是不是悬崖，我还得自己看一眼。</p>
+<h2 id="我自己最常复制的-6-句话">我自己最常复制的 6 句话</h2>
+<div class="expressive-code"><figure class="frame"><figcaption class="header"></figcaption><pre data-language="text"><code><div class="ec-line"><div class="code"><span style="--0:#212121;--1:#d6deeb">来个今天就能试的小点子，别给我造一家公司。</span></div></div><div class="ec-line"><div class="code">
+</div></div><div class="ec-line"><div class="code"><span style="--0:#212121;--1:#d6deeb">我卡住了。别续写原方案，换三个问题问我。</span></div></div><div class="ec-line"><div class="code">
+</div></div><div class="ec-line"><div class="code"><span style="--0:#212121;--1:#d6deeb">给我一个务实版、一个跨界版、一个离谱但有启发的版本。</span></div></div><div class="ec-line"><div class="code">
+</div></div><div class="ec-line"><div class="code"><span style="--0:#212121;--1:#d6deeb">这个点子太大，砍掉 80%，只留最有趣的瞬间。</span></div></div><div class="ec-line"><div class="code">
+</div></div><div class="ec-line"><div class="code"><span style="--0:#212121;--1:#d6deeb">先给 10 个坏点子，再从废墟里捡出 3 个能用的。</span></div></div><div class="ec-line"><div class="code">
+</div></div><div class="ec-line"><div class="code"><span style="--0:#212121;--1:#d6deeb">不要替我决定。列出每个方向最可能怎么翻车。</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="来个今天就能试的小点子，别给我造一家公司。我卡住了。别续写原方案，换三个问题问我。给我一个务实版、一个跨界版、一个离谱但有启发的版本。这个点子太大，砍掉 80%，只留最有趣的瞬间。先给 10 个坏点子，再从废墟里捡出 3 个能用的。不要替我决定。列出每个方向最可能怎么翻车。"><div></div></button></div></figure></div>
+<h2 id="怎么把点子王交给-ai">怎么把点子王交给 AI</h2>
+<p>如果使用支持自定义规则或 Skills 的 AI，可以把仓库里的 <code>SKILL.md</code> 放进对应规则区。Hermes 使用带技能描述的 <code>hermes-skill.md</code>。不想配置也没关系，把你喜欢的几条规则直接贴进对话，一样可以玩。</p>
+<p>这里还有一个作者本人踩中的香蕉皮：仓库默认分支目前是 <code>master</code>，README 里的 Hermes 下载命令却写成了 <code>main</code>，会得到 404。修复仓库前，正确地址是：</p>
+<div class="expressive-code"><figure class="frame is-terminal"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#6F42C1;--1:#82AAFF;--1fs:italic">wget</span><span style="--0:#24292E;--1:#D6DEEB"> </span><span style="--0:#2B5581;--1:#82AAFF">-O</span><span style="--0:#24292E;--1:#D6DEEB"> </span><span style="--0:#2B5581;--1:#ECC48D">~/.hermes/skills/idea-generator/SKILL.md</span><span style="--0:#24292E;--1:#D6DEEB"> </span><span style="--0:#24292E;--1:#F78C6C">\</span></div></div><div class="ec-line"><div class="code"><span class="indent">  </span><span style="--0:#2B5581;--1:#ECC48D">https://raw.githubusercontent.com/Shiaoming123/IdeaKing/master/hermes-skill.md</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="wget -O ~/.hermes/skills/idea-generator/SKILL.md \  https://raw.githubusercontent.com/Shiaoming123/IdeaKing/master/hermes-skill.md"><div></div></button></div></figure></div>
+<p>通用规则可以直接查看 <a href="https://github.com/Shiaoming123/IdeaKing/blob/master/SKILL.md">SKILL.md</a>。它是一份 Markdown 文本，没有隐藏服务，也不会偷偷启动一个“灵感守护进程”。所谓自动介入，仍然是当前 AI 根据对话判断我是不是卡住了；它能不能联网、读代码或执行方案，也取决于承载它的平台和权限。</p>
+<h2 id="最后点子不是答案是下一步的借口">最后：点子不是答案，是下一步的借口</h2>
+<p>我做 IdeaKing，不是想让 AI 代替我产生人生方向。那活儿太重，它一个 Markdown 文件扛不动。</p>
+<p>我更想要的是一个不嫌我问题说得烂、愿意陪我换角度、最后还能递来一个具体动作的搭子。好的点子不一定让人拍桌子，它可能只是让我从椅子上起来，做完第一个难看的版本。</p>
+<p>这就够了。</p>
+<p>项目地址：<a href="https://github.com/Shiaoming123/IdeaKing">Shiaoming123/IdeaKing</a>。它采用 MIT 许可证；如果你也玩出了奇怪但好用的新姿势，欢迎带着点子回来。</p> </article> <section class="article-continuation" aria-labelledby="article-continuation-title" data-pagefind-ignore data-astro-cid-7ap3hmvm> <p id="article-continuation-title" data-astro-cid-7ap3hmvm>继续探索</p> <details class="article-continuation-details" data-astro-cid-7ap3hmvm> <summary data-astro-cid-7ap3hmvm>展开系列路线</summary> <section class="series-route-card" data-pagefind-ignore aria-label="同类延伸" data-astro-cid-2p2ihuqx><div class="series-route-header" data-astro-cid-2p2ihuqx><div data-astro-cid-2p2ihuqx><p data-astro-cid-2p2ihuqx>同类延伸</p><h2 data-astro-cid-2p2ihuqx>AI 工具</h2></div><span data-astro-cid-2p2ihuqx>01 / 2</span></div><nav class="series-route-neighbors" aria-label="系列前后文章" data-astro-cid-2p2ihuqx><a href="/posts/ai-generated-zine-poster-editable-workflow/" rel="next" data-astro-cid-2p2ihuqx><span data-astro-cid-2p2ihuqx>下一篇</span><strong data-astro-cid-2p2ihuqx>从 AI 生成海报到可编辑文件：用 JSON、HTML 和 SVG 扩展 ZINE Poster Skill</strong></a></nav><details class="series-route-details" data-astro-cid-2p2ihuqx><summary data-astro-cid-2p2ihuqx>查看完整路线</summary><ol class="series-route-list" data-astro-cid-2p2ihuqx><li data-astro-cid-2p2ihuqx><a href="/posts/ideaking-skill-idea-workshop/" aria-current="page" data-astro-cid-2p2ihuqx><span data-astro-cid-2p2ihuqx>01</span><strong data-astro-cid-2p2ihuqx>我给 AI 装了一个点子王：IdeaKing 的 8 种不正经用法</strong><em data-astro-cid-2p2ihuqx>当前</em></a></li><li data-astro-cid-2p2ihuqx><a href="/posts/ai-generated-zine-poster-editable-workflow/" data-astro-cid-2p2ihuqx><span data-astro-cid-2p2ihuqx>02</span><strong data-astro-cid-2p2ihuqx>从 AI 生成海报到可编辑文件：用 JSON、HTML 和 SVG 扩展 ZINE Poster Skill</strong></a></li></ol></details><ul class="series-route-tags" aria-label="相关标签" data-astro-cid-2p2ihuqx><li data-astro-cid-2p2ihuqx>#IdeaKing</li><li data-astro-cid-2p2ihuqx>#Skill</li><li data-astro-cid-2p2ihuqx>#AI 创意</li><li data-astro-cid-2p2ihuqx>#效率工具</li><li data-astro-cid-2p2ihuqx>#提示词</li></ul></section> </details> </section> <hr class="my-8 border-dashed" data-astro-cid-7ap3hmvm>  <div id="btt-btn-container" class="fixed inset-e-4 bottom-8 z-50 md:sticky md:inset-e-auto md:float-end md:me-1 translate-y-14 opacity-0 transition duration-500"> <button data-button="back-to-top" class="group bg-background relative px-2 py-1 size-14 rounded-full shadow-xl md:h-8 md:w-fit md:rounded-md md:shadow-none md:focus-visible:rounded-none md:bg-background/35 md:bg-clip-padding md:backdrop-blur-lg"> <span id="progress-indicator" class="absolute inset-0 -z-10 block size-14 scale-110 rounded-full bg-transparent md:hidden md:h-8 md:rounded-md"></span> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block rotate-90 md:hidden" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M5 12h14M5 12l6 6M5 12l6-6" /></svg> <span class="group-hover:text-accent sr-only text-sm md:not-sr-only"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-4" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M12 5v14M16 9l-4-4M8 9l4-4" /></svg> 回到顶部 </span> </button> </div> <script data-astro-rerun>
+  function backToTop() {
+    window.__backToTopCleanup?.();
+
+    const rootElement = document.documentElement;
+    const btnContainer = document.querySelector("#btt-btn-container");
+    const backToTopBtn = document.querySelector("[data-button='back-to-top']");
+    const progressIndicator = document.querySelector("#progress-indicator");
+
+    if (!rootElement || !btnContainer || !backToTopBtn || !progressIndicator)
+      return;
+
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const handleClick = () => {
+      window.scrollTo({
+        left: 0,
+        top: 0,
+        behavior: reducedMotion.matches ? "auto" : "smooth",
+      });
+    };
+    backToTopBtn.addEventListener("click", handleClick);
+
+    let lastVisible = null;
+    function handleScroll() {
+      const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
+      const scrollTop = rootElement.scrollTop;
+      const scrollPercent =
+        scrollTotal > 0 ? Math.floor((scrollTop / scrollTotal) * 100) : 0;
+
+      progressIndicator.style.setProperty(
+        "background-image",
+        `conic-gradient(var(--accent), var(--accent) ${scrollPercent}%, transparent ${scrollPercent}%)`
+      );
+
+      const isVisible = scrollTotal > 0 && scrollTop / scrollTotal > 0.3;
+
+      if (isVisible !== lastVisible) {
+        btnContainer.classList.toggle("opacity-100", isVisible);
+        btnContainer.classList.toggle("translate-y-0", isVisible);
+        btnContainer.classList.toggle("opacity-0", !isVisible);
+        btnContainer.classList.toggle("translate-y-14", !isVisible);
+        lastVisible = isVisible;
+      }
+    }
+
+    let ticking = false;
+    let frame = 0;
+    const onScroll = () => {
+      if (!ticking) {
+        frame = window.requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    handleScroll();
+    document.addEventListener("scroll", onScroll, { passive: true });
+
+    window.__backToTopCleanup = () => {
+      backToTopBtn.removeEventListener("click", handleClick);
+      document.removeEventListener("scroll", onScroll);
+      if (frame) window.cancelAnimationFrame(frame);
+    };
+  }
+  backToTop();
+</script> <ul class="mt-4 mb-8 flex flex-wrap gap-4 sm:my-8" data-astro-cid-7ap3hmvm> <li> <a href="/tags/ideaking/" class="flex items-center gap-0.5 border-foreground border-b-2 border-dashed hover:border-accent hover:text-accent hover:-mt-0.5 focus-visible:text-accent focus-visible:border-none text-sm" data-astro-transition-scope="astro-36ssibgs-1"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="opacity-80 size-4" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M5 9h14M5 15h14M11 4 7 20M17 4l-4 16" /></svg> IdeaKing </a> </li><li> <a href="/tags/skill/" class="flex items-center gap-0.5 border-foreground border-b-2 border-dashed hover:border-accent hover:text-accent hover:-mt-0.5 focus-visible:text-accent focus-visible:border-none text-sm" data-astro-transition-scope="astro-36ssibgs-2"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="opacity-80 size-4" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M5 9h14M5 15h14M11 4 7 20M17 4l-4 16" /></svg> Skill </a> </li><li> <a href="/tags/ai-创意/" class="flex items-center gap-0.5 border-foreground border-b-2 border-dashed hover:border-accent hover:text-accent hover:-mt-0.5 focus-visible:text-accent focus-visible:border-none text-sm" data-astro-transition-scope="astro-36ssibgs-3"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="opacity-80 size-4" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M5 9h14M5 15h14M11 4 7 20M17 4l-4 16" /></svg> AI 创意 </a> </li><li> <a href="/tags/效率工具/" class="flex items-center gap-0.5 border-foreground border-b-2 border-dashed hover:border-accent hover:text-accent hover:-mt-0.5 focus-visible:text-accent focus-visible:border-none text-sm" data-astro-transition-scope="astro-36ssibgs-4"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="opacity-80 size-4" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M5 9h14M5 15h14M11 4 7 20M17 4l-4 16" /></svg> 效率工具 </a> </li><li> <a href="/tags/提示词/" class="flex items-center gap-0.5 border-foreground border-b-2 border-dashed hover:border-accent hover:text-accent hover:-mt-0.5 focus-visible:text-accent focus-visible:border-none text-sm" data-astro-transition-scope="astro-36ssibgs-5"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="opacity-80 size-4" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M5 9h14M5 15h14M11 4 7 20M17 4l-4 16" /></svg> 提示词 </a> </li> </ul> <div class="flex flex-none flex-col items-center justify-center gap-1 md:items-start"><span class="italic">分享文章:</span><div class="text-center"><a href="mailto:?subject=See%20this%20post&amp;body=https://shiaoming123.github.io/posts/ideaking-skill-idea-workshop/" title="通过邮件分享" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><path d="m3 7 9 6 9-6" /></svg><span class="sr-only">通过邮件分享</span> </a></div></div> <section class="comments-section" aria-labelledby="comments-title--posts-ideaking-skill-idea-workshop-" data-pagefind-ignore data-comments-config data-comments-mapping="pathname" data-repo="Shiaoming123/Shiaoming123.github.io" data-repo-id="R_kgDOO9KmMQ" data-category="General" data-category-id="DIC_kwDOO9KmMc4C1LL7" data-astro-cid-qdzwzgpn><div class="comments-heading" data-astro-cid-qdzwzgpn><div data-astro-cid-qdzwzgpn><p class="comments-kicker" data-astro-cid-qdzwzgpn>COMMUNITY DISCUSSION</p><h2 id="comments-title--posts-ideaking-skill-idea-workshop-" data-astro-cid-qdzwzgpn>评论</h2></div><p data-astro-cid-qdzwzgpn>使用 GitHub 账号登录后参与讨论，评论会同步到 GitHub Discussions。</p></div><div class="giscus-container" aria-live="polite" data-astro-cid-qdzwzgpn></div></section><script data-astro-rerun>
+  (() => {
+    const commentWindow = window;
+    if (commentWindow.__giscusCommentsBound) return;
+    commentWindow.__giscusCommentsBound = true;
+
+    let activeCleanups = [];
+    let themeObserver = null;
+
+    function getTheme() {
+      return document.documentElement.dataset.theme === "light"
+        ? "light"
+        : "dark";
+    }
+
+    function setGiscusTheme(frame) {
+      frame?.contentWindow?.postMessage(
+        { giscus: { setConfig: { theme: getTheme() } } },
+        "https://giscus.app"
+      );
+    }
+
+    function cleanup() {
+      activeCleanups.forEach(cleanupSession => cleanupSession());
+      activeCleanups = [];
+      themeObserver?.disconnect();
+      themeObserver = null;
+    }
+
+    function initialize() {
+      cleanup();
+
+      const roots = Array.from(
+        document.querySelectorAll("[data-comments-config]")
+      );
+      if (roots.length === 0) return;
+
+      themeObserver = new MutationObserver(() => {
+        document
+          .querySelectorAll("iframe.giscus-frame")
+          .forEach(frame => setGiscusTheme(frame));
+      });
+      themeObserver.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ["data-theme"],
+      });
+
+      for (const root of roots) {
+        const container = root.querySelector(".giscus-container");
+        if (!container) continue;
+
+        let iframe = null;
+        let syncTheme = null;
+        const observer = new MutationObserver(() => {
+          const frame = container.querySelector("iframe.giscus-frame");
+          if (frame && frame !== iframe) {
+            iframe = frame;
+            syncTheme = () => setGiscusTheme(frame);
+            iframe.addEventListener("load", syncTheme);
+            setGiscusTheme(frame);
+          }
+        });
+
+        observer.observe(container, { childList: true, subtree: true });
+
+        const script = document.createElement("script");
+        script.src = "https://giscus.app/client.js";
+        script.setAttribute("data-repo", root.dataset.repo ?? "");
+        script.setAttribute("data-repo-id", root.dataset.repoId ?? "");
+        script.setAttribute("data-category", root.dataset.category ?? "");
+        script.setAttribute("data-category-id", root.dataset.categoryId ?? "");
+        script.setAttribute(
+          "data-mapping",
+          root.dataset.commentsMapping ?? "pathname"
+        );
+        if (root.dataset.commentsTerm) {
+          script.setAttribute("data-term", root.dataset.commentsTerm);
+        }
+        script.setAttribute("data-strict", "0");
+        script.setAttribute("data-reactions-enabled", "1");
+        script.setAttribute("data-emit-metadata", "0");
+        script.setAttribute("data-input-position", "top");
+        script.setAttribute("data-theme", getTheme());
+        script.setAttribute("data-lang", "zh-CN");
+        script.setAttribute("crossorigin", "anonymous");
+        script.async = true;
+        container.appendChild(script);
+
+        activeCleanups.push(() => {
+          observer.disconnect();
+          if (iframe && syncTheme)
+            iframe.removeEventListener("load", syncTheme);
+        });
+      }
+    }
+
+    commentWindow.__giscusCommentsCleanup = cleanup;
+    document.addEventListener("astro:before-swap", cleanup);
+    document.addEventListener("astro:after-swap", initialize);
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initialize, { once: true });
+    } else {
+      initialize();
+    }
+  })();
+</script> <hr class="my-8 border-dashed" data-astro-cid-7ap3hmvm> <div data-pagefind-ignore class="my-8 grid grid-cols-1 gap-6 sm:grid-cols-2">  <a href="/posts/lingbot-map-workbench-local-reconstruction/" class="flex w-full justify-end gap-1 text-end hover:opacity-75 sm:col-start-2"> <div> <span>下一篇</span> <div class="text-accent/85 text-sm">在 RTX GPU 上把一段视频跑成可浏览点云：LingBot-Map 从部署到 Workbench 的工程复盘</div> </div> <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block flex-none rtl:rotate-180" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M5 12h14M13 18l6-6M13 6l6 6" /></svg> </a> </div> </div> <nav class="article-toc article-toc-sidebar" data-pagefind-ignore data-toc-drawer="true" data-toc-open="true" aria-label="本文目录" data-astro-cid-u3rwxgrt><div class="toc-drawer-frame" data-astro-cid-u3rwxgrt><button class="toc-drawer-toggle" type="button" aria-expanded="true" aria-label="收起本文目录" data-toc-toggle data-astro-cid-u3rwxgrt><span data-astro-cid-u3rwxgrt>目录</span></button><div class="toc-drawer-panel" data-astro-cid-u3rwxgrt><div class="toc-drawer-header" data-astro-cid-u3rwxgrt><p data-astro-cid-u3rwxgrt>本文目录</p><span data-toc-progress data-astro-cid-u3rwxgrt>0%</span></div><div class="toc-drawer-meter" aria-hidden="true" data-astro-cid-u3rwxgrt><span data-toc-meter data-astro-cid-u3rwxgrt></span></div><ol data-astro-cid-u3rwxgrt><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#玩法一把来个点子当盲盒" data-toc-target="玩法一把来个点子当盲盒" data-astro-cid-u3rwxgrt>玩法一：把“来个点子”当盲盒</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#玩法二项目卡住时先换问题" data-toc-target="玩法二项目卡住时先换问题" data-astro-cid-u3rwxgrt>玩法二：项目卡住时，先换问题</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#玩法三给无聊功能加一点戏" data-toc-target="玩法三给无聊功能加一点戏" data-astro-cid-u3rwxgrt>玩法三：给无聊功能加一点戏</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#玩法四让两个不相干的东西碰一下" data-toc-target="玩法四让两个不相干的东西碰一下" data-astro-cid-u3rwxgrt>玩法四：让两个不相干的东西碰一下</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#玩法五一次不要一个要一支队伍" data-toc-target="玩法五一次不要一个要一支队伍" data-astro-cid-u3rwxgrt>玩法五：一次不要一个，要一支队伍</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#玩法六让它专门负责缩小" data-toc-target="玩法六让它专门负责缩小" data-astro-cid-u3rwxgrt>玩法六：让它专门负责“缩小”</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#玩法七先出坏点子再找好点子" data-toc-target="玩法七先出坏点子再找好点子" data-astro-cid-u3rwxgrt>玩法七：先出坏点子，再找好点子</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#玩法八把它当内容搭子但别让它当事实替身" data-toc-target="玩法八把它当内容搭子但别让它当事实替身" data-astro-cid-u3rwxgrt>玩法八：把它当内容搭子，但别让它当事实替身</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#我自己最常复制的-6-句话" data-toc-target="我自己最常复制的-6-句话" data-astro-cid-u3rwxgrt>我自己最常复制的 6 句话</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#怎么把点子王交给-ai" data-toc-target="怎么把点子王交给-ai" data-astro-cid-u3rwxgrt>怎么把点子王交给 AI</a></li><li class="depth-2" data-astro-cid-u3rwxgrt><a href="#最后点子不是答案是下一步的借口" data-toc-target="最后点子不是答案是下一步的借口" data-astro-cid-u3rwxgrt>最后：点子不是答案，是下一步的借口</a></li></ol></div></div></nav><script data-astro-rerun>
+  (() => {
+    function clamp(value, min, max) {
+      return Math.min(max, Math.max(min, value));
+    }
+
+    function getDrawerPreference() {
+      try {
+        return localStorage.getItem("article-toc-drawer-open");
+      } catch {
+        return null;
+      }
+    }
+
+    function setDrawerPreference(value) {
+      try {
+        localStorage.setItem("article-toc-drawer-open", value);
+      } catch {
+        // The drawer remains usable even when storage is unavailable.
+      }
+    }
+
+    function initArticleTocDrawer() {
+      window.__articleTocDrawerCleanup?.();
+
+      const article = document.getElementById("article");
+      const headings = Array.from(
+        article?.querySelectorAll("h2[id], h3[id]") ?? []
+      );
+      const links = Array.from(
+        document.querySelectorAll(".article-toc a[data-toc-target]")
+      );
+      const drawers = Array.from(
+        document.querySelectorAll("[data-toc-drawer]")
+      );
+
+      if (!article || headings.length === 0 || links.length === 0) {
+        window.__articleTocDrawerCleanup = null;
+        return;
+      }
+
+      const storedOpen = getDrawerPreference();
+      const isOpenByDefault = storedOpen !== "false";
+
+      for (const drawer of drawers) {
+        const toggle = drawer.querySelector("[data-toc-toggle]");
+        drawer.dataset.tocOpen = isOpenByDefault ? "true" : "false";
+        toggle?.setAttribute("aria-expanded", String(isOpenByDefault));
+        toggle?.setAttribute(
+          "aria-label",
+          isOpenByDefault ? "收起本文目录" : "展开本文目录"
+        );
+      }
+
+      const onToggleClick = event => {
+        const button = event.currentTarget;
+        const drawer = button.closest("[data-toc-drawer]");
+        const nextOpen = drawer.dataset.tocOpen !== "true";
+        drawer.dataset.tocOpen = String(nextOpen);
+        button.setAttribute("aria-expanded", String(nextOpen));
+        button.setAttribute(
+          "aria-label",
+          nextOpen ? "收起本文目录" : "展开本文目录"
+        );
+        setDrawerPreference(String(nextOpen));
+      };
+
+      const toggles = drawers
+        .map(drawer => drawer.querySelector("[data-toc-toggle]"))
+        .filter(Boolean);
+      for (const toggle of toggles) {
+        toggle.addEventListener("click", onToggleClick);
+      }
+
+      let frame = 0;
+
+      function updateTocState() {
+        frame = 0;
+        const articleRect = article.getBoundingClientRect();
+        const articleTop = window.scrollY + articleRect.top;
+        const articleHeight = article.offsetHeight;
+        const readableHeight = Math.max(
+          1,
+          articleHeight - window.innerHeight * 0.55
+        );
+        const progress = clamp(
+          ((window.scrollY - articleTop + window.innerHeight * 0.2) /
+            readableHeight) *
+            100,
+          0,
+          100
+        );
+
+        const markerY =
+          window.scrollY + Math.min(window.innerHeight * 0.34, 240);
+        let activeId = headings[0].id;
+
+        for (const heading of headings) {
+          const headingTop =
+            window.scrollY + heading.getBoundingClientRect().top;
+          if (headingTop <= markerY) {
+            activeId = heading.id;
+          } else {
+            break;
+          }
+        }
+
+        for (const link of links) {
+          const isActive = link.dataset.tocTarget === activeId;
+          if (isActive) {
+            link.setAttribute("aria-current", "location");
+          } else {
+            link.removeAttribute("aria-current");
+          }
+        }
+
+        for (const drawer of drawers) {
+          const progressLabel = drawer.querySelector("[data-toc-progress]");
+          const meter = drawer.querySelector("[data-toc-meter]");
+          if (progressLabel)
+            progressLabel.textContent = `${Math.round(progress)}%`;
+          if (meter) meter.style.width = `${progress}%`;
+        }
+
+        const activeDrawerLink = document.querySelector(
+          '.article-toc-sidebar a[aria-current="location"]'
+        );
+        const activeDrawer = activeDrawerLink?.closest("[data-toc-drawer]");
+        if (activeDrawer?.dataset.tocOpen === "true") {
+          activeDrawerLink.scrollIntoView({
+            block: "nearest",
+            inline: "nearest",
+          });
+        }
+      }
+
+      function scheduleUpdate() {
+        if (frame) return;
+        frame = requestAnimationFrame(updateTocState);
+      }
+
+      updateTocState();
+      document.addEventListener("scroll", scheduleUpdate, { passive: true });
+      window.addEventListener("resize", scheduleUpdate);
+
+      window.__articleTocDrawerCleanup = () => {
+        if (frame) cancelAnimationFrame(frame);
+        document.removeEventListener("scroll", scheduleUpdate);
+        window.removeEventListener("resize", scheduleUpdate);
+        for (const toggle of toggles) {
+          toggle.removeEventListener("click", onToggleClick);
+        }
+      };
+    }
+
+    window.__initArticleTocDrawer = initArticleTocDrawer;
+    initArticleTocDrawer();
+  })();
+</script> </main> <footer class="observatory-footer app-layout mt-auto" data-astro-cid-7ap3hmvm="true"> <div class="observatory-footer-grid"> <div class="observatory-footer-signoff"> <p class="observatory-footer-eyebrow">OBSERVATION LOG · 2026</p> <p>持续观察技术变化，也记录把它做成产品的全过程。</p> <div class="flex flex-wrap items-center gap-1"> <a href="https://github.com/Shiaoming123" title="世傲命的技术观测站 on Github" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21" /></svg> <span class="sr-only">世傲命的技术观测站 on Github</span>  </a><a href="mailto:2405360475@qq.com" title="Send an email to 世傲命的技术观测站" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1">  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><path d="m3 7 9 6 9-6" /></svg> <span class="sr-only">Send an email to 世傲命的技术观测站</span>  </a> </div> </div> <nav class="observatory-footer-navigation" aria-label="页脚导航"> <div> <p>观测入口</p> <ul> <li> <a href="/posts/">文章</a> </li><li> <a href="/learning/">学习</a> </li><li> <a href="/english-practice/">英语口语</a> </li><li> <a href="/signals/">信号</a> </li><li> <a href="/projects/">作品</a> </li> </ul> </div> <div> <p>更多</p> <ul> <li> <a href="/about/">关于</a> </li><li> <a href="/bookmarks/">资源</a> </li><li> <a href="/arena/">榜单</a> </li><li> <a href="/taxonomy/">分类</a> </li><li> <a href="/archives/">归档</a> </li><li> <a href="/changelog/">日志</a> </li> </ul> </div> </nav> </div> <div class="observatory-footer-meta"> <span>© 2026 世傲命</span> <span>PERSONAL TECHNOLOGY OBSERVATORY · SIGNAL CONTINUES</span> </div> </footer>   <script type="module">function d(){const c=window;c.__scrollMotionCleanup?.();const t=document.documentElement,l=document.querySelector(".scroll-progress"),n=window.matchMedia("(prefers-reduced-motion: reduce)");let o;const a=document.querySelectorAll("[data-scroll-reveal]"),s=()=>{if(!l)return;const e=t.scrollHeight-window.innerHeight,r=e>0?window.scrollY/e:0;l.style.setProperty("--scroll-progress",Math.min(1,Math.max(0,r)).toString())};s(),window.addEventListener("scroll",s,{passive:!0}),window.addEventListener("resize",s);const i=()=>{if(o?.disconnect(),o=void 0,n.matches){t.classList.remove("scroll-motion-ready"),a.forEach(e=>e.classList.add("is-visible"));return}t.classList.add("scroll-motion-ready"),o=new IntersectionObserver(e=>{e.forEach(r=>{r.isIntersecting&&(r.target.classList.add("is-visible"),o?.unobserve(r.target))})},{rootMargin:"0px 0px -12% 0px",threshold:.12}),a.forEach(e=>{e.classList.contains("is-visible")||o?.observe(e)})};i(),n.addEventListener("change",i),c.__scrollMotionCleanup=()=>{window.removeEventListener("scroll",s),window.removeEventListener("resize",s),n.removeEventListener("change",i),o?.disconnect(),t.classList.remove("scroll-motion-ready")}}d();document.addEventListener("astro:after-swap",d);</script> <script type="module">const s="theme",a="light",c="dark";function m(e,t){return e??t??c}let u=c;function d({button:e,initialTheme:t,persist:r,reflect:n}){let o=t;n(o);const i=()=>{o=o===a?c:a,r(o),n(o)};return e?.addEventListener("click",i),{cleanup:()=>e?.removeEventListener("click",i)}}function h(e){const t=document.firstElementChild,r=document.querySelector("#theme-btn"),n=e===c;t?.setAttribute("data-theme",e),t?.classList.toggle("dark",n),r?.setAttribute("aria-label",n?"切换到浅色主题":"切换到深色主题"),r?.setAttribute("aria-pressed",String(n));const o=window.getComputedStyle(document.body).backgroundColor;document.querySelector("meta[name='theme-color']")?.setAttribute("content",o)}function l(){const e=window;e.__themeButtonCleanup?.();const t=document.querySelector("#theme-btn");u=m(localStorage.getItem(s),window.__theme?.value);const r=d({button:t,initialTheme:u,persist:n=>{u=n,localStorage.setItem(s,n)},reflect:h});e.__themeButtonCleanup=()=>{r.cleanup()}}typeof window<"u"&&(l(),document.addEventListener("astro:after-swap",l),document.addEventListener("astro:before-swap",e=>{window.__themeButtonCleanup?.();const t=document.querySelector("meta[name='theme-color']")?.getAttribute("content");t&&e.newDocument.querySelector("meta[name='theme-color']")?.setAttribute("content",t)}));</script> <script type="module" src="/_astro/Layout.astro_astro_type_script_index_2_lang.Dy43MMY2.js"></script>  </body> </html>  <script data-astro-rerun>
+  function addHeadingLinks() {
+    const headings = Array.from(
+      document.querySelectorAll(
+        "#article h2, #article h3, #article h4, #article h5, #article h6"
+      )
+    );
+    for (const heading of headings) {
+      if (!heading.id || heading.querySelector(".heading-link")) continue;
+      heading.classList.add("group");
+      const link = document.createElement("a");
+      link.className =
+        "heading-link ms-2 no-underline opacity-75 md:opacity-0 md:group-hover:opacity-100 md:focus:opacity-100";
+      link.href = "#" + heading.id;
+      link.ariaLabel = `复制“${heading.textContent?.trim()}”段落链接`;
+
+      const span = document.createElement("span");
+      span.ariaHidden = "true";
+      span.innerText = "#";
+      link.appendChild(span);
+      heading.appendChild(link);
+    }
+  }
+  addHeadingLinks();
+
+  function setupContinuation() {
+    window.__continuationCleanup?.();
+    const details = document.querySelector(".article-continuation-details");
+    if (!details) return;
+
+    const desktop = window.matchMedia("(min-width: 768px)");
+    const syncExpandedState = () => {
+      details.open = desktop.matches;
+    };
+
+    syncExpandedState();
+    desktop.addEventListener("change", syncExpandedState);
+    window.__continuationCleanup = () => {
+      desktop.removeEventListener("change", syncExpandedState);
+    };
+  }
+  setupContinuation();
+
+  /** Accessible image lightbox for article images. */
+  function initLightbox() {
+    window.__articleInteractionsCleanup?.();
+    const article = document.getElementById("article");
+    if (!article) return;
+
+    const prefersReducedMotion = () =>
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    let overlay = null;
+    let lastFocused = null;
+
+    // Defer attribute mutations so they don't push the LCP timestamp.
+    // Event listeners below use delegation and don't need the attributes to exist yet.
+    const attributeFrame = requestAnimationFrame(() => {
+      const images = Array.from(article.querySelectorAll("img"));
+      for (const image of images) {
+        if (image.closest("a")) continue;
+        image.setAttribute("role", "button");
+        image.setAttribute("tabindex", "0");
+        image.setAttribute("aria-haspopup", "dialog");
+        image.setAttribute(
+          "aria-label",
+          image.alt ? `Zoom image: ${image.alt}` : "Zoom image"
+        );
+      }
+    });
+
+    function open(src, alt, trigger) {
+      if (overlay) return;
+      lastFocused = trigger ?? document.activeElement;
+
+      overlay = document.createElement("div");
+      overlay.setAttribute("role", "dialog");
+      overlay.setAttribute("aria-modal", "true");
+      overlay.setAttribute(
+        "aria-label",
+        alt ? `Image preview: ${alt}` : "Image preview"
+      );
+      overlay.className =
+        "fixed inset-0 z-50 flex cursor-zoom-out items-center justify-center bg-black/70 backdrop-blur-sm opacity-0 transition-opacity duration-200 motion-reduce:transition-none";
+
+      const closeButton = document.createElement("button");
+      closeButton.type = "button";
+      closeButton.setAttribute("aria-label", "Close image preview");
+      closeButton.className =
+        "absolute end-4 top-4 rounded p-2 text-3xl leading-none text-white";
+      closeButton.innerHTML = "&#10005;";
+      closeButton.addEventListener("click", close);
+
+      const image = document.createElement("img");
+      image.src = src;
+      image.alt = "";
+      image.className =
+        "max-h-[90dvh] max-w-[90dvw] cursor-default object-contain";
+
+      overlay.append(closeButton, image);
+      overlay.addEventListener("click", e => {
+        if (e.target === overlay && currentScale <= 1) close();
+      });
+
+      let currentScale = 1;
+      let translateX = 0;
+      let translateY = 0;
+      let initialDist = 0;
+      let initialScale = 1;
+      let panStartX = 0;
+      let panStartY = 0;
+      let panStartTranslateX = 0;
+      let panStartTranslateY = 0;
+      let lastTapTime = 0;
+
+      function applyTransform() {
+        image.style.transform = `scale(${currentScale}) translate(${translateX}px, ${translateY}px)`;
+      }
+
+      function resetTransform() {
+        currentScale = 1;
+        translateX = 0;
+        translateY = 0;
+        image.style.transform = "";
+      }
+
+      overlay.addEventListener(
+        "touchstart",
+        e => {
+          const t = e.touches;
+          if (t.length === 2) {
+            initialDist = Math.hypot(
+              t[1].clientX - t[0].clientX,
+              t[1].clientY - t[0].clientY
+            );
+            initialScale = currentScale;
+          } else if (t.length === 1) {
+            const now = Date.now();
+            if (now - lastTapTime < 300) {
+              e.preventDefault();
+              if (currentScale > 1) {
+                resetTransform();
+              } else {
+                currentScale = 2;
+                translateX = 0;
+                translateY = 0;
+                applyTransform();
+              }
+              lastTapTime = 0;
+              panStartX = t[0].clientX;
+              panStartY = t[0].clientY;
+              panStartTranslateX = translateX;
+              panStartTranslateY = translateY;
+            } else {
+              lastTapTime = now;
+              if (currentScale > 1) {
+                panStartX = t[0].clientX;
+                panStartY = t[0].clientY;
+                panStartTranslateX = translateX;
+                panStartTranslateY = translateY;
+              }
+            }
+          }
+        },
+        { passive: false }
+      );
+
+      overlay.addEventListener(
+        "touchmove",
+        e => {
+          const t = e.touches;
+          if (t.length === 2) {
+            e.preventDefault();
+            const dist = Math.hypot(
+              t[1].clientX - t[0].clientX,
+              t[1].clientY - t[0].clientY
+            );
+            currentScale = Math.min(
+              4,
+              Math.max(1, initialScale * (dist / initialDist))
+            );
+            applyTransform();
+          } else if (t.length === 1) {
+            if (currentScale > 1) {
+              e.preventDefault();
+              translateX =
+                panStartTranslateX + (t[0].clientX - panStartX) / currentScale;
+              translateY =
+                panStartTranslateY + (t[0].clientY - panStartY) / currentScale;
+              const maxX = Math.max(
+                0,
+                (image.clientWidth - overlay.clientWidth / currentScale) / 2
+              );
+              const maxY = Math.max(
+                0,
+                (image.clientHeight - overlay.clientHeight / currentScale) / 2
+              );
+              translateX = Math.min(maxX, Math.max(-maxX, translateX));
+              translateY = Math.min(maxY, Math.max(-maxY, translateY));
+              applyTransform();
+            } else {
+              e.preventDefault();
+            }
+          }
+        },
+        { passive: false }
+      );
+
+      overlay.addEventListener("touchend", e => {
+        if (e.touches.length === 0 && currentScale <= 1.05) {
+          resetTransform();
+        }
+      });
+
+      overlay.addEventListener("touchcancel", e => {
+        if (e.touches.length === 0 && currentScale <= 1.05) {
+          resetTransform();
+        }
+      });
+
+      document.body.appendChild(overlay);
+      document.body.style.overflow = "hidden";
+      document.addEventListener("keydown", onKeyDown);
+      window.__closeLightbox = close;
+
+      requestAnimationFrame(() => overlay?.classList.add("opacity-100"));
+      closeButton.focus();
+    }
+
+    function close() {
+      if (!overlay) return;
+      const el = overlay;
+      overlay = null;
+      window.__closeLightbox = null;
+
+      document.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = "";
+      lastFocused?.focus();
+      lastFocused = null;
+
+      if (prefersReducedMotion()) {
+        el.remove();
+        return;
+      }
+      const remove = () => el.remove();
+      el.addEventListener("transitionend", remove, { once: true });
+      setTimeout(remove, 250); // fallback in case transitionend never fires
+      el.classList.remove("opacity-100");
+    }
+
+    function onKeyDown(e) {
+      if (e.key === "Escape") {
+        close();
+      } else if (e.key === "Tab") {
+        trapFocus(e);
+      }
+    }
+
+    // Keep keyboard focus inside the open dialog.
+    function trapFocus(e) {
+      if (!overlay) return;
+      const focusables = overlay.querySelectorAll(
+        'a[href], button, [tabindex]:not([tabindex="-1"])'
+      );
+      if (focusables.length === 0) return;
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+
+    function triggerFromEvent(e) {
+      const image = e.target.closest("img");
+      if (!image || !article.contains(image) || image.closest("a")) return null;
+      return image;
+    }
+
+    function activate(image) {
+      open(image.currentSrc || image.src, image.alt, image);
+    }
+
+    const onArticleClick = e => {
+      const image = triggerFromEvent(e);
+      if (!image) return;
+      e.preventDefault();
+      activate(image);
+    };
+
+    const onArticleKeydown = e => {
+      if (e.key !== "Enter" && e.key !== " " && e.key !== "Spacebar") return;
+      const image = triggerFromEvent(e);
+      if (!image) return;
+      e.preventDefault();
+      activate(image);
+    };
+
+    article.addEventListener("click", onArticleClick);
+    article.addEventListener("keydown", onArticleKeydown);
+    window.__articleInteractionsCleanup = () => {
+      cancelAnimationFrame(attributeFrame);
+      close();
+      article.removeEventListener("click", onArticleClick);
+      article.removeEventListener("keydown", onArticleKeydown);
+    };
+  }
+  initLightbox();
+
+  if (!window.__lightboxSwapBound) {
+    window.__lightboxSwapBound = true;
+    document.addEventListener("astro:before-swap", () => {
+      window.__articleInteractionsCleanup?.();
+      window.__articleInteractionsCleanup = null;
+      window.__continuationCleanup?.();
+      window.__continuationCleanup = null;
+      window.__backToTopCleanup?.();
+      window.__backToTopCleanup = null;
+      window.__articleTocDrawerCleanup?.();
+      window.__articleTocDrawerCleanup = null;
+    });
+  }
+</script>
