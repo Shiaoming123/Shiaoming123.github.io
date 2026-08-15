@@ -328,7 +328,6 @@
     transform var(--motion-fast) var(--motion-ease);
 }
 
-.observatory-route-grid a::before,
 .observatory-project-grid article::before {
   position: absolute;
   top: 0;
@@ -350,7 +349,6 @@
     color-mix(in srgb, var(--accent) 46%, transparent);
 }
 
-.observatory-route-grid a:hover::before,
 .observatory-project-grid article:hover::before {
   transform: translate(0.35rem, -0.35rem);
 }

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="26" fill="#f4f7fb" />
+  <ellipse
+    cx="57"
+    cy="57"
+    rx="42"
+    ry="16"
+    fill="none"
+    stroke="#d86f37"
+    stroke-width="3"
+    transform="rotate(-17 57 57)"
+  />
+  <ellipse
+    cx="57"
+    cy="57"
+    rx="42"
+    ry="16"
+    fill="none"
+    stroke="#f0a05b"
+    stroke-width="1.5"
+    opacity=".82"
+    transform="rotate(24 57 57)"
+  />
+  <circle cx="57" cy="57" r="19" fill="#202738" />
+  <circle cx="52" cy="52" r="6" fill="#fff" opacity=".94" />
+  <circle cx="67" cy="66" r="5" fill="#697386" opacity=".72" />
+  <circle cx="98" cy="35" r="3" fill="#d86f37" />
+</svg>
