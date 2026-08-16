@@ -414,38 +414,6 @@
   text-shadow: 0 0 1.2rem color-mix(in srgb, var(--accent) 64%, transparent);
 }
 
-.observatory-about {
-  position: relative;
-  isolation: isolate;
-}
-
-.observatory-about::before {
-  position: absolute;
-  z-index: -1;
-  inset: -6rem -15vw auto auto;
-  width: min(34rem, 76vw);
-  aspect-ratio: 1;
-  pointer-events: none;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    color-mix(in srgb, var(--accent) 12%, transparent),
-    transparent 66%
-  );
-  content: "";
-}
-
-.observatory-about h2 {
-  background: linear-gradient(
-    115deg,
-    var(--foreground),
-    color-mix(in srgb, var(--foreground) 62%, var(--accent))
-  );
-  background-clip: text;
-  color: transparent;
-  -webkit-background-clip: text;
-}
-
 .home-motion-mounted .observatory-brand-mark::before {
   animation: observatory-brand-orbit 7s linear infinite;
 }
