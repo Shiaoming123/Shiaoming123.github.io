@@ -281,10 +281,6 @@
   transition-delay: 90ms;
 }
 
-.observatory-section.is-visible .observatory-section-head > :nth-child(3) {
-  transition-delay: 160ms;
-}
-
 .observatory-story-list .neo-card {
   position: relative;
   overflow: hidden;
